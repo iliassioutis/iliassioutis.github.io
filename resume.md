@@ -81,6 +81,7 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 - Conducted post-project evaluations and documented lessons learned to improve delivery effectiveness and client outcomes.
 
 ---
+
 ### Swift Marine (A Horizon Group Company) — Senior Azure Integration Engineer  
 *Jul 2019 – Apr 2023 | Athens, Greece (Hybrid)*
 
@@ -97,6 +98,7 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 - Established delivery standards and reusable patterns that reduced support overhead and improved long-term maintainability.
 
 ---
+
 ### EY — Senior Consultant, Financial Services & Big Data Engineering  
 *Dec 2016 – Jul 2019 | Athens, Greece (Hybrid)*
 
@@ -131,6 +133,16 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 - Assessed market risk capital calculations under **FRTB** using in-house VBA frameworks.
 - Performed valuations of **Credit Default Swaps (CDS)** and CDS indices using **Murex**.
 - Produced IFRS 9 impairment documentation, developing expected credit loss (ECL) models and supporting regulatory reporting.
+
+---
+
+### Sociomantic Labs — Software Developer  
+*Nov 2015 – May 2016 | Berlin, Germany*
+
+- Worked as a back-end developer in **R&D**, contributing to the design and implementation of data-driven software systems.
+- Developed performance-critical components using the **D programming language**, focusing on robustness, scalability, and maintainability.
+- Collaborated closely with research and engineering teams on experimental and production-grade systems.
+- Participated in the full development lifecycle, including design, implementation, testing, and iterative improvement of backend services.
 
 ---
 
