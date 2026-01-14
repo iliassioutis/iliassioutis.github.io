@@ -2,6 +2,8 @@
 layout: default
 title: Resume
 ---
+> 🔎 Looking for a shorter, ATS-optimized version?  
+> 👉 [View condensed ATS resume](/resume-ats)
 
 ## Professional summary
 
