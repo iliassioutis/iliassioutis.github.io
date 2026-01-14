@@ -2,6 +2,9 @@
 layout: default
 title: Resume (ATS)
 ---
+> 📄 Looking for full detail and evidence?  
+> 👉 [View full master resume](/resume)
+
 ## Professional Summary
 
 Senior **Software Project Manager / Solutions Architect** with extensive experience delivering **AI-powered digital health platforms** and **regulated software systems**. Proven ability to lead **end-to-end SDLC** across iOS, Android, cloud, and enterprise integrations, with strong ownership of **clinical validation**, **privacy & GDPR compliance**, and **secure system design**.
