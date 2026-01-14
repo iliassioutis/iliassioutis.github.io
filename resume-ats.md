@@ -2,8 +2,10 @@
 layout: default
 title: Resume (ATS)
 ---
+> 🏠 [Back to homepage](/)  
 > 📄 Looking for full detail and evidence?  
 > 👉 [View full master resume](/resume)
+
 
 ## Professional Summary
 
