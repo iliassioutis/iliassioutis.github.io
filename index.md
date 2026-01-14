@@ -4,11 +4,18 @@ title: Ilias Sioutis
 ---
 ## Overview
 
-I am a senior software project manager and solutions architect with a strong technical background, specializing in AI-powered healthcare solutions, regulated digital platforms, and complex cloud integrations.
+I am a senior software project manager and solutions architect specializing in AI-powered digital
+health, regulated platforms, and complex cloud integrations.
 
-My work spans end-to-end delivery: from requirements and architecture through implementation, validation, compliance, and production rollout. I have led projects involving clinical validation, on-device AI, secure mobile platforms, and enterprise-grade cloud systems.
+My work spans end-to-end delivery: from requirements and architecture through implementation,
+clinical validation, privacy and security governance, and production rollout. I have led iOS and
+Android healthcare applications involving on-device AI (rPPG / computer vision), Bluetooth medical
+device integrations, secure mobile platforms, and enterprise-grade cloud systems.
 
-This site serves as a **professional evidence hub** for B2B collaborations and freelance engagements.
+This site serves as a **professional evidence hub** showcasing delivery artifacts, governance
+documentation, and validation work for B2B collaborations, regulated projects, and consulting
+engagements.
+
 
 ---
 
