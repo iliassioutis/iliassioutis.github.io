@@ -66,6 +66,19 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 - Reviewed customer feedback and drove action plans to improve outcomes and stakeholder satisfaction.
 - Contributed to **upsell / expansion opportunities** by partnering with internal teams to propose value-added enhancements and follow-on work.
 
+---
+
+### Freelance — Business Analyst / Solutions Architect / Project Coordinator  
+*Jul 2023 – Nov 2023 | Remote*
+
+- Defined project scope, objectives, and success criteria with stakeholders; translated business needs into clear deliverables and phased plans.
+- Led requirements elicitation and analysis with clients and third-party vendors; facilitated alignment on processes, responsibilities, and acceptance criteria.
+- Advised on digital transformation decisions, including **systems integration options** and end-to-end workflow design aligned to constraints (time, cost, capabilities).
+- Developed project plans (timeline, milestones, dependencies), allocated resources within budget constraints, and tracked execution to delivery.
+- Produced periodic status reporting for stakeholders, ensuring transparency on progress, risks, and decisions.
+- Owned risk and change management: identified risks early, built mitigations/contingencies, and controlled scope changes through documented approvals.
+- Coordinated testing and quality assurance activities to ensure outputs met functional requirements and quality expectations.
+- Conducted post-project evaluations and documented lessons learned to improve delivery effectiveness and client outcomes.
 
 ---
 
