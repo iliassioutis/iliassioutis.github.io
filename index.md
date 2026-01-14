@@ -5,10 +5,7 @@ title: Ilias Sioutis
 
 
 
-Senior Software Project Manager / Solutions Architect  
-AI-powered healthcare · regulated digital platforms · cloud & data integrations
 
----
 
 ## Overview
 
