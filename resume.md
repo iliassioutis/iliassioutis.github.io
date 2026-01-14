@@ -26,7 +26,7 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ## Professional experience
 
 ### Telematic Medical Applications — Software Project Manager  
-*Oct 2024 – Present | Athens, Greece*
+*Oct 2024 – Present | Athens, Greece (Hybrid)*
 
 - Led end-to-end delivery of **two mobile healthcare applications (iOS + Android)**, integrating **on-device AI** (rPPG/contactless vitals, stress assessment) and a secure cloud-backed ecosystem.
 - Managed a cross-functional delivery model (outsourced front-end/back-end teams), driving scope, plan, execution, quality gates, and release readiness across the full SDLC.
@@ -41,7 +41,7 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ---
 
 ### Navarino — IT Service Analyst  
-*Apr 2024 – Sep 2024 | Athens, Greece*
+*Apr 2024 – Sep 2024 | Athens, Greece (Hybrid)*
 
 - Installed, configured, and supported enterprise **Windows Server 2022** environments (AD, DNS, DHCP, GPO, DFS/NFS, FTP/SFTP).
 - Managed and troubleshot **virtual Windows and Linux servers**, performing patching, backups, recovery, and performance monitoring.
@@ -55,9 +55,17 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ---
 
 ### IntelliSolutions — Project Manager  
-*Dec 2023 – Apr 2024 | Athens, Greece*
+*Dec 2023 – Apr 2024 | Athens, Greece (Hybrid)*
 
-(Content to be added later.)
+- Coordinated end-to-end delivery of digital transformation projects across **business analysis → design → front-/back-end development → internal testing → SIT/UAT → pre-production deployment → post-production monitoring**.
+- Facilitated client and internal stakeholder workshops (product, technical, BA, QA, business development) to capture requirements and translate them into actionable delivery plans.
+- Built and maintained integrated project plans (scope, milestones, resourcing, dependencies), aligning delivery with client priorities and internal capacity constraints.
+- Supported solution shaping by contributing to **workflow design** and **systems integration** approaches aligned to customer industry needs and technical constraints.
+- Managed risks, issues, and change requests; ensured clear documentation, communication, and decision tracking throughout the lifecycle.
+- Ensured delivery quality through coordination of testing activities, defect triage, release readiness checks, and go-live coordination.
+- Reviewed customer feedback and drove action plans to improve outcomes and stakeholder satisfaction.
+- Contributed to **upsell / expansion opportunities** by partnering with internal teams to propose value-added enhancements and follow-on work.
+
 
 ---
 
