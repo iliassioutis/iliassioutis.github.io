@@ -17,6 +17,13 @@ engagements.
 
 
 ---
+## Evidence & governance highlights
+
+- Clinical validation program for App Store readiness (Apple guideline 1.4.1): hospital collaboration, protocols, reproducible analysis, and evidence dossier.
+- Privacy & AI governance: on-device AI processing; no camera media upload/storage; platform-specific retention rules and provenance labeling (AI / Device / Manual).
+- Security controls: EU/EEA hosting (Hetzner, Germany) under GDPR DPA; HTTPS/TLS in transit; application-layer AES-256 at rest; RBAC / need-to-know access.
+- Data subject rights & operational controls: consent management (incl. SSN consent for purchase flows), item-level deletion with cross-device sync, and account deletion workflows.
+
 
 ## Areas of focus
 
