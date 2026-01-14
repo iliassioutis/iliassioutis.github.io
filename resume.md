@@ -5,12 +5,11 @@ title: Resume
 
 ## Professional summary
 
-Senior Software Project Manager and Solutions Architect with deep experience delivering AI-powered digital health platforms in regulated environments. Proven track record leading end-to-end development of iOS and Android healthcare applications, from requirements and architecture through implementation, clinical validation, privacy governance, and production release.
+Senior **Software Project Manager and Solutions Architect** with deep experience delivering **AI-powered digital health platforms** in regulated environments. Proven track record leading **end-to-end development of iOS and Android healthcare applications**, from requirements and architecture through implementation, clinical validation, privacy governance, and production release.
 
-Specialized in evidence-driven delivery, including the design and execution of clinical validation programs to support regulatory and app-store approval, authoring comprehensive validation documentation, and developing reproducible Python-based analysis pipelines. Extensive hands-on ownership of privacy, data protection, and AI governance, including drafting platform-specific Terms and Privacy Policies aligned with GDPR and healthcare best practices.
+Specialized in **evidence-driven delivery**, including the design and execution of **clinical validation programs** to support regulatory and **App Store approval**, authoring comprehensive validation documentation, and developing **reproducible Python-based analysis pipelines**. Extensive hands-on ownership of **privacy, data protection, and AI governance**, including drafting platform-specific **Terms and Privacy Policies** aligned with **GDPR** and healthcare best practices.
 
-Strong technical foundation spanning on-device AI, Bluetooth medical device integrations, secure mobile architectures, and enterprise cloud systems, with particular strength in Azure-based integration platforms. Known for bridging technical, clinical, and regulatory domains, coordinating cross-functional and external teams, and delivering secure, compliant, and user-centric digital health solutions for B2B and regulated contexts.
-
+Strong technical foundation spanning **on-device AI**, **Bluetooth medical device integrations**, secure mobile architectures, and **enterprise cloud systems**, with particular strength in **Azure-based integration platforms**. Known for bridging **technical, clinical, and regulatory domains**, coordinating cross-functional and external teams, and delivering **secure, compliant, user-centric digital health solutions** for **B2B and regulated contexts**.
 
 ---
 
