@@ -2,9 +2,12 @@
 layout: default
 title: Resume
 ---
+📄 **Download PDF:**  
+[Download full Master Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-master.pdf)
+
 > 🏠 [Back to homepage](/)  
 > 🔎 Looking for a shorter, ATS-optimized version?  
-> 👉 [View condensed ATS resume](/resume-ats)
+> 👉 **[View condensed ATS resume](/resume-ats)**
 
 ---
 
