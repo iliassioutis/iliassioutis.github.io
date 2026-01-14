@@ -28,7 +28,15 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ### Telematic Medical Applications — Software Project Manager  
 *Oct 2024 – Present | Athens, Greece*
 
-(Content to be added step by step.)
+- Led end-to-end delivery of **two mobile healthcare applications (iOS + Android)**, integrating **on-device AI** (rPPG/contactless vitals, stress assessment) and a secure cloud-backed ecosystem.
+- Managed a cross-functional delivery model (outsourced front-end/back-end teams), driving scope, plan, execution, quality gates, and release readiness across the full SDLC.
+- Owned **Bluetooth medical device integration** end-to-end (BP monitors, pulse oximeters, thermometer, scale, ECG, multi-parameter devices), ensuring accurate data capture and device/app interoperability.
+- Led a hospital collaboration (Athens Hospital/Hygeia) to execute a **clinical validation program** supporting **App Store health evidence expectations (Guideline 1.4.1)**; produced a comprehensive validation dossier and analysis outputs.
+- Built **Python-based reproducible analysis pipelines** (e.g., agreement/Bland–Altman, ICC, MAD) and structured datasets to validate measurement performance and integrity of BT → app data flow.
+- Authored and maintained platform-specific **Terms of Use and Privacy Policies** (iOS + Android), defining data handling, retention, user rights, and governance for regulated digital health.
+- Implemented privacy/security controls aligned with **GDPR**: EU/EEA hosting (Hetzner, Germany) under DPA, HTTPS/TLS in transit, **application-layer AES-256 at rest**, and RBAC/need-to-know access.
+- Delivered supporting digital services: secure e-commerce flows for device/doctor-session purchases and a ticketing/support workflow integrated with the product ecosystem.
+
 
 ---
 
