@@ -97,6 +97,42 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 - Established delivery standards and reusable patterns that reduced support overhead and improved long-term maintainability.
 
 ---
+### EY — Senior Consultant, Financial Services & Big Data Engineering  
+*Dec 2016 – Jul 2019 | Athens, Greece (Hybrid)*
+
+**Senior Consultant – Financial Services**  
+*Aug 2018 – Jul 2019*
+
+- Worked as part of cross-functional **scrum teams** delivering data-driven and regulatory-focused solutions for financial services clients.
+- Led **requirements workshops** with business stakeholders and subject matter experts; translated business objectives into structured functional and non-functional specifications.
+- Designed integration solutions bridging **business requirements and technical implementation**, ensuring appropriate granularity and traceability.
+- Conducted **User Acceptance Testing (UAT)** for delivered features; logged defects, supported resolution, and validated production readiness.
+- Validated **credit risk models** (PD, LGD) under Basel regulatory frameworks using **R scripting**.
+- Validated pricing models for complex financial instruments, including **oil-linked derivatives, swaps, and options**, implementing benchmarking, stress testing, and lifecycle-event analyses in **Python**.
+- Designed and implemented quantitative models for **supply chain network optimization**, including neural networks and metaheuristic algorithms (genetic algorithms, simulated annealing, tabu search) using **C++**.
+
+**Senior Consultant – Big Data Engineering**  
+*May 2018 – Jul 2018*
+
+- Acquired hands-on experience with **Hadoop ecosystems** (Hortonworks HDP 2.6.4.0), including Hive, Pig, Oozie, Atlas, Ranger, Kerberos, and HDFS.
+- Designed and implemented **data models** and ingestion workflows using **Apache NiFi** and **StreamSets**.
+- Worked with **HiveQL** for large-scale data querying and transformation.
+- Supported deployment, configuration, and administration of Hadoop-based platforms.
+- Investigated and resolved **data quality issues** across distributed data pipelines.
+- Developed analytical dashboards and reporting solutions using **QlikView**.
+
+**Senior Advisor – Financial Services & Risk Management**  
+*Dec 2016 – Apr 2018*
+
+- Authored extensive **model validation documentation** for FX, interest rate, commodity, and equity derivatives, including European, Asian, basket, quanto, and digital options.
+- Validated pricing frameworks such as **Black–Scholes analytic, Monte Carlo, local volatility, and local correlation models**, implementing comprehensive test suites in **Python**.
+- Conducted **benchmarking, backtesting, stress testing, convergence analysis, and limiting-case tests** for model governance and regulatory compliance.
+- Validated **SIMM methodology** using backtesting and benchmarking implemented in **R**.
+- Assessed market risk capital calculations under **FRTB** using in-house VBA frameworks.
+- Performed valuations of **Credit Default Swaps (CDS)** and CDS indices using **Murex**.
+- Produced IFRS 9 impairment documentation, developing expected credit loss (ECL) models and supporting regulatory reporting.
+
+---
 
 
 ### Earlier roles
