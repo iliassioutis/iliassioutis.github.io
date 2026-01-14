@@ -2,11 +2,6 @@
 layout: default
 title: Ilias Sioutis
 ---
-
-
-
-
-
 ## Overview
 
 I am a senior software project manager and solutions architect with a strong technical background, specializing in AI-powered healthcare solutions, regulated digital platforms, and complex cloud integrations.
