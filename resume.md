@@ -2,8 +2,10 @@
 layout: default
 title: Resume
 ---
+> 🏠 [Back to homepage](/)  
 > 🔎 Looking for a shorter, ATS-optimized version?  
 > 👉 [View condensed ATS resume](/resume-ats)
+
 
 ## Professional summary
 
