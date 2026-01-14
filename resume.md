@@ -43,7 +43,14 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ### Navarino — IT Service Analyst  
 *Apr 2024 – Sep 2024 | Athens, Greece*
 
-(Content to be added later.)
+- Installed, configured, and supported enterprise **Windows Server 2022** environments (AD, DNS, DHCP, GPO, DFS/NFS, FTP/SFTP).
+- Managed and troubleshot **virtual Windows and Linux servers**, performing patching, backups, recovery, and performance monitoring.
+- Administered **enterprise networking infrastructure**, including firewalls, Layer 2/3 switches, VLANs, VPN/remote access, and wireless networks.
+- Performed **network traffic analysis** and incident troubleshooting across TCP/IP, DNS, SMTP, SNMP, and NTP services.
+- Maintained structured **infrastructure and network documentation** using Visio and operational runbooks.
+- Developed **Python scripts feeding Power BI dashboards** to report on network performance, utilization, and operational health.
+- Supported secure data handling through **NTFS/share permissions**, access controls, and monitored file services.
+
 
 ---
 
