@@ -159,25 +159,82 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 
 ---
 
+### MiuraConsulting — Contract Software Developer  
+*Mar 2012 – Sep 2015 | London, UK (On-site)*
 
-### Earlier roles
-
-(Detailed later)
-
----
-
-## Selected evidence & governance work
-
-(Clinical validation, privacy, security .)
-
----
-
-## Education
-
-(Content later.)
+- Developed **financial technology applications in C++ and Qt** for the investment and asset management industry.
+- Designed and implemented an **automated regulatory reporting platform** producing XML submissions for ESMA (AIFMD), FCA (AIF001/AIF002), Irish and US regulatory frameworks.
+- Built configurable reporting engines driven by **user-defined configuration files** and dynamic SQL execution on SQLite databases populated from external data sources.
+- Developed a **risk, compliance, and regulatory monitoring dashboard**, delivering real-time, color-coded control results based on scheduled analytical rules.
+- Implemented a **TCP client–server architecture** enabling automated, scheduled data transfer between distributed systems, including remote Excel/Bloomberg-driven data ingestion.
+- Built **multi-threaded analytical GUI applications** providing drill-down views of market risk metrics (e.g., VAR, DV01, CS01, FX delta, commodity delta, vega exposure).
+- Delivered robust, performance-sensitive software with strong emphasis on correctness, reliability, and maintainability in regulated financial environments.
 
 ---
 
-## Technical stack
+### Early Career — Research, Engineering & Analytics  
+*2000 – 2011 | Europe & USA*
 
-(Content later.)
+**Postdoctoral Researcher — University of Munich (Germany)**  
+- Led multidisciplinary research in computational chemistry and spectroscopy.
+- Developed **C++ simulation software** for modeling complex physico-chemical systems, contributing to peer-reviewed publications.
+- Presented research outcomes at international scientific institutes and conferences.
+
+**Graduate Research Assistant / Teaching Assistant — The Ohio State University (USA)**  
+- Conducted advanced research in **chemical physics and computational modeling**; primary author of multiple peer-reviewed scientific publications.
+- Developed and extended **C++ scientific software** for simulation and analysis of experimental data.
+- Delivered undergraduate and graduate-level teaching in physical chemistry and computational methods.
+- Trained in scientific writing, grant proposal preparation (NSF-style), and high-performance computing practices.
+
+**MBA Intern / Computer Modeller — DHL Management (Switzerland)**  
+- Built **Excel/VBA-based analytical models** for customer profitability and financial data validation across large enterprise datasets.
+- Improved financial close processes, data quality, and reporting lead times.
+
+**Computer Modeller — Procter & Gamble (Belgium / UK)**  
+- Led joint supply-chain finance optimization initiatives with City University London.
+- Developed **Excel/VBA decision-support tools** for cost optimization and scenario analysis supporting senior management.
+
+**Specialist Scientist — Hellenic Army (Greece)**  
+- Served as a specialist scientist supporting technical and analytical functions.
+
+---
+
+## Selected evidence & governance work  
+*(Clinical validation, privacy, security, AI governance)*
+
+### Clinical validation dossier (iOS App Store readiness)
+- Led an end-to-end **clinical validation program** to support **Apple App Store health-related review expectations (Guideline 1.4.1)** for an iOS digital-health application.
+- Coordinated hospital collaboration (Hygeia Group / Athens Hospital), authored a **~250 page validation report**, and built the **Python analysis pipeline** (agreement / reliability metrics; reproducible tables/figures).
+- Executed structured measurement procedures and verified **end-to-end Bluetooth → app data integrity** (data displayed in-app matched device outputs under controlled workflows).
+
+### Privacy-by-design for AI camera measurements (iOS vs Android governance)
+- Implemented and documented on-device AI processing: **no photo/video upload or storage** for camera-based wellness estimates.
+- iOS governance: AI measurement outputs are **session-only** (not stored).
+- Android governance: AI numeric results are **saved to history and synced**, with clear provenance labels (**AI / Device / Manual**) and **device model attribution** for device readings; **per-item deletion syncs** across signed-in devices.
+
+### Data protection & security controls (GDPR-aligned)
+- EU/EEA hosting (Hetzner, Germany) under GDPR DPA; **TLS in transit** and **application-layer AES-256 at rest** for sensitive records.
+- Defined role-based access / need-to-know access patterns and documented user rights flows (access, deletion, withdrawal of consent), including account deletion and retention principles.
+
+### Consent & high-sensitivity flows (national identifier / location)
+- Designed consent governance for national identifier (SSN) usage in purchase flows (doctor sessions / device e-shop), including user controls (e.g., **Manage SSN Consent**) and purpose limitation.
+- Documented optional **location features**: one-time **Send Location**, and Android opt-in **event-based Location Sharing** (not continuous background tracking).
+
+---
+
+## Education  
+- **MPhil, Computer Science (Medical Imaging & Computer Vision)** — University College London (UCL), 2013–2015  
+- **MBA (Distinction)** — Bayes Business School, 2008–2009  
+- **PhD, Chemical Physics Program** — The Ohio State University, 2000–2006  
+- **BSc, Chemistry** — National & Kapodistrian University of Athens, 1995–1999
+
+---
+
+## Technical stack  
+- Project / delivery: Jira, Trello, ClickUp, Miro, Figma, GitHub  
+- Cloud & integration: Azure (REST APIs, Functions/Durable Functions, Logic Apps, Service Bus, Blob/Table Storage, Azure SQL), Azure DevOps  
+- Data & reporting: Power BI; (some exposure: ADF / Synapse / Databricks)  
+- Security & compliance: GDPR, TLS/HTTPS, application-layer AES-256, RBAC/need-to-know  
+- Languages: Python, C#, C++, R, VBA  
+- Infra / IT: Windows Server 2022 (AD/DNS/DHCP/GPO, DFS/NFS, FTP/SFTP), VPN, VLANs, firewalls, NAS, monitoring
+
