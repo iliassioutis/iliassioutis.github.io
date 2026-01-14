@@ -6,6 +6,16 @@ title: Resume
 > 🔎 Looking for a shorter, ATS-optimized version?  
 > 👉 [View condensed ATS resume](/resume-ats)
 
+---
+
+**Ilias Sioutis**  
+Senior Software Project Manager & Solutions Architect  
+Athens, Greece  
+📧 isioutis@hotmail.com · 📞 +30 694 413 7673  
+LinkedIn: https://www.linkedin.com/in/iliassioutis/
+
+---
+
 
 ## Professional summary
 
