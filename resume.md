@@ -26,7 +26,7 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ## Professional experience
 
 ### Telematic Medical Applications — Software Project Manager  
-*Oct 2024 – Present | Athens, Greece (Hybrid)*
+*Oct 2024 – Present | Athens, Greece (On-site)*
 
 - Led end-to-end delivery of **two mobile healthcare applications (iOS + Android)**, integrating **on-device AI** (rPPG/contactless vitals, stress assessment) and a secure cloud-backed ecosystem.
 - Managed a cross-functional delivery model (outsourced front-end/back-end teams), driving scope, plan, execution, quality gates, and release readiness across the full SDLC.
@@ -137,12 +137,25 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ---
 
 ### Sociomantic Labs — Software Developer  
-*Nov 2015 – May 2016 | Berlin, Germany*
+*Nov 2015 – May 2016 | Berlin, Germany (On-site)*
 
 - Worked as a back-end developer in **R&D**, contributing to the design and implementation of data-driven software systems.
 - Developed performance-critical components using the **D programming language**, focusing on robustness, scalability, and maintainability.
 - Collaborated closely with research and engineering teams on experimental and production-grade systems.
 - Participated in the full development lifecycle, including design, implementation, testing, and iterative improvement of backend services.
+
+---
+
+### University College London (UCL) — MPhil Researcher, Computer Science  
+*Jan 2013 – Sep 2015 | London, UK (On-site)*
+
+- Conducted advanced research in **medical imaging and computer vision**, focusing on non-rigid 3D surface registration for image-guided interventions.
+- Designed and implemented multiple **machine learning–based registration algorithms** (Gaussian Mixture Models, Kernel Correlation, Expectation–Maximization, Thin-Plate Splines) in **C++**.
+- Developed extensive **synthetic dataset generators** to simulate controlled deformations, noise, occlusions, and partial overlap for algorithm evaluation.
+- Built rigorous **automated validation frameworks** to quantify algorithm accuracy, robustness, and applicability using target registration error (TRE) and statistical analysis.
+- Implemented supporting visualization and tooling using **Qt, VTK, OpenCV, PCL**, and related C++ libraries.
+- Produced a structured, evidence-heavy MPhil thesis demonstrating reproducible experimentation, benchmarking, and technical rigor.
+- Contributed to augmented reality–oriented software prototypes related to surgical guidance.
 
 ---
 
