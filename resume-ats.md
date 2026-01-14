@@ -6,6 +6,16 @@ title: Resume (ATS)
 > 📄 Looking for full detail and evidence?  
 > 👉 [View full master resume](/resume)
 
+---
+
+**Ilias Sioutis**  
+Senior Software Project Manager & Solutions Architect  
+Athens, Greece  
+📧 isioutis@hotmail.com · 📞 +30 694 413 7673  
+LinkedIn: https://www.linkedin.com/in/iliassioutis/
+
+---
+
 
 ## Professional Summary
 
