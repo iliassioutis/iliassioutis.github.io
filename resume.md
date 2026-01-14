@@ -81,6 +81,23 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 - Conducted post-project evaluations and documented lessons learned to improve delivery effectiveness and client outcomes.
 
 ---
+### Swift Marine (A Horizon Group Company) — Senior Azure Integration Engineer  
+*Jul 2019 – Apr 2023 | Athens, Greece (Hybrid)*
+
+- Led client-facing delivery of complex **enterprise integration projects**, acting as the primary liaison between business stakeholders, product owners, and engineering teams.
+- Drove requirements elicitation through structured workshops; translated business processes into **functional and non-functional specifications** with clear acceptance criteria.
+- Performed gap analysis on legacy systems and workflows; proposed realistic technical and process solutions within agreed scope, budget, and timelines.
+- Designed and implemented **Azure-based integration architectures**, including RESTful APIs, Azure Functions (C#), Durable Functions, Logic Apps, Service Bus, and secure storage services.
+- Built and supported data pipelines and analytics solutions using **Azure SQL, Azure Data Factory, Azure Synapse Analytics, Azure Databricks, and Power BI**.
+- Coordinated internal teams and third-party vendors to ensure seamless execution, change control, and delivery against project plans.
+- Owned end-to-end delivery governance: progress tracking, risk management, change management, and regular stakeholder reporting.
+- Produced comprehensive technical and business documentation, including **BRDs, integration specifications, process flows, and user guides**.
+- Supported and participated in **System Integration Testing (SIT)** and **User Acceptance Testing (UAT)**, ensuring solutions met business and technical expectations prior to production rollout.
+- Researched industry best practices and emerging technologies to drive **cost optimization, scalability, and operational efficiency**.
+- Established delivery standards and reusable patterns that reduced support overhead and improved long-term maintainability.
+
+---
+
 
 ### Earlier roles
 
