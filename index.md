@@ -37,7 +37,8 @@ engagements.
 
 ## Contents
 
-- [Resume](./resume)
+- [Resume (Master / Evidence-heavy)](/resume)
+- [Resume (ATS / Condensed)](/resume-ats)
 - [Case Studies](./case-studies)
 - [Research & Theses](./research)
 - [Contact](./contact)
