@@ -3,8 +3,6 @@ layout: default
 title: Resume
 ---
 
-# Resume
-
 ## Professional summary
 
 (Short, sharp summary.)
