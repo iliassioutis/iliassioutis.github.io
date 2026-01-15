@@ -3,18 +3,21 @@ layout: default
 title: Resume
 ---
 <div class="no-print">
-📄 **Download PDF:**  
-[Download full Master Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-master.pdf)
+📄 <strong>Download PDF:</strong><br>
+<a href="/assets/pdfs/resume-ilias-sioutis-master.pdf">Download full Master Resume (PDF)</a>
 
-> 🏠 [Back to homepage](/)  
-> 🔎 Looking for a shorter, ATS-optimized version?  
-> 👉 **[View condensed ATS resume](/resume-ats)**
+<blockquote>
+🏠 <a href="/">Back to homepage</a><br>
+🔎 Looking for a shorter, ATS-optimized version?<br>
+👉 <strong><a href="/resume-ats">View condensed ATS resume</a></strong>
+</blockquote>
 </div>
 
-/* Hide page navigation + download links in print/PDF */
+<style>
 @media print {
   .no-print { display: none !important; }
 }
+</style>
 
 ---
 
@@ -30,7 +33,8 @@ LinkedIn: https://www.linkedin.com/in/iliassioutis/
 
 Senior **Software Project Manager and Solutions Architect** delivering **AI-powered digital health platforms** in regulated environments. Led **end-to-end iOS/Android healthcare product delivery** (requirements → architecture → implementation → validation → privacy governance → release), with hands-on ownership of **Bluetooth medical device integrations**, **on-device AI**, and **secure mobile/cloud architectures**.
 
-Specialized in **evidence-driven delivery**: led a **hospital-supervised clinical validation program** at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants; 6 Bluetooth devices; repeatable protocols**) to support **Apple App Store Review Guideline 1.4.1 (Safety – Physical Harm)**. Authored a **~250-page validation dossier**, built **reproducible Python statistical pipelines** (ICC, Bland–Altman, MAD, Agreement %), and secured a **signed Clinical Endorsement Letter** from an interdisciplinary hospital team confirming protocol adherence, data integrity verification, and suitability for supervised clinical use.
+Specialized in **evidence-driven delivery**: led a **hospital-supervised clinical validation program** at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants; 6 Bluetooth devices; repeatable protocols**) designed explicitly for **Apple App Store Review Guideline 1.4.1 (Safety – Physical Harm)** evidence expectations.
+. Authored a **~250-page validation dossier**, built **reproducible Python statistical pipelines** (ICC, Bland–Altman, MAD, Agreement %), and secured a **signed Clinical Endorsement Letter** from an interdisciplinary hospital team confirming protocol adherence, data integrity verification, and suitability for supervised clinical use.
 
 Strong technical foundation across **secure data handling (GDPR)**, **AES-256 application-layer encryption**, **TLS**, **RBAC**, and **Azure integration platforms**, known for bridging **technical, clinical, and regulatory stakeholders** to deliver compliant, production-ready outcomes.
 
@@ -55,7 +59,7 @@ Strong technical foundation across **secure data handling (GDPR)**, **AES-256 ap
 - Led end-to-end delivery of **two mobile healthcare applications (iOS + Android)** integrating **on-device AI** (rPPG/contactless vitals, stress assessment) and a secure cloud-backed ecosystem.
 - Managed a cross-functional delivery model (outsourced front-end/back-end teams), driving scope, plan, execution, quality gates, and release readiness across the full SDLC.
 - Owned **Bluetooth medical device integration** end-to-end (**6 devices**: BP monitor, pulse oximeter, thermometer, scale, ECG/HR, multiparameter biomarker device), ensuring accurate data capture and device/app interoperability.
-- Delivered a **hospital-supervised clinical validation program** aligned to **Apple Guideline 1.4.1**, producing a **~250-page validation dossier** and reproducible **Python analysis pipelines** (ICC, Bland–Altman LOA, MAD, Agreement %) with traceable **Excel → Python** datasets and audit-ready figures/tables.
+- Led a **hospital-supervised clinical validation program** and produced a **~250-page clinical evidence dossier** designed explicitly for **Apple App Store Review Guideline 1.4.1 (Safety – Physical Harm)**, supported by reproducible **Python** outputs (ICC, Bland–Altman LOA, MAD, Agreement %) and traceable **Excel → Python** datasets.
 - Verified **end-to-end Bluetooth → app data integrity** under supervised workflows (app-displayed values matched device outputs; no observed missing values/corruption across tested devices).
 - Authored and maintained platform-specific **Terms of Use and Privacy Policies** (iOS + Android), defining data handling, retention, user rights, and governance for regulated digital health.
 - Implemented privacy/security controls aligned with **GDPR**: EU/EEA hosting (Hetzner, Germany) under DPA, **TLS in transit**, **application-layer AES-256 at rest**, and RBAC/need-to-know access.
@@ -230,6 +234,7 @@ Strong technical foundation across **secure data handling (GDPR)**, **AES-256 ap
 - Study executed at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025**) with **27 participants (age 20–91)**; repeatable protocols with side-by-side comparison vs **hospital-grade reference equipment** (and **23/27** participants for invasive biomarker sampling on the multiparameter device).
 - Formal governance: conducted under a signed collaboration memorandum; datasets used for analysis were **pseudonymized**, with **re-identification keys retained by the hospital**.
 - Built **reproducible Python statistical pipelines** (ICC3/ICC3k, Bland–Altman bias + 95% LOA, MAD, Agreement %) producing audit-ready tables/figures from traceable Excel → Python workflows.
+- Mapped accuracy outcomes to relevant standards and clinical thresholds (e.g., **ISO 81060-2**, **ISO 80601-2-61**, **ISO 15197:2013**, **IEC 60601**, **ASTM E1965**, **OIML R76-1**, and CLIA/CAP-aligned tolerances where applicable).
 - Data transmission integrity: supervised workflow with **clinical cross-verification that app-displayed values matched device outputs**; daily Excel logs shared with the hospital for transparency and archival; **no observed missing values/corruption** across tested devices.
 - Secured a **signed Clinical Endorsement Letter (Appendix A)** by an interdisciplinary hospital team (cardiology, laboratory leadership, nursing), confirming protocol adherence, real-time verification of app-displayed values, and endorsement for supervised clinical use (triage/follow-up, chronic monitoring, telehealth support).
 
