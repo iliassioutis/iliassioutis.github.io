@@ -19,12 +19,11 @@ LinkedIn: https://www.linkedin.com/in/iliassioutis/
 
 ---
 
-
 ## Professional summary
 
-Senior **Software Project Manager and Solutions Architect** with deep experience delivering **AI-powered digital health platforms** in regulated environments. Proven track record leading **end-to-end development of iOS and Android healthcare applications**, from requirements and architecture through implementation, clinical validation, privacy governance, and production release.
+Senior **Software Project Manager and Solutions Architect** with deep experience delivering **AI-powered digital health platforms** in regulated environments. Proven track record leading **end-to-end development of iOS and Android healthcare applications**, from requirements and architecture through implementation, **hospital-supervised clinical validation**, privacy governance, and production release.
 
-Specialized in **evidence-driven delivery**, including the design and execution of **clinical validation programs** to support regulatory and **App Store approval**, authoring comprehensive validation documentation, and developing **reproducible Python-based analysis pipelines**. Extensive hands-on ownership of **privacy, data protection, and AI governance**, including drafting platform-specific **Terms and Privacy Policies** aligned with **GDPR** and healthcare best practices.
+Specialized in **evidence-driven delivery**, including the design and execution of **clinical validation programs** to support **Apple App Store health evidence review (Guideline 1.4.1)**. Led a hospital collaboration at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants; 6 Bluetooth medical devices**), authored a **~250-page validation dossier**, and developed **reproducible Python-based statistical analysis pipelines**. Extensive hands-on ownership of **privacy, data protection, and AI governance**, including drafting platform-specific **Terms and Privacy Policies** aligned with **GDPR** and healthcare best practices.
 
 Strong technical foundation spanning **on-device AI**, **Bluetooth medical device integrations**, secure mobile architectures, and **enterprise cloud systems**, with particular strength in **Azure-based integration platforms**. Known for bridging **technical, clinical, and regulatory domains**, coordinating cross-functional and external teams, and delivering **secure, compliant, user-centric digital health solutions** for **B2B and regulated contexts**.
 
@@ -47,18 +46,19 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 
 - Led end-to-end delivery of **two mobile healthcare applications (iOS + Android)**, integrating **on-device AI** (rPPG/contactless vitals, stress assessment) and a secure cloud-backed ecosystem.
 - Managed a cross-functional delivery model (outsourced front-end/back-end teams), driving scope, plan, execution, quality gates, and release readiness across the full SDLC.
-- Owned **Bluetooth medical device integration** end-to-end (BP monitors, pulse oximeters, thermometer, scale, ECG, multi-parameter devices), ensuring accurate data capture and device/app interoperability.
-- Led a hospital collaboration (Athens Hospital/Hygeia) to execute a **clinical validation program** supporting **App Store health evidence expectations (Guideline 1.4.1)**; produced a comprehensive validation dossier and analysis outputs.
-- Built **Python-based reproducible analysis pipelines** (e.g., agreement/Bland–Altman, ICC, MAD) and structured datasets to validate measurement performance and **end-to-end data integrity** from Bluetooth medical devices through mobile application ingestion and display.
+- Owned **Bluetooth medical device integration** end-to-end (**6 devices**: BP monitor, pulse oximeter, thermometer, scale, ECG/HR, multiparameter biomarker device), ensuring accurate data capture and device/app interoperability.
+- Led a **hospital-supervised clinical validation study** at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants**) to execute a **clinical validation program**, producing a **~250-page validation dossier** aligned to **Apple App Store Review Guideline 1.4.1 – Safety – Physical Harm** and analysis outputs.
+- Built **reproducible Python validation pipelines** (ICC3/ICC3k, Bland–Altman LOA, MAD, Agreement %) with traceable Excel → Python workflows and structured datasets to validate measurement performance and **end-to-end data integrity** from Bluetooth medical devices through mobile application ingestion and display, generating audit-ready tables and figures for reliability, accuracy, and bias assessment.
+- Verified **end-to-end Bluetooth → app data integrity**, confirming that app-displayed values matched device outputs under supervised clinical workflows, with **no observed data loss or corruption**.
+- Secured a **formal Clinical Endorsement Letter (Appendix A)** signed by interdisciplinary hospital staff (cardiology, laboratory, nursing), confirming protocol adherence, data integrity, and suitability for supervised clinical use.
 - Authored and maintained platform-specific **Terms of Use and Privacy Policies** (iOS + Android), defining data handling, retention, user rights, and governance for regulated digital health.
 - Implemented privacy/security controls aligned with **GDPR**: EU/EEA hosting (Hetzner, Germany) under DPA, HTTPS/TLS in transit, **application-layer AES-256 at rest**, and RBAC/need-to-know access.
 - Delivered supporting digital services: secure e-commerce flows for device/doctor-session purchases and a ticketing/support workflow integrated with the product ecosystem.
 
-
 ---
 
 ### Navarino — IT Service Analyst  
-*Apr 2024 – Sep 2024 | Athens, Greece (Hybrid)*
+*Apr 2024 – Sep 2024 | Athens, Greece (On-site)*
 
 - Installed, configured, and supported enterprise **Windows Server 2022** environments (AD, DNS, DHCP, GPO, DFS/NFS, FTP/SFTP).
 - Managed and troubleshot **virtual Windows and Linux servers**, performing patching, backups, recovery, and performance monitoring.
@@ -106,7 +106,7 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 - Drove requirements elicitation through structured workshops; translated business processes into **functional and non-functional specifications** with clear acceptance criteria.
 - Performed gap analysis on legacy systems and workflows; proposed realistic technical and process solutions within agreed scope, budget, and timelines.
 - Designed and implemented **Azure-based integration architectures**, including RESTful APIs, Azure Functions (C#), Durable Functions, Logic Apps, Service Bus, and secure storage services.
-- Built and supported data pipelines and analytics solutions using **Azure SQL, Azure Data Factory, Azure Synapse Analytics, Azure Databricks, and Power BI**.
+- Built and supported data and analytics solutions using **Azure SQL and Power BI**, with **exposure to Azure Data Factory, Synapse Analytics, and Databricks** in delivery contexts.
 - Coordinated internal teams and third-party vendors to ensure seamless execution, change control, and delivery against project plans.
 - Owned end-to-end delivery governance: progress tracking, risk management, change management, and regular stakeholder reporting.
 - Produced comprehensive technical and business documentation, including **BRDs, integration specifications, process flows, and user guides**.
@@ -220,9 +220,16 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 *(Clinical validation, privacy, security, AI governance)*
 
 ### Clinical validation dossier (iOS App Store readiness)
-- Led an end-to-end **clinical validation program** to support **Apple App Store health-related review expectations (Guideline 1.4.1)** for an iOS digital-health application.
-- Coordinated hospital collaboration (Hygeia Group / Athens Hospital), authored a **~250 page validation report**, and built the **Python analysis pipeline** (agreement / reliability metrics; reproducible tables/figures).
-- Executed structured measurement procedures and verified **end-to-end Bluetooth → app data integrity** (data displayed in-app matched device outputs under controlled workflows).
+- Led an end-to-end **hospital-supervised clinical validation program** to support **Apple App Store health-related review expectations (Guideline 1.4.1)** for an iOS digital-health application integrating Bluetooth medical devices.
+- Study executed at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants; 6 devices**) with repeatable measurement protocols and side-by-side comparison vs **hospital-grade reference equipment**.
+- Built **reproducible Python statistical pipelines** (ICC3/ICC3k, Bland–Altman LOA, MAD, Agreement %) producing audit-ready tables/figures and traceable Excel → Python datasets.
+- Verified **end-to-end Bluetooth → app data integrity**: app-displayed values matched device outputs under supervised workflows; **no missing values or corruption observed**.
+- Secured a **signed Clinical Endorsement Letter** from Athens Hospital confirming protocol adherence, clinical verification of app-displayed values, and endorsement for supervised clinical use (triage/follow-up, chronic monitoring, telehealth support).
+
+#### Key validation outcomes (study summary)
+- Reliability (ICC): BP monitor ICC3k **0.993–0.994**; thermometer ICC3k **0.992**; weight scale ICC3k **0.99997**; ECG HR ICC3k **0.999**; biomarkers ICC3k **0.960–0.999**.
+- Accuracy (examples): ECG HR bias **−0.54 bpm** (LOA −2.09 to +1.01); glucose bias **+0.22 mg/dL**; SpO₂ bias **+0.19%**; temperature bias **−0.02°C**.
+- Bluetooth integrity: **100% successful transmission**, **100% match** between device display and in-app logged values across all six devices.
 
 ### Privacy-by-design for AI camera measurements (iOS vs Android governance)
 - Implemented and documented on-device AI processing: **no photo/video upload or storage** for camera-based wellness estimates.
