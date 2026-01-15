@@ -2,12 +2,19 @@
 layout: default
 title: Resume
 ---
+<div class="no-print">
 📄 **Download PDF:**  
 [Download full Master Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-master.pdf)
 
 > 🏠 [Back to homepage](/)  
 > 🔎 Looking for a shorter, ATS-optimized version?  
 > 👉 **[View condensed ATS resume](/resume-ats)**
+</div>
+
+/* Hide page navigation + download links in print/PDF */
+@media print {
+  .no-print { display: none !important; }
+}
 
 ---
 
@@ -21,11 +28,12 @@ LinkedIn: https://www.linkedin.com/in/iliassioutis/
 
 ## Professional summary
 
-Senior **Software Project Manager and Solutions Architect** with deep experience delivering **AI-powered digital health platforms** in regulated environments. Proven track record leading **end-to-end development of iOS and Android healthcare applications**, from requirements and architecture through implementation, **hospital-supervised clinical validation**, privacy governance, and production release.
+Senior **Software Project Manager and Solutions Architect** delivering **AI-powered digital health platforms** in regulated environments. Led **end-to-end iOS/Android healthcare product delivery** (requirements → architecture → implementation → validation → privacy governance → release), with hands-on ownership of **Bluetooth medical device integrations**, **on-device AI**, and **secure mobile/cloud architectures**.
 
-Specialized in **evidence-driven delivery**, including the design and execution of **clinical validation programs** to support **Apple App Store health evidence review (Guideline 1.4.1)**. Led a hospital collaboration at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants; 6 Bluetooth medical devices**), authored a **~250-page validation dossier**, and developed **reproducible Python-based statistical analysis pipelines**. Extensive hands-on ownership of **privacy, data protection, and AI governance**, including drafting platform-specific **Terms and Privacy Policies** aligned with **GDPR** and healthcare best practices.
+Specialized in **evidence-driven delivery**: led a **hospital-supervised clinical validation program** at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants; 6 Bluetooth devices; repeatable protocols**) to support **Apple App Store Review Guideline 1.4.1 (Safety – Physical Harm)**. Authored a **~250-page validation dossier**, built **reproducible Python statistical pipelines** (ICC, Bland–Altman, MAD, Agreement %), and secured a **signed Clinical Endorsement Letter** from an interdisciplinary hospital team confirming protocol adherence, data integrity verification, and suitability for supervised clinical use.
 
-Strong technical foundation spanning **on-device AI**, **Bluetooth medical device integrations**, secure mobile architectures, and **enterprise cloud systems**, with particular strength in **Azure-based integration platforms**. Known for bridging **technical, clinical, and regulatory domains**, coordinating cross-functional and external teams, and delivering **secure, compliant, user-centric digital health solutions** for **B2B and regulated contexts**.
+Strong technical foundation across **secure data handling (GDPR)**, **AES-256 application-layer encryption**, **TLS**, **RBAC**, and **Azure integration platforms**, known for bridging **technical, clinical, and regulatory stakeholders** to deliver compliant, production-ready outcomes.
+
 
 ---
 
@@ -44,16 +52,14 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ### Telematic Medical Applications — Software Project Manager  
 *Oct 2024 – Present | Athens, Greece (On-site)*
 
-- Led end-to-end delivery of **two mobile healthcare applications (iOS + Android)**, integrating **on-device AI** (rPPG/contactless vitals, stress assessment) and a secure cloud-backed ecosystem.
+- Led end-to-end delivery of **two mobile healthcare applications (iOS + Android)** integrating **on-device AI** (rPPG/contactless vitals, stress assessment) and a secure cloud-backed ecosystem.
 - Managed a cross-functional delivery model (outsourced front-end/back-end teams), driving scope, plan, execution, quality gates, and release readiness across the full SDLC.
 - Owned **Bluetooth medical device integration** end-to-end (**6 devices**: BP monitor, pulse oximeter, thermometer, scale, ECG/HR, multiparameter biomarker device), ensuring accurate data capture and device/app interoperability.
-- Led a **hospital-supervised clinical validation study** at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants**) to execute a **clinical validation program**, producing a **~250-page validation dossier** aligned to **Apple App Store Review Guideline 1.4.1 – Safety – Physical Harm** and analysis outputs.
-- Built **reproducible Python validation pipelines** (ICC3/ICC3k, Bland–Altman LOA, MAD, Agreement %) with traceable Excel → Python workflows and structured datasets to validate measurement performance and **end-to-end data integrity** from Bluetooth medical devices through mobile application ingestion and display, generating audit-ready tables and figures for reliability, accuracy, and bias assessment.
-- Verified **end-to-end Bluetooth → app data integrity**, confirming that app-displayed values matched device outputs under supervised clinical workflows, with **no observed data loss or corruption**.
-- Secured a **formal Clinical Endorsement Letter (Appendix A)** signed by interdisciplinary hospital staff (cardiology, laboratory, nursing), confirming protocol adherence, data integrity, and suitability for supervised clinical use.
+- Delivered a **hospital-supervised clinical validation program** aligned to **Apple Guideline 1.4.1**, producing a **~250-page validation dossier** and reproducible **Python analysis pipelines** (ICC, Bland–Altman LOA, MAD, Agreement %) with traceable **Excel → Python** datasets and audit-ready figures/tables.
+- Verified **end-to-end Bluetooth → app data integrity** under supervised workflows (app-displayed values matched device outputs; no observed missing values/corruption across tested devices).
 - Authored and maintained platform-specific **Terms of Use and Privacy Policies** (iOS + Android), defining data handling, retention, user rights, and governance for regulated digital health.
-- Implemented privacy/security controls aligned with **GDPR**: EU/EEA hosting (Hetzner, Germany) under DPA, HTTPS/TLS in transit, **application-layer AES-256 at rest**, and RBAC/need-to-know access.
-- Delivered supporting digital services: secure e-commerce flows for device/doctor-session purchases and a ticketing/support workflow integrated with the product ecosystem.
+- Implemented privacy/security controls aligned with **GDPR**: EU/EEA hosting (Hetzner, Germany) under DPA, **TLS in transit**, **application-layer AES-256 at rest**, and RBAC/need-to-know access.
+- Delivered supporting services: teleconsultations + chat, secure e-commerce flows for device/doctor-session purchases, and a ticketing/support workflow integrated with the product ecosystem.
 
 ---
 
@@ -219,17 +225,19 @@ Strong technical foundation spanning **on-device AI**, **Bluetooth medical devic
 ## Selected evidence & governance work  
 *(Clinical validation, privacy, security, AI governance)*
 
-### Clinical validation dossier (iOS App Store readiness)
-- Led an end-to-end **hospital-supervised clinical validation program** to support **Apple App Store health-related review expectations (Guideline 1.4.1)** for an iOS digital-health application integrating Bluetooth medical devices.
-- Study executed at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025; 27 participants; 6 devices**) with repeatable measurement protocols and side-by-side comparison vs **hospital-grade reference equipment**.
-- Built **reproducible Python statistical pipelines** (ICC3/ICC3k, Bland–Altman LOA, MAD, Agreement %) producing audit-ready tables/figures and traceable Excel → Python datasets.
-- Verified **end-to-end Bluetooth → app data integrity**: app-displayed values matched device outputs under supervised workflows; **no missing values or corruption observed**.
-- Secured a **signed Clinical Endorsement Letter** from Athens Hospital confirming protocol adherence, clinical verification of app-displayed values, and endorsement for supervised clinical use (triage/follow-up, chronic monitoring, telehealth support).
+### Clinical validation & App Store evidence (iOS, Apple Guideline 1.4.1)
+- Led an end-to-end **hospital-supervised validation study** for ePokratis MedAiConnect (iOS) + **6 Bluetooth-connected medical devices**, aligned to **Apple App Store Review Guideline 1.4.1 – Safety – Physical Harm**.
+- Study executed at **Athens Hospital (Hygeia Group)** (**Feb 6 – Mar 6, 2025**) with **27 participants (age 20–91)**; repeatable protocols with side-by-side comparison vs **hospital-grade reference equipment** (and **23/27** participants for invasive biomarker sampling on the multiparameter device).
+- Formal governance: conducted under a signed collaboration memorandum; datasets used for analysis were **pseudonymized**, with **re-identification keys retained by the hospital**.
+- Built **reproducible Python statistical pipelines** (ICC3/ICC3k, Bland–Altman bias + 95% LOA, MAD, Agreement %) producing audit-ready tables/figures from traceable Excel → Python workflows.
+- Data transmission integrity: supervised workflow with **clinical cross-verification that app-displayed values matched device outputs**; daily Excel logs shared with the hospital for transparency and archival; **no observed missing values/corruption** across tested devices.
+- Secured a **signed Clinical Endorsement Letter (Appendix A)** by an interdisciplinary hospital team (cardiology, laboratory leadership, nursing), confirming protocol adherence, real-time verification of app-displayed values, and endorsement for supervised clinical use (triage/follow-up, chronic monitoring, telehealth support).
 
 #### Key validation outcomes (study summary)
 - Reliability (ICC): BP monitor ICC3k **0.993–0.994**; thermometer ICC3k **0.992**; weight scale ICC3k **0.99997**; ECG HR ICC3k **0.999**; biomarkers ICC3k **0.960–0.999**.
 - Accuracy (examples): ECG HR bias **−0.54 bpm** (LOA −2.09 to +1.01); glucose bias **+0.22 mg/dL**; SpO₂ bias **+0.19%**; temperature bias **−0.02°C**.
-- Bluetooth integrity: **100% successful transmission**, **100% match** between device display and in-app logged values across all six devices.
+- Bluetooth integrity: **100% successful transmission** and **100% match** between device display and in-app logged values across all six devices.
+
 
 ### Privacy-by-design for AI camera measurements (iOS vs Android governance)
 - Implemented and documented on-device AI processing: **no photo/video upload or storage** for camera-based wellness estimates.
