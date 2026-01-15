@@ -2,6 +2,12 @@
 layout: default
 title: Ilias Sioutis
 ---
+<div style="text-align: center; margin-bottom: 1.5rem;">
+  <img src="/assets/img/profile.jpg"
+       alt="Ilias Sioutis"
+       style="width:180px; border-radius:50%; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+</div>
+
 ## Overview
 I am a senior software project manager and solutions architect specializing in AI-powered digital
 health, regulated platforms, and complex cloud integrations.
