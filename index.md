@@ -2,14 +2,32 @@
 layout: default
 title: Ilias Sioutis
 ---
-<div style="text-align: center; margin-bottom: 1.5rem;">
+<div style="text-align: center; margin-bottom: 2rem;">
   <img src="/assets/img/profile.jpg"
        alt="Ilias Sioutis"
        style="width:180px; border-radius:50%; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+
   <div style="margin-top: 0.6rem; font-size: 0.95rem; color: #555;">
     AI-powered digital health · regulated platforms · evidence-driven delivery
   </div>
+
+  <div style="margin-top: 1.2rem;">
+    <a href="/assets/pdfs/resume-ilias-sioutis-master.pdf"
+       style="display:inline-block; padding:10px 18px; margin:6px;
+              background:#1f7a6d; color:#fff; text-decoration:none;
+              border-radius:6px; font-weight:600;">
+      Download Master Resume (PDF)
+    </a>
+
+    <a href="/assets/pdfs/resume-ilias-sioutis-ats.pdf"
+       style="display:inline-block; padding:10px 18px; margin:6px;
+              background:#2c5aa0; color:#fff; text-decoration:none;
+              border-radius:6px; font-weight:600;">
+      Download ATS Resume (PDF)
+    </a>
+  </div>
 </div>
+
 
 
 ## Overview
