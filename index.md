@@ -12,19 +12,21 @@ title: Ilias Sioutis
   </div>
 
 <div style="margin-top: 1.2rem;">
-  <a href="/assets/pdfs/resume-ilias-sioutis-master.pdf"
-     style="display:inline-block; padding:10px 18px; margin:6px;
-            background:#1f7a6d; color:#fff; text-decoration:none;
-            border-radius:6px; font-weight:600;">
-    Download Master Resume (PDF)
-  </a>
+<a href="/assets/pdfs/resume-ilias-sioutis-master.pdf"
+   onclick="gtag('event','download',{'event_category':'resume','event_label':'master'});"
+   style="display:inline-block; padding:10px 18px; margin:6px;
+          background:#1f7a6d; color:#fff; text-decoration:none;
+          border-radius:6px; font-weight:600;">
+  Download Master Resume (PDF)
+</a>
 
-  <a href="/assets/pdfs/resume-ilias-sioutis-ats.pdf"
-     style="display:inline-block; padding:10px 18px; margin:6px;
-            background:#2c5aa0; color:#fff; text-decoration:none;
-            border-radius:6px; font-weight:600;">
-    Download ATS Resume (PDF)
-  </a>
+<a href="/assets/pdfs/resume-ilias-sioutis-ats.pdf"
+   onclick="gtag('event','download',{'event_category':'resume','event_label':'ats'});"
+   style="display:inline-block; padding:10px 18px; margin:6px;
+          background:#2c5aa0; color:#fff; text-decoration:none;
+          border-radius:6px; font-weight:600;">
+  Download ATS Resume (PDF)
+</a>
 
   <a href="/contact"
      style="display:inline-block; padding:10px 18px; margin:6px;
