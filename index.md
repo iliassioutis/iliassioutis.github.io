@@ -13,7 +13,8 @@ title: Ilias Sioutis
 
 <div style="margin-top: 1.2rem;">
 <a href="/assets/pdfs/resume-ilias-sioutis-master.pdf"
-   onclick="gtag('event','download',{'event_category':'resume','event_label':'master'});"
+   target="_blank" rel="noopener"
+   onclick="gtag('event','resume_download',{'resume_type':'master','file_name':'resume-ilias-sioutis-master.pdf'});"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#1f7a6d; color:#fff; text-decoration:none;
           border-radius:6px; font-weight:600;">
@@ -21,7 +22,8 @@ title: Ilias Sioutis
 </a>
 
 <a href="/assets/pdfs/resume-ilias-sioutis-ats.pdf"
-   onclick="gtag('event','download',{'event_category':'resume','event_label':'ats'});"
+   target="_blank" rel="noopener"
+   onclick="gtag('event','resume_download',{'resume_type':'ats','file_name':'resume-ilias-sioutis-ats.pdf'});"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#2c5aa0; color:#fff; text-decoration:none;
           border-radius:6px; font-weight:600;">
