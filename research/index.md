@@ -15,14 +15,14 @@ Some items may be shared as summaries only, depending on availability and permis
 
 ## Sections
 
-- 🧠 **UCL MPhil thesis** — 3D non-rigid registration for image-guided interventions  
-  - 🔎 <a href="/research/ucl-mphil/">Open page</a>
+- 🧠 **UCL MPhil thesis** — 3D non-rigid registration for image-guided interventions (prostate)  
+  - 🔎 <a href="/research/ucl-mphil/">Read overview</a>
 
 - 🎓 **PhD thesis** — Theoretical & computational chemical physics (Ohio State)  
-  - 🔎 <a href="/research/phd/">Open page</a>
+  - 🔎 <a href="/research/phd/">Read overview</a>
 
 - 🧾 **Publications** — PhD/postdoc publication list + selected papers  
-  - 🔎 <a href="/research/publications/">Open page</a>
+  - 🔎 <a href="/research/publications/">Read overview</a>
 
 - 🎤 **Talks & presentations** — PhD presentations, invited talks, selected slides  
-  - 🔎 <a href="/research/talks/">Open page</a>
+  - 🔎 <a href="/research/talks/">Read overview</a>
