@@ -7,9 +7,7 @@ title: Research & Theses
 🏠 <a href="/">Back to homepage</a>
 </blockquote>
 
-This area hosts selected academic artifacts (theses, publications, and talks).  
-Some materials may be added progressively as PDFs and supporting files become available.  
-Some items may be shared as summaries only, depending on availability and permissions.
+This area hosts selected academic artifacts (theses, publications, and talks).    
 
 ---
 
@@ -18,11 +16,11 @@ Some items may be shared as summaries only, depending on availability and permis
 - 🧠 **UCL MPhil thesis** — 3D non-rigid registration for image-guided interventions (prostate)  
   - 🔎 <a href="/research/ucl-mphil/">Read overview</a>
 
-- 🎓 **PhD thesis** — Theoretical & computational chemical physics (Ohio State)  
+- 🎓 **PhD thesis** — Chemical Physics (Ohio State)  
   - 🔎 <a href="/research/phd/">Read overview</a>
 
 - 🧾 **Publications** — PhD/postdoc publication list + selected papers  
   - 🔎 <a href="/research/publications/">Read overview</a>
 
-- 🎤 **Talks & presentations** — PhD presentations, invited talks, selected slides  
+- 🎤 **Talks & presentations** — conference presentations, invited talks, posters  
   - 🔎 <a href="/research/talks/">Read overview</a>
