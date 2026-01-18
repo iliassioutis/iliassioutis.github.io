@@ -65,7 +65,7 @@ Key deliverables included:
 ## Technical approach
 
 ### Registration paradigm
-This work benchmarks **non-rigid point-set registration** where:
+This work benchmarks **non-rigid point-set registration** in settings where:
 - correspondences are not given,
 - the observed target is partial,
 - and deformation must be recovered.
