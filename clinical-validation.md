@@ -42,7 +42,7 @@ This page provides public evidence artifacts for **ePokratis MedAiConnect (iOS)*
 - **Study period:** **06 Feb 2025 – 06 Mar 2025**  
 - **Participants:** **27 adults (age 20–91)**  
 - **Objective:** Evaluate **accuracy, reliability, and data integrity** of measurements obtained via the iOS app with integrated Bluetooth medical devices, and support documentation expectations for **Apple App Store Review Guideline 1.4.1 (Safety – Physical Harm)**.  
-- **Collaboration:** Conducted under a signed independent fixed-term collaboration memorandum between **Telematic Medical Applications Ltd.** and **Athens Hospital**.
+- **Collaboration:** Conducted under a signed collaboration memorandum (memorandum of cooperation) between **Telematic Medical Applications Ltd.** and **Athens Hospital**.
 
 ---
 
@@ -68,8 +68,9 @@ Device measurements were evaluated against certified hospital-grade reference st
 - **Temperature:** Welch Allyn Braun ThermoScan PRO 6000 ear thermometer (ASTM E1965-98; EN ISO 80601-2-56:2017; CE-marked; FDA 510(k): K152298)  
 - **Weight:** Seca 769 digital column medical scale (OIML R76-1 Class III; EN 45501; CE-marked)  
 - **ECG / Heart rate:** Philips PageWriter TC20 ECG system (IEC 60601-2-25; IEC 60601-2-27; CE-marked; FDA 510(k): K133409)  
-- **Biomarkers:** Laboratory blood tests using Roche Cobas c 111 Analyzer (CE-marked; FDA 510(k): K071211; ISO 15197:2013 referenced for glucose)
+- **Biomarkers:** Laboratory blood tests using Roche Cobas c 111 Analyzer (CE-marked; FDA 510(k): K071211; ISO 15197:2013 (glucose) noted in report)
 
+All reference devices are certified, regularly calibrated, and operated by trained healthcare professionals.
 ---
 
 ## Study protocol (data collection)
