@@ -69,8 +69,8 @@ Device measurements were evaluated against certified hospital-grade reference st
 - **Weight:** Seca 769 digital column medical scale (OIML R76-1 Class III; EN 45501; CE-marked)  
 - **ECG / Heart rate:** Philips PageWriter TC20 ECG system (IEC 60601-2-25; IEC 60601-2-27; CE-marked; FDA 510(k): K133409)  
 - **Biomarkers:** Laboratory blood tests using Roche Cobas c 111 Analyzer (CE-marked; FDA 510(k): K071211; ISO 15197:2013 (glucose) noted in report)
-
 All reference devices are certified, regularly calibrated, and operated by trained healthcare professionals.
+
 ---
 
 ## Study protocol (data collection)
