@@ -9,7 +9,7 @@ title: UCL MPhil thesis (Computer Science) — Medical Imaging & Computer Vision
 
 ## UCL MPhil thesis — 3D non-rigid registration for image-guided interventions (prostate)
 
-This page summarizes my MPhil research project at **University College London (UCL)** focused on **3D non-rigid surface registration** for **image-guided interventions**, targeting an application scenario in **robot-assisted prostate surgery** (da Vinci) where **pre-operative MRI anatomy** is aligned to a **partial intra-operative surface** reconstructed from stereo endoscopic video.
+This page summarizes my MPhil research project at **University College London (UCL)** on **3D non-rigid surface registration** for **image-guided interventions**, targeting an application scenario in **robot-assisted prostate surgery** (da Vinci) where **pre-operative MRI anatomy** is aligned to a **partial intra-operative surface** reconstructed from stereo endoscopic video.
 
 📄 **Thesis (PDF):** <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a>
 
@@ -17,21 +17,21 @@ This page summarizes my MPhil research project at **University College London (U
 
 ## At a glance
 
-- **Clinical context:** AR image guidance for minimally invasive surgery via **3D MRI anatomy** overlaid onto intra-operative views.
+- **Clinical context:** AR image guidance for minimally invasive surgery via **3D MRI anatomy** aligned to intra-operative views.
 - **Core challenge:** **soft-tissue deformation** + **partial visibility (occlusion)** + **noise/outliers** + **no pre-defined correspondences**.
-- **Algorithms benchmarked/extended:** non-rigid point-set registration methods combined with **TPS (thin-plate splines)**, with an ICP baseline.
-- **Evaluation:** synthetic data with controlled perturbations + accuracy measured using **Target Registration Error (TRE)**, including a “beyond overlap” assessment.
-- **Implementation:** C++ pipelines + reproducible batch experiments on a UCL CS cluster; a Qt/VTK/PCL GUI tool for manual initialization and dataset generation.
+- **Algorithms benchmarked/extended:** non-rigid point-set registration methods combined with **TPS (thin-plate splines)**, with an **ICP baseline**.
+- **Evaluation:** synthetic prostate data with controlled perturbations; accuracy measured with **Target Registration Error (TRE)**, including explicit evaluation in the **space beyond common overlap**.
+- **Implementation:** **C++/VTK** pipelines; reproducible batch experiments on a UCL CS compute cluster; a **Qt/VTK** GUI tool with point-cloud utilities (incl. downsampling via VTK/PCL options) to support reproducible workflows.
 
 ---
 
 ## Clinical motivation and AR guidance scenario
 
 In minimally invasive surgery, limited field of view and reduced depth cues can be mitigated using **Augmented Reality (AR)** systems that:
-1) construct **3D anatomical models** (e.g., from MRI/CT/US), and  
-2) **register** these models to the intra-operative scene so subsurface structures are (virtually) revealed.
+1) construct **3D anatomical models** (e.g., from MRI/CT/US),  
+2) **register** these models to the intra-operative scene so subsurface structures can be visualized.
 
-In this thesis, **3D MRI** is used as the pre-operative modality for prostate anatomy, while the intra-operative representation is a **3D point-cloud** reconstructed from stereo endoscopic video, as in a da Vinci workflow.
+In this thesis, a **segmented 3D prostate surface derived from MRI** serves as the pre-operative model, while the intra-operative representation is treated as a **partial 3D point-cloud** reconstructed from stereo endoscopic video.
 
 ---
 
@@ -39,30 +39,30 @@ In this thesis, **3D MRI** is used as the pre-operative modality for prostate an
 
 A reliable AR overlay requires registration under difficult conditions:
 
-- The target model is often a **deformed subset** of the source, and the **overlap is unknown** in advance.
-- The deformation is **non-linear** and not known a priori.
+- The target model can be a **deformed subset** of the source, and the **overlap is not known** in advance.
+- Deformation is **non-linear** and not known a priori.
 - **No explicit point-to-point correspondences** are provided before registration.
-- The target may contain **noise** and/or **outliers**.
+- The target may include **measurement noise** and/or **outliers**.
 
 ---
 
 ## What I contributed (high level)
 
-This research is centered on making state-of-the-art non-rigid registration methods more applicable to **occluded / partial 3D surfaces**, which is a key barrier for intra-operative use.
+This research focuses on making state-of-the-art non-rigid registration methods more applicable to **occluded / partial 3D surfaces**.
 
 Key deliverables included:
-- Extending selected non-rigid registration frameworks to better handle **occlusion of 3D surfaces**.
-- Designing comprehensive **synthetic prostate test datasets** that simulate realistic clinical conditions (deformation / noise / outliers / occlusion).
-- Building structured test harnesses to explore each method’s **solution space** across datasets and parameters.
-- Demonstrating the importance of **rigorous validation** when assessing warping accuracy.
-- Implementing a **GUI tool** to support manual initialization and reproducible experiment workflows.
+- Reformulating selected non-rigid registration methods to address **occlusion** in full-model-to-partial-model settings.
+- Designing comprehensive **synthetic prostate datasets** simulating clinically relevant perturbations (deformation / noise / outliers / occlusion).
+- Building structured experimental workflows to evaluate performance across controlled scenarios and parameter settings.
+- Demonstrating why **validation beyond common overlap** is critical when assessing non-rigid warps for partial registrations.
+- Implementing a **GUI tool** to support manual initialization, dataset preparation, and reproducible experimentation.
 
 ---
 
 ## Technical approach
 
 ### Registration paradigm
-The thesis benchmarks **non-rigid point-set registration** under conditions where:
+The thesis benchmarks **non-rigid point-set registration** where:
 - correspondences are not given,
 - the observed target is partial,
 - and deformation must be recovered.
@@ -70,9 +70,9 @@ The thesis benchmarks **non-rigid point-set registration** under conditions wher
 A key modeling element is **Thin-Plate Splines (TPS)** (a radial-basis-function deformation model) used to represent smooth non-linear warps.
 
 ### Algorithms studied
-The work focuses on three non-rigid methods (paired with TPS warping) and compares their performance under controlled scenarios:
+Three non-rigid methods (paired with TPS warping) are examined and compared under controlled scenarios:
 
-- **KC + TPS:** Kernel Correlation based correspondence/fit + TPS deformation
+- **KC + TPS:** Kernel Correlation + TPS deformation
 - **GMM + TPS:** Gaussian Mixture Model alignment + TPS deformation
 - **EM + TPS:** Expectation-Maximization correspondence estimation + TPS deformation
 
@@ -82,61 +82,60 @@ An **ICP** baseline is used as a reference point for rigid alignment behavior.
 
 ## Experimental design and synthetic datasets
 
-Because intra-operative scenes can be partial and heavily perturbed, the thesis designs synthetic datasets that progressively introduce real-world difficulties, including:
+Synthetic datasets progressively introduce real-world difficulties, including:
 
 - deformation via TPS warps
 - noise injection (including non-Gaussian cases)
 - outliers
 - partial views (occlusion)
-- tests that measure performance **beyond common overlap** (i.e., not just in the region that happens to match)
+- evaluation of warping accuracy both **in the overlap region** and **beyond common overlap**
 
-A segmented 3D prostate mesh derived from MRI was used as the foundational shape for simulations.
+A segmented 3D prostate surface derived from MRI is used as the foundational shape for simulations.
 
 ---
 
 ## Evaluation and accuracy metric
 
 ### Target Registration Error (TRE)
-Registration accuracy is evaluated using **TRE**, i.e., the RMS distance between homologous target points after registration (in synthetic experiments, ground truth correspondences are known by construction).
+Accuracy is evaluated using **TRE**, computed in synthetic experiments where **ground truth is known by construction** (reported as mean ± standard deviation across experiment conditions).
 
-### Why “beyond overlap” matters
-In partial-to-full (or partial-to-partial) settings, a method can appear accurate if you only score it inside the easy overlap region. This thesis explicitly evaluates **warping behavior beyond the common overlap**, which is essential if you want AR overlays to remain anatomically plausible when part of the organ is not visible.
+### Why “beyond common overlap” matters
+For partial registrations, evaluating accuracy only in the region of overlap can be misleading. This thesis explicitly evaluates warping behavior in the **space beyond common overlap**, and treats this as the most reliable validation scheme for full-to-partial registrations.
 
 ---
 
-## Key results (selected thesis conclusions)
+## Key results (from the thesis conclusions)
 
-### Full-model to full-model
-- **EM + TPS** was the most accurate among the three methods for recovering deformation in **full-model-to-full-model** registrations.
+### Full-model to full-model registrations
+- **EM + TPS** outperformed **KC + TPS** and **GMM + TPS** in full-model-to-full-model synthetic prostate registrations.
+- Reported warping accuracies for **EM + TPS** were **below 2 mm** for clinically relevant simulations.
 
-### Occluded / partial target scenes (beyond overlap)
-- In occluded target scenes where recovering deformation **beyond the overlap** is required, the results favored **modified KC+TPS and modified GMM+TPS** approaches (with measured warping accuracy beyond overlap on the order of ~2 mm in the reported experiments).
+### Full-model to partial/occluded target scenes
+- For occlusion-aware full-model-to-partial-model registrations, **KC + TPS** and **GMM + TPS** were the only methods reported to yield valid point-to-point (and “clinically acceptable”) correspondences in the tested settings.
+- The **EM/TPS** approach could not recover deformation accurately in full-model-to-occluded-model registrations due to how correspondences are estimated.
 
-### Sensitivity to noise / scene size (practical takeaways)
-- The thesis reports concrete operating regimes showing when registrations remain clinically plausible, including thresholds tied to:
-  - **target scene size** (fraction of the surface visible)
-  - **noise levels** and correspondence robustness
+### Beyond-overlap warping accuracy (reported example)
+For occluded (~38% of the original surface) and deformed synthetic target prostates, the thesis reports beyond-overlap warping accuracy of:
+- **(2.1650 ± 1.0154) mm** using modified **KC/TPS**
+- **(2.1677 ± 0.9716) mm** using modified **GMM/TPS**
 
-(These are summarized in the final thesis chapter; this web page keeps them high-level, and the PDF is the authoritative reference for the exact tables/values.)
+The thesis also reports a corresponding maximum allowable Gaussian noise standard deviation **σ = 0.345** (with μ = 0) for both methods under those conditions, without pushing mean registration error above **3 mm**.
 
 ---
 
 ## Implementation & tooling
 
 ### C++ pipeline + batch experiments
-- Algorithms and experiment code were implemented in **C++**, using **VTK** for geometry/visualization workflows.
-- Large experiment grids were executed via **batch jobs** on a UCL Computer Science cluster.
+- Algorithms and experiment code were implemented in **C++**, using **VTK** for geometry and visualization workflows.
+- Large experiment grids were executed via **batch jobs** on a UCL Computer Science compute cluster.
 
-### Manual initialization & inspection GUI (Qt/VTK/PCL)
-A custom GUI application supported manual initialization and reproducible workflows, including:
-
-- scale + superimpose source/target and save aligned outputs
-- optional downsampling
-- surface reconstruction utilities
-- cropping a full model into a partial view
-- loading multiple 3D datasets into a common coordinate frame
-- generating synthetic test data
-- computing TRE metrics
+### Manual initialization & inspection GUI (Qt/VTK + point-cloud utilities)
+A custom GUI application supported reproducible workflows, including:
+- scaling and superimposing source/target point clouds and saving aligned outputs
+- downsampling (VTK- or PCL-based options)
+- cropping a full model into a partial target scene (occlusion simulation)
+- generating synthetic test datasets
+- computing and reporting TRE-based metrics
 
 ---
 
