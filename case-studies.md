@@ -30,14 +30,13 @@ One-month clinical validation study at **Athens Hospital** (**Feb 6–Mar 6, 202
 Benchmarking and implementation of non-rigid registration algorithms for prostate surface alignment under occlusions/noise/outliers.
 
 - 🔎 [Open thesis page](/research/ucl-mphil/)
-- 📄 Thesis (PDF): coming soon
-
-### 🧠 UCL MPhil thesis — 3D non-rigid registration for image-guided interventions
-Benchmarking and implementation of non-rigid registration algorithms for prostate surface alignment under occlusions/noise/outliers.
-
-- 🔎 [Open thesis page](/research/ucl-mphil/)
 - 📄 Thesis (PDF): <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a>
 
+### 🧠 UCL MPhil thesis — 3D non-rigid registration for image-guided interventions (prostate)
+Research project at **UCL** benchmarking **non-rigid point-set registration** (TPS-based warps) for prostate surface alignment under **occlusion/partial overlap**, **noise**, and **outliers**, using **synthetic datasets** and **Target Registration Error (TRE)** (including evaluation **beyond common overlap**).
+
+- 🔎 **Read the thesis summary:** [UCL MPhil — 3D non-rigid registration](/research/ucl-mphil/)
+- 📄 **Thesis (PDF):** <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a>
 
 ---
 
