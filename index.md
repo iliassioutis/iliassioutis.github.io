@@ -63,6 +63,37 @@ engagements.
 - Security controls: EU/EEA hosting (Hetzner, Germany) under GDPR DPA; HTTPS/TLS in transit; application-layer AES-256 at rest; RBAC / need-to-know access.
 - Data subject rights & operational controls: consent management (incl. SSN consent for purchase flows), item-level deletion with cross-device sync, and account deletion workflows.
 
+---
+## Clinical validation
+<p style="max-width:720px; margin:0 auto 10px; color:#555;">
+  Public evidence artifacts: the full validation report and a reproducibility package (scripts + supporting materials).
+</p>
+
+<div style="margin-top: 0.6rem; text-align:center;">
+  <a href="/assets/pdfs/epokratis-medaiconnect-validation-report.pdf"
+     target="_blank" rel="noopener noreferrer"
+     onclick="gtag('event','evidence_download',{'artifact_type':'validation_pdf','file_name':'epokratis-medaiconnect-validation-report.pdf'});"
+     style="display:inline-block; padding:10px 18px; margin:6px;
+            background:#1f7a6d; color:#fff; text-decoration:none;
+            border-radius:6px; font-weight:600;">
+    Clinical Validation Report (PDF)
+  </a>
+
+  <a href="/assets/downloads/validation_package.zip"
+     target="_blank" rel="noopener noreferrer"
+     onclick="gtag('event','evidence_download',{'artifact_type':'validation_zip','file_name':'validation_package.zip'});"
+     style="display:inline-block; padding:10px 18px; margin:6px;
+            background:#2c5aa0; color:#fff; text-decoration:none;
+            border-radius:6px; font-weight:600;">
+    Reproducibility Package (ZIP)
+  </a>
+</div>
+
+<p style="max-width:720px; margin:12px auto 0; font-size:0.95rem; color:#666;">
+  Note: Provided for evidence and transparency; not medical advice or diagnosis.
+</p>
+
+
 
 ## Areas of focus
 
@@ -80,6 +111,9 @@ engagements.
   📄 [Download Master Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-master.pdf)
 - 📄 [View ATS / Condensed Resume](/resume-ats)
   📄 [Download ATS Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-ats.pdf)
+- 🧪 [Clinical validation (PDF + ZIP)](#clinical-validation)
+  📄 [Download Validation Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf)
+  🗂️ [Download Reproducibility Package (ZIP)](/assets/downloads/validation_package.zip)  
 - [Case Studies](./case-studies)
 - [Research & Theses](./research)
 - [Contact](./contact)
