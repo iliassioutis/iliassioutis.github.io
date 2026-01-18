@@ -14,10 +14,9 @@ Below are selected delivery case studies highlighting evidence-driven execution,
 ## Featured case studies
 
 ### 🧪 Clinical validation — ePokratis MedAiConnect (iOS)
-Hospital collaboration (Athens Hospital) validating accuracy, reliability, and data integrity of six Bluetooth medical devices integrated with the iOS app. Study ran Feb–Mar 2025 with 27 adult participants (20–91), comparing device measurements against hospital-grade reference equipment. Analysis includes Bland–Altman agreement, ICC, and mean absolute difference (MAD); multi-functional biomarker device includes blood-sample comparison subset. Produced a 242-page evidence dossier supporting App Store review readiness (Guideline 1.4.1) plus a reproducibility package (scripts + supporting tables).
+Hospital observational study (Athens Hospital; Feb 6–Mar 6, 2025) validating **accuracy, reliability, and data integrity** for six Bluetooth medical devices integrated with the iOS app. Measurements were clinically supervised with app reading cross-verification, and used a repeat-measures protocol (typically 3 repeats per participant/device; biomarker subset included blood sampling). Statistical methodology included Bland–Altman (bias/limits of agreement), ICC (reliability), MAD, and agreement-percentage metrics with clinically justified fixed thresholds (e.g., BP ±5 mmHg; pulse ±3 bpm), aligned to relevant standards/guidance; analysis was performed on pseudonymized datasets with informed consent.
 
 - ✅ Artifacts: [Evidence & downloads](/clinical-validation) · [Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf) · [Repro pack (ZIP)](/assets/downloads/validation_package.zip)
-
 
 ---
 
