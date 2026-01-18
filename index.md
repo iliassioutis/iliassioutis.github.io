@@ -66,7 +66,7 @@ engagements.
 ---
 <h2 id="clinical-validation">Clinical validation</h2>
 <p style="max-width:720px; margin:0 auto 10px; color:#555;">
-  Public evidence artifacts: the full validation report and a reproducibility package (scripts + supporting materials).
+  Public evidence artifacts: validation report and reproducibility package (scripts + supporting materials).
 </p>
 
 <div style="margin-top: 0.6rem; text-align:center;">
@@ -113,7 +113,7 @@ engagements.
   - 📄 [Download ATS Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-ats.pdf)
 - 🧪 [Clinical validation (PDF + ZIP)](#clinical-validation)
   - 📄 [Download Validation Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf)
-  - 🗂️ [Download Reproducibility Package (ZIP)](/assets/downloads/validation_package.zip)  
-- [Case Studies](./case-studies)
-- [Research & Theses](./research)
-- [Contact](./contact)
+  - 🗂️ [Download Reproducibility Package (ZIP)](/assets/downloads/validation_package.zip)
+- 🗂️ [Case Studies](./case-studies)
+- 📚 [Research & Theses](./research)
+- ✉️ [Contact](./contact)
