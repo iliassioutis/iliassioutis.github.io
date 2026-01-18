@@ -65,7 +65,7 @@ Key deliverables included:
 ## Technical approach
 
 ### Registration paradigm
-The thesis benchmarks **non-rigid point-set registration** where:
+This work benchmarks **non-rigid point-set registration** where:
 - correspondences are not given,
 - the observed target is partial,
 - and deformation must be recovered.
@@ -103,7 +103,7 @@ A segmented 3D prostate surface derived from MRI is used as the foundational sha
 Accuracy is evaluated using **TRE**, computed in synthetic experiments where **ground truth is known by construction** (reported as mean ± standard deviation across experiment conditions).
 
 ### Why “beyond common overlap” matters
-For partial registrations, evaluating accuracy only in the region of overlap can be misleading. This thesis explicitly evaluates warping behavior in the **space beyond common overlap**, and treats this as the most reliable validation scheme for full-to-partial registrations.
+For partial registrations, evaluating accuracy only in the region of overlap can be misleading. This work explicitly evaluates warping behavior in the **space beyond common overlap**, treating it as the most reliable validation scheme for full-to-partial registrations.
 
 ---
 
@@ -118,11 +118,11 @@ For partial registrations, evaluating accuracy only in the region of overlap can
 - The **EM/TPS** approach could not recover deformation accurately in full-model-to-occluded-model registrations due to how correspondences are estimated.
 
 ### Beyond-overlap warping accuracy (reported example)
-For occluded (~38% of the original surface) and deformed synthetic target prostates, the thesis reports beyond-overlap warping accuracy of:
+For occluded (~38% of the original surface) and deformed synthetic target prostates, this work reports **beyond-overlap warping accuracy** of:
 - **(2.1650 ± 1.0154) mm** using modified **KC/TPS**
 - **(2.1677 ± 0.9716) mm** using modified **GMM/TPS**
 
-The thesis also reports a corresponding maximum allowable Gaussian noise standard deviation **σ = 0.345** (with μ = 0) for both methods under those conditions, without pushing mean registration error above **3 mm**.
+Under those conditions, the maximum allowable Gaussian noise standard deviation (μ = 0) reported without pushing the **mean registration error** above **3 mm** is **σ = 0.345** for both methods.
 
 ---
 
