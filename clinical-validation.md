@@ -3,10 +3,12 @@ layout: default
 title: Clinical validation
 ---
 
-# Clinical validation
+<blockquote>
+🏠 <a href="/">Back to homepage</a>
+</blockquote>
 
-This page provides public evidence artifacts for **ePokratis MedAiConnect** validation work:
-the full validation report and a reproducibility package (scripts + supporting materials).
+
+This page provides public evidence artifacts for **ePokratis MedAiConnect** validation work: the full report and a reproducibility package (scripts + supporting materials).
 
 <div style="margin-top: 1.0rem; text-align:center;">
   <a href="/assets/pdfs/epokratis-medaiconnect-validation-report.pdf"
@@ -54,7 +56,8 @@ If you have questions or would like a walkthrough, feel free to contact me.
 ---
 
 ## Contact
+If you'd like a walkthrough or additional context, feel free to [get in touch](/contact).
 
-- [Contact page](/contact)
+
 
 
