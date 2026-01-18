@@ -28,8 +28,11 @@ This page summarizes my MPhil research project at **University College London (U
 ## Clinical motivation and AR guidance scenario
 
 In minimally invasive surgery, limited field of view and reduced depth cues can be mitigated using **Augmented Reality (AR)** systems that:
-1) construct **3D anatomical models** (e.g., from MRI/CT/US),  
-2) **register** these models to the intra-operative scene so subsurface structures can be visualized.
+
+<ol>
+  <li>construct <strong>3D anatomical models</strong> (e.g., from MRI/CT/US),</li>
+  <li><strong>register</strong> these models to the intra-operative scene so subsurface structures can be visualized.</li>
+</ol>
 
 In this thesis, a **segmented 3D prostate surface derived from MRI** serves as the pre-operative model, while the intra-operative representation is treated as a **partial 3D point-cloud** reconstructed from stereo endoscopic video.
 
