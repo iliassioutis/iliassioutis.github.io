@@ -16,7 +16,7 @@ Below are selected delivery case studies highlighting evidence-driven execution,
 ### 🧪 Clinical validation — ePokratis MedAiConnect (iOS)
 Evidence dossier supporting app review readiness, including protocols, reproducible analysis, and transparency artifacts.
 
-- ✅ Artifacts: [Validation page](/clinical-validation) · [Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf) · [Repro pack (ZIP)](/assets/downloads/validation_package.zip)
+- ✅ Artifacts: [Evidence & downloads](/clinical-validation) · [Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf) · [Repro pack (ZIP)](/assets/downloads/validation_package.zip)
 
 ---
 
