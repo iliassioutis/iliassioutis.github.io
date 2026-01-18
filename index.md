@@ -13,7 +13,7 @@ title: Ilias Sioutis
 
 <div style="margin-top: 1.2rem;">
 <a href="/assets/pdfs/resume-ilias-sioutis-master.pdf"
-   target="_blank" rel="noopener"
+   target="_blank" rel="noopener noreferrer"
    onclick="gtag('event','resume_download',{'resume_type':'master','file_name':'resume-ilias-sioutis-master.pdf'});"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#1f7a6d; color:#fff; text-decoration:none;
@@ -22,7 +22,7 @@ title: Ilias Sioutis
 </a>
 
 <a href="/assets/pdfs/resume-ilias-sioutis-ats.pdf"
-   target="_blank" rel="noopener"
+   target="_blank" rel="noopener noreferrer"
    onclick="gtag('event','resume_download',{'resume_type':'ats','file_name':'resume-ilias-sioutis-ats.pdf'});"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#2c5aa0; color:#fff; text-decoration:none;
@@ -64,7 +64,7 @@ engagements.
 - Data subject rights & operational controls: consent management (incl. SSN consent for purchase flows), item-level deletion with cross-device sync, and account deletion workflows.
 
 ---
-## Clinical validation
+<h2 id="clinical-validation">Clinical validation</h2>
 <p style="max-width:720px; margin:0 auto 10px; color:#555;">
   Public evidence artifacts: the full validation report and a reproducibility package (scripts + supporting materials).
 </p>
@@ -107,13 +107,13 @@ engagements.
 
 ## Contents
 
-- 📘 [View Master / Evidence-heavy Resume](/resume)
-  📄 [Download Master Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-master.pdf)
-- 📄 [View ATS / Condensed Resume](/resume-ats)
-  📄 [Download ATS Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-ats.pdf)
+- 🧾 [View Master / Evidence-heavy Resume](/resume)
+  - 📄 [Download Master Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-master.pdf)
+- 🧾 [View ATS / Condensed Resume](/resume-ats)
+  - 📄 [Download ATS Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-ats.pdf)
 - 🧪 [Clinical validation (PDF + ZIP)](#clinical-validation)
-  📄 [Download Validation Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf)
-  🗂️ [Download Reproducibility Package (ZIP)](/assets/downloads/validation_package.zip)  
+  - 📄 [Download Validation Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf)
+  - 🗂️ [Download Reproducibility Package (ZIP)](/assets/downloads/validation_package.zip)  
 - [Case Studies](./case-studies)
 - [Research & Theses](./research)
 - [Contact](./contact)
