@@ -10,8 +10,9 @@ For B2B collaborations, freelance engagements, or professional inquiries, you ca
 
 - **Email:** isioutis@hotmail.com
 - **Phone:** +306944137673
-- **LinkedIn:** https://www.linkedin.com/in/iliassioutis/
+- **LinkedIn:** [linkedin.com/in/iliassioutis](https://www.linkedin.com/in/iliassioutis/)
+- **Website:** https://iliassioutis.github.io/ 
 
 ---
 
-I am available for B2B contracts and consulting engagements, both remote and hybrid.
+I’m available for B2B contracts and consulting engagements (remote or hybrid).
