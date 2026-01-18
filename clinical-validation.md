@@ -42,6 +42,7 @@ This page provides public evidence artifacts for **ePokratis MedAiConnect** vali
 - **Reproducibility Package (ZIP):**
   - `scripts/` – Python scripts used for analysis and plots
   - `data/` – supporting analysis files and result tables
+These artifacts are shared to support evidence-driven delivery and review readiness.
 
 ---
 
@@ -51,7 +52,7 @@ This page provides public evidence artifacts for **ePokratis MedAiConnect** vali
 2. Review the included folder structure (`scripts/`, `data/`).
 3. Run scripts from the `scripts/` folder using Python 3 (requirements depend on the script).
 
-If you have questions or would like a walkthrough, feel free to contact me.
+If you have questions or would like a walkthrough, I’m happy to help.
 
 ---
 
