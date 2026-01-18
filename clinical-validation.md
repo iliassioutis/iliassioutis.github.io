@@ -98,6 +98,24 @@ The report applies established statistical techniques to evaluate reliability an
 
 ---
 
+## Key results (summary)
+
+**Reliability (ICC):** All devices showed **excellent** reliability under supervised conditions.  
+- Vital-sign devices achieved **ICC3 ≈ 0.975–0.9999** and **ICC3k ≈ 0.992–0.99997** (e.g., BP/PR, thermometer, weight, ECG).  
+- TD-4216B biomarkers ranged **very good to excellent** (**ICC3: 0.889–0.997**, **ICC3k: 0.960–0.999**).
+
+**Accuracy & agreement (Bland–Altman / MAD / Agreement %):** Mean bias was small and agreement was strong across measures. Examples from the study summary table:  
+- **Blood pressure (TD-3128):** bias **+0.22 / +0.38 mmHg**, MAD **2.57 / 2.35 mmHg**, agreement **92.59% / 88.89%** (systolic/diastolic).  
+- **SpO₂ (TD-8255):** bias **+0.19%**, MAD **1.31%**, agreement **96.30%**.  
+- **Temperature (TD-1241):** bias **−0.02°C**, MAD **0.13°C**, agreement **92.59%**.  
+- **Weight (TD-2555):** bias **+0.02 kg**, MAD **0.13 kg**, agreement **96.30%**.  
+- **ECG heart rate (PM10):** bias **−0.54 bpm**, MAD **0.54 bpm**, agreement **92.59%**.  
+- **TD-4216B biomarkers:** Glucose and β-ketone reached **100% agreement** (Glucose MAD **4.78 mg/dL**, β-ketone MAD **0.03 mmol/L**).
+
+(See Tables 17–19 in the report for the full summary and applicable standards/thresholds.)
+
+---
+
 ## Data transmission integrity and governance
 
 - **Bluetooth workflow:** device readings were transmitted to the iOS app and immediately displayed.  
