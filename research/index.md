@@ -8,7 +8,8 @@ title: Research & Theses
 </blockquote>
 
 This area hosts selected academic artifacts (theses, publications, and talks).  
-Some materials may be added progressively as PDFs and supporting files become available.
+Some materials may be added progressively as PDFs and supporting files become available.  
+Some items may be shared as summaries only, depending on availability and permissions.
 
 ---
 
