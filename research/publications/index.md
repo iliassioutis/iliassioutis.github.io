@@ -30,7 +30,9 @@ This page lists peer-reviewed journal articles from my PhD/postdoc research peri
 ---
 
 ## Selected papers
-- Representative paper #1: *coming soon*
+- 📄 <a href="/assets/pdfs/papers/2008-sioutis-tropyl-jahn-teller-part-ii.pdf" target="_blank" rel="noopener noreferrer">
+  Experimental investigation of the Jahn–Teller effect in the ground and excited electronic states of the tropyl radical — Part II (PDF)
+</a>
 - Representative paper #2: *coming soon*
 - Representative paper #3: *coming soon*
 
