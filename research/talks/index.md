@@ -7,7 +7,7 @@ title: Talks & Presentations
 🏠 <a href="/">Back to homepage</a> · 📚 <a href="/research/">Research & Theses</a>
 </blockquote>
 
-This page lists selected **conference presentations**, **invited talks**, and **posters** from my PhD-era research activity (theoretical & computational chemical physics).
+This page lists selected **conference presentations**, **invited talks**, and **posters** from my PhD-era research activity (chemical physics).
 
 ---
 
