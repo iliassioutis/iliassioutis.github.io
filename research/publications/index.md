@@ -39,7 +39,9 @@ This page lists peer-reviewed journal articles from my PhD/postdoc research peri
   Silver trimer (Ag₃): Jahn–Teller effects — Part I (PDF)
 </a>
 
-- Representative paper #3: *coming soon*
+- 📄 <a href="/assets/pdfs/papers/2004-alkoxy-radicals-dispersed-fluorescence.pdf" target="_blank" rel="noopener noreferrer">
+  Dispersed fluorescence spectroscopy of primary and secondary alkoxy radicals (PDF)
+</a>
 
 
 ---
