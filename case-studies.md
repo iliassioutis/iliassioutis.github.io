@@ -14,13 +14,14 @@ Below are selected delivery case studies highlighting evidence-driven execution,
 ## Featured case studies
 
 ### 🧪 Clinical validation — ePokratis MedAiConnect (iOS)
-One-month observational study at **Athens Hospital** (**Feb 6–Mar 6, 2025**) with **27 adult participants (20–91)** validating **six Bluetooth medical devices** integrated with the iOS app. Hospital clinical staff supervised measurements and **cross-verified that app-displayed readings matched device outputs**, ensuring accuracy and data integrity.
+One-month clinical validation study at **Athens Hospital** (**Feb 6–Mar 6, 2025**) with **27 adults (20–91)** evaluating **accuracy, reliability, and data integrity** for **six Bluetooth medical devices** integrated with the ePokratis MedAiConnect **iOS** app, supporting App Store safety evidence under **Guideline 1.4.1 (Safety – Physical Harm)**. Athens Hospital clinical staff supervised measurements and **cross-verified that app-displayed values matched the device outputs**.
 
-- **Devices:** TaiDoc TD-3128 (BP), TD-8255 (SpO₂/PR), TD-1241 (Thermometer), TD-2555 (Scale), Contec PM10 (ECG), TaiDoc TD-4216B (multi-biomarker).
-- **Protocol:** For the five vital-sign devices, each device measurement was paired with a **hospital-grade reference measurement** and **repeated 3× per participant**. For TD-4216B, **23/27 participants provided blood samples**; device readings were **3× per biomarker**, with a single clinical reference per biomarker (due to the invasive nature of sampling).
-- **Statistics & evidence methods:** reliability via **ICC**, accuracy via **MAD** and **Agreement %** (with biomarker thresholds explicitly defined, e.g., glucose aligned to **ISO 15197:2013**), plus **Bland–Altman** bias/95% limits of agreement (±1.96 SD) with plots generated from the reproducibility scripts.
-- **Data governance:** datasets were **pseudonymized (GDPR Art. 4(5))** and de-identification keys retained only by Athens Hospital.
-- **Transmission integrity:** app/device values were cross-validated during testing; clinical personnel verified alignment, and the report includes data-transmission integrity checks (e.g., TD-4216B describes 100% successful transmission and verified accuracy).
+- **Devices validated:** TaiDoc TD-3128 (BP/PR), TD-8255 (SpO₂/PR), TD-1241 (Thermometer), TD-2555 (Scale), Contec PM10 (ECG/HR), TaiDoc TD-4216B (biomarkers).
+- **Protocol:** paired comparison vs **hospital-grade reference standards**; **3× repeats per participant** for vital-sign devices; TD-4216B subset: **23/27** blood samples, **3× repeats per biomarker** with **single clinical reference per biomarker** (invasive sampling constraint).
+- **Reference standards (Athens Hospital):** Omron HEM-907XL (BP), Nellcor bedside SpO₂ system, Welch Allyn Braun ThermoScan PRO 6000 (temperature), Seca 769 medical scale (weight), Philips PageWriter TC20 ECG system, Roche Cobas c 111 lab analyzer (biomarkers) — all certified and clinically operated.
+- **Methods:** **ICC** (Pingouin; **ICC3 / ICC3k**), **MAD**, **Agreement %**, and **Bland–Altman** (mean difference + **95% limits of agreement = ±1.96 SD**) with clinically/standard-derived thresholds (e.g., ISO 81060-2 for BP, ISO 15197 for glucose).
+- **Key outcomes (study summary tables):** vital-sign devices showed **excellent reliability** (e.g., ICC3 typically ≥0.975 and ICC3k ≥0.992); TD-4216B biomarkers ranged **very good to excellent** (ICC3 **0.889–0.997**, ICC3k **0.960–0.999**). Accuracy metrics (bias/LOA/MAD/Agreement %) were reported within defined thresholds across measures.
+- **Data integrity:** end-to-end workflow verified; **no missing values, no corruption, consistent units/labels/timestamps**, and **100% in-app match** to device readings across all devices (no integrity issues observed).
 
 - ✅ Artifacts: [Evidence & downloads](/clinical-validation) · [Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf) · [Repro pack (ZIP)](/assets/downloads/validation_package.zip)
 
