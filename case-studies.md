@@ -29,7 +29,8 @@ One-month clinical validation study at **Athens Hospital** (**Feb 6–Mar 6, 202
 ### 🧠 UCL MPhil thesis — 3D non-rigid registration for image-guided interventions
 Benchmarking and implementation of non-rigid registration algorithms for prostate surface alignment under occlusions/noise/outliers.
 
-- 🔎 Page coming soon
+- 🔎 [Open thesis page](/research/ucl-mphil/)
+- 📄 Thesis (PDF): coming soon
 
 ---
 
