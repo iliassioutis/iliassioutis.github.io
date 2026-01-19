@@ -11,10 +11,7 @@ title: UCL MPhil thesis (Computer Science) — Medical Imaging & Computer Vision
 
 This page summarizes my MPhil research project at **University College London (UCL)** on **3D non-rigid surface registration** for **image-guided interventions**, targeting an application scenario in **robot-assisted prostate surgery** (da Vinci) where **pre-operative MRI anatomy** is aligned to a **partial intra-operative surface** reconstructed from stereo endoscopic video.
 
-📄 **Thesis (PDF):** <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a><br>
-<a href="https://discovery.ucl.ac.uk/id/eprint/1471002/" target="_blank" rel="noopener noreferrer">View on UCL Discovery</a>
-
-📄 **Thesis (PDF):** <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/1471002/" target="_blank" rel="noopener noreferrer">UCL Discovery page</a>
+📄 **Thesis (PDF):** <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/1471002/" target="_blank" rel="noopener noreferrer">View on UCL Discovery</a>
 
 ---
 
