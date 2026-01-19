@@ -21,7 +21,7 @@ This page provides downloadable academic transcripts and degree certifications.
      style="display:block; width:100%; text-align:center; padding:10px 16px;
             background:#1f7a6d; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
-    BSc Transcript (PDF)
+    BSc Transcript (1995–1999)
   </a>
 
   <a href="/assets/pdfs/credentials/phd-transcript.pdf"
@@ -30,7 +30,7 @@ This page provides downloadable academic transcripts and degree certifications.
      style="display:block; width:100%; text-align:center; padding:10px 16px;
             background:#2c5aa0; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
-    PhD Transcript (PDF)
+    PhD Transcript (2000–2006)
   </a>
   
   <a href="/assets/pdfs/credentials/mba-transcript.pdf"
@@ -39,7 +39,7 @@ This page provides downloadable academic transcripts and degree certifications.
      style="display:block; width:100%; text-align:center; padding:10px 16px;
             background:#7a5a1f; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
-    MBA Transcript (PDF)
+    MBA Transcript (2008–2009)
   </a>
 
   <a href="/assets/pdfs/credentials/ucl-mphil-transcript.pdf"
@@ -48,7 +48,7 @@ This page provides downloadable academic transcripts and degree certifications.
      style="display:block; width:100%; text-align:center; padding:10px 16px;
             background:#555; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
-    MPhil Transcript (PDF)
+    MPhil Transcript (2013–2015)
   </a>
 
 </div>
