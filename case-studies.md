@@ -263,49 +263,35 @@ This tool enabled **repeatable, parameter-driven scenario planning** for distrib
 
 ## Execution flow (how the workbook runs)
 
-```text
-INPUTS (SKU table + target mix% + costs + transport brackets + mode)
-        |
-        v
-  Select scenario
-   - (1) Pure warehousing
-   - (2) Pick-by-line cross-docking (two-leg: Supplier→Retailer AND Retailer→Stores)
-   - (3) Pre-allocated CDO consolidation (placeholder / limited scenario)
-        |
-        +--> Single-point run
-        |       |
-        |       v
-        |   InputShipments orchestrator
-        |    - clears outputs (Analysis / Shipments)
-        |    - stages & sorts SKU dataset
-        |    - creates per-shipment targets and template blocks
-        |    - runs per-shipment calculations and aggregates pallets/cases
-        |       |
-        |       v
-        |   Pallet engine (heuristic)
-        |    - Stage 1: homogeneous pallets
-        |    - Stage 2: heterogeneous pallets from full layers (≥2 SKUs)
-        |    - Stage 3: loose/picked cases
-        |       |
-        |       v
-        |   Cost model
-        |    - Throughput + Admin + Transport (+ Inventory where applicable)
-        |    - Transport uses pallet-range brackets + 33 pallet-spot guardrail
-        |       |
-        |       v
-        |   Outputs
-        |    - cost breakdown (Supplier DC / Retailer DC / Total)
-        |    - target vs actual pallet-mix (to show heuristic realization)
-        |
-        +--> Multi-point sweep (grid over mix %)
-                |
-                v
-            Enumerate feasible (homo%, heter%) points
-            -> picked% = 1 - (homo% + heter%)
-            -> run single-point per scenario
-            -> store results table
-            -> generate cross-section graphs (along homogeneous axis)
+1) **Inputs**
+   - SKU table (ordered cases + cases/layer + cases/pallet + optional availability constraints)
+   - Target pallet-mix percentages (homogeneous / heterogeneous / loose or picked)
+   - Cost inputs (throughput, admin, inventory where applicable)
+   - Transportation tariff brackets (piecewise pallet-range charges) + truck capacity guardrail
+   - Mode selectors (strategy + node where relevant)
 
-Sensitivity runs (Inventory / Admin / Throughput)
--> rebuild charts reliably
--> optionally promote best charts to the curated “Graphs” sheet
+2) **Select scenario**
+   - (1) Pure warehousing operations (handling + inventory)
+   - (2) Pick-by-line cross-docking (two-leg flow: Supplier → Retailer, then Retailer → Stores)
+   - (3) Pre-allocated consolidation scenario (**placeholder / limited**, used for exploratory comparison)
+
+3) **Single-point run (one chosen pallet-mix)**
+   - Build shipments (automatic) and translate target mix → feasible palletization using the 3-stage heuristic:
+     - Stage 1: homogeneous pallets
+     - Stage 2: heterogeneous pallets from full layers (≥2 SKUs)
+     - Stage 3: loose/picked cases
+   - Compute cost breakdown:
+     - Throughput + Administration + Transportation (+ Inventory when applicable)
+   - Produce outputs:
+     - Supplier / Retailer / Total costs
+     - “Target vs actual” mix (to show heuristic realization vs targets)
+
+4) **Multi-point sweep (grid search over mix %)**
+   - Enumerate feasible (homogeneous%, heterogeneous%) combinations
+   - Derive picked% = 1 − (homogeneous% + heterogeneous%)
+   - Run the single-point engine for each grid point
+   - Store results table + generate cross-section graphs (along the homogeneous axis)
+
+5) **Sensitivity runs (optional)**
+   - Inventory (1D sweep), Administration (2D sweep), Throughput (2D sweep)
+   - Rebuild charts and optionally promote “best” charts to the curated **Graphs** sheet
