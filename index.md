@@ -118,6 +118,7 @@ engagements.
   - 📄 [Download Master Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-master.pdf)
 - 🧾 [View ATS / Condensed Resume](/resume-ats)
   - 📄 [Download ATS Resume (PDF)](/assets/pdfs/resume-ilias-sioutis-ats.pdf)
+- 🎓 [Academic Credentials (Transcripts & Certificates)](/credentials)
 - 🧪 Clinical validation
   - 🔎 [Jump to section on this page](#clinical-validation)
   - 🧾 [Open details page](/clinical-validation)
