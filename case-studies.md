@@ -114,6 +114,7 @@ Operational planning involved balancing trade-offs that are hard to reason about
 - **Sensitivity questions:** “Which cost drivers matter most?” and “How robust is the optimum to changing tariffs or picking charges?”
 
 Pick-by-line cross-docking is evaluated as a **two-leg flow** (Supplier→Retailer and Retailer→Stores), each with its own target pallet-mix percentages.
+
 The objective was to provide a repeatable mechanism to identify **low-cost operating points** and to explain **why** they are low-cost via cost breakdowns and sensitivity graphs.
 
 ---
