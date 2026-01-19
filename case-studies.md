@@ -113,6 +113,7 @@ Operational planning involved balancing trade-offs that are hard to reason about
 - **Inventory vs flow-through:** traditional warehousing vs cross-docking where storage is minimized/removed
 - **Sensitivity questions:** “Which cost drivers matter most?” and “How robust is the optimum to changing tariffs or picking charges?”
 
+Pick-by-line cross-docking is evaluated as a **two-leg flow** (Supplier→Retailer and Retailer→Stores), each with its own target pallet-mix percentages.
 The objective was to provide a repeatable mechanism to identify **low-cost operating points** and to explain **why** they are low-cost via cost breakdowns and sensitivity graphs.
 
 ---
@@ -273,7 +274,7 @@ This tool enabled **repeatable, parameter-driven scenario planning** for distrib
 2) **Select scenario**
    - (1) Pure warehousing operations (handling + inventory)
    - (2) Pick-by-line cross-docking (two-leg flow: Supplier → Retailer, then Retailer → Stores)
-   - (3) Pre-allocated consolidation scenario (**placeholder / limited**, used for exploratory comparison)
+   - (3) Pre-allocated consolidation scenario (cross-dock consolidation variant)
 
 3) **Single-point run (one chosen pallet-mix)**
    - Build shipments (automatic) and translate target mix → feasible palletization using the 3-stage heuristic:
