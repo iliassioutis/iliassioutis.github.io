@@ -48,7 +48,7 @@ This page provides downloadable academic transcripts and degree certifications.
      style="display:block; width:100%; text-align:center; padding:10px 16px;
             background:#555; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
-    UCL MPhil Transcript (PDF)
+    MPhil Transcript (PDF)
   </a>
 
 </div>
