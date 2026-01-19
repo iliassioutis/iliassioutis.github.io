@@ -7,15 +7,21 @@ title: PhD Thesis
 🏠 <a href="/">Back to homepage</a> · 📚 <a href="/research/">Research & Theses</a>
 </blockquote>
 
-## 🎓 PhD Thesis (Ohio State University)
+## 🎓 PhD Thesis
+
+**The Ohio State University · Chemical Physics · 2006**  
+**Title:** *Experimental and Computational Investigation of Jahn-Teller Active and Other Molecules*
 
 This page hosts the **PhD thesis PDF**, selected representative materials, and links to related publications.
 
 ---
 
-## Summary (placeholder)
-- Field: Theoretical & computational chemical physics (with strong physics orientation)
-- Outputs: thesis, selected papers, and (optionally) presentation material
+## Summary
+- Focus: Electronic-structure and vibrational properties of Jahn-Teller-active systems and related molecular species, combining experiment and computation.
+- Experimental work: Laser-induced fluorescence (LIF) and laser-excited, dispersed fluorescence (LEDF) spectroscopy of alkoxy radicals (1-propoxy, 1-butoxy, 2-propoxy, 2-butoxy) to extract vibronic separations (ground X and low-lying A states) and vibrational frequencies.
+- Theory-guided spectral analysis: Extensive ab initio/DFT calculations for Ag3 (silver trimer) and the tropyl radical (C7H7) to predict A-X spectra, estimate Jahn-Teller parameters, and support band assignments via simulated absorption/emission spectra.
+- Weakly bound complexes: Theoretical study of decaborane (B10H14) interactions with I- and Xe, comparing binding mechanisms (electrostatic/induction/dispersion) and charge-transfer characteristics.
+- Chapter map (high level): Ch.2 decaborane complexes; Ch.3 alkoxy-radical emission spectra; Ch.4 Ag3 ab initio; Ch.5 Ag3 LIF/LEDF analysis; Ch.6 tropyl-radical LIF/LEDF; final chapter conclusions.
 
 ---
 
@@ -28,7 +34,8 @@ This page hosts the **PhD thesis PDF**, selected representative materials, and l
 
 ---
 
-## Related
+## See also
 - 🧾 <a href="/research/publications/">Publications</a>
 - 🎤 <a href="/research/talks/">Talks & presentations</a>
+
 
