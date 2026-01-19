@@ -23,7 +23,7 @@ This page lists peer-reviewed journal articles from my PhD/postdoc research peri
 
 5. Stakhursky, V. L., <strong>Sioutis, I.</strong>, Tarczay, G., and Miller, T. A. (2008). Computational investigation of the Jahn–Teller effect in the ground and excited electronic states of the tropyl radical. I. Theoretical calculation of spectroscopically observable parameters. <em>The Journal of Chemical Physics</em> <strong>128</strong>, 084310(-1)–084310(-13).
 
-6. <strong>Sioutis, I.</strong>, Stakhursky, V. L., Tarczay, G., and Miller, T. A. (2008). Experimental investigation of the Jahn–Teller effect in the ground and excited electronic states of the tropyl radical. II. Vibrational analysis of the A <sup>2</sup>E<sub>3</sub><sup>″</sup>–X <sup>2</sup>E<sub>2</sub><sup>″</sup> electronic transition. <em>The Journal of Chemical Physics</em> <strong>128</strong>, 084311(-1)–084311(-18).
+6. <strong>Sioutis, I.</strong>, Stakhursky, V. L., Tarczay, G., and Miller, T. A. (2008). Experimental investigation of the Jahn–Teller effect in the ground and excited electronic states of the tropyl radical. II. Vibrational analysis of the A&#771; <sup>2</sup>E<sub>3</sub><sup>″</sup>–X&#771; <sup>2</sup>E<sub>2</sub><sup>″</sup> electronic transition. <em>The Journal of Chemical Physics</em> <strong>128</strong>, 084311(-1)–084311(-18).
 
 7. <strong>Sioutis, I.</strong>, Sabyashachi, M., Poluyanov, L. V., and Domcke, W. (2008). Renner–Teller and spin-orbit vibronic-coupling effects in linear triatomic molecules with a half-filled π shell. <em>The Journal of Chemical Physics</em> <strong>128</strong>, 124318(-1)–124318(-13).
 
