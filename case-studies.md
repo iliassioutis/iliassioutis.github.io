@@ -329,3 +329,5 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
   (grid over mix %)              (inventory / admin / throughput)
   -> store results table         -> rebuild charts
   -> cross-section graphs        -> optionally promote to "Graphs" sheet
+```
+
