@@ -19,7 +19,7 @@ This page lists peer-reviewed journal articles from my PhD/postdoc research peri
 
 3. <strong>Sioutis, I.</strong>, Stakhursky, V. L., Pitzer, R. M., and Miller, T. A. (2007). Jahn–Teller and related effects in the silver trimer. I. The <em>ab initio</em> calculation of spectroscopically observable parameters for the X&#771; <sup>2</sup>E′ and A&#771; <sup>2</sup>E″ electronic states. <em>The Journal of Chemical Physics</em> <strong>126</strong>, 124308(-1)–124308(-16).
 
-4. <strong>Sioutis, I.</strong>, Stakhursky, V. L., Pitzer, R. M., and Miller, T. A. (2007). Jahn–Teller and related effects in the silver trimer. II. Vibrational analysis of the A <sup>2</sup>E″–X <sup>2</sup>E′ electronic transition. <em>The Journal of Chemical Physics</em> <strong>126</strong>, 124309(-1)–124309(-16).
+4. <strong>Sioutis, I.</strong>, Stakhursky, V. L., Pitzer, R. M., and Miller, T. A. (2007). Jahn–Teller and related effects in the silver trimer. II. Vibrational analysis of the A&#771; <sup>2</sup>E″–X&#771; <sup>2</sup>E′ electronic transition. <em>The Journal of Chemical Physics</em> <strong>126</strong>, 124309(-1)–124309(-16).
 
 5. Stakhursky, V. L., <strong>Sioutis, I.</strong>, Tarczay, G., and Miller, T. A. (2008). Computational investigation of the Jahn–Teller effect in the ground and excited electronic states of the tropyl radical. I. Theoretical calculation of spectroscopically observable parameters. <em>The Journal of Chemical Physics</em> <strong>128</strong>, 084310(-1)–084310(-13).
 
