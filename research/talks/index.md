@@ -40,7 +40,7 @@ This page lists selected **conference presentations**, **invited talks**, and **
 9. **Ilias Sioutis**, Vadim L. Stakhursky, György Tarczay, and Terry A. Miller. “Laser-Induced Fluorescence and Dispersed Fluorescence Spectroscopy of the Tropyl C<sub>7</sub>H<sub>7</sub> Radical in the Jet Expansion: The Analysis of the Gas-Phase Electronic Spectra Continues.”  
    61<sup>st</sup> International Symposium on Molecular Spectroscopy, Columbus, Ohio, June 19–23, 2006.
 
-10. **Ilias Sioutis**, Vadim L. Stakhursky, Russell M. Pitzer, and Terry A. Miller. “Combined Analysis of the A <sup>2</sup>E''–X <sup>2</sup>E' Gas-Phase Excitation and Emission Spectra of Ag<sub>3</sub>.”  
+10. **Ilias Sioutis**, Vadim L. Stakhursky, Russell M. Pitzer, and Terry A. Miller. “Combined Analysis of the A&#771; <sup>2</sup>E''–X&#771; <sup>2</sup>E' Gas-Phase Excitation and Emission Spectra of Ag<sub>3</sub>.”  
     61<sup>st</sup> International Symposium on Molecular Spectroscopy, Columbus, Ohio, June 19–23, 2006.
 
 11. **Ilias Sioutis** and Wolfgang Domcke. “Theoretical Investigation of Spin–Orbit Vibronic Coupling Effects in the Electronic Ground State of CrCN.”  
