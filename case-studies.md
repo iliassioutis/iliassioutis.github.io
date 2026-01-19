@@ -261,30 +261,51 @@ This tool enabled **repeatable, parameter-driven scenario planning** for distrib
 
 ---
 
+## Execution flow (how the workbook runs)
+
+```text
 INPUTS (SKU table + target mix% + costs + transport brackets + mode)
         |
         v
-  Select scenario (Warehousing vs Pick-by-line vs CDO placeholder)
+  Select scenario
+   - (1) Pure warehousing
+   - (2) Pick-by-line cross-docking (two-leg: Supplier→Retailer AND Retailer→Stores)
+   - (3) Pre-allocated CDO consolidation (placeholder / limited scenario)
         |
         +--> Single-point run
         |       |
         |       v
         |   InputShipments orchestrator
+        |    - clears outputs (Analysis / Shipments)
+        |    - stages & sorts SKU dataset
+        |    - creates per-shipment targets and template blocks
+        |    - runs per-shipment calculations and aggregates pallets/cases
         |       |
         |       v
-        |   Pallet engine: Homogeneous -> Heterogeneous (layers) -> Loose/Picked
+        |   Pallet engine (heuristic)
+        |    - Stage 1: homogeneous pallets
+        |    - Stage 2: heterogeneous pallets from full layers (≥2 SKUs)
+        |    - Stage 3: loose/picked cases
         |       |
         |       v
-        |   Cost model: Throughput + Admin + Transport (+ Inventory if applicable)
+        |   Cost model
+        |    - Throughput + Admin + Transport (+ Inventory where applicable)
+        |    - Transport uses pallet-range brackets + 33 pallet-spot guardrail
         |       |
         |       v
-        |   Outputs: Analysis (Supplier / Retailer / Total) + Target vs Actual
+        |   Outputs
+        |    - cost breakdown (Supplier DC / Retailer DC / Total)
+        |    - target vs actual pallet-mix (to show heuristic realization)
         |
         +--> Multi-point sweep (grid over mix %)
                 |
                 v
-            Repeat single-point per scenario -> store table -> generate cross-section graph
+            Enumerate feasible (homo%, heter%) points
+            -> picked% = 1 - (homo% + heter%)
+            -> run single-point per scenario
+            -> store results table
+            -> generate cross-section graphs (along homogeneous axis)
 
-  Sensitivity runs (Inventory/Admin/Throughput) -> chart generation -> Graphs sheet
-
-
+Sensitivity runs (Inventory / Admin / Throughput)
+-> rebuild charts reliably
+-> optionally promote best charts to the curated “Graphs” sheet
