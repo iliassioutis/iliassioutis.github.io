@@ -9,10 +9,6 @@ title: Academic Credentials
 
 This page provides downloadable academic transcripts and degree certifications.
 
-<p style="max-width:760px; color:#666;">
-  Note: These documents may contain personal data. Consider sharing redacted versions (e.g., remove student IDs, addresses, signatures) if you want them fully public.
-</p>
-
 ---
 
 ## Transcripts & certifications
