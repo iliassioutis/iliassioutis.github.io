@@ -259,3 +259,30 @@ This tool enabled **repeatable, parameter-driven scenario planning** for distrib
 - enforce operational constraints (e.g., truck pallet-spot capacity) during scenario evaluation
 - deliver export-ready charts for management discussion and decision support
 
+---
+
+flowchart TD
+  A[Inputs (Input sheet)\n- SKU table: cases, layers, cases/pallet\n- Target mix % (homo/heter/loose)\n- Cost parameters (throughput/admin/inventory/transport)\n- Transport tariff brackets\n- Mode + #shipments + increment] --> B{Select scenario}
+
+  B -->|Mode 1: Pure warehousing| C[Run single-point\nWarehouseOperations / WarehouseOperationsAgain]
+  B -->|Mode 2: Pick-by-line cross-dock| D[Run single-point\nPickbylineOperations\n(2-leg: Supplier→Retailer AND Retailer→Stores)]
+  B -->|Mode 3: Pre-allocated CDO| E[Placeholder / limited\n(do not oversell)]
+
+  C --> F[InputShipments orchestrator\n- clears outputs\n- stages SKU data\n- creates shipment blocks\n- runs per-shipment calcs\n- aggregates pallets/cases]
+  D --> F
+
+  F --> G[Pallet-building engine (VBA)\nStage 1: homogeneous\nStage 2: heterogeneous (full layers, ≥2 SKUs)\nStage 3: loose/picked\n(tolerance + guardrails)]
+  G --> H[Shipments sheet populated\nper-shipment pallet/case totals\nand composition]
+
+  H --> I[Cost model\nThroughput + Admin + Transport\n+ Inventory (where applicable)\nTransport uses pallet-range bands\n33 pallet-spot max constraint]
+  I --> J[Analysis outputs\nSupplier DC, Retailer DC, Total\nTarget vs Actual mix]
+
+  B -->|Multi-point sweep| K[Grid sweep\nMultiPointWarehouse / MultiPointPickByLine]
+  K --> L[Enumerate (homo, heter)\npicked = 1-(homo+heter)\ncall single-point per scenario]
+  L --> J
+  K --> M[Multi-point graphs\nMultipointGraph / MultiPickByLineGraph\n(3D line cross-section along homo axis)]
+
+  J --> N[Sensitivity engines\nInventory / Admin / Throughput]
+  N --> O[Graph generation\nInventoryGraph / ThroughPutCostsGraph\nAdministrationCostsGraph\n+ chart cleanup helpers]
+
+
