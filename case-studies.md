@@ -86,8 +86,6 @@ Because Excel was the practical platform used by the finance organization, stati
 
 ---
 
----
-
 ### 🏭 Supply-chain distribution optimization — Excel/VBA warehouse & cross-docking cost model (confidential)
 
 *Confidentiality note: company name, trade lanes, customer identifiers, SKU codes, and all internal figures are omitted or generalized. This case study focuses on the modelling approach, Excel/VBA engineering, and decision-support outputs.*
