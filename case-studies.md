@@ -86,54 +86,178 @@ Because Excel was the practical platform used by the finance organization, stati
 
 ---
 
-### 🚚 Supply chain distribution optimization — Cross-docking & warehousing cost model (Excel/VBA) *(confidential)*
+---
 
-*Confidentiality note: company/customer identifiers, trade lanes, SKU-level data, tariff tables, and internal process documents are omitted. This summary focuses on the modeling approach, decision logic, and deliverables.*
+### 🏭 Supply-chain distribution optimization — Excel/VBA warehouse & cross-docking cost model (confidential)
+
+*Confidentiality note: company name, trade lanes, customer identifiers, SKU codes, and all internal figures are omitted or generalized. This case study focuses on the modelling approach, Excel/VBA engineering, and decision-support outputs.*
 
 #### Context
-Industry collaboration project (2010–2011) focused on improving **distribution operations strategy** by comparing **traditional warehousing** versus **cross-docking variants** under realistic operational constraints (pallet building, picking, throughput, transportation pricing, and inventory).
+I built an **Excel/VBA decision-support tool** to evaluate and optimize **distribution operations** across a two-node network:
+
+- **Node A:** supplier distribution center (DC)  
+- **Node B:** retailer distribution center (DC)
+
+The tool supports three operational strategies and compares **end-to-end total cost** outcomes:
+
+1) **Pure warehousing operations** (traditional DC handling + inventory)  
+2) **Pick-by-line cross-docking** (pre-allocation at the supplier; consolidation downstream)  
+3) **Pre-allocated cross-docking operator (CDO) consolidation** (cross-dock consolidation scenario)
+
+The workbook is designed for **scenario planning**: users can vary pallet-mix strategies, handling charges, admin charges, and transportation tariff structures, then run **single-point** and **multi-point** (grid sweep) analyses with **graph outputs**.
 
 #### Problem
-Distribution decisions required balancing multiple cost drivers across two nodes (upstream and downstream DCs):
-- Throughput operations (receiving, put-away, retrieval, shipping, picking)
-- Transportation costs driven by **truck fill / pallet-spot ranges** (piecewise tariff structure)
-- Inventory holding effects and planning-period assumptions
-- Cross-docking mode differences (where consolidation happens and how pallets/cases are handled)
+Operational planning involved balancing trade-offs that are hard to reason about manually:
 
-Manual analysis was slow, difficult to reproduce, and not suitable for structured “what-if” exploration.
+- **Palletization strategy:** how much volume should be shipped as **homogeneous pallets** vs **heterogeneous pallets** vs **loose/picked cases**
+- **Transportation economics:** stepwise tariffs depending on shipped pallet ranges (brackets), plus a hard constraint on truck capacity
+- **DC operating costs:** receiving, put-away, take-away, shipping, picking, labeling
+- **Inventory vs flow-through:** traditional warehousing vs cross-docking where storage is minimized/removed
+- **Sensitivity questions:** “Which cost drivers matter most?” and “How robust is the optimum to changing tariffs or picking charges?”
 
-#### What was built (Excel/VBA decision-support model)
-A multi-sheet **Excel/VBA** application that converts scenario inputs into comparable cost outputs for multiple operating modes:
+The objective was to provide a repeatable mechanism to identify **low-cost operating points** and to explain **why** they are low-cost via cost breakdowns and sensitivity graphs.
 
-- **Operating modes supported**
-  - Pure warehousing operations
-  - Pick-by-line cross-docking
-  - Pre-allocated cross-dock operator consolidation  
-  *(all evaluated under the same demand context for comparability)*
+---
 
-- **Range-based transportation pricing**
-  - Transportation modeled with **bracketed pallet-spot ranges** (piecewise tariffs)
-  - A guided workflow generates the required number of brackets and applies the correct charge based on each shipment’s computed pallet spots
+## What was built (solution overview)
 
-- **Cost engine & breakdown**
-  - Computes costs for **both nodes** (upstream and downstream DC)
-  - Categories include **throughput**, **transportation**, **inventory holding**, and **administration**
-  - Produces a detailed breakdown for a chosen configuration plus scenario-level totals
+### 1) A structured input-and-run workflow (Excel UI)
+The workbook guides users through a consistent workflow:
 
-#### How it was used (workflow)
-- **Load scenario inputs** (orders, pallet-building drivers, and operational parameters)
-- **Run multi-point exploration (grid search)** across feasible pallet-mix allocations (homogeneous / heterogeneous / picked)
-- **Generate cost-surface plots** to identify low-cost regions and candidate operating points
-- **Run single-point deep dive** to obtain a full cost breakdown for the selected configuration
-- **Run sensitivity analysis**
-  - 1D sensitivity on inventory drivers (e.g., holding charge / average inventory / planning period)
-  - 2D sensitivity surfaces for throughput costs (picking vs receiving/shipping) and administration drivers  
-  - Auto-generated charts saved into a dedicated “Graphs” area for decision decks
+- **SKU input table** (per trade lane / period)
+  - SKU identifiers (kept generic in this description)
+  - total ordered quantities (cases)
+  - packaging characteristics (cases per layer, cases per pallet)
+  - optionally received homogeneous pallets (availability constraints)
 
-#### Outcome (business value)
-- Enabled repeatable, evidence-driven comparison of **warehousing vs cross-docking strategies**
-- Supported “what-if” decision-making with transparent assumptions and automated outputs
-- Reduced manual effort and improved consistency of scenario evaluation through reusable model runs
+- **Cost input blocks**
+  - **Throughput costs**: receiving, put-away, take-away, shipping, picking (layer/case), labeling  
+  - **Inventory holding costs**: holding charge, average inventory, time period (for warehousing scenarios)  
+  - **Administration costs**: per customer order, per invoice, shipment count  
+  - **Transportation costs**: **piecewise pallet-range brackets** with per-bracket charges
 
+- **Mode selectors**
+  - choose operating strategy (warehousing / cross-dock variants)
+  - choose calculation node where relevant (supplier DC vs retailer DC)
 
+- **Buttons/macros** to:
+  - clear input spaces
+  - scaffold tariff brackets
+  - create shipments (automatic mode)
+  - run single-point calculations
+  - run multi-point grid sweeps
+  - delete charts
+  - generate “best” graphs for export/presentation
+
+### 2) A cost model with traceable components
+For each scenario, the tool computes a structured breakdown of costs across the network:
+
+- **Throughput / handling costs** (per pallet or per case, depending on activity)
+  - receiving / shipping
+  - put-away to storage and take-away from storage (warehousing)
+  - picking by layer / picking by case (cross-dock consolidation where applicable)
+  - labeling (when applicable)
+
+- **Administration costs**
+  - driver-based model using order/invoice parameters and shipment count
+
+- **Transportation costs**
+  - computed per shipment using **tariff brackets** tied to shipped pallet ranges
+  - **hard guardrail:** max **33 pallet spots per truck** enforced during shipment evaluation
+
+- **Inventory holding costs**
+  - applied in warehousing mode using: holding charge × average inventory × period
+  - **cross-docking assumption:** inventory holding cost is treated as **zero** (flow-through; no storage)
+
+The outputs support both:
+- **single-point** deep-dive cost tables (for a chosen pallet-mix plan)  
+- **multi-point** comparisons across many pallet-mix combinations
+
+### 3) A heuristic “shipment-building engine” (Excel/VBA)
+A core part of the tool is an **empirical pallet design heuristic** that translates pallet-mix targets into feasible pallet/shipment composition.
+
+High-level logic:
+
+- **Stage 1 — Homogeneous pallets first**
+  - SKUs are ranked by **descending ordered quantity** (proxy for demand preference)
+  - full homogeneous pallets are selected from highest-ranked SKUs until the target homogeneous volume is met (without exceeding requested volume)
+
+- **Stage 2 — Heterogeneous pallets via full layers**
+  - remaining stock becomes input for heterogeneous consolidation
+  - heterogeneous pallets are assembled using **full layers** from **≥2 SKUs**
+  - layers are selected proportionally to ordered quantities while respecting SKU rank
+  - an overage tolerance can be used to allow reaching targets within a cutoff
+
+- **Stage 3 — Loose cases / picked pallets**
+  - remaining demand is satisfied by consolidating loose cases using a similar proportional, rank-guided process
+
+A practical approximation is used to estimate heterogeneous pallet counts:
+- compute an average cases-per-pallet factor (**Ω / Omega**) based on the selected mix
+- estimate hetero pallet count from total cases / Ω  
+- note: per-SKU physical heights/weights are not explicitly modeled; averages are used to reduce complexity while keeping the heuristic operationally useful.
+
+### 4) Multi-point optimization search + graphing
+To help identify near-optimal strategies without manual trial-and-error, the workbook supports **grid sweeps**:
+
+- user sets an increment (e.g., 5%, 10%, etc.)
+- the tool enumerates feasible combinations of:
+  - % homogeneous
+  - % heterogeneous
+  - % loose/picked (computed as the remainder)
+
+For each point:
+- run the end-to-end scenario calculation
+- store total costs for supplier DC, retailer DC, and combined network total
+- display a “target vs actual” percentage view to show how the heuristic translated targets into realized outcomes
+
+**Graph outputs** provide quick insight:
+- 3D line cross-section graphs along the homogeneous axis for the multi-point results
+- dedicated “Graphs” sheet to preserve the best outputs for reporting/export
+
+### 5) Sensitivity analysis tooling (1D + 2D sweeps)
+Beyond “what is optimal,” the workbook supports “why is it optimal?” by providing sensitivity engines:
+
+- **Inventory sensitivity** (1D sweep)
+  - vary holding charge / average inventory / period over a range
+  - output total cost response and generate a 3D line chart
+
+- **Administration sensitivity** (2D sweep)
+  - vary euros per invoice and euros per customer order
+  - compute administration or total cost surface and generate a surface chart
+
+- **Throughput sensitivity** (2D sweep)
+  - vary picking charges and receiving/shipping charges
+  - compute throughput or total cost surface and generate a surface chart
+
+Chart utilities delete/rebuild charts reliably and optionally “promote” the best chart to a curated “Graphs” sheet (supporting export-ready reporting).
+
+---
+
+## Key guardrails and assumptions (model transparency)
+
+### General considerations
+- **One-day lead time** from supplier DC to retailer DC from receipt of orders.
+- **Transportation time variability** (road conditions, bottlenecks, speed variance) is ignored.
+- Demand variability is addressed by analyzing **aggregated ordered quantities** over a chosen period.
+- Focus is on **unit throughput costs** (handling per pallet/case) rather than fixed facility costs, layout, queuing, or congestion effects.
+- DC capacity is assumed not to be exceeded (no overflow scenarios modeled).
+- Fixed route between nodes; analysis is route-specific.
+- Truck loads are inputs and must respect capacity; enforced via **max 33 pallet spots** guardrail.
+
+### Empirical pallet design rules (heuristic transparency)
+- pallet construction follows: **homogeneous → heterogeneous (layers) → loose cases**
+- SKUs ranked by ordered quantities; ranking used as a proxy for preference
+- heterogeneous pallets built from full layers across multiple SKUs, selected proportionally and by rank
+- heterogeneous pallet count estimated using **average cases-per-pallet (Ω)**; per-SKU physical dimensions not explicitly modeled
+
+---
+
+## Outcome and value
+This tool enabled **repeatable, parameter-driven scenario planning** for distribution strategy selection:
+
+- compare warehousing vs cross-docking variants on a consistent cost basis
+- quickly identify low-cost pallet-mix strategies using multi-point sweeps
+- explain results with cost breakdown tables and sensitivity surfaces
+- enforce operational constraints (e.g., truck pallet-spot capacity) during scenario evaluation
+- deliver export-ready charts for management discussion and decision support
 
