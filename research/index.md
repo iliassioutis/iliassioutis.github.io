@@ -16,7 +16,7 @@ This area hosts selected academic artifacts (theses, publications, and talks).
 - 🧠 **UCL MPhil thesis** — 3D non-rigid registration for image-guided interventions (prostate)  
   - 🔎 <a href="/research/ucl-mphil/">Read overview</a>
 
-- 🎓 **PhD thesis** — Chemical Physics (Ohio State)  
+- 🎓 **PhD thesis** — Chemical Physics (The Ohio State University)  
   - 🔎 <a href="/research/phd/">Read overview</a>
 
 - 🧾 **Publications** — PhD/postdoc publication list + selected papers  
