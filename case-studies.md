@@ -84,6 +84,56 @@ Because Excel was the practical platform used by the finance organization, stati
 - Enabled more systematic identification of **conspicuous data**, **outliers**, and **inconsistencies** during pre-close and final-close validation.
 - Provided a repeatable analytics foundation in a toolset (Excel/VBA) aligned with how the finance teams operated.
 
+---
+
+### 🚚 Supply chain distribution optimization — Cross-docking & warehousing cost model (Excel/VBA) *(confidential)*
+
+*Confidentiality note: company/customer identifiers, trade lanes, SKU-level data, tariff tables, and internal process documents are omitted. This summary focuses on the modeling approach, decision logic, and deliverables.*
+
+#### Context
+Industry collaboration project (2010–2011) focused on improving **distribution operations strategy** by comparing **traditional warehousing** versus **cross-docking variants** under realistic operational constraints (pallet building, picking, throughput, transportation pricing, and inventory).
+
+#### Problem
+Distribution decisions required balancing multiple cost drivers across two nodes (upstream and downstream DCs):
+- Throughput operations (receiving, put-away, retrieval, shipping, picking)
+- Transportation costs driven by **truck fill / pallet-spot ranges** (piecewise tariff structure)
+- Inventory holding effects and planning-period assumptions
+- Cross-docking mode differences (where consolidation happens and how pallets/cases are handled)
+
+Manual analysis was slow, difficult to reproduce, and not suitable for structured “what-if” exploration.
+
+#### What was built (Excel/VBA decision-support model)
+A multi-sheet **Excel/VBA** application that converts scenario inputs into comparable cost outputs for multiple operating modes:
+
+- **Operating modes supported**
+  - Pure warehousing operations
+  - Pick-by-line cross-docking
+  - Pre-allocated cross-dock operator consolidation  
+  *(all evaluated under the same demand context for comparability)*
+
+- **Range-based transportation pricing**
+  - Transportation modeled with **bracketed pallet-spot ranges** (piecewise tariffs)
+  - A guided workflow generates the required number of brackets and applies the correct charge based on each shipment’s computed pallet spots
+
+- **Cost engine & breakdown**
+  - Computes costs for **both nodes** (upstream and downstream DC)
+  - Categories include **throughput**, **transportation**, **inventory holding**, and **administration**
+  - Produces a detailed breakdown for a chosen configuration plus scenario-level totals
+
+#### How it was used (workflow)
+- **Load scenario inputs** (orders, pallet-building drivers, and operational parameters)
+- **Run multi-point exploration (grid search)** across feasible pallet-mix allocations (homogeneous / heterogeneous / picked)
+- **Generate cost-surface plots** to identify low-cost regions and candidate operating points
+- **Run single-point deep dive** to obtain a full cost breakdown for the selected configuration
+- **Run sensitivity analysis**
+  - 1D sensitivity on inventory drivers (e.g., holding charge / average inventory / planning period)
+  - 2D sensitivity surfaces for throughput costs (picking vs receiving/shipping) and administration drivers  
+  - Auto-generated charts saved into a dedicated “Graphs” area for decision decks
+
+#### Outcome (business value)
+- Enabled repeatable, evidence-driven comparison of **warehousing vs cross-docking strategies**
+- Supported “what-if” decision-making with transparent assumptions and automated outputs
+- Reduced manual effort and improved consistency of scenario evaluation through reusable model runs
 
 
 
