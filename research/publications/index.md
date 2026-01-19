@@ -17,7 +17,7 @@ This page lists peer-reviewed journal articles from my PhD/postdoc research peri
 
 2. <strong>Sioutis, I.</strong>, and Pitzer, R. M. (2006). Theoretical investigation of the binding energies of the iodide ion and xenon atom with decaborane. <em>Journal of Physical Chemistry A</em> <strong>110</strong>, 12528–12534.
 
-3. <strong>Sioutis, I.</strong>, Stakhursky, V. L., Pitzer, R. M., and Miller, T. A. (2007). Jahn–Teller and related effects in the silver trimer. I. The <em>ab initio</em> calculation of spectroscopically observable parameters for the X <sup>2</sup>E′ and A <sup>2</sup>E″ electronic states. <em>The Journal of Chemical Physics</em> <strong>126</strong>, 124308(-1)–124308(-16).
+3. <strong>Sioutis, I.</strong>, Stakhursky, V. L., Pitzer, R. M., and Miller, T. A. (2007). Jahn–Teller and related effects in the silver trimer. I. The <em>ab initio</em> calculation of spectroscopically observable parameters for the X&#771; <sup>2</sup>E′ and A&#771; <sup>2</sup>E″ electronic states. <em>The Journal of Chemical Physics</em> <strong>126</strong>, 124308(-1)–124308(-16).
 
 4. <strong>Sioutis, I.</strong>, Stakhursky, V. L., Pitzer, R. M., and Miller, T. A. (2007). Jahn–Teller and related effects in the silver trimer. II. Vibrational analysis of the A <sup>2</sup>E″–X <sup>2</sup>E′ electronic transition. <em>The Journal of Chemical Physics</em> <strong>126</strong>, 124309(-1)–124309(-16).
 
