@@ -303,27 +303,31 @@ This tool enabled **repeatable, parameter-driven scenario planning** for distrib
 
 ```text
 INPUTS
-  ├─ SKU table + packaging parameters
-  ├─ Target mix % (homogeneous / heterogeneous / loose|picked)
-  ├─ Cost inputs (throughput, admin, inventory if applicable)
-  ├─ Transport brackets + 33 pallet-spot guardrail
-  └─ Scenario + node selectors
+  - SKU table + packaging parameters
+  - Target mix % (homogeneous / heterogeneous / loose|picked)
+  - Cost inputs (throughput, admin, inventory when applicable)
+  - Transport brackets + 33 pallet-spot guardrail
+  - Scenario + node selectors
         |
         v
 SELECT SCENARIO
   (1) Warehousing
-  (2) Pick-by-line cross-docking (two-leg)
-  (3) Placeholder consolidation (limited)
+  (2) Pick-by-line cross-docking (two-leg flow)
+  (3) Pre-allocated consolidation (cross-dock consolidation variant)
         |
         v
 SINGLE-POINT RUN
-  Shipments orchestrator → Pallet heuristic (3 stages) → Cost model → Outputs
+  Shipments orchestrator
+    -> Pallet heuristic (3 stages)
+    -> Cost model (Throughput + Admin + Transport + Inventory where applicable)
+    -> Outputs (Supplier / Retailer / Total + Target vs Actual mix)
         |
-        +-----------------------------+
-        |                             |
-        v                             v
-MULTI-POINT SWEEP                SENSITIVITY RUNS
-(grid over mix %)                 (inventory/admin/throughput)
-→ store results table             → rebuild/promote charts
-→ generate cross-section graphs   → Graphs sheet
+        +---------------------------+
+        |                           |
+        v                           v
+MULTI-POINT SWEEP              SENSITIVITY RUNS
+  (grid over mix %)              (inventory / admin / throughput)
+  -> store results table         -> rebuild charts
+  -> cross-section graphs        -> optionally promote to "Graphs" sheet
+
 
