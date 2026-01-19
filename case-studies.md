@@ -295,3 +295,34 @@ This tool enabled **repeatable, parameter-driven scenario planning** for distrib
 5) **Sensitivity runs (optional)**
    - Inventory (1D sweep), Administration (2D sweep), Throughput (2D sweep)
    - Rebuild charts and optionally promote “best” charts to the curated **Graphs** sheet
+
+---
+
+### Execution flow (diagram)
+
+```text
+INPUTS
+  ├─ SKU table + packaging parameters
+  ├─ Target mix % (homogeneous / heterogeneous / loose|picked)
+  ├─ Cost inputs (throughput, admin, inventory if applicable)
+  ├─ Transport brackets + 33 pallet-spot guardrail
+  └─ Scenario + node selectors
+        |
+        v
+SELECT SCENARIO
+  (1) Warehousing
+  (2) Pick-by-line cross-docking (two-leg)
+  (3) Placeholder consolidation (limited)
+        |
+        v
+SINGLE-POINT RUN
+  Shipments orchestrator → Pallet heuristic (3 stages) → Cost model → Outputs
+        |
+        +-----------------------------+
+        |                             |
+        v                             v
+MULTI-POINT SWEEP                SENSITIVITY RUNS
+(grid over mix %)                 (inventory/admin/throughput)
+→ store results table             → rebuild/promote charts
+→ generate cross-section graphs   → Graphs sheet
+
