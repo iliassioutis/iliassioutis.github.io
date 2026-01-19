@@ -156,7 +156,7 @@ Although this was academic research, the delivery pattern is strongly aligned wi
 
 ## Artifacts
 
-- 📄 **Thesis (PDF):** <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a>
+- 📄 **Thesis (PDF):** <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/1471002/" target="_blank" rel="noopener noreferrer">View on UCL Discovery</a>
 - 🧾 **Research area:** [Research & Theses](/research/)
 - 🔎 **Case study reference:** [Case studies](/case-studies)
 
