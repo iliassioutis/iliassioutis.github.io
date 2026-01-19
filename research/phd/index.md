@@ -30,13 +30,13 @@ This page provides the dissertation PDF (mirror + OhioLINK), a brief technical o
 
 ---
 
-## Transferable skills (PM / Solutions Architect)
-- Evidence-driven problem framing and methodology design across multiple workstreams (experimental spectroscopy + computational modeling).
-- Model-to-data calibration: iterative fitting cycles, simulation/validation loops, and uncertainty estimation for key parameters.
-- Tooling & workflow engineering: building analysis pipelines that compare experimental vs simulated outputs and speed up iteration.
-- Decision-making under constraints: selecting and benchmarking methods to balance accuracy, interpretability, and computational cost.
-- Data quality & measurement rigor: calibration, digitization, and repeatable processing workflows for experimental datasets.
-- Technical communication: translating complex work into structured documentation and clear summaries for different audiences.
+## Applied engineering & delivery capabilities
+- Evidence-driven problem framing → translate ambiguous research questions into clear objectives, assumptions, and measurable success criteria across parallel workstreams (experiment + computation).
+- Verification & validation mindset → run iterative model-to-data calibration cycles (fit/compare/refine), quantify uncertainty, and use results to drive decisions and next steps.
+- Workflow/tooling enablement → build repeatable analysis workflows that compare experimental vs simulated outputs, accelerate iteration, and improve consistency/reproducibility.
+- Method selection under constraints → benchmark alternative approaches and choose fit-for-purpose methods balancing accuracy, explainability, and computational cost/time.
+- Data quality discipline → define data capture standards, perform calibration/cleanup, and maintain traceable processing steps for reliable downstream analysis.
+- Stakeholder-ready communication → convert complex technical findings into structured deliverables (summaries, rationales, and action-oriented conclusions) for mixed audiences.
 
 ---
 
