@@ -48,7 +48,7 @@ This page provides downloadable academic transcripts and degree certifications.
      style="display:inline-block; text-align:left; padding:10px 16px;
             background:#555; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
-    MPhil Transcript (2013–2015)
+    MPhil Certificate (2013–2015)
   </a>
 
 </div>
