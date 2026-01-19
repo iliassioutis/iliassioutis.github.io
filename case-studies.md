@@ -241,7 +241,8 @@ Chart utilities delete/rebuild charts reliably and optionally “promote” the 
 - Focus is on **unit throughput costs** (handling per pallet/case) rather than fixed facility costs, layout, queuing, or congestion effects.
 - DC capacity is assumed not to be exceeded (no overflow scenarios modeled).
 - Fixed route between nodes; analysis is route-specific.
-- Truck loads are inputs and must respect capacity; enforced via **max 33 pallet spots** guardrail.
+- Transportation uses **user-defined shipped pallet loads per truck**, applies **piecewise tariff brackets** (pallet-range charges), and enforces a **max 33 pallet spots per truck** guardrail.
+- For cross-docking flows, goods may be **staged briefly (<24h)** (no storage), so **inventory holding cost is treated as zero**.
 
 ### Empirical pallet design rules (heuristic transparency)
 - pallet construction follows: **homogeneous → heterogeneous (layers) → loose cases**
