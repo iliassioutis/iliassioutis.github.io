@@ -21,7 +21,7 @@ This page provides downloadable academic transcripts and degree certifications.
      style="display:inline-block; text-align:left; padding:10px 16px;
             background:#1f7a6d; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
-    BSc Transcript (1995–1999)
+    BSc Certificate + Transcript (1995–1999)
   </a>
 
   <a href="/assets/pdfs/credentials/phd-transcript.pdf"
@@ -30,7 +30,7 @@ This page provides downloadable academic transcripts and degree certifications.
      style="display:inline-block; text-align:left; padding:10px 16px;
             background:#2c5aa0; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
-    PhD Transcript (2000–2006)
+    PhD Certificate + Transcript (2000–2006)
   </a>
 
   <a href="/assets/pdfs/credentials/mba-transcript.pdf"
