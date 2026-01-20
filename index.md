@@ -111,7 +111,7 @@ engagements.
 </style>
 
 ## Project delivery & methods (how I work)
-A set of short pages summarising how I deliver projects in practice — SDLC, Agile/Scrum, Waterfall/stage-gate, and the governance/artifacts I use to run predictable, auditable delivery.
+A practical delivery guide showing how I run projects in practice — SDLC, Agile/Scrum, Waterfall/stage-gate, plus the governance and artifacts I use to keep delivery traceable, predictable, and audit-ready.
 
 <div class="home-grid">
   <div class="home-card">
