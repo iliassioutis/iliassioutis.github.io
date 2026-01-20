@@ -15,7 +15,7 @@ title: Ilias Sioutis
   <div style="margin-top: 1.2rem;">
     <a href="/assets/pdfs/resume-ilias-sioutis-master.pdf"
        target="_blank" rel="noopener noreferrer"
-       onclick="gtag('event','resume_download',{'resume_type':'master','file_name':'resume-ilias-sioutis-master.pdf'});"
+       onclick="window.gtag && gtag('event','resume_download',{'resume_type':'master','file_name':'resume-ilias-sioutis-master.pdf'});"
        style="display:inline-block; padding:10px 18px; margin:6px;
               background:#1f7a6d; color:#fff; text-decoration:none;
               border-radius:6px; font-weight:600;">
@@ -24,7 +24,7 @@ title: Ilias Sioutis
 
     <a href="/assets/pdfs/resume-ilias-sioutis-ats.pdf"
        target="_blank" rel="noopener noreferrer"
-       onclick="gtag('event','resume_download',{'resume_type':'ats','file_name':'resume-ilias-sioutis-ats.pdf'});"
+       onclick="window.gtag && gtag('event','resume_download',{'resume_type':'ats','file_name':'resume-ilias-sioutis-ats.pdf'});"
        style="display:inline-block; padding:10px 18px; margin:6px;
               background:#2c5aa0; color:#fff; text-decoration:none;
               border-radius:6px; font-weight:600;">
@@ -154,7 +154,7 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
 <div style="margin-top: 0.6rem; text-align:center;">
   <a href="/assets/pdfs/epokratis-medaiconnect-validation-report.pdf"
      target="_blank" rel="noopener noreferrer"
-     onclick="gtag('event','evidence_download',{'artifact_type':'validation_pdf','file_name':'epokratis-medaiconnect-validation-report.pdf'});"
+     onclick="window.gtag && gtag('event','evidence_download',{'artifact_type':'validation_pdf','file_name':'epokratis-medaiconnect-validation-report.pdf'});"
      style="display:inline-block; padding:10px 18px; margin:6px;
             background:#1f7a6d; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
@@ -163,7 +163,7 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
 
   <a href="/assets/downloads/validation_package.zip"
      target="_blank" rel="noopener noreferrer"
-     onclick="gtag('event','evidence_download',{'artifact_type':'validation_zip','file_name':'validation_package.zip'});"
+     onclick="window.gtag && gtag('event','evidence_download',{'artifact_type':'validation_zip','file_name':'validation_package.zip'});"
      style="display:inline-block; padding:10px 18px; margin:6px;
             background:#2c5aa0; color:#fff; text-decoration:none;
             border-radius:6px; font-weight:600;">
