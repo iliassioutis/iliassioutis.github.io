@@ -31,21 +31,21 @@ title: Ilias Sioutis
       Download ATS Resume (PDF)
     </a>
 
-<a href="/credentials/" target="_blank" rel="noopener noreferrer"
+<a href="/credentials/" rel="noopener noreferrer"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#6b4f9e; color:#fff; text-decoration:none;
           border-radius:6px; font-weight:600;">
   Academic Credentials (PDFs)
 </a>
 
-<a href="/project-delivery/" target="_blank" rel="noopener noreferrer"
+<a href="/project-delivery/" rel="noopener noreferrer"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#0b7285; color:#fff; text-decoration:none;
           border-radius:6px; font-weight:600;">
   Project Delivery &amp; Methods
 </a>
 
-<a href="/contact" target="_blank" rel="noopener noreferrer"
+<a href="/contact" rel="noopener noreferrer"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#555; color:#fff; text-decoration:none;
           border-radius:6px; font-weight:600;">
@@ -121,19 +121,19 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
   <div class="home-card">
     <h3>SDLC in practice</h3>
     <p>From discovery and requirements through build, testing, release, and production support — with traceable artifacts.</p>
-    <a href="/project-delivery/sdlc/" target="_blank" rel="noopener noreferrer">Read more →</a>
+    <a href="/project-delivery/sdlc/" rel="noopener noreferrer">Read more →</a>
   </div>
 
   <div class="home-card">
     <h3>Agile &amp; Scrum</h3>
     <p>How I run cadence, backlog, ceremonies, delivery tracking, and stakeholder alignment across cross-functional teams.</p>
-    <a href="/project-delivery/agile-scrum/" target="_blank" rel="noopener noreferrer">Read more →</a>
+    <a href="/project-delivery/agile-scrum/" rel="noopener noreferrer">Read more →</a>
   </div>
 
   <div class="home-card">
     <h3>Waterfall / stage-gate</h3>
     <p>Where sequential delivery fits (regulated constraints, integration dependencies) and how I keep governance tight.</p>
-    <a href="/project-delivery/waterfall-stage-gate/" target="_blank" rel="noopener noreferrer">Read more →</a>
+    <a href="/project-delivery/waterfall-stage-gate/" rel="noopener noreferrer">Read more →</a>
   </div>
 
   <div class="home-card">
