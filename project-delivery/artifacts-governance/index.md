@@ -36,7 +36,7 @@ This page summarises the practical artifacts and governance controls I use to ke
 
 ---
 
-## What “strong governance” looks like in practice
+## What strong delivery governance looks like in practice
 - predictable cadence and reporting
 - clear ownership of decisions
 - traceability from requirements to outcomes
