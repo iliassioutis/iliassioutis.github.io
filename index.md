@@ -67,13 +67,16 @@ This site serves as a **professional evidence hub** showcasing delivery artifact
 documentation, and validation work for B2B collaborations, regulated projects, and consulting
 engagements.
 
+**Focus:** AI-powered digital health · regulated platforms · cloud & integration delivery  
+**Strengths:** requirements → build → SIT/UAT → release · RAID/RACI/change control · GDPR + AES-256/TLS · validation & reproducibility artifacts
+
 ---
 
 ## Evidence & governance highlights
 
-- Clinical validation program for App Store readiness (Apple guideline 1.4.1): hospital collaboration, protocols, reproducible analysis, and evidence dossier.
+- Clinical validation program for App Store readiness (Apple App Store Review Guideline 1.4.1): hospital collaboration, protocols, reproducible analysis, and evidence dossier.
 - Privacy & AI governance: on-device AI processing; no camera media upload/storage; platform-specific retention rules and provenance labeling (AI / Device / Manual).
-- Security controls: EU/EEA hosting (Hetzner, Germany) under GDPR DPA; HTTPS/TLS in transit; application-layer AES-256 at rest; RBAC / need-to-know access.
+- Security controls: EU/EEA hosting (Hetzner, Germany) under GDPR DPA; HTTPS/TLS in transit; application-layer AES-256 encryption at rest; RBAC / need-to-know access.
 - Data subject rights & operational controls: consent management (incl. SSN consent for purchase flows), item-level deletion with cross-device sync, and account deletion workflows.
 
 ---
@@ -123,7 +126,7 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
   <div class="home-card">
     <h3>Agile &amp; Scrum</h3>
     <p>How I run cadence, backlog, ceremonies, delivery tracking, and stakeholder alignment across cross-functional teams.</p>
-    <a href="/project-delivery/agile-scrum/">Open Agile/Read more →</a>
+    <a href="/project-delivery/agile-scrum/">Read more →</a>
   </div>
 
   <div class="home-card">
