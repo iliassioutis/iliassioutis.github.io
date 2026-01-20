@@ -117,25 +117,25 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
   <div class="home-card">
     <h3>SDLC in practice</h3>
     <p>From discovery and requirements through build, testing, release, and production support — with traceable artifacts.</p>
-    <a href="/project-delivery/sdlc/">Open SDLC page →</a>
+    <a href="/project-delivery/sdlc/">Read more →</a>
   </div>
 
   <div class="home-card">
     <h3>Agile &amp; Scrum</h3>
     <p>How I run cadence, backlog, ceremonies, delivery tracking, and stakeholder alignment across cross-functional teams.</p>
-    <a href="/project-delivery/agile-scrum/">Open Agile/Scrum page →</a>
+    <a href="/project-delivery/agile-scrum/">Open Agile/Read more →</a>
   </div>
 
   <div class="home-card">
     <h3>Waterfall / stage-gate</h3>
     <p>Where sequential delivery fits (regulated constraints, integration dependencies) and how I keep governance tight.</p>
-    <a href="/project-delivery/waterfall-stage-gate/">Open Waterfall page →</a>
+    <a href="/project-delivery/waterfall-stage-gate/">Read more →</a>
   </div>
 
   <div class="home-card">
     <h3>Artifacts &amp; governance</h3>
     <p>BRD/FRD, RAID, RACI, UAT/SIT, change control, release readiness, privacy/security gates, evidence packs.</p>
-    <a href="/project-delivery/artifacts-governance/">Open Governance page →</a>
+    <a href="/project-delivery/artifacts-governance/">Read more →</a>
   </div>
 </div>
 
