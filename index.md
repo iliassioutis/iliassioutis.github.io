@@ -28,27 +28,27 @@ title: Ilias Sioutis
        style="display:inline-block; padding:10px 18px; margin:6px;
               background:#2c5aa0; color:#fff; text-decoration:none;
               border-radius:6px; font-weight:600;">
-      Download ATS Resume
+      Download ATS Resume (PDF)
     </a>
 
     <a href="/credentials/"
        style="display:inline-block; padding:10px 18px; margin:6px;
-            background:#6b4f9e; color:#fff; text-decoration:none;
-            border-radius:6px; font-weight:600;">
+              background:#6b4f9e; color:#fff; text-decoration:none;
+              border-radius:6px; font-weight:600;">
       Academic Credentials
     </a>
 
     <a href="/project-delivery/"
        style="display:inline-block; padding:10px 18px; margin:6px;
-            background:#0b7285; color:#fff; text-decoration:none;
-            border-radius:6px; font-weight:600;">
+              background:#0b7285; color:#fff; text-decoration:none;
+              border-radius:6px; font-weight:600;">
       Project Delivery &amp; Methods
     </a>
 
     <a href="/contact"
        style="display:inline-block; padding:10px 18px; margin:6px;
-            background:#555; color:#fff; text-decoration:none;
-            border-radius:6px; font-weight:600;">
+              background:#555; color:#fff; text-decoration:none;
+              border-radius:6px; font-weight:600;">
       Contact Me
     </a>
 
