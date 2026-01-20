@@ -31,21 +31,21 @@ title: Ilias Sioutis
       Download ATS Resume (PDF)
     </a>
 
-<a href="/credentials/" rel="noopener noreferrer"
+<a href="/credentials/" target="_blank" rel="noopener noreferrer"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#6b4f9e; color:#fff; text-decoration:none;
           border-radius:6px; font-weight:600;">
   Academic Credentials (PDFs)
 </a>
 
-<a href="/project-delivery/" rel="noopener noreferrer"
+<a href="/project-delivery/" target="_blank" rel="noopener noreferrer"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#0b7285; color:#fff; text-decoration:none;
           border-radius:6px; font-weight:600;">
   Project Delivery &amp; Methods
 </a>
 
-<a href="/contact" rel="noopener noreferrer"
+<a href="/contact" target="_blank" rel="noopener noreferrer"
    style="display:inline-block; padding:10px 18px; margin:6px;
           background:#555; color:#fff; text-decoration:none;
           border-radius:6px; font-weight:600;">
