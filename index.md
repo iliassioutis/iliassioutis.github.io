@@ -139,7 +139,7 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
   <div class="home-card">
     <h3>Artifacts &amp; governance</h3>
     <p>BRD/FRD, RAID, RACI, UAT/SIT, change control, release readiness, privacy/security gates, evidence packs.</p>
-    <a href="/project-delivery/artifacts-governance/" target="_blank" rel="noopener noreferrer">Read more →</a>
+    <a href="/project-delivery/artifacts-governance/" rel="noopener noreferrer">Read more →</a>
   </div>
 </div>
 
