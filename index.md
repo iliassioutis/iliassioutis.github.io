@@ -111,7 +111,7 @@ engagements.
 </style>
 
 ## Project delivery & methods (how I work)
-A short set of pages translating real delivery experience into the terminology employers expect (SDLC, Agile/Scrum, Waterfall, governance, artifacts, and execution patterns).
+A set of short pages summarising how I deliver projects in practice — SDLC, Agile/Scrum, Waterfall/stage-gate, and the governance/artifacts I use to run predictable, auditable delivery.
 
 <div class="home-grid">
   <div class="home-card">
