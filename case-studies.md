@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Case studies
+description: Delivery case studies highlighting clinical validation evidence, regulated platforms, AI healthcare, cloud integration, and technical leadership.
+image: /assets/img/og-case-studies.png
 ---
 
 <blockquote>
