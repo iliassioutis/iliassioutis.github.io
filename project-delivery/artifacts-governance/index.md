@@ -36,7 +36,7 @@ This page summarises the practical artifacts and governance controls I use to ke
 
 ---
 
-## What recruiters usually mean by “strong governance”
+## What “strong governance” looks like in practice
 - predictable cadence and reporting
 - clear ownership of decisions
 - traceability from requirements to outcomes
