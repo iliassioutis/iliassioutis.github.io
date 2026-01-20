@@ -203,3 +203,10 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
 - 🗂️ [Case Studies](/case-studies)
 - 📚 [Research & Theses](/research)
 - ✉️ [Contact](/contact)
+
+---
+
+<p style="margin:18px 0 0; font-size:0.9rem; color:#777; text-align:center;">
+  Last updated: Jan 2026
+</p>
+
