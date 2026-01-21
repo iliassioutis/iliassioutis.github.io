@@ -52,7 +52,7 @@ These pages describe the delivery approach I use to take initiatives from idea t
   - Roles and accountability: **RACI (Responsible, Accountable, Consulted, Informed)** and decision-making paths (who decides what, and when).  
   - Quality and testing: test strategy, **SIT (System Integration Testing)** / **UAT (User Acceptance Testing)** plans, test evidence, defect triage, release notes, operational runbooks.  
   - Traceability: mapping requirements → test cases → evidence (especially useful in regulated or audit-sensitive delivery).  
-  - Change and release: change requests, impact analysis, release readiness checklist, rollout/backout plan, post-release review and stabilization plan.  
+  - Change and release: change requests, impact analysis, release readiness checklist, rollout/rollback plan, post-release review and stabilization plan.  
   - Privacy & security gates: data classification, access control model, encryption approach, retention/deletion logic, supplier/sub-processor considerations; **DPIA (Data Protection Impact Assessment)**-style risk thinking when needed.  
   - **AI governance (when AI is involved):** defined claims boundaries, transparency and provenance (what produced each output and from what source), human oversight where needed, validation/evidence artifacts, monitoring and drift detection, and clear documentation of what the system does (and does not) do.
 
