@@ -21,8 +21,8 @@ These pages describe the delivery approach I use to take initiatives from idea t
   - Turn needs into requirements (functional + non-functional), acceptance criteria, and a delivery plan (phases, milestones, dependencies, risks).  
   - Translate requirements into solution design (architecture, integration points, data flows, privacy/security constraints, operational needs).  
   - Execute build with disciplined source control, reviews, and environments (development / test / staging / production), plus repeatable deployment practices and quality checks.  
-  - Plan and run testing as a progression (unit → component → integration → system), and prepare for **SIT (System Integration Testing)** and **UAT (User Acceptance Testing)** with clear entry/exit criteria.  
-  - Drive release readiness with a structured **go/no-go (release decision)** process, rollout/backout planning, monitoring/alerting, and post-release stabilization.  
+  - Plan and run testing as a progression (unit testing → component → integration → system), and prepare for **SIT (System Integration Testing)** and **UAT (User Acceptance Testing)** with clear entry/exit criteria.  
+  - Drive release readiness with a structured **go/no-go (release decision)** process, rollout/backout planning, monitoring/alerting, operational runbooks, and post-release stabilization.  
   - Close with lessons learned, documentation updates, and a prioritized improvement backlog (what to keep, change, automate, or standardize).
 
 - **Agile & Scrum**  
@@ -30,6 +30,7 @@ These pages describe the delivery approach I use to take initiatives from idea t
   - Maintain a prioritized backlog aligned to goals and value; keep items “ready” with clear acceptance criteria and testability.  
   - Set a delivery cadence (sprints/iterations), define a realistic sprint goal, and plan based on team capacity, dependencies, and risk.  
   - Run core ceremonies with clear purpose (refinement, planning, daily sync, review/demo, retrospective) and track decisions and actions.  
+  - Clarify working roles and responsibilities (e.g., Product Owner / delivery lead / team ownership) so prioritization, decisions, and escalation paths are explicit.  
   - Track progress and risks transparently using visible signals (burn-up/burn-down charts, cumulative flow, blockers, cycle time where useful) and intervene early when delivery deviates.  
   - Keep stakeholders aligned through frequent demos, incremental releases, and structured change handling (trade-offs, sequencing, scope adjustments).  
   - Use a strong **Definition of Done (clear completion + quality criteria)** and lightweight quality gates so increments are potentially shippable, not just “code complete.”  
@@ -47,13 +48,13 @@ These pages describe the delivery approach I use to take initiatives from idea t
 - **Artifacts & governance**  
   The documentation and controls I use to keep delivery traceable, predictable, and compliant where applicable:  
   - Requirements and specifications: **BRD (Business Requirements Document)**, **FRD (Functional Requirements Document)**, user stories/use cases, non-functional requirements, acceptance criteria.  
-  - Planning and control: roadmap, milestones, estimates, dependency mapping, stakeholder communication plan; **RAID log (Risks, Assumptions, Issues, Dependencies)**.
+  - Planning and control: roadmap, milestones, estimates, dependency mapping, stakeholder communication plan; **RAID log (Risks, Assumptions, Issues, Dependencies)**.  
   - Roles and accountability: **RACI (Responsible, Accountable, Consulted, Informed)** and decision-making paths (who decides what, and when).  
   - Quality and testing: test strategy, **SIT (System Integration Testing)** / **UAT (User Acceptance Testing)** plans, test evidence, defect triage, release notes, operational runbooks.  
+  - Traceability: mapping requirements → test cases → evidence (especially useful in regulated or audit-sensitive delivery).  
   - Change and release: change requests, impact analysis, release readiness checklist, rollout/backout plan, post-release review and stabilization plan.  
   - Privacy & security gates: data classification, access control model, encryption approach, retention/deletion logic, supplier/sub-processor considerations; **DPIA (Data Protection Impact Assessment)**-style risk thinking when needed.  
   - **AI governance (when AI is involved):** defined claims boundaries, transparency and provenance (what produced each output and from what source), human oversight where needed, validation/evidence artifacts, monitoring and drift awareness, and clear documentation of what the system does (and does not) do.
-
 ---
 
 ## Explore
