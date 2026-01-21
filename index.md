@@ -56,19 +56,15 @@ title: Ilias Sioutis
 </div>
 
 ## Overview
-I am a senior software project manager and solutions architect specializing in AI-powered digital
-health, regulated platforms, and complex cloud integrations.
+I am a senior software project manager and solutions architect delivering complex, integration-heavy products across **digital health**, **enterprise platforms**, **financial services**, and **digital transformation** programs.
 
-My work spans end-to-end delivery: from requirements and architecture through implementation,
-clinical validation, privacy and security governance, and production rollout. I have led iOS and
-Android healthcare applications involving on-device AI (rPPG / computer vision), Bluetooth medical
-device integrations, secure mobile platforms, and enterprise-grade cloud systems.
+My work spans end-to-end delivery: from discovery and requirements workshops through architecture and implementation, SIT/UAT, release governance, and production rollout — with strong ownership of privacy, security, and evidence expectations in regulated contexts.
 
-This site serves as a **professional evidence hub** showcasing delivery artifacts, governance
-documentation, and validation work for B2B collaborations, regulated projects, and consulting
-engagements.
+Recent delivery includes iOS and Android healthcare applications involving on-device AI (rPPG / computer vision), Bluetooth medical device integrations, secure mobile platforms, and enterprise-grade cloud systems — supported by clinical validation, privacy and AI governance, and security controls.
 
-**Focus:** AI-powered digital health · regulated platforms · cloud & integration delivery  
+This site serves as a **professional evidence hub** showcasing delivery artifacts, governance documentation, and validation work for B2B collaborations, regulated projects, and consulting engagements.
+
+**Focus:** digital health & enterprise platforms · regulated delivery & governance · cloud & integration delivery  
 **Strengths:** requirements → build → SIT/UAT → release · RAID/RACI/change control · GDPR + AES-256/TLS · validation & reproducibility artifacts
 
 ---
