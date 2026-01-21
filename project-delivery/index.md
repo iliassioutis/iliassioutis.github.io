@@ -7,7 +7,7 @@ title: Project Delivery & Methods
 🏠 <a href="/">Back to homepage</a>
 </blockquote>
 
-This section explains how I deliver projects in practice — across SDLC, Agile/Scrum, and Waterfall/stage-gate — and the governance/artifacts I use to keep execution predictable and auditable.
+This section explains how I deliver projects in practice — across SDLC, Agile/Scrum, and Waterfall/stage-gate — and the governance/artifacts I use to keep execution predictable and audit-ready.
 
 ---
 
@@ -22,7 +22,7 @@ These pages describe the delivery approach I use to take initiatives from idea t
   - Translate requirements into solution design (architecture, integration points, data flows, privacy/security constraints, operational needs).  
   - Execute build with disciplined source control, reviews, and environments (development / test / staging / production), plus repeatable deployment practices and quality checks.  
   - Plan and run testing as a progression (unit testing → component → integration → system), and prepare for **SIT (System Integration Testing)** and **UAT (User Acceptance Testing)** with clear entry/exit criteria.  
-  - Drive release readiness with a structured **go/no-go (release decision)** process, rollout/backout planning, monitoring/alerting, operational runbooks, and post-release stabilization.  
+  - Drive release readiness with a structured **go/no-go (release decision)** process, rollout and rollback planning, monitoring/alerting, operational runbooks, and post-release stabilization.  
   - Close with lessons learned, documentation updates, and a prioritized improvement backlog (what to keep, change, automate, or standardize).
 
 - **Agile & Scrum**  
@@ -54,13 +54,14 @@ These pages describe the delivery approach I use to take initiatives from idea t
   - Traceability: mapping requirements → test cases → evidence (especially useful in regulated or audit-sensitive delivery).  
   - Change and release: change requests, impact analysis, release readiness checklist, rollout/backout plan, post-release review and stabilization plan.  
   - Privacy & security gates: data classification, access control model, encryption approach, retention/deletion logic, supplier/sub-processor considerations; **DPIA (Data Protection Impact Assessment)**-style risk thinking when needed.  
-  - **AI governance (when AI is involved):** defined claims boundaries, transparency and provenance (what produced each output and from what source), human oversight where needed, validation/evidence artifacts, monitoring and drift awareness, and clear documentation of what the system does (and does not) do.
+  - **AI governance (when AI is involved):** defined claims boundaries, transparency and provenance (what produced each output and from what source), human oversight where needed, validation/evidence artifacts, monitoring and drift detection, and clear documentation of what the system does (and does not) do.
+
 ---
 
 ## Explore
 
 - 🧩 **SDLC in practice**  
-  How I run discovery → build → test → release → support, with traceable artifacts.  
+  How I run discovery → build → test → release → operations/support, with traceable artifacts.  
   🔎 <a href="/project-delivery/sdlc/">Read: SDLC in practice →</a>
 
 - 🔁 **Agile &amp; Scrum**  
@@ -72,7 +73,5 @@ These pages describe the delivery approach I use to take initiatives from idea t
   🔎 <a href="/project-delivery/waterfall-stage-gate/">Read: Waterfall / stage-gate →</a>
 
 - 🧾 **Artifacts &amp; governance**  
-  Business Requirements Document (BRD) / Functional Requirements Document (FRD), RAID (Risks, Assumptions, Issues, Dependencies),  
-  RACI (Responsible, Accountable, Consulted, Informed), SIT (System Integration Testing) / UAT (User Acceptance Testing),  
-  change control, release readiness, privacy &amp; security gates, and AI governance / evidence packs.  
+  BRD / FRD, RAID, RACI, SIT / UAT, change control, release readiness, privacy &amp; security gates, and AI governance / evidence packs.  
   🔎 <a href="/project-delivery/artifacts-governance/">Read: Artifacts &amp; governance →</a>
