@@ -15,43 +15,44 @@ This section explains how I deliver projects in practice — across SDLC, Agile/
 
 These pages describe the delivery approach I use to take initiatives from idea to production — with clear roles, artifacts, checkpoints, and measurable outcomes. The focus is practical: what I do, what I produce, and how I keep delivery controlled, transparent, and audit-ready where needed.
 
-- **SDLC in practice**  
+- **SDLC in practice (Software Development Life Cycle)**  
   How I run end-to-end delivery from discovery to operations, with traceability throughout:  
-  - Define scope, goals, success metrics, constraints, and stakeholders; establish roles and decision-making paths.  
+  - Define scope, goals, success metrics, constraints, and stakeholders; establish roles, governance, and decision-making paths.  
   - Turn needs into requirements (functional + non-functional), acceptance criteria, and a delivery plan (phases, milestones, dependencies, risks).  
-  - Translate requirements into solution design (architecture, integration points, data flows, security/privacy constraints).  
-  - Execute build with disciplined versioning and environments (dev/test/stage/prod), plus structured reviews and quality checks.  
-  - Plan and run testing as a progression (component → integration → system), and support readiness for SIT/UAT and go-live.  
-  - Drive release readiness (go/no-go), rollout strategy, monitoring, incident triage, and post-release stabilization.  
-  - Close with lessons learned, documentation updates, and a prioritized improvement backlog.
+  - Translate requirements into solution design (architecture, integration points, data flows, privacy/security constraints, operational needs).  
+  - Execute build with disciplined source control, reviews, and environments (development / test / staging / production), plus repeatable deployment practices and quality checks.  
+  - Plan and run testing as a progression (unit → component → integration → system), and prepare for **SIT (System Integration Testing)** and **UAT (User Acceptance Testing)** with clear entry/exit criteria.  
+  - Drive release readiness with a structured **go/no-go (release decision)** process, rollout/backout planning, monitoring/alerting, and post-release stabilization.  
+  - Close with lessons learned, documentation updates, and a prioritized improvement backlog (what to keep, change, automate, or standardize).
 
 - **Agile & Scrum**  
   How I deliver iteratively while keeping scope, quality, and stakeholder expectations under control:  
-  - Maintain a prioritized backlog aligned to goals and value; keep items “ready” with clear acceptance criteria.  
-  - Set a delivery cadence (sprints), define a realistic sprint goal, and plan based on team capacity and dependencies.  
-  - Run the core ceremonies with purpose (refinement, planning, daily sync, review/demo, retrospective) and capture actions.  
-  - Track progress and risks transparently (burn-up/down, flow, blockers), and intervene early when delivery deviates.  
-  - Keep stakeholders aligned through demos, releases, and clear change handling (trade-offs, scope adjustments, sequencing).  
-  - Use “definition of done” and quality gates so increments are potentially shippable and not just “code complete.”  
-  - Blend Agile delivery with governance when needed (e.g., regulated environments, privacy/security reviews, release approvals).
+  - Maintain a prioritized backlog aligned to goals and value; keep items “ready” with clear acceptance criteria and testability.  
+  - Set a delivery cadence (sprints/iterations), define a realistic sprint goal, and plan based on team capacity, dependencies, and risk.  
+  - Run core ceremonies with clear purpose (refinement, planning, daily sync, review/demo, retrospective) and track decisions and actions.  
+  - Track progress and risks transparently using visible signals (burn-up/burn-down charts, cumulative flow, blockers, cycle time where useful) and intervene early when delivery deviates.  
+  - Keep stakeholders aligned through frequent demos, incremental releases, and structured change handling (trade-offs, sequencing, scope adjustments).  
+  - Use a strong **Definition of Done (clear completion + quality criteria)** and lightweight quality gates so increments are potentially shippable, not just “code complete.”  
+  - Blend iterative delivery with governance where needed (regulated constraints, privacy/security reviews, release approvals, supplier coordination).
 
 - **Waterfall / stage-gate**  
-  How I use sequential delivery when requirements, constraints, or dependencies make staged execution the safer option:  
-  - Break work into phases with explicit entry/exit criteria (e.g., requirements complete, design signed off, test evidence ready).  
+  How I use sequential delivery when constraints, fixed dependencies, or external approvals make staged execution the safer option:  
+  - Break work into phases with explicit entry/exit criteria and sign-offs (e.g., requirements complete, design approved, test evidence prepared, operational readiness confirmed).  
   - Control scope and change through formal impact assessment (schedule/cost/risk), approvals, and re-baselining when required.  
-  - Manage dependencies and vendor integration with detailed plans, interface specifications, and coordinated test windows.  
-  - Use stage reviews for governance: quality checks, security/privacy readiness, operational readiness, and go/no-go decisions.  
-  - Emphasize documentation, traceability, and audit-friendly evidence where the domain demands it.  
-  - Preserve feedback loops via checkpoints and controlled iteration inside phases (so “stage-gate” isn’t rigid or blind).
+  - Manage dependencies and vendor integration with detailed plans, interface specifications, integration runbooks, and coordinated test windows.  
+  - Use stage reviews as governance points: quality checks, security/privacy readiness, operational readiness, and formal go/no-go decisions.  
+  - Emphasize documentation and traceability to support auditability and repeatability in integration-heavy or regulated contexts.  
+  - Preserve feedback loops via checkpoints and controlled iteration inside phases (so “stage-gate” stays disciplined without becoming rigid).
 
 - **Artifacts & governance**  
   The documentation and controls I use to keep delivery traceable, predictable, and compliant where applicable:  
-  - Requirements and specifications: BRD/FRD, user stories/use cases, non-functional requirements, acceptance criteria.  
-  - Planning and control: roadmap, milestones, RAID log, RACI, estimates, dependency mapping, stakeholder comms plan.  
-  - Quality and testing: test strategy, SIT/UAT plans, test evidence, defect triage, release notes, operational runbooks.  
-  - Change and release: change requests, impact analysis, release readiness checklist, rollout/backout plan, post-release review.  
-  - Privacy & security gates: data classification, access controls, encryption approach, retention/deletion considerations, DPIA-style thinking when needed.  
-  - **AI governance (when AI is involved):** claims boundaries, transparency and provenance, human oversight where needed, validation/evidence artifacts, monitoring, and clear documentation of what the system does (and does not) do.
+  - Requirements and specifications: **BRD (Business Requirements Document)**, **FRD (Functional Requirements Document)**, user stories/use cases, non-functional requirements, acceptance criteria.  
+  - Planning and control: roadmap, milestones, estimates, dependency mapping, stakeholder communication plan; **RAID log (Risks, Assumptions, Issues, Dependencies)**.
+  - Roles and accountability: **RACI (Responsible, Accountable, Consulted, Informed)** and decision-making paths (who decides what, and when).  
+  - Quality and testing: test strategy, **SIT (System Integration Testing)** / **UAT (User Acceptance Testing)** plans, test evidence, defect triage, release notes, operational runbooks.  
+  - Change and release: change requests, impact analysis, release readiness checklist, rollout/backout plan, post-release review and stabilization plan.  
+  - Privacy & security gates: data classification, access control model, encryption approach, retention/deletion logic, supplier/sub-processor considerations; **DPIA (Data Protection Impact Assessment)**-style risk thinking when needed.  
+  - **AI governance (when AI is involved):** defined claims boundaries, transparency and provenance (what produced each output and from what source), human oversight where needed, validation/evidence artifacts, monitoring and drift awareness, and clear documentation of what the system does (and does not) do.
 
 ---
 
