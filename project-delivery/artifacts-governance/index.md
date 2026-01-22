@@ -247,14 +247,55 @@ Practical examples of what I track:
 ---
 
 ### Change control
-Change control prevents uncontrolled scope creep and protects delivery predictability.
 
-- **Change requests**  
-  What changed and why (feature, timeline, scope, risk).
-- **Impact assessment**  
-  Schedule, cost, dependencies, risks, quality, and operational impacts.
-- **Approval / rejection + re-baselining**  
-  Documented outcomes so scope and expectations stay aligned.
+Change control is how I keep delivery predictable when new requests appear, priorities shift, or constraints change. The goal is not to “block” change — it is to make change **visible**, **assessed**, and **agreed**, so scope, timeline, cost, and quality stay aligned.
+
+- **What triggers change control (typical cases)**  
+  - New feature requests or “small” additions that accumulate into scope creep  
+  - Changes to integrations (new third-party API requirements, SDK version changes, new device models)  
+  - Security/privacy changes (new data collected, new permissions, retention/deletion changes)  
+  - Quality-driven changes (fixing a defect properly vs applying a quick workaround)  
+  - Delivery constraints (timeline pressure, dependency delays, vendor availability, app-store review findings)
+
+- **Change request (the “what” and “why”)**  
+  A short, structured record that makes the change unambiguous:  
+  - **What is changing:** feature/functionality, workflow, requirement, integration, UI/UX, data handling, or operational process  
+  - **Why now:** business value, user impact, compliance requirement, defect/incident, dependency constraint  
+  - **Who requested it:** requestor + accountable owner  
+  - **Priority and deadline:** must-have vs should-have; any external dates (release window, partner readiness)  
+  - **Scope boundaries:** what is included **and what is explicitly not included** (to avoid “hidden extras”)  
+  - **Acceptance criteria:** how we will confirm the change is done and correct (including edge cases/non-happy paths)
+
+- **Impact assessment (the “so what”)**  
+  A lightweight but complete review of consequences, so decisions are informed:  
+  - **Schedule impact:** what moves, what slips, what can be parallelized; effect on milestones/release date  
+  - **Cost/effort impact:** engineering effort, testing effort, vendor effort, and any extra tools/licenses  
+  - **Dependency impact:** new/changed dependencies (vendors, APIs, SDKs, devices, app-store review, environments)  
+  - **Quality impact:** additional test coverage needed; regression risk; effect on “Definition of Done”  
+  - **Operational impact:** monitoring/alerts, runbooks, support load, on-call/escalation readiness  
+  - **Security & privacy impact (when applicable):** permissions, data classification, encryption, access controls, retention/deletion, sub-processors  
+  - **Risk assessment:** what can go wrong, likelihood/impact, mitigation plan, and residual risk  
+  - **Options and trade-offs:** at least one alternative (e.g., defer to next release, phased rollout, limited scope version)
+
+- **Decision and approval (the “go / no-go”)**  
+  A clear decision path so the team can move fast without confusion:  
+  - **Decision owner(s):** who approves (e.g., Product Owner for scope/priority, Tech Lead for architecture, Privacy/Security owner for controls, Delivery Lead for release coordination)  
+  - **Decision outcome:** approved / rejected / deferred / approved with conditions (e.g., “only if test evidence is produced”)  
+  - **Decision timing:** expected turnaround once inputs are ready (e.g., same-day for routine backlog reshuffles; scheduled review for higher-impact changes)  
+  - **Documentation:** record what was decided, why, when, and any follow-up actions
+
+- **Re-baselining (keeping expectations aligned)**  
+  Once a change is approved, I update the “single source of truth” so everyone is working to the same plan:  
+  - **Update the baseline plan:** scope, milestones, release date, and deliverables  
+  - **Update the backlog and roadmap:** sequencing, sprint/release allocation, and priority changes  
+  - **Update RAID log (Risks, Assumptions, Issues, Dependencies):** new risks/dependencies and mitigations  
+  - **Update test and release plans:** what must be re-tested, evidence required, and readiness gates  
+  - **Stakeholder communication:** concise summary of what changed, why, and what it means for timeline/scope
+
+- **How I keep it lightweight (so it doesn’t become bureaucracy)**  
+  - Small changes: one-page change note + quick impact assessment + recorded decision  
+  - Larger changes: deeper impact review + explicit sign-offs + updated baseline and comms  
+  - Always: “If it changes scope/timeline/risk materially, it gets logged and decided — not assumed.”
 
 ---
 
