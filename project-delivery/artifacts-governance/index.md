@@ -60,7 +60,7 @@ These make architecture decisions explicit and traceable (especially important w
 - **Solution notes / Architecture decision records (ADRs)**  
   Why a decision was taken, alternatives considered, risks, and impacts.
 - **Integration notes**  
-  API contracts, message schemas, edge cases, retries/timeouts, failure modes, and operational responsibilities.
+  API contracts, message schemas, edge cases, retries/timeouts, failure modes, and **run ownership** (who monitors the integration, who responds to incidents, and who maintains keys/configuration, deployments, and support procedures).
 - **Data flow notes**  
   What data is collected, where it is processed, what is stored, retention/deletion rules, and access controls.
 
