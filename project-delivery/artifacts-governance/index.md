@@ -206,7 +206,12 @@ Practical examples of what I track:
 
 - **Decision paths**  
   How decisions are made and recorded, so the team can move fast without confusion — and so approvals are clear when governance is required:  
-  - **What decisions exist:** scope and priority changes, architecture/integration choices, security & privacy gates, release readiness, incident response actions.  
+  - **What kinds of decisions we make (and why they matter):**  
+    - **Scope and priority:** what we will deliver now vs later (and what we will *not* deliver), to keep timelines and expectations realistic.  
+    - **Solution and integration approach:** how systems connect and behave end-to-end (interfaces, data flows, error handling), to avoid late surprises during testing and rollout.  
+    - **Security and privacy checkpoints:** what data is processed, who can access it, how it is protected (encryption, retention/deletion), and whether extra safeguards are required before go-live.  
+    - **Release readiness:** whether we are safe to launch (evidence complete, risks understood, rollback plan ready, support on standby) and who gives the final go/no-go.  
+    - **Live-incident actions:** what we do when something breaks in production (triage, temporary mitigations, disabling a feature, rollback/hotfix) and who is authorized to trigger each action.  
   - **Who can decide:** named owners for each decision type (e.g., Product Owner for priority/scope, Tech Lead/Architect for design, Security/Privacy owner for controls, Delivery Lead for go/no-go coordination).  
   - **How decisions are made:** decision criteria (cost/benefit, risk, compliance impact), required inputs (evidence, test results, impact analysis), and expected turnaround time.  
   - **How decisions are documented:** lightweight decision log (what was decided, why, alternatives considered, date, owner, and any follow-up actions).  
