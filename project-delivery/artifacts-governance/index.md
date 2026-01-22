@@ -74,9 +74,10 @@ How this shows up in my work (example patterns):
 This is how I make quality measurable and defensible (not just “we tested it”).
 
 - **Test strategy**  
-  Scope, approach, responsibilities, environments, data setup, and evidence expectations.
+  A clear, shared plan for *how* we will prove the solution works before release: what will be tested (and what won’t), the test levels (unit → integration → system), who is responsible for each activity, which environments and test data we will use, the entry/exit criteria for each phase, and what “evidence” we will capture (test cases, results, defects, and sign-offs) for go/no-go decisions.
 - **System Integration Testing (SIT)** plan  
-  Cross-component validation (mobile app + backend + integrations), with entry/exit criteria.
+  Cross-component validation of the full system working together (client apps, backend services, third-party services, and external integrations) — focusing on end-to-end journeys, data integrity across boundaries, security/permission behavior, and failure handling.
+  Defines scope and environments, required test data/accounts, responsibilities, test scenarios (including edge and failure cases), evidence to capture, and clear entry/exit criteria (e.g., environments stable, integrations reachable, critical journeys pass, defect thresholds met, and agreed sign-offs completed).
 - **User Acceptance Testing (UAT)** plan  
   Business/clinical/user workflows validated with clear acceptance criteria and sign-off rules.
 - **Test evidence** (when appropriate)  
