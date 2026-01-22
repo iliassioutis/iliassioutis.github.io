@@ -292,14 +292,14 @@ Change control is how I keep delivery predictable when new requests appear, prio
 - **Re-baselining (keeping expectations aligned)**  
   Once a change is approved, I update the “single source of truth” so everyone is working to the same plan:  
   - **Update the baseline plan:** scope, milestones, release date, and deliverables  
-  - **Update the backlog and roadmap:** sequencing, sprint/release allocation, and priority changes  
+  - **Update the backlog and roadmap:** reflect the approved change in the plan — re-order what the team works on next, assign items to the right sprint or release, adjust target dates/milestones if needed, and make the new priorities visible to everyone (so delivery, stakeholders, and dependencies stay aligned)  
   - **Update RAID log (Risks, Assumptions, Issues, Dependencies):** new risks/dependencies and mitigations  
   - **Update test and release plans:** what must be re-tested, evidence required, and readiness gates  
   - **Stakeholder communication:** concise summary of what changed, why, and what it means for timeline/scope
 
 - **How I keep it lightweight (so it doesn’t become bureaucracy)**  
   - Small changes: one-page change note + quick impact assessment + recorded decision  
-  - Larger changes: deeper impact review + explicit sign-offs + updated baseline and comms  
+  - Larger changes: require a deeper impact review, explicit sign-offs, an updated baseline plan, and **clear communications** (who needs to know, what is changing, why it’s changing, and what the new dates/scope/risks are)  
   - Always: “If it changes scope/timeline/risk materially, it gets logged and decided — not assumed.”
 
 ---
