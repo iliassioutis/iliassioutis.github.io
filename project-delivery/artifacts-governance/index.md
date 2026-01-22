@@ -526,22 +526,45 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
       - **Device and software coverage:** supported device models/camera characteristics, plus **operating system (OS)** versions and app versions included in testing.
       - **Population boundaries (when relevant):** the user groups the evidence applies to (e.g., age ranges or other inclusion/exclusion criteria) and any known limitations outside those boundaries.
 
-- **Evidence package (what you keep)**
-  - A structured “evidence dossier” can include:
-    - **Intended use and boundaries:** what the feature is for, and what it is not (claims limits).
-    - **Claims-to-evidence mapping:** a simple “claim → proof” table that links every user-facing statement or label to the supporting validation work — and states the boundary conditions for that evidence.  
-      - **Claim (what the user sees):** the exact wording shown in the app (screens, charts, help text, onboarding, store listing).  
-      - **What it means (interpretation):** how the user should understand it (and what it should *not* be interpreted as).  
-      - **Supporting evidence:** which test/validation results support that specific statement (protocol + summary outcome), including the versions covered (app/AI SDK/model, device/OS).  
-      - **Limits and exclusions:** when the evidence may not apply (e.g., low light, motion, unsupported devices/OS, out-of-scope user groups), plus known failure modes.  
-      - **Controls in the product:** how the app enforces safe interpretation (provenance labels AI vs device vs manual, “cannot estimate” behavior, guidance messages, and disclaimers placed at the right moments).  
+- **Evidence package (what you keep)**  
+  A structured “evidence dossier” that makes AI features **reviewable, defensible, and consistent** across product, QA, support, and (where relevant) app-store review. Typical contents:
 
-    - **Outputs and interpretation guidance:** what the output represents and how users should interpret it (and what they should not do with it).
-    - **Testing/validation protocol:** what was tested, how it was tested, by whom, and under what conditions; plus what was excluded.
-    - **Summary results and limitations:** key findings, known failure modes, and where accuracy degrades.
-    - **Risk analysis and mitigations:** what could go wrong (e.g., misinterpretation), and what controls reduce that risk.
-    - **Version information:** app version, AI/SDK or model version (where applicable), device/OS coverage, and configuration assumptions.
-    - **Release readiness sign-off for AI-related changes:** confirmation that claims, UX wording, provenance labels, and evidence are aligned.
+  - **Intended use and boundaries (what it is / is not)**  
+    A short statement of purpose and limits — e.g., “wellness estimate / informational feedback” and explicit non-use (not diagnosis, not treatment guidance, not emergency detection).
+
+  - **Outputs and interpretation guidance (what the user should understand)**  
+    - What each output represents (estimate/indicator/range) and the correct user interpretation  
+    - What users should *not* infer (e.g., not a clinical diagnosis or medical recommendation)  
+    - User guidance for conditions that affect quality (lighting, motion, camera position), including when to retry or use an alternative input (device/manual)
+
+  - **Validation plan and protocol (what was tested and how)**  
+    - What scenarios and conditions were covered (environment, motion/stillness, device/OS range, app/SDK versions)  
+    - Metrics and thresholds used to judge acceptability (accuracy/agreement/reliability/failure rate)  
+    - What was excluded (and why), plus known constraints
+
+  - **Results summary and limitations (what the evidence shows)**  
+    - Key findings in plain language (what performs well, what degrades)  
+    - Known failure modes and “cannot estimate” triggers  
+    - Clear boundaries of applicability (when results may not be reliable)
+
+  - **Risk analysis and mitigations (what could go wrong and how you reduce it)**  
+    - Main risks (misinterpretation, confusing source, edge-case failures)  
+    - Mitigations implemented (provenance labeling, safe messaging, “cannot estimate” rules, UI wording controls, escalation paths)  
+    - Any remaining residual risk and why it is acceptable (if applicable)
+
+  - **Statement-to-evidence mapping (in-app statements only)**  
+    A compact table linking each **in-app AI statement/output meaning** to the evidence that supports it, so wording stays aligned with what’s validated:  
+    - **In-app statement/output meaning:** the exact wording shown *inside the app* (screens, charts, tooltips/help text, onboarding) and what it is intended to mean  
+    - **Evidence reference:** which test/validation artifact supports it (protocol + result summary + versions covered)  
+    - **Coverage conditions:** devices/OS/app/SDK versions and capture conditions the evidence applies to  
+    - **Limits/exclusions:** when it may not apply (low light, motion, unsupported devices/OS, out-of-scope users), plus known failure modes  
+    - **Product controls:** how the app enforces safe interpretation (provenance labels AI vs device vs manual, “cannot estimate” behavior, guidance messages, disclaimer placement)
+
+  - **Version and configuration record (what exactly is being shipped)**  
+    App version, AI SDK/model version (where applicable), supported device/OS coverage, configuration assumptions, and any feature-flag behavior that affects exposure/rollout.
+
+  - **Release readiness sign-off for AI-related changes (what was checked before shipping)**  
+    A checklist confirming: claims boundaries and wording reviewed; provenance labels verified; “cannot estimate” behavior tested; validation evidence still applicable (or updated); limitations documented; monitoring/support guidance updated.
 
 - **Limitations and constraints (make them explicit)**
   - Document:
