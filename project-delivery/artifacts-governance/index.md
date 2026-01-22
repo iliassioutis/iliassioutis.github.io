@@ -212,9 +212,25 @@ Practical examples of what I track:
     - **Security and privacy checkpoints:** what data is processed, who can access it, how it is protected (encryption, retention/deletion), and whether extra safeguards are required before go-live.  
     - **Release readiness:** whether we are safe to launch (evidence complete, risks understood, rollback plan ready, support on standby) and who gives the final go/no-go.  
     - **Live-incident actions:** what we do when something breaks in production (triage, temporary mitigations, disabling a feature, rollback/hotfix) and who is authorized to trigger each action.  
-  - **Who can decide:** named owners for each decision type (e.g., Product Owner for priority/scope, Tech Lead/Architect for design, Security/Privacy owner for controls, Delivery Lead for go/no-go coordination).  
-  - **How decisions are made:** decision criteria (cost/benefit, risk, compliance impact), required inputs (evidence, test results, impact analysis), and expected turnaround time.  
-  - **How decisions are documented:** lightweight decision log (what was decided, why, alternatives considered, date, owner, and any follow-up actions).  
+  - **Who can decide:**  
+    Named owners for each decision type, so responsibility is explicit (and decisions don’t stall):  
+    - **Product Owner:** scope and priority (what ships now vs later).  
+    - **Technical Lead / Architect:** solution and integration choices (how it works end-to-end).  
+    - **Security / Privacy owner:** security controls and privacy gates (what data is processed, how it’s protected, retention/deletion).  
+    - **Delivery Lead:** decision orchestration for release readiness (ensures inputs are complete, brings the right people together, runs the go/no-go).  
+    - **Operations / Support lead (when relevant):** production readiness and incident actions (runbooks, monitoring, escalation, hotfix/rollback coordination).
+
+  - **How decisions are made:**  
+    A consistent process so choices are defensible and repeatable:  
+    - **Decision criteria:** value vs effort, delivery impact (time/cost), risk level, and compliance/regulatory implications.  
+    - **Required inputs:** impact analysis (what changes and who is affected), options and trade-offs, test evidence/results where applicable, and any security/privacy assessment needed.  
+    - **Decision timing:** a clear expectation for **how quickly a decision is made once inputs are complete** (e.g., same-day for routine backlog changes, 24–48 hours for integration changes, scheduled review for high-risk privacy/security approvals).
+
+  - **How decisions are documented:**  
+    A lightweight decision log so the “why” is not lost:  
+    - **Record:** what was decided, why, alternatives considered, date/time, decision owner(s), and any constraints/assumptions.  
+    - **Actions:** follow-up tasks, owners, due dates, and where the evidence lives (links to tickets/docs/test results).  
+    - **Visibility:** stored in a shared place the team actually uses (project wiki, ticketing system, or a single decision-log page).
   - **When escalation is triggered:**  
     - changes that affect timeline/cost materially, or introduce new dependencies  
     - anything with privacy/security impact (sensitive data, permissions, retention, access control)  
