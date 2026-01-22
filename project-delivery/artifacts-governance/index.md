@@ -137,7 +137,7 @@ How this shows up in my work (example patterns):
   - **Decision points:** what needs approval/confirmation, and by when
 - **Dependency mapping**  
   A clear view of everything the delivery relies on (and what depends on us), so surprises don’t land late in testing or release:  
-  - **External services & APIs:** third-party endpoints, rate limits, authentication flows (login/token exchange), **service commitments (SLA — Service Level Agreement, e.g., uptime and support response expectations)**, and change-notification channels (how we learn about breaking changes).  
+  - **External services & APIs:** third-party endpoints, rate limits, authentication flows (login/token exchange), **service commitments (SLA — Service Level Agreement, e.g., uptime and support response expectations: how often the service is available and how quickly support responds when something breaks)**, and change-notification channels (how we learn about breaking changes).  
   - **Vendor components & SDKs:** version constraints, licensing/usage terms, upgrade cadence, and known limitations that affect scope.  
   - **Platform constraints:** mobile operating system (OS) versions, app-store rules, device permissions, and background/foreground behavior.  
   - **Device compatibility boundaries:** supported device models/firmware ranges, Bluetooth profiles, SDK/device pairing steps, and explicit “not supported” cases.  
