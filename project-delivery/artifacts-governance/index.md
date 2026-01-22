@@ -476,7 +476,7 @@ AI features still need **accountability**: who owns decisions, who reviews issue
 - **Named ownership**
   - Define who owns:
     - AI feature requirements and claims
-    - model/version release decisions
+    - **AI release decisions:** who approves shipping a new model/SDK version (or changing thresholds/output mapping), based on evidence, risk review, and confirmed device/OS compatibility
     - safety and risk decisions
     - user support flows when AI is involved
 
