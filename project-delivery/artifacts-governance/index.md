@@ -554,7 +554,10 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
       - **User behavior:** motion vs still capture, and how “poor signal” situations are detected and handled (e.g., guidance, retry, or “cannot estimate”).
       - **Device and software coverage:** supported device models/camera characteristics, plus **operating system (OS)** versions and app versions included in testing.
       - **Population boundaries (when relevant):** the user groups the evidence applies to (e.g., age ranges or other inclusion/exclusion criteria) and any known limitations outside those boundaries.
-
+      - **Variability across people and devices (make it explicit)**
+        - Where relevant, check performance across a reasonable range of real-world variation (for example: different lighting conditions, different device camera characteristics, and different user groups such as age ranges).
+        - Document any known limitations clearly, and avoid wording or UI patterns that suggest the result is equally reliable for everyone under all conditions.
+ 
 - **Evidence package (what you keep)**  
   A structured “evidence dossier” that makes AI features **reviewable, defensible, and consistent** across product, quality assurance (QA), support, and (where relevant) app-store review. Typical contents:
 
@@ -727,6 +730,7 @@ AI governance must include clear rules on **what data is processed, stored, or s
 Before shipping AI-related changes, I treat these as minimum checks:
 
 - Claims and UI wording reviewed for boundary compliance
+- App-store listing text and marketing copy reviewed (so external wording does not imply diagnosis/medical advice or exceed validated capability)
 - Provenance labels and user guidance verified
 - Supported device/OS boundaries confirmed (and documented)
 - Validation evidence updated (or confirmed still valid)
