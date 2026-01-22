@@ -74,7 +74,7 @@ How this shows up in my work (example patterns):
 This is how I make quality measurable and defensible (not just “we tested it”).
 
 - **Test strategy**  
-  A clear, shared plan for *how* we will prove the solution works before release: what will be tested (and what won’t), the test levels (unit → integration → system), who is responsible for each activity, which environments and test data we will use, the entry/exit criteria for each phase, and what “evidence” we will capture (test cases, results, defects, and sign-offs) for go/no-go decisions.
+  A clear, shared plan for *how* we will prove the solution works before release: what will be tested (and what won’t), the test levels (unit → component → integration → system), who is responsible for each activity, which environments and test data we will use, the entry/exit criteria for each phase, and what “evidence” we will capture (test cases, results, defects, and sign-offs) for go/no-go decisions.
 - **System Integration Testing (SIT)** plan  
   Cross-component validation of the full system working together (client apps, backend services, third-party services, and external integrations) — focusing on end-to-end journeys, data integrity across boundaries, security/permission behavior, and failure handling.  
   Defines scope and environments, required test data/accounts, responsibilities, test scenarios (including edge and failure cases), evidence to capture, and clear entry/exit criteria (e.g., environments stable, integrations reachable, critical journeys pass, defect thresholds met, and agreed sign-offs completed).
@@ -259,7 +259,7 @@ Change control is how I keep delivery predictable when new requests appear, prio
 
 - **Change request (the “what” and “why”)**  
   A short, structured record that makes the change unambiguous:  
-  - **What is changing:** feature/functionality, workflow, requirement, integration, user interface (UI)/ user experience (UX), data handling, or operational process  
+  - **What is changing:** feature/functionality, workflow, requirement, integration, UI/UX, data handling, or operational process  
   - **Why now:** business value, user impact, compliance requirement, defect/incident response, or a **dependency constraint** (e.g., a third-party provider is deprecating an API on a fixed date, a device/SDK update is required to support a new OS release, or an app-store policy change forces an update before the next submission window)  
   - **Who requested it:** requestor + accountable owner  
   - **Priority and timing:** what is **non-negotiable** vs what can **wait** (must-have vs should-have), and any **hard external dates** we must align to (e.g., an agreed release window, an app-store review timeline, or a partner/vendor go-live date when their side is ready)  
@@ -313,7 +313,7 @@ I treat each gate as **(1) a checklist, (2) named owners, and (3) clear pass/fai
 
 - **Requirements readiness (before build or before serious testing starts)**  
   Ensures the team is building the *right* thing and can prove it works.  
-  - **What it checks:** scope is clear; workflows are understood; acceptance criteria exist for each key item; edge cases and error behaviour are defined; non-functional expectations are known (security, performance, audit needs).  
+  - **What it checks:** scope is clear; workflows are understood; acceptance criteria exist for each key item; edge cases and error behavior are defined; non-functional expectations are known (security, performance, audit needs).  
   - **What “ready” looks like:** no critical open questions; key decisions recorded; requirements are testable (someone can write test cases directly from them).
 
 - **Security & privacy readiness (before integration testing and before release)**  
