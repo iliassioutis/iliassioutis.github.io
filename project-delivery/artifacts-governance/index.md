@@ -426,10 +426,10 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
 - **Use disclaimers correctly (as reinforcement, not a band-aid)**
   - Use a clear disclaimer where needed (e.g., “for informational purposes”, “not medical advice”, “not diagnostic”).
   - Ensure disclaimers appear at the right moments (onboarding, before first use, near the output, and in supporting information).
-  - Disclaimers do not replace correct claims: the core experience must still be consistent with the boundaries.
+  - **Disclaimers don’t “fix” an over-strong claim.** If the feature or wording implies diagnosis or medical advice, adding “not medical advice” is not enough — the claim *and* the user experience must be consistent with what the feature can actually support.
 
 - **Define output meaning**
-  - What the output represents (estimate, indicator, range, confidence band where used).
+  - What the output represents (an estimate, indicator, range, or—where applicable—a confidence level/uncertainty range that shows how precise the result is).
   - What users should do with it (e.g., “use as a personal reference”, “consider trends”, “seek professional advice if concerned”).
   - What users should *not* do with it (e.g., “do not use for acute decisions”).
 
@@ -440,7 +440,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
 Users and reviewers must be able to tell **what produced an output** and **how it should be interpreted**.
 
 - **Source labeling (provenance)**
-  - Clearly label whether each value comes from:
+  - Clearly label the source of each value:
     - AI estimate (model output)
     - Connected device reading (with device model, when relevant)
     - Manual entry
