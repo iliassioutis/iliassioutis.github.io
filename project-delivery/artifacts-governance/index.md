@@ -160,7 +160,24 @@ Practical examples of what I track:
   - **Accountable (A):** the single owner who signs off and is answerable for the outcome (one “A” per deliverable).  
   - **Consulted (C):** subject-matter experts who provide input before decisions are finalized (two-way communication).  
   - **Informed (I):** stakeholders who need updates after decisions or milestones (one-way communication).  
-  - **Where I use it most:** requirements sign-off; solution design/architecture decisions; security & privacy reviews; test ownership (SIT/UAT); release readiness and go-live approvals; third-party **vendor deliverables** (the concrete inputs we need from external providers so we can build, test, and release confidently — e.g., API/SDK documentation and integration guides, sandbox/test access and test accounts, credentials/keys/certificates, required SDK/library/firmware versions or reference implementations, support and incident contacts, maintenance windows and change notifications, plus agreed fixes/patches/compatibility updates with release notes and timelines); and **support handover** (the structured transition from “build mode” to “run mode” so the service can be supported reliably after go-live — e.g., an explicit ownership model for who supports what, primary/backup owners and on-call/escalation paths (including vendor contacts), operational playbooks/runbooks with common issues and troubleshooting steps (including restart/retry procedures), monitoring and alerts (what is monitored, who receives alerts, and what to do when they fire), required access/permissions to logs/dashboards/admin tools (and how access is granted/revoked), incident and hotfix routines (triage flow, severity levels, communications, safe deployment, and post-incident review), and structured knowledge transfer so support can operate without the delivery team).  
+  - **Where I use it most:** requirements sign-off; solution design/architecture decisions; security & privacy reviews; test ownership (SIT/UAT); release readiness and go-live approvals; third-party **vendor deliverables**; and **support handover**.
+
+    - **Third-party vendor deliverables**  
+      The concrete inputs we need from external providers so we can build, test, and release confidently:  
+      - **Documentation:** API specifications, software development kit (SDK) integration guides, configuration instructions, known limitations.  
+      - **Access:** sandbox/test environments, test accounts, credentials/keys/certificates (and how they are rotated/replaced).  
+      - **Technical artifacts:** required SDK/library versions, device firmware ranges, reference implementations or sample payloads where available.  
+      - **Operational inputs:** support and incident contacts, incident handling process, maintenance windows, and change-notification channels (how we learn about breaking changes).  
+      - **Fixes & compatibility updates:** agreed bug fixes/patches, compatibility updates, release notes, and committed timelines.
+
+    - **Support handover**  
+      The structured transition from “build mode” to “run mode”, so the service can be supported reliably after go-live:  
+      - **Ownership model:** who supports what (product/app team vs operations/support vs vendors), primary/backup owners, and escalation paths (including on-call where applicable).  
+      - **Operational playbooks (runbooks):** common issues, troubleshooting steps, restart/retry procedures, and “what to do first” checklists.  
+      - **Monitoring & alerts:** what is monitored, alert thresholds, who receives alerts, and the expected response steps.  
+      - **Access & permissions:** who can access logs, dashboards, admin consoles, and production support tools (and how access is granted/revoked).  
+      - **Incidents & hotfixes:** triage flow, severity levels, communication steps, how fixes are deployed safely, and post-incident review (what happened and what we change).  
+      - **Knowledge transfer:** walkthrough sessions and Q&A, plus links to the latest documentation so support can operate without the delivery team.  
   - **How it helps in practice:**  
     - avoids duplicated effort (two teams doing the same thing)  
     - avoids gaps (no one assigned to a critical task)  
