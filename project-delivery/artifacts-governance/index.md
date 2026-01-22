@@ -14,14 +14,23 @@ It focuses on **what I produce**, **how I use it**, and **how it reduces risk** 
 
 ## What you will find here
 
-- A clear view of the **core artifacts** I use to run delivery end-to-end
-- The **governance controls** that keep decisions, risks, and changes visible
-- How I run **testing and release governance** (SIT/UAT, readiness, go-live, hypercare)
-- How I handle **privacy, security, and AI governance** when the product includes sensitive data and on-device AI
+- A clear view of the **core artifacts** I use to run delivery end-to-end ([jump](#core-artifacts))
+- The **governance controls** that keep decisions, risks, and changes visible ([jump](#governance-tools))
+- How I run **testing and release governance** (SIT/UAT, readiness, go-live, hypercare) ([jump](#testing-release))
+- How I handle **privacy, security, and AI governance** when the product includes sensitive data and on-device AI ([jump](#privacy-security), [AI](#ai-governance))
+
+**On this page**
+- [Core delivery artifacts](#core-artifacts)
+- [Governance tools](#governance-tools)
+- [Testing & release governance](#testing-release)
+- [Traceability](#traceability)
+- [Privacy & security](#privacy-security)
+- [AI governance](#ai-governance)
+- [What strong governance looks like](#what-good-looks-like)
 
 ---
 
-## Core delivery artifacts
+## Core delivery artifacts {#core-artifacts}
 
 ### 1) Requirements and specifications
 These artifacts ensure everyone agrees on *what we are building*, *why*, and *how success is measured*.
@@ -124,7 +133,7 @@ How this shows up in my work (example patterns):
 
 ---
 
-## Governance tools I use repeatedly
+## Governance tools I use repeatedly {#governance-tools}
 
 ### Risk and dependency control
 - **RAID log (Risks, Assumptions, Issues, Dependencies)**  
@@ -338,7 +347,7 @@ I treat each gate as **(1) a checklist, (2) named owners, and (3) clear pass/fai
 
 ---
 
-## Testing & release governance
+## Testing & release governance {#testing-release}
 
 ### SIT and UAT governance (how I keep it controlled)
 - Clear **entry/exit criteria** (what must be true before testing starts / ends)
@@ -355,7 +364,7 @@ I treat each gate as **(1) a checklist, (2) named owners, and (3) clear pass/fai
 
 ---
 
-## Traceability: from “why” to evidence
+## Traceability: from “why” to evidence {#traceability}
 Traceability is what makes delivery defensible — especially when projects are audit-sensitive or regulated.
 
 I aim for a clear line of sight:
@@ -368,7 +377,7 @@ Practical examples of what traceability covers:
 
 ---
 
-## Privacy & security governance
+## Privacy & security governance {#privacy-security}
 
 When delivery involves sensitive data, I treat privacy/security as gates with explicit artifacts — not side notes.
 
@@ -742,7 +751,7 @@ Before shipping AI-related changes, I treat these as minimum checks:
 
 ---
 
-## What strong delivery governance looks like in practice
+## What strong delivery governance looks like in practice {#what-good-looks-like}
 
 - Predictable cadence and reporting
 - Clear ownership of decisions
