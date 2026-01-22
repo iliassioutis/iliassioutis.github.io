@@ -36,7 +36,12 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   The “how well it must work” requirements — beyond features:  
   - **Security & privacy:** encryption, access control, data minimization, retention/deletion, consent handling  
   - **Performance:** response times, throughput, and acceptable latency under expected load  
-  - **Availability:** target uptime and resilience (e.g., planned downtime windows, failover expectations)  
+- **Availability:** how consistently the service should be reachable for users  
+  - **Uptime target:** the percentage of time it should be “up” and usable (for example, “available 99.9% of the time”).  
+  - **Acceptable downtime:** what interruptions are tolerated and when (for example, a short maintenance window at night).  
+  - **Resilience:** how well the system continues to work when something goes wrong (for example, if one server/service is slow or down, the rest of the app should still function).  
+  - **Recovery expectations:** how quickly service should be restored after an outage (for example, “restore core functions within X minutes”).  
+  - **User impact rules:** what the user should experience during partial outages (for example, “read-only mode” or “show a clear message and retry automatically”).  
   - **Reliability:** consistent behavior over time (error rates, retries, data consistency, **graceful degradation — key functions still work in a reduced mode when a dependency fails**, clear fallback behavior)  
   - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
   - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
