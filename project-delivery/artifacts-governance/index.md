@@ -393,7 +393,8 @@ Where privacy risk could be high, I use a DPIA-style approach to make sure risks
 - **Define controls and mitigations:** specify the practical measures that reduce risk (data minimization, consent/permissions, encryption, access controls, retention/deletion rules, audit logs, monitoring, vendor safeguards).  
 - **Verify implementation with evidence:** confirm controls are actually in place (configuration checks, test cases, screenshots/logs, security/privacy review notes, release gate checklists).  
 - **Assign responsibilities and escalation paths:** define who owns each control and decision, when approvals are required, and what triggers escalation (e.g., scope changes affecting data, new vendors/sub-processors, expanded data collection, AI features touching sensitive data).  
-- **Revisit when things change:** treat it as a living record—update when new features, integrations, data types, or vendors are introduced, or when incidents/near-misses reveal new risks.
+- **Revisit when things change:** treat this as a living record—update it when new features, integrations, data types, or vendors are introduced, or when **incidents or “near-misses”** uncover new risks (issues caught in time before they affected users or production).  
+  - *Examples of near-misses:* a misconfigured permission discovered in staging that **would have exposed sensitive data**; a logging change that **started capturing sensitive fields** and was rolled back; a deployment that **briefly broke an external API integration** but was detected during verification and reverted; a third-party provider announcing a breaking change late, caught before release; an alert showing repeated suspicious login attempts, prompting a rule change before any compromise.
 
 ---
 
