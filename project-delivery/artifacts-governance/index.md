@@ -99,7 +99,18 @@ These artifacts reduce production risk and make go-live predictable.
 - **Go-live runbook**  
   A step-by-step “day-of-release” playbook that defines **who does what, in what order**, including timing, communications, and clear **checkpoints** to confirm each stage is working (for example: deployment completed, key services responding, critical user flows pass, integrations healthy, monitoring shows no spikes). It also defines **decision points** (continue / pause / rollback) and who has the authority to make those calls.
 - **Monitoring and alerting plan**  
-  Key signals to watch (availability, error rates, performance, integration failures, data pipeline health).
+  How we **detect problems early** and **respond quickly** once the system is live. It defines:  
+  - **What we watch and why:** the key “health signals” that indicate the service is working as expected.  
+  - **What triggers an alert:** clear thresholds and conditions (so alerts are meaningful, not noisy).  
+  - **Who is notified and how:** escalation paths and response expectations (who looks first, who owns the fix, when to involve vendors).  
+  - **What we do when an alert fires:** a standard response flow (check dashboards → confirm impact → mitigate → root-cause analysis → prevent recurrence).  
+
+  Typical signals include:  
+  - **Availability:** can users successfully log in and use the core features right now (service reachable / core journeys working).  
+  - **Error rates:** spikes in failures (for example, login failures, API errors, payment failures, device-sync failures).  
+  - **Performance:** pages/screens/loading times staying within acceptable limits; slowdowns detected early.  
+  - **Integration health:** third-party or internal integrations failing (timeouts, authentication issues, webhook delivery failures, dropped messages).  
+  - **Data health (if applicable):** data pipelines/jobs running on schedule, no missing/duplicated data, and key data checks passing.
 - **Hypercare plan**  
   A defined post-release **stabilization period** (for example, the first 24–72 hours or first 1–2 weeks) where the team actively watches the system and responds quickly to issues. It specifies:  
   - **What we monitor:** key dashboards/alerts, error rates, performance, and critical user journeys.  
