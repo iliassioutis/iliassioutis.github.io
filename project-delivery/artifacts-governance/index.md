@@ -224,7 +224,7 @@ Practical examples of what I track:
     A consistent process so choices are defensible and repeatable:  
     - **Decision criteria:** value vs effort, delivery impact (time/cost), risk level, and compliance/regulatory implications.  
     - **Required inputs:** impact analysis (what changes and who is affected), options and trade-offs, test evidence/results where applicable, and any security/privacy assessment needed.  
-    - **Decision timing:** a clear expectation for **how quickly a decision is made once inputs are complete** (e.g., same-day for routine backlog changes, 24–48 hours for integration changes, scheduled review for high-risk privacy/security approvals).
+    - **Decision timing:** a clear expectation for how quickly a decision is made once inputs are complete — e.g., **same-day for routine backlog changes** such as re-ordering tickets (what to do first/next), swapping one similar-effort item because a dependency is blocked, or moving a low-priority item to a later sprint/release; and longer lead time for higher-risk decisions that require reviews/approvals (e.g., integration changes, security/privacy gates or go/no-go).
 
   - **How decisions are documented:**  
     A lightweight decision log so the “why” is not lost:  
@@ -234,7 +234,12 @@ Practical examples of what I track:
   - **When escalation is triggered:**  
     - changes that affect timeline/cost materially, or introduce new dependencies  
     - anything with privacy/security impact (sensitive data, permissions, retention, access control)  
-    - regulated or safety-relevant claims, especially where AI outputs are involved  
+    - **regulated or safety-relevant claims (especially with AI):** any feature, wording, chart, or workflow that could be interpreted as *medical/clinical advice, diagnosis, treatment guidance, or risk scoring* — or that could change how a user acts (e.g., “high blood pressure”, “arrhythmia detected”, “stress level is clinically high”). This includes:  
+      - adding/updating **AI-derived outputs** (new metrics, thresholds, labels, or “normal/abnormal” ranges)  
+      - changing **how results are presented** (language, icons/colors, alerts, recommendations, call-to-action)  
+      - any **marketing/app-store copy** that strengthens claims (“validated”, “clinically proven”, “detects”, “diagnoses”)  
+      - changes that affect **provenance and transparency** (AI vs device vs manual), or could confuse the source of a measurement  
+      - anything that may require **additional evidence/validation, review, or sign-off** (e.g., clinical validation dossier updates, legal/compliance review)  
     - repeated test failures, high-severity defects, or integration instability near release  
     - unclear ownership, blocked teams, or vendor delays that threaten milestones  
   - **Escalation path:** who is notified first, who must approve next, and what “stop / proceed” rules apply (e.g., pause release until risks are accepted or mitigations are in place).
