@@ -29,7 +29,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
 - **Business Requirements Document (BRD)**  
   The business goals, scope boundaries, stakeholders, success criteria, and constraints (time/cost/risk/regulatory).
 - **Functional Requirements Document (FRD)** (or equivalent specification)  
-  What the system must do: workflows, screens, integrations, data handling rules, error handling, and acceptance criteria.
+  What the system must do: workflows, screens, integrations, data handling rules, error handling, and business rules.
 - **User stories / use cases + acceptance criteria**  
   “What good looks like” in a testable way — covering the normal (“happy path”) flow *and* realistic “non-happy path” scenarios (invalid inputs, permission denied, offline/timeout, device disconnect, integration errors), plus key edge cases.
 - **Non-functional requirements (NFRs)**  
