@@ -478,7 +478,7 @@ AI features still need **accountability**: who owns decisions, who reviews issue
     - AI feature requirements and claims
     - **AI release decisions:** who approves shipping a new model/SDK version (or changing thresholds/output mapping), based on evidence, risk review, and confirmed device/OS compatibility
     - safety and risk decisions
-    - user support flows when AI is involved
+    - **AI-related user support and escalation:** how users report AI issues, what information support collects (without unnecessary sensitive data), how cases are triaged, and when/ how they are escalated to product/engineering or vendors
 
 - **Escalation triggers (examples)**
   - Repeated user reports of incorrect/unsafe outputs
