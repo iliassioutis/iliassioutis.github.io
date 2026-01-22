@@ -94,13 +94,18 @@ How this shows up in my work (example patterns):
 These artifacts reduce production risk and make go-live predictable.
 
 - **Release plan**  
-  Environments (development/test/staging/production), deployment steps, verification checklist, and rollback plan.
+  How we move changes safely into production: target environments (development / test / staging / production), the deployment sequence and responsibilities, **post-deployment validation steps** (a short set of checks to confirm the release is working as intended), and a clear rollback plan if something goes wrong.  
+  *Post-deployment validation typically includes:* service/app availability, key user flows working, integrations responding, monitoring/alerts green, and any critical data or background jobs behaving normally.
 - **Go-live runbook**  
-  Who does what, in what order, with verification steps and decision points.
+  A step-by-step “day-of-release” playbook that defines **who does what, in what order**, including timing, communications, and clear **checkpoints** to confirm each stage is working (for example: deployment completed, key services responding, critical user flows pass, integrations healthy, monitoring shows no spikes). It also defines **decision points** (continue / pause / rollback) and who has the authority to make those calls.
 - **Monitoring and alerting plan**  
   Key signals to watch (availability, error rates, performance, integration failures, data pipeline health).
 - **Hypercare plan**  
-  Stabilization window, triage process, escalation paths, and success criteria for “steady state”.
+  A defined post-release **stabilization period** (for example, the first 24–72 hours or first 1–2 weeks) where the team actively watches the system and responds quickly to issues. It specifies:  
+  - **What we monitor:** key dashboards/alerts, error rates, performance, and critical user journeys.  
+  - **How issues are handled:** a triage process (log → classify severity/impact → assign owner → target fix/mitigation).  
+  - **Who gets involved and when:** clear escalation paths (support → engineering → product/operations → vendors) and on-call/availability expectations.  
+  - **What “stable” means:** measurable success criteria for reaching “steady state” (e.g., no critical incidents, error rates back to baseline, support tickets within normal levels, and agreed KPIs holding consistently).
 
 How this shows up in my work (example patterns):
 - Using a structured **go/no-go release decision** with explicit criteria (feature complete, test complete, risks accepted/mitigated).
