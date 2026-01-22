@@ -274,11 +274,13 @@ Change control is how I keep delivery predictable when new requests appear, prio
   - **Quality impact:** additional test coverage needed; **regression risk (the chance that a change breaks something that previously worked — often in related flows, shared components, or integrations)**; and any effect on the **Definition of Done** (what “complete” means, including required quality checks and evidence)  
   - **Operational impact:** monitoring/alerts, runbooks, support load, on-call/escalation readiness  
   - **Security & privacy impact (when applicable):** permissions, data classification, encryption, access controls, retention/deletion, and **sub-processors (third-party service providers we rely on to process data on our behalf — e.g., hosting, analytics, notifications — which must be assessed and controlled via contracts, access boundaries, and data-transfer safeguards)**  
-  - **Risk assessment:** what can go wrong, likelihood/impact, mitigation plan, and **residual risk (the risk that remains even after mitigations are in place)**.  
-    - *Example:* We encrypt data at rest and in transit, but there is still a small residual risk of credential compromise (e.g., a user’s device is stolen or a token is leaked).  
+  - **Risk assessment:** what can go wrong, likelihood/impact, mitigation plan, and **residual risk (the risk that remains even after mitigations are in place)**  
     - *Example:* We add retries, timeouts, and monitoring for an external API, but there is still residual risk of provider downtime during peak hours that could delay workflows.  
-    - *Example:* We tighten input validation and add test coverage, but there is residual risk of an edge-case bug in a rarely used workflow that may only appear in real-world usage  
-  - **Options and trade-offs:** at least one alternative (e.g., defer to next release, phased rollout, limited scope version)
+    - *Example:* We tighten input validation and add test coverage, but there is residual risk of an edge-case bug in a rarely used workflow that may only appear in real-world usage.  
+  - **Options and trade-offs:** present a few realistic choices, and for each one explain the benefits, downsides, risks, and impact on timeline/quality — for example:  
+    - **Defer to next release:** keeps the current release plan stable and lowers near-term risk, but delays user value and may require extra coordination later.  
+    - **Phased rollout (gradual release):** deliver the change in controlled steps (e.g., enable for internal testers → a small pilot group → a percentage of users → everyone), so issues are detected early and can be contained or rolled back without affecting all users at once.  
+    - **Limited-scope version (“minimum viable” slice):** ship only the essential part now (core workflow + safety checks), and postpone non-critical enhancements to a later iteration to meet deadlines with lower risk.
 
 - **Decision and approval (the “go / no-go”)**  
   A clear decision path so the team can move fast without confusion:  
