@@ -155,7 +155,18 @@ Practical examples of what I track:
 
 ### Ownership and decision-making
 - **RACI (Responsible, Accountable, Consulted, Informed)**  
-  Clarifies who owns delivery outcomes and who must be consulted or informed.
+  A simple responsibility map that makes ownership explicit and prevents “everyone thought someone else was doing it”:  
+  - **Responsible (R):** the person/team doing the work (builds, writes, executes, fixes).  
+  - **Accountable (A):** the single owner who signs off and is answerable for the outcome (one “A” per deliverable).  
+  - **Consulted (C):** subject-matter experts who provide input before decisions are finalized (two-way communication).  
+  - **Informed (I):** stakeholders who need updates after decisions or milestones (one-way communication).  
+  - **Where I use it most:** requirements sign-off, solution design/architecture, security & privacy reviews, test ownership (SIT/UAT), release readiness/go-live, vendor deliverables, and support handover.  
+  - **How it helps in practice:**  
+    - avoids duplicated effort (two teams doing the same thing)  
+    - avoids gaps (no one assigned to a critical task)  
+    - speeds decisions (clear approver)  
+    - clarifies cross-team dependencies (who must be involved, and when)  
+  - **Example deliverables to map (illustrative):** requirements/specification, integration contract, test plan & evidence, release checklist, runbook, post-release hypercare ownership.
 - **Decision paths**  
   How decisions are made and recorded, so the team can move fast without confusion — and so approvals are clear when governance is required:  
   - **What decisions exist:** scope and priority changes, architecture/integration choices, security & privacy gates, release readiness, incident response actions.  
