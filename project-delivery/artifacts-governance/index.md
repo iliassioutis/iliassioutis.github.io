@@ -255,14 +255,14 @@ Change control is how I keep delivery predictable when new requests appear, prio
   - Changes to integrations (new third-party API requirements, SDK version changes, new device models)  
   - Security/privacy changes (new data collected, new permissions, retention/deletion changes)  
   - Quality-driven changes (fixing a defect properly vs applying a quick workaround)  
-  - Delivery constraints (timeline pressure, dependency delays, vendor availability, app-store review findings)
+  - Delivery constraints (timeline pressure, blocked prerequisites — e.g., a third-party API/SDK or device firmware update arriving late, a test environment not ready, or a vendor sandbox being unavailable — plus app-store review findings)
 
 - **Change request (the “what” and “why”)**  
   A short, structured record that makes the change unambiguous:  
   - **What is changing:** feature/functionality, workflow, requirement, integration, UI/UX, data handling, or operational process  
-  - **Why now:** business value, user impact, compliance requirement, defect/incident, dependency constraint  
+  - **Why now:** business value, user impact, compliance requirement, defect/incident response, or a **dependency constraint** (e.g., a third-party provider is deprecating an API on a fixed date, a device/SDK update is required to support a new OS release, or an app-store policy change forces an update before the next submission window)  
   - **Who requested it:** requestor + accountable owner  
-  - **Priority and deadline:** must-have vs should-have; any external dates (release window, partner readiness)  
+  - **Priority and timing:** what is **non-negotiable** vs what can **wait** (must-have vs should-have), and any **hard external dates** we must align to (e.g., an agreed release window, an app-store review timeline, or a partner/vendor go-live date when their side is ready)  
   - **Scope boundaries:** what is included **and what is explicitly not included** (to avoid “hidden extras”)  
   - **Acceptance criteria:** how we will confirm the change is done and correct (including edge cases/non-happy paths)
 
@@ -271,10 +271,13 @@ Change control is how I keep delivery predictable when new requests appear, prio
   - **Schedule impact:** what moves, what slips, what can be parallelized; effect on milestones/release date  
   - **Cost/effort impact:** engineering effort, testing effort, vendor effort, and any extra tools/licenses  
   - **Dependency impact:** new/changed dependencies (vendors, APIs, SDKs, devices, app-store review, environments)  
-  - **Quality impact:** additional test coverage needed; regression risk; effect on “Definition of Done”  
+  - **Quality impact:** additional test coverage needed; **regression risk (the chance that a change breaks something that previously worked — often in related flows, shared components, or integrations)**; and any effect on the **Definition of Done** (what “complete” means, including required quality checks and evidence)  
   - **Operational impact:** monitoring/alerts, runbooks, support load, on-call/escalation readiness  
-  - **Security & privacy impact (when applicable):** permissions, data classification, encryption, access controls, retention/deletion, sub-processors  
-  - **Risk assessment:** what can go wrong, likelihood/impact, mitigation plan, and residual risk  
+  - **Security & privacy impact (when applicable):** permissions, data classification, encryption, access controls, retention/deletion, and **sub-processors (third-party service providers we rely on to process data on our behalf — e.g., hosting, analytics, notifications — which must be assessed and controlled via contracts, access boundaries, and data-transfer safeguards)**  
+  - **Risk assessment:** what can go wrong, likelihood/impact, mitigation plan, and **residual risk (the risk that remains even after mitigations are in place)**.  
+    - *Example:* We encrypt data at rest and in transit, but there is still a small residual risk of credential compromise (e.g., a user’s device is stolen or a token is leaked).  
+    - *Example:* We add retries, timeouts, and monitoring for an external API, but there is still residual risk of provider downtime during peak hours that could delay workflows.  
+    - *Example:* We tighten input validation and add test coverage, but there is residual risk of an edge-case bug in a rarely used workflow that may only appear in real-world usage  
   - **Options and trade-offs:** at least one alternative (e.g., defer to next release, phased rollout, limited scope version)
 
 - **Decision and approval (the “go / no-go”)**  
