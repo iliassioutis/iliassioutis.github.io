@@ -544,7 +544,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 
   - **Results summary and limitations (what the evidence shows)**  
     - Key findings in plain language (what performs well, what degrades)  
-    - Known failure modes and “cannot estimate” triggers  
+    - **Known failure modes and “cannot estimate” rules:** clear, documented cases where the AI should *not* show a number and should instead display “Cannot estimate right now” with guidance — for example: poor lighting, excessive motion, incorrect positioning, short/interrupting capture, missing permissions, device/OS incompatibility, or technical errors/timeouts  
     - Clear boundaries of applicability (when results may not be reliable)
 
   - **Risk analysis and mitigations (what could go wrong and how you reduce it)**  
@@ -555,13 +555,16 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
   - **Statement-to-evidence mapping (in-app statements only)**  
     A compact table linking each **in-app AI statement/output meaning** to the evidence that supports it, so wording stays aligned with what’s validated:  
     - **In-app statement/output meaning:** the exact wording shown *inside the app* (screens, charts, tooltips/help text, onboarding) and what it is intended to mean  
-    - **Evidence reference:** which test/validation artifact supports it (protocol + result summary + versions covered)  
+    - **Evidence reference:** a pointer to the specific validation material that supports the statement — i.e.,  
+      - **How it was checked:** the test setup and procedure used (what was compared, under what conditions).  
+      - **What the outcome was:** a short, plain-language summary of results (e.g., “within the agreed accuracy range” / “reliable under these conditions” / “fails under these conditions”).  
+      - **What versions it applies to:** the exact app / AI SDK (and, if relevant, model) version(s) and the device/operating system ranges included in that validation (so it’s clear what the evidence covers).
     - **Coverage conditions:** devices/OS/app/SDK versions and capture conditions the evidence applies to  
     - **Limits/exclusions:** when it may not apply (low light, motion, unsupported devices/OS, out-of-scope users), plus known failure modes  
     - **Product controls:** how the app enforces safe interpretation (provenance labels AI vs device vs manual, “cannot estimate” behavior, guidance messages, disclaimer placement)
 
   - **Version and configuration record (what exactly is being shipped)**  
-    App version, AI SDK/model version (where applicable), supported device/OS coverage, configuration assumptions, and any feature-flag behavior that affects exposure/rollout.
+    App version, AI SDK/model version (where applicable), supported device/OS coverage, key configuration assumptions, and **any “feature toggle” settings** (switches that turn the AI feature on/off or limit it to certain users/devices/environments) — so it’s clear **who will see the feature, when it becomes available, and how it will be rolled out or disabled if needed**.
 
   - **Release readiness sign-off for AI-related changes (what was checked before shipping)**  
     A checklist confirming: claims boundaries and wording reviewed; provenance labels verified; “cannot estimate” behavior tested; validation evidence still applicable (or updated); limitations documented; monitoring/support guidance updated.
