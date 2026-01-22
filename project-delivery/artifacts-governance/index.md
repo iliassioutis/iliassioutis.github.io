@@ -451,7 +451,7 @@ Users and reviewers must be able to tell **what produced an output** and **how i
     - device model for device readings
     - timestamp
     - measurement mode (AI/device/manual)
-    - optional quality indicator if your system supports it (e.g., “signal quality low”)
+    - Optional quality indicator (if supported): a simple flag that helps users interpret reliability (e.g., “Low signal quality — result may be less accurate”)
 
 - **Explain the “why” at a user level**
   - Provide a short “How this works” explanation that is honest and understandable.
