@@ -430,7 +430,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
 
 - **Claims / classification boundary record (make the “line” explicit)**
   - Keep a short decision note that states how the feature is positioned (e.g., **wellness/informational** vs **medical**), and why.
-  - Capture what language and UI patterns are allowed vs not allowed (so the interface does not accidentally imply a medical/diagnostic claim):
+  - Capture what language and user interface (UI) patterns are allowed vs not allowed (so the interface does not accidentally imply a medical/diagnostic claim):
     - Allowed: “estimate”, “wellness”, “trend”, “informational feedback”
     - Not allowed (unless you truly have the required classification/approvals/evidence): “diagnosis”, “detects”, “treats”, “clinical risk”, “normal/abnormal”, urgent alerts
   - Define what changes trigger a mandatory re-assessment before release:
@@ -438,14 +438,14 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
     - new alerts, recommendations, or call-to-action that could change user behavior
     - new input data types (new sensors/device feeds/user-entered fields/uploads)
     - storage/sync changes for AI outputs (e.g., session-only → saved history)
-    - UI/wording changes that strengthen the impression of medical capability
+    - UI and wording changes that strengthen the impression of medical capability
 
 - **Comprehension checks (do users understand it correctly?)**
   - Do a quick usability check (even with a small number of users/testers) to confirm:
     - users understand “AI estimate” vs “device measurement” vs “manual entry”
     - users do not interpret the output as diagnosis, medical advice, or an emergency detector
     - provenance labels are noticed and understood (AI/device/manual)
-    - disclaimers and “cannot estimate” messages are seen at the right moments and reduce confusion
+    - disclaimers and “Cannot estimate” messages are seen at the right moments and reduce confusion
   - If users misinterpret the output, adjust the wording and UI (not just the disclaimer) until interpretation matches the intended use.
 
 - **Align user-facing text to evidence**
@@ -560,7 +560,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
         - Document any known limitations clearly, and avoid wording or UI patterns that suggest the result is equally reliable for everyone under all conditions.
  
 - **Evidence package (what you keep)**  
-  A structured “evidence dossier” that makes AI features **reviewable, defensible, and consistent** across product, quality assurance (QA), support, and (where relevant) app-store review. Typical contents:
+  A structured “evidence dossier” that makes AI features **reviewable, defensible, and consistent** across product, quality assurance (QA — testing), support, and (where relevant) app-store review. Typical contents:
 
   - **Intended use and boundaries (what it is / is not)**  
     A short statement of purpose and limits — e.g., “wellness estimate / informational feedback” and explicit non-use (not diagnosis, not treatment guidance, not emergency detection).
@@ -589,7 +589,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 
   - **Results summary and limitations (what the evidence shows)**  
     - Key findings in plain language (what performs well, what degrades)  
-    - **Known failure modes and “cannot estimate” rules:** clear, documented cases where the AI should *not* show a number and should instead display “Cannot estimate right now” with guidance — for example: poor lighting, excessive motion, incorrect positioning, short/interrupting capture, missing permissions, device/OS incompatibility, or technical errors/timeouts  
+    - **Known failure modes and “Cannot estimate” rules:** clear, documented cases where the AI should *not* show a number and should instead display “Cannot estimate right now” with guidance — for example: poor lighting, excessive motion, incorrect positioning, short/interrupting capture, missing permissions, device/OS incompatibility, or technical errors/timeouts  
     - Clear boundaries of applicability (when results may not be reliable)
 
   - **Risk analysis and mitigations (what could go wrong and how you reduce it)**  
@@ -609,7 +609,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - **Product controls:** how the app enforces safe interpretation (provenance labels AI vs device vs manual, “cannot estimate” behavior, guidance messages, disclaimer placement)
 
   - **Version and configuration record (what exactly is being shipped)**  
-    App version, AI SDK/model version (where applicable), supported device/OS coverage, key configuration assumptions, and **any “feature toggle” settings** (switches that turn the AI feature on/off or limit it to certain users/devices/environments) — so it’s clear **who will see the feature, when it becomes available, and how it will be rolled out or disabled if needed**.
+    App version, AI SDK/model version (where applicable), supported device/OS coverage, key configuration assumptions, and **any feature toggle (feature flag) settings** (switches that turn the AI feature on/off or limit it to certain users/devices/environments) — so it’s clear **who will see the feature, when it becomes available, and how it will be rolled out or disabled if needed**.
 
   - **Release readiness sign-off for AI-related changes (what was checked before shipping)**  
     A checklist confirming: claims boundaries and wording reviewed; provenance labels verified; “cannot estimate” behavior tested; validation evidence still applicable (or updated); limitations documented; monitoring/support guidance updated.
@@ -632,7 +632,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - **Preprocessing / quality filters and “cannot estimate” rules:** the checks the system applies *before* producing an AI result, so it only outputs a number when the input is good enough.  
       - **Preprocessing:** basic preparation steps on the input signal (e.g., stabilizing the capture, removing obvious noise, normalizing input conditions) so the AI receives data in the expected format.  
       - **Quality filters:** rules that detect low-quality conditions (e.g., too much motion, poor lighting, weak/unstable signal, missing frames) and prevent unreliable outputs.  
-      - **“Cannot estimate” rules:** explicit thresholds that trigger a safe outcome (“cannot estimate right now”) instead of showing a potentially misleading value, along with a clear user message on how to retry (e.g., hold still, improve lighting, reposition camera, retry after device reconnect).  
+      - **“Cannot estimate” rules:** explicit thresholds that trigger a safe outcome (“Cannot estimate right now”) instead of showing a potentially misleading value, along with a clear user message on how to retry (e.g., hold still, improve lighting, reposition camera, retry after device reconnect).  
     - user experience (UX) changes that alter interpretation (wording, colors/icons, alerts, call-to-action)
     - provenance labeling and any storage/sync behavior changes for AI outputs
   - Require explicit review/sign-off when changes could affect user interpretation, claims, or evidence validity.
