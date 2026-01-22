@@ -305,14 +305,36 @@ Change control is how I keep delivery predictable when new requests appear, prio
 ---
 
 ### Quality gates
-Quality gates are explicit readiness checks before SIT, UAT, and production release.
 
-Typical gates I use:
-- Requirements readiness (clear acceptance criteria and testability)
-- Security/privacy readiness (data handling agreed, controls verified)
-- SIT readiness (stable builds, integration dependencies available)
-- UAT readiness (scope confirmed, evidence expectations defined)
-- Release readiness (go/no-go criteria met, rollback plan in place)
+Quality gates are **planned “pause-and-check” points** that confirm we are genuinely ready to move to the next stage (testing or release).  
+They prevent surprises late in delivery by making readiness **explicit, evidence-based, and agreed** — especially important when multiple systems, vendors, or regulated data are involved.
+
+Below are the typical gates I use, what they check, and what “ready” looks like.
+
+- **Requirements readiness (before build or before serious testing starts)**  
+  Ensures the team is building the *right* thing and can prove it works.  
+  - **What it checks:** scope is clear; workflows are understood; acceptance criteria exist for each key item; edge cases and error behaviour are defined; non-functional expectations are known (security, performance, audit needs).  
+  - **What “ready” looks like:** no critical open questions; key decisions recorded; requirements are testable (someone can write test cases directly from them).
+
+- **Security & privacy readiness (before integration testing and before release)**  
+  Ensures data handling is correct and safe, and that access and retention rules are implemented.  
+  - **What it checks:** what data is collected and why; permissions/consents; encryption in transit/at rest; access control roles; retention and deletion rules; logging/audit needs; third parties/sub-processors are known and approved where applicable.  
+  - **What “ready” looks like:** the agreed controls are implemented and reviewed; privacy/security risks are recorded with mitigations; any required approvals are completed.
+
+- **System Integration Testing readiness (SIT readiness) (before SIT begins)**  
+  Ensures the integrated “end-to-end” system can be tested without constant blockers.  
+  - **What it checks:** stable build(s) available; test environment is working; integrations are reachable; required credentials/certificates are in place; test accounts and test data exist; key dependencies (internal and third-party) are available.  
+  - **What “ready” looks like:** the end-to-end flow can be exercised; known dependency constraints are documented; owners are available to support integration testing.
+
+- **User Acceptance Testing readiness (UAT readiness) (before UAT begins)**  
+  Ensures UAT is focused, realistic, and produces a clear decision (accept / fix / defer).  
+  - **What it checks:** UAT scope and scenarios are defined; who will test is agreed; what evidence is needed is clear (screenshots, logs, test notes); entry/exit criteria are defined; sign-off rules are agreed (who approves and what “pass” means).  
+  - **What “ready” looks like:** users/testers can run the intended workflows; defects and feedback can be logged and triaged; acceptance decision criteria are unambiguous.
+
+- **Release readiness (go/no-go) (before production release)**  
+  Ensures the system is safe to release and can be supported after release.  
+  - **What it checks:** required testing is complete; critical defects are resolved or formally accepted with mitigations; monitoring/alerts are configured; support handover is complete; rollout steps are documented; rollback plan is tested/credible; communications are ready.  
+  - **What “ready” looks like:** a structured **go/no-go** decision can be made with confidence, based on evidence and agreed criteria — not guesswork.
 
 ---
 
