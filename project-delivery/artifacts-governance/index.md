@@ -79,7 +79,8 @@ This is how I make quality measurable and defensible (not just “we tested it�
   Cross-component validation of the full system working together (client apps, backend services, third-party services, and external integrations) — focusing on end-to-end journeys, data integrity across boundaries, security/permission behavior, and failure handling.
   Defines scope and environments, required test data/accounts, responsibilities, test scenarios (including edge and failure cases), evidence to capture, and clear entry/exit criteria (e.g., environments stable, integrations reachable, critical journeys pass, defect thresholds met, and agreed sign-offs completed).
 - **User Acceptance Testing (UAT)** plan  
-  Business/clinical/user workflows validated with clear acceptance criteria and sign-off rules.
+  Structured validation that the solution meets real user and business needs in realistic workflows (end-to-end scenarios, including exceptions), using clear acceptance criteria and agreed sign-off rules.  
+  Defines who participates (business users, clinicians, operations), what is in/out of scope, the test environment and data setup, how issues are logged and triaged, pass/fail thresholds, and the final approval process (including any required evidence or documentation).
 - **Test evidence** (when appropriate)  
   What is captured and where (test cases, results, defect logs, screenshots/logs, summaries).
 
