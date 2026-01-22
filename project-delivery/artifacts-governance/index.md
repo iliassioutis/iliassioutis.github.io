@@ -136,7 +136,15 @@ How this shows up in my work (example patterns):
   - **Planned response:** what we will do to reduce likelihood, reduce impact, or remove the blocker (actions + due dates)  
   - **Decision points:** what needs approval/confirmation, and by when
 - **Dependency mapping**  
-  External services, vendor components, mobile OS constraints, device compatibility boundaries, and integration windows.
+  A clear view of everything the delivery relies on (and what depends on us), so surprises don’t land late in testing or release:  
+  - **External services & APIs:** third-party endpoints, rate limits, auth flows, SLA expectations, and change-notification channels.  
+  - **Vendor components & SDKs:** version constraints, licensing/usage terms, upgrade cadence, and “known limitations” that affect scope.  
+  - **Platform constraints:** mobile operating system (OS) versions, app-store rules, device permissions, and background/foreground behavior.  
+  - **Device compatibility boundaries:** supported device models/firmware ranges, Bluetooth profiles, SDK/device pairing steps, and explicit “not supported” cases.  
+  - **Data & infrastructure dependencies:** environments, certificates/keys, feature flags, messaging/queues, and data pipeline readiness (where applicable).  
+  - **Integration sequencing:** which integrations must be ready first, shared test windows, and who provides test accounts/data.  
+  - **Operational dependencies:** support coverage, monitoring/alerting readiness, and escalation contacts for third parties during go-live.  
+  - **Release coupling:** anything that must ship together (mobile + backend + web), plus rollout order and backward/forward compatibility assumptions.
 
 Practical examples of what I track:
 - Integration dependencies (third-party services, identity providers, analytics/crash reporting tools).
