@@ -400,29 +400,243 @@ Where privacy risk could be high, I use a DPIA-style approach to make sure risks
 
 ## AI governance (when AI is involved)
 
-When AI is part of the product, governance is about *claims*, *transparency*, *boundaries*, and *evidence*.
+When AI is part of the product, governance is about **claims**, **clarity**, **boundaries**, **evidence**, and **operational control** — so the feature is safe, understandable, and defensible (including during app-store review and in real-world use).
+
+The goal is simple: **users are not misled**, **outputs are interpretable**, **risks are controlled**, and **there is evidence for what is claimed**.
+
+---
 
 ### 1) Claims boundaries and user-facing clarity
-- Define what the AI feature does and does not do
-- Ensure user-facing text and outputs stay within validated claims
-- Include appropriate disclaimers when needed (e.g., not diagnostic / not medical advice)
+
+AI governance starts with **what we claim** (and what we explicitly do *not* claim).
+
+- **Define the intended use**
+  - What the feature is designed to help with (e.g., “wellness estimate”, “trend visualization”, “informational feedback”).
+  - Who it is intended for (general audience vs specific population if applicable).
+  - The context of use (home use, wellness tracking, not emergency use).
+
+- **Define the non-intended use (hard boundaries)**
+  - Explicitly state what it is *not*: not diagnosis, not treatment recommendation, not emergency detection, not a replacement for clinical judgement.
+  - Make sure the product experience does not “imply” medical capability indirectly (tone, icons, wording, thresholds, risk flags, “normal/abnormal” language).
+
+- **Align user-facing text to evidence**
+  - Ensure all UI labels, help text, onboarding copy, notifications, and marketing wording stay within validated capability.
+  - Avoid medically loaded phrasing unless you have the appropriate classification, approvals, and supporting evidence.
+
+- **Use disclaimers correctly (as reinforcement, not a band-aid)**
+  - Use a clear disclaimer where needed (e.g., “for informational purposes”, “not medical advice”, “not diagnostic”).
+  - Ensure disclaimers appear at the right moments (onboarding, before first use, near the output, and in supporting information).
+  - Disclaimers do not replace correct claims: the core experience must still be consistent with the boundaries.
+
+- **Define output meaning**
+  - What the output represents (estimate, indicator, range, confidence band where used).
+  - What users should do with it (e.g., “use as a personal reference”, “consider trends”, “seek professional advice if concerned”).
+  - What users should *not* do with it (e.g., “do not use for acute decisions”).
+
+---
 
 ### 2) Provenance and transparency
-- Make it clear what produced each output (e.g., AI estimate vs device reading vs manual entry)
-- Where relevant, preserve provenance in history and audits (source labels and device metadata)
+
+Users and reviewers must be able to tell **what produced an output** and **how it should be interpreted**.
+
+- **Source labeling (provenance)**
+  - Clearly label whether each value comes from:
+    - AI estimate (model output)
+    - Connected device reading (with device model, when relevant)
+    - Manual entry
+  - If multiple sources exist in the same timeline/history, keep them visually and logically distinguishable.
+
+- **Metadata that supports interpretation**
+  - When appropriate, store or display non-sensitive metadata that clarifies the measurement context:
+    - device model for device readings
+    - timestamp
+    - measurement mode (AI/device/manual)
+    - optional quality indicator if your system supports it (e.g., “signal quality low”)
+
+- **Explain the “why” at a user level**
+  - Provide a short “How this works” explanation that is honest and understandable.
+  - If certain conditions reduce accuracy (lighting, motion, camera position, device compatibility), make those constraints visible.
+
+- **Avoid black-box behavior**
+  - If the output can fail or be unreliable under certain conditions, show an actionable message instead of a misleading number.
+  - Prefer “cannot estimate right now” + guidance, rather than silently outputting low-quality results.
+
+- **Audit-friendly history (where applicable)**
+  - Where you store history, ensure provenance is retained for later review:
+    - “This value was AI/device/manual”
+    - “This device model produced the value”
+  - Where you do not store history (session-only designs), ensure the UI still communicates provenance at the moment of use.
+
+---
 
 ### 3) Human oversight and escalation paths
-- Define who reviews issues, what triggers escalation, and how decisions are made
-- Ensure edge cases and risk scenarios have clear handling (including user support flows)
+
+AI features still need **accountability**: who owns decisions, who reviews issues, and what triggers escalation.
+
+- **Named ownership**
+  - Define who owns:
+    - AI feature requirements and claims
+    - model/version release decisions
+    - safety and risk decisions
+    - user support flows when AI is involved
+
+- **Escalation triggers (examples)**
+  - Repeated user reports of incorrect/unsafe outputs
+  - A pattern of failures for a device/OS version or a specific scenario
+  - Any incident that could cause harm (misinterpretation, misleading UI, improper claims)
+  - Any change that expands claims or introduces new data types
+
+- **Operational handling for edge cases**
+  - Define what happens when:
+    - the signal quality is poor
+    - the user environment is unsuitable (e.g., low light, motion)
+    - the device integration is unstable
+    - the output is out-of-range or inconsistent
+  - Ensure the system response is safe:
+    - explain the limitation
+    - give corrective steps
+    - avoid presenting a “confident” number when confidence is not justified
+
+- **User support flows**
+  - Provide clear user pathways:
+    - how to report an issue
+    - what information is needed (without collecting unnecessary sensitive data)
+    - how support triages AI-related issues
+  - Maintain guidance for support teams:
+    - how to interpret provenance labels
+    - how to identify known limitations
+    - when to escalate to product/engineering
+
+---
 
 ### 4) Validation and evidence artifacts
-- Maintain validation artifacts appropriate to the domain and claims
-- Keep analysis reproducible where possible (scripts, datasets structure, methods summaries)
-- Document limitations and known constraints (performance boundaries, device/OS constraints)
+
+App stores (and regulated contexts) care deeply about whether AI claims are supported. Governance requires **evidence that matches the claim**.
+
+- **Validation plan aligned to claims**
+  - Validate what you actually claim (not what you wish the model could do).
+  - Define:
+    - success metrics (accuracy, agreement, reliability, failure rate)
+    - acceptance thresholds (what counts as “good enough”)
+    - test conditions (lighting, motion, device/OS range, population boundaries where relevant)
+
+- **Evidence package (what you keep)**
+  - A structured “evidence dossier” can include:
+    - intended use and boundaries
+    - description of outputs and user guidance
+    - testing/validation protocol (what was tested, how, by whom)
+    - summary results and limitations
+    - risk analysis and mitigations
+    - version information (app version, model version, device/OS coverage)
+    - release readiness sign-off for AI-related changes
+
+- **Reproducibility where possible**
+  - Maintain reproducible analysis artifacts:
+    - scripts/notebooks (or analysis pipeline)
+    - dataset structure and definitions (even if the raw dataset is not public)
+    - methods summary (metrics used, aggregation rules)
+    - how charts/tables were produced
+  - Keep a clear separation between:
+    - development experiments
+    - validation evidence used for claims
+
+- **Limitations and constraints (make them explicit)**
+  - Document:
+    - performance boundaries (when results degrade)
+    - supported device/OS boundaries
+    - known failure modes
+    - excluded scenarios (what you do not support)
+  - Ensure these constraints appear consistently across:
+    - internal documentation
+    - user-facing help text
+    - release notes where relevant
+
+- **Change control for AI**
+  - Treat AI changes as “claim-sensitive” changes:
+    - model version changes
+    - thresholds and output mapping changes
+    - preprocessing/quality filters
+    - UX changes that alter interpretation
+  - Require explicit review/sign-off when such changes could affect user interpretation or claims.
+
+---
 
 ### 5) Monitoring and drift awareness
-- Track stability and quality signals (error rates, failure modes, data quality issues)
-- Where applicable, define what “drift” looks like and how it is detected/responded to
+
+Even if AI runs on-device and does not continuously learn, governance still requires **stability monitoring**: does it keep behaving as expected across versions, devices, and environments?
+
+- **Define what “healthy” looks like**
+  - Operational metrics that show the AI feature is functioning:
+    - failure rate (cannot estimate / errors)
+    - latency (time to produce output)
+    - crash/error patterns related to AI module
+    - device/OS-specific issue rates
+
+- **Monitor quality signals (when feasible)**
+  - Track indicators that correlate with degraded quality:
+    - low signal quality frequency
+    - repeated retries/timeouts
+    - environment-related failures (e.g., low-light detection if present)
+  - Use monitoring to drive product decisions:
+    - improve guidance
+    - adjust quality gates
+    - refine supported device boundaries
+
+- **Define “drift” in practical terms**
+  - Drift does not only mean “model weights changed”.
+  - In real products, drift can mean:
+    - different device cameras/sensors behave differently
+    - OS updates change camera pipelines/permissions
+    - new devices introduce new performance patterns
+    - UX changes alter how users capture input (which affects results)
+  - Governance means being able to detect these shifts and respond.
+
+- **Response playbook**
+  - Define what happens when monitoring signals degrade:
+    - triage and root-cause analysis
+    - containment (feature flag off / limit rollout / restrict devices)
+    - fix and re-validation scope
+    - communication (release notes, support guidance)
+
+---
+
+### 6) Privacy and data-handling rules for AI features (often missed, but critical)
+
+AI governance must include clear rules on **what data is processed, stored, or shared**.
+
+- **Data minimization**
+  - Collect/process only what is needed to provide the feature.
+  - Avoid storing camera media unless strictly necessary (and if so, document purpose, retention, access, and user controls).
+
+- **On-device processing clarity**
+  - If processing happens on-device, state it clearly in user-facing terms.
+  - Clarify what is and is not transmitted to backend systems.
+
+- **Retention and deletion**
+  - Define retention for AI outputs (if stored):
+    - what is stored (numeric results vs raw media)
+    - how long it is kept
+    - how the user deletes it (item-level and account-level)
+  - Ensure deletion behavior is consistent across devices if syncing exists.
+
+- **Third parties and sub-processors (when relevant)**
+  - Be explicit about which vendors may receive data and why (analytics, crash reporting, authentication).
+  - Ensure user-facing disclosures align with actual implementation.
+
+---
+
+### 7) Release readiness checklist for AI (practical)
+
+Before shipping AI-related changes, I treat these as minimum checks:
+
+- Claims and UI wording reviewed for boundary compliance
+- Provenance labels and user guidance verified
+- Supported device/OS boundaries confirmed (and documented)
+- Validation evidence updated (or confirmed still valid)
+- Known limitations clearly documented
+- Monitoring/alerting in place for AI-related failure modes
+- Rollback/containment plan exists (including feature flag strategy if used)
+- Support handover updated (known issues, troubleshooting steps, escalation triggers)
 
 ---
 
