@@ -184,25 +184,25 @@ Practical examples of what I track:
     - speeds decisions (clear approver)  
     - clarifies cross-team dependencies (who must be involved, and when)  
   - **Example deliverables to map (illustrative):**  
-  The idea is to make it clear *what we need*, *who provides it*, *when it’s due*, and *how we know it’s “done”*. Typical items include:
+    The idea is to make it clear *what we need*, *who provides it*, *when it’s due*, and *how we know it’s “done”*. Typical items include:
 
-  - **Requirements / specification (what we are building):**  
-    A clear description of the problem, scope, and expected behavior — e.g., user flows, key rules, constraints, and acceptance criteria (what must be true for this to be considered complete).
+    - **Requirements / specification (what we are building):**  
+      A clear description of the problem, scope, and expected behavior — e.g., user flows, key rules, constraints, and acceptance criteria (what must be true for this to be considered complete).
 
-  - **Integration contract (how systems talk to each other):**  
-    The “agreement” between systems — e.g., API endpoints, request/response formats, authentication method, error codes, timeouts, retry rules, and versioning (what happens if one side changes).
+    - **Integration contract (how systems talk to each other):**  
+      The “agreement” between systems — e.g., API endpoints, request/response formats, authentication method, error codes, timeouts, retry rules, and versioning (what happens if one side changes).
 
-  - **Test plan and test evidence (how we prove it works):**  
-    What will be tested, by whom, in which environment, using which data — plus proof of results (test cases executed, screenshots/logs, defect list, retest confirmation, and sign-off where required).
+    - **Test plan and test evidence (how we prove it works):**  
+      What will be tested, by whom, in which environment, using which data — plus proof of results (test cases executed, screenshots/logs, defect list, retest confirmation, and sign-off where required).
 
-  - **Release readiness checklist (how we know we’re safe to launch):**  
-    A short go-live checklist confirming prerequisites are met — e.g., deployments prepared, monitoring in place, known risks accepted, rollback plan ready, support contacts confirmed, and approvals completed.
+    - **Release readiness checklist (how we know we’re safe to launch):**  
+      A short go-live checklist confirming prerequisites are met — e.g., deployments prepared, monitoring in place, known risks accepted, rollback plan ready, support contacts confirmed, and approvals completed.
 
-  - **Go-live runbook (the step-by-step launch playbook):**  
-    A practical “do this in this order” guide — who performs each step, exact deployment actions, verification checks after each step, decision points (go/stop), and who to call if something fails.
+    - **Go-live runbook (the step-by-step launch playbook):**  
+      A practical “do this in this order” guide — who performs each step, exact deployment actions, verification checks after each step, decision points (go/stop), and who to call if something fails.
 
-  - **Post-release hypercare ownership (who supports after launch):**  
-    Clear ownership during the stabilization period — who monitors, who triages issues, response expectations, escalation paths (including vendors), daily check-ins if needed, and criteria for declaring the system “stable” and moving to normal operations.
+    - **Post-release hypercare ownership (who supports after launch):**  
+      Clear ownership during the stabilization period — who monitors, who triages issues, response expectations, escalation paths (including vendors), daily check-ins if needed, and criteria for declaring the system “stable” and moving to normal operations.
 
 - **Decision paths**  
   How decisions are made and recorded, so the team can move fast without confusion — and so approvals are clear when governance is required:  
