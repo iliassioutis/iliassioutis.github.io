@@ -138,8 +138,8 @@ How this shows up in my work (example patterns):
 - **Dependency mapping**  
   A clear view of everything the delivery relies on (and what depends on us), so surprises don’t land late in testing or release:  
   - **External services & APIs:** third-party endpoints, rate limits, authentication flows (login/token exchange), **service commitments (SLA — Service Level Agreement, e.g., uptime and support response expectations: how often the service is available and how quickly support responds when something breaks)**, and change-notification channels (how we learn about breaking changes).  
-  - **Vendor components & SDKs:** version constraints, licensing/usage terms, upgrade cadence, and known limitations that affect scope.  
-  - **Platform constraints:** mobile operating system (OS) versions, app-store rules, device permissions, and background/foreground behavior.  
+  - **Vendor components & software development kits (SDKs):** version constraints, licensing/usage terms, upgrade cadence, and known limitations that affect scope.  
+  - **Platform constraints:** mobile OS versions, app-store rules, device permissions, and background/foreground behavior.  
   - **Device compatibility boundaries:** supported device models/firmware ranges, Bluetooth profiles, SDK/device pairing steps, and explicit “not supported” cases.  
   - **Data & infrastructure dependencies:** environments (development/test/staging/production), certificates/keys (to secure connections), **feature flags (toggles that turn features on/off per environment or user group without a new release)**, **messaging/queues** (a reliable “inbox” between systems for requests/events that don’t happen instantly, so work can be retried safely and not lost during spikes or temporary outages), and data pipeline readiness (where applicable).  
   - **Integration sequencing:** which integrations must be ready first, **shared test windows (agreed time slots when multiple teams are available to test together)**, and who provides test accounts/data.  
@@ -259,7 +259,7 @@ Change control is how I keep delivery predictable when new requests appear, prio
 
 - **Change request (the “what” and “why”)**  
   A short, structured record that makes the change unambiguous:  
-  - **What is changing:** feature/functionality, workflow, requirement, integration, UI/UX, data handling, or operational process  
+  - **What is changing:** feature/functionality, workflow, requirement, integration, user interface (UI)/ user experience (UX), data handling, or operational process  
   - **Why now:** business value, user impact, compliance requirement, defect/incident response, or a **dependency constraint** (e.g., a third-party provider is deprecating an API on a fixed date, a device/SDK update is required to support a new OS release, or an app-store policy change forces an update before the next submission window)  
   - **Who requested it:** requestor + accountable owner  
   - **Priority and timing:** what is **non-negotiable** vs what can **wait** (must-have vs should-have), and any **hard external dates** we must align to (e.g., an agreed release window, an app-store review timeline, or a partner/vendor go-live date when their side is ready)  
@@ -425,8 +425,28 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
   - The context of use (home use, wellness tracking, not emergency use).
 
 - **Define the non-intended use (hard boundaries)**
-  - Explicitly state what it is *not*: not diagnosis, not treatment recommendation, not emergency detection, not a replacement for clinical judgement.
+  - Explicitly state what it is *not*: not diagnosis, not treatment recommendation, not emergency detection, not a replacement for clinical judgment.
   - Make sure the product experience does not “imply” medical capability indirectly (tone, icons, wording, thresholds, risk flags, “normal/abnormal” language).
+
+- **Claims / classification boundary record (make the “line” explicit)**
+  - Keep a short decision note that states how the feature is positioned (e.g., **wellness/informational** vs **medical**), and why.
+  - Capture what language and UI patterns are allowed vs not allowed (so the interface does not accidentally imply a medical/diagnostic claim):
+    - Allowed: “estimate”, “wellness”, “trend”, “informational feedback”
+    - Not allowed (unless you truly have the required classification/approvals/evidence): “diagnosis”, “detects”, “treats”, “clinical risk”, “normal/abnormal”, urgent alerts
+  - Define what changes trigger a mandatory re-assessment before release:
+    - new outputs or new thresholds/labels (especially anything like “normal/abnormal”)
+    - new alerts, recommendations, or call-to-action that could change user behaviour
+    - new input data types (new sensors/device feeds/user-entered fields/uploads)
+    - storage/sync changes for AI outputs (e.g., session-only → saved history)
+    - UI/wording changes that strengthen the impression of medical capability
+
+- **Comprehension checks (do users understand it correctly?)**
+  - Do a quick usability check (even with a small number of users/testers) to confirm:
+    - users understand “AI estimate” vs “device measurement” vs “manual entry”
+    - users do not interpret the output as diagnosis, medical advice, or an emergency detector
+    - provenance labels are noticed and understood (AI/device/manual)
+    - disclaimers and “cannot estimate” messages are seen at the right moments and reduce confusion
+  - If users misinterpret the output, adjust the wording and UI (not just the disclaimer) until interpretation matches the intended use.
 
 - **Align user-facing text to evidence**
   - Ensure all UI labels, help text, onboarding copy, notifications, and marketing wording stay within validated capability.
@@ -536,11 +556,23 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
       - **Population boundaries (when relevant):** the user groups the evidence applies to (e.g., age ranges or other inclusion/exclusion criteria) and any known limitations outside those boundaries.
 
 - **Evidence package (what you keep)**  
-  A structured “evidence dossier” that makes AI features **reviewable, defensible, and consistent** across product, QA, support, and (where relevant) app-store review. Typical contents:
+  A structured “evidence dossier” that makes AI features **reviewable, defensible, and consistent** across product, quality assurance (QA), support, and (where relevant) app-store review. Typical contents:
 
   - **Intended use and boundaries (what it is / is not)**  
     A short statement of purpose and limits — e.g., “wellness estimate / informational feedback” and explicit non-use (not diagnosis, not treatment guidance, not emergency detection).
 
+  - **AI feature card (one-page summary)**
+    A single page that anyone on the team (product, QA, support) can use to understand the AI feature quickly:
+
+    - **What it does (in plain language):** the user-facing purpose (e.g., “wellness estimate” / “trend visualization”).
+    - **What it uses as input:** what the AI reads (e.g., camera signal on-device, motion/lighting checks), and what it does *not* use.
+    - **What it produces as output:** what is shown to the user (estimate/range/indicator), plus how it should be interpreted.
+    - **When it should refuse to output a number:** the key “cannot estimate” conditions (e.g., low light, motion, short/failed capture, unsupported device/OS).
+    - **Where the evidence applies:** app version(s), AI SDK/model version(s), supported device models and operating system (OS) range, and the tested conditions (lighting/motion/capture guidance).
+    - **Known limitations (simple list):** the main situations where results degrade and what the user should do instead.
+    - **Operational controls:** provenance labels (AI/device/manual), storage/sync rules for AI outputs (if any), and support escalation path.
+    - **Rollback / containment plan:** how the feature can be limited or disabled safely (e.g., feature toggle), and who owns that decision.
+    
   - **Outputs and interpretation guidance (what the user should understand)**  
     - What each output represents (estimate/indicator/range) and the correct user interpretation  
     - What users should *not* infer (e.g., not a clinical diagnosis or medical recommendation)  
@@ -601,6 +633,15 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - provenance labeling and any storage/sync behavior changes for AI outputs
   - Require explicit review/sign-off when changes could affect user interpretation, claims, or evidence validity.
 
+- **AI component integrity (supply-chain control)**
+  - Treat the AI model/SDK as a controlled dependency (like a security-sensitive library):
+    - record the exact AI SDK/model version shipped with each app release
+    - review vendor release notes and known issues before upgrading
+    - after any AI SDK/model update, re-test the key AI user flows to confirm nothing that previously worked has been broken (for example: capture starts correctly, quality checks behave as expected, “cannot estimate” triggers correctly, outputs display correctly, and provenance labels remain accurate)
+  - Ensure AI changes cannot be “silently” introduced:
+    - only ship AI updates through controlled builds/releases
+    - keep ownership clear for approving AI dependency upgrades and rollbacks
+
 ---
 
 ### 5) Monitoring and drift awareness {#ai-monitoring-drift}
@@ -613,6 +654,20 @@ Even if AI runs on-device and does not continuously learn, governance still requ
     - latency (time to produce output)
     - crash/error patterns related to AI module
     - device/OS-specific issue rates
+
+- **Watch for misinterpretation and potential harm signals**
+  - Not all problems show up as “accuracy” metrics. I also watch for signals that users may be misunderstanding the feature:
+    - support tickets or feedback suggesting the output is treated as a diagnosis (“it said I have…”, “it detected…”, panic-driven messages)
+    - repeated confusion about what is AI vs device vs manual
+    - complaints about “wrong medical conclusion” or “unsafe advice” (even if the app does not intend to give advice)
+  - If these signals rise, the response is typically **product and wording changes** (clearer labels, safer UI patterns, stronger guidance), not just a disclaimer.
+
+- **Privacy-friendly monitoring (when telemetry is limited by design)**
+  - If the product minimizes analytics for privacy reasons, I still monitor stability using:
+    - aggregated counters (e.g., “cannot estimate” rate, error rate, latency)
+    - crash/error reports for the AI module (where enabled)
+    - device/OS breakdowns to detect compatibility issues
+    - support-driven triage patterns (what users report, on which devices/OS versions)
 
 - **Monitor quality signals (when feasible)**
   - Track indicators that correlate with degraded quality:
