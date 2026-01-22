@@ -141,7 +141,7 @@ How this shows up in my work (example patterns):
   - **Vendor components & software development kits (SDKs):** version constraints, licensing/usage terms, upgrade cadence, and known limitations that affect scope.  
   - **Platform constraints:** mobile OS versions, app-store rules, device permissions, and background/foreground behavior.  
   - **Device compatibility boundaries:** supported device models/firmware ranges, Bluetooth profiles, SDK/device pairing steps, and explicit “not supported” cases.  
-  - **Data & infrastructure dependencies:** environments (development/test/staging/production), certificates/keys (to secure connections), **feature flags (toggles that turn features on/off per environment or user group without a new release)**, **messaging/queues** (a reliable “inbox” between systems for requests/events that don’t happen instantly, so work can be retried safely and not lost during spikes or temporary outages), and data pipeline readiness (where applicable).  
+  - **Data & infrastructure dependencies:** environments (development/test/staging/production), certificates/keys (to secure connections), **feature toggles (toggles that turn features on/off per environment or user group without a new release)**, **messaging/queues** (a reliable “inbox” between systems for requests/events that don’t happen instantly, so work can be retried safely and not lost during spikes or temporary outages), and data pipeline readiness (where applicable).  
   - **Integration sequencing:** which integrations must be ready first, **shared test windows (agreed time slots when multiple teams are available to test together)**, and who provides test accounts/data.  
     - *Example:* “Tuesday 10:00–12:00” where the mobile team, backend team, and a third-party provider are all online to validate an end-to-end flow (e.g., create a session → call an external API → receive a callback/webhook → confirm the mobile UI updates).  
   - **Operational dependencies:** support coverage, monitoring/alerting readiness, and escalation contacts for third parties during go-live.  
@@ -435,7 +435,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
     - Not allowed (unless you truly have the required classification/approvals/evidence): “diagnosis”, “detects”, “treats”, “clinical risk”, “normal/abnormal”, urgent alerts
   - Define what changes trigger a mandatory re-assessment before release:
     - new outputs or new thresholds/labels (especially anything like “normal/abnormal”)
-    - new alerts, recommendations, or call-to-action that could change user behaviour
+    - new alerts, recommendations, or call-to-action that could change user behavior
     - new input data types (new sensors/device feeds/user-entered fields/uploads)
     - storage/sync changes for AI outputs (e.g., session-only → saved history)
     - UI/wording changes that strengthen the impression of medical capability
@@ -449,7 +449,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
   - If users misinterpret the output, adjust the wording and UI (not just the disclaimer) until interpretation matches the intended use.
 
 - **Align user-facing text to evidence**
-  - Ensure all UI labels, help text, onboarding copy, notifications, and marketing wording stay within validated capability.
+  - Ensure all user interface (UI) labels, help text, onboarding copy, notifications, and marketing wording stay within validated capability.
   - Avoid medically loaded phrasing unless you have the appropriate classification, approvals, and supporting evidence.
 
 - **Use disclaimers correctly (as reinforcement, not a band-aid)**
@@ -474,6 +474,7 @@ Users and reviewers must be able to tell **what produced an output** and **how i
     - Connected device reading (with device model, when relevant)
     - Manual entry
   - If multiple sources exist in the same timeline/history, keep them visually and logically distinguishable.
+  - Make the source label visible next to the value (not hidden in settings).
 
 - **Metadata that supports interpretation**
   - When appropriate, store or display non-sensitive metadata that clarifies the measurement context:
@@ -488,7 +489,7 @@ Users and reviewers must be able to tell **what produced an output** and **how i
 
 - **Avoid black-box behavior**
   - If the output can fail or be unreliable under certain conditions, show an actionable message instead of a misleading number.
-  - Prefer “cannot estimate right now” + guidance, rather than silently outputting low-quality results.
+  - Prefer “Cannot estimate right now” + guidance, rather than silently outputting low-quality results.
 
 - **Audit-friendly history (where applicable)**
   - Where you store history, ensure provenance is retained for later review:
@@ -505,7 +506,7 @@ AI features still need **accountability**: who owns decisions, who reviews issue
 - **Named ownership**
   - Define who owns:
     - AI feature requirements and claims
-    - **AI release decisions:** who approves shipping a new model/SDK version (or changing thresholds/output mapping), based on evidence, risk review, and confirmed device/OS compatibility
+    - **AI release decisions:** who approves shipping a new model / software development kit (SDK) version (or changing thresholds/output mapping), based on evidence, risk review, and confirmed device/operating system (OS) compatibility
     - safety and risk decisions
     - **AI-related user support and escalation:** how users report AI issues, what information support collects (without unnecessary sensitive data), how cases are triaged, and when/ how they are escalated to product/engineering or vendors
 
@@ -626,13 +627,13 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 
 - **Change control for AI**
   - Treat AI changes as “claim-sensitive” changes, including:
-    - AI/SDK or model version changes (where applicable)
+    - AI software development kit (SDK) or model version changes (where applicable)
     - thresholds and output mapping changes (including ranges/labels)
     - **Preprocessing / quality filters and “cannot estimate” rules:** the checks the system applies *before* producing an AI result, so it only outputs a number when the input is good enough.  
       - **Preprocessing:** basic preparation steps on the input signal (e.g., stabilizing the capture, removing obvious noise, normalizing input conditions) so the AI receives data in the expected format.  
       - **Quality filters:** rules that detect low-quality conditions (e.g., too much motion, poor lighting, weak/unstable signal, missing frames) and prevent unreliable outputs.  
       - **“Cannot estimate” rules:** explicit thresholds that trigger a safe outcome (“cannot estimate right now”) instead of showing a potentially misleading value, along with a clear user message on how to retry (e.g., hold still, improve lighting, reposition camera, retry after device reconnect).  
-    - UX changes that alter interpretation (wording, colors/icons, alerts, call-to-action)
+    - user experience (UX) changes that alter interpretation (wording, colors/icons, alerts, call-to-action)
     - provenance labeling and any storage/sync behavior changes for AI outputs
   - Require explicit review/sign-off when changes could affect user interpretation, claims, or evidence validity.
 
@@ -694,7 +695,7 @@ Even if AI runs on-device and does not continuously learn, governance still requ
 - **Response playbook**
   - Define what happens when monitoring signals degrade:
     - triage and root-cause analysis
-    - containment (feature flag off / limit rollout / restrict devices)
+    - containment (feature toggle off / limit rollout / restrict devices)
     - fix and re-validation scope
     - communication (release notes, support guidance)
 
@@ -736,7 +737,7 @@ Before shipping AI-related changes, I treat these as minimum checks:
 - Validation evidence updated (or confirmed still valid)
 - Known limitations clearly documented
 - Monitoring/alerting in place for AI-related failure modes
-- Rollback/containment plan exists (including feature flag strategy if used)
+- Rollback/containment plan exists (including feature toggle strategy if used)
 - Support handover updated (known issues, troubleshooting steps, escalation triggers)
 
 ---
