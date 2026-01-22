@@ -45,7 +45,8 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Reliability:** consistent behavior over time (error rates, retries, data consistency, **graceful degradation — key functions still work in a reduced mode when a dependency fails**, clear fallback behavior)  
   - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
   - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
-  - **Usability:** user experience expectations (clarity, accessibility, error messaging, friction in key journeys)
+  - **Usability:** user experience expectations (clarity, accessibility, helpful error messages, and how easy core tasks are to complete)  
+    - Includes minimizing **unnecessary steps and confusion** in the most important user flows (for example: sign-up/login, onboarding, completing a measurement, pairing a device, starting a teleconsultation, or uploading a file).
 
 How this shows up in my work (example patterns):
 - Turning “feature requests” into **testable acceptance criteria** (including security/privacy constraints, not just UI behavior).
