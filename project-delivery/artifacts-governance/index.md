@@ -321,17 +321,17 @@ Below are the typical gates I use, what they check, and what “ready” looks l
   - **What it checks:** what data is collected and why; permissions/consents; encryption in transit/at rest; access control roles; retention and deletion rules; logging/audit needs; third parties/sub-processors are known and approved where applicable.  
   - **What “ready” looks like:** the agreed controls are implemented and reviewed; privacy/security risks are recorded with mitigations; any required approvals are completed.
 
-- **System Integration Testing readiness (SIT readiness) (before SIT begins)**  
+- **SIT readiness (before SIT begins)**  
   Ensures the integrated “end-to-end” system can be tested without constant blockers.  
   - **What it checks:** stable build(s) available; test environment is working; integrations are reachable; required credentials/certificates are in place; test accounts and test data exist; key dependencies (internal and third-party) are available.  
   - **What “ready” looks like:** the end-to-end flow can be exercised; known dependency constraints are documented; owners are available to support integration testing.
 
-- **User Acceptance Testing readiness (UAT readiness) (before UAT begins)**  
+- **UAT readiness (before UAT begins)**  
   Ensures UAT is focused, realistic, and produces a clear decision (accept / fix / defer).  
   - **What it checks:** UAT scope and scenarios are defined; who will test is agreed; what evidence is needed is clear (screenshots, logs, test notes); entry/exit criteria are defined; sign-off rules are agreed (who approves and what “pass” means).  
   - **What “ready” looks like:** users/testers can run the intended workflows; defects and feedback can be logged and triaged; acceptance decision criteria are unambiguous.
 
-- **Release readiness (go/no-go) (before production release)**  
+- **Release readiness (before production release)**  
   Ensures the system is safe to release and can be supported after release.  
   - **What it checks:** required testing is complete; critical defects are resolved or formally accepted with mitigations; monitoring/alerts are configured; support handover is complete; rollout steps are documented; rollback plan is tested/credible; communications are ready.  
   - **What “ready” looks like:** a structured **go/no-go** decision can be made with confidence, based on evidence and agreed criteria — not guesswork.
