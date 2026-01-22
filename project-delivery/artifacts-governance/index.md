@@ -484,7 +484,7 @@ AI features still need **accountability**: who owns decisions, who reviews issue
   - Repeated user reports of incorrect/unsafe outputs
   - A pattern of failures for a device/OS version or a specific scenario
   - Any incident that could cause harm (misinterpretation, misleading UI, improper claims)
-  - Any change that expands claims or introduces new data types
+  - Any change that **strengthens or broadens what we claim the AI can do** (new outputs, new thresholds/labels like “normal/abnormal”, new recommendations), or that **adds new kinds of input data** the AI uses (e.g., additional sensors, new device feeds, new user-entered fields, new uploaded files)
 
 - **Operational handling for edge cases**
   - Define what happens when:
