@@ -398,15 +398,24 @@ Where privacy risk could be high, I use a DPIA-style approach to make sure risks
 
 ---
 
-## AI governance (when AI is involved)
+## AI governance (when AI is involved) {#ai-governance}
 
 When AI is part of the product, governance is about **claims**, **clarity**, **boundaries**, **evidence**, and **operational control** — so the feature is safe, understandable, and defensible (including during app-store review and in real-world use).
 
 The goal is simple: **users are not misled**, **outputs are interpretable**, **risks are controlled**, and **there is evidence for what is claimed**.
 
+> **At a glance (what this section covers)**
+> - [1) Claims boundaries and user-facing clarity](#ai-claims-clarity)
+> - [2) Provenance and transparency](#ai-provenance-transparency)
+> - [3) Human oversight and escalation paths](#ai-oversight-escalation)
+> - [4) Validation and evidence artifacts](#ai-validation-evidence)
+> - [5) Monitoring and drift awareness](#ai-monitoring-drift)
+> - [6) Privacy and data-handling rules for AI features](#ai-privacy-data)
+> - [7) Release readiness checklist for AI](#ai-release-readiness)
+
 ---
 
-### 1) Claims boundaries and user-facing clarity
+### 1) Claims boundaries and user-facing clarity {#ai-claims-clarity}
 
 AI governance starts with **what we claim** (and what we explicitly do *not* claim).
 
@@ -435,7 +444,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
 
 ---
 
-### 2) Provenance and transparency
+### 2) Provenance and transparency {#ai-provenance-transparency}
 
 Users and reviewers must be able to tell **what produced an output** and **how it should be interpreted**.
 
@@ -469,7 +478,7 @@ Users and reviewers must be able to tell **what produced an output** and **how i
 
 ---
 
-### 3) Human oversight and escalation paths
+### 3) Human oversight and escalation paths {#ai-oversight-escalation}
 
 AI features still need **accountability**: who owns decisions, who reviews issues, and what triggers escalation.
 
@@ -509,7 +518,7 @@ AI features still need **accountability**: who owns decisions, who reviews issue
 
 ---
 
-### 4) Validation and evidence artifacts
+### 4) Validation and evidence artifacts {#ai-validation-evidence}
 
 App stores (and regulated contexts) care deeply about whether AI-related statements are supported. Governance requires **evidence that matches the exact claim** — and clear boundaries for when that evidence applies.
 
@@ -594,7 +603,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 
 ---
 
-### 5) Monitoring and drift awareness
+### 5) Monitoring and drift awareness {#ai-monitoring-drift}
 
 Even if AI runs on-device and does not continuously learn, governance still requires **stability monitoring**: does it keep behaving as expected across versions, devices, and environments?
 
@@ -633,7 +642,7 @@ Even if AI runs on-device and does not continuously learn, governance still requ
 
 ---
 
-### 6) Privacy and data-handling rules for AI features (often missed, but critical)
+### 6) Privacy and data-handling rules for AI features (often missed, but critical) {#ai-privacy-data}
 
 AI governance must include clear rules on **what data is processed, stored, or shared**.
 
@@ -658,7 +667,7 @@ AI governance must include clear rules on **what data is processed, stored, or s
 
 ---
 
-### 7) Release readiness checklist for AI (practical)
+### 7) Release readiness checklist for AI (practical) {#ai-release-readiness}
 
 Before shipping AI-related changes, I treat these as minimum checks:
 
