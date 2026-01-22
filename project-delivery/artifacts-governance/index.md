@@ -157,7 +157,18 @@ Practical examples of what I track:
 - **RACI (Responsible, Accountable, Consulted, Informed)**  
   Clarifies who owns delivery outcomes and who must be consulted or informed.
 - **Decision paths**  
-  Who decides what (scope changes, security/privacy gates, release approvals), and when escalation is triggered.
+  How decisions are made and recorded, so the team can move fast without confusion — and so approvals are clear when governance is required:  
+  - **What decisions exist:** scope and priority changes, architecture/integration choices, security & privacy gates, release readiness, incident response actions.  
+  - **Who can decide:** named owners for each decision type (e.g., Product Owner for priority/scope, Tech Lead/Architect for design, Security/Privacy owner for controls, Delivery Lead for go/no-go coordination).  
+  - **How decisions are made:** decision criteria (cost/benefit, risk, compliance impact), required inputs (evidence, test results, impact analysis), and expected turnaround time.  
+  - **How decisions are documented:** lightweight decision log (what was decided, why, alternatives considered, date, owner, and any follow-up actions).  
+  - **When escalation is triggered:**  
+    - changes that affect timeline/cost materially, or introduce new dependencies  
+    - anything with privacy/security impact (sensitive data, permissions, retention, access control)  
+    - regulated or safety-relevant claims, especially where AI outputs are involved  
+    - repeated test failures, high-severity defects, or integration instability near release  
+    - unclear ownership, blocked teams, or vendor delays that threaten milestones  
+  - **Escalation path:** who is notified first, who must approve next, and what “stop / proceed” rules apply (e.g., pause release until risks are accepted or mitigations are in place).
 
 ---
 
