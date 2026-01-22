@@ -344,7 +344,7 @@ I treat each gate as **(1) a checklist, (2) named owners, and (3) clear pass/fai
 - Clear **entry/exit criteria** (what must be true before testing starts / ends)
 - Defined **roles and responsibilities** (who executes, who signs off, who triages defects)
 - Evidence expectations (what is recorded and where)
-- Defect triage with agreed **severity definitions** and turnaround expectations
+- Defect triage with agreed **severity levels** (e.g., blocker/critical/major/minor) and **response targets** (when we acknowledge, when we aim to fix, and when we retest)
 
 ### Release readiness and go-live
 - Release readiness checklist (functional + non-functional)
@@ -385,11 +385,15 @@ When delivery involves sensitive data, I treat privacy/security as gates with ex
 - Operational security (logging, monitoring, incident response expectations)
 
 ### DPIA-style risk thinking (Data Protection Impact Assessment)
-Where appropriate, I use a DPIA-style approach:
-- Identify high-risk processing early
-- Define controls and mitigations
-- Verify implementation and evidence
-- Ensure responsibilities and escalation paths are clear
+
+Where privacy risk could be high, I use a DPIA-style approach to make sure risks are identified early, addressed with concrete controls, and tracked with clear ownership:
+
+- **Identify high-risk processing early:** map the data flows (what data is collected, from where, who can access it, where it is stored/transferred) and flag sensitive categories, vulnerable user groups, and high-impact scenarios.  
+- **Assess risk realistically:** describe what could go wrong (misuse, unauthorized access, over-collection, data leaks, incorrect retention) and estimate likelihood/impact so priorities are clear.  
+- **Define controls and mitigations:** specify the practical measures that reduce risk (data minimization, consent/permissions, encryption, access controls, retention/deletion rules, audit logs, monitoring, vendor safeguards).  
+- **Verify implementation with evidence:** confirm controls are actually in place (configuration checks, test cases, screenshots/logs, security/privacy review notes, release gate checklists).  
+- **Assign responsibilities and escalation paths:** define who owns each control and decision, when approvals are required, and what triggers escalation (e.g., scope changes affecting data, new vendors/sub-processors, expanded data collection, AI features touching sensitive data).  
+- **Revisit when things change:** treat it as a living record—update when new features, integrations, data types, or vendors are introduced, or when incidents/near-misses reveal new risks.
 
 ---
 
