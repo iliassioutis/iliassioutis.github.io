@@ -529,7 +529,13 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 - **Evidence package (what you keep)**
   - A structured “evidence dossier” can include:
     - **Intended use and boundaries:** what the feature is for, and what it is not (claims limits).
-    - **Claims-to-evidence mapping:** each user-facing label/output/statement mapped to the validation evidence that supports it (and the limitations that apply).
+    - **Claims-to-evidence mapping:** a simple “claim → proof” table that links every user-facing statement or label to the supporting validation work — and states the boundary conditions for that evidence.  
+      - **Claim (what the user sees):** the exact wording shown in the app (screens, charts, help text, onboarding, store listing).  
+      - **What it means (interpretation):** how the user should understand it (and what it should *not* be interpreted as).  
+      - **Supporting evidence:** which test/validation results support that specific statement (protocol + summary outcome), including the versions covered (app/AI SDK/model, device/OS).  
+      - **Limits and exclusions:** when the evidence may not apply (e.g., low light, motion, unsupported devices/OS, out-of-scope user groups), plus known failure modes.  
+      - **Controls in the product:** how the app enforces safe interpretation (provenance labels AI vs device vs manual, “cannot estimate” behavior, guidance messages, and disclaimers placed at the right moments).  
+
     - **Outputs and interpretation guidance:** what the output represents and how users should interpret it (and what they should not do with it).
     - **Testing/validation protocol:** what was tested, how it was tested, by whom, and under what conditions; plus what was excluded.
     - **Summary results and limitations:** key findings, known failure modes, and where accuracy degrades.
@@ -552,7 +558,10 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
   - Treat AI changes as “claim-sensitive” changes, including:
     - AI/SDK or model version changes (where applicable)
     - thresholds and output mapping changes (including ranges/labels)
-    - preprocessing/quality filters and “cannot estimate” rules
+    - **Preprocessing / quality filters and “cannot estimate” rules:** the checks the system applies *before* producing an AI result, so it only outputs a number when the input is good enough.  
+      - **Preprocessing:** basic preparation steps on the input signal (e.g., stabilizing the capture, removing obvious noise, normalizing input conditions) so the AI receives data in the expected format.  
+      - **Quality filters:** rules that detect low-quality conditions (e.g., too much motion, poor lighting, weak/unstable signal, missing frames) and prevent unreliable outputs.  
+      - **“Cannot estimate” rules:** explicit thresholds that trigger a safe outcome (“cannot estimate right now”) instead of showing a potentially misleading value, along with a clear user message on how to retry (e.g., hold still, improve lighting, reposition camera, retry after device reconnect).  
     - UX changes that alter interpretation (wording, colors/icons, alerts, call-to-action)
     - provenance labeling and any storage/sync behavior changes for AI outputs
   - Require explicit review/sign-off when changes could affect user interpretation, claims, or evidence validity.
