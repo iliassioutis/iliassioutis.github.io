@@ -128,7 +128,13 @@ How this shows up in my work (example patterns):
 
 ### Risk and dependency control
 - **RAID log (Risks, Assumptions, Issues, Dependencies)**  
-  A living log that is reviewed regularly, with owners, status, mitigations, and dates.
+  A living log reviewed regularly. For each item, it captures:  
+  - **What it is:** the risk/assumption/issue/dependency stated clearly  
+  - **Owner:** who is responsible for driving it to resolution  
+  - **Current position:** where it stands right now (e.g., newly identified / being investigated / agreed action in progress / resolved)  
+  - **Impact if it happens:** what it would affect (scope, timeline, cost, quality, compliance, operations)  
+  - **Planned response:** what we will do to reduce likelihood, reduce impact, or remove the blocker (actions + due dates)  
+  - **Decision points:** what needs approval/confirmation, and by when
 - **Dependency mapping**  
   External services, vendor components, mobile OS constraints, device compatibility boundaries, and integration windows.
 
