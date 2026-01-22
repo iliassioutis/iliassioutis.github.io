@@ -33,7 +33,14 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
 - **User stories / use cases + acceptance criteria**  
   “What good looks like” in a testable way — covering the normal (“happy path”) flow *and* realistic “non-happy path” scenarios (invalid inputs, permission denied, offline/timeout, device disconnect, integration errors), plus key edge cases.
 - **Non-functional requirements (NFRs)**  
-  Security/privacy, performance, availability, reliability, auditability, observability, and usability expectations.
+  The “how well it must work” requirements — beyond features:  
+  - **Security & privacy:** encryption, access control, data minimization, retention/deletion, consent handling  
+  - **Performance:** response times, throughput, and acceptable latency under expected load  
+  - **Availability:** target uptime and resilience (e.g., planned downtime windows, failover expectations)  
+  - **Reliability:** consistent behavior over time (error rates, retries, data consistency, graceful degradation)  
+  - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
+  - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
+  - **Usability:** user experience expectations (clarity, accessibility, error messaging, friction in key journeys)
 
 How this shows up in my work (example patterns):
 - Turning “feature requests” into **testable acceptance criteria** (including security/privacy constraints, not just UI behavior).
