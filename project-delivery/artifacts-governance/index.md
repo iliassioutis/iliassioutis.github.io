@@ -511,35 +511,37 @@ AI features still need **accountability**: who owns decisions, who reviews issue
 
 ### 4) Validation and evidence artifacts
 
-App stores (and regulated contexts) care deeply about whether AI claims are supported. Governance requires **evidence that matches the claim**.
+App stores (and regulated contexts) care deeply about whether AI-related statements are supported. Governance requires **evidence that matches the exact claim** — and clear boundaries for when that evidence applies.
 
 - **Validation plan aligned to claims**
   - Validate what you actually claim (not what you wish the model could do).
   - Define:
-    - success metrics (accuracy, agreement, reliability, failure rate)
-    - acceptance thresholds (what counts as “good enough”)
+    - **Success metrics** (how you measure performance):  
+      accuracy *(closeness to a reference)*, agreement *(how well results match across the full range)*, reliability *(repeatability across repeats/conditions)*, and failure rate *(how often the feature cannot produce a valid result or errors out)*.
+    - **Acceptance thresholds** *(pass/fail criteria set before testing begins)*: what counts as “good enough” for each metric and what triggers improvement work or scope limitation.
     - **Test conditions (the “when/where it was evaluated”)**  
-      Specify the real-world conditions the validation covers, so the boundaries are clear:  
-      - **Environment:** different lighting levels and backgrounds (e.g., indoor/daylight/low-light), plus camera positioning guidance  
-      - **User behavior:** motion and stillness scenarios (e.g., steady capture vs movement), and how “poor signal” cases are handled  
-      - **Device and software coverage:** supported device models and camera characteristics, plus **operating system (OS)** versions and app versions included in testing  
-      - **Population boundaries (when relevant):** the user groups the evidence applies to (e.g., age ranges or other inclusion/exclusion criteria), and any known limitations outside those boundaries
+      Specify the real-world conditions the validation covers, so the boundaries are explicit:
+      - **Environment:** lighting/background variability (e.g., indoor/daylight/low-light), plus user guidance (camera position, stillness, distance).
+      - **User behavior:** motion vs still capture, and how “poor signal” situations are detected and handled (e.g., guidance, retry, or “cannot estimate”).
+      - **Device and software coverage:** supported device models/camera characteristics, plus **operating system (OS)** versions and app versions included in testing.
+      - **Population boundaries (when relevant):** the user groups the evidence applies to (e.g., age ranges or other inclusion/exclusion criteria) and any known limitations outside those boundaries.
 
 - **Evidence package (what you keep)**
   - A structured “evidence dossier” can include:
-    - intended use and boundaries
-    - description of outputs and user guidance
-    - testing/validation protocol (what was tested, how, by whom)
-    - summary results and limitations
-    - risk analysis and mitigations
-    - version information (app version, model version, device/OS coverage)
-    - release readiness sign-off for AI-related changes
+    - **Intended use and boundaries:** what the feature is for, and what it is not (claims limits).
+    - **Claims-to-evidence mapping:** each user-facing label/output/statement mapped to the validation evidence that supports it (and the limitations that apply).
+    - **Outputs and interpretation guidance:** what the output represents and how users should interpret it (and what they should not do with it).
+    - **Testing/validation protocol:** what was tested, how it was tested, by whom, and under what conditions; plus what was excluded.
+    - **Summary results and limitations:** key findings, known failure modes, and where accuracy degrades.
+    - **Risk analysis and mitigations:** what could go wrong (e.g., misinterpretation), and what controls reduce that risk.
+    - **Version information:** app version, AI/SDK or model version (where applicable), device/OS coverage, and configuration assumptions.
+    - **Release readiness sign-off for AI-related changes:** confirmation that claims, UX wording, provenance labels, and evidence are aligned.
 
 - **Limitations and constraints (make them explicit)**
   - Document:
-    - performance boundaries (when results degrade)
+    - performance boundaries (when results degrade and what users should do)
     - supported device/OS boundaries
-    - known failure modes
+    - known failure modes and “cannot estimate” conditions
     - excluded scenarios (what you do not support)
   - Ensure these constraints appear consistently across:
     - internal documentation
@@ -547,12 +549,13 @@ App stores (and regulated contexts) care deeply about whether AI claims are supp
     - release notes where relevant
 
 - **Change control for AI**
-  - Treat AI changes as “claim-sensitive” changes:
-    - model version changes
-    - thresholds and output mapping changes
-    - preprocessing/quality filters
-    - UX changes that alter interpretation
-  - Require explicit review/sign-off when such changes could affect user interpretation or claims.
+  - Treat AI changes as “claim-sensitive” changes, including:
+    - AI/SDK or model version changes (where applicable)
+    - thresholds and output mapping changes (including ranges/labels)
+    - preprocessing/quality filters and “cannot estimate” rules
+    - UX changes that alter interpretation (wording, colors/icons, alerts, call-to-action)
+    - provenance labeling and any storage/sync behavior changes for AI outputs
+  - Require explicit review/sign-off when changes could affect user interpretation, claims, or evidence validity.
 
 ---
 
