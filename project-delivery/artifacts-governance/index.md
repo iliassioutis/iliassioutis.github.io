@@ -536,15 +536,16 @@ App stores (and regulated contexts) care deeply about whether AI claims are supp
     - version information (app version, model version, device/OS coverage)
     - release readiness sign-off for AI-related changes
 
-- **Reproducibility where possible**
-  - Maintain reproducible analysis artifacts:
-    - scripts/notebooks (or analysis pipeline)
-    - dataset structure and definitions (even if the raw dataset is not public)
-    - methods summary (metrics used, aggregation rules)
-    - how charts/tables were produced
-  - Keep a clear separation between:
-    - development experiments
-    - validation evidence used for claims
+- **Reproducibility (where possible)**  
+  Make the evidence **repeatable** — so the same inputs produce the same results and someone can retrace how conclusions were reached.  
+  - **Keep a reproducible analysis “package”:**  
+    - **Analysis scripts / notebooks (or a pipeline):** the exact steps used to calculate metrics and generate outputs  
+    - **Dataset structure + data dictionary:** what each file/table/column means, units, allowed values, and how missing/invalid data is handled (even if the raw data cannot be shared publicly)  
+    - **Method summary:** which metrics are used, the rules for aggregation (e.g., per-session → per-user → overall), and any filtering/exclusion rules  
+    - **Chart/table provenance:** a clear link from each figure/table to the code and input data that generated it (so it can be regenerated)  
+  - **Separate two types of work (so claims stay defensible):**  
+    - **Development experiments:** exploratory iterations used to learn and improve (may include trial features, tuning, and informal comparisons)  
+    - **Validation evidence used for claims:** the controlled evaluation that supports user-facing statements, with frozen scope, defined protocol, and clearly documented results/limitations
 
 - **Limitations and constraints (make them explicit)**
   - Document:
