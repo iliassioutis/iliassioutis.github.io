@@ -518,7 +518,13 @@ App stores (and regulated contexts) care deeply about whether AI claims are supp
   - Define:
     - success metrics (accuracy, agreement, reliability, failure rate)
     - acceptance thresholds (what counts as “good enough”)
-    - test conditions (lighting, motion, device/OS range, population boundaries where relevant)
+    - **Test conditions (the “when/where it was evaluated”)**  
+      Specify the real-world conditions the validation covers, so the boundaries are clear:  
+      - **Environment:** different lighting levels and backgrounds (e.g., indoor/daylight/low-light), plus camera positioning guidance  
+      - **User behavior:** motion and stillness scenarios (e.g., steady capture vs movement), and how “poor signal” cases are handled  
+      - **Device and software coverage:** supported device models and camera characteristics, plus **operating system (OS)** versions and app versions included in testing  
+      - **Population boundaries (when relevant):** the user groups the evidence applies to (e.g., age ranges or other inclusion/exclusion criteria), and any known limitations outside those boundaries
+
 
 - **Evidence package (what you keep)**
   - A structured “evidence dossier” can include:
