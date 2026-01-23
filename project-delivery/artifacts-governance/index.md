@@ -284,7 +284,7 @@ Change control is how I keep delivery predictable when new requests appear, prio
   - **Operational impact:** monitoring/alerts, runbooks, support load, on-call/escalation readiness  
   - **Security & privacy impact (when applicable):** permissions, data classification, encryption, access controls, retention/deletion, and **sub-processors (third-party service providers we rely on to process data on our behalf — e.g., hosting, analytics, notifications — which must be assessed and controlled via contracts, access boundaries, and data-transfer safeguards)**  
   - **Risk assessment:** what can go wrong, likelihood/impact, mitigation plan, and **residual risk (the risk that remains even after mitigations are in place)**  
-    - *Example:* We add retries, timeouts, and monitoring for an external API, but there is still residual risk of provider downtime during peak hours that could delay workflows.  
+    - *Example:* A change makes an existing third-party API more critical (used more often or earlier in the flow). We add retries, timeouts, and monitoring, but there is still residual risk of provider downtime — which could delay or block parts of the workflow.  
     - *Example:* We tighten input validation and add test coverage, but there is residual risk of an edge-case bug in a rarely used workflow that may only appear in real-world usage.  
   - **Options and trade-offs:** present a few realistic choices, and for each one explain the benefits, downsides, risks, and impact on timeline/quality — for example:  
     - **Defer to next release:** keeps the current release plan stable and lowers near-term risk, but delays user value and may require extra coordination later.  
