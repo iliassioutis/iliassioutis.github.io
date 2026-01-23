@@ -441,7 +441,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
   - Keep a short decision note that states how the feature is positioned (e.g., **wellness/informational** vs **medical**), and why.
   - Capture what language and user interface (UI) patterns are allowed vs not allowed (so the interface does not accidentally imply a medical/diagnostic claim):
     - Allowed: “estimate”, “wellness”, “trend”, “informational feedback”
-    - Not allowed (unless you truly have the required classification/approvals/evidence): “diagnosis”, “detects”, “treats”, “clinical risk”, “normal/abnormal”, urgent alerts
+    - Avoid unless you have the required classification/approvals and supporting evidence: “diagnosis”, “detects”, “treats”, “clinical risk”, “normal/abnormal”, urgent alerts
   - Define what changes trigger a mandatory re-assessment before release:
     - new outputs or new thresholds/labels (especially anything like “normal/abnormal”)
     - new alerts, recommendations, or call-to-action that could change user behavior
@@ -559,6 +559,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 
 - **Validation plan aligned to claims**
   - Validate what you actually claim (not what you wish the model could do).
+  - The validation method depends on the claim (e.g., agreement vs a reference, repeatability across repeats/conditions, failure rate, and usability/comprehension checks for correct user interpretation).
   - Define:
     - **Success metrics** (how you measure performance):  
       accuracy *(closeness to a reference)*, agreement *(how well results match across the full range)*, reliability *(repeatability across repeats/conditions)*, and failure rate *(how often the feature cannot produce a valid result or errors out)*.
@@ -608,7 +609,8 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - Clear boundaries of applicability (when results may not be reliable)
 
   - **Risk analysis and mitigations (what could go wrong and how you reduce it)**  
-    - Main risks (misinterpretation, confusing source, edge-case failures)  
+    - Main risks (misinterpretation, confusing source, edge-case failures)
+    - **Misuse and security risks:** cases where someone tries to “trick” the feature (for example by faking or manipulating the input). I document how the product protects against this (for example: checks that the input looks real/usable, detects suspicious or inconsistent signals, limits repeated attempts, and shows “Cannot estimate right now” instead of a misleading result)
     - Mitigations implemented (provenance labeling, safe messaging, “Cannot estimate right now” rules, UI wording controls, escalation paths)  
     - Any remaining residual risk and why it is acceptable (if applicable)
 
