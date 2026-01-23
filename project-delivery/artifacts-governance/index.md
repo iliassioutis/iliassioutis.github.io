@@ -735,9 +735,15 @@ AI governance must include clear rules on **what data is processed, stored, or s
     - how the user deletes it (item-level and account-level)
   - Ensure deletion behavior is consistent across devices if syncing exists.
 
-- **Third parties and sub-processors (when relevant)**
-  - Be explicit about which vendors may receive data and why (analytics, crash reporting, authentication).
-  - Ensure user-facing disclosures align with actual implementation.
+- **Third parties and sub-processors (AI-related data, when relevant)**
+  - If any vendor receives data connected to the AI feature (directly or indirectly), document it clearly — for example:
+    - **Crash reporting:** may receive technical error logs if an AI capture or AI module crashes (avoid including sensitive data).
+    - **Analytics (if used):** may receive aggregated feature-usage metrics (e.g., “AI estimate succeeded/failed”), not raw camera data.
+    - **Authentication / sign-in:** may be used to identify the user account, but should not receive camera inputs or AI results.
+  - Ensure user-facing disclosures match real behavior:
+    - which vendors are involved,
+    - what data they receive (and what they do *not* receive),
+    - and the purpose.
 
 ---
 
