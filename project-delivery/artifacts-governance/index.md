@@ -586,10 +586,10 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - **What it does (in plain language):** the user-facing purpose (e.g., “wellness estimate” / “trend visualization”).
     - **What it uses as input:** what the AI reads (e.g., camera signal on-device, motion/lighting checks), and what it does *not* use.
     - **What it produces as output:** what is shown to the user (estimate/range/indicator), plus how it should be interpreted.
-    - **When it should refuse to output a number:** the key “cannot estimate” conditions (e.g., low light, motion, short/failed capture, unsupported device/OS).
+    - **When it should refuse to output a number:** describe the conditions that trigger “Cannot estimate right now” (e.g., low light, motion, short/failed capture, missing permission, unsupported device/OS).
     - **Where the evidence applies:** app version(s), AI SDK/model version(s), supported device models and operating system (OS) range, and the tested conditions (lighting/motion/capture guidance).
     - **Known limitations (simple list):** the main situations where results degrade and what the user should do instead.
-    - **Operational controls:** provenance labels (AI/device/manual), storage/sync rules for AI outputs (if any), and support escalation path.
+    - **Operational controls:** explain how the feature is managed in real use — how results are labeled (AI vs device vs manual), whether AI results are stored or synced (or session-only), and what the support/escalation process is if users report problems.
     - **Rollback / containment plan:** how the feature can be limited or disabled safely (e.g., feature toggle), and who owns that decision.
     
   - **Outputs and interpretation guidance (what the user should understand)**  
