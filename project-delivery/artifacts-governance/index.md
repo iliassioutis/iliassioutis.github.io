@@ -656,7 +656,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
   - Treat the AI model/SDK as a controlled dependency (like a security-sensitive library):
     - record the exact AI SDK/model version shipped with each app release
     - review vendor release notes and known issues before upgrading
-    - after any AI SDK/model update, re-test the key AI user flows to confirm nothing that previously worked has been broken (for example: capture starts correctly, quality checks behave as expected, “cannot estimate” triggers correctly, outputs display correctly, and provenance labels remain accurate)
+    - after any AI SDK/model update, re-test the key AI user flows to confirm nothing that previously worked has been broken (for example: the user can start a measurement capture successfully; input-quality checks work as intended; the app shows “Cannot estimate right now” only when it should; results render correctly in the UI; and each result is labeled correctly by source (AI vs device vs manual))
   - Ensure AI changes cannot be “silently” introduced:
     - only ship AI updates through controlled builds/releases
     - keep ownership clear for approving AI dependency upgrades and rollbacks
