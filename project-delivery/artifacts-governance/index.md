@@ -454,7 +454,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
     - users understand “AI estimate” vs “device measurement” vs “manual entry”
     - users do not interpret the output as diagnosis, medical advice, or an emergency detector
     - provenance labels are noticed and understood (AI/device/manual)
-    - disclaimers and “Cannot estimate” messages are seen at the right moments and reduce confusion
+    - disclaimers and “Cannot estimate right now” messages are seen at the right moments and reduce confusion
   - If users misinterpret the output, adjust the wording and UI (not just the disclaimer) until interpretation matches the intended use.
 
 - **Align user-facing text to evidence**
@@ -529,7 +529,7 @@ AI features still need **accountability**: who owns decisions, who reviews issue
   - Define what happens when:
     - the signal quality is poor
     - the user environment is unsuitable (e.g., low light, motion)
-    - the AI SDK/module is unstable (crashes, timeouts, unexpected errors)
+    - the AI module is unstable (crashes, timeouts, unexpected errors)
     - the output is out-of-range or inconsistent
   - Ensure the system response is safe:
     - Explain the limitation (what prevented a reliable result).
@@ -566,10 +566,10 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - **Test conditions (the “when/where it was evaluated”)**  
       Specify the real-world conditions the validation covers, so the boundaries are explicit:
       - **Environment:** lighting/background variability (e.g., indoor/daylight/low-light), plus user guidance (camera position, stillness, distance).
-      - **User behavior:** motion vs still capture, and how “poor signal” situations are detected and handled (e.g., guidance, retry, or “cannot estimate”).
+      - **User behavior:** motion vs still capture, and how “poor signal” situations are detected and handled (e.g., guidance, retry, or “Cannot estimate right now”).
       - **Device and software coverage:** supported device models/camera characteristics, plus **operating system (OS)** versions and app versions included in testing.
       - **Population boundaries (when relevant):** Specify which users were included in the validation (e.g., age range and any inclusion/exclusion rules).  
-  Also state who was not covered by the validation (e.g., groups not tested), and note that performance may be unknown or less reliable for those users.
+        Also state who was not covered (groups not tested) and note that performance may be unknown or less reliable for those users.
       - **Variability across people and devices (make it explicit)**
         - Where relevant, check performance across a reasonable range of real-world variation (for example: different lighting conditions, different device camera characteristics, and different user groups such as age ranges).
         - Document any known limitations clearly, and avoid wording or UI patterns that suggest the result is equally reliable for everyone under all conditions.
@@ -604,12 +604,12 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 
   - **Results summary and limitations (what the evidence shows)**  
     - Key findings in plain language (what performs well, what degrades)  
-    - **Known failure modes and “Cannot estimate” rules:** clear, documented cases where the AI should *not* show a number and should instead display “Cannot estimate right now” with guidance — for example: poor lighting, excessive motion, incorrect positioning, short/interrupting capture, missing permissions, device/OS incompatibility, or technical errors/timeouts  
+    - **Known failure modes and “Cannot estimate right now” rules:** clear, documented cases where the AI should *not* show a number and should instead display “Cannot estimate right now” with guidance — for example: poor lighting, excessive motion, incorrect positioning, short/interrupting capture, missing permissions, device/OS incompatibility, or technical errors/timeouts  
     - Clear boundaries of applicability (when results may not be reliable)
 
   - **Risk analysis and mitigations (what could go wrong and how you reduce it)**  
     - Main risks (misinterpretation, confusing source, edge-case failures)  
-    - Mitigations implemented (provenance labeling, safe messaging, “cannot estimate” rules, UI wording controls, escalation paths)  
+    - Mitigations implemented (provenance labeling, safe messaging, “Cannot estimate right now” rules, UI wording controls, escalation paths)  
     - Any remaining residual risk and why it is acceptable (if applicable)
 
   - **Statement-to-evidence mapping (in-app statements only)**  
@@ -621,19 +621,19 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
       - **What versions it applies to:** the exact app / AI SDK (and, if relevant, model) version(s) and the device/operating system ranges included in that validation (so it’s clear what the evidence covers).
     - **Coverage conditions:** devices/OS/app/SDK versions and capture conditions the evidence applies to  
     - **Limits/exclusions:** when it may not apply (low light, motion, unsupported devices/OS, out-of-scope users), plus known failure modes  
-    - **Product controls:** how the app enforces safe interpretation (provenance labels AI vs device vs manual, “cannot estimate” behavior, guidance messages, disclaimer placement)
+    - **Product controls:** how the app enforces safe interpretation (provenance labels AI vs device vs manual, “Cannot estimate right now” behavior, guidance messages, disclaimer placement)
 
   - **Version and configuration record (what exactly is being shipped)**  
     App version, AI SDK/model version (where applicable), supported device/OS coverage, key configuration assumptions, and **any feature toggle (feature flag) settings** (switches that turn the AI feature on/off or limit it to certain users/devices/environments) — so it’s clear **who will see the feature, when it becomes available, and how it will be rolled out or disabled if needed**.
 
   - **Release readiness sign-off for AI-related changes (what was checked before shipping)**  
-    A checklist confirming: claims boundaries and wording reviewed; provenance labels verified; “cannot estimate” behavior tested; validation evidence still applicable (or updated); limitations documented; monitoring/support guidance updated.
+    A checklist confirming: claims boundaries and wording reviewed; provenance labels verified; “Cannot estimate right now” behavior tested; validation evidence still applicable (or updated); limitations documented; monitoring/support guidance updated.
 
 - **Limitations and constraints (make them explicit)**
   - Document:
     - performance boundaries (when results degrade and what users should do)
     - supported device/OS boundaries
-    - known failure modes and “cannot estimate” conditions
+    - known failure modes and “Cannot estimate right now” conditions
     - excluded scenarios (what you do not support)
   - Ensure these constraints appear consistently across:
     - internal documentation
@@ -644,10 +644,10 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
   - Treat AI changes as “claim-sensitive” changes, including:
     - AI software development kit (SDK) or model version changes (where applicable)
     - thresholds and output mapping changes (including ranges/labels)
-    - **Preprocessing / quality filters and “cannot estimate” rules:** the checks the system applies *before* producing an AI result, so it only outputs a number when the input is good enough.  
+    - **Preprocessing / quality filters and “Cannot estimate right now” rules:** the checks the system applies *before* producing an AI result, so it only outputs a number when the input is good enough.  
       - **Preprocessing:** basic preparation steps on the input signal (e.g., stabilizing the capture, removing obvious noise, normalizing input conditions) so the AI receives data in the expected format.  
       - **Quality filters:** rules that detect low-quality conditions (e.g., too much motion, poor lighting, weak/unstable signal, missing frames) and prevent unreliable outputs.  
-      - **“Cannot estimate” rules:** explicit thresholds that trigger a safe outcome (“Cannot estimate right now”) instead of showing a potentially misleading value, along with a clear user message on how to retry (e.g., hold still, improve lighting, reposition camera, retry after device reconnect).  
+      - **“Cannot estimate right now” rules:** explicit thresholds that trigger a safe outcome (“Cannot estimate right now”) instead of showing a potentially misleading value, along with a clear user message on how to retry (e.g., hold still, improve lighting, reposition camera, retry after device reconnect).  
     - user experience (UX) changes that alter interpretation (wording, colors/icons, alerts, call-to-action)
     - **How AI results are labeled and saved:** any change to whether results are shown as *AI vs device vs manual*, and whether AI outputs are **kept session-only**, **saved to history**, or **synced across devices**
   - Require explicit review/sign-off when changes could affect user interpretation, claims, or evidence validity.
@@ -656,7 +656,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
   - Treat the AI model/SDK as a controlled dependency (like a security-sensitive library):
     - record the exact AI SDK/model version shipped with each app release
     - review vendor release notes and known issues before upgrading
-    - after any AI SDK/model update, re-test the key AI user flows to confirm nothing that previously worked has been broken (for example: the user can start a measurement capture successfully; input-quality checks work as intended; the app shows “Cannot estimate right now” only when it should; results render correctly in the UI; and each result is labeled correctly by source (AI vs device vs manual))
+    - after any AI SDK/model update, re-test the key AI user flows to confirm nothing that previously worked has been broken (for example: the user can start a measurement capture successfully; input-quality checks correctly detect poor conditions (motion, low light, weak signal); the app shows “Cannot estimate right now” only when it should; results render correctly in the UI; and each result is labeled correctly by source (AI vs device vs manual))
   - Ensure AI changes cannot be “silently” introduced:
     - only ship AI updates through controlled builds/releases
     - keep ownership clear for approving AI dependency upgrades and rollbacks
@@ -669,7 +669,7 @@ Even if AI runs on-device and does not continuously learn, governance still requ
 
 - **Define what “healthy” looks like**
   - Operational metrics that show the AI feature is functioning:
-    - failure rate (cannot estimate / errors)
+    - failure rate (“Cannot estimate right now” / errors)
     - latency (time to produce output)
     - crash/error patterns related to AI module
     - device/OS-specific issue rates
@@ -683,7 +683,7 @@ Even if AI runs on-device and does not continuously learn, governance still requ
 
 - **Privacy-friendly monitoring (when telemetry is limited by design)**
   - If the product minimizes analytics for privacy reasons, I still monitor stability using:
-    - aggregated counters (e.g., “cannot estimate” rate, error rate, latency)
+    - aggregated counters (e.g., “Cannot estimate right now” rate, error rate, latency)
     - crash/error reports for the AI module (where enabled)
     - device/OS breakdowns to detect compatibility issues
     - support-driven triage patterns (what users report, on which devices/OS versions)
@@ -704,7 +704,7 @@ Even if AI runs on-device and does not continuously learn, governance still requ
     - different device cameras/sensors behave differently
     - OS updates change camera pipelines/permissions
     - new devices introduce new performance patterns
-    - UI changes can change user behavior during capture, which can change input quality and affect results
+    - UI changes can change how users perform the capture, which can affect input quality and results
   - Governance means being able to detect these shifts and respond.
 
 - **Response playbook**
