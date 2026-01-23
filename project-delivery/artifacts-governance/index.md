@@ -469,7 +469,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
 - **Define output meaning**
   - What the output represents (an estimate, indicator, range, or—where applicable—a confidence level/uncertainty range that shows how precise the result is).
   - What users should do with it (e.g., “use as a personal reference”, “consider trends”, “seek professional advice if concerned”).
-  - What users should *not* do with it (e.g., “do not use for acute decisions”).
+  - What users should *not* do with it (e.g., “do not use for emergencies or urgent situations”).
 
 ---
 
