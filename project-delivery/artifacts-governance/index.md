@@ -532,9 +532,14 @@ AI features still need **accountability**: who owns decisions, who reviews issue
     - the AI SDK/module is unstable (crashes, timeouts, unexpected errors)
     - the output is out-of-range or inconsistent
   - Ensure the system response is safe:
-    - explain the limitation
-    - give corrective steps
-    - avoid presenting a “confident” number when confidence is not justified
+    - Explain the limitation (what prevented a reliable result).
+    - Give corrective steps (what the user can do right now), for example:
+      - Move to brighter, even lighting (avoid strong backlight) and try again.
+      - Hold the phone steady and keep still for 20–30 seconds.
+      - Keep the face fully in frame and maintain a consistent distance.
+      - Wipe the camera lens and retry.
+      - If the issue persists: use a connected device reading instead.
+    - Avoid presenting a “confident” number when confidence is not justified.
 
 - **User support flows**
   - Provide clear user pathways:
