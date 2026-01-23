@@ -560,6 +560,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 - **Validation plan aligned to claims**
   - Validate what you actually claim (not what you wish the model could do).
   - The validation method depends on the claim (e.g., agreement vs a reference, repeatability across repeats/conditions, failure rate, and usability/comprehension checks for correct user interpretation).
+  - **Data quality and representativeness (when relevant):** confirm the test data reasonably reflects intended real-world use (devices, environments, and user variation), and document any gaps as limitations.
   - Define:
     - **Success metrics** (how you measure performance):  
       accuracy *(closeness to a reference)*, agreement *(how well results match across the full range)*, reliability *(repeatability across repeats/conditions)*, and failure rate *(how often the feature cannot produce a valid result or errors out)*.
@@ -610,7 +611,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
 
   - **Risk analysis and mitigations (what could go wrong and how you reduce it)**  
     - Main risks (misinterpretation, confusing source, edge-case failures)
-    - **Misuse and security risks:** cases where someone tries to “trick” the feature (for example by faking or manipulating the input). I document how the product protects against this (for example: checks that the input looks real/usable, detects suspicious or inconsistent signals, limits repeated attempts, and shows “Cannot estimate right now” instead of a misleading result)
+    - **Misuse and security risks:** cases where someone tries to “trick” the feature (for example using fake or manipulated input). I document the protections in place (for example: input checks that reject suspicious/low-quality captures, limits on repeated attempts, and a clear “Cannot estimate right now” message instead of a misleading result)
     - Mitigations implemented (provenance labeling, safe messaging, “Cannot estimate right now” rules, UI wording controls, escalation paths)  
     - Any remaining residual risk and why it is acceptable (if applicable)
 
