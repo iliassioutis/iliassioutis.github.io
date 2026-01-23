@@ -568,7 +568,8 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
       - **Environment:** lighting/background variability (e.g., indoor/daylight/low-light), plus user guidance (camera position, stillness, distance).
       - **User behavior:** motion vs still capture, and how “poor signal” situations are detected and handled (e.g., guidance, retry, or “cannot estimate”).
       - **Device and software coverage:** supported device models/camera characteristics, plus **operating system (OS)** versions and app versions included in testing.
-      - **Population boundaries (when relevant):** the user groups the evidence applies to (e.g., age ranges or other inclusion/exclusion criteria) and any known limitations outside those boundaries.
+      - **Population boundaries (when relevant):** Specify which users were included in the validation (e.g., age range and any inclusion/exclusion rules).  
+  Also state who was not covered by the validation (e.g., groups not tested), and note that performance may be unknown or less reliable for those users.
       - **Variability across people and devices (make it explicit)**
         - Where relevant, check performance across a reasonable range of real-world variation (for example: different lighting conditions, different device camera characteristics, and different user groups such as age ranges).
         - Document any known limitations clearly, and avoid wording or UI patterns that suggest the result is equally reliable for everyone under all conditions.
