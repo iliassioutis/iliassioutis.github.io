@@ -84,13 +84,13 @@ This is how I make quality measurable and defensible (not just “we tested it�
 
 - **Test strategy**  
   A clear, shared plan for *how* we will prove the solution works before release: what will be tested (and what won’t), the test levels (unit → component → integration → system), who is responsible for each activity, which environments and test data we will use, the entry/exit criteria for each phase, and what “evidence” we will capture (test cases, results, defects, and sign-offs) for go/no-go decisions.
-- **System Integration Testing (SIT)** plan  
+- **System Integration Testing (SIT) plan**   
   Cross-component validation of the full system working together (client apps, backend services, third-party services, and external integrations) — focusing on end-to-end journeys, data integrity across boundaries, security/permission behavior, and failure handling.  
   Defines scope and environments, required test data/accounts, responsibilities, test scenarios (including edge and failure cases), evidence to capture, and clear entry/exit criteria (e.g., environments stable, integrations reachable, critical journeys pass, defect thresholds met, and agreed sign-offs completed).
-- **User Acceptance Testing (UAT)** plan  
+- **User Acceptance Testing (UAT) plan**   
   Structured validation that the solution meets real user and business needs in realistic workflows (end-to-end scenarios, including exceptions), using clear acceptance criteria and agreed sign-off rules.  
   Defines who participates (business users, clinicians, operations), what is in/out of scope, the test environment and data setup, how issues are logged and triaged, pass/fail thresholds, and the final approval process (including any required evidence or documentation).
-- **Test evidence** (when appropriate)  
+- **Test evidence (when appropriate)**   
   What is captured and where (test cases, results, defect logs, screenshots/logs, summaries).
 
 How this shows up in my work (example patterns):
