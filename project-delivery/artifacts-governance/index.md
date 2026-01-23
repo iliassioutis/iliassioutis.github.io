@@ -593,9 +593,9 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - **Rollback / containment plan:** how the feature can be limited or disabled safely (e.g., feature toggle), and who owns that decision.
     
   - **Outputs and interpretation guidance (what the user should understand)**  
-    - What each output represents (estimate/indicator/range) and the correct user interpretation  
-    - What users should *not* infer (e.g., not a clinical diagnosis or medical recommendation)  
-    - User guidance for conditions that affect quality (lighting, motion, camera position), including when to retry or use an alternative input (device/manual)
+    - What each output represents (estimate / indicator / range) and how to interpret it correctly
+    - What users should *not* infer (e.g., not a diagnosis, not treatment guidance, not emergency detection)
+    - User guidance for conditions that affect quality (e.g., lighting, motion, positioning), including when to retry and when to use an alternative non-AI method (e.g., a validated device reading or a professional measurement) instead of relying on the AI output
 
   - **Validation plan and protocol (what was tested and how)**  
     - What scenarios and conditions were covered (environment, motion/stillness, device/OS range, app/SDK versions)  
