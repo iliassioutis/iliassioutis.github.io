@@ -675,7 +675,7 @@ Even if AI runs on-device and does not continuously learn, governance still requ
     - device/OS-specific issue rates
 
 - **Watch for misinterpretation and potential harm signals**
-  - Not all problems show up as “accuracy” metrics. I also watch for signals that users may be misunderstanding the feature:
+  - Not all problems show up as “accuracy” metrics. I also monitor for signs of user misunderstanding:
     - support tickets or feedback suggesting the output is treated as a diagnosis (“it said I have…”, “it detected…”, panic-driven messages)
     - repeated confusion about what is AI vs device vs manual
     - complaints about “wrong medical conclusion” or “unsafe advice” (even if the app does not intend to give advice)
@@ -704,14 +704,14 @@ Even if AI runs on-device and does not continuously learn, governance still requ
     - different device cameras/sensors behave differently
     - OS updates change camera pipelines/permissions
     - new devices introduce new performance patterns
-    - UX changes alter how users capture input (which affects results)
+    - UI changes can change user behavior during capture, which can change input quality and affect results
   - Governance means being able to detect these shifts and respond.
 
 - **Response playbook**
   - Define what happens when monitoring signals degrade:
     - triage and root-cause analysis
     - containment (feature toggle off / limit rollout / restrict devices)
-    - fix and re-validation scope
+    - fix the issue and re-test the affected user flows before rolling out again
     - communication (release notes, support guidance)
 
 ---
