@@ -529,7 +529,7 @@ AI features still need **accountability**: who owns decisions, who reviews issue
   - Define what happens when:
     - the signal quality is poor
     - the user environment is unsuitable (e.g., low light, motion)
-    - the device integration is unstable
+    - the AI SDK/module is unstable (crashes, timeouts, unexpected errors)
     - the output is out-of-range or inconsistent
   - Ensure the system response is safe:
     - explain the limitation
