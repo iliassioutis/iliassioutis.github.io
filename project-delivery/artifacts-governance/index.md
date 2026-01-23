@@ -649,7 +649,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
       - **Quality filters:** rules that detect low-quality conditions (e.g., too much motion, poor lighting, weak/unstable signal, missing frames) and prevent unreliable outputs.  
       - **“Cannot estimate” rules:** explicit thresholds that trigger a safe outcome (“Cannot estimate right now”) instead of showing a potentially misleading value, along with a clear user message on how to retry (e.g., hold still, improve lighting, reposition camera, retry after device reconnect).  
     - user experience (UX) changes that alter interpretation (wording, colors/icons, alerts, call-to-action)
-    - provenance labeling and any storage/sync behavior changes for AI outputs
+    - **How AI results are labeled and saved:** any change to whether results are shown as *AI vs device vs manual*, and whether AI outputs are **kept session-only**, **saved to history**, or **synced across devices**
   - Require explicit review/sign-off when changes could affect user interpretation, claims, or evidence validity.
 
 - **AI component integrity (supply-chain control)**
