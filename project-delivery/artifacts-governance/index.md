@@ -794,119 +794,102 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 
 ### Example 1 — AI feature boundaries and safe user experience {#ex1-ai-boundaries}
 
-**Related sections:** [AI governance](#ai-governance) · [Traceability](#traceability) · [Testing & release](#testing-release)
+**Related sections:** [AI governance](#ai-governance) · [Traceability](#traceability) · [Testing & release](#testing-release)  
+*(Optional later: if we add more specific anchors above, we’ll switch these links to the exact sub-sections.)*
 
 **Context (what I was delivering)**  
-- Mobile app feature that provides **camera-based, on-device wellness estimates** (no upload of camera media).  
-- Needed to ensure the feature stays in the **wellness/informational** boundary and does not imply diagnosis or medical advice.
+- A mobile feature providing **camera-based, on-device wellness estimates**.  
+- Requirement: **no upload or storage of camera media**, and the user experience must stay clearly within a **wellness / informational** boundary.
 
 **Key risks I managed**  
-- Users misinterpreting the output as diagnosis or clinical advice  
-- UI/wording accidentally strengthening the claim (labels, thresholds, “normal/abnormal” language)  
-- Inconsistent behavior across devices/OS versions (quality and stability)
+- Users interpreting an “estimate” as **diagnosis** or medical advice  
+- UI/wording accidentally strengthening the claim (labels, thresholds, “normal/abnormal”, alerts)  
+- Device/OS variability causing unstable capture quality (failures, timeouts, inconsistent behavior)
 
 **Artifacts I produced (what existed in the project)**  
-- Claims boundary note (intended use + non-intended use + wording/UI rules)  
-- AI “feature card” (inputs/outputs, limitations, “cannot estimate” conditions, supported devices/OS, version record)  
-- Test scenarios for user-facing clarity (labels, help text, provenance, failure handling)  
-- Release readiness checklist for AI changes (wording review, provenance verified, failure messaging tested)
+- **Claims boundary record**: intended use + non-intended use + “allowed vs not allowed” wording/UI patterns  
+- **AI feature card** (one-page): inputs/outputs, limitations, “cannot estimate” rules, supported device/OS range, version applicability  
+- **Test scenarios** targeting user interpretation: labels, help text, provenance, “cannot estimate” guidance, and edge cases  
+- **Release-readiness checklist for AI changes**: wording reviewed, provenance verified, failure messaging tested, rollback/containment ready
 
 **Controls I enforced (how governance showed up)**  
-- Output always presented with clear meaning (“estimate”, “informational”) and safe guidance  
-- “Cannot estimate right now” behavior documented and tested (instead of returning misleading numbers)  
-- Decision log for any change affecting AI outputs, UI labels, thresholds, or storage behavior
+- **Provenance + clarity**: outputs explicitly positioned as “estimate / informational”, and the source is always clear  
+- **Safe failure behavior**: when conditions are poor, the app shows **“Cannot estimate right now” + actionable guidance** instead of a misleading number  
+- **Change gating**: any change to outputs/labels/thresholds/storage behavior required a logged decision + test evidence before release
 
 **Outcome (what success looked like)**  
-- The feature remained within the intended boundary and stayed consistent across releases  
-- Issues were handled via clear ownership, evidence, and controlled change/release steps
+- The AI feature stayed within the intended boundary across releases (no “creeping” claims through UI/wording changes)  
+- Failures were handled predictably and safely (reliable “cannot estimate” behavior rather than confusing results)
 
 **Public-safe artifacts I can show**  
-- Short anonymized screenshot list (UI labels + provenance)  
-- An anonymized checklist excerpt (AI wording/provenance/failure handling)
-
-<!-- To be added later:
-- exact outputs + wording used in-app
-- "cannot estimate" conditions and user guidance text
-- iOS vs Android differences (session-only vs saved history, provenance labels, etc.)
--->
+- An anonymized screenshot list (labels + provenance + “cannot estimate” guidance)  
+- A short excerpt of an AI release checklist (wording/provenance/failure-handling checks)
 
 ---
 
 ### Example 2 — Bluetooth medical device integration end-to-end {#ex2-bt-integration}
 
-**Related sections:** [Solution notes & decision records](#core-artifacts) · [Governance tools](#governance-tools) · [Testing & release](#testing-release)
+**Related sections:** [Core delivery artifacts](#core-artifacts) · [Governance tools](#governance-tools) · [Testing & release](#testing-release)
 
 **Context (what I was delivering)**  
-- Integration of multiple Bluetooth peripherals into a mobile app and backend workflow.
+- Integration of multiple **Bluetooth medical peripherals** into a mobile workflow (pairing → measurement → capture → display → sync), including operational handling for real users.
 
 **Key risks I managed**  
-- Data integrity across the chain (device → app → backend → clinician view)  
-- Device compatibility boundaries (supported models/firmware/OS ranges)  
-- Pairing reliability and non-happy paths (disconnect, retries, timeouts, permissions)
+- **Data integrity** across the chain (device → app → backend → clinician/admin views where applicable)  
+- **Compatibility boundaries** (supported device models/firmware, OS versions, and “not supported” constraints)  
+- Reliability of pairing and non-happy paths (disconnects, retries, timeouts, permissions, background/foreground behavior)
 
 **Artifacts I produced (what existed in the project)**  
-- Integration notes: pairing steps, data mapping rules, edge cases, retries/timeouts, ownership/run responsibility  
-- Device compatibility matrix (supported models + OS boundaries + known limitations)  
-- SIT scenarios for end-to-end flows and failure modes  
-- Defect triage rules and regression coverage for device workflows
+- **Integration notes**: pairing steps, data mapping rules, edge/failure cases, retry/timeout behavior, ownership/run responsibility  
+- **Compatibility matrix**: supported device models + OS boundaries + known limitations and user guidance  
+- **SIT scenarios**: end-to-end flows plus failure-mode coverage (disconnect mid-reading, invalid payloads, permission denied, offline)  
+- **Defect triage + regression scope** for device workflows (what must be re-tested each release)
 
 **Controls I enforced (how governance showed up)**  
-- Clear “source of truth” mapping for each measurement type  
-- Tested non-happy paths (disconnect mid-reading, invalid payloads, timeouts, background/foreground behavior)  
-- Release gate included device workflows and compatibility constraints (not “best effort”)
+- **“Source of truth” rules**: clear mapping of what constitutes device reading vs manual entry vs other sources  
+- **Non-happy path testing is mandatory**: disconnect/timeout/permission issues tested and documented (not left to chance)  
+- **Release gate includes device workflows**: compatibility and device flows treated as release-critical, not “best effort”
 
 **Outcome (what success looked like)**  
-- Stable measurement flows with predictable handling of failures  
-- Clear support guidance for known device limitations and user troubleshooting
+- Stable device measurement flows with predictable failure handling and user guidance  
+- Support-ready documentation for known constraints (so issues don’t become tribal knowledge)
 
 **Public-safe artifacts I can show**  
-- Anonymized device compatibility table (device type + OS range + major constraints)  
-- Anonymized SIT scenario list for device workflows
-
-<!-- To be added later:
-- device categories integrated + most important failure modes
-- how device/app reading consistency was verified
-- one OS limitation story + how it was documented and communicated
--->
+- An anonymized compatibility table (device type + OS range + major constraints)  
+- An anonymized SIT scenario list for device workflows
 
 ---
 
 ### Example 3 — Clinical validation evidence and release readiness {#ex3-validation}
 
-**Related sections:** [Testing strategy & evidence plan](#core-artifacts) · [Traceability](#traceability) · [AI governance](#ai-governance)
+**Related sections:** [Core delivery artifacts](#core-artifacts) · [Traceability](#traceability) · [AI governance](#ai-governance)
 
 **Context (what I was delivering)**  
-- Evidence package to support release readiness for a health-related app feature set, including formal testing/validation outputs.
+- A structured **validation / evidence package** to support release readiness for a health-related feature set (evidence-driven delivery, not “we tested it”).
 
 **Key risks I managed**  
-- “We tested it” not being defensible (no protocol, no structured evidence)  
-- Missing traceability from claims → requirements → tests → results → release decision  
-- App-store review sensitivity for health claims and wording
+- Validation not being defensible (no protocol, no structured data capture, no reproducible outputs)  
+- Missing traceability from claims → requirements → test plan → results → release decision  
+- Review sensitivity for health-related features: wording, boundaries, and evidence applicability
 
 **Artifacts I produced (what existed in the project)**  
-- Validation plan (what was tested, how, success metrics, acceptance thresholds, boundaries)  
-- Structured data capture + reproducible analysis outputs (tables/figures)  
-- Evidence dossier: protocol, results summary, limitations, and version applicability  
-- Release readiness/go-no-go pack (test status, risks accepted/mitigated, rollback plan)
+- **Validation plan / protocol**: scope, methods, success metrics, acceptance thresholds, boundaries and exclusions  
+- **Structured data capture** (templates + rules) and a **reproducible analysis pipeline** (tables/figures)  
+- **Evidence dossier**: protocol, results summary, limitations, and version applicability (what the evidence actually covers)  
+- **Go/no-go pack**: test status, risks accepted/mitigated, readiness checklist, rollback considerations
 
 **Controls I enforced (how governance showed up)**  
-- Explicit “what we claim” vs “what we do not claim” alignment  
-- Traceability from feature statements to supporting evidence  
-- Changes near release treated as gated (documented impact + updated evidence if needed)
+- **Claims-to-evidence alignment**: what is said in-app is mapped to supporting evidence (and stays within boundaries)  
+- **Traceability**: decisions and changes near release require documented impact + updated evidence if needed  
+- **Version applicability**: evidence clearly tied to app versions / device coverage / conditions tested (so it’s not over-claimed)
 
 **Outcome (what success looked like)**  
-- A release decision that is evidence-based, reviewable, and repeatable  
-- Clear boundaries documented so the product stays defensible over time
+- Release decisions became evidence-based and repeatable (not opinion-based)  
+- Boundaries and limitations were documented clearly, reducing future scope/claim risk
 
 **Public-safe artifacts I can show**  
-- High-level (anonymized) table: metric → method → result summary → versions covered  
+- A high-level anonymized table: metric → method → result summary → versions covered  
 - An anonymized go/no-go checklist excerpt
-
-<!-- To be added later:
-- public-safe study/setup summary (dates, participant ranges, device categories)
-- which metrics were used and what results mean in plain language
-- what changed in the product because of findings (if applicable)
--->
 
 ---
 
