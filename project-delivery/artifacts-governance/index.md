@@ -29,16 +29,6 @@ It focuses on **what I produce**, **how I use it**, and **how it reduces risk** 
 - [What strong governance looks like](#what-good-looks-like)
 
 ---
-<details>
-  <summary><strong>Click to expand</strong></summary>
-
-  This text is hidden until you click.
-
-  - It can include lists
-  - And paragraphs
-</details>
-
----
 
 ## Core delivery artifacts {#core-artifacts}
 
