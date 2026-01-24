@@ -17,14 +17,10 @@ It focuses on **what I produce**, **how I use it**, and **how it reduces risk** 
 
 ---
 
-## What you will find here
+## On this page
 
-- A clear view of the **core artifacts** I use to run delivery end-to-end ([jump](#core-artifacts))
-- The **governance controls** that keep decisions, risks, and changes visible ([jump](#governance-tools))
-- How I run **testing and release governance** (SIT/UAT, readiness, go-live, hypercare) ([jump](#testing-release))
-- How I handle **privacy, security, and AI governance** when the product includes sensitive data and on-device AI ([jump](#privacy-security), [AI](#ai-governance))
+Quick navigation to the artifacts, controls, and real delivery examples covered below.
 
-**On this page**
 - [Core delivery artifacts](#core-artifacts)
 - [Governance tools](#governance-tools)
 - [Testing & release governance](#testing-release)
