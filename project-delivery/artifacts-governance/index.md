@@ -827,7 +827,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
   - Confirm iOS AI results are **not persisted** and **excluded from trend graphs**
   - Confirm Android history entries show **AI / Device / Manual** source labels and (for device readings) the **device model**
   - Confirm per-item deletion behavior aligns with platform expectations (e.g., deleting a saved measurement removes it consistently)
-  - Confirm telemetry/crash reporting does not capture or transmit camera frames (media stays on-device)
+  - Confirm telemetry/crash reporting is configured not to capture or transmit camera frames (media stays on-device)
 
 **Controls I enforced (how governance showed up)**
 - **Provenance + clarity by design**
@@ -863,7 +863,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 - Integration of multiple **Bluetooth medical peripherals** into a mobile workflow:
   pairing → measurement → capture → display → sync (where applicable) → support handling.
 - The device set included common categories such as:
-  - Blood pressure monitor, pulse oximeter, thermometer, weight scale, portable ECG (heart rate), and a multi-parameter device.
+  - Blood pressure monitor, pulse oximeter, thermometer, weight scale, portable ECG peripheral with explicit OS/version boundaries documented, and a multi-parameter device.
 - Coexistence of multiple data sources:
   - **Device readings** (Bluetooth)
   - **Manual entries** (for unsupported devices)
@@ -932,7 +932,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
   - Encryption (in transit and at rest)
   - Access controls
   - Consent flows (e.g., national identifier required for specific purchases)
-  - Location behavior (one-time vs optional event-based sharing)
+  - Location behavior (one-time and optional event-based triggers): ensuring opt-in, clear user control, and no continuous/background tracking
 
 **Artifacts I produced (what existed in the project)**
 - **Data handling map (by feature + platform)**
