@@ -868,20 +868,22 @@ Examples reflect real delivery work, described without confidential identifiers,
 
 **Context (what I was delivering)**
 - Integration of multiple **Bluetooth medical peripherals** into a mobile workflow:
-  pairing → measurement → capture → display → sync (where applicable) → support handling.
+  pairing → measurement → capture → display → sync to the user’s account (so the same history is visible on both iOS and Android when signed in) → support handling.
 - The device set included common categories such as:
-  - Blood pressure monitor, pulse oximeter, thermometer, weight scale, portable ECG peripheral with explicit OS/version boundaries documented, and a multi-parameter device.
+  - Blood pressure monitor, pulse oximeter, thermometer, weight scale, portable ECG device (with a documented Android OS compatibility range), and a multi-parameter device.
 - Coexistence of multiple data sources:
   - **Device readings** (Bluetooth)
   - **Manual entries** (for unsupported devices)
   - **AI estimates** (camera-based; processed on-device on both platforms; numeric results retained in history only on Android, while iOS is session-only)
+  
 **Key risks I managed**
-- **Data integrity** across the chain (device → app UI → backend sync where relevant).
+- **Data integrity** across the chain (Bluetooth medical device → mobile app UI → backend → sync across the user’s signed-in phones/tablets).
+- For AI on iOS, integrity also includes confirming the opposite: results remain session-only and are not stored or synced.
 - **Compatibility boundaries**
   - OS minimums per platform (iOS and Android)
   - Per-device constraints (e.g., some peripherals only supported on specific Android versions)
-- Reliability of pairing and non-happy paths (disconnects, retries, timeouts, permissions, background/foreground behavior).
-- Confusion in trends/graphs if sources are mixed without clear labeling.
+- Reliability of pairing and non-happy paths (disconnects, retries, timeouts, permissions, and what happens if the user opens another app, goes to the Home screen, locks the phone, or gets interrupted during a measurement).
+- Confusion in trends/graphs if the chart mixes measurements from different sources (Bluetooth device vs manual entry, and on Android also AI estimates) without showing the source for each data point.
 
 **Artifacts I produced (what existed in the project)**
 - **Compatibility matrix**
@@ -890,9 +892,13 @@ Examples reflect real delivery work, described without confidential identifiers,
   - User guidance for “supported vs not supported” cases
 - **Integration notes / runbook**
   - Pairing steps, permissions, retry/timeout logic, known failure cases
-  - Data mapping rules (units, fields, timestamps, naming) and how the UI should present the reading
+  - Data mapping rules (units, measurement values, timestamps, and device identifiers) and how each reading is displayed in the app (labels, source, and where it appears in history/graphs)
 - **SIT scenarios (end-to-end + failure modes)**
-  - Disconnect mid-reading, invalid payload, permission denied, offline sync, background restrictions
+  - Disconnect during a measurement (Bluetooth drops before the reading completes)
+  - Device sends an unreadable or incomplete reading (corrupted / missing values)
+  - Required permissions are not granted (Bluetooth / location / notifications, depending on the feature)
+  - No internet connection when saving (the app stores locally first, then uploads/syncs when connectivity returns)
+  - Phone OS limitations that can interrupt the flow (e.g., battery saver or OS stops background activity, so the app may pause syncing until the user opens it again)
 - **Regression scope definition**
   - “What must be re-tested every release” for device flows, graphs, and provenance rules
 
@@ -903,7 +909,8 @@ Examples reflect real delivery work, described without confidential identifiers,
 - **Non-happy-path testing is mandatory**
   - Disconnect/timeout/permission behavior tested and documented (not left to chance).
 - **Release gates include device workflows**
-  - Device integrations treated as release-critical with explicit regression coverage and documented constraints.
+  - Device integrations are treated as release-critical: before every release we re-test the key Bluetooth flows to confirm nothing broke (pairing → reading → capture → display → sync), and we publish clear support limits (supported device models and OS versions).
+
 
 **Outcome (what success looked like)**
 - Stable device workflows with predictable failure handling and user guidance.
@@ -913,7 +920,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 
 **Public-safe artifacts I can show**
 - An anonymized compatibility table (device type + OS range + major constraints).
-- An anonymized SIT scenario list used for device workflows and regression.
+- An anonymized SIT scenario list: the end-to-end device scenarios we test (normal flow + failure cases), and the same checklist we re-run after changes to confirm nothing broke.
 - A user-facing device integration guide (pairing, permissions, common failures, supported models/OS boundaries).
 
 ---
@@ -931,7 +938,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 - Hospital-based validation over ~1 month with 27 participants (20–91), covering 6 Bluetooth device categories; produced a ~242-page evidence report and a reproducible Python analysis pipeline.
 
 **Key risks I managed**
-- Privacy/security controls not matching what the product actually does (especially storage/sync differences across platforms).
+- Privacy/security controls not matching what the product actually does (especially differences in what is saved on iOS vs Android).
 - Missing traceability from “what we say” → “what we built” → “what we tested” → “what we ship”.
 - Weak validation (no protocol, no structured capture, no reproducible analysis).
 - High sensitivity areas that must be explicit and auditable:
@@ -952,15 +959,29 @@ Examples reflect real delivery work, described without confidential identifiers,
   - “Manage consent” path for withdrawal/deletion where applicable
 - **Security controls checklist aligned to release**
   - TLS in transit, application-layer AES-256 at rest, RBAC/need-to-know access
-  - Sub-processor inventory and disclosures (platform-specific where needed)
+  - Third-party services list (and what each one does)
+    - Documented which external providers are used (e.g., authentication, notifications, crash reports, subscriptions).
+    - Noted any differences by platform (iOS vs Android), so the Privacy Policy and store disclosures stay accurate.
   - Retention / deletion behaviors (including “what can be deleted in-app vs by support request”, where applicable)
 - **Clinical validation dossier (evidence package)**
-  - Validation plan/protocol: scope, methods, success metrics, acceptance thresholds, boundaries/exclusions
-  - Structured capture templates + a reproducible analysis workflow (so results can be re-run consistently)
-  - Results summary written in plain language for decision-makers and reviewers
-  - Version / configuration applicability notes (what the evidence covers, and what it does not cover)
+  - **Validation plan (what we tested and how)**
+    - What features/devices were included, what was out of scope, and the test conditions (where/when/how the tests were run).
+    - What we measured (metrics) and what “pass” looks like (pre-defined acceptance thresholds).
+  - **Structured data capture + repeatable analysis**
+    - Standard templates/rules for recording measurements during testing (so data is collected the same way every time).
+    - A repeatable analysis workflow (so the same input data always produces the same tables/figures/results).
+  - **Results summary for non-technical readers**
+    - A plain-language summary of outcomes, key limitations, and any important “how to interpret this” notes.
+  - **Coverage notes (what this evidence applies to / what it does not)**
+    - Clearly states the exact app versions, supported phones/OS ranges, and device models covered by the validation.
+    - Lists exclusions and limits (e.g., unsupported devices/OS versions, conditions not tested), so nobody over-claims what the evidence proves.
 - **Release-readiness pack**
-  - Go/no-go checklist, regression evidence, known limitations and user guidance, and “what changed” notes for reviewers.
+  - **Go/no-go checklist:** a short list of “must-pass” items that determine whether we release or hold.
+  - **Re-test evidence (proof we didn’t break anything):**
+    - results from re-running the critical tests before release (e.g., Bluetooth device flows, saving/syncing history, source labels, graphs, deletion behavior, AI session-only behavior on iOS).
+    - confirmation that fixes didn’t introduce new issues.
+  - **Known limitations + user guidance:** what the product cannot do, common failure cases, and what the user should do instead (shown in-app or in help pages).
+  - **“What changed” notes:** a brief summary of what was modified in this release (so reviewers can focus on what matters).
 
 **Controls I enforced (how governance showed up)**
 - **Platform-accurate disclosures**
@@ -982,9 +1003,9 @@ Examples reflect real delivery work, described without confidential identifiers,
 - Validation became repeatable: protocol + structured capture + reproducible analysis → consistent decision-making.
 
 **Public-safe artifacts I can show**
-- A high-level anonymized table: feature → data stored? → where? → user controls → platform differences.
-- An anonymized go/no-go checklist excerpt (storage/sync labels, consent prompts, location behavior, encryption checks).
-- A high-level anonymized validation summary table: device type → method → result summary → conditions/versions covered.
+- A high-level anonymized table: feature → stored data (yes/no) → storage location → user controls → platform differences.
+- An anonymized go/no-go checklist excerpt (history saving + cross-device sync behavior, source labels AI/Device/Manual, consent prompts, location behavior, encryption checks).
+- A high-level anonymized validation summary table: device type → method → result summary → scope of applicability (which app versions / device models / operating systems and which testing conditions the results apply to).
 
 ---
 
