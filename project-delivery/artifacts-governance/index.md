@@ -13,6 +13,7 @@ It focuses on **what I produce**, **how I use it**, and **how it reduces risk** 
 > **At a glance**  
 > **Delivery:** requirements (BRD/FRD) · decision log · RAID (risks/issues) · SIT/UAT gates · go/no-go · runbook · hypercare  
 > **Sensitive products:** DPIA-style risk mapping · encryption & access control · evidence pack · provenance rules (AI vs Device vs Manual)
+
 > Want concrete examples? Jump to: [Real examples](#real-examples)
 
 ---
