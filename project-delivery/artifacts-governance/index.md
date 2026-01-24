@@ -814,7 +814,9 @@ Examples reflect real delivery work, described without confidential identifiers,
 - **Claims boundary record**
   - Intended use: wellness/informational
   - Explicit “not for diagnosis/treatment”
-  - Prohibited wording/UI patterns and “what users should not do with it”
+  - A short “safe wording” guide:
+    - words/labels we **avoid** because they sound medical (e.g., “diagnosis”, “detects”, “normal/abnormal”, “high risk”, urgent warnings)
+    - a clear “how to use it safely” note (informational only; not for emergencies or treatment decisions)
 - **AI feature card (one-pager)**
   - Inputs/outputs, limitations, supported OS/device range
   - Platform behavior differences (**iOS session-only** vs **Android stored+synced**)
@@ -857,7 +859,10 @@ Examples reflect real delivery work, described without confidential identifiers,
   - wording and disclaimers on AI screens
   - correct labeling of results (what came from AI vs a device vs manual entry)
   - correct storage rules (Android saves AI results; iOS does not)
-  - correct sync rules (Android syncs saved AI results; iOS has no AI history to sync)
+  - correct sync rules:
+    - saved measurements sync to the user’s account and are visible on any signed-in device
+    - Android saves AI results into history (so they can sync like other saved items)
+    - iOS does not create AI history from iOS captures (AI is session-only on iOS)
 - Links to the user-facing “How to measure” pages (per platform): conditions, step-by-step guidance, and wellness disclaimers
 
 ---
@@ -914,7 +919,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 
 **Outcome (what success looked like)**
 - Stable device workflows with predictable failure handling and user guidance.
-- Support-ready documentation of known constraints (reduces “tribal knowledge” and recurring incidents).
+- Support-ready documentation of known constraints (reduces reliance on undocumented know-how and recurring incidents).
 - Clear user understanding of what each measurement represents (especially in trend views).
 - Confidence that “device measurement shown in the app” matches “what the device actually measured”.
 
@@ -985,7 +990,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 
 **Controls I enforced (how governance showed up)**
 - **Platform-accurate disclosures**
-  - Store reviewers and users see behavior that matches reality (e.g., Android stores AI numeric results; iOS does not).
+  - Apple App Store / Google Play review teams (and users) see behavior that matches reality (e.g., Android stores AI numeric results; iOS does not create AI history from iOS captures).
 - **Traceability**
   - When retention, sync, labels, device support, or location behavior changes, it triggers updates to:
     requirements → test plan → evidence/notes → release decision.
