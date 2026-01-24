@@ -798,7 +798,8 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 
 **Context (what I was delivering)**
 - A cross-platform mobile feature providing **camera-based, on-device wellness estimates** (e.g., stress / pulse / respiratory rate).
-- Platform policy differences that had to be implemented and communicated clearly:
+- Privacy-by-design constraint: **no upload or storage of camera media** (no photos/videos stored on servers).
+- Platform policy / product behavior differences that had to be implemented and communicated clearly:
   - **iOS:** AI results are **session-only** (not stored in history and **not shown in trend graphs**).
   - **Android:** AI numeric results are **stored in history and synced across signed-in devices**, with clear provenance labels.
 
@@ -806,27 +807,34 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 - Users interpreting an “estimate” as **diagnosis** or medical advice.
 - “Claims creep” via UI wording (labels, thresholds, alerts, or “normal/abnormal” language).
 - Confusion about **what a number represents** (AI estimate vs device reading vs manual entry).
+- Privacy claims not matching the implementation (e.g., accidentally persisting AI outputs, or accidentally logging camera media).
 - Unstable capture conditions (lighting/motion/device variability) producing misleading outputs.
 
 **Artifacts I produced (what existed in the project)**
-- **Claims boundary record**: intended use (wellness/informational) + explicit “not for diagnosis/treatment” + prohibited wording/UI patterns.
-- **AI feature card (one-pager)**:
+- **Claims boundary record**
+  - Intended use: wellness/informational
+  - Explicit “not for diagnosis/treatment”
+  - Prohibited wording/UI patterns and “what users should not do with it”
+- **AI feature card (one-pager)**
   - Inputs/outputs, limitations, supported OS/device range
   - Platform behavior differences (**iOS session-only** vs **Android stored+synced**)
-  - “Cannot estimate” rules and user guidance
-- **UX copy + labeling review pack**: screen text, help text, disclaimers, and “what to do next” guidance.
-- **Test scenarios for safety and interpretation**:
-  - Confirm no camera media upload/storage
-  - Confirm iOS AI results are not persisted or graphed
-  - Confirm Android history entries show **AI/Device/Manual** source labels and (for device readings) the **device model**
-  - Confirm per-item deletion behavior matches platform expectations
+  - “Cannot estimate” rules (when the app must refuse to show a number) + user guidance
+  - A simple “data handling summary” (camera media never stored; iOS AI results not retained; Android numeric results retained with labels)
+- **UX copy + labeling review pack**
+  - Screen text, help text, disclaimers, and “what to do next” guidance (especially for users with symptoms)
+- **Test scenarios for safety and interpretation**
+  - Confirm **no camera media upload/storage**
+  - Confirm iOS AI results are **not persisted** and **excluded from trend graphs**
+  - Confirm Android history entries show **AI / Device / Manual** source labels and (for device readings) the **device model**
+  - Confirm per-item deletion behavior aligns with platform expectations (e.g., deleting a saved measurement removes it consistently)
 
 **Controls I enforced (how governance showed up)**
 - **Provenance + clarity by design**
-  - Android: every saved measurement clearly states source (**AI / Device / Manual**) and device details where applicable.
-  - iOS: the user experience reinforces “session-only” (no history entries, no trending of AI).
+  - Android: every saved measurement states source (**AI / Device / Manual**) and shows device details where applicable.
+  - iOS: AI is visually “session-only” (no history entry, no trending of AI).
+  - Both platforms: graphs/history separate **Device vs Manual** clearly, so users don’t mix sources by accident.
 - **Safe failure behavior**
-  - If conditions are poor, the app returns **“Cannot estimate right now” + actionable guidance** (e.g., lighting, stillness, camera position) instead of a misleading number.
+  - If conditions are poor, the app returns **“Cannot estimate right now” + actionable guidance** (lighting, stillness, camera position) instead of a misleading number.
 - **Change gating**
   - Any change to AI outputs, labels, storage/sync behavior, or user messaging required a logged decision + test evidence before release.
 
@@ -834,6 +842,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 - The AI feature stayed inside a **wellness boundary** across releases (no accidental strengthening of claims).
 - Users could reliably distinguish **AI estimates vs device readings vs manual entries**.
 - Failures were handled predictably, reducing the risk of misleading results in poor conditions.
+- Privacy-by-design remained true in practice: camera media not stored; retention rules matched the platform behavior.
 
 **Public-safe artifacts I can show**
 - An anonymized screenshot set showing:
@@ -851,6 +860,8 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 **Context (what I was delivering)**
 - Integration of multiple **Bluetooth medical peripherals** into a mobile workflow:
   pairing → measurement → capture → display → sync (where applicable) → support handling.
+- The device set included common categories such as:
+  - Blood pressure monitor, pulse oximeter, thermometer, weight scale, portable ECG (heart rate), and a multi-parameter device.
 - Coexistence of multiple data sources:
   - **Device readings** (Bluetooth)
   - **Manual entries** (for unsupported devices)
@@ -858,26 +869,28 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 
 **Key risks I managed**
 - **Data integrity** across the chain (device → app UI → backend sync where relevant).
-- **Compatibility boundaries**:
-  - OS minimums and per-device constraints (e.g., device support limited to specific Android versions).
+- **Compatibility boundaries**
+  - OS minimums per platform (iOS and Android)
+  - Per-device constraints (e.g., some peripherals only supported on specific Android versions)
 - Reliability of pairing and non-happy paths (disconnects, retries, timeouts, permissions, background/foreground behavior).
 - Confusion in trends/graphs if sources are mixed without clear labeling.
 
 **Artifacts I produced (what existed in the project)**
-- **Compatibility matrix**:
-  - Supported OS ranges (e.g., iOS minimum version; Android minimum version)
-  - Supported device models and any constraints/known limitations
-- **Integration notes / runbook**:
+- **Compatibility matrix**
+  - Supported OS ranges per platform
+  - Supported device models and known constraints/limitations
+  - User guidance for “supported vs not supported” cases
+- **Integration notes / runbook**
   - Pairing steps, permissions, retry/timeout logic, known failure cases
-  - Data mapping rules and how the UI should present the reading
-- **SIT scenarios (end-to-end + failure modes)**:
+  - Data mapping rules (units, fields, timestamps, naming) and how the UI should present the reading
+- **SIT scenarios (end-to-end + failure modes)**
   - Disconnect mid-reading, invalid payload, permission denied, offline sync, background restrictions
-- **Regression scope definition**:
-  - “What must be re-tested every release” for device flows and graphs (device vs manual, and on Android also AI provenance)
+- **Regression scope definition**
+  - “What must be re-tested every release” for device flows, graphs, and provenance rules
 
 **Controls I enforced (how governance showed up)**
 - **Source-of-truth rules**
-  - Graphs and history clearly separate **Device vs Manual** (both platforms),
+  - Graphs/history clearly separate **Device vs Manual** (both platforms),
   - and on Android also include **AI** entries with explicit provenance.
 - **Non-happy-path testing is mandatory**
   - Disconnect/timeout/permission behavior tested and documented (not left to chance).
@@ -888,6 +901,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 - Stable device workflows with predictable failure handling and user guidance.
 - Support-ready documentation of known constraints (reduces “tribal knowledge” and recurring incidents).
 - Clear user understanding of what each measurement represents (especially in trend views).
+- Confidence that “device measurement shown in the app” matches “what the device actually measured”.
 
 **Public-safe artifacts I can show**
 - An anonymized compatibility table (device type + OS range + major constraints).
@@ -904,49 +918,63 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
   - Teleconsultation + chat
   - Bluetooth device measurements + manual entry
   - On-device AI wellness estimates (platform-specific retention rules)
+- A **clinical validation program** to support a credible, evidence-based release decision for device workflows (and to make review discussions factual rather than opinion-based).
 
 **Key risks I managed**
 - Privacy/security controls not matching what the product actually does (especially storage/sync differences across platforms).
 - Missing traceability from “what we say” → “what we built” → “what we tested” → “what we ship”.
+- Weak validation (no protocol, no structured capture, no reproducible analysis).
 - High sensitivity areas that must be explicit and auditable:
   - Where data is stored (EU/EEA hosting)
   - Encryption (in transit and at rest)
   - Access controls
   - Consent flows (e.g., national identifier required for specific purchases)
-  - Location behavior (one-time vs event-based sharing)
+  - Location behavior (one-time vs optional event-based sharing)
 
 **Artifacts I produced (what existed in the project)**
-- **Data handling map (by feature + platform)**:
-  - AI: on-device processing; no media upload/storage; iOS session-only; Android saved/synced numeric results with provenance.
+- **Data handling map (by feature + platform)**
+  - AI: on-device processing; no camera media upload/storage; iOS session-only; Android saved/synced numeric results with provenance.
   - Measurements: device vs manual differentiation in UI/graphs; Android adds AI provenance in history.
-  - Location: iOS one-time “Send Location”; Android optional event-based location sharing.
-- **Consent-flow specifications** for sensitive purchase steps:
-  - National identifier required for doctor-session purchase flows with explicit consent prompt
+  - Location: iOS one-time “Send Location”; Android optional event-based location sharing (opt-in).
+- **Consent-flow specifications for sensitive steps**
+  - National identifier required for doctor-session purchase flows with an explicit consent prompt
   - Optional identifier for invoices in device purchases
   - “Manage consent” path for withdrawal/deletion where applicable
-- **Security controls checklist** aligned to release:
+- **Security controls checklist aligned to release**
   - TLS in transit, application-layer AES-256 at rest, RBAC/need-to-know access
   - Sub-processor inventory and disclosures (platform-specific where needed)
-- **Release-readiness pack**:
+  - Retention / deletion behaviors (including “what can be deleted in-app vs by support request”, where applicable)
+- **Clinical validation dossier (evidence package)**
+  - Validation plan/protocol: scope, methods, success metrics, acceptance thresholds, boundaries/exclusions
+  - Structured capture templates + a reproducible analysis workflow (so results can be re-run consistently)
+  - Results summary written in plain language for decision-makers and reviewers
+  - Version / configuration applicability notes (what the evidence covers, and what it does not cover)
+- **Release-readiness pack**
   - Go/no-go checklist, regression evidence, known limitations and user guidance, and “what changed” notes for reviewers.
 
 **Controls I enforced (how governance showed up)**
 - **Platform-accurate disclosures**
   - Store reviewers and users see behavior that matches reality (e.g., Android stores AI numeric results; iOS does not).
 - **Traceability**
-  - When retention, sync, labels, or location behavior changes, it triggers an update to:
+  - When retention, sync, labels, device support, or location behavior changes, it triggers updates to:
     requirements → test plan → evidence/notes → release decision.
-- **Least-surprise user experience**
-  - Clear explanations of what is stored, what is synced, and how users can delete or request deletion where applicable.
+- **Data minimization + user control**
+  - Sensitive identifiers are requested only when required for a specific flow (with explicit consent and a manage/withdraw path).
+  - Location is user-initiated or opt-in (not continuous/background tracking).
+- **Evidence-based go/no-go**
+  - Validation results and known limitations are used to decide readiness, not “gut feel”.
+  - Integration integrity checks confirm that what the device reports is what the app records and displays.
 
 **Outcome (what success looked like)**
 - Releases are defendable: “what we claim” matches “what we built” and “what we tested”.
 - Reduced compliance and review risk by making boundaries explicit (especially cross-platform differences).
 - Sensitive flows (identifier consent, location sharing) implemented with clear user control and documented behavior.
+- Validation became repeatable: protocol + structured capture + reproducible analysis → consistent decision-making.
 
 **Public-safe artifacts I can show**
 - A high-level anonymized table: feature → data stored? → where? → user controls → platform differences.
 - An anonymized go/no-go checklist excerpt (storage/sync labels, consent prompts, location behavior, encryption checks).
+- A high-level anonymized validation summary table: device type → method → result summary → conditions/versions covered.
 
 ---
 
