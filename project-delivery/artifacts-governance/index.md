@@ -781,7 +781,7 @@ Before shipping AI-related changes, I treat these as minimum checks:
 ## Real examples from my delivery work {#real-examples}
 
 The sections below show how the artifacts and controls on this page translate into real delivery outcomes.  
-Examples are written to be **anonymized** (no confidential identifiers) but still detailed enough to demonstrate how I work.
+Examples reflect real delivery work, described without confidential identifiers, while keeping enough technical and process detail to show how I operate.
 
 **On this section**
 - [Example 1 — AI feature boundaries and safe user experience](#ex1-ai-boundaries)
@@ -805,7 +805,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 
 **Key risks I managed**
 - Users interpreting an “estimate” as **diagnosis** or medical advice.
-- “Claims creep” via UI wording (labels, thresholds, alerts, or “normal/abnormal” language).
+- Risk that UI text could make a wellness estimate sound like a medical diagnosis (e.g., using ‘normal/abnormal’, warnings, or clinical-style labels).
 - Confusion about **what a number represents** (AI estimate vs device reading vs manual entry).
 - Privacy claims not matching the implementation (e.g., accidentally persisting AI outputs, or accidentally logging camera media).
 - Unstable capture conditions (lighting/motion/device variability) producing misleading outputs.
@@ -824,16 +824,19 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
   - Screen text, help text, disclaimers, and “what to do next” guidance (especially for users with symptoms)
 - **Test scenarios for safety and interpretation**
   - Confirm **no camera media upload/storage**
-  - Confirm iOS AI results are **not persisted** and **excluded from trend graphs**
-  - Confirm Android history entries show **AI / Device / Manual** source labels and (for device readings) the **device model**
+  - Confirm iOS AI results are session-only (not saved to history and not shown in trend graphs)
+  - Confirm Bluetooth device readings (saved measurements) show the source label = Device and include the device name and device model (both iOS and Android)
+  - Confirm Android AI results, when saved to history, are labeled as AI and follow the same provenance conventions (and deletion/sync rules) as other history items
+  - Confirm manual entries are clearly labeled as Manual (both iOS and Android)
   - Confirm per-item deletion behavior aligns with platform expectations (e.g., deleting a saved measurement removes it consistently)
   - Confirm telemetry/crash reporting is configured not to capture or transmit camera frames (media stays on-device)
 
 **Controls I enforced (how governance showed up)**
 - **Provenance + clarity by design**
-  - Android: every saved measurement states source (**AI / Device / Manual**) and shows device details where applicable.
-  - iOS: AI is visually “session-only” (no history entry, no trending of AI).
-  - Both platforms: graphs/history separate **Device vs Manual** clearly, so users don’t mix sources by accident.
+  - **Both iOS and Android (saved measurements):** every saved measurement shows its **source** (**Device** or **Manual**). For **Device** entries, the record also shows the **device name and device model**.
+  - **Android only (AI history):** AI numeric results are **saved** to history (and can sync across signed-in devices) and are clearly labeled as **AI**.
+  - **iOS only (AI session-only):** AI results are **session-only** (no history entry and not shown in trend graphs).
+  - **Trend views stay unambiguous:** graphs and history make it clear what is **Device** vs **Manual** (and on Android, **AI**), so users don’t mix sources by accident.
 - **Safe failure behavior**
   - If conditions are poor, the app returns **“Cannot estimate right now” + actionable guidance** (lighting, stillness, camera position) instead of a misleading number.
 - **Change gating**
@@ -850,7 +853,11 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
   - Android provenance labels (AI/Device/Manual) + deletion behavior
   - iOS session-only behavior (no AI history/trends)
   - “Cannot estimate” guidance screens
-- A short excerpt of an AI release checklist (copy review + provenance + storage/sync checks)
+- A short excerpt of an AI release checklist (the “before we ship” checks), covering:
+  - wording and disclaimers on AI screens
+  - correct labeling of results (what came from AI vs a device vs manual entry)
+  - correct storage rules (Android saves AI results; iOS does not)
+  - correct sync rules (Android syncs saved AI results; iOS has no AI history to sync)
 - Links to the user-facing “How to measure” pages (per platform): conditions, step-by-step guidance, and wellness disclaimers
 
 ---
