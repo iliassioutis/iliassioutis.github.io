@@ -10,9 +10,9 @@ title: Artifacts & governance
 This page explains the practical artifacts and governance controls I use to keep delivery aligned, transparent, and audit-ready — across both iterative (Agile) and stage-gate delivery.  
 It focuses on **what I produce**, **how I use it**, and **how it reduces risk** (scope, quality, security/privacy, and release readiness).
 
-> **30-second summary**  
-> I run delivery with: **BRD/FRD**, **decision log**, **RAID**, **SIT/UAT gates**, **go/no-go**, **runbook**, and **hypercare**.  
-> For sensitive products: **DPIA-style risk mapping**, **encryption & access control**, an **evidence pack**, and clear **provenance rules** (AI vs Device vs Manual).
+> **At a glance**  
+> **Delivery:** BRD/FRD · decision log · RAID · SIT/UAT gates · go/no-go · runbook · hypercare  
+> **Sensitive products:** DPIA-style risk mapping · encryption & access control · evidence pack · provenance rules (AI vs Device vs Manual)
 
 ---
 
