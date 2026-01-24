@@ -820,7 +820,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 - **AI feature card (one-pager)**
   - Inputs/outputs, limitations, supported OS/device range
   - Platform behavior differences (**iOS session-only** vs **Android stored+synced**)
-  - “Cannot estimate” rules (when the app must refuse to show a number) + user guidance
+  - “Cannot estimate right now” rules (when the app must refuse to show a number) + user guidance
   - A simple “data handling summary” (camera media never stored; iOS AI results not retained; Android numeric results retained with labels)
 - **UX copy + labeling review pack**
   - Screen text, help text, disclaimers, and “what to do next” guidance (especially for users with symptoms)
@@ -854,7 +854,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 - An anonymized screenshot set showing:
   - Android provenance labels (AI/Device/Manual) + deletion behavior
   - iOS session-only behavior (no AI history/trends)
-  - “Cannot estimate” guidance screens
+  - “Cannot estimate right now” guidance screens
 - A short excerpt of an AI release checklist (the “before we ship” checks), covering:
   - wording and disclaimers on AI screens
   - correct labeling of results (what came from AI vs a device vs manual entry)
@@ -873,7 +873,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 
 **Context (what I was delivering)**
 - Integration of multiple **Bluetooth medical peripherals** into a mobile workflow:
-  pairing → measurement → capture → display → sync to the user’s account (so the same history is visible on both iOS and Android when signed in) → support handling.
+  pairing → measurement → capture → display → save locally → sync automatically to the user’s account (so the same history is visible on both iOS and Android when signed in) → support handling.
 - The device set included common categories such as:
   - Blood pressure monitor, pulse oximeter, thermometer, weight scale, portable ECG device (with a documented Android OS compatibility range), and a multi-parameter device.
 - Coexistence of multiple data sources:
@@ -902,7 +902,9 @@ Examples reflect real delivery work, described without confidential identifiers,
   - Disconnect during a measurement (Bluetooth drops before the reading completes)
   - Device sends an unreadable or incomplete reading (corrupted / missing values)
   - Required permissions are not granted (Bluetooth / location / notifications, depending on the feature)
-  - No internet connection when saving (the app stores locally first, then uploads/syncs when connectivity returns)
+  - No internet connection when saving:
+    - the measurement is saved locally on the phone first
+    - when internet returns, it syncs automatically to the user’s account so it appears on other signed-in devices (iOS + Android)
   - Phone OS limitations that can interrupt the flow (e.g., battery saver or OS stops background activity, so the app may pause syncing until the user opens it again)
 - **Regression scope definition**
   - “What must be re-tested every release” for device flows, graphs, and provenance rules
