@@ -827,6 +827,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
   - Confirm iOS AI results are **not persisted** and **excluded from trend graphs**
   - Confirm Android history entries show **AI / Device / Manual** source labels and (for device readings) the **device model**
   - Confirm per-item deletion behavior aligns with platform expectations (e.g., deleting a saved measurement removes it consistently)
+  - Confirm telemetry/crash reporting does not capture or transmit camera frames (media stays on-device)
 
 **Controls I enforced (how governance showed up)**
 - **Provenance + clarity by design**
@@ -850,6 +851,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
   - iOS session-only behavior (no AI history/trends)
   - “Cannot estimate” guidance screens
 - A short excerpt of an AI release checklist (copy review + provenance + storage/sync checks)
+- Links to the user-facing “How to measure” pages (per platform): conditions, step-by-step guidance, and wellness disclaimers
 
 ---
 
@@ -865,8 +867,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 - Coexistence of multiple data sources:
   - **Device readings** (Bluetooth)
   - **Manual entries** (for unsupported devices)
-  - **AI estimates** (camera-based; stored only on Android)
-
+  - **AI estimates** (camera-based; processed on-device on both platforms; numeric results retained in history only on Android, while iOS is session-only)
 **Key risks I managed**
 - **Data integrity** across the chain (device → app UI → backend sync where relevant).
 - **Compatibility boundaries**
@@ -906,6 +907,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 **Public-safe artifacts I can show**
 - An anonymized compatibility table (device type + OS range + major constraints).
 - An anonymized SIT scenario list used for device workflows and regression.
+- A user-facing device integration guide (pairing, permissions, common failures, supported models/OS boundaries).
 
 ---
 
@@ -919,6 +921,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
   - Bluetooth device measurements + manual entry
   - On-device AI wellness estimates (platform-specific retention rules)
 - A **clinical validation program** to support a credible, evidence-based release decision for device workflows (and to make review discussions factual rather than opinion-based).
+- Hospital-based validation over ~1 month with 27 participants (20–91), covering 6 Bluetooth device categories; produced a ~242-page evidence report and a reproducible Python analysis pipeline.
 
 **Key risks I managed**
 - Privacy/security controls not matching what the product actually does (especially storage/sync differences across platforms).
@@ -935,7 +938,7 @@ Examples are written to be **anonymized** (no confidential identifiers) but stil
 - **Data handling map (by feature + platform)**
   - AI: on-device processing; no camera media upload/storage; iOS session-only; Android saved/synced numeric results with provenance.
   - Measurements: device vs manual differentiation in UI/graphs; Android adds AI provenance in history.
-  - Location: iOS one-time “Send Location”; Android optional event-based location sharing (opt-in).
+  - Location: one-time “Send Location” on both platforms. Optional event-based sharing (opt-in) can be configured to attach location only during specific events (e.g., saving a measurement / starting a call / emergency action), with no continuous tracking.
 - **Consent-flow specifications for sensitive steps**
   - National identifier required for doctor-session purchase flows with an explicit consent prompt
   - Optional identifier for invoices in device purchases
