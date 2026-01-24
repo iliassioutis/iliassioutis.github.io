@@ -27,6 +27,7 @@ It focuses on **what I produce**, **how I use it**, and **how it reduces risk** 
 - [Privacy & security](#privacy-security)
 - [AI governance](#ai-governance)
 - [What strong governance looks like](#what-good-looks-like)
+- [Real examples from my delivery work](#real-examples)
 
 ---
 
