@@ -140,7 +140,7 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
 
   <div class="home-card">
     <h3>Jira-style workflow example</h3>
-    <p>A fictitious but realistic end-to-end Jira workflow showing how I structure epics, stories, QA gates, and releases.</p>
+    <p>A Jira-style end-to-end workflow built in a personal sandbox (fictitious tickets) to show how I structure epics, stories, QA gates, and releases.</p>
     <a href="/project-delivery/jira-workflow/">Read more →</a>
   </div>  
 </div>
