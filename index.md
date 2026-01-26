@@ -137,6 +137,12 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
     <p>BRD/FRD, RAID, RACI, UAT/SIT, change control, release readiness, privacy/security gates, evidence packs.</p>
     <a href="/project-delivery/artifacts-governance/">Read more →</a>
   </div>
+
+  <div class="home-card">
+    <h3>Jira-style workflow example</h3>
+    <p>A fictitious but realistic end-to-end Jira workflow showing how I structure epics, stories, QA gates, and releases.</p>
+    <a href="/project-delivery/jira-workflow/">Read more →</a>
+  </div>  
 </div>
 
 ---
@@ -196,6 +202,7 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
   - 🔎 [Agile & Scrum](/project-delivery/agile-scrum/)
   - 🔎 [Waterfall / stage-gate](/project-delivery/waterfall-stage-gate/)
   - 🔎 [Artifacts & governance](/project-delivery/artifacts-governance/)
+  - 🔎 [Jira-style workflow example](/project-delivery/jira-workflow/)
 - 🧪 Clinical validation
   - 🔎 [Jump to section on this page](#clinical-validation)
   - 🧾 [Open details page](/clinical-validation)
