@@ -84,31 +84,14 @@ Below is the complete ticket tree created in the sandbox.
 
 ## 1) Intake / Epic
 
-<div style="clear: both; margin: 16px 0;">
-  <a href="/assets/img/jira-workflow/00-pages-index.PNG" target="_blank" rel="noopener" style="display:block;">
-    <img src="/assets/img/jira-workflow/00-pages-index.PNG"
-         alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
-         style="width: 100%; max-width: 1100px; height: auto; display:block; margin: 0 auto;
-                border: 1px solid #e5e7eb; border-radius: 8px;">
-  </a>
-  <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px; text-align:center;">
-    Click the image to open full size.
-  </p>
-</div>
-
-
-
-<div style="clear: both; margin: 16px 0;">
-  <a href="/assets/img/jira-workflow/00-pages-index.PNG" target="_blank" rel="noopener" style="display:block;">
-    <img src="/assets/img/jira-workflow/00-pages-index.PNG"
-         alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
-         style="width: 100%; max-width: 1400px; height: auto; display:block; margin: 0 auto;
-                border: 1px solid #e5e7eb; border-radius: 8px;">
-  </a>
-  <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px; text-align:center;">
-    Click the image to open full size.
-  </p>
-</div>
+<a href="/assets/img/jira-workflow/00-pages-index.PNG" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/00-pages-index.PNG"
+       alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click the image to open full size.
+</p>
 
 
 ### EPIC: Contactless vitals session + history (v1.8.0)
