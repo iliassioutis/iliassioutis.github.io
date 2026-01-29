@@ -84,10 +84,14 @@ Below is the complete ticket tree created in the sandbox.
 
 ## 1) Intake / Epic
 
-<img src="/assets/img/jira-workflow/00-pages-index.PNG"
-     alt="Sandbox Pages — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
-     style="max-width: 900px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px;">
-
+<a href="/assets/img/jira-workflow/00-pages-index.PNG" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/00-pages-index.PNG"
+       alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click the image to open full size.
+</p>
 
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
