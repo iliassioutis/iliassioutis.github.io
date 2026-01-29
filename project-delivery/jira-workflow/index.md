@@ -7,11 +7,11 @@ title: Jira-style workflow example
 🏠 <a href="/">Back to homepage</a> · <a href="/project-delivery/">Project Delivery &amp; Methods</a>
 </blockquote>
 
-This page shows a **Jira-style end-to-end delivery workflow** using a **personal sandbox** with **fictitious tickets** (no client data).  
-The goal is to demonstrate **how I structure delivery**, how artifacts connect, and how I run **quality and release governance** in a tool most teams recognize.
+This page shows a **Jira-style end-to-end delivery workflow** using a **personal sandbox** with **fully fictitious tickets** (no client data).  
+It demonstrates how I structure delivery from **requirements → build → QA/SIT → UAT → release**, including how artifacts connect and how I run **release readiness**.
 
-> **Important note**  
-> I’m not claiming Jira administrator expertise. This is a realistic Jira-style example that mirrors how I run delivery across Jira. 
+> **Note**  
+> This is not a Jira-administrator showcase. It’s a practical Jira-style example that reflects how I manage delivery, quality gates, and governance. 
 
 ---
 
