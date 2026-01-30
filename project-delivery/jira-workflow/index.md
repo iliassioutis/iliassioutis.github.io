@@ -268,7 +268,11 @@ Below is the complete ticket tree created in the sandbox.
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 <a id="raid--full-page-screenshots"></a>
-### RAID log — full page (screenshots)
+### RAID log (Risks, Assumptions, Issues, Dependencies) — full page (screenshots)
+- Risks: what might go wrong
+- Assumptions: what we’re relying on being true
+- Issues: active problems to resolve
+- Dependencies: external inputs/blockers
 
 <!-- RAID log chunk 1 -->
 <a href="/assets/img/jira-workflow/03-raid-01.png" target="_blank" rel="noopener">
@@ -406,7 +410,7 @@ Below is the complete ticket tree created in the sandbox.
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 <a id="figma--full-page-screenshots"></a>
-### Figma walkthrough — full page (screenshots)
+### Figma walkthrough (prototype + UX notes) — full page (screenshots)
 
 <!-- Figma walkthrough chunk 1 -->
 <a href="/assets/img/jira-workflow/05-figma-01.png" target="_blank" rel="noopener">
