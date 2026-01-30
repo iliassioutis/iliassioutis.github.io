@@ -95,14 +95,23 @@ Below is the complete ticket tree created in the sandbox.
 - [Figma walkthrough](#figma--full-page-screenshots)
 
 <a id="pages-index"></a>
+### Pages index (Jira sandbox)
+
 <a href="/assets/img/jira-workflow/00-pages-index.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/00-pages-index.png"
        alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
+
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
   Click the image to open full size.
 </p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+</p>
+
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 <a id="brd-business-requirements-document--full-page-screenshots"></a>
 ### BRD (Business Requirements Document) — full page (screenshots)
