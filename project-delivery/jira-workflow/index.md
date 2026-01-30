@@ -365,6 +365,38 @@ Below is the complete ticket tree created in the sandbox.
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
+### Figma — full page (screenshots)
+
+<!-- Figma chunk 1 -->
+<a href="/assets/img/jira-workflow/05-figma-01.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/05-figma-01.png"
+       alt="Figma — E-01 (chunk 1)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Figma chunk 2 -->
+<a href="/assets/img/jira-workflow/05-figma-02.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/05-figma-02.png"
+       alt="Figma — E-01 (chunk 2)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Figma chunk 3 -->
+<a href="/assets/img/jira-workflow/05-figma-03.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/05-figma-03.png"
+       alt="Figma — E-01 (chunk 3)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click any image to open it full size.
+</p>
+
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
 
