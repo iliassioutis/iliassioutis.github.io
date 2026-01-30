@@ -84,6 +84,7 @@ Below is the complete ticket tree created in the sandbox.
 
 ## 1) Intake / Epic
 
+<a id="artifact-nav"></a>
 ### Artifact navigation (this section)
 
 - [Pages index](#pages-index)
@@ -164,6 +165,10 @@ Below is the complete ticket tree created in the sandbox.
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
   Click any image to open it full size.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to artifact navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
@@ -247,6 +252,10 @@ Below is the complete ticket tree created in the sandbox.
   Click any image to open it full size.
 </p>
 
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+</p>
+
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 <a id="raid--full-page-screenshots"></a>
@@ -286,6 +295,10 @@ Below is the complete ticket tree created in the sandbox.
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
   Click any image to open it full size.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to artifact navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
@@ -377,6 +390,10 @@ Below is the complete ticket tree created in the sandbox.
   Click any image to open it full size.
 </p>
 
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+</p>
+
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 <a id="figma--full-page-screenshots"></a>
@@ -408,6 +425,10 @@ Below is the complete ticket tree created in the sandbox.
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
   Click any image to open it full size.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to artifact navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
