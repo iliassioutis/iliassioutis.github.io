@@ -85,14 +85,18 @@ Below is the complete ticket tree created in the sandbox.
 ## 1) Intake / Epic
 
 <a id="artifact-nav"></a>
-### Artifact navigation (this section)
+### Navigation (this section)
 
+**Pages artifacts**
 - [Pages index](#pages-index)
 - [BRD](#brd-business-requirements-document--full-page-screenshots)
 - [FRD](#frd-functional-requirements-document--full-page-screenshots)
 - [RAID log](#raid--full-page-screenshots)
 - [User journeys](#journeys--full-page-screenshots)
 - [Figma walkthrough](#figma--full-page-screenshots)
+
+**Jira views**
+- [Sprint 0 — Backlog view](#sprint0-backlog)
 
 <a id="pages-index"></a>
 ### Pages index (Jira sandbox)
@@ -108,7 +112,7 @@ Below is the complete ticket tree created in the sandbox.
 </p>
 
 <p style="margin: 6px 0 18px 0;">
-  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+  <a href="#artifact-nav">↑ Back to navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
@@ -177,7 +181,7 @@ Below is the complete ticket tree created in the sandbox.
 </p>
 
 <p style="margin: 6px 0 18px 0;">
-  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+  <a href="#artifact-nav">↑ Back to navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
@@ -262,7 +266,7 @@ Below is the complete ticket tree created in the sandbox.
 </p>
 
 <p style="margin: 6px 0 18px 0;">
-  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+  <a href="#artifact-nav">↑ Back to navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
@@ -311,7 +315,7 @@ Below is the complete ticket tree created in the sandbox.
 </p>
 
 <p style="margin: 6px 0 18px 0;">
-  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+  <a href="#artifact-nav">↑ Back to navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
@@ -404,7 +408,7 @@ Below is the complete ticket tree created in the sandbox.
 </p>
 
 <p style="margin: 6px 0 18px 0;">
-  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+  <a href="#artifact-nav">↑ Back to navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
@@ -441,10 +445,54 @@ Below is the complete ticket tree created in the sandbox.
 </p>
 
 <p style="margin: 6px 0 18px 0;">
-  <a href="#artifact-nav">↑ Back to artifact navigation</a>
+  <a href="#artifact-nav">↑ Back to navigation</a>
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
+<a id="sprint0-backlog"></a>
+### Sprint 0 — Backlog view (overview + close-ups)
+
+<!-- Wide overview (scrollable container so it stays readable) -->
+<div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #e5e7eb; border-radius:8px; padding:8px; margin:12px 0;">
+  <a href="/assets/img/jira-workflow/06-sprint0-backlog-wide.png" target="_blank" rel="noopener">
+    <img src="/assets/img/jira-workflow/06-sprint0-backlog-wide.png"
+         alt="Jira backlog — Sprint 0 (wide overview)"
+         loading="lazy"
+         style="width:1800px; max-width:none; display:block;">
+  </a>
+</div>
+
+<p style="font-size:0.95em; color:#6b7280; margin-top:6px;">
+  Scroll horizontally to read. Click the image to open full size.
+</p>
+
+<!-- Close-up crops (readable without zooming) -->
+<h4 style="margin-top:18px;">Close-up — items & summary (left)</h4>
+<a href="/assets/img/jira-workflow/06-sprint0-backlog-left.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/06-sprint0-backlog-left.png"
+       alt="Jira backlog — Sprint 0 (close-up: items and summary)"
+       loading="lazy"
+       style="max-width:1400px; width:100%; border:1px solid #e5e7eb; border-radius:8px; display:block; margin:12px 0;">
+</a>
+
+<h4 style="margin-top:18px;">Close-up — status & estimates (right)</h4>
+<a href="/assets/img/jira-workflow/06-sprint0-backlog-right.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/06-sprint0-backlog-right.png"
+       alt="Jira backlog — Sprint 0 (close-up: status and estimates)"
+       loading="lazy"
+       style="max-width:1400px; width:100%; border:1px solid #e5e7eb; border-radius:8px; display:block; margin:12px 0;">
+</a>
+
+<p style="font-size:0.95em; color:#6b7280; margin-top:6px;">
+  Click any image to open it full size.
+</p>
+
+<p style="margin:6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to navigation</a>
+</p>
+
+<hr style="margin:24px 0; border:0; border-top:1px solid #e5e7eb;">
 
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
