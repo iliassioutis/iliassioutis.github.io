@@ -84,8 +84,8 @@ Below is the complete ticket tree created in the sandbox.
 
 ## 1) Intake / Epic
 
-<a href="/assets/img/jira-workflow/00-pages-index.PNG" target="_blank" rel="noopener">
-  <img src="/assets/img/jira-workflow/00-pages-index.PNG"
+<a href="/assets/img/jira-workflow/00-pages-index.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/00-pages-index.png"
        alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
