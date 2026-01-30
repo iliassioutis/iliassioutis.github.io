@@ -93,6 +93,67 @@ Below is the complete ticket tree created in the sandbox.
   Click the image to open full size.
 </p>
 
+### BRD (Business Requirements Document) — full page (screenshots)
+
+<!-- BRD chunk 1 -->
+<a href="/assets/img/jira-workflow/01-brd-01.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/01-brd-01.png"
+       alt="BRD — E-01 (chunk 1)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- BRD chunk 2 -->
+<a href="/assets/img/jira-workflow/01-brd-02.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/01-brd-02.png"
+       alt="BRD — E-01 (chunk 2)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- BRD chunk 3 -->
+<a href="/assets/img/jira-workflow/01-brd-03.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/01-brd-03.png"
+       alt="BRD — E-01 (chunk 3)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- BRD chunk 4 -->
+<a href="/assets/img/jira-workflow/01-brd-04.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/01-brd-04.png"
+       alt="BRD — E-01 (chunk 4)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- BRD chunk 5 -->
+<a href="/assets/img/jira-workflow/01-brd-05.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/01-brd-05.png"
+       alt="BRD — E-01 (chunk 5)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- BRD chunk 6 -->
+<a href="/assets/img/jira-workflow/01-brd-06.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/01-brd-06.png"
+       alt="BRD — E-01 (chunk 6)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- BRD chunk 7 -->
+<a href="/assets/img/jira-workflow/01-brd-07.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/01-brd-07.png"
+       alt="BRD — E-01 (chunk 7)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click any image to open full size.
+</p>
 
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
