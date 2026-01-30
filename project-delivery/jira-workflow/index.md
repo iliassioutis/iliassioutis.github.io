@@ -152,7 +152,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
-  Click any image to open full size.
+  Click any image to open it full size.
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
@@ -232,9 +232,10 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
-  Click any image to open full size.
+  Click any image to open it full size.
 </p>
 
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
