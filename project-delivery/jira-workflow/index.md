@@ -84,6 +84,16 @@ Below is the complete ticket tree created in the sandbox.
 
 ## 1) Intake / Epic
 
+### Artifact navigation (this section)
+
+- [Pages index](#pages-index)
+- [BRD](#brd-business-requirements-document--full-page-screenshots)
+- [FRD](#frd-functional-requirements-document--full-page-screenshots)
+- [RAID log](#raid--full-page-screenshots)
+- [User journeys](#journeys--full-page-screenshots)
+- [Figma walkthrough](#figma--full-page-screenshots)
+
+<a id="pages-index"></a>
 <a href="/assets/img/jira-workflow/00-pages-index.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/00-pages-index.png"
        alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
@@ -93,6 +103,7 @@ Below is the complete ticket tree created in the sandbox.
   Click the image to open full size.
 </p>
 
+<a id="brd-business-requirements-document--full-page-screenshots"></a>
 ### BRD (Business Requirements Document) — full page (screenshots)
 
 <!-- BRD chunk 1 -->
@@ -157,6 +168,7 @@ Below is the complete ticket tree created in the sandbox.
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
+<a id="frd-functional-requirements-document--full-page-screenshots"></a>
 ### FRD (Functional Requirements Document) — full page (screenshots)
 
 <!-- FRD chunk 1 -->
@@ -237,36 +249,37 @@ Below is the complete ticket tree created in the sandbox.
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
-### RAID — full page (screenshots)
+<a id="raid--full-page-screenshots"></a>
+### RAID log — full page (screenshots)
 
-<!-- RAID chunk 1 -->
+<!-- RAID log chunk 1 -->
 <a href="/assets/img/jira-workflow/03-raid-01.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/03-raid-01.png"
-       alt="RAID — E-01 (chunk 1)"
+       alt="RAID log — E-01 (chunk 1)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- RAID chunk 2 -->
+<!-- RAID log chunk 2 -->
 <a href="/assets/img/jira-workflow/03-raid-02.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/03-raid-02.png"
-       alt="RAID — E-01 (chunk 2)"
+       alt="RAID log — E-01 (chunk 2)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- RAID chunk 3 -->
+<!-- RAID log chunk 3 -->
 <a href="/assets/img/jira-workflow/03-raid-03.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/03-raid-03.png"
-       alt="RAID — E-01 (chunk 3)"
+       alt="RAID log — E-01 (chunk 3)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- RAID chunk 4 -->
+<!-- RAID log chunk 4 -->
 <a href="/assets/img/jira-workflow/03-raid-04.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/03-raid-04.png"
-       alt="RAID — E-01 (chunk 4)"
+       alt="RAID log — E-01 (chunk 4)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
@@ -277,84 +290,85 @@ Below is the complete ticket tree created in the sandbox.
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
-### Journeys — full page (screenshots)
+<a id="journeys--full-page-screenshots"></a>
+### User journeys — full page (screenshots)
 
-<!-- Journeys chunk 1 -->
+<!-- User journeys chunk 1 -->
 <a href="/assets/img/jira-workflow/04-journeys-01.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-01.png"
-       alt="Journeys — E-01 (chunk 1)"
+       alt="User journeys — E-01 (chunk 1)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 2 -->
+<!-- User journeys chunk 2 -->
 <a href="/assets/img/jira-workflow/04-journeys-02.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-02.png"
-       alt="Journeys — E-01 (chunk 2)"
+       alt="User journeys — E-01 (chunk 2)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 3 -->
+<!-- User journeys chunk 3 -->
 <a href="/assets/img/jira-workflow/04-journeys-03.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-03.png"
-       alt="Journeys — E-01 (chunk 3)"
+       alt="User journeys — E-01 (chunk 3)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 4 -->
+<!-- User journeys chunk 4 -->
 <a href="/assets/img/jira-workflow/04-journeys-04.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-04.png"
-       alt="Journeys — E-01 (chunk 4)"
+       alt="User journeys — E-01 (chunk 4)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 5 -->
+<!-- User journeys chunk 5 -->
 <a href="/assets/img/jira-workflow/04-journeys-05.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-05.png"
-       alt="Journeys — E-01 (chunk 5)"
+       alt="User journeys — E-01 (chunk 5)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 6 -->
+<!-- User journeys chunk 6 -->
 <a href="/assets/img/jira-workflow/04-journeys-06.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-06.png"
-       alt="Journeys — E-01 (chunk 6)"
+       alt="User journeys — E-01 (chunk 6)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 7 -->
+<!-- User journeys chunk 7 -->
 <a href="/assets/img/jira-workflow/04-journeys-07.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-07.png"
-       alt="Journeys — E-01 (chunk 7)"
+       alt="User journeys — E-01 (chunk 7)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 8 -->
+<!-- User journeys chunk 8 -->
 <a href="/assets/img/jira-workflow/04-journeys-08.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-08.png"
-       alt="Journeys — E-01 (chunk 8)"
+       alt="User journeys — E-01 (chunk 8)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 9 -->
+<!-- User journeys chunk 9 -->
 <a href="/assets/img/jira-workflow/04-journeys-09.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-09.png"
-       alt="Journeys — E-01 (chunk 9)"
+       alt="User journeys — E-01 (chunk 9)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Journeys chunk 10 -->
+<!-- User journeys chunk 10 -->
 <a href="/assets/img/jira-workflow/04-journeys-10.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/04-journeys-10.png"
-       alt="Journeys — E-01 (chunk 10)"
+       alt="User journeys — E-01 (chunk 10)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
@@ -365,28 +379,29 @@ Below is the complete ticket tree created in the sandbox.
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
-### Figma — full page (screenshots)
+<a id="figma--full-page-screenshots"></a>
+### Figma walkthrough — full page (screenshots)
 
-<!-- Figma chunk 1 -->
+<!-- Figma walkthrough chunk 1 -->
 <a href="/assets/img/jira-workflow/05-figma-01.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/05-figma-01.png"
-       alt="Figma — E-01 (chunk 1)"
+       alt="Figma walkthrough — E-01 (chunk 1)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Figma chunk 2 -->
+<!-- Figma walkthrough chunk 2 -->
 <a href="/assets/img/jira-workflow/05-figma-02.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/05-figma-02.png"
-       alt="Figma — E-01 (chunk 2)"
+       alt="Figma walkthrough — E-01 (chunk 2)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
-<!-- Figma chunk 3 -->
+<!-- Figma walkthrough chunk 3 -->
 <a href="/assets/img/jira-workflow/05-figma-03.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/05-figma-03.png"
-       alt="Figma — E-01 (chunk 3)"
+       alt="Figma walkthrough — E-01 (chunk 3)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
