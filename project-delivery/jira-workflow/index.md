@@ -277,7 +277,93 @@ Below is the complete ticket tree created in the sandbox.
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
+### Journeys — full page (screenshots)
 
+<!-- Journeys chunk 1 -->
+<a href="/assets/img/jira-workflow/04-journeys-01.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-01.png"
+       alt="Journeys — E-01 (chunk 1)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 2 -->
+<a href="/assets/img/jira-workflow/04-journeys-02.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-02.png"
+       alt="Journeys — E-01 (chunk 2)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 3 -->
+<a href="/assets/img/jira-workflow/04-journeys-03.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-03.png"
+       alt="Journeys — E-01 (chunk 3)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 4 -->
+<a href="/assets/img/jira-workflow/04-journeys-04.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-04.png"
+       alt="Journeys — E-01 (chunk 4)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 5 -->
+<a href="/assets/img/jira-workflow/04-journeys-05.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-05.png"
+       alt="Journeys — E-01 (chunk 5)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 6 -->
+<a href="/assets/img/jira-workflow/04-journeys-06.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-06.png"
+       alt="Journeys — E-01 (chunk 6)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 7 -->
+<a href="/assets/img/jira-workflow/04-journeys-07.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-07.png"
+       alt="Journeys — E-01 (chunk 7)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 8 -->
+<a href="/assets/img/jira-workflow/04-journeys-08.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-08.png"
+       alt="Journeys — E-01 (chunk 8)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 9 -->
+<a href="/assets/img/jira-workflow/04-journeys-09.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-09.png"
+       alt="Journeys — E-01 (chunk 9)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Journeys chunk 10 -->
+<a href="/assets/img/jira-workflow/04-journeys-10.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/04-journeys-10.png"
+       alt="Journeys — E-01 (chunk 10)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click any image to open it full size.
+</p>
+
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
