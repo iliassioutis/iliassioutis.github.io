@@ -96,10 +96,11 @@ Below is the complete ticket tree created in the sandbox.
 - [Figma walkthrough](#figma--full-page-screenshots)
 
 **Jira views**
+- [Epic — SCRUM-6](#epic-scrum-6)
 - [Sprint 0 — Backlog view](#sprint0-backlog)
 
 <a id="pages-index"></a>
-### Pages index (Jira sandbox)
+### Pages index — Jira Pages list (BRD / FRD / RAID / Journeys / Figma)
 
 <a href="/assets/img/jira-workflow/00-pages-index.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/00-pages-index.png"
@@ -436,6 +437,51 @@ Below is the complete ticket tree created in the sandbox.
 <a href="/assets/img/jira-workflow/05-figma-03.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/05-figma-03.png"
        alt="Figma walkthrough — E-01 (chunk 3)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click any image to open it full size.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to navigation</a>
+</p>
+
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
+<a id="epic-scrum-6"></a>
+### Epic — SCRUM-6: E-01 Digital health app release (fictitious) (screenshots)
+
+<!-- Epic chunk 1 -->
+<a href="/assets/img/jira-workflow/07-epic-scrum-6-01.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/07-epic-scrum-6-01.png"
+       alt="Epic SCRUM-6 — overview and description (chunk 1)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Epic chunk 2 -->
+<a href="/assets/img/jira-workflow/07-epic-scrum-6-02.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/07-epic-scrum-6-02.png"
+       alt="Epic SCRUM-6 — child work items list (chunk 2)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Epic chunk 3 -->
+<a href="/assets/img/jira-workflow/07-epic-scrum-6-03.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/07-epic-scrum-6-03.png"
+       alt="Epic SCRUM-6 — linked work items and details (chunk 3)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+</a>
+
+<!-- Epic chunk 4 -->
+<a href="/assets/img/jira-workflow/07-epic-scrum-6-04.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/07-epic-scrum-6-04.png"
+       alt="Epic SCRUM-6 — fix version and metadata (chunk 4)"
        loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
