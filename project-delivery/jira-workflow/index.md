@@ -99,11 +99,23 @@ Below is the complete ticket tree created in the sandbox.
 - [Epic — SCRUM-6](#epic-scrum-6)
 - [Feature — SCRUM-5](#feature-scrum-5)
 - [Sprint 0 — Backlog view](#sprint0-backlog)
+- [Sprint 1 — Backlog view](#sprint1-backlog)
 
 **Sprint 0 stories**
 - [S-01 — SCRUM-7: Define scope + requirements](#sprint0-scrum-7)
 - [S-02 — SCRUM-8: Requirements & user journeys](#sprint0-scrum-8)
 - [S-03 — SCRUM-9: UX/UI wireframes + prototype](#sprint0-scrum-9)
+
+**Sprint 1 work items**
+- [S-04 — SCRUM-10: On-device AI wellness estimates integration](#sprint1-scrum-10)
+- [S-05 — SCRUM-11: Bluetooth device ingestion + data integrity checks](#sprint1-scrum-11)
+- [S-06 — SCRUM-12: Secure backend + APIs](#sprint1-scrum-12)
+- [S-07 — SCRUM-13: Privacy & security controls](#sprint1-scrum-13)
+- [S-08 — SCRUM-14: Test plan + SIT](#sprint1-scrum-14)
+- [S-09 — SCRUM-15: UAT plan + sign-off pack](#sprint1-scrum-15)
+- [S-10 — SCRUM-16: Release checklist + monitoring + hypercare plan](#sprint1-scrum-16)
+- [BUG-01 — SCRUM-109: Android BLE reconnection unstable](#sprint1-scrum-109)
+- [BUG-02 — SCRUM-110: History API returns 500 when optional field missing](#sprint1-scrum-110)
 
 <a id="pages-index"></a>
 ### Pages index — Jira Pages list (BRD / FRD / RAID / Journeys / Figma)
@@ -732,6 +744,51 @@ Below is the complete ticket tree created in the sandbox.
 </p>
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
+<a id="sprint1-backlog"></a>
+### Sprint 1 — Backlog view (overview + close-ups)
+
+<!-- Wide overview (scrollable container so it stays readable) -->
+<div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #e5e7eb; border-radius:8px; padding:8px; margin:12px 0;">
+  <a href="/assets/img/jira-workflow/10-sprint1-backlog-wide.png" target="_blank" rel="noopener">
+    <img src="/assets/img/jira-workflow/10-sprint1-backlog-wide.png"
+         alt="Jira backlog — Sprint 1 (wide overview)"
+         loading="lazy"
+         style="width:1800px; max-width:none; display:block;">
+  </a>
+</div>
+
+<p style="font-size:0.95em; color:#6b7280; margin-top:6px;">
+  Scroll horizontally to read. Click the image to open full size.
+</p>
+
+<!-- Close-up crops (readable without zooming) -->
+<h4 style="margin-top:18px;">Close-up — items list (left)</h4>
+<a href="/assets/img/jira-workflow/10-sprint1-backlog-left.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/10-sprint1-backlog-left.png"
+       alt="Jira backlog — Sprint 1 (close-up: work items list)"
+       loading="lazy"
+       style="max-width:1400px; width:100%; border:1px solid #e5e7eb; border-radius:8px; display:block; margin:12px 0;">
+</a>
+
+<h4 style="margin-top:18px;">Close-up — statuses & estimates (right)</h4>
+<a href="/assets/img/jira-workflow/10-sprint1-backlog-right.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/10-sprint1-backlog-right.png"
+       alt="Jira backlog — Sprint 1 (close-up: statuses and estimates)"
+       loading="lazy"
+       style="max-width:1400px; width:100%; border:1px solid #e5e7eb; border-radius:8px; display:block; margin:12px 0;">
+</a>
+
+<p style="font-size:0.95em; color:#6b7280; margin-top:6px;">
+  Click any image to open it full size.
+</p>
+
+<p style="margin:6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to navigation</a>
+</p>
+
+<hr style="margin:24px 0; border:0; border-top:1px solid #e5e7eb;">
+
 
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
