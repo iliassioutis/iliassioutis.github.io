@@ -101,6 +101,14 @@ Below is the complete ticket tree created in the sandbox.
 - [Sprint 0 — Backlog view](#sprint0-backlog)
 - [Sprint 1 — Backlog view](#sprint1-backlog)
 
+**Backlog RAID work items (Jira)**
+- [RAID R-01 — SCRUM-23: Bluetooth compatibility (supported device list + test matrix)](#backlog-scrum-23)
+- [RAID R-02 — SCRUM-24: On-device AI may fail (“cannot estimate” + user guidance)](#backlog-scrum-24)
+- [RAID R-03 — SCRUM-25: Privacy risk (accidental logging/storage of camera media or identifiers)](#backlog-scrum-25)
+- [RAID R-04 — SCRUM-26: Backend performance degradation under peak usage (teleconsult/chat/uploads)](#backlog-scrum-26)
+- [RAID I-01 — SCRUM-27: Android Bluetooth reconnection unstable after background/resume] (#backlog-scrum-27)
+- [RAID D-02 — SCRUM-28: Use provenance labels (AI / Device / Manual) everywhere](#backlog-scrum-28)
+
 **Sprint 0 stories**
 - [S-01 — SCRUM-7: Define scope + requirements](#sprint0-scrum-7)
 - [S-02 — SCRUM-8: Requirements & user journeys](#sprint0-scrum-8)
@@ -1271,6 +1279,24 @@ Below is the complete ticket tree created in the sandbox.
   <a href="#artifact-nav">↑ Back to navigation</a>
 </p>
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
+<a id="backlog-scrum-23"></a>
+### Backlog — RAID R-01 (SCRUM-23): Bluetooth compatibility (screenshots)
+
+<a id="backlog-scrum-24"></a>
+### Backlog — RAID R-02 (SCRUM-24): On-device AI may fail (“cannot estimate” + user guidance) (screenshots)
+
+<a id="backlog-scrum-25"></a>
+### Backlog — RAID R-03 (SCRUM-25): Privacy risk (accidental logging/storage of camera media or identifiers) (screenshots)
+
+<a id="backlog-scrum-26"></a>
+### Backlog — RAID R-04 (SCRUM-26): Backend performance degradation under peak usage (teleconsult/chat/uploads) (screenshots)
+
+<a id="backlog-scrum-27"></a>
+### Backlog — RAID I-01 (SCRUM-27): Android Bluetooth reconnection unstable after background/resume (screenshots)
+
+<a id="backlog-scrum-28"></a>
+### Backlog — RAID D-02 (SCRUM-28): Use provenance labels (AI / Device / Manual) everywhere (screenshots)
 
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
