@@ -91,7 +91,7 @@ Below is the complete ticket tree created in the sandbox.
 - [Pages index](#pages-index)
 - [BRD](#brd-business-requirements-document--full-page-screenshots)
 - [FRD](#frd-functional-requirements-document--full-page-screenshots)
-- [RAID log](#raid--full-page-screenshots)
+- [RAID log](#raid-log-risks-assumptions-issues-dependencies--full-page-screenshots)
 - [User journeys](#journeys--full-page-screenshots)
 - [Figma walkthrough](#figma--full-page-screenshots)
 
@@ -105,6 +105,7 @@ Below is the complete ticket tree created in the sandbox.
 <a href="/assets/img/jira-workflow/00-pages-index.png" target="_blank" rel="noopener">
   <img src="/assets/img/jira-workflow/00-pages-index.png"
        alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
+       loading="lazy"
        style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
@@ -272,7 +273,7 @@ Below is the complete ticket tree created in the sandbox.
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
-<a id="raid--full-page-screenshots"></a>
+<a id="raid-log-risks-assumptions-issues-dependencies--full-page-screenshots"></a>
 ### RAID log (Risks, Assumptions, Issues, Dependencies) — full page (screenshots)
 - Risks: what might go wrong
 - Assumptions: what we’re relying on being true
