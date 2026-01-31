@@ -106,7 +106,7 @@ Below is the complete ticket tree created in the sandbox.
 - [RAID R-02 — SCRUM-24: On-device AI may fail (“cannot estimate” + user guidance)](#backlog-scrum-24)
 - [RAID R-03 — SCRUM-25: Privacy risk (accidental logging/storage of camera media or identifiers)](#backlog-scrum-25)
 - [RAID R-04 — SCRUM-26: Backend performance degradation under peak usage (teleconsult/chat/uploads)](#backlog-scrum-26)
-- [RAID I-01 — SCRUM-27: Android Bluetooth reconnection unstable after background/resume] (#backlog-scrum-27)
+- [RAID I-01 — SCRUM-27: Android Bluetooth reconnection unstable after background/resume](#backlog-scrum-27)
 - [RAID D-02 — SCRUM-28: Use provenance labels (AI / Device / Manual) everywhere](#backlog-scrum-28)
 
 **Sprint 0 stories**
