@@ -43,6 +43,9 @@ This page lists peer-reviewed journal articles from my PhD/postdoc research peri
   Dispersed fluorescence spectroscopy of primary and secondary alkoxy radicals (PDF)
 </a>
 
+- 📄 <a href="/assets/pdfs/papers/2008-renner-teller-spin-orbit-vibronic-coupling-linear-triatomic-pi-shell.pdf" target="_blank" rel="noopener noreferrer">
+  Renner–Teller and spin–orbit vibronic coupling effects in linear triatomic molecules with a half-filled π shell (PDF)
+</a>
 
 ---
 
