@@ -120,11 +120,11 @@ Below is the complete ticket tree created in the sandbox.
 <a id="pages-index"></a>
 ### Pages index — Jira Pages list (BRD / FRD / RAID / Journeys / Figma)
 
-<a href="/assets/img/jira-workflow/00-pages-index.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/00-pages-index.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/00-pages-index.png"
        alt="Sandbox Pages index — BRD, FRD, RAID Log, User Journeys, Figma walkthrough"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
@@ -141,59 +141,59 @@ Below is the complete ticket tree created in the sandbox.
 ### BRD (Business Requirements Document) — full page (screenshots)
 
 <!-- BRD chunk 1 -->
-<a href="/assets/img/jira-workflow/01-brd-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/01-brd-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/01-brd-01.png"
        alt="BRD — E-01 (chunk 1)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- BRD chunk 2 -->
-<a href="/assets/img/jira-workflow/01-brd-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/01-brd-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/01-brd-02.png"
        alt="BRD — E-01 (chunk 2)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- BRD chunk 3 -->
-<a href="/assets/img/jira-workflow/01-brd-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/01-brd-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/01-brd-03.png"
        alt="BRD — E-01 (chunk 3)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- BRD chunk 4 -->
-<a href="/assets/img/jira-workflow/01-brd-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/01-brd-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/01-brd-04.png"
        alt="BRD — E-01 (chunk 4)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- BRD chunk 5 -->
-<a href="/assets/img/jira-workflow/01-brd-05.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/01-brd-05.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/01-brd-05.png"
        alt="BRD — E-01 (chunk 5)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- BRD chunk 6 -->
-<a href="/assets/img/jira-workflow/01-brd-06.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/01-brd-06.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/01-brd-06.png"
        alt="BRD — E-01 (chunk 6)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- BRD chunk 7 -->
-<a href="/assets/img/jira-workflow/01-brd-07.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/01-brd-07.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/01-brd-07.png"
        alt="BRD — E-01 (chunk 7)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
@@ -210,75 +210,75 @@ Below is the complete ticket tree created in the sandbox.
 ### FRD (Functional Requirements Document) — full page (screenshots)
 
 <!-- FRD chunk 1 -->
-<a href="/assets/img/jira-workflow/02-frd-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-01.png"
        alt="FRD — E-01 (chunk 1)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- FRD chunk 2 -->
-<a href="/assets/img/jira-workflow/02-frd-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-02.png"
        alt="FRD — E-01 (chunk 2)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- FRD chunk 3 -->
-<a href="/assets/img/jira-workflow/02-frd-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-03.png"
        alt="FRD — E-01 (chunk 3)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- FRD chunk 4 -->
-<a href="/assets/img/jira-workflow/02-frd-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-04.png"
        alt="FRD — E-01 (chunk 4)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- FRD chunk 5 -->
-<a href="/assets/img/jira-workflow/02-frd-05.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-05.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-05.png"
        alt="FRD — E-01 (chunk 5)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- FRD chunk 6 -->
-<a href="/assets/img/jira-workflow/02-frd-06.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-06.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-06.png"
        alt="FRD — E-01 (chunk 6)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- FRD chunk 7 -->
-<a href="/assets/img/jira-workflow/02-frd-07.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-07.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-07.png"
        alt="FRD — E-01 (chunk 7)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- FRD chunk 8 -->
-<a href="/assets/img/jira-workflow/02-frd-08.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-08.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-08.png"
        alt="FRD — E-01 (chunk 8)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- FRD chunk 9 -->
-<a href="/assets/img/jira-workflow/02-frd-09.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/02-frd-09.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/02-frd-09.png"
        alt="FRD — E-01 (chunk 9)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
@@ -299,35 +299,35 @@ Below is the complete ticket tree created in the sandbox.
 - Dependencies: external inputs/blockers
 
 <!-- RAID log chunk 1 -->
-<a href="/assets/img/jira-workflow/03-raid-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/03-raid-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/03-raid-01.png"
        alt="RAID log — E-01 (chunk 1)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- RAID log chunk 2 -->
-<a href="/assets/img/jira-workflow/03-raid-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/03-raid-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/03-raid-02.png"
        alt="RAID log — E-01 (chunk 2)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- RAID log chunk 3 -->
-<a href="/assets/img/jira-workflow/03-raid-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/03-raid-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/03-raid-03.png"
        alt="RAID log — E-01 (chunk 3)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- RAID log chunk 4 -->
-<a href="/assets/img/jira-workflow/03-raid-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/03-raid-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/03-raid-04.png"
        alt="RAID log — E-01 (chunk 4)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
@@ -344,83 +344,83 @@ Below is the complete ticket tree created in the sandbox.
 ### User journeys — full page (screenshots)
 
 <!-- User journeys chunk 1 -->
-<a href="/assets/img/jira-workflow/04-journeys-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-01.png"
        alt="User journeys — E-01 (chunk 1)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 2 -->
-<a href="/assets/img/jira-workflow/04-journeys-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-02.png"
        alt="User journeys — E-01 (chunk 2)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 3 -->
-<a href="/assets/img/jira-workflow/04-journeys-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-03.png"
        alt="User journeys — E-01 (chunk 3)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 4 -->
-<a href="/assets/img/jira-workflow/04-journeys-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-04.png"
        alt="User journeys — E-01 (chunk 4)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 5 -->
-<a href="/assets/img/jira-workflow/04-journeys-05.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-05.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-05.png"
        alt="User journeys — E-01 (chunk 5)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 6 -->
-<a href="/assets/img/jira-workflow/04-journeys-06.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-06.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-06.png"
        alt="User journeys — E-01 (chunk 6)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 7 -->
-<a href="/assets/img/jira-workflow/04-journeys-07.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-07.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-07.png"
        alt="User journeys — E-01 (chunk 7)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 8 -->
-<a href="/assets/img/jira-workflow/04-journeys-08.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-08.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-08.png"
        alt="User journeys — E-01 (chunk 8)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 9 -->
-<a href="/assets/img/jira-workflow/04-journeys-09.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-09.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-09.png"
        alt="User journeys — E-01 (chunk 9)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- User journeys chunk 10 -->
-<a href="/assets/img/jira-workflow/04-journeys-10.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/04-journeys-10.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/04-journeys-10.png"
        alt="User journeys — E-01 (chunk 10)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
@@ -437,27 +437,27 @@ Below is the complete ticket tree created in the sandbox.
 ### Figma walkthrough (prototype + UX notes) — full page (screenshots)
 
 <!-- Figma walkthrough chunk 1 -->
-<a href="/assets/img/jira-workflow/05-figma-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/05-figma-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/05-figma-01.png"
        alt="Figma walkthrough — E-01 (chunk 1)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- Figma walkthrough chunk 2 -->
-<a href="/assets/img/jira-workflow/05-figma-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/05-figma-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/05-figma-02.png"
        alt="Figma walkthrough — E-01 (chunk 2)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- Figma walkthrough chunk 3 -->
-<a href="/assets/img/jira-workflow/05-figma-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/05-figma-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/05-figma-03.png"
        alt="Figma walkthrough — E-01 (chunk 3)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
@@ -474,35 +474,35 @@ Below is the complete ticket tree created in the sandbox.
 ### Epic — SCRUM-6: E-01 Digital health app release (fictitious) (screenshots)
 
 <!-- Epic chunk 1 -->
-<a href="/assets/img/jira-workflow/07-epic-scrum-6-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/07-epic-scrum-6-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/07-epic-scrum-6-01.png"
        alt="Epic SCRUM-6 — overview and description (chunk 1)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- Epic chunk 2 -->
-<a href="/assets/img/jira-workflow/07-epic-scrum-6-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/07-epic-scrum-6-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/07-epic-scrum-6-02.png"
        alt="Epic SCRUM-6 — child work items list (chunk 2)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- Epic chunk 3 -->
-<a href="/assets/img/jira-workflow/07-epic-scrum-6-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/07-epic-scrum-6-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/07-epic-scrum-6-03.png"
        alt="Epic SCRUM-6 — linked work items and details (chunk 3)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- Epic chunk 4 -->
-<a href="/assets/img/jira-workflow/07-epic-scrum-6-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/07-epic-scrum-6-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/07-epic-scrum-6-04.png"
        alt="Epic SCRUM-6 — fix version and metadata (chunk 4)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
@@ -519,27 +519,27 @@ Below is the complete ticket tree created in the sandbox.
 ### Feature — SCRUM-5: F-01 end-to-end delivery (screenshots)
 
 <!-- Feature chunk 1 -->
-<a href="/assets/img/jira-workflow/08-feature-scrum-5-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/08-feature-scrum-5-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/08-feature-scrum-5-01.png"
        alt="Feature SCRUM-5 — header and overview (chunk 1)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- Feature chunk 2 -->
-<a href="/assets/img/jira-workflow/08-feature-scrum-5-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/08-feature-scrum-5-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/08-feature-scrum-5-02.png"
        alt="Feature SCRUM-5 — parent and details (chunk 2)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <!-- Feature chunk 3 -->
-<a href="/assets/img/jira-workflow/08-feature-scrum-5-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/08-feature-scrum-5-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/08-feature-scrum-5-03.png"
        alt="Feature SCRUM-5 — fix version and metadata (chunk 3)"
        loading="lazy"
-       style="max-width: 1400px; width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
+       style="max-width: 1400px; width: 100%; height:auto; border: 1px solid #e5e7eb; border-radius: 8px; display:block; margin: 12px 0;">
 </a>
 
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
@@ -557,7 +557,7 @@ Below is the complete ticket tree created in the sandbox.
 
 <!-- Wide overview (scrollable container so it stays readable) -->
 <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #e5e7eb; border-radius:8px; padding:8px; margin:12px 0;">
-  <a href="/assets/img/jira-workflow/06-sprint0-backlog-wide.png" target="_blank" rel="noopener">
+  <a href="/assets/img/jira-workflow/06-sprint0-backlog-wide.png" target="_blank" rel="noopener noreferrer">
     <img src="/assets/img/jira-workflow/06-sprint0-backlog-wide.png"
          alt="Jira backlog — Sprint 0 (wide overview)"
          loading="lazy"
@@ -571,7 +571,7 @@ Below is the complete ticket tree created in the sandbox.
 
 <!-- Close-up crops (readable without zooming) -->
 <h4 style="margin-top:18px;">Close-up — items & summary (left)</h4>
-<a href="/assets/img/jira-workflow/06-sprint0-backlog-left.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/06-sprint0-backlog-left.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/06-sprint0-backlog-left.png"
        alt="Jira backlog — Sprint 0 (close-up: items and summary)"
        loading="lazy"
@@ -579,7 +579,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <h4 style="margin-top:18px;">Close-up — status & estimates (right)</h4>
-<a href="/assets/img/jira-workflow/06-sprint0-backlog-right.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/06-sprint0-backlog-right.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/06-sprint0-backlog-right.png"
        alt="Jira backlog — Sprint 0 (close-up: status and estimates)"
        loading="lazy"
@@ -600,7 +600,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 0 — S-01 (SCRUM-7): Define scope + requirements (BRD/FRD) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-01.png"
        alt="Sprint 0 story SCRUM-7 — header and description (chunk 1)"
        loading="lazy"
@@ -610,7 +610,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-02.png"
        alt="Sprint 0 story SCRUM-7 — acceptance criteria (chunk 2)"
        loading="lazy"
@@ -620,7 +620,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-03.png"
        alt="Sprint 0 story SCRUM-7 — subtasks and linked artifacts (chunk 3)"
        loading="lazy"
@@ -643,7 +643,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 0 — S-02 (SCRUM-8): Requirements & user journeys (patient + clinician flows) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-8-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-8-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-8-01.png"
        alt="Sprint 0 story SCRUM-8 — header and description (chunk 1)"
        loading="lazy"
@@ -653,7 +653,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-8-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-8-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-8-02.png"
        alt="Sprint 0 story SCRUM-8 — acceptance criteria (chunk 2)"
        loading="lazy"
@@ -663,7 +663,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-8-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-8-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-8-03.png"
        alt="Sprint 0 story SCRUM-8 — subtasks and metadata (chunk 3)"
        loading="lazy"
@@ -686,7 +686,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 0 — S-03 (SCRUM-9): UX/UI wireframes + clickable prototype (Figma) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-9-01.png"
        alt="Sprint 0 story SCRUM-9 — header and description (chunk 1)"
        loading="lazy"
@@ -696,7 +696,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-9-02.png"
        alt="Sprint 0 story SCRUM-9 — scope, deliverables, and acceptance criteria (chunk 2)"
        loading="lazy"
@@ -706,7 +706,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-9-03.png"
        alt="Sprint 0 story SCRUM-9 — definition of done, notes, and subtasks list (chunk 3)"
        loading="lazy"
@@ -716,7 +716,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 4 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-9-04.png"
        alt="Sprint 0 story SCRUM-9 — linked work items and Confluence content (chunk 4)"
        loading="lazy"
@@ -726,7 +726,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 5 -->
-<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-05.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-9-05.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-9-05.png"
        alt="Sprint 0 story SCRUM-9 — details and metadata (chunk 5)"
        loading="lazy"
@@ -750,7 +750,7 @@ Below is the complete ticket tree created in the sandbox.
 
 <!-- Wide overview (scrollable container so it stays readable) -->
 <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #e5e7eb; border-radius:8px; padding:8px; margin:12px 0;">
-  <a href="/assets/img/jira-workflow/10-sprint1-backlog-wide.png" target="_blank" rel="noopener">
+  <a href="/assets/img/jira-workflow/10-sprint1-backlog-wide.png" target="_blank" rel="noopener noreferrer">
     <img src="/assets/img/jira-workflow/10-sprint1-backlog-wide.png"
          alt="Jira backlog — Sprint 1 (wide overview)"
          loading="lazy"
@@ -764,7 +764,7 @@ Below is the complete ticket tree created in the sandbox.
 
 <!-- Close-up crops (readable without zooming) -->
 <h4 style="margin-top:18px;">Close-up — items list (left)</h4>
-<a href="/assets/img/jira-workflow/10-sprint1-backlog-left.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-backlog-left.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-backlog-left.png"
        alt="Jira backlog — Sprint 1 (close-up: work items list)"
        loading="lazy"
@@ -772,7 +772,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <h4 style="margin-top:18px;">Close-up — statuses & estimates (right)</h4>
-<a href="/assets/img/jira-workflow/10-sprint1-backlog-right.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-backlog-right.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-backlog-right.png"
        alt="Jira backlog — Sprint 1 (close-up: statuses and estimates)"
        loading="lazy"
@@ -793,7 +793,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — S-04 (SCRUM-10): On-device AI wellness estimates integration (no media stored) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-10-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-10-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-10-01.png"
        alt="Sprint 1 story SCRUM-10 — header, description, scope/notes, and acceptance criteria (chunk 1)"
        loading="lazy"
@@ -803,7 +803,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-10-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-10-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-10-02.png"
        alt="Sprint 1 story SCRUM-10 — subtasks list and linked work items (chunk 2)"
        loading="lazy"
@@ -813,7 +813,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-10-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-10-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-10-03.png"
        alt="Sprint 1 story SCRUM-10 — pinned fields, details, sprint, estimate, and fix version (chunk 3)"
        loading="lazy"
@@ -836,7 +836,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — S-05 (SCRUM-11): Bluetooth device ingestion + data integrity checks (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-11-01.png"
        alt="Sprint 1 story SCRUM-11 — header and description (chunk 1)"
        loading="lazy"
@@ -846,7 +846,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-11-02.png"
        alt="Sprint 1 story SCRUM-11 — acceptance criteria and notes/evidence (chunk 2)"
        loading="lazy"
@@ -856,7 +856,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-11-03.png"
        alt="Sprint 1 story SCRUM-11 — subtasks list (chunk 3)"
        loading="lazy"
@@ -866,7 +866,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 4 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-11-04.png"
        alt="Sprint 1 story SCRUM-11 — blocked-by link, linked work items, and Confluence content (chunk 4)"
        loading="lazy"
@@ -876,7 +876,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 5 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-05.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-11-05.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-11-05.png"
        alt="Sprint 1 story SCRUM-11 — pinned fields and details (chunk 5)"
        loading="lazy"
@@ -899,7 +899,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — S-06 (SCRUM-12): Secure backend + APIs (auth, encryption, audit logging) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-12-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-12-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-12-01.png"
        alt="Sprint 1 story SCRUM-12 — header, description, acceptance criteria, and notes/evidence (chunk 1)"
        loading="lazy"
@@ -909,7 +909,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-12-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-12-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-12-02.png"
        alt="Sprint 1 story SCRUM-12 — subtasks list (chunk 2)"
        loading="lazy"
@@ -919,7 +919,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-12-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-12-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-12-03.png"
        alt="Sprint 1 story SCRUM-12 — linked work items and Confluence content (chunk 3)"
        loading="lazy"
@@ -929,7 +929,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 4 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-12-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-12-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-12-04.png"
        alt="Sprint 1 story SCRUM-12 — details and metadata (chunk 4)"
        loading="lazy"
@@ -952,7 +952,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — S-07 (SCRUM-13): Privacy & security controls (consent, retention, deletion) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-13-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-13-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-13-01.png"
        alt="Sprint 1 story SCRUM-13 — header, description, and acceptance criteria (chunk 1)"
        loading="lazy"
@@ -962,7 +962,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-13-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-13-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-13-02.png"
        alt="Sprint 1 story SCRUM-13 — subtasks list (chunk 2)"
        loading="lazy"
@@ -972,7 +972,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-13-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-13-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-13-03.png"
        alt="Sprint 1 story SCRUM-13 — linked work items and Confluence content (chunk 3)"
        loading="lazy"
@@ -982,7 +982,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 4 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-13-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-13-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-13-04.png"
        alt="Sprint 1 story SCRUM-13 — details, sprint, estimate, and fix version (chunk 4)"
        loading="lazy"
@@ -1005,7 +1005,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — S-08 (SCRUM-14): Test plan + SIT (integration + regression) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-01.png"
        alt="Sprint 1 story SCRUM-14 — header and description (chunk 1)"
        loading="lazy"
@@ -1015,7 +1015,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-02.png"
        alt="Sprint 1 story SCRUM-14 — acceptance criteria continuation (chunk 2)"
        loading="lazy"
@@ -1025,7 +1025,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-03.png"
        alt="Sprint 1 story SCRUM-14 — subtasks list (chunk 3)"
        loading="lazy"
@@ -1035,7 +1035,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 4 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-04.png"
        alt="Sprint 1 story SCRUM-14 — linked work items and pinned fields (chunk 4)"
        loading="lazy"
@@ -1045,7 +1045,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 5 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-05.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-05.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-05.png"
        alt="Sprint 1 story SCRUM-14 — details, sprint, estimate, and fix version (chunk 5)"
        loading="lazy"
@@ -1068,7 +1068,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — S-09 (SCRUM-15): UAT plan + sign-off pack (release readiness) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-15-01.png"
        alt="Sprint 1 story SCRUM-15 — header, description, and acceptance criteria (chunk 1)"
        loading="lazy"
@@ -1078,7 +1078,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-15-02.png"
        alt="Sprint 1 story SCRUM-15 — notes and scope boundaries (chunk 2)"
        loading="lazy"
@@ -1088,7 +1088,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-15-03.png"
        alt="Sprint 1 story SCRUM-15 — subtasks list (chunk 3)"
        loading="lazy"
@@ -1098,7 +1098,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 4 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-15-04.png"
        alt="Sprint 1 story SCRUM-15 — linked work items and pinned fields (chunk 4)"
        loading="lazy"
@@ -1108,7 +1108,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 5 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-05.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-15-05.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-15-05.png"
        alt="Sprint 1 story SCRUM-15 — details, labels, sprint, estimate, and fix version (chunk 5)"
        loading="lazy"
@@ -1131,7 +1131,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — S-10 (SCRUM-16): Release checklist + monitoring + hypercare plan (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-16-01.png"
        alt="Sprint 1 story SCRUM-16 — header and description (chunk 1)"
        loading="lazy"
@@ -1141,7 +1141,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-16-02.png"
        alt="Sprint 1 story SCRUM-16 — acceptance criteria continuation and definition of done (chunk 2)"
        loading="lazy"
@@ -1151,7 +1151,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-16-03.png"
        alt="Sprint 1 story SCRUM-16 — subtasks list (chunk 3)"
        loading="lazy"
@@ -1161,7 +1161,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 4 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-04.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-04.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-16-04.png"
        alt="Sprint 1 story SCRUM-16 — linked work items and Confluence content (chunk 4)"
        loading="lazy"
@@ -1171,7 +1171,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 5 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-05.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-16-05.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-16-05.png"
        alt="Sprint 1 story SCRUM-16 — details, labels, sprint, estimate, and fix version (chunk 5)"
        loading="lazy"
@@ -1194,7 +1194,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — BUG-01 (SCRUM-109): Android BLE reconnection unstable after background/resume (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-109-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-109-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-109-01.png"
        alt="Sprint 1 bug SCRUM-109 — header and description (steps, expected vs actual, impact) (chunk 1)"
        loading="lazy"
@@ -1204,7 +1204,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-109-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-109-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-109-02.png"
        alt="Sprint 1 bug SCRUM-109 — linked work items and priority (chunk 2)"
        loading="lazy"
@@ -1214,7 +1214,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-109-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-109-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-109-03.png"
        alt="Sprint 1 bug SCRUM-109 — details, labels, sprint, and fix version (chunk 3)"
        loading="lazy"
@@ -1235,7 +1235,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Sprint 1 — BUG-02 (SCRUM-110): History API returns 500 when optional field missing (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-110-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-110-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-110-01.png"
        alt="Sprint 1 bug SCRUM-110 — header and description (where, steps, expected vs actual, acceptance) (chunk 1)"
        loading="lazy"
@@ -1245,7 +1245,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-110-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-110-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-110-02.png"
        alt="Sprint 1 bug SCRUM-110 — linked work items and priority (chunk 2)"
        loading="lazy"
@@ -1255,7 +1255,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/10-sprint1-scrum-110-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-110-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/10-sprint1-scrum-110-03.png"
        alt="Sprint 1 bug SCRUM-110 — details, labels, sprint, and fix version (chunk 3)"
        loading="lazy"
