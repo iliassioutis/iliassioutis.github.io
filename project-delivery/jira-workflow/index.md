@@ -97,6 +97,7 @@ Below is the complete ticket tree created in the sandbox.
 
 **Jira views**
 - [Epic — SCRUM-6](#epic-scrum-6)
+- [Feature — SCRUM-5](#feature-scrum-5)
 - [Sprint 0 — Backlog view](#sprint0-backlog)
 
 <a id="pages-index"></a>
