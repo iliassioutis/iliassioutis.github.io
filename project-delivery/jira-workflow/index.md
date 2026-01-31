@@ -1001,6 +1001,69 @@ Below is the complete ticket tree created in the sandbox.
 
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
+<a id="sprint1-scrum-14"></a>
+### Sprint 1 — S-08 (SCRUM-14): Test plan + SIT (integration + regression) (screenshots)
+
+<!-- Chunk 1 -->
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-01.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-01.png"
+       alt="Sprint 1 story SCRUM-14 — header and description (chunk 1)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Chunk 2 -->
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-02.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-02.png"
+       alt="Sprint 1 story SCRUM-14 — acceptance criteria continuation (chunk 2)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Chunk 3 -->
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-03.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-03.png"
+       alt="Sprint 1 story SCRUM-14 — subtasks list (chunk 3)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Chunk 4 -->
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-04.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-04.png"
+       alt="Sprint 1 story SCRUM-14 — linked work items and pinned fields (chunk 4)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Chunk 5 -->
+<a href="/assets/img/jira-workflow/10-sprint1-scrum-14-05.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/10-sprint1-scrum-14-05.png"
+       alt="Sprint 1 story SCRUM-14 — details, sprint, estimate, and fix version (chunk 5)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click any image to open it full size.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to navigation</a>
+</p>
+
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
 ### EPIC: Contactless vitals session + history (v1.8.0)
 **Purpose:** Deliver a privacy-safe measurement flow and history entry with clear provenance.
 
