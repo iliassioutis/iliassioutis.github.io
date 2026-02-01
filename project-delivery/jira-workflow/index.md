@@ -77,7 +77,7 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 - **Any status → QA / SIT** *(build deployed to test env; test execution starts)*
 - **Any status → UAT** *(business testing / stakeholder validation)*
 - **UAT → Done** *(Release / Close — the “release gate” transition, used for release sign-off)*
-- **Any status → Done** *(Done — manual closure for non-release outcomes such as: duplicate, won’t do, out of scope, superseded by another ticket, cancelled))*
+- **Any status → Done** *(Done — manual closure for non-release outcomes such as: duplicate, won’t do, out of scope, superseded by another ticket, cancelled)*
 
 **Typical delivery path I follow:**
 - To Do → In Progress → In Review → QA / SIT → UAT → Done *(Release / Close)*
