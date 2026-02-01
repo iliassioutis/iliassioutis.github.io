@@ -638,7 +638,7 @@ Below is the complete ticket tree created in the sandbox.
               display:block; margin: 12px 0;">
 </a>
 
-<h4 style="margin-top:18px;">Subtask details (selected examples)</h4>
+<h4 style="margin-top:18px;">Subtask details</h4>
 
 <!-- Subtask — SCRUM-17 -->
 <a id="sprint0-scrum-17"></a>
