@@ -61,32 +61,37 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 
 ## Workflow used (Jira-style)
 
-**Statuses (simple + realistic):**
-- **Backlog**
-- **Ready**
+**Statuses configured in the sandbox:**
+- **To Do**
 - **In Progress**
 - **In Review**
-- **QA/SIT**
+- **QA / SIT**
 - **UAT**
-- **Ready for Release**
 - **Done**
 
-**Typical transitions:**
-- Backlog → Ready (refined, sized, dependencies identified)
-- Ready → In Progress (pulled into a sprint / started)
-- In Progress → In Review (PR ready, peer review started)
-- In Review → QA/SIT (build delivered to test env, test execution begins)
-- QA/SIT → UAT (business sign-off/testing)
-- UAT → Ready for Release (release checklist completed)
-- Ready for Release → Done (released + notes captured)
+**Transitions (as configured in this Jira workflow):**
+- **Start → To Do** *(Create)*
+- **Any status → To Do** *(send back / re-open)*
+- **Any status → In Progress** *(start work)*
+- **Any status → In Review** *(ready for peer review / PR review)*
+- **Any status → QA / SIT** *(build deployed to test env; test execution starts)*
+- **Any status → UAT** *(business testing / stakeholder validation)*
+- **UAT → Done** *(Release / Close — the “release gate” transition)*
+- **Any status → Done** *(Done — used sparingly for housekeeping closure (e.g., duplicate, won’t do, out of scope, superseded by another ticket, cancelled) / non-release items)*
+
+**Typical delivery path I follow:**
+- To Do → In Progress → In Review → QA / SIT → UAT → Done *(Release / Close)*
+
+**Common “send-back” loops (when defects or gaps are found):**
+- In Review → In Progress *(review feedback)*
+- QA / SIT → In Progress *(fix defects)*
+- UAT → QA / SIT or In Progress *(UAT findings / adjustments)*
 
 ---
 
 ## End-to-end example tickets (sandbox)
 
 Below is a complete ticket tree created in the sandbox, showing how I structure delivery from intake through release and closure.
-
-## 1) Intake / Epic
 
 <a id="artifact-nav"></a>
 ### Navigation (this section)
