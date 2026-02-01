@@ -19,20 +19,21 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 
 - Intake → framing → approval to start work
 - Epic → stories/tasks → acceptance criteria → Definition of Done (DoD)
-- Sprint / Kanban execution with blockers and dependency handling
-- Quality gates (SIT / UAT) and release readiness
-- Post-release validation, hypercare, and closure
+- Sprint execution with blockers and dependency handling (via linked work items)
+- Quality gates (QA/SIT → UAT) and release readiness
+- Release checklist + go-live preparation + monitoring/hypercare **planning** (shown as tickets/checklists)
 
 ---
 
 ## Scenario used in the sandbox (fictitious)
 
-**Product context:** A regulated digital-health mobile app with secure backend  
-**Feature:** Add a “Contactless vitals (camera)” measurement session + history entry  
+**Product context:** A regulated digital-health mobile app (iOS/Android) with a secure backend  
+**Release goal:** Add a “Contactless vitals” journey: a camera-based measurement session that produces on-device AI wellness estimates and writes a history entry (derived results only, with provenance labels)
+**Supporting work included:** secure APIs (authentication + authorization + audit logging), Bluetooth device ingestion + data integrity checks, consent/retention/deletion controls, SIT + UAT planning, and a release readiness checklist  
 **Constraints:** privacy-by-design, no camera media storage, audit-ready changes, staged rollout  
 **Stakeholders:** Product, Mobile (iOS/Android), Backend, QA, Security/Privacy, Clinical/Validation, Support
 
-> This mirrors the type of work I’ve delivered in practice, but the tickets, names, and IDs here are fully fictitious.
+> This mirrors the type of delivery I’ve done in practice, but the tickets, names, and IDs here are fully fictitious.
 
 ---
 
@@ -40,16 +41,20 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 
 ### Issue types used
 - **Epic** (feature-level outcome)
+- **Feature** (optional grouping item; linked to the Epic in this sandbox)
 - **Story** (user-facing increment)
 - **Task** (engineering / implementation work)
 - **Bug** (defects)
-- **Spike** (timeboxed research / validation)
-- **Sub-task** (QA checklist items, test execution, release tasks)
+- **Sub-task** (checklists, QA execution, release tasks)
+
+> **Note:** Spikes are common in real delivery for timeboxed research, but this specific sandbox example focuses on story/task execution (so no dedicated Spike tickets are shown).
 
 ### Fields / conventions used (kept simple and realistic)
-- **Priority**, **Labels**, **Component** (iOS / Android / Backend / QA / Security)
-- **Fix Version / Release** (e.g., `v1.8.0`)
-- **Acceptance criteria** and **test notes** in the ticket description
+- **Priority**
+- **Labels** (used to tag area/ownership, e.g., backend, qa, security)
+- **Fix Version / Release tag** (e.g., `v1.8.0` as a planned release label in the sandbox)
+- **Acceptance criteria** and **test notes** inside the ticket description
+- **Linked work items** (e.g., blocks / is blocked by / relates to) for dependencies and RAID linkage
 - **Definition of Done** checklist (lightweight, consistent)
 
 ---
