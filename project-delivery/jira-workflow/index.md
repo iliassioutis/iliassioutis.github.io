@@ -111,6 +111,7 @@ Below is the complete ticket tree created in the sandbox.
 
 **Sprint 0 stories**
 - [S-01 — SCRUM-7: Define scope + requirements](#sprint0-scrum-7)
+- S-01a — SCRUM-17: Scope workshop + in-scope/out-of-scope agreed (subtask)](#sprint0-scrum-17)
 - [S-02 — SCRUM-8: Requirements & user journeys](#sprint0-scrum-8)
 - [S-03 — SCRUM-9: UX/UI wireframes + prototype](#sprint0-scrum-9)
 
@@ -637,6 +638,19 @@ Below is the complete ticket tree created in the sandbox.
               display:block; margin: 12px 0;">
 </a>
 
+<!-- Subtask detail example -->
+<a id="sprint0-scrum-17"></a>
+<h4 style="margin-top:18px;">Subtask — S-01a (SCRUM-17): Scope workshop + in-scope/out-of-scope agreed</h4>
+
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-17-01.png" target="_blank" rel="noopener noreferrer">
+  <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-17-01.png"
+       alt="Subtask SCRUM-17 — S-01a scope workshop: description and key fields"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
 <p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
   Click any image to open it full size.
 </p>
@@ -648,6 +662,7 @@ Below is the complete ticket tree created in the sandbox.
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 <a id="sprint0-scrum-8"></a>
+
 ### Sprint 0 — S-02 (SCRUM-8): Requirements & user journeys (patient + clinician flows) (screenshots)
 
 <!-- Chunk 1 -->
