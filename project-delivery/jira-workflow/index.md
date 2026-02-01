@@ -15,6 +15,17 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
  
 ---
 
+<p><strong>Optional: Live Jira sandbox</strong><br>
+If you have a Jira account and I’ve granted access, you can open the live sandbox here:
+<a href="JIRA_URL" target="_blank" rel="noopener noreferrer">Delivery Sandbox (Jira)</a>.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+If you need access, email me at <a href="mailto:isioutis@hotmail.com">isioutis@hotmail.com</a>.
+</p>
+
+---
+
 ## What this example covers
 
 - Intake → framing → approval to start work
