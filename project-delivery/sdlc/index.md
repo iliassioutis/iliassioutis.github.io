@@ -82,4 +82,13 @@ Typical outputs:
 - **Agile** when we benefit from fast feedback and iterative learning
 - **Stage-gate** when governance, external dependencies, or compliance require controlled approvals
 
-Next: 🔎 <a href="/project-delivery/agile-scrum/">Agile & Scrum</a> · <a href="/project-delivery/waterfall-stage-gate/">Waterfall / stage-gate</a>
+<hr>
+
+<p>
+  <strong>Next:</strong>
+  🔎 <a href="/project-delivery/agile-scrum/">Agile &amp; Scrum</a>
+  · <a href="/project-delivery/waterfall-stage-gate/">Waterfall / stage-gate</a>
+  · <a href="/project-delivery/artifacts-governance/">Artifacts &amp; governance</a>
+  · <a href="/project-delivery/">Back to Project Delivery &amp; Methods</a>
+</p>
+
