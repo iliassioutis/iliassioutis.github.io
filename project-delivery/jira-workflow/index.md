@@ -11,8 +11,8 @@ This page shows a **Jira-style end-to-end delivery workflow** using a **personal
 It demonstrates how I structure delivery from **requirements → build → QA/SIT → UAT → release**, including how artifacts connect and how I run **release readiness**.
 
 > **Note**  
-> This is not a Jira-administrator showcase. It’s a practical Jira-style example that reflects how I manage delivery, quality gates, and governance. 
-
+> This is not a Jira administrator showcase. It’s a practical Jira-style example that reflects how I manage delivery, quality gates, and governance.
+ 
 ---
 
 ## What this example covers
@@ -61,7 +61,7 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 - **Ready**
 - **In Progress**
 - **In Review**
-- **QA / SIT**
+- **QA/SIT**
 - **UAT**
 - **Ready for Release**
 - **Done**
@@ -77,7 +77,7 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 
 ---
 
-# End-to-end example tickets (sandbox)
+## End-to-end example tickets (sandbox)
 
 Below is a complete ticket tree created in the sandbox, showing how I structure delivery from intake through release and closure.
 
