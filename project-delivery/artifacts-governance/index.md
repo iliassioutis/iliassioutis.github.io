@@ -1015,8 +1015,6 @@ Examples reflect real delivery work, described without confidential identifiers,
 - An anonymized go/no-go checklist excerpt (history saving + cross-device sync behavior, source labels AI/Device/Manual, consent prompts, location behavior, encryption checks).
 - A high-level anonymized validation summary table: device type → method → result summary → scope of applicability (which app versions / device models / operating systems and which testing conditions the results apply to).
 
----
-
 <hr>
 
 <p>
