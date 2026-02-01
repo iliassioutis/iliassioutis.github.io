@@ -116,6 +116,7 @@ Below is the complete ticket tree created in the sandbox.
 - [S-01c — SCRUM-19: Draft FRD (functional requirements) (subtask)](#sprint0-scrum-19)
 - [S-01d — SCRUM-20: Create initial backlog (MVP vs later) (subtask)](#sprint0-scrum-20)
 - [S-01e — SCRUM-21: Start RAID log (risks/issues/assumptions/decisions) (subtask)](#sprint0-scrum-21)
+- [S-01f — SCRUM-22: Review + sign-off (stakeholder approval recorded) (subtask)](#sprint0-scrum-22)
 - [S-02 — SCRUM-8: Requirements & user journeys](#sprint0-scrum-8)
 - [S-03 — SCRUM-9: UX/UI wireframes + prototype](#sprint0-scrum-9)
 
@@ -724,6 +725,19 @@ Below is the complete ticket tree created in the sandbox.
 <a href="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-21-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-21-03.png"
        alt="Subtask SCRUM-21 — S-01e Start RAID log: details and labels"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Subtask — SCRUM-22 -->
+<a id="sprint0-scrum-22"></a>
+<h5 style="margin-top:14px;">Subtask — S-01f (SCRUM-22): Review + sign-off (stakeholder approval recorded)</h5>
+
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-22-01.png" target="_blank" rel="noopener noreferrer">
+  <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-22-01.png"
+       alt="Subtask SCRUM-22 — S-01f review and sign-off: description and labels"
        loading="lazy"
        style="max-width: 1400px; width: 100%;
               border: 1px solid #e5e7eb; border-radius: 8px;
