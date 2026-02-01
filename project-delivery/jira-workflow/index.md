@@ -1402,6 +1402,36 @@ Below is the complete ticket tree created in the sandbox.
 <a id="backlog-scrum-26"></a>
 ### Backlog — RAID R-04 (SCRUM-26): Backend performance degradation under peak usage (teleconsult/chat/uploads) (screenshots)
 
+<!-- Chunk 1 -->
+<a href="/assets/img/jira-workflow/11-backlog-scrum-26-01.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/11-backlog-scrum-26-01.png"
+       alt="Backlog RAID SCRUM-26 — header and description (risk, outcome, next actions) (chunk 1)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Chunk 2 -->
+<a href="/assets/img/jira-workflow/11-backlog-scrum-26-02.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/11-backlog-scrum-26-02.png"
+       alt="Backlog RAID SCRUM-26 — pinned fields and details (labels, parent, etc.) (chunk 2)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click any image to open it full size.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to navigation</a>
+</p>
+
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
 <a id="backlog-scrum-27"></a>
 ### Backlog — RAID I-01 (SCRUM-27): Android Bluetooth reconnection unstable after background/resume (screenshots)
 
