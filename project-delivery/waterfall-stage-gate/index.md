@@ -51,4 +51,15 @@ I use Waterfall/stage-gate when sequential planning and formal approvals reduce 
 ## Key principle
 Even in stage-gate, I aim to deliver in smaller increments where possible — it reduces risk and makes stakeholder feedback cheaper.
 
-Next: 🔎 <a href="/project-delivery/artifacts-governance/">Artifacts & governance</a>
+<hr>
+
+<p>
+  <strong>Next:</strong>
+  🔎 <a href="/project-delivery/artifacts-governance/">Artifacts &amp; governance</a>
+  · <a href="/project-delivery/sdlc/">SDLC in practice</a>
+  · <a href="/project-delivery/agile-scrum/">Agile &amp; Scrum</a>
+  · <a href="/project-delivery/">Back to Project Delivery &amp; Methods</a>
+</p>
+
+
+
