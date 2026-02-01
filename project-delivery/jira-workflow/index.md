@@ -17,7 +17,7 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 
 <p><strong>Optional: Live Jira sandbox</strong><br>
 If you have a Jira account and I’ve granted access, you can open the live sandbox here:
-<a href="JIRA_URL" target="_blank" rel="noopener noreferrer">Delivery Sandbox (Jira)</a>.
+<a href="https://isioutis.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog" target="_blank" rel="noopener noreferrer">Delivery Sandbox (Jira)</a>.
 </p>
 
 <p style="margin: 6px 0 18px 0;">
