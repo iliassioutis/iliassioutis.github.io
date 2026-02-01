@@ -29,6 +29,7 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 
 **Product context:** A regulated digital-health mobile app (iOS/Android) with a secure backend  
 **Release goal:** Add a “Contactless vitals” journey: a camera-based measurement session that produces on-device AI wellness estimates and writes a history entry (derived results only, with provenance labels)
+
 **Supporting work included:** secure APIs (authentication + authorization + audit logging), Bluetooth device ingestion + data integrity checks, consent/retention/deletion controls, SIT + UAT planning, and a release readiness checklist
 **Constraints:** privacy-by-design, no camera media storage, audit-ready changes, staged rollout
 **Stakeholders:** Product, Mobile (iOS/Android), Backend, QA, Security/Privacy, Clinical/Validation, Support
