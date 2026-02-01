@@ -215,6 +215,6 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
 ---
 
 <p style="margin:18px 0 0; font-size:0.9rem; color:#777; text-align:center;">
-  Last updated: Jan 2026
+  Last updated: Feb 2026
 </p>
 
