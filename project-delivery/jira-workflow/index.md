@@ -1359,6 +1359,46 @@ Below is the complete ticket tree created in the sandbox.
 <a id="backlog-scrum-25"></a>
 ### Backlog — RAID R-03 (SCRUM-25): Privacy risk (accidental logging/storage of camera media or identifiers) (screenshots)
 
+<!-- Chunk 1 -->
+<a href="/assets/img/jira-workflow/11-backlog-scrum-25-01.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/11-backlog-scrum-25-01.png"
+       alt="Backlog RAID task SCRUM-25 — header and description (risk, outcome, next actions) (chunk 1)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Chunk 2 -->
+<a href="/assets/img/jira-workflow/11-backlog-scrum-25-02.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/11-backlog-scrum-25-02.png"
+       alt="Backlog RAID task SCRUM-25 — linked work items and priority (chunk 2)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Chunk 3 -->
+<a href="/assets/img/jira-workflow/11-backlog-scrum-25-03.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/11-backlog-scrum-25-03.png"
+       alt="Backlog RAID task SCRUM-25 — details, labels, and metadata (chunk 3)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click any image to open it full size.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to navigation</a>
+</p>
+
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
 <a id="backlog-scrum-26"></a>
 ### Backlog — RAID R-04 (SCRUM-26): Backend performance degradation under peak usage (teleconsult/chat/uploads) (screenshots)
 
