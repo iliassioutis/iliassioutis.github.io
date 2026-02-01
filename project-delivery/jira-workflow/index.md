@@ -1281,7 +1281,37 @@ Below is the complete ticket tree created in the sandbox.
 <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 <a id="backlog-scrum-23"></a>
-### Backlog — RAID R-01 (SCRUM-23): Bluetooth compatibility (screenshots)
+### Backlog — RAID R-01 (SCRUM-23): Bluetooth compatibility (supported device list + test matrix) (screenshots)
+
+<!-- Chunk 1 -->
+<a href="/assets/img/jira-workflow/11-backlog-scrum-23-01.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/11-backlog-scrum-23-01.png"
+       alt="Backlog RAID item SCRUM-23 — header, description, and linked work items (chunk 1)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Chunk 2 -->
+<a href="/assets/img/jira-workflow/11-backlog-scrum-23-02.png" target="_blank" rel="noopener">
+  <img src="/assets/img/jira-workflow/11-backlog-scrum-23-02.png"
+       alt="Backlog RAID item SCRUM-23 — pinned fields and details (chunk 2)"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<p style="font-size: 0.95em; color: #6b7280; margin-top: 6px;">
+  Click any image to open it full size.
+</p>
+
+<p style="margin: 6px 0 18px 0;">
+  <a href="#artifact-nav">↑ Back to navigation</a>
+</p>
+
+<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
 
 <a id="backlog-scrum-24"></a>
 ### Backlog — RAID R-02 (SCRUM-24): On-device AI may fail (“cannot estimate” + user guidance) (screenshots)
