@@ -114,6 +114,7 @@ Below is the complete ticket tree created in the sandbox.
 - [S-01a — SCRUM-17: Scope workshop + in-scope/out-of-scope agreed (subtask)](#sprint0-scrum-17)
 - [S-01b — SCRUM-18: Draft BRD (business requirements) (subtask)](#sprint0-scrum-18)
 - [S-01c — SCRUM-19: Draft FRD (functional requirements) (subtask)](#sprint0-scrum-19)
+- [S-01d — SCRUM-20: Create initial backlog (MVP vs later) (subtask)](#sprint0-scrum-20)
 - [S-02 — SCRUM-8: Requirements & user journeys](#sprint0-scrum-8)
 - [S-03 — SCRUM-9: UX/UI wireframes + prototype](#sprint0-scrum-9)
 
@@ -675,6 +676,19 @@ Below is the complete ticket tree created in the sandbox.
 <a href="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-19-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-19-01.png"
        alt="Subtask SCRUM-19 — S-01c draft FRD: description, artifact link, and labels"
+       loading="lazy"
+       style="max-width: 1400px; width: 100%;
+              border: 1px solid #e5e7eb; border-radius: 8px;
+              display:block; margin: 12px 0;">
+</a>
+
+<!-- Subtask — SCRUM-20 -->
+<a id="sprint0-scrum-20"></a>
+<h5 style="margin-top:14px;">Subtask — S-01d (SCRUM-20): Create initial backlog (MVP vs later)</h5>
+
+<a href="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-20-01.png" target="_blank" rel="noopener noreferrer">
+  <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-20-01.png"
+       alt="Subtask SCRUM-20 — S-01d create initial backlog: description and labels (MVP vs later)"
        loading="lazy"
        style="max-width: 1400px; width: 100%;
               border: 1px solid #e5e7eb; border-radius: 8px;
