@@ -1284,7 +1284,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Backlog — RAID R-01 (SCRUM-23): Bluetooth compatibility (supported device list + test matrix) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-23-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-23-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-23-01.png"
        alt="Backlog RAID item SCRUM-23 — header, description, and linked work items (chunk 1)"
        loading="lazy"
@@ -1294,7 +1294,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-23-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-23-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-23-02.png"
        alt="Backlog RAID item SCRUM-23 — pinned fields and details (chunk 2)"
        loading="lazy"
@@ -1317,7 +1317,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Backlog — RAID R-02 (SCRUM-24): On-device AI may fail (“cannot estimate” + user guidance) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-24-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-24-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-24-01.png"
        alt="Backlog RAID task SCRUM-24 — header and description (risk, outcome, next actions) (chunk 1)"
        loading="lazy"
@@ -1327,7 +1327,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-24-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-24-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-24-02.png"
        alt="Backlog RAID task SCRUM-24 — linked work items and pinned fields (chunk 2)"
        loading="lazy"
@@ -1337,7 +1337,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-24-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-24-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-24-03.png"
        alt="Backlog RAID task SCRUM-24 — details, labels, and metadata (chunk 3)"
        loading="lazy"
@@ -1360,7 +1360,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Backlog — RAID R-03 (SCRUM-25): Privacy risk (accidental logging/storage of camera media or identifiers) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-25-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-25-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-25-01.png"
        alt="Backlog RAID task SCRUM-25 — header and description (risk, outcome, next actions) (chunk 1)"
        loading="lazy"
@@ -1370,7 +1370,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-25-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-25-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-25-02.png"
        alt="Backlog RAID task SCRUM-25 — linked work items and priority (chunk 2)"
        loading="lazy"
@@ -1380,7 +1380,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-25-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-25-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-25-03.png"
        alt="Backlog RAID task SCRUM-25 — details, labels, and metadata (chunk 3)"
        loading="lazy"
@@ -1403,7 +1403,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Backlog — RAID R-04 (SCRUM-26): Backend performance degradation under peak usage (teleconsult/chat/uploads) (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-26-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-26-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-26-01.png"
        alt="Backlog RAID SCRUM-26 — header and description (risk, outcome, next actions) (chunk 1)"
        loading="lazy"
@@ -1413,7 +1413,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-26-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-26-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-26-02.png"
        alt="Backlog RAID SCRUM-26 — pinned fields and details (labels, parent, etc.) (chunk 2)"
        loading="lazy"
@@ -1436,7 +1436,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Backlog — RAID I-01 (SCRUM-27): Android Bluetooth reconnection unstable after background/resume (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-27-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-27-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-27-01.png"
        alt="Backlog RAID item SCRUM-27 — header and description (issue, impact, repro notes, next actions) (chunk 1)"
        loading="lazy"
@@ -1446,7 +1446,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-27-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-27-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-27-02.png"
        alt="Backlog RAID item SCRUM-27 — linked work items and pinned fields (chunk 2)"
        loading="lazy"
@@ -1456,7 +1456,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-27-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-27-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-27-03.png"
        alt="Backlog RAID item SCRUM-27 — details, labels, and metadata (chunk 3)"
        loading="lazy"
@@ -1479,7 +1479,7 @@ Below is the complete ticket tree created in the sandbox.
 ### Backlog — RAID D-02 (SCRUM-28): Use provenance labels (AI / Device / Manual) everywhere (screenshots)
 
 <!-- Chunk 1 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-28-01.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-28-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-28-01.png"
        alt="Backlog RAID SCRUM-28 — header and description (decision/reason/next action) (chunk 1)"
        loading="lazy"
@@ -1489,7 +1489,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 2 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-28-02.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-28-02.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-28-02.png"
        alt="Backlog RAID SCRUM-28 — linked work items and pinned fields (chunk 2)"
        loading="lazy"
@@ -1499,7 +1499,7 @@ Below is the complete ticket tree created in the sandbox.
 </a>
 
 <!-- Chunk 3 -->
-<a href="/assets/img/jira-workflow/11-backlog-scrum-28-03.png" target="_blank" rel="noopener">
+<a href="/assets/img/jira-workflow/11-backlog-scrum-28-03.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/11-backlog-scrum-28-03.png"
        alt="Backlog RAID SCRUM-28 — details (labels, parent, etc.) (chunk 3)"
        loading="lazy"
