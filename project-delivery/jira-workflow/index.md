@@ -20,22 +20,18 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 - Intake → framing → approval to start work
 - Epic → stories/tasks → acceptance criteria → Definition of Done (DoD)
 - Sprint execution with blockers and dependency handling (via linked work items)
-- Quality gates (QA/SIT → UAT) and release readiness
+- Quality gates (QA / SIT → UAT) and release readiness
 - Release checklist + go-live preparation + monitoring/hypercare **planning** (shown as tickets/checklists)
 
 ---
 
 ## Scenario used in the sandbox (fictitious)
 
-**Product context:** A regulated digital-health mobile app (iOS/Android) with a secure backend  
-
-**Release goal:** Add a “Contactless vitals” journey: a camera-based measurement session that produces on-device AI wellness estimates and writes a history entry (derived results only, with provenance labels)
-
-**Supporting work included:** secure APIs (authentication + authorization + audit logging), Bluetooth device ingestion + data integrity checks, consent/retention/deletion controls, SIT + UAT planning, and a release readiness checklist
-
-**Constraints:** privacy-by-design, no camera media storage, audit-ready changes, staged rollout
-
-**Stakeholders:** Product, Mobile (iOS/Android), Backend, QA, Security/Privacy, Clinical/Validation, Support
+- **Product context:** A regulated digital-health mobile app (iOS/Android) with a secure backend
+- **Release goal:** Add a “Contactless vitals” journey: a camera-based measurement session that produces on-device AI wellness estimates and and stores **derived wellness estimates only** (no photos/videos), plus a history entry with **provenance labels** (AI / Device / Manual)
+- **Supporting work included:** secure APIs (authentication + authorization + audit logging), Bluetooth device ingestion + data integrity checks, consent/retention/deletion controls, SIT + UAT planning, and a release readiness checklist
+- **Constraints:** privacy-by-design, no camera media storage, audit-ready changes, staged rollout
+- **Stakeholders:** Product, Mobile (iOS/Android), Backend, QA, Security/Privacy, Clinical/Validation, Support   
 
 > This mirrors the type of delivery I’ve done in practice, but the tickets, names, and IDs here are fully fictitious.
 
@@ -45,7 +41,7 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 
 ### Issue types used
 - **Epic** (feature-level outcome)
-- **Feature** (optional grouping item; linked to the Epic in this sandbox)
+- **Feature** (optional grouping item; linked to the Epic in this sandbox — stories are parented to the Epic)
 - **Story** (user-facing increment)
 - **Task** (engineering / implementation work)
 - **Bug** (defects)
@@ -56,7 +52,7 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 ### Fields / conventions used (kept simple and realistic)
 - **Priority**
 - **Labels** (used to tag area/ownership, e.g., backend, qa, security)
-- **Fix Version / Release tag** (e.g., `v1.8.0` as a planned release label in the sandbox)
+- **Fix Version / Release tag** (planned release label in the sandbox, e.g., `v1.8.0`)
 - **Acceptance criteria** and **test notes** inside the ticket description
 - **Linked work items** (e.g., blocks / is blocked by / relates to) for dependencies and RAID linkage
 - **Definition of Done** checklist (lightweight, consistent)
@@ -80,8 +76,8 @@ It demonstrates how I structure delivery from **requirements → build → QA/SI
 - **Any status → In Review** *(ready for peer review / PR review)*
 - **Any status → QA / SIT** *(build deployed to test env; test execution starts)*
 - **Any status → UAT** *(business testing / stakeholder validation)*
-- **UAT → Done** *(Release / Close — the “release gate” transition)*
-- **Any status → Done** *(Done — used sparingly for housekeeping closure (e.g., duplicate, won’t do, out of scope, superseded by another ticket, cancelled) / non-release items)*
+- **UAT → Done** *(Release / Close — the “release gate” transition, used for release sign-off)*
+- **Any status → Done** *(Done — manual closure for non-release outcomes such as: duplicate, won’t do, out of scope, superseded by another ticket, cancelled))*
 
 **Typical delivery path I follow:**
 - To Do → In Progress → In Review → QA / SIT → UAT → Done *(Release / Close)*
