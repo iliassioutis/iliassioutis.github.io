@@ -1017,5 +1017,14 @@ Examples reflect real delivery work, described without confidential identifiers,
 
 ---
 
-Next: 🔎 <a href="/project-delivery/sdlc/">SDLC in practice</a> · <a href="/project-delivery/agile-scrum/">Agile &amp; Scrum</a> · <a href="/project-delivery/waterfall-stage-gate/">Waterfall / stage-gate</a>
+<hr>
+
+<p>
+  <strong>Next:</strong>
+  🔎 <a href="/project-delivery/sdlc/">SDLC in practice</a>
+  · <a href="/project-delivery/agile-scrum/">Agile &amp; Scrum</a>
+  · <a href="/project-delivery/waterfall-stage-gate/">Waterfall / stage-gate</a>
+  · <a href="/project-delivery/">Back to Project Delivery &amp; Methods</a>
+</p>
+
 
