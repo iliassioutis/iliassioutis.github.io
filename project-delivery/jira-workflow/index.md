@@ -1631,5 +1631,3 @@ Below is a complete ticket tree created in the sandbox, showing how I structure 
 <p style="margin: 6px 0 18px 0;">
   <a href="#artifact-nav">↑ Back to navigation</a>
 </p>
-
-<hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;">
