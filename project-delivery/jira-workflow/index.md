@@ -642,7 +642,7 @@ Below is the complete ticket tree created in the sandbox.
 
 <!-- Subtask — SCRUM-17 -->
 <a id="sprint0-scrum-17"></a>
-<h4 style="margin-top:18px;">Subtask — S-01a (SCRUM-17): Scope workshop + in-scope/out-of-scope agreed</h4>
+<h5 style="margin-top:14px;">Subtask — S-01a (SCRUM-17): Scope workshop + in-scope/out-of-scope agreed</h5>
 
 <a href="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-17-01.png" target="_blank" rel="noopener noreferrer">
   <img src="/assets/img/jira-workflow/09-sprint0-scrum-7-subtask-scrum-17-01.png"
