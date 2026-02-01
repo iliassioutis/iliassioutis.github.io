@@ -48,4 +48,14 @@ I use Agile/Scrum as an execution system for predictable iteration, fast feedbac
 - Release plan and environment readiness checklist
 - SIT/UAT plan (when needed)
 
-Next: 🔎 <a href="/project-delivery/artifacts-governance/">Artifacts & governance</a> · <a href="/project-delivery/sdlc/">SDLC in practice</a>
+<hr>
+
+<p>
+  <strong>Next:</strong>
+  🔎 <a href="/project-delivery/waterfall-stage-gate/">Waterfall / stage-gate</a>
+  · <a href="/project-delivery/artifacts-governance/">Artifacts &amp; governance</a>
+  · <a href="/project-delivery/sdlc/">SDLC in practice</a>
+  · <a href="/project-delivery/">Back to Project Delivery &amp; Methods</a>
+</p>
+
+
