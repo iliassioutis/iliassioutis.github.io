@@ -364,7 +364,12 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 ### 🏗️ Data pipeline — Industrial telemetry lakehouse (Bronze / Silver / Gold + Quarantine)
 {: #case-data-pipeline }
 
-<!-- TODO: overview -->
+**Azure-style lakehouse pipeline demo** for industrial operations telemetry, orchestrated with **GitHub Actions** (scheduled or manual runs with an optional `run_date` for backfills).
+
+- **Bronze (raw):** generates synthetic plants/assets and time-series sensor readings (plus work orders and quality inspections for realism).
+- **Silver (validated):** applies basic data-quality rules (required IDs, timestamp format, numeric ranges, de-duplication) and writes clean data + a **Quarantine** rejects file with reason codes.
+- **Gold (curated):** produces business-ready daily outputs (**plant KPIs** and **asset health**) suitable for dashboards and stakeholder reporting.
+- Each run produces a lightweight **DQ report** and an **artifacts ZIP** (Gold CSVs + Quarantine + run metadata) to support traceability and review.
 
 <!-- quick artifact links (placeholders for now) -->
 - Repo: <!-- TODO: add link -->
@@ -428,7 +433,7 @@ These two datasets are common in real operations pipelines and explain *business
 <summary style="cursor:pointer;">
   <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Plants</strong> <span style="opacity:.75;">(plants.csv)</span>
-    <span style="float:right; opacity:.6;">Click to expand</span>
+    <span style="float:right; opacity:.6;">Click to open/close</span>
   </span>
 </summary>
 
@@ -446,7 +451,7 @@ These two datasets are common in real operations pipelines and explain *business
 <summary style="cursor:pointer;">
   <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Assets</strong> <span style="opacity:.75;">(assets.csv)</span>
-    <span style="float:right; opacity:.6;">Click to expand</span>
+    <span style="float:right; opacity:.6;">Click to open/close</span>
   </span>
 </summary>
 
@@ -466,7 +471,7 @@ These two datasets are common in real operations pipelines and explain *business
 <summary style="cursor:pointer;">
   <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Sensor readings</strong> <span style="opacity:.75;">(sensor_readings.jsonl)</span>
-    <span style="float:right; opacity:.6;">Click to expand</span>
+    <span style="float:right; opacity:.6;">Click to open/close</span>
   </span>
 </summary>
 
@@ -489,7 +494,7 @@ These two datasets are common in real operations pipelines and explain *business
 <summary style="cursor:pointer;">
   <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Maintenance work orders</strong> <span style="opacity:.75;">(work_orders.csv — Bronze only in this demo)</span>
-    <span style="float:right; opacity:.6;">Click to expand</span>
+    <span style="float:right; opacity:.6;">Click to open/close</span>
   </span>
 </summary>
 
@@ -515,7 +520,7 @@ These two datasets are common in real operations pipelines and explain *business
 <summary style="cursor:pointer;">
   <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Quality inspections</strong> <span style="opacity:.75;">(quality_inspections.csv — Bronze only in this demo)</span>
-    <span style="float:right; opacity:.6;">Click to expand</span>
+    <span style="float:right; opacity:.6;">Click to open/close</span>
   </span>
 </summary>
 
