@@ -376,7 +376,7 @@ This case study demonstrates a lightweight, **Azure-style lakehouse pipeline** a
   - `lake/gold/YYYY-MM-DD/plant_kpis.csv`
   - `lake/gold/YYYY-MM-DD/asset_health_daily.csv`
   - plus an easy-consumption copy: `exports/YYYY-MM-DD/plant_kpis.csv`
-- **Traceability:** every run produces a **DQ report** (`reports/dq_YYYY-MM-DD.md`) and a downloadable **Actions artifacts ZIP** containing the full run outputs for that date (same structure you see locally).
+- **Traceability:** every run produces a **DQ report** (`reports/dq_YYYY-MM-DD.md`) and a downloadable **Actions artifacts ZIP** containing the full run outputs for that date.
 
 <!-- quick artifact links -->
 - Repo: [telemetry-pipeline-demo (GitHub)](https://github.com/iliassioutis/telemetry-pipeline-demo)
