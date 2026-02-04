@@ -440,6 +440,8 @@ These two datasets are common in real operations pipelines and explain *business
 
 </details>
 
+<div style="height:8px;"></div>
+
 <details markdown="1">
 <summary style="cursor:pointer;">
   <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
@@ -457,6 +459,8 @@ These two datasets are common in real operations pipelines and explain *business
 - `maintenance_strategy` — preventive/predictive/run-to-failure (how maintenance is planned)
 
 </details>
+
+<div style="height:8px;"></div>
 
 <details markdown="1">
 <summary style="cursor:pointer;">
@@ -478,6 +482,8 @@ These two datasets are common in real operations pipelines and explain *business
 - `sample_interval_sec` — sampling cadence in seconds (e.g., `900` = 15 minutes)
 
 </details>
+
+<div style="height:8px;"></div>
 
 <details markdown="1">
 <summary style="cursor:pointer;">
@@ -502,6 +508,8 @@ These two datasets are common in real operations pipelines and explain *business
 <em>Nullable</em> means the field may be blank when unknown or not applicable.
 
 </details>
+
+<div style="height:8px;"></div>
 
 <details markdown="1">
 <summary style="cursor:pointer;">
