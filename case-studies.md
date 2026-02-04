@@ -14,7 +14,7 @@ Below are selected delivery case studies highlighting evidence-driven execution,
 ---
 
 ## Quick navigation
-
+{: #quick-nav }
 - [Clinical validation (ePokratis MedAiConnect, iOS)](#case-clinical-validation)
 - [UCL MPhil thesis (3D non-rigid registration)](#case-ucl-mphil)
 - [DHL GCS FACTs (finance validation & forecasting automation)](#case-dhl-facts)
@@ -35,6 +35,10 @@ One-month clinical validation study at **Athens Hospital** (**Feb 6–Mar 6, 202
 - **Key outcomes (study summary tables):** vital-sign devices showed **excellent reliability** (ICC3 **0.975–0.9999**; ICC3k **0.992–0.99997**); TD-4216B biomarkers ranged **very good to excellent** (ICC3 **0.889–0.997**, ICC3k **0.960–0.999**). Regulatory/clinical thresholds were defined per measure and summarized as ‘Met in study: Yes’ in the report’s compliance table.
 - **Data integrity:** end-to-end workflow verified; **no missing values, no corruption, consistent units/labels/timestamps**, and **100% in-app match** to device readings across all devices (no integrity issues observed).
 - ✅ Artifacts: [Evidence & downloads](/clinical-validation) · [Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf) · [Repro pack (ZIP)](/assets/downloads/validation_package.zip)
+
+<blockquote>
+⬆️ <a href="#quick-nav">Back to Quick navigation</a>
+</blockquote>
 
 ---
 
@@ -96,6 +100,10 @@ Because Excel was the practical platform used by the finance organization, stati
 - Improved visibility into validation steps and data-flow dependencies at BU/region/global levels.
 - Enabled more systematic identification of **conspicuous data**, **outliers**, and **inconsistencies** during pre-close and final-close validation.
 - Provided a repeatable analytics foundation in a toolset (Excel/VBA) aligned with how the finance teams operated.
+
+<blockquote>
+⬆️ <a href="#quick-nav">Back to Quick navigation</a>
+</blockquote>
 
 ---
 
@@ -346,3 +354,6 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
   -> cross-section graphs        -> optionally promote to "Graphs" sheet
 ```
 
+<blockquote>
+⬆️ <a href="#quick-nav">Back to Quick navigation</a>
+</blockquote>
