@@ -377,11 +377,27 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 {: #data-pipeline-fields }
 
 ##### How the entities connect (operationally)
-- **Plants** are the site master (`plant_id`). Each plant has multiple production lines (`line_count`).
-- **Assets** belong to a plant (`assets.plant_id → plants.plant_id`).
-- **Sensor readings** are captured per asset (`sensor_readings.asset_id → assets.asset_id`).
-- **Work orders** are logged per asset (`work_orders.asset_id → assets.asset_id`).
-- **Quality inspections** are logged per plant line (`quality_inspections.plant_id + line_id → plant line`).
+
+Think of it like a hierarchy:
+
+- A **Plant** is a manufacturing site (e.g., “Krakow Plant”). It has an ID: `plant_id`.
+  - Each plant has **production lines** inside it (Line 1, Line 2, …). The count is `line_count`.
+
+- An **Asset** is a piece of equipment (pump, motor, valve, etc.) installed in a plant.
+  - In `assets.csv`, the column `plant_id` tells you **which plant the asset belongs to**.
+  - So: `assets.plant_id` matches `plants.plant_id`.
+
+- A **Sensor reading** is a telemetry measurement for one asset at a specific time.
+  - In `sensor_readings.jsonl`, the column `asset_id` tells you **which asset produced the reading**.
+  - So: `sensor_readings.asset_id` matches `assets.asset_id`.
+
+- A **Work order** is a maintenance record for one asset (preventive or corrective).
+  - In `work_orders.csv`, the column `asset_id` tells you **which asset the work order is for**.
+  - So: `work_orders.asset_id` matches `assets.asset_id`.
+
+- A **Quality inspection** is a quality check for a specific **plant + production line** at a time.
+  - In `quality_inspections.csv`, `plant_id` tells you the plant, and `line_id` tells you the line within that plant.
+  - So an inspection is tied to a specific “plant line” (example: `PLT-001` + `L02`).
 
 ##### Naming + format notes
 - `*_id` fields are identifiers used to join tables.
