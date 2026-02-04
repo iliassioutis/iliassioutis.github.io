@@ -19,6 +19,7 @@ Below are selected delivery case studies highlighting evidence-driven execution,
 - [UCL MPhil thesis (3D non-rigid registration)](#case-ucl-mphil)
 - [DHL GCS FACTs (finance validation & forecasting automation)](#case-dhl-facts)
 - [Supply-chain distribution optimization (Excel/VBA cost model)](#case-supply-chain)
+- [Data pipeline (industrial telemetry: Bronze/Silver/Gold + Quarantine)](#case-data-pipeline)
 
 ---
 
@@ -353,6 +354,58 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
   -> store results table         -> rebuild charts
   -> cross-section graphs        -> optionally promote to "Graphs" sheet
 ```
+
+<blockquote>
+⬆️ <a href="#quick-nav">Back to Quick navigation</a>
+</blockquote>
+
+---
+
+### 🏗️ Data pipeline — Industrial telemetry lakehouse (Bronze / Silver / Gold + Quarantine)
+{: #case-data-pipeline }
+
+<!-- TODO: overview -->
+
+<!-- quick artifact links (placeholders for now) -->
+- Repo: <!-- TODO: add link -->
+- Architecture diagram: <!-- TODO: add link -->
+- Power BI report / screenshots: <!-- TODO: add links or images -->
+
+#### Context
+<!-- TODO -->
+
+#### Problem
+<!-- TODO -->
+
+#### Solution design
+<!-- TODO -->
+
+#### Architecture
+<!-- TODO: embed architecture image -->
+<!-- Example image embed (use my final path/filename) -->
+<!--
+<div style="margin: 12px 0;">
+  <img src="/assets/img/case-studies/data-pipeline/01-architecture.png"
+       alt="Data pipeline architecture"
+       style="max-width: 100%; height: auto;">
+</div>
+-->
+
+#### Pipeline zones (Bronze / Silver / Gold / Quarantine)
+<!-- TODO -->
+
+#### Automation (CI/CD)
+<!-- TODO -->
+
+#### Outputs (example visuals)
+<!-- TODO: embed Power BI screenshots -->
+<!--
+<div style="margin: 12px 0;">
+  <img src="/assets/img/case-studies/data-pipeline/02-powerbi-overview.png"
+       alt="Power BI overview"
+       style="max-width: 100%; height: auto;">
+</div>
+-->
 
 <blockquote>
 ⬆️ <a href="#quick-nav">Back to Quick navigation</a>
