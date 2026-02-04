@@ -366,23 +366,38 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 
 #### Overview
 
-This case study demonstrates a lightweight, **Azure-style lakehouse pipeline** for industrial telemetry, implemented in **Python** and orchestrated via **GitHub Actions**. It lands raw data into **Bronze**, validates and quarantines bad records in **Silver + Quarantine**, and produces **Gold** KPI outputs designed for reporting (e.g., Power BI).
+This case study demonstrates a lightweight, **Azure-style lakehouse pipeline** and shows an end-to-end **Bronze → Silver/Quarantine → Gold** data flow for **synthetic industrial telemetry**, implemented in **Python** and orchestrated via **GitHub Actions** (manual trigger or scheduled run). It lands raw data into **Bronze**, applies validation rules during Bronze → Silver for **sensor_readings**, writes **clean records to Silver**, routes **rejected records to a Quarantine dataset** with reason codes for review, and produces **Gold** KPI outputs designed for reporting (e.g., Power BI).
 
-Each run also generates a **data-quality (DQ) report** and a downloadable **artifacts ZIP** to support traceability and review (DQ report + Gold/exports CSVs + quarantine rejects + run metadata).
+- **Bronze (raw landed):** generates raw datasets for operational context — plants, assets, sensor readings, work orders, and quality inspections — under `lake/bronze/YYYY-MM-DD/`.
+- **Silver + Quarantine (sensor_readings validation split):** validates **sensor_readings** only and splits the result:
+  - **Silver:** clean records written to `lake/silver/YYYY-MM-DD/sensor_readings_clean.csv`
+  - **Quarantine:** bad records written to `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv` with a `reject_reason` (reason codes)
+- **Gold (curated outputs):** creates reporting-friendly outputs from Silver and enriches with asset metadata (from Bronze), producing:
+  - `lake/gold/YYYY-MM-DD/plant_kpis.csv`
+  - `lake/gold/YYYY-MM-DD/asset_health_daily.csv`
+  - plus an easy-consumption copy: `exports/YYYY-MM-DD/plant_kpis.csv`
+- **Traceability:** every run produces a **DQ report** (`reports/dq_YYYY-MM-DD.md`) and a downloadable **Actions artifacts ZIP** containing the full run outputs for that date (same structure you see locally).
 
 <!-- quick artifact links -->
 - Repo: [telemetry-pipeline-demo (GitHub)](https://github.com/iliassioutis/telemetry-pipeline-demo)
 - Architecture diagram: [docs/diagrams/architecture.png](https://github.com/iliassioutis/telemetry-pipeline-demo/blob/main/docs/diagrams/architecture.png)
 - Power BI report (PBIX): [docs/powerbi/telemetry-pipeline-demo-report.pbix](https://github.com/iliassioutis/telemetry-pipeline-demo/blob/main/docs/powerbi/telemetry-pipeline-demo-report.pbix)
 
-**What a run produces (high level):**
-- Bronze (raw landed): `lake/bronze/YYYY-MM-DD/`
-- Silver (validated): `lake/silver/YYYY-MM-DD/sensor_readings_clean.csv`
-- Quarantine (rejects): `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv`
+**What the pipeline writes (folders):**
+- Bronze (raw landed): `lake/bronze/YYYY-MM-DD/` (plants.csv, assets.csv, sensor_readings.jsonl, work_orders.csv, quality_inspections.csv, generation_meta.json)
+- Silver (clean sensor readings): `lake/silver/YYYY-MM-DD/sensor_readings_clean.csv`
+- Quarantine (rejected sensor readings): `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv`
 - Gold (curated): `lake/gold/YYYY-MM-DD/plant_kpis.csv`, `lake/gold/YYYY-MM-DD/asset_health_daily.csv`
 - Exports (easy consumption): `exports/YYYY-MM-DD/plant_kpis.csv`
 - DQ report: `reports/dq_YYYY-MM-DD.md`
-- Actions artifact ZIP: `pipeline-artifacts-YYYY-MM-DD.zip` (contains the DQ report + Gold/exports CSVs + quarantine rejects + `generation_meta.json`)
+
+**What the Actions artifacts ZIP contains (download):**
+- `exports/YYYY-MM-DD/plant_kpis.csv`
+- `lake/bronze/YYYY-MM-DD/` (assets.csv, plants.csv, quality_inspections.csv, sensor_readings.jsonl, work_orders.csv, generation_meta.json)
+- `lake/silver/YYYY-MM-DD/sensor_readings_clean.csv`
+- `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv`
+- `lake/gold/YYYY-MM-DD/` (plant_kpis.csv, asset_health_daily.csv)
+- `reports/dq_YYYY-MM-DD.md`
 
 #### Context
 
