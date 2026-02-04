@@ -401,7 +401,7 @@ Think of it like a hierarchy:
 
 ##### Naming + format notes
 - `*_id` fields are identifiers used to join tables.
-- `*_ts_utc` / `ts_utc` are timestamps in **UTC** (ISO 8601, usually ending with `Z`).
+- `*_ts_utc` / `ts_utc` are timestamps in **UTC** (ISO 8601, ending with `Z`).
 - Units are encoded in the field name where possible: `temperature_c`, `pressure_bar`, `flow_l_min`, `vibration_mm_s`.
 - **CSV** = rows/columns. **JSONL** = “JSON Lines” (one JSON object per line), good for streaming/time-series.
 
