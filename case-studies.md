@@ -424,10 +424,11 @@ These two datasets are common in real operations pipelines and explain *business
   <strong>Tip:</strong> The sections below are <strong>collapsible</strong>. Click the <strong>▶ title</strong> to open/close.
 </div>
 
-<details markdown="1">
-<summary style="cursor:pointer; list-style:none;">
-  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+<details open markdown="1">
+<summary style="cursor:pointer;">
+  <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Plants</strong> <span style="opacity:.75;">(plants.csv)</span>
+    <span style="float:right; opacity:.6;">Click to expand</span>
   </span>
 </summary>
 
@@ -440,9 +441,10 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 <details markdown="1">
-<summary style="cursor:pointer; list-style:none;">
-  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+<summary style="cursor:pointer;">
+  <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Assets</strong> <span style="opacity:.75;">(assets.csv)</span>
+    <span style="float:right; opacity:.6;">Click to expand</span>
   </span>
 </summary>
 
@@ -457,9 +459,10 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 <details markdown="1">
-<summary style="cursor:pointer; list-style:none;">
-  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+<summary style="cursor:pointer;">
+  <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Sensor readings</strong> <span style="opacity:.75;">(sensor_readings.jsonl)</span>
+    <span style="float:right; opacity:.6;">Click to expand</span>
   </span>
 </summary>
 
@@ -477,9 +480,10 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 <details markdown="1">
-<summary style="cursor:pointer; list-style:none;">
-  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+<summary style="cursor:pointer;">
+  <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Maintenance work orders</strong> <span style="opacity:.75;">(work_orders.csv — Bronze only in this demo)</span>
+    <span style="float:right; opacity:.6;">Click to expand</span>
   </span>
 </summary>
 
@@ -500,9 +504,10 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 <details markdown="1">
-<summary style="cursor:pointer; list-style:none;">
-  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+<summary style="cursor:pointer;">
+  <span style="display:block; padding:8px 12px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
     <strong>▶ Quality inspections</strong> <span style="opacity:.75;">(quality_inspections.csv — Bronze only in this demo)</span>
+    <span style="float:right; opacity:.6;">Click to expand</span>
   </span>
 </summary>
 
