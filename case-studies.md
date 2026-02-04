@@ -405,6 +405,13 @@ Think of it like a hierarchy:
 - Units are encoded in the field name where possible: `temperature_c`, `pressure_bar`, `flow_l_min`, `vibration_mm_s`.
 - **CSV** = rows/columns. **JSONL** = “JSON Lines” (one JSON object per line), good for streaming/time-series.
 
+##### What this demo uses vs what is included for realism
+
+- **Bronze (raw landed):** plants, assets, sensor_readings, work_orders, quality_inspections (+ generation_meta.json)
+- **Silver + Quarantine:** sensor_readings only (validated + rejected rows with reason codes)
+- **Gold outputs:** plant_kpis + asset_health_daily (derived from sensor_readings, enriched with asset metadata)
+- **Work orders + inspections:** generated in Bronze for operational context, but **not yet part of Silver/Gold** in this demo
+
 ##### Field glossary (expandable)
 > Tip: Click each row below to expand and see the field explanations.
 
@@ -449,7 +456,7 @@ Think of it like a hierarchy:
 </details>
 
 <details markdown="1">
-<summary><strong>▶ Click to expand: Maintenance work orders</strong> <span style="opacity:.75;">(work_orders.csv)</span></summary>
+<summary><strong>▶ Click to expand: Maintenance work orders</strong> <span style="opacity:.75;">(work_orders.csv — Bronze only in this demo)</span></summary>
 
 - `wo_id` — unique work order identifier
 - `asset_id` — foreign key to Assets
@@ -468,7 +475,7 @@ Think of it like a hierarchy:
 </details>
 
 <details markdown="1">
-<summary><strong>▶ Click to expand: Quality inspections</strong> <span style="opacity:.75;">(quality_inspections.csv)</span></summary>
+<summary><strong>▶ Click to expand: Quality inspections</strong> <span style="opacity:.75;">(quality_inspections.csv — Bronze only in this demo)</span></summary>
 
 - `inspection_id` — unique inspection identifier
 - `plant_id` — foreign key to Plants
