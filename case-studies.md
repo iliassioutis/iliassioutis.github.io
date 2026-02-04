@@ -420,10 +420,16 @@ These two datasets are common in real operations pipelines and explain *business
 - **Quality inspections (production outcomes):** let you connect operating conditions to product quality — e.g. *which plant lines/batches show higher defect rates and whether certain conditions correlate with failures*.
 
 ##### Field glossary (expandable)
-> Tip: Click each row below to expand and see the field explanations.
+<div style="margin:10px 0; padding:10px 12px; border:1px solid #ddd; border-radius:10px; background:#f8f8f8;">
+  <strong>Tip:</strong> The sections below are <strong>collapsible</strong>. Click the <strong>▶ title</strong> to open/close.
+</div>
 
 <details markdown="1">
-<summary><strong>▶ Click to expand: Plants</strong> <span style="opacity:.75;">(plants.csv)</span></summary>
+<summary style="cursor:pointer; list-style:none;">
+  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+    <strong>▶ Plants</strong> <span style="opacity:.75;">(plants.csv)</span>
+  </span>
+</summary>
 
 - `plant_id` — unique plant/site identifier (e.g., `PLT-001`)
 - `plant_name` — human-readable name
@@ -434,7 +440,11 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 <details markdown="1">
-<summary><strong>▶ Click to expand: Assets</strong> <span style="opacity:.75;">(assets.csv)</span></summary>
+<summary style="cursor:pointer; list-style:none;">
+  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+    <strong>▶ Assets</strong> <span style="opacity:.75;">(assets.csv)</span>
+  </span>
+</summary>
 
 - `asset_id` — unique equipment identifier (e.g., `AST-00001`)
 - `plant_id` — foreign key to Plants
@@ -447,7 +457,11 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 <details markdown="1">
-<summary><strong>▶ Click to expand: Sensor readings</strong> <span style="opacity:.75;">(sensor_readings.jsonl)</span></summary>
+<summary style="cursor:pointer; list-style:none;">
+  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+    <strong>▶ Sensor readings</strong> <span style="opacity:.75;">(sensor_readings.jsonl)</span>
+  </span>
+</summary>
 
 - `reading_id` — unique reading identifier
 - `asset_id` — foreign key to Assets
@@ -463,7 +477,11 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 <details markdown="1">
-<summary><strong>▶ Click to expand: Maintenance work orders</strong> <span style="opacity:.75;">(work_orders.csv — Bronze only in this demo)</span></summary>
+<summary style="cursor:pointer; list-style:none;">
+  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+    <strong>▶ Maintenance work orders</strong> <span style="opacity:.75;">(work_orders.csv — Bronze only in this demo)</span>
+  </span>
+</summary>
 
 - `wo_id` — unique work order identifier
 - `asset_id` — foreign key to Assets
@@ -482,7 +500,11 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 <details markdown="1">
-<summary><strong>▶ Click to expand: Quality inspections</strong> <span style="opacity:.75;">(quality_inspections.csv — Bronze only in this demo)</span></summary>
+<summary style="cursor:pointer; list-style:none;">
+  <span style="display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:10px; background:#ffffff;">
+    <strong>▶ Quality inspections</strong> <span style="opacity:.75;">(quality_inspections.csv — Bronze only in this demo)</span>
+  </span>
+</summary>
 
 - `inspection_id` — unique inspection identifier
 - `plant_id` — foreign key to Plants
