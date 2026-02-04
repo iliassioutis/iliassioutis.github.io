@@ -401,7 +401,7 @@ This case study demonstrates a lightweight, **Azure-style lakehouse pipeline** a
 
 #### Context
 
-This demo uses **synthetic industrial operations data** to illustrate how an O&M telemetry pipeline is delivered end-to-end (no real customer data). Each run writes date-partitioned outputs (YYYY-MM-DD) so you can review results per day and reproduce runs using the same seed/parameters.
+This demo uses **synthetic industrial operations data** to illustrate how an Operations & Maintenance telemetry pipeline is delivered end-to-end (no real customer data). Each run writes date-partitioned outputs (YYYY-MM-DD) so you can review results per day and reproduce runs using the same seed/parameters.
 
 #### Key data fields (operational context)
 {: #data-pipeline-fields }
@@ -577,7 +577,7 @@ This demo implements those patterns end-to-end using synthetic data so the full 
 
 A simple **lakehouse-style, date-partitioned design**:
 
-- **Partitioning:** all outputs are written under `YYYY-MM-DD` so you can review and compare runs by day.
+- **Partitioning:** lake outputs are written under `lake/<zone>/YYYY-MM-DD/` so you can review and compare runs by day. Reports are **date-stamped files** under `reports/` (e.g., `reports/dq_YYYY-MM-DD.md`).
 - **Bronze:** `generate_bronze.py` creates raw operational datasets (plants, assets, sensor readings, work orders, inspections) plus `generation_meta.json`.
 - **Silver + Quarantine (sensor_readings only):** `bronze_to_silver.py` validates only `sensor_readings.jsonl` and splits rows into:
   - **Silver** (`sensor_readings_clean.csv`) for valid rows
@@ -591,7 +591,7 @@ A simple **lakehouse-style, date-partitioned design**:
 Design choices that are intentional in this demo:
 - The generator injects a small fraction of **bad sensor records** (missing `asset_id`, out-of-range values, duplicate `reading_id`) so the validation/quarantine behavior is visible.
 - Gold is enriched with asset context by loading `assets.csv` from Bronze for the same date (simple join by `asset_id`).
-- The `health_score` is a **transparent heuristic** (not a ML model) to demonstrate how business-friendly metrics are published.
+- The `health_score` is a **transparent heuristic** (not a machine-learning model) to demonstrate how business-friendly metrics are published.
 
 #### Architecture
 
@@ -637,6 +637,28 @@ Created by `src/generate_bronze.py`. This is the “as-landed” layer: raw file
   - `quality_inspections.csv` (quality checks per plant line: pass/fail + optional defect code/severity)
   - `generation_meta.json` (run metadata: date, seed, counts, parameters)
 
+##### Bronze run metadata (`generation_meta.json`)
+
+Alongside the raw Bronze files, the generator writes a small **run manifest** at:
+
+- `lake/bronze/YYYY-MM-DD/generation_meta.json`
+
+It captures the key parameters used to generate that day’s data, plus simple counts for verification and review:
+
+- `generated_for_date` — the run date used for the partition folder (`YYYY-MM-DD`)
+- `seed` — random seed used (same seed + parameters ⇒ same synthetic data patterns)
+- `plants`, `assets_per_plant`, `sample_minutes`, `bad_rate` — generation parameters
+- `plants`, `assets_per_plant` — size of the generated environment
+- `sample_minutes` — telemetry sampling interval (15 minutes by default)
+- `bad_rate` — fraction of intentionally injected bad sensor rows (used to demonstrate validation + quarantine)
+- `counts` — how many records were written per dataset (plants/assets/sensor_rows/work_orders/quality_inspections)
+- `sensor_bad_counters` — how many “intentionally bad” sensor rows were injected (e.g., missing `asset_id`, out-of-range values, duplicate `reading_id`)
+- `output_dir` — where the Bronze outputs were written
+
+**Quick sanity check (example):**  
+If `plants=3` and `assets_per_plant=10`, that’s **30 assets**. With `sample_minutes=15`, you get **96 readings per asset per day** (24h × 60 / 15).  
+So expected `sensor_rows` ≈ 30 × 96 = **2880**, which matches the sample `generation_meta.json`.
+
 To make the validation step visible, the generator intentionally injects a small fraction of bad telemetry rows (default `--bad-rate 0.015`), including:
 - missing `asset_id`
 - out-of-range values (e.g., negative pressure or extreme temperature)
@@ -663,6 +685,23 @@ Created by `src/bronze_to_silver.py`.
 - Meaning: rows that fail validation or are duplicates
 - Includes: `reject_reason` with one or more reason codes joined by `|` (duplicates are flagged as `duplicate_reading_id`)
 
+##### Quarantine `reject_reason` codes (what they mean)
+
+In this demo, rejected rows include a `reject_reason` column so you can quickly see *why* a record was quarantined.
+
+- `missing_reading_id`
+- `missing_asset_id` — the record has a blank/missing `asset_id` (required field).
+- `bad_ts_utc` — `ts_utc` is missing or not in the expected ISO UTC format (ending in `Z`).
+- `temperature_out_of_range` — `temperature_c` fails the sanity range check (-40 to 200 °C).
+- `pressure_out_of_range` — `pressure_bar` fails the sanity range check (0 to 50 bar).
+- `vibration_out_of_range` — `vibration_mm_s` fails the sanity range check (0 to 50 mm/s).
+- `flow_out_of_range` — `flow_l_min` fails the sanity range check (0 to 5000 L/min).
+- `rpm_out_of_range` — `rpm` fails the sanity range check (0 to 20000).
+- `duplicate_reading_id` — `reading_id` was already seen; duplicates are quarantined.
+
+Note: `reject_reason` can contain **multiple codes** joined with `|` if a row fails more than one validation rule.
+The per-run DQ report (`reports/dq_YYYY-MM-DD.md`) summarizes the top reject reasons and counts.
+
 ##### Gold (curated outputs for reporting)
 
 Created by `src/silver_to_gold.py`. Produces reporting-friendly daily outputs derived from Silver and enriched with asset metadata loaded from Bronze `assets.csv`.
@@ -673,6 +712,17 @@ Created by `src/silver_to_gold.py`. Produces reporting-friendly daily outputs de
   - `plant_kpis.csv` (per-plant aggregates across assets)
 - Export convenience copy:
   - `exports/YYYY-MM-DD/plant_kpis.csv`
+
+**How `health_score` is calculated (demo heuristic)**
+
+`health_score` is a simple, transparent rule (not a machine-learning model) to demonstrate how a pipeline can publish a business-friendly metric. It is computed per asset per day from the **daily mean vibration** and **daily mean temperature** in Silver:
+
+- Start at `100`
+- Subtract vibration penalty: `min(40, vibration_mm_s_mean × 8)`
+- If `temperature_c_mean > 80`, subtract temperature penalty: `min(20, (temperature_c_mean − 80) × 0.5)`
+- Clamp the result to `0..100` and round to 1 decimal
+
+This keeps the score interpretable: higher vibration (and sustained high temperature) produces a lower score.
 
 ##### DQ report (per run)
 
