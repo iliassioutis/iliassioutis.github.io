@@ -562,14 +562,54 @@ These two datasets are common in real operations pipelines and explain *business
 </details>
 
 #### Problem
-<!-- TODO -->
+
+Industrial operations data typically arrives as a mix of **high-volume telemetry** (sensor readings) plus **context tables** (assets, plants) and **business outcomes** (maintenance work orders, quality inspections). To be usable for reporting and decision-making, the pipeline needs to:
+
+- Land raw inputs in a predictable, reviewable structure (per day)
+- Apply **data quality rules** to telemetry (required fields, timestamp format, sanity ranges, de-duplication)
+- Keep bad records for investigation instead of silently dropping them (quarantine + reason codes)
+- Produce **reporting-ready KPIs** (plant-level and asset-level daily summaries)
+- Provide **traceability per run** (what was processed, what was rejected, and why)
+
+This demo implements those patterns end-to-end using synthetic data so the full workflow can be reproduced safely.
 
 #### Solution design
-<!-- TODO -->
+
+A simple **lakehouse-style, date-partitioned design**:
+
+- **Partitioning:** all outputs are written under `YYYY-MM-DD` so you can review and compare runs by day.
+- **Bronze:** `generate_bronze.py` creates raw operational datasets (plants, assets, sensor readings, work orders, inspections) plus `generation_meta.json`.
+- **Silver + Quarantine (sensor_readings only):** `bronze_to_silver.py` validates only `sensor_readings.jsonl` and splits rows into:
+  - **Silver** (`sensor_readings_clean.csv`) for valid rows
+  - **Quarantine** (`sensor_readings_rejects.csv`) for invalid/duplicate rows, with `reject_reason` reason codes
+  - A **DQ report** (`reports/dq_YYYY-MM-DD.md`) summarizing totals and top reject reasons
+- **Gold:** `silver_to_gold.py` builds two curated outputs from Silver:
+  - `asset_health_daily.csv` (per-asset daily summary with a demo `health_score`)
+  - `plant_kpis.csv` (per-plant daily aggregates)
+  - plus `exports/plant_kpis.csv` as an “easy consumption” copy
+
+Design choices that are intentional in this demo:
+- The generator injects a small fraction of **bad sensor records** (missing `asset_id`, out-of-range values, duplicate `reading_id`) so the validation/quarantine behavior is visible.
+- Gold is enriched with asset context by loading `assets.csv` from Bronze for the same date (simple join by `asset_id`).
+- The `health_score` is a **transparent heuristic** (not a ML model) to demonstrate how business-friendly metrics are published.
 
 #### Architecture
-<!-- TODO: embed architecture image -->
-<!-- Example image embed (use my final path/filename) -->
+
+The pipeline is orchestrated by **GitHub Actions** (manual trigger or schedule) and runs three Python steps in order:
+
+- `generate_bronze.py` → writes raw Bronze files under `lake/bronze/YYYY-MM-DD/`
+- `bronze_to_silver.py` → validates `sensor_readings` only and writes:
+  - `lake/silver/YYYY-MM-DD/sensor_readings_clean.csv`
+  - `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv`
+  - `reports/dq_YYYY-MM-DD.md`
+- `silver_to_gold.py` → produces curated Gold outputs and exports:
+  - `lake/gold/YYYY-MM-DD/plant_kpis.csv`
+  - `lake/gold/YYYY-MM-DD/asset_health_daily.csv`
+  - `exports/YYYY-MM-DD/plant_kpis.csv`
+
+The workflow publishes run outputs as a downloadable **Actions artifact** so the same deliverables are available whether you run locally or via CI.
+
+<!-- Optional: embed your architecture diagram here -->
 <!--
 <div style="margin: 12px 0;">
   <img src="/assets/img/case-studies/data-pipeline/01-architecture.png"
@@ -592,22 +632,28 @@ Created by `src/generate_bronze.py`. This is the “as-landed” layer: raw file
 - Files written:
   - `plants.csv` (sites, country/timezone, number of lines)
   - `assets.csv` (equipment per plant: type, manufacturer/model, install date, criticality, maintenance strategy)
-  - `sensor_readings.jsonl` (time-series telemetry per asset at a fixed cadence; default every 15 minutes)
+  - `sensor_readings.jsonl` (telemetry per asset at a fixed cadence; default every 15 minutes)
   - `work_orders.csv` (maintenance history per asset: preventive/corrective, downtime, parts cost, optional failure/root-cause codes)
   - `quality_inspections.csv` (quality checks per plant line: pass/fail + optional defect code/severity)
   - `generation_meta.json` (run metadata: date, seed, counts, parameters)
 
-To support the later validation/quarantine steps, the telemetry generator intentionally injects a small fraction of **bad sensor records** (controlled by `--bad-rate`, default `0.015`), including:
+To make the validation step visible, the generator intentionally injects a small fraction of bad telemetry rows (default `--bad-rate 0.015`), including:
 - missing `asset_id`
 - out-of-range values (e.g., negative pressure or extreme temperature)
 - duplicate `reading_id`
+
+Note (minor realism detail): `install_date` is currently generated relative to the machine’s current date (`date.today()`), not the run date argument. Everything else in Bronze is aligned to the `--date`.
 
 ##### Silver (validated clean sensor readings)
 
 Created by `src/bronze_to_silver.py`. This demo validates **sensor_readings only**.
 
 - Output file: `lake/silver/YYYY-MM-DD/sensor_readings_clean.csv`
-- Meaning: rows that pass required-field checks, timestamp format checks, numeric sanity ranges, and de-duplication by `reading_id`
+- Meaning: rows that pass:
+  - required ID checks (`reading_id`, `asset_id`)
+  - timestamp format check (`ts_utc` ends with `Z` and contains `T`)
+  - sanity ranges (temperature, vibration, pressure, flow, rpm)
+  - de-duplication by `reading_id`
 
 ##### Quarantine (rejected sensor readings)
 
@@ -615,16 +661,16 @@ Created by `src/bronze_to_silver.py`.
 
 - Output file: `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv`
 - Meaning: rows that fail validation or are duplicates
-- Includes: `reject_reason` column with reason codes (for review and debugging)
+- Includes: `reject_reason` with one or more reason codes joined by `|` (duplicates are flagged as `duplicate_reading_id`)
 
-##### Gold (curated KPIs for reporting)
+##### Gold (curated outputs for reporting)
 
-Created by `src/silver_to_gold.py`. Produces reporting-friendly daily outputs derived from Silver and enriched with asset metadata from Bronze.
+Created by `src/silver_to_gold.py`. Produces reporting-friendly daily outputs derived from Silver and enriched with asset metadata loaded from Bronze `assets.csv`.
 
 - Output folder: `lake/gold/YYYY-MM-DD/`
 - Files written:
-  - `plant_kpis.csv` (daily plant-level aggregates)
-  - `asset_health_daily.csv` (daily asset-level summaries incl. a demo “health_score” metric)
+  - `asset_health_daily.csv` (per-asset daily metrics: averages/max + running_ratio + a demo `health_score`)
+  - `plant_kpis.csv` (per-plant aggregates across assets)
 - Export convenience copy:
   - `exports/YYYY-MM-DD/plant_kpis.csv`
 
