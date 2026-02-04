@@ -364,17 +364,25 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 ### 🏗️ Data pipeline — Industrial telemetry lakehouse (Bronze / Silver / Gold + Quarantine)
 {: #case-data-pipeline }
 
-**Azure-style lakehouse pipeline demo** for industrial operations telemetry, orchestrated with **GitHub Actions** (scheduled or manual runs with an optional `run_date` for backfills).
+#### Overview
 
-- **Bronze (raw):** generates synthetic plants/assets and time-series sensor readings (plus work orders and quality inspections for realism).
-- **Silver (validated):** applies basic data-quality rules (required IDs, timestamp format, numeric ranges, de-duplication) and writes clean data + a **Quarantine** rejects file with reason codes.
-- **Gold (curated):** produces business-ready daily outputs (**plant KPIs** and **asset health**) suitable for dashboards and stakeholder reporting.
-- Each run produces a lightweight **DQ report** and an **artifacts ZIP** (Gold CSVs + Quarantine + run metadata) to support traceability and review.
+This case study demonstrates a lightweight, **Azure-style lakehouse pipeline** for industrial telemetry, implemented in **Python** and orchestrated via **GitHub Actions**. It lands raw data into **Bronze**, validates and quarantines bad records in **Silver + Quarantine**, and produces **Gold** KPI outputs designed for reporting (e.g., Power BI).
 
-<!-- quick artifact links (placeholders for now) -->
-- Repo: <!-- TODO: add link -->
-- Architecture diagram: <!-- TODO: add link -->
-- Power BI report / screenshots: <!-- TODO: add links or images -->
+Each run also generates a **data-quality (DQ) report** and a downloadable **artifacts ZIP** to support traceability and review (DQ report + Gold/exports CSVs + quarantine rejects + run metadata).
+
+<!-- quick artifact links -->
+- Repo: [telemetry-pipeline-demo (GitHub)](https://github.com/iliassioutis/telemetry-pipeline-demo)
+- Architecture diagram: [docs/diagrams/architecture.png](https://github.com/iliassioutis/telemetry-pipeline-demo/blob/main/docs/diagrams/architecture.png)
+- Power BI report (PBIX): [docs/powerbi/telemetry-pipeline-demo-report.pbix](https://github.com/iliassioutis/telemetry-pipeline-demo/blob/main/docs/powerbi/telemetry-pipeline-demo-report.pbix)
+
+**What a run produces (high level):**
+- Bronze (raw landed): `lake/bronze/YYYY-MM-DD/`
+- Silver (validated): `lake/silver/YYYY-MM-DD/sensor_readings_clean.csv`
+- Quarantine (rejects): `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv`
+- Gold (curated): `lake/gold/YYYY-MM-DD/plant_kpis.csv`, `lake/gold/YYYY-MM-DD/asset_health_daily.csv`
+- Exports (easy consumption): `exports/YYYY-MM-DD/plant_kpis.csv`
+- DQ report: `reports/dq_YYYY-MM-DD.md`
+- Actions artifact ZIP: `pipeline-artifacts-YYYY-MM-DD.zip` (contains the DQ report + Gold/exports CSVs + quarantine rejects + `generation_meta.json`)
 
 #### Context
 
