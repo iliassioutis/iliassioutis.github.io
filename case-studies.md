@@ -401,6 +401,8 @@ This case study demonstrates a lightweight, **Azure-style lakehouse pipeline** a
 
 #### Context
 
+This demo uses **synthetic industrial operations data** to illustrate how an O&M telemetry pipeline is delivered end-to-end (no real customer data). Each run writes date-partitioned outputs (YYYY-MM-DD) so you can review results per day and reproduce runs using the same seed/parameters.
+
 #### Key data fields (operational context)
 {: #data-pipeline-fields }
 
@@ -577,7 +579,61 @@ These two datasets are common in real operations pipelines and explain *business
 -->
 
 #### Pipeline zones (Bronze / Silver / Gold / Quarantine)
-<!-- TODO -->
+
+All pipeline outputs are partitioned by run date:
+
+- `lake/<zone>/YYYY-MM-DD/`
+
+##### Bronze (raw landed)
+
+Created by `src/generate_bronze.py`. This is the “as-landed” layer: raw files written per day for operational context.
+
+- Output folder: `lake/bronze/YYYY-MM-DD/`
+- Files written:
+  - `plants.csv` (sites, country/timezone, number of lines)
+  - `assets.csv` (equipment per plant: type, manufacturer/model, install date, criticality, maintenance strategy)
+  - `sensor_readings.jsonl` (time-series telemetry per asset at a fixed cadence; default every 15 minutes)
+  - `work_orders.csv` (maintenance history per asset: preventive/corrective, downtime, parts cost, optional failure/root-cause codes)
+  - `quality_inspections.csv` (quality checks per plant line: pass/fail + optional defect code/severity)
+  - `generation_meta.json` (run metadata: date, seed, counts, parameters)
+
+To support the later validation/quarantine steps, the telemetry generator intentionally injects a small fraction of **bad sensor records** (controlled by `--bad-rate`, default `0.015`), including:
+- missing `asset_id`
+- out-of-range values (e.g., negative pressure or extreme temperature)
+- duplicate `reading_id`
+
+##### Silver (validated clean sensor readings)
+
+Created by `src/bronze_to_silver.py`. This demo validates **sensor_readings only**.
+
+- Output file: `lake/silver/YYYY-MM-DD/sensor_readings_clean.csv`
+- Meaning: rows that pass required-field checks, timestamp format checks, numeric sanity ranges, and de-duplication by `reading_id`
+
+##### Quarantine (rejected sensor readings)
+
+Created by `src/bronze_to_silver.py`.
+
+- Output file: `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv`
+- Meaning: rows that fail validation or are duplicates
+- Includes: `reject_reason` column with reason codes (for review and debugging)
+
+##### Gold (curated KPIs for reporting)
+
+Created by `src/silver_to_gold.py`. Produces reporting-friendly daily outputs derived from Silver and enriched with asset metadata from Bronze.
+
+- Output folder: `lake/gold/YYYY-MM-DD/`
+- Files written:
+  - `plant_kpis.csv` (daily plant-level aggregates)
+  - `asset_health_daily.csv` (daily asset-level summaries incl. a demo “health_score” metric)
+- Export convenience copy:
+  - `exports/YYYY-MM-DD/plant_kpis.csv`
+
+##### DQ report (per run)
+
+Created by `src/bronze_to_silver.py`.
+
+- Output file: `reports/dq_YYYY-MM-DD.md`
+- Meaning: totals, clean vs rejected counts, duplicate rejects, and top reject reasons
 
 #### Automation (CI/CD)
 <!-- TODO -->
