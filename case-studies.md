@@ -742,11 +742,11 @@ Created by `src/bronze_to_silver.py`.
 - **Bronze/Silver/Gold layering:** aligns with the lakehouse “Medallion” (multi-hop) pattern (Bronze = raw, Silver = cleaned/validated, Gold = aggregated/enriched).  
   Reference: [Databricks — What is the medallion lakehouse architecture?](https://docs.databricks.com/aws/en/lakehouse/medallion)
 
-- **Validation + Quarantine with explicit reasons:** routing invalid rows to a quarantine dataset supports review, auditing, and DQ reporting (“quarantining invalid records” is a common pattern in layered pipelines).  
-  Reference: [Databricks — Medallion architecture example (mentions quarantining invalid records)](https://docs.databricks.com/aws/en/lakehouse/medallion)
+- **Validation + Quarantine with explicit reasons:** routing invalid rows to a quarantine dataset supports review, auditing, and DQ reporting (the pattern is often described as “quarantining invalid records”).  
+  Reference: [Databricks — Medallion architecture (mentions quarantining invalid records)](https://docs.databricks.com/aws/en/lakehouse/medallion)
 
-- **Health score:** the score here is a demo publishing pattern for a “business-ready metric”. In real systems it would be calibrated using **Original Equipment Manufacturer (OEM)** guidance and engineering standards (for example, vibration severity guidance such as ISO 20816-1) plus historical maintenance outcomes.  
-  Reference: [ISO 20816-1:2016 — Mechanical vibration — Measurement and evaluation of machine vibration](https://www.iso.org/standard/63108.html)
+- **Health score (demo metric):** the score here is a simple publishing pattern for a “business-ready metric” (not a machine learning model). In real systems it would be calibrated using **Original Equipment Manufacturer (OEM)** guidance and engineering standards (for example, vibration severity guidance such as ISO 20816-1) plus historical maintenance outcomes.  
+  Reference: [ISO 20816-1:2016 — Mechanical vibration — Measurement and evaluation of machine vibration — Part 1: General guidelines](https://www.iso.org/standard/63180.html)
 
 #### Automation (CI/CD)
 <!-- TODO -->
