@@ -372,7 +372,98 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 - Power BI report / screenshots: <!-- TODO: add links or images -->
 
 #### Context
-<!-- TODO -->
+
+#### Key data fields (operational context)
+{: #data-pipeline-fields }
+
+##### How the entities connect (operationally)
+- **Plants** are the site master (`plant_id`). Each plant has multiple production lines (`line_count`).
+- **Assets** belong to a plant (`assets.plant_id → plants.plant_id`).
+- **Sensor readings** are captured per asset (`sensor_readings.asset_id → assets.asset_id`).
+- **Work orders** are logged per asset (`work_orders.asset_id → assets.asset_id`).
+- **Quality inspections** are logged per plant line (`quality_inspections.plant_id + line_id → plant line`).
+
+##### Naming + format notes
+- `*_id` fields are identifiers used to join tables.
+- `*_ts_utc` / `ts_utc` are timestamps in **UTC** (ISO 8601, usually ending with `Z`).
+- Units are encoded in the field name where possible: `temperature_c`, `pressure_bar`, `flow_l_min`, `vibration_mm_s`.
+- **CSV** = rows/columns. **JSONL** = “JSON Lines” (one JSON object per line), good for streaming/time-series.
+
+##### Field glossary (expandable)
+
+<details>
+<summary><strong>Plants</strong> (plants.csv)</summary>
+
+- `plant_id` — unique plant/site identifier (e.g., `PLT-001`)
+- `plant_name` — human-readable name
+- `country` — country code (e.g., `PL`)
+- `timezone` — IANA timezone string (e.g., `Europe/Warsaw`)
+- `line_count` — number of production lines at the plant (drives `line_id` generation for inspections)
+
+</details>
+
+<details>
+<summary><strong>Assets</strong> (assets.csv)</summary>
+
+- `asset_id` — unique equipment identifier (e.g., `AST-00001`)
+- `plant_id` — foreign key to Plants
+- `asset_type` — equipment category (pump/motor/valve/etc.)
+- `manufacturer`, `model` — equipment details
+- `install_date` — installation date
+- `criticality` — low/med/high (operational importance)
+- `maintenance_strategy` — preventive/predictive/run-to-failure (how maintenance is planned)
+
+</details>
+
+<details>
+<summary><strong>Sensor readings</strong> (sensor_readings.jsonl)</summary>
+
+- `reading_id` — unique reading identifier
+- `asset_id` — foreign key to Assets
+- `ts_utc` — reading timestamp in UTC
+- `temperature_c` — temperature in °C
+- `vibration_mm_s` — vibration in mm/s
+- `pressure_bar` — pressure in bar
+- `flow_l_min` — flow in L/min
+- `rpm` — rotational speed (revolutions per minute)
+- `operating_state` — idle/running/off
+- `sample_interval_sec` — sampling cadence in seconds (e.g., `900` = 15 minutes)
+
+</details>
+
+<details>
+<summary><strong>Maintenance work orders</strong> (work_orders.csv)</summary>
+
+- `wo_id` — unique work order identifier
+- `asset_id` — foreign key to Assets
+- `created_ts_utc`, `closed_ts_utc` — open/close timestamps in UTC
+- `wo_type` — corrective/preventive
+- `priority` — P1–P4 (P1 most urgent)
+- `status` — lifecycle status (e.g., open/closed)
+- `technician_team` — owning team
+- `downtime_minutes` — downtime caused by the event
+- `parts_cost_eur` — parts cost in EUR
+- `failure_mode_code` — optional (nullable) code describing failure mode
+- `root_cause_code` — optional (nullable) code describing root cause
+
+<em>Nullable</em> means the field may be blank when unknown or not applicable.
+
+</details>
+
+<details>
+<summary><strong>Quality inspections</strong> (quality_inspections.csv)</summary>
+
+- `inspection_id` — unique inspection identifier
+- `plant_id` — foreign key to Plants
+- `line_id` — production line within the plant (e.g., `L01`)
+- `ts_utc` — inspection timestamp in UTC
+- `product_family` — product group being produced/checked
+- `batch_id` — manufacturing batch identifier
+- `result` — pass/fail
+- `defect_code` — optional (nullable) defect code
+- `defect_severity` — low/med/high (when a defect exists)
+
+</details>
 
 #### Problem
 <!-- TODO -->
