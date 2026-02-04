@@ -13,9 +13,19 @@ Below are selected delivery case studies highlighting evidence-driven execution,
 
 ---
 
+## Quick navigation
+
+- [Clinical validation (ePokratis MedAiConnect, iOS)](#case-clinical-validation)
+- [UCL MPhil thesis (3D non-rigid registration)](#case-ucl-mphil)
+- [DHL GCS FACTs (finance validation & forecasting automation)](#case-dhl-facts)
+- [Supply-chain distribution optimization (Excel/VBA cost model)](#case-supply-chain)
+
+---
+
 ## Featured case studies
 
 ### 🧪 Clinical validation — ePokratis MedAiConnect (iOS)
+{: #case-clinical-validation }
 One-month clinical validation study at **Athens Hospital** (**Feb 6–Mar 6, 2025**) with **27 adults (20–91)** evaluating **accuracy, reliability, and data integrity** for **six Bluetooth medical devices** integrated with the ePokratis MedAiConnect **iOS** app, supporting App Store safety evidence under **Guideline 1.4.1 (Safety – Physical Harm)**. Athens Hospital clinical staff supervised measurements and **cross-verified that app-displayed values matched the device outputs**.
 
 - **Devices validated:** TaiDoc TD-3128 (BP/PR), TD-8255 (SpO₂/PR), TD-1241 (Thermometer), TD-2555 (Scale), Contec PM10 (ECG/HR), TaiDoc TD-4216B (biomarkers).
@@ -29,6 +39,7 @@ One-month clinical validation study at **Athens Hospital** (**Feb 6–Mar 6, 202
 ---
 
 ### 🧠 UCL MPhil thesis — 3D non-rigid registration for image-guided interventions (prostate)
+{: #case-ucl-mphil }
 Research project at **UCL** benchmarking **non-rigid point-set registration** (TPS-based warps) for prostate surface alignment under **occlusion/partial overlap**, **noise**, and **outliers**, using **synthetic datasets** and **Target Registration Error (TRE)** (including evaluation **beyond common overlap**).
 
 - 🔎 **Read the thesis summary:** [UCL MPhil — 3D non-rigid registration](/research/ucl-mphil/)
@@ -37,7 +48,7 @@ Research project at **UCL** benchmarking **non-rigid point-set registration** (T
 ---
 
 ### 📊 DHL Management (MBA Internship) — GCS FACTs: finance data validation & forecasting automation (confidential)
-
+{: #case-dhl-facts }
 *Confidentiality note: customer identifiers, internal contacts, and intranet-only details are omitted. This summary focuses on the validation workflow, analytics approach, and deliverables described in the thesis.*
 
 #### Context
@@ -89,7 +100,7 @@ Because Excel was the practical platform used by the finance organization, stati
 ---
 
 ### 🏭 Supply-chain distribution optimization — Excel/VBA warehouse & cross-docking cost model (confidential)
-
+{: #case-supply-chain }
 *Confidentiality note: company name, trade lanes, customer identifiers, SKU codes, and all internal figures are omitted or generalized. This case study focuses on the modelling approach, Excel/VBA engineering, and decision-support outputs.*
 
 #### Context
