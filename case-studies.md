@@ -412,6 +412,13 @@ Think of it like a hierarchy:
 - **Gold outputs:** plant_kpis + asset_health_daily (derived from sensor_readings, enriched with asset metadata)
 - **Work orders + inspections:** generated in Bronze for operational context, but **not yet part of Silver/Gold** in this demo
 
+##### Why include work orders and quality inspections (even if Bronze-only here)
+
+These two datasets are common in real operations pipelines and explain *business outcomes* that pure telemetry cannot:
+
+- **Work orders (maintenance outcomes):** let you connect sensor behavior to reliability and cost — e.g. *which assets actually failed, how much downtime was caused, what was fixed, and whether it was preventive vs corrective*.
+- **Quality inspections (production outcomes):** let you connect operating conditions to product quality — e.g. *which plant lines/batches show higher defect rates and whether certain conditions correlate with failures*.
+
 ##### Field glossary (expandable)
 > Tip: Click each row below to expand and see the field explanations.
 
