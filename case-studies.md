@@ -685,11 +685,16 @@ Created by `src/bronze_to_silver.py`.
 - Meaning: rows that fail validation or are duplicates
 - Includes: `reject_reason` with one or more reason codes joined by `|` (duplicates are flagged as `duplicate_reading_id`)
 
-##### Quarantine `reject_reason` codes (what they mean)
+##### Quarantine reason codes (what `reject_reason` means)
 
-In this demo, rejected rows include a `reject_reason` column so you can quickly see *why* a record was quarantined.
+Rejected rows in:
 
-- `missing_reading_id`
+- `lake/quarantine/YYYY-MM-DD/sensor_readings_rejects.csv`
+
+carry a `reject_reason` field with one or more reason codes (joined with `|` when multiple checks fail).  
+In this demo the codes come from these checks:
+
+- `missing_reading_id`— required identifier is missing/blank
 - `missing_asset_id` — the record has a blank/missing `asset_id` (required field).
 - `bad_ts_utc` — `ts_utc` is missing or not in the expected ISO UTC format (ending in `Z`).
 - `temperature_out_of_range` — `temperature_c` fails the sanity range check (-40 to 200 °C).
@@ -697,10 +702,7 @@ In this demo, rejected rows include a `reject_reason` column so you can quickly 
 - `vibration_out_of_range` — `vibration_mm_s` fails the sanity range check (0 to 50 mm/s).
 - `flow_out_of_range` — `flow_l_min` fails the sanity range check (0 to 5000 L/min).
 - `rpm_out_of_range` — `rpm` fails the sanity range check (0 to 20000).
-- `duplicate_reading_id` — `reading_id` was already seen; duplicates are quarantined.
-
-Note: `reject_reason` can contain **multiple codes** joined with `|` if a row fails more than one validation rule.
-The per-run DQ report (`reports/dq_YYYY-MM-DD.md`) summarizes the top reject reasons and counts.
+- `duplicate_reading_id` — duplicate `reading_id` detected during de-duplication; duplicates are quarantined.
 
 ##### Gold (curated outputs for reporting)
 
@@ -713,9 +715,13 @@ Created by `src/silver_to_gold.py`. Produces reporting-friendly daily outputs de
 - Export convenience copy:
   - `exports/YYYY-MM-DD/plant_kpis.csv`
 
-**How `health_score` is calculated (demo heuristic)**
+##### Gold metrics notes (running ratio + health score)
 
-`health_score` is a simple, transparent rule (not a machine-learning model) to demonstrate how a pipeline can publish a business-friendly metric. It is computed per asset per day from the **daily mean vibration** and **daily mean temperature** in Silver:
+- `running_ratio` (asset-level) is computed as:
+  - `count(operating_state == "running") / count(all readings for that asset)`
+- `avg_running_ratio` (plant-level KPI) is an aggregate across assets at the plant.
+
+The demo `health_score` is intentionally a simple, transparent heuristic (not a machine-learning model) to demonstrate how a pipeline can publish a business-friendly metric. It is computed per asset per day from the **daily mean vibration** and **daily mean temperature** in Silver:
 
 - Start at `100`
 - Subtract vibration penalty: `min(40, vibration_mm_s_mean × 8)`
@@ -730,6 +736,17 @@ Created by `src/bronze_to_silver.py`.
 
 - Output file: `reports/dq_YYYY-MM-DD.md`
 - Meaning: totals, clean vs rejected counts, duplicate rejects, and top reject reasons
+
+##### Design references (why this structure)
+
+- **Bronze/Silver/Gold layering:** aligns with the lakehouse “Medallion” (multi-hop) pattern (Bronze = raw, Silver = cleaned/validated, Gold = aggregated/enriched).  
+  Reference: [Databricks — What is the medallion lakehouse architecture?](https://docs.databricks.com/aws/en/lakehouse/medallion)
+
+- **Validation + Quarantine with explicit reasons:** routing invalid rows to a quarantine dataset supports review, auditing, and DQ reporting (“quarantining invalid records” is a common pattern in layered pipelines).  
+  Reference: [Databricks — Medallion architecture example (mentions quarantining invalid records)](https://docs.databricks.com/aws/en/lakehouse/medallion)
+
+- **Health score:** the score here is a demo publishing pattern for a “business-ready metric”. In real systems it would be calibrated using **Original Equipment Manufacturer (OEM)** guidance and engineering standards (for example, vibration severity guidance such as ISO 20816-1) plus historical maintenance outcomes.  
+  Reference: [ISO 20816-1:2016 — Mechanical vibration — Measurement and evaluation of machine vibration](https://www.iso.org/standard/63108.html)
 
 #### Automation (CI/CD)
 <!-- TODO -->
