@@ -390,9 +390,10 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 - **CSV** = rows/columns. **JSONL** = “JSON Lines” (one JSON object per line), good for streaming/time-series.
 
 ##### Field glossary (expandable)
+> Tip: Click each row below to expand and see the field explanations.
 
-<details>
-<summary><strong>Plants</strong> (plants.csv)</summary>
+<details markdown="1">
+<summary><strong>▶ Click to expand: Plants</strong> <span style="opacity:.75;">(plants.csv)</span></summary>
 
 - `plant_id` — unique plant/site identifier (e.g., `PLT-001`)
 - `plant_name` — human-readable name
@@ -402,8 +403,8 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 
 </details>
 
-<details>
-<summary><strong>Assets</strong> (assets.csv)</summary>
+<details markdown="1">
+<summary><strong>▶ Click to expand: Assets</strong> <span style="opacity:.75;">(assets.csv)</span></summary>
 
 - `asset_id` — unique equipment identifier (e.g., `AST-00001`)
 - `plant_id` — foreign key to Plants
@@ -415,8 +416,8 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 
 </details>
 
-<details>
-<summary><strong>Sensor readings</strong> (sensor_readings.jsonl)</summary>
+<details markdown="1">
+<summary><strong>▶ Click to expand: Sensor readings</strong> <span style="opacity:.75;">(sensor_readings.jsonl)</span></summary>
 
 - `reading_id` — unique reading identifier
 - `asset_id` — foreign key to Assets
@@ -431,8 +432,8 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 
 </details>
 
-<details>
-<summary><strong>Maintenance work orders</strong> (work_orders.csv)</summary>
+<details markdown="1">
+<summary><strong>▶ Click to expand: Maintenance work orders</strong> <span style="opacity:.75;">(work_orders.csv)</span></summary>
 
 - `wo_id` — unique work order identifier
 - `asset_id` — foreign key to Assets
@@ -450,8 +451,8 @@ MULTI-POINT SWEEP              SENSITIVITY RUNS
 
 </details>
 
-<details>
-<summary><strong>Quality inspections</strong> (quality_inspections.csv)</summary>
+<details markdown="1">
+<summary><strong>▶ Click to expand: Quality inspections</strong> <span style="opacity:.75;">(quality_inspections.csv)</span></summary>
 
 - `inspection_id` — unique inspection identifier
 - `plant_id` — foreign key to Plants
