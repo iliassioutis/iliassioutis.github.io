@@ -46,7 +46,7 @@ I use Agile/Scrum as an execution system for predictable iteration, fast feedbac
 - Definition of Done and acceptance criteria templates
 - RAID log (risks, assumptions, issues, dependencies)
 - Release plan and environment readiness checklist
-- SIT/UAT plan (when needed)
+- SIT/UAT plan
 
 <hr>
 
