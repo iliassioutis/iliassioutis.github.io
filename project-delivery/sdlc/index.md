@@ -69,7 +69,7 @@ Typical outputs:
 
 7) **Operate & improve**
 - Measure outcomes, gather feedback, prioritize improvements
-- Run retrospectives/post-mortems when needed
+- Run retrospectives and post-mortems (a structured, blameless review after an incident or failed release to capture root causes and concrete improvements) when needed
 
 Typical outputs:
 - Post-release review
