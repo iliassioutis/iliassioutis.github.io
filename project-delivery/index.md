@@ -54,7 +54,7 @@ These pages describe the delivery approach I use to take initiatives from idea t
   - Traceability: mapping requirements → test cases → evidence (especially useful in regulated or audit-sensitive delivery).  
   - Change and release: change requests, impact analysis, release readiness checklist, rollout/rollback plan, post-release review and stabilization plan.  
   - Privacy & security gates: data classification, access control model, encryption approach, retention/deletion logic, supplier/sub-processor considerations; **DPIA (Data Protection Impact Assessment)**-style risk thinking when needed.  
-  - **AI governance (when AI is involved):** defined claims boundaries, transparency and provenance (what produced each output and from what source), human oversight where needed, validation/evidence artifacts, monitoring and drift detection, and clear documentation of what the system does (and does not) do.
+  - **AI governance (when AI is involved):** defined claims boundaries, transparency and provenance (what produced each output and from what source), human oversight where needed, validation/evidence artifacts, monitoring and drift detection, and clear documentation of what the system does and does not do.
 
 ---
 
