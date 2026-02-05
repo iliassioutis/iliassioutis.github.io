@@ -31,7 +31,7 @@ These pages describe the delivery approach I use to take initiatives from idea t
   - Set a delivery cadence (sprints/iterations), define a realistic sprint goal, and plan based on team capacity, dependencies, and risk.  
   - Run core ceremonies with clear purpose (refinement, planning, daily sync, review/demo, retrospective) and track decisions and actions.  
   - Clarify working roles and responsibilities (e.g., Product Owner / delivery lead / team ownership) so prioritization, decisions, and escalation paths are explicit.  
-  - Track progress and risks transparently using visible signals (burn-up/burn-down charts, cumulative flow, blockers, cycle time where useful) and intervene early when delivery deviates.  
+  - Track progress and risks transparently using simple, visible signals (burn-down = work remaining over time; burn-up = work completed vs total scope; cumulative flow = where work is piling up across workflow stages; blockers = items stuck and why; cycle time = time from “In Progress” to “Done”) and intervene early if trends show delays, bottlenecks, or scope creep.  
   - Keep stakeholders aligned through frequent demos, incremental releases, and structured change handling (trade-offs, sequencing, scope adjustments).  
   - Use a strong **Definition of Done (clear completion + quality criteria)** and lightweight quality gates so increments are potentially shippable, not just “code complete.”  
   - Blend iterative delivery with governance where needed (regulated constraints, privacy/security reviews, release approvals, supplier coordination).
