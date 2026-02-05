@@ -39,7 +39,7 @@ These pages describe the delivery approach I use to take initiatives from idea t
 - **Waterfall / stage-gate**  
   How I use sequential delivery when constraints, fixed dependencies, or external approvals make staged execution the safer option:  
   - Break work into phases with explicit entry/exit criteria and sign-offs (e.g., requirements complete, design approved, test evidence prepared, operational readiness confirmed).  
-  - Control scope and change through formal impact assessment (schedule/cost/risk), approvals, and re-baselining when required.  
+  - Control scope and change through a formal impact assessment (timeline/milestones, effort/budget, dependencies, and quality/security/compliance risk), require documented approval before committing, and update the baseline plan (scope + dates) when changes are accepted.  
   - Manage dependencies and vendor integration with detailed plans, interface specifications, integration runbooks, and coordinated test windows.  
   - Use stage reviews as governance points: quality checks, security/privacy readiness, operational readiness, and formal go/no-go decisions.  
   - Emphasize documentation and traceability to support auditability and repeatability in integration-heavy or regulated contexts.  
