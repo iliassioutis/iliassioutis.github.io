@@ -10,15 +10,17 @@ title: Artifacts & governance
 This page explains the practical artifacts and governance controls I use to keep delivery aligned, transparent, and audit-ready — across both iterative (Agile) and stage-gate delivery.  
 It focuses on **what I produce**, **how I use it**, and **how it reduces risk** (scope, quality, security/privacy, and release readiness).
 
-> **At a glance**  
-> **Delivery** — requirements (BRD/FRD), decision log, RAID (Risks, Assumptions, Issues, Dependencies), SIT/UAT gates, go/no-go, runbook, hypercare  
-> **Sensitive data & AI** — DPIA-style risk mapping, encryption & access control, evidence pack, provenance (AI / Device / Manual)
-> **Public examples (PDFs)** — [iOS Privacy Policy](/assets/pdfs/artifacts/mobile-app-legal/ios-privacy-policy.pdf) · [iOS Terms](/assets/pdfs/artifacts/mobile-app-legal/ios-terms-of-service.pdf) · [Android Privacy Policy](/assets/pdfs/artifacts/mobile-app-legal/android-privacy-policy.pdf) · [Android Terms](/assets/pdfs/artifacts/mobile-app-legal/android-terms-of-service.pdf)
+> **At a glance**<br>
+> **Delivery** — requirements (BRD/FRD), decision log, RAID (Risks, Assumptions, Issues, Dependencies), SIT/UAT gates, go/no-go, runbook, hypercare<br>
+> **Sensitive data & AI** — DPIA-style risk mapping, encryption & access control, evidence pack, provenance (AI / Device / Manual)<br>
+> [Change control](#change-control)<br>
+> [Quality gates](#quality-gates)<br>
+> **Public examples (PDFs)** — [iOS Privacy Policy](/assets/pdfs/artifacts/mobile-app-legal/ios-privacy-policy.pdf) · [iOS Terms](/assets/pdfs/artifacts/mobile-app-legal/ios-terms-of-service.pdf) · [Android Privacy Policy](/assets/pdfs/artifacts/mobile-app-legal/android-privacy-policy.pdf) · [Android Terms](/assets/pdfs/artifacts/mobile-app-legal/android-terms-of-service.pdf)<br>
 > **Jump to** — [Real examples](#real-examples)
 
 ---
 
-## On this page
+## On this page {#on-this-page}
 
 Quick navigation to the artifacts, controls, and real delivery examples covered below.
 
@@ -49,12 +51,17 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   The “how well it must work” requirements — beyond features:  
   - **Security & privacy:** encryption, access control, data minimization, retention/deletion, consent handling  
   - **Performance:** response times, throughput, and acceptable latency under expected load  
-  - **Availability:** how consistently the service should be reachable for users  
+  - **Availability:** how consistently the service should be reachable for users
+    <details>
+    <summary>What this means (examples)</summary>
+      
     - **Uptime target:** the percentage of time it should be “up” and usable (for example, “available 99.9% of the time”).  
     - **Acceptable downtime:** what interruptions are tolerated and when (for example, a short maintenance window at night).  
     - **Resilience:** how well the system continues to work when something goes wrong (for example, if one server/service is slow or down, the rest of the app should still function).  
     - **Recovery expectations:** how quickly service should be restored after an outage (for example, “restore core functions within X minutes”).  
-    - **User impact rules:** what the user should experience during partial outages (for example, “read-only mode” or “show a clear message and retry automatically”).  
+    - **User impact rules:** what the user should experience during partial outages (for example, “read-only mode” or “show a clear message and retry automatically”).
+
+    </details>   
   - **Reliability:** consistent behavior over time (error rates, retries, data consistency, **graceful degradation — key functions still work in a reduced mode when a dependency fails**, clear fallback behavior)  
   - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
   - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
@@ -134,6 +141,10 @@ These artifacts reduce production risk and make go-live predictable.
 How this shows up in my work (example patterns):
 - Using a structured **go/no-go release decision** with explicit criteria (feature complete, test complete, risks accepted/mitigated).
 - Ensuring operational readiness for real-world usage (incident triage, rollback, and post-release stabilization).
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -259,7 +270,7 @@ Practical examples of what I track:
 
 ---
 
-### Change control
+### Change control {#change-control}
 
 Change control is how I keep delivery predictable when new requests appear, priorities shift, or constraints change. The goal is not to “block” change — it is to make change **visible**, **assessed**, and **agreed**, so scope, timeline, cost, and quality stay aligned.
 
@@ -317,7 +328,7 @@ Change control is how I keep delivery predictable when new requests appear, prio
 
 ---
 
-### Quality gates
+### Quality gates {#quality-gates}
 
 Quality gates are **planned “pause-and-check” points** that confirm we are genuinely ready to move to the next stage (testing or release).  
 They prevent late surprises by making readiness **explicit, evidence-based, and agreed** — especially important when multiple systems, vendors, or regulated data are involved.
@@ -349,6 +360,10 @@ I treat each gate as **(1) a checklist, (2) named owners, and (3) clear pass/fai
   - **What it checks:** required testing is complete; critical defects are resolved or formally accepted with mitigations; monitoring/alerts are configured; support handover is complete; rollout steps are documented; rollback plan is tested/credible; communications are ready.  
   - **What “ready” looks like:** a structured **go/no-go** decision can be made with confidence, based on evidence and agreed criteria — not guesswork.
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Testing & release governance {#testing-release}
@@ -366,6 +381,10 @@ I treat each gate as **(1) a checklist, (2) named owners, and (3) clear pass/fai
 - Hypercare plan + stabilization checkpoints
 - Post-release review (what worked, what didn’t, what to improve)
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Traceability: from “why” to evidence {#traceability}
@@ -378,6 +397,10 @@ Practical examples of what traceability covers:
 - A requirement tied to acceptance criteria and test cases
 - A high-risk area (privacy/security/AI claims) tied to explicit evidence and decision records
 - Release notes tied back to scope and verified outcomes
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -410,6 +433,10 @@ Where privacy risk could be high, I use a DPIA-style approach to make sure risks
 - **Assign responsibilities and escalation paths:** define who owns each control and decision, when approvals are required, and what triggers escalation (e.g., scope changes affecting data, new vendors/sub-processors, expanded data collection, AI features touching sensitive data).  
 - **Revisit when things change:** treat this as a living record—update it when new features, integrations, data types, or vendors are introduced, or when **incidents or “near-misses”** uncover new risks (issues caught in time before they affected users or production).  
   - *Examples of near-misses:* a misconfigured permission discovered in staging that **would have exposed sensitive data**; a logging change that **started capturing sensitive fields** and was rolled back; a deployment that **briefly broke an external API integration** but was detected during verification and reverted; a third-party provider announcing a breaking change late, caught before release; an alert showing repeated suspicious login attempts, prompting a rule change before any compromise.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -477,6 +504,10 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
   - What users should do with it (e.g., “use as a personal reference”, “consider trends”, “seek professional advice if concerned”).
   - What users should *not* do with it (e.g., “do not use for emergencies or urgent situations”).
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ### 2) Provenance and transparency {#ai-provenance-transparency}
@@ -511,6 +542,10 @@ Users and reviewers must be able to tell **what produced an output** and **how i
     - “This value was AI/device/manual”
     - “This device model produced the value”
   - Where you do not store history (session-only designs), ensure the UI still communicates provenance at the moment of use.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -556,6 +591,10 @@ AI features still need **accountability**: who owns decisions, who reviews issue
     - how to interpret provenance labels
     - how to identify known limitations
     - when to escalate to product/engineering
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -670,6 +709,10 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - only ship AI updates through controlled builds/releases
     - keep ownership clear for approving AI dependency upgrades and rollbacks
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ### 5) Monitoring and drift awareness {#ai-monitoring-drift}
@@ -723,6 +766,10 @@ Even if AI runs on-device and does not continuously learn, governance still requ
     - fix the issue and re-test the affected user flows before rolling out again
     - communication (release notes, support guidance)
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ### 6) Privacy and data-handling rules for AI features (often missed, but critical) {#ai-privacy-data}
@@ -754,6 +801,10 @@ AI governance must include clear rules on **what data is processed, stored, or s
     - what data they receive (and what they do *not* receive),
     - and the purpose.
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ### 7) Release readiness checklist for AI (practical) {#ai-release-readiness}
@@ -770,6 +821,10 @@ Before shipping AI-related changes, I treat these as minimum checks:
 - Rollback/containment plan exists (including feature toggle strategy if used)
 - Support handover updated (known issues, troubleshooting steps, escalation triggers)
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## What strong delivery governance looks like in practice {#what-good-looks-like}
@@ -780,6 +835,10 @@ Before shipping AI-related changes, I treat these as minimum checks:
 - Controlled scope and change management
 - Traceability from requirements to verified outcomes
 - Release discipline (readiness, rollback, monitoring, stabilization)
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -870,6 +929,10 @@ Examples reflect real delivery work, described without confidential identifiers,
     - iOS does not create AI history from iOS captures (AI is session-only on iOS)
 - Links to the user-facing “How to measure” pages (per platform): conditions, step-by-step guidance, and wellness disclaimers
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ### Example 2 — Bluetooth medical device integration end-to-end {#ex2-bt-integration}
@@ -934,6 +997,10 @@ Examples reflect real delivery work, described without confidential identifiers,
 - An anonymized compatibility table (device type + OS range + major constraints).
 - An anonymized SIT scenario list: the end-to-end device scenarios we test (normal flow + failure cases), and the same checklist we re-run after changes to confirm nothing broke.
 - A user-facing device integration guide (pairing, permissions, common failures, supported models/OS boundaries).
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -1019,6 +1086,10 @@ Examples reflect real delivery work, described without confidential identifiers,
 - An anonymized go/no-go checklist excerpt (history saving + cross-device sync behavior, source labels AI/Device/Manual, consent prompts, location behavior, encryption checks).
 - A high-level anonymized validation summary table: device type → method → result summary → scope of applicability (which app versions / device models / operating systems and which testing conditions the results apply to).
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Public artifact downloads (mobile app legal PDFs) {#tma-legal-pdfs}
@@ -1029,6 +1100,10 @@ The documents below are real delivery artifacts I produced as part of a regulate
 - **iOS Terms of Service (PDF)** — <a href="/assets/pdfs/artifacts/mobile-app-legal/ios-terms-of-service.pdf" target="_blank" rel="noopener">Download</a>
 - **Android Privacy Policy (PDF)** — <a href="/assets/pdfs/artifacts/mobile-app-legal/android-privacy-policy.pdf" target="_blank" rel="noopener">Download</a>
 - **Android Terms of Service (PDF)** — <a href="/assets/pdfs/artifacts/mobile-app-legal/android-terms-of-service.pdf" target="_blank" rel="noopener">Download</a>
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 <hr>
 
