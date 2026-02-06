@@ -59,8 +59,8 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - **Recovery expectations:** how quickly service should be restored after an outage (for example, “restore core functions within X minutes”).  
     - **User impact rules:** what the user should experience during partial outages (for example, “read-only mode” or “show a clear message and retry automatically”).
 
-    </details>   
-
+    </details>
+    
   - **Reliability:** consistent behavior over time (error rates, retries, data consistency, **graceful degradation — key functions still work in a reduced mode when a dependency fails**, clear fallback behavior)  
   - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
   - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
