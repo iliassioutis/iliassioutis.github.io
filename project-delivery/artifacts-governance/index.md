@@ -174,6 +174,10 @@ Practical examples of what I track:
 - Integration dependencies (third-party services, identity providers, analytics/crash reporting tools).
 - Mobile OS and peripheral constraints (e.g., supported OS versions, device-model limitations).
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ### Ownership and decision-making
@@ -266,6 +270,10 @@ Practical examples of what I track:
     - repeated test failures, high-severity defects, or integration instability near release  
     - unclear ownership, blocked teams, or vendor delays that threaten milestones  
   - **Escalation path:** who is notified first, who must approve next, and what “stop / proceed” rules apply (e.g., pause release until risks are accepted or mitigations are in place).
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
