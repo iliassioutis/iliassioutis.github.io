@@ -50,7 +50,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Performance:** response times, throughput, and acceptable latency under expected load  
   - **Availability:** how consistently the service should be reachable for users
   
-    <details>
+    <details markdown="1" style="margin-top:8px; margin-bottom:12px;">
     <summary>What this means (examples)</summary>
       
     - **Uptime target:** the percentage of time it should be “up” and usable (for example, “available 99.9% of the time”).  
@@ -60,7 +60,6 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - **User impact rules:** what the user should experience during partial outages (for example, “read-only mode” or “show a clear message and retry automatically”).
 
     </details>
-
     
   - **Reliability:** consistent behavior over time (error rates, retries, data consistency, **graceful degradation — key functions still work in a reduced mode when a dependency fails**, clear fallback behavior)  
   - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
