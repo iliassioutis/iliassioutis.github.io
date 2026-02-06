@@ -23,6 +23,8 @@ Quick navigation to the artifacts, controls, and real delivery examples covered 
 
 - [Core delivery artifacts](#core-artifacts)
 - [Governance tools](#governance-tools)
+  - [Risk and dependency control](#risk-dependency-control)
+  - [Ownership and decision-making](#ownership-decision-making)
   - [Change control](#change-control)
   - [Quality gates](#quality-gates)
 - [Testing & release governance](#testing-release)
@@ -151,7 +153,15 @@ How this shows up in my work (example patterns):
 
 ## Governance tools I use repeatedly {#governance-tools}
 
-### Risk and dependency control
+<div id="governance-contents"></div>
+
+**On this section**
+- [Risk and dependency control](#risk-dependency-control)
+- [Ownership and decision-making](#ownership-decision-making)
+- [Change control](#change-control)
+- [Quality gates](#quality-gates)
+
+### Risk and dependency control {#risk-dependency-control}
 - **RAID log (Risks, Assumptions, Issues, Dependencies)**  
   A living log reviewed regularly. For each item, it captures:  
   - **What it is:** the risk/assumption/issue/dependency stated clearly  
@@ -177,12 +187,12 @@ Practical examples of what I track:
 - Mobile OS and peripheral constraints (e.g., supported OS versions, device-model limitations).
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#governance-contents">Back to Governance tools list</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
 
-### Ownership and decision-making
+### Ownership and decision-making {#ownership-decision-making}
 - **RACI (Responsible, Accountable, Consulted, Informed)**  
   A simple responsibility map that makes ownership explicit and prevents “everyone thought someone else was doing it”:  
   - **Responsible (R):** the person/team doing the work (builds, writes, executes, fixes).  
@@ -274,7 +284,7 @@ Practical examples of what I track:
   - **Escalation path:** who is notified first, who must approve next, and what “stop / proceed” rules apply (e.g., pause release until risks are accepted or mitigations are in place).
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#governance-contents">Back to Governance tools list</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -336,7 +346,7 @@ Change control is how I keep delivery predictable when new requests appear, prio
   - Always: “If it changes scope/timeline/risk materially, it gets logged and decided — not assumed.”
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#governance-contents">Back to Governance tools list</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -374,7 +384,7 @@ I treat each gate as **(1) a checklist, (2) named owners, and (3) clear pass/fai
   - **What “ready” looks like:** a structured **go/no-go** decision can be made with confidence, based on evidence and agreed criteria — not guesswork.
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#governance-contents">Back to Governance tools list</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
