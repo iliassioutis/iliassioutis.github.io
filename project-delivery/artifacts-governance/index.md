@@ -22,6 +22,10 @@ It focuses on **what I produce**, **how I use it**, and **how it reduces risk** 
 Quick navigation to the artifacts, controls, and real delivery examples covered below.
 
 - [Core delivery artifacts](#core-artifacts)
+  - [Requirements and specifications](#core-requirements-specs)
+  - [Solution notes and decision records](#core-solution-decisions)
+  - [Testing strategy and evidence plan](#core-testing-evidence)
+  - [Release plan and operational readiness](#core-release-ops)
 - [Governance tools](#governance-tools)
   - [Risk and dependency control](#risk-dependency-control)
   - [Ownership and decision-making](#ownership-decision-making)
@@ -39,7 +43,15 @@ Quick navigation to the artifacts, controls, and real delivery examples covered 
 
 ## Core delivery artifacts {#core-artifacts}
 
-### 1) Requirements and specifications
+<div id="core-contents"></div>
+
+**On this section**
+- [1) Requirements and specifications](#core-requirements-specs)
+- [2) Solution notes and decision records](#core-solution-decisions)
+- [3) Testing strategy and evidence plan](#core-testing-evidence)
+- [4) Release plan and operational readiness](#core-release-ops)
+
+### 1) Requirements and specifications {#core-requirements-specs}
 These artifacts ensure everyone agrees on *what we are building*, *why*, and *how success is measured*.
 
 - **Business Requirements Document (BRD)**  
@@ -75,9 +87,13 @@ How this shows up in my work (example patterns):
 - Turning “feature requests” into **testable acceptance criteria** (including security/privacy constraints, not just UI behavior).
 - Capturing platform constraints and behavior differences (e.g., mobile platform retention, provenance labeling rules, device compatibility boundaries).
 
+<blockquote>
+⬆ <a href="#core-contents">Back to Core delivery artifacts list</a> · <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
-### 2) Solution notes and decision records
+### 2) Solution notes and decision records {#core-solution-decisions}
 These make architecture decisions explicit and traceable (especially important when integrations, data flows, or regulated constraints exist).
 
 - **Solution notes / Architecture decision records (ADRs)**  
@@ -91,9 +107,13 @@ How this shows up in my work (example patterns):
 - Documenting **on-device AI processing boundaries** (what is processed on-device, what is not uploaded/stored).
 - Defining end-to-end data handling rules for **Bluetooth device integrations** (device → app → backend → clinician view), including integrity checks and traceability.
 
+<blockquote>
+⬆ <a href="#core-contents">Back to Core delivery artifacts list</a> · <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
-### 3) Testing strategy and evidence plan
+### 3) Testing strategy and evidence plan {#core-testing-evidence}
 This is how I make quality measurable and defensible (not just “we tested it”).
 
 - **Test strategy**  
@@ -111,9 +131,13 @@ How this shows up in my work (example patterns):
 - Structuring testing so it progresses from **unit → component → integration → system**, then SIT/UAT readiness.
 - Creating a reproducible evidence trail for sensitive features (security controls, retention/deletion behavior, provenance labeling).
 
+<blockquote>
+⬆ <a href="#core-contents">Back to Core delivery artifacts list</a> · <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
-### 4) Release plan and operational readiness
+### 4) Release plan and operational readiness {#core-release-ops} 
 These artifacts reduce production risk and make go-live predictable.
 
 - **Release plan**  
@@ -146,7 +170,7 @@ How this shows up in my work (example patterns):
 - Ensuring operational readiness for real-world usage (incident triage, rollback, and post-release stabilization).
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#core-contents">Back to Core delivery artifacts list</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
