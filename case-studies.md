@@ -50,6 +50,10 @@ Research project at **UCL** benchmarking **non-rigid point-set registration** (T
 - 🔎 **Read the thesis summary:** [UCL MPhil — 3D non-rigid registration](/research/ucl-mphil/)
 - 📄 **Thesis (PDF):** <a href="/assets/pdfs/ucl-mphil-thesis.pdf" target="_blank" rel="noopener noreferrer">Download / view</a>
 
+<blockquote>
+⬆️ <a href="#quick-nav">Back to Quick navigation</a>
+</blockquote>
+
 ---
 
 ### 📊 DHL Management (MBA Internship) — GCS FACTs: finance data validation & forecasting automation (confidential)
