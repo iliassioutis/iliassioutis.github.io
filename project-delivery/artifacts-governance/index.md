@@ -23,6 +23,8 @@ Quick navigation to the artifacts, controls, and real delivery examples covered 
 
 - [Core delivery artifacts](#core-artifacts)
 - [Governance tools](#governance-tools)
+  - [Change control](#change-control)
+  - [Quality gates](#quality-gates)
 - [Testing & release governance](#testing-release)
 - [Traceability](#traceability)
 - [Privacy & security](#privacy-security)
