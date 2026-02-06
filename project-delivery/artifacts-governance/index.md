@@ -457,6 +457,8 @@ When AI is part of the product, governance is about **claims**, **clarity**, **b
 
 The goal is simple: **users are not misled**, **outputs are interpretable**, **risks are controlled**, and **there is evidence for what is claimed**.
 
+<div id="ai-contents"></div>
+
 > **At a glance (what this section covers)**
 > - [1) Claims boundaries and user-facing clarity](#ai-claims-clarity)
 > - [2) Provenance and transparency](#ai-provenance-transparency)
@@ -516,7 +518,7 @@ AI governance starts with **what we claim** (and what we explicitly do *not* cla
   - What users should *not* do with it (e.g., “do not use for emergencies or urgent situations”).
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#ai-contents">Back to AI contents</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -555,7 +557,7 @@ Users and reviewers must be able to tell **what produced an output** and **how i
   - Where you do not store history (session-only designs), ensure the UI still communicates provenance at the moment of use.
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#ai-contents">Back to AI contents</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -604,7 +606,7 @@ AI features still need **accountability**: who owns decisions, who reviews issue
     - when to escalate to product/engineering
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#ai-contents">Back to AI contents</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -721,7 +723,7 @@ App stores (and regulated contexts) care deeply about whether AI-related stateme
     - keep ownership clear for approving AI dependency upgrades and rollbacks
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#ai-contents">Back to AI contents</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -778,7 +780,7 @@ Even if AI runs on-device and does not continuously learn, governance still requ
     - communication (release notes, support guidance)
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#ai-contents">Back to AI contents</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -813,7 +815,7 @@ AI governance must include clear rules on **what data is processed, stored, or s
     - and the purpose.
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#ai-contents">Back to AI contents</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -833,7 +835,7 @@ Before shipping AI-related changes, I treat these as minimum checks:
 - Support handover updated (known issues, troubleshooting steps, escalation triggers)
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#ai-contents">Back to AI contents</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
