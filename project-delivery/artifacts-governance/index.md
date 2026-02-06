@@ -10,13 +10,10 @@ title: Artifacts & governance
 This page explains the practical artifacts and governance controls I use to keep delivery aligned, transparent, and audit-ready — across both iterative (Agile) and stage-gate delivery.  
 It focuses on **what I produce**, **how I use it**, and **how it reduces risk** (scope, quality, security/privacy, and release readiness).
 
-> **At a glance**<br>
-> **Delivery** — requirements (BRD/FRD), decision log, RAID (Risks, Assumptions, Issues, Dependencies), SIT/UAT gates, go/no-go, runbook, hypercare<br>
-> **Sensitive data & AI** — DPIA-style risk mapping, encryption & access control, evidence pack, provenance (AI / Device / Manual)<br>
-> [Change control](#change-control)<br>
-> [Quality gates](#quality-gates)<br>
-> **Public examples (PDFs)** — [iOS Privacy Policy](/assets/pdfs/artifacts/mobile-app-legal/ios-privacy-policy.pdf) · [iOS Terms](/assets/pdfs/artifacts/mobile-app-legal/ios-terms-of-service.pdf) · [Android Privacy Policy](/assets/pdfs/artifacts/mobile-app-legal/android-privacy-policy.pdf) · [Android Terms](/assets/pdfs/artifacts/mobile-app-legal/android-terms-of-service.pdf)<br>
-> **Jump to** — [Real examples](#real-examples)
+> **At a glance**  
+> - **Delivery:** BRD/FRD, decision log, RAID (Risks, Assumptions, Issues, Dependencies), SIT/UAT gates, go/no-go, runbook, hypercare  
+> - **Sensitive data & AI:** DPIA-style risk mapping, encryption & access control, evidence pack, provenance (AI / Device / Manual)  
+> - **Jump to:** [Change control](#change-control) · [Quality gates](#quality-gates) · [Real examples](#real-examples) · [Legal PDFs](#tma-legal-pdfs)
 
 ---
 
@@ -52,7 +49,8 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Security & privacy:** encryption, access control, data minimization, retention/deletion, consent handling  
   - **Performance:** response times, throughput, and acceptable latency under expected load  
   - **Availability:** how consistently the service should be reachable for users
-    <details>
+  
+    <details markdown="1">
     <summary>What this means (examples)</summary>
       
     - **Uptime target:** the percentage of time it should be “up” and usable (for example, “available 99.9% of the time”).  
@@ -62,6 +60,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - **User impact rules:** what the user should experience during partial outages (for example, “read-only mode” or “show a clear message and retry automatically”).
 
     </details>   
+
   - **Reliability:** consistent behavior over time (error rates, retries, data consistency, **graceful degradation — key functions still work in a reduced mode when a dependency fails**, clear fallback behavior)  
   - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
   - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
