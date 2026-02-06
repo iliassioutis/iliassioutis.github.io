@@ -12,8 +12,8 @@ It focuses on **what I produce**, **how I use it**, and **how it reduces risk** 
 
 > **At a glance**  
 > **Delivery** — requirements (BRD/FRD), decision log, RAID (Risks, Assumptions, Issues, Dependencies), SIT/UAT gates, go/no-go, runbook, hypercare  
-> **Sensitive data & AI** — DPIA-style risk mapping, encryption & access control, evidence pack, provenance (AI / Device / Manual)  
-> **Public examples (PDFs)** — [iOS Privacy Policy](#tma-legal-pdfs) · [iOS Terms](#tma-legal-pdfs) · [Android Privacy Policy](#tma-legal-pdfs) · [Android Terms](#tma-legal-pdfs)  
+> **Sensitive data & AI** — DPIA-style risk mapping, encryption & access control, evidence pack, provenance (AI / Device / Manual)
+> **Public examples (PDFs)** — [iOS Privacy Policy](/assets/pdfs/artifacts/mobile-app-legal/ios-privacy-policy.pdf) · [iOS Terms](/assets/pdfs/artifacts/mobile-app-legal/ios-terms-of-service.pdf) · [Android Privacy Policy](/assets/pdfs/artifacts/mobile-app-legal/android-privacy-policy.pdf) · [Android Terms](/assets/pdfs/artifacts/mobile-app-legal/android-terms-of-service.pdf)
 > **Jump to** — [Real examples](#real-examples)
 
 ---
