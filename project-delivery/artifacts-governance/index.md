@@ -33,25 +33,6 @@ Quick navigation to the artifacts, controls, and real delivery examples covered 
 
 ---
 
-## On this page {#on-this-page}
-
-<div class="no-print" style="padding:12px 14px; border:1px solid #e5e5e5; border-radius:10px;">
-  <strong>Quick navigation</strong><br>
-
-  <a href="#core-artifacts">Core delivery artifacts</a> ·
-  <a href="#governance-tools">Governance tools</a> ·
-  <a href="#testing-release">Testing & release governance</a> ·
-  <a href="#traceability">Traceability</a> ·
-  <a href="#privacy-security">Privacy &amp; security</a> ·
-  <a href="#ai-governance">AI governance</a><br>
-
-  <a href="#what-good-looks-like">What strong governance looks like</a> ·
-  <a href="#real-examples">Real examples from my delivery work</a> ·
-  <a href="#tma-legal-pdfs">Public artifact downloads (mobile app legal PDFs)</a>
-</div>
-
----
-
 ## Core delivery artifacts {#core-artifacts}
 
 ### 1) Requirements and specifications
@@ -69,7 +50,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Performance:** response times, throughput, and acceptable latency under expected load  
   - **Availability:** how consistently the service should be reachable for users
   
-    <details markdown="1">
+    <details>
     <summary>What this means (examples)</summary>
       
     - **Uptime target:** the percentage of time it should be “up” and usable (for example, “available 99.9% of the time”).  
@@ -79,6 +60,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - **User impact rules:** what the user should experience during partial outages (for example, “read-only mode” or “show a clear message and retry automatically”).
 
     </details>
+
     
   - **Reliability:** consistent behavior over time (error rates, retries, data consistency, **graceful degradation — key functions still work in a reduced mode when a dependency fails**, clear fallback behavior)  
   - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
