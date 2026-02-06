@@ -13,6 +13,7 @@ It focuses on **what I produce**, **how I use it**, and **how it reduces risk** 
 > **At a glance**  
 > **Delivery** — requirements (BRD/FRD), decision log, RAID (Risks, Assumptions, Issues, Dependencies), SIT/UAT gates, go/no-go, runbook, hypercare  
 > **Sensitive data & AI** — DPIA-style risk mapping, encryption & access control, evidence pack, provenance (AI / Device / Manual)  
+> **Public examples (PDFs)** — [iOS Privacy Policy](#tma-legal-pdfs) · [iOS Terms](#tma-legal-pdfs) · [Android Privacy Policy](#tma-legal-pdfs) · [Android Terms](#tma-legal-pdfs)  
 > **Jump to** — [Real examples](#real-examples)
 
 ---
@@ -29,6 +30,7 @@ Quick navigation to the artifacts, controls, and real delivery examples covered 
 - [AI governance](#ai-governance)
 - [What strong governance looks like](#what-good-looks-like)
 - [Real examples from my delivery work](#real-examples)
+- [Public artifact downloads (mobile app legal PDFs)](#tma-legal-pdfs)
 
 ---
 
@@ -382,6 +384,8 @@ Practical examples of what traceability covers:
 ## Privacy & security governance {#privacy-security}
 
 When delivery involves sensitive data, I treat privacy/security as gates with explicit artifacts — not side notes.
+
+> **Concrete example artifacts:** see [Public artifact downloads (mobile app legal PDFs)](#tma-legal-pdfs).
 
 ### Privacy controls (what I document and verify)
 - Data categories and data minimization (what is collected and why)
@@ -1014,6 +1018,17 @@ Examples reflect real delivery work, described without confidential identifiers,
 - A high-level anonymized table: feature → stored data (yes/no) → storage location → user controls → platform differences.
 - An anonymized go/no-go checklist excerpt (history saving + cross-device sync behavior, source labels AI/Device/Manual, consent prompts, location behavior, encryption checks).
 - A high-level anonymized validation summary table: device type → method → result summary → scope of applicability (which app versions / device models / operating systems and which testing conditions the results apply to).
+
+---
+
+## Public artifact downloads (mobile app legal PDFs) {#tma-legal-pdfs}
+
+The documents below are real delivery artifacts I produced as part of a regulated mobile product (privacy disclosures and user terms), published here as concrete examples of governance outputs.
+
+- **iOS Privacy Policy (PDF)** — <a href="/assets/pdfs/artifacts/mobile-app-legal/ios-privacy-policy.pdf" target="_blank" rel="noopener">Download</a>
+- **iOS Terms of Service (PDF)** — <a href="/assets/pdfs/artifacts/mobile-app-legal/ios-terms-of-service.pdf" target="_blank" rel="noopener">Download</a>
+- **Android Privacy Policy (PDF)** — <a href="/assets/pdfs/artifacts/mobile-app-legal/android-privacy-policy.pdf" target="_blank" rel="noopener">Download</a>
+- **Android Terms of Service (PDF)** — <a href="/assets/pdfs/artifacts/mobile-app-legal/android-terms-of-service.pdf" target="_blank" rel="noopener">Download</a>
 
 <hr>
 
