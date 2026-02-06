@@ -860,6 +860,8 @@ Before shipping AI-related changes, I treat these as minimum checks:
 The sections below show how the artifacts and controls on this page translate into real delivery outcomes.  
 Examples reflect real delivery work, described without confidential identifiers, while keeping enough technical and process detail to show how I operate.
 
+<div id="examples-contents"></div>
+
 **On this section**
 - [Example 1 — AI feature boundaries and safe user experience](#ex1-ai-boundaries)
 - [Example 2 — Bluetooth medical device integration end-to-end](#ex2-bt-integration)
@@ -943,7 +945,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 - Links to the user-facing “How to measure” pages (per platform): conditions, step-by-step guidance, and wellness disclaimers
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#examples-contents">Back to examples list</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -1012,7 +1014,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 - A user-facing device integration guide (pairing, permissions, common failures, supported models/OS boundaries).
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#examples-contents">Back to examples list</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
@@ -1100,7 +1102,7 @@ Examples reflect real delivery work, described without confidential identifiers,
 - A high-level anonymized validation summary table: device type → method → result summary → scope of applicability (which app versions / device models / operating systems and which testing conditions the results apply to).
 
 <blockquote>
-⬆ <a href="#on-this-page">Back to navigation</a>
+⬆ <a href="#examples-contents">Back to examples list</a> · <a href="#on-this-page">Back to navigation</a>
 </blockquote>
 
 ---
