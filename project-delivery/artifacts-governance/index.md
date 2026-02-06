@@ -33,6 +33,25 @@ Quick navigation to the artifacts, controls, and real delivery examples covered 
 
 ---
 
+## On this page {#on-this-page}
+
+<div class="no-print" style="padding:12px 14px; border:1px solid #e5e5e5; border-radius:10px;">
+  <strong>Quick navigation</strong><br>
+
+  <a href="#core-artifacts">Core delivery artifacts</a> ·
+  <a href="#governance-tools">Governance tools</a> ·
+  <a href="#testing-release">Testing & release governance</a> ·
+  <a href="#traceability">Traceability</a> ·
+  <a href="#privacy-security">Privacy &amp; security</a> ·
+  <a href="#ai-governance">AI governance</a><br>
+
+  <a href="#what-good-looks-like">What strong governance looks like</a> ·
+  <a href="#real-examples">Real examples from my delivery work</a> ·
+  <a href="#tma-legal-pdfs">Public artifact downloads (mobile app legal PDFs)</a>
+</div>
+
+---
+
 ## Core delivery artifacts {#core-artifacts}
 
 ### 1) Requirements and specifications
