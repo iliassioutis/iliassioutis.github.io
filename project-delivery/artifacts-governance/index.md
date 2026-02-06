@@ -325,6 +325,10 @@ Change control is how I keep delivery predictable when new requests appear, prio
   - Larger changes: require a deeper impact review, explicit sign-offs, an updated baseline plan, and **clear communications** (who needs to know, what is changing, why it’s changing, and what the new dates/scope/risks are)  
   - Always: “If it changes scope/timeline/risk materially, it gets logged and decided — not assumed.”
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ### Quality gates {#quality-gates}
