@@ -29,13 +29,18 @@ Below are selected delivery case studies highlighting evidence-driven execution,
 {: #case-clinical-validation }
 One-month clinical validation study at **Athens Hospital** (**Feb 6–Mar 6, 2025**) with **27 adults (20–91)** evaluating **accuracy, reliability, and data integrity** for **six Bluetooth medical devices** integrated with the ePokratis MedAiConnect **iOS** app, supporting App Store safety evidence under **Guideline 1.4.1 (Safety – Physical Harm)**. Athens Hospital clinical staff supervised measurements and **cross-verified that app-displayed values matched the device outputs**.
 
+In addition to clinical performance and data integrity, the connected devices used in the workflow also needed to be suitable for use on the Greek market. For audit readiness, I compiled a per-device regulatory documentation pack (letters/certificates/IFU-type documents) that supports the device eligibility and traceability used in the study.
+
 - **Devices validated:** TaiDoc TD-3128 (BP/PR), TD-8255 (SpO₂/PR), TD-1241 (Thermometer), TD-2555 (Scale), Contec PM10 (ECG/HR), TaiDoc TD-4216B (biomarkers).
 - **Protocol:** paired comparison vs **hospital-grade reference standards**; **3× repeats per participant** for vital-sign devices; TD-4216B subset: **23/27** blood samples, **3× repeats per biomarker** with **single clinical reference per biomarker** (invasive sampling constraint).
 - **Reference standards (Athens Hospital):** Omron HEM-907XL (BP), Nellcor bedside SpO₂ system, Welch Allyn Braun ThermoScan PRO 6000 (temperature), Seca 769 medical scale (weight), Philips PageWriter TC20 ECG system, Roche Cobas c 111 lab analyzer (biomarkers) — all certified and clinically operated.
+- **Regulatory device documentation (Greek market readiness):** compiled per-device supporting documents (e.g., manufacturer/distributor letters and related regulatory evidence) used to confirm eligibility/traceability for the connected devices in the Greek market context.
 - **Methods:** **ICC** (Pingouin; **ICC3 / ICC3k**), **MAD**, **Agreement %**, and **Bland–Altman** (mean difference and **95% limits of agreement: LOA = MD ± 1.96×SD**) with clinically/standard-derived thresholds (e.g., ISO 81060-2 for BP, ISO 15197 for glucose).
 - **Key outcomes (study summary tables):** vital-sign devices showed **excellent reliability** (ICC3 **0.975–0.9999**; ICC3k **0.992–0.99997**); TD-4216B biomarkers ranged **very good to excellent** (ICC3 **0.889–0.997**, ICC3k **0.960–0.999**). Regulatory/clinical thresholds were defined per measure and summarized as ‘Met in study: Yes’ in the report’s compliance table.
 - **Data integrity:** end-to-end workflow verified; **no missing values, no corruption, consistent units/labels/timestamps**, and **100% in-app match** to device readings across all devices (no integrity issues observed).
-- ✅ Artifacts: [Evidence & downloads](/clinical-validation) · [Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf) · [Repro pack (ZIP)](/assets/downloads/validation_package.zip)
+- ✅ Artifacts: [Evidence & downloads](/clinical-validation) · [Report (PDF)](/assets/pdfs/epokratis-medaiconnect-validation-report.pdf) · [Repro pack (ZIP)](/assets/downloads/validation_package.zip) · [Regulatory device docs (ZIP)](/assets/downloads/regulatory-approval-documents.zip)
+
+**Regulatory device docs (what’s inside):** a per-device folder with the supporting letters/documents used during delivery to evidence device eligibility and traceability for the Greek market context.
 
 <blockquote>
 ⬆️ <a href="#quick-nav">Back to Quick navigation</a>
