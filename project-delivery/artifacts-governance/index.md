@@ -71,7 +71,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Error handling (what happens when something fails):** the expected system response for realistic failures, such as:
     - invalid input (show a clear message; block submission)
     - permission denied (block the action, explain why and log the attempt)
-    - network timeout / offline mode (show a clear message and allow retry (and where appropriate, save the action locally and sync later))
+    - network timeout / offline mode (show a clear message and allow retry and where appropriate, save the action locally and sync later)
     - third-party API failure (show a clear user message, record the failure, and allow retry)
     - device disconnect (prompt re-pairing and prevent saving incomplete measurements)
 - **User stories / use cases + acceptance criteria**  
@@ -118,7 +118,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - **Graceful degradation / fallback:** if a dependency fails, the app still works in a safe reduced way (e.g., “users can view existing data but cannot submit new data until the service returns”; “if a third-party service is down, show a clear message and allow retry rather than crashing”)  
   - **Auditability:** logs and traceability that let you reconstruct events — “who did what, when, and why” — plus a **change history** (a record of changes such as **data record creation/edits/deletions**, permission/configuration updates, and which software version was deployed)  
   - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
-  - **Usability:** user experience expectations (clarity, accessibility, helpful error messages, and how easy core tasks are to complete)  
+  - **Usability:** user experience expectations (clarity, **accessibility** *(e.g., readable contrast, support for larger text, and compatibility with screen readers)*, helpful error messages, and how easy core tasks are to complete)  
     - Includes minimizing **unnecessary steps and confusion** in the most important user flows (for example: sign-up/login, onboarding, completing a measurement, pairing a device, starting a teleconsultation, or uploading a file).
 
 How this shows up in my work (example patterns):
