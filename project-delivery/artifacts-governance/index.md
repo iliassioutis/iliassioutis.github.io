@@ -248,13 +248,13 @@ These artifacts reduce production risk and make go-live predictable.
       - crash rate stays normal (no sudden increase in app crashes after the release)
     - background jobs OK (queues draining, scheduled jobs running)
   - **Rollback plan (how we undo the release safely)**  
-  A rollback plan explains **exactly what we will do if the release causes serious problems** — and how we return users to a stable state. It typically includes:
-  - **Re-deploy the previous stable version** (go back to the last known-good build of the backend / app).
-  - **Undo risky configuration changes** (restore the previous settings, configuration, or traffic rules that were changed during the release).
-  - **Turn off the new feature safely** (disable a feature flag so users stop seeing the new behavior without needing a new app release).
-  - **Define the decision rule (when we roll back):** clear criteria so it’s not subjective, for example:
-    - Roll back immediately if a **critical issue** appears (e.g., users can’t log in, payments fail, or saved data is missing).
-    - Roll back if key failure indicators stay above a threshold for a sustained period (e.g., **more than 5%** of login attempts fail for **10 minutes** after release). 
+    A rollback plan explains **exactly what we will do if the release causes serious problems** — and how we return users to a stable state. It typically includes:
+    - **Re-deploy the previous stable version** (go back to the last known-good build of the backend / app).
+    - **Undo risky configuration changes** (restore the previous settings, configuration, or traffic rules that were changed during the release).
+    - **Turn off the new feature safely** (disable a feature flag so users stop seeing the new behavior without needing a new app release).
+    - **Define the decision rule (when we roll back):** clear criteria so it’s not subjective, for example:
+      - Roll back immediately if a **critical issue** appears (e.g., users can’t log in, payments fail, or saved data is missing).
+      - Roll back if key failure indicators stay above a threshold for a sustained period (e.g., **more than 5%** of login attempts fail for **10 minutes** after release). 
 - <span style="color:#1f7a6d; font-weight:700;">Go-live runbook</span>
   A step-by-step “day-of-release” playbook that defines **who does what, in what order**, including timing, communications, and clear **checkpoints** to confirm each stage is working (for example: deployment completed, key services responding, critical user flows pass, integrations healthy, monitoring shows no spikes). It also defines **decision points** (continue / pause / rollback) and who has the authority to make those calls.
 - <span style="color:#1f7a6d; font-weight:700;">Monitoring and alerting plan</span>
