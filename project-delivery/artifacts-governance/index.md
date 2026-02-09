@@ -54,7 +54,7 @@ Quick navigation to the artifacts, controls, and real delivery examples covered 
 ### 1) Requirements and specifications {#core-requirements-specs}
 These artifacts ensure everyone agrees on *what we are building*, *why*, and *how success is measured*.
 
-- **Business Requirements Document (BRD)**  
+- <span style="color:#1f7a6d; font-weight:700;">Business Requirements Document (BRD)</span>  
   The business goals, scope boundaries, stakeholders, success criteria, and constraints (time/cost/risk/regulatory).
   - **Scope + assumptions (lightweight but critical)**
     - **Scope statement (in / out):** what is included in this release and what is explicitly not included (prevents hidden scope creep).
