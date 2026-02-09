@@ -56,6 +56,11 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
 
 - **Business Requirements Document (BRD)**  
   The business goals, scope boundaries, stakeholders, success criteria, and constraints (time/cost/risk/regulatory).
+  - **Scope + assumptions (lightweight but critical)**
+    - **Scope statement (in / out):** what is included in this release and what is explicitly not included (prevents hidden scope creep).
+    - **Assumptions & constraints:** “we assume X / we depend on Y / we cannot do Z” (e.g., vendor API availability, environments, OS/device limits, required certificates, regulatory constraints).
+    - **Definition of Done (DoD):** the minimum quality bar for any story to be considered complete (tests done, evidence captured, security/privacy checks done where relevant, documentation updated).
+    - **Glossary (key terms):** shared definitions for project-critical terms (prevents misunderstandings and rework).
 - **Functional Requirements Document (FRD)** *(or a Product/Technical specification — whatever format the team uses)*  
   A written spec that **defines how the system must behave**, so engineering, QA, and stakeholders can build and test the same thing.  
   It typically **describes and specifies**:
@@ -71,7 +76,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Error handling (what happens when something fails):** the expected system response for realistic failures, such as:
     - invalid input (show a clear message; block submission)
     - permission denied (block the action, explain why and log the attempt)
-    - network timeout / offline mode (show a clear message and allow retry and where appropriate, save the action locally and sync later)
+    - network timeout / offline mode (show a clear message and allow retry; and where appropriate, **store the result/request on the phone** and upload/sync it when the connection returns — e.g., saving a measurement locally first, then syncing it to the backend)
     - third-party API failure (show a clear user message, record the failure, and allow retry)
     - device disconnect (prompt re-pairing and prevent saving incomplete measurements)
 - **User stories / use cases + acceptance criteria**  
@@ -120,6 +125,18 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
   - **Usability:** user experience expectations (clarity, **accessibility** *(e.g., readable contrast, support for larger text, and compatibility with screen readers)*, helpful error messages, and how easy core tasks are to complete)  
     - Includes minimizing **unnecessary steps and confusion** in the most important user flows (for example: sign-up/login, onboarding, completing a measurement, pairing a device, starting a teleconsultation, or uploading a file).
+  - **Compliance (where applicable):** rules needed to meet policy or regulation — for example:
+    - “GDPR requirements: lawful basis/consent where needed, data minimization, retention/deletion, user data access/export where applicable.”
+    - “App-store policy constraints are met (privacy disclosures match actual behavior).”
+  - **Supportability / maintainability:** what the team needs so the system can be **operated and supported after go-live** — for example:
+    - **Troubleshooting info:** a clear way to understand what happened when a user reports an issue (e.g., “error code + timestamp + device/OS + which step failed”), without needing guesswork.
+    - **Admin tools:** simple screens or dashboards to manage accounts/settings and investigate problems (e.g., “view sync status”, “re-send a failed notification”, “disable a feature for a specific user”).
+    - **Runbooks:** step-by-step “what to do first” guides for common incidents (e.g., login outage, third-party API down, device pairing failures, sync stuck).
+    - **Safe logs:** technical logs that help debugging but **do not contain sensitive data** (no passwords, tokens, national IDs, or full medical values).
+    - **Incident response responsibilities (on-call expectations):** who responds when something breaks and how quickly — for example:
+      - “Support monitors tickets during business hours; engineering is on-call for critical incidents.”
+      - “For a critical outage, someone must acknowledge within **30 minutes** and start mitigation (rollback/hotfix) within **X hours**.”
+      - “Escalation path is defined: Support → Engineering → Vendor (if a third-party service is involved).”
 
 How this shows up in my work (example patterns):
 - Turning “feature requests” into **testable acceptance criteria** (including security/privacy constraints, not just UI behavior).
