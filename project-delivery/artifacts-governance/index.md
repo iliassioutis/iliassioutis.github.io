@@ -195,14 +195,14 @@ This is how I make quality measurable and defensible (not just “we tested it�
   - **Example (what “logged + triaged + pass/fail + approval” means in practice):**
     - **Issue logging (where + what fields):** Issues are recorded in a tracker (e.g., Jira / Service Desk / a shared sheet) with steps to reproduce, expected vs actual result, screenshots/video, user role, device/browser, environment, test account/data used, and timestamp.
       - Example ticket: `UAT-23 — Checkout fails when promo code applied (iOS 17.2)`
-  - **Triage (how decisions are made):** A recurring triage touchpoint (e.g., daily / 3× weekly) assigns severity (P0/P1/P2/P3), owner, and a decision: fix now, defer with rationale, or not a bug / training.
-    - Severity levels (example):
-      - P0 (Blocker): critical failure; core workflow cannot complete; no workaround (must fix before go-live)
-      - P1 (High): major impact; key functionality is degraded or introduces high risk; a workaround may exist but it’s unacceptable for release unless explicitly approved
-      - P2 (Medium): non-critical defect; partial impact; workaround exists; can ship if documented and planned for fix
-      - P3 (Low): cosmetic/minor; little or no functional impact (typos, alignment); fix later
-    - “Not a bug / training” means: the behavior is correct, but users need clarification on how to use it (e.g., the feature works as designed, and the issue is resolved by updating instructions, onboarding notes, or a short demo rather than changing code).
-    - Example triage outcomes: P0 “Payment succeeds but booking not created” → fix immediately and re-test; P3 “Label typo” → defer.
+    - **Triage (how decisions are made):** A recurring triage touchpoint (e.g., daily / 3× weekly) assigns severity (P0/P1/P2/P3), owner, and a decision: fix now, defer with rationale, or not a bug / training.
+      - Severity levels (example):
+        - P0 (Blocker): critical failure; core workflow cannot complete; no workaround (must fix before go-live)
+        - P1 (High): major impact; key functionality is degraded or introduces high risk; a workaround may exist but it’s unacceptable for release unless explicitly approved
+        - P2 (Medium): non-critical defect; partial impact; workaround exists; can ship if documented and planned for fix
+        - P3 (Low): cosmetic/minor; little or no functional impact (typos, alignment); fix later
+      - “Not a bug / training” means: the behavior is correct, but users need clarification on how to use it (e.g., the feature works as designed, and the issue is resolved by updating instructions, onboarding notes, or a short demo rather than changing code).
+      - Example triage outcomes: P0 “Payment succeeds but booking not created” → fix immediately and re-test; P3 “Label typo” → defer.
     - **Pass/Fail thresholds (exit rules):** Clear “go-live readiness” criteria, e.g., 0 open P0/P1, only a limited agreed set of minor issues may remain (documented with a fix date), ≥95% UAT scenarios passed, and all critical journeys pass end-to-end (e.g., booking + payment + confirmation + cancellation).
     - **Final approval (who signs off + what evidence):** The designated business owner (and, if applicable, the client representative) provides formal UAT sign-off (email or sign-off document) confirming readiness for release, including any known issues accepted and their planned fix release.
       - Evidence examples: a short UAT summary showing what was tested and the result (e.g., “45 scenarios run, 43 passed, 2 minor issues”), the list of issues found, and a clear “approved to release” confirmation from the business owner.
