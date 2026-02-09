@@ -149,14 +149,26 @@ How this shows up in my work (example patterns):
 ---
 
 ### 2) Solution notes and decision records {#core-solution-decisions}
-These make architecture decisions explicit and traceable (especially important when integrations, data flows, or regulated constraints exist).
+These artifacts make key technical decisions explicit and traceable — especially when integrations, data flows, or regulated constraints exist.
 
-- **Solution notes / Architecture decision records (ADRs)**  
-  Why a decision was taken, alternatives considered, risks, and impacts.
-- **Integration notes**  
-  API contracts, message schemas, edge cases, retries/timeouts, failure modes, and **run ownership** (who monitors the integration, who responds to incidents, and who maintains keys/configuration, deployments, and support procedures).
-- **Data flow notes**  
-  What data is collected, where it is processed, what is stored, retention/deletion rules, and access controls.
+- <span style="color:#1f7a6d; font-weight:700;">Solution notes / Architecture Decision Records (ADRs)</span>  
+  Record *what we decided* and *why*: the decision, options considered, trade-offs, risks, impact on scope/timeline, and any follow-up actions.
+  - *Mini example:* “AI results are **session-only on iOS** but **saved + synced on Android**.”  
+    - Why: privacy-by-design constraints + platform behavior differences  
+    - Trade-off: iOS has no long-term AI trends; Android can show history with clear provenance labels  
+    - Action: add platform-specific UI wording + tests to confirm retention rules
+  
+- <span style="color:#1f7a6d; font-weight:700;">Integration notes</span>  
+  Define how systems connect and behave end-to-end: API contracts (endpoints + request/response), message schemas, edge cases, retries/timeouts, failure modes, and **run ownership** (who monitors the integration, who responds to incidents, and who maintains keys/configuration, manages deployments, and updates support procedures).  
+  - *Mini example:* “Bluetooth measurement sync: mobile app uploads a saved reading → backend confirms → clinician portal shows it.”  
+    - Failure handling: if upload times out, retry up to 3 times; if still failing, show “Saved on device — will sync when online”  
+    - Ownership: support checks sync status dashboard first; engineering investigates backend errors; vendor involved only if a third-party service is failing
+  
+- <span style="color:#1f7a6d; font-weight:700;">Data flow notes</span>  
+  Explain what data moves where and under what rules: what is collected, where it is processed, what is stored vs not stored, retention/deletion rules, and access controls (who can see what).  
+  - *Mini example:* “Camera-based AI: camera frames are processed **on-device**; **no photos/videos are uploaded or stored**.”  
+    - Stored data (if any): only the final numeric result (Android history) with provenance label “AI”  
+    - Retention/deletion: user can delete saved results from history; deletion propagates to backend sync
 
 How this shows up in my work (example patterns):
 - Documenting **on-device AI processing boundaries** (what is processed on-device, what is not uploaded/stored).
