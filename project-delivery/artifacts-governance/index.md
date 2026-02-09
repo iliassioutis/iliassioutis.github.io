@@ -298,7 +298,7 @@ How this shows up in my work (example patterns):
 - [Quality gates](#quality-gates)
 
 ### Risk and dependency control {#risk-dependency-control}
-- **RAID log (Risks, Assumptions, Issues, Dependencies)**  
+- <span style="color:#1f7a6d; font-weight:700;">RAID log (Risks, Assumptions, Issues, Dependencies)</span>
   A living log reviewed regularly. For each item, it captures:  
   - **What it is:** the risk/assumption/issue/dependency stated clearly  
   - **Owner:** who is responsible for driving it to resolution  
@@ -306,7 +306,28 @@ How this shows up in my work (example patterns):
   - **Impact if it happens:** what it would affect (scope, timeline, cost, quality, compliance, operations)  
   - **Planned response:** what we will do to reduce likelihood, reduce impact, or remove the blocker (actions + due dates)  
   - **Decision points:** what needs approval/confirmation, and by when
-- **Dependency mapping**  
+    
+  > **Mini example — one RAID log entry**
+  >
+  > - **What it is (Dependency + Risk):** We depend on a third-party Bluetooth device SDK update to support the latest Android version.  
+  >   Risk: if the SDK update arrives late or is unstable, device pairing/measurements may fail and the release date is at risk.
+  > - **Owner:** Delivery Lead (me) — coordinates vendor + engineering and drives the timeline.
+  > - **Current position:** Vendor has confirmed the update is “in progress”; ETA is Friday. No test build received yet.
+  > - **Impact if it happens:**  
+  >   - **Scope:** may need to drop “new Android OS support” from this release  
+  >   - **Timeline:** end-to-end testing (SIT) cannot complete without the SDK  
+  >   - **Quality:** higher defect risk if we rush late integration  
+  >   - **Operations/support:** increased support tickets if pairing fails after launch
+  > - **Planned response (actions + due dates):**  
+  >   - Get a vendor test build by **Wednesday 12:00** (escalate if missed)  
+  >   - Reserve a shared test window (**Thu 10:00–12:00**) for end-to-end validation (mobile + backend + vendor)  
+  >   - Prepare a fallback: keep the previous supported Android OS range for this release (update release notes + support guidance)  
+  >   - Add targeted regression tests for pairing → measurement → save → sync once the build arrives
+  > - **Decision points (by when):**  
+  >   - If no stable vendor build by **Thursday 18:00**, decision = **defer Android OS support** to the next release  
+  >   - If the build arrives but fails critical tests, decision = **rollback the SDK upgrade** and ship without the change
+
+- <span style="color:#1f7a6d; font-weight:700;">Dependency mapping</span>
   A clear view of everything the delivery relies on (and what depends on us), so surprises don’t land late in testing or release:  
   - **External services & APIs:** third-party endpoints, rate limits, authentication flows (login/token exchange), **service commitments (SLA — Service Level Agreement, e.g., uptime and support response expectations: how often the service is available and how quickly support responds when something breaks)**, and change-notification channels (how we learn about breaking changes).  
   - **Vendor components & software development kits (SDKs):** version constraints, licensing/usage terms, upgrade cadence, and known limitations that affect scope.  
