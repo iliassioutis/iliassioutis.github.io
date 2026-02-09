@@ -91,7 +91,10 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
 - **Non-functional requirements (NFRs)**  
   The “how well it must work” requirements — beyond features:  
   - **Security & privacy:** encryption, access control, data minimization, retention/deletion, consent handling  
-  - **Performance:** response times, throughput, and acceptable latency under expected load  
+  - **Performance:** how fast the system must respond *in real usage* — for example:
+    - “The main screens should load within **2 seconds** under normal load.”
+    - “API calls should return within **500 ms** for typical requests (and within **2 seconds** for heavy requests).”
+    - “The system should handle **X requests per minute** without timeouts or degraded user experience.”  
   - **Availability:** how consistently the service should be reachable for users
   
     <details markdown="1" style="margin-top:8px; margin-bottom:12px;">
@@ -101,12 +104,19 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - **Acceptable downtime:** what interruptions are tolerated and when (for example, a short maintenance window at night).  
     - **Resilience:** how well the system continues to work when something goes wrong (for example, if one server/service is slow or down, the rest of the app should still function).  
     - **Recovery expectations:** how quickly service should be restored after an outage (for example, “restore core functions within X minutes”).  
-    - **User impact rules:** what the user should experience during partial outages (for example, “read-only mode” or “show a clear message and retry automatically”).
+    - **User impact rules:** what the user should experience during partial outages — for example:
+      - switch to **read-only mode** (users can view data but cannot save changes)
+      - show a **clear message** (“Service temporarily unavailable”) and provide a **Retry** option
+      - for temporary failures, the app may **try again automatically a few times** (e.g., retry after 5–10 seconds up to 3 times) before asking the user to retry
 
     </details>
     
-  - **Reliability:** consistent behavior over time (error rates, retries, data consistency, **graceful degradation — key functions still work in a reduced mode when a dependency fails**, clear fallback behavior)  
-  - **Auditability:** evidence-ready logs and traceability (who did what, when, and why; change history)  
+  - **Reliability:** the system behaves consistently over time — for example:
+    - **Error rates:** how often actions fail (e.g., “<1% of login attempts fail”; “API errors stay below 0.5%”)
+    - **Retries:** how the system handles temporary failures (e.g., “if an API call times out, retry up to 3 times with a short delay” instead of failing immediately)
+    - **Data consistency:** the same action produces the same stored result everywhere (e.g., “a saved measurement appears correctly in history on the phone and on the clinician portal”; no duplicates or missing records)
+    - **Graceful degradation / fallback:** if a dependency fails, the app still works in a safe reduced way (e.g., “users can view existing data but cannot submit new data until the service returns”; “if a third-party service is down, show a clear message and allow retry rather than crashing”)  
+    - **Auditability:** logs and traceability that let you reconstruct events — “who did what, when, and why” — plus a **change history** (a record of changes such as **data record creation/edits/deletions**, permission/configuration updates, and which software version was deployed)  
   - **Observability:** monitoring/alerting and diagnostics (metrics, logs, traces) to detect and troubleshoot issues  
   - **Usability:** user experience expectations (clarity, accessibility, helpful error messages, and how easy core tasks are to complete)  
     - Includes minimizing **unnecessary steps and confusion** in the most important user flows (for example: sign-up/login, onboarding, completing a measurement, pairing a device, starting a teleconsultation, or uploading a file).
