@@ -156,7 +156,6 @@ These artifacts reduce production risk and make go-live predictable.
 
 - **Release plan**  
   How I ship a **new release** safely:
-
   - **Define the path to production:** Dev → Test → Staging → Production (and what “done” means in each).
   - **Assign owners:** who deploys, who validates, who monitors, who can call rollback.
   - **Deploy in a controlled order:** backend/API first (if needed), then mobile/web, then feature flags/rollout.
@@ -167,6 +166,9 @@ These artifacts reduce production risk and make go-live predictable.
     - dashboards are green (error rate, latency, crash rate)
     - background jobs OK (queues draining, scheduled jobs running)
   - **Rollback plan:** what we revert and how (previous build, config rollback, disable feature flag), plus the decision rule (e.g., “rollback if P0 appears or error rate spikes >X for Y minutes”).
+  - **Rollback decision rule (examples):**
+    - Roll back immediately if a **critical issue** appears (e.g., users can’t log in, payments fail, or saved data is missing).
+    - Roll back if key failure indicators stay high for a sustained period (e.g., **more than 5%** of login attempts fail for **10 minutes** after release). 
 - **Go-live runbook**  
   A step-by-step “day-of-release” playbook that defines **who does what, in what order**, including timing, communications, and clear **checkpoints** to confirm each stage is working (for example: deployment completed, key services responding, critical user flows pass, integrations healthy, monitoring shows no spikes). It also defines **decision points** (continue / pause / rollback) and who has the authority to make those calls.
 - **Monitoring and alerting plan**  
