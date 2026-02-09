@@ -184,6 +184,7 @@ How this shows up in my work (example patterns):
 This is how I make quality measurable and defensible (not just “we tested it”).
 
 - <span style="color:#1f7a6d; font-weight:700;">Test strategy</span>
+
   A clear, shared plan for *how* we will prove the solution works before release: what will be tested (and what won’t), the test levels (unit → component → integration → system), who is responsible for each activity, which environments *(e.g., Development for quick checks by engineers; Test/QA for structured testing of new changes **plus re-testing the key existing flows** to ensure nothing broke; Staging/pre-production for full end-to-end testing in a setup that closely matches production; and Production only for **post-deployment verification** after approval — a short “is everything healthy?” check)* and test data we will use, the entry/exit criteria for each phase, and what “evidence” we will capture (test cases, results, defects, and sign-offs) for go/no-go decisions.
 - <span style="color:#1f7a6d; font-weight:700;">System Integration Testing (SIT) plan</span>
   - Cross-component validation of the full system working together (client apps, backend services, third-party services, and external integrations) — focusing on end-to-end journeys, data integrity across boundaries *(e.g., “a measurement created on the phone appears with the same values, timestamp, and source label in the backend and clinician portal — not duplicated, not missing, not altered”)*, security/permission behavior, and failure handling.
