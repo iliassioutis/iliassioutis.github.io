@@ -307,25 +307,29 @@ How this shows up in my work (example patterns):
   - **Planned response:** what we will do to reduce likelihood, reduce impact, or remove the blocker (actions + due dates)  
   - **Decision points:** what needs approval/confirmation, and by when
     
-  > **Mini example — one RAID log entry**
-  >
-  > - **What it is (Dependency + Risk):** We depend on a third-party Bluetooth device SDK update to support the latest Android version.  
-  >   Risk: if the SDK update arrives late or is unstable, device pairing/measurements may fail and the release date is at risk.
-  > - **Owner:** Delivery Lead (me) — coordinates vendor + engineering and drives the timeline.
-  > - **Current position:** Vendor has confirmed the update is “in progress”; ETA is Friday. No test build received yet.
-  > - **Impact if it happens:**  
-  >   - **Scope:** may need to drop “new Android OS support” from this release  
-  >   - **Timeline:** end-to-end testing (SIT) cannot complete without the SDK  
-  >   - **Quality:** higher defect risk if we rush late integration  
-  >   - **Operations/support:** increased support tickets if pairing fails after launch
-  > - **Planned response (actions + due dates):**  
-  >   - Get a vendor test build by **Wednesday 12:00** (escalate if missed)  
-  >   - Reserve a shared test window (**Thu 10:00–12:00**) for end-to-end validation (mobile + backend + vendor)  
-  >   - Prepare a fallback: keep the previous supported Android OS range for this release (update release notes + support guidance)  
-  >   - Add targeted regression tests for pairing → measurement → save → sync once the build arrives
-  > - **Decision points (by when):**  
-  >   - If no stable vendor build by **Thursday 18:00**, decision = **defer Android OS support** to the next release  
-  >   - If the build arrives but fails critical tests, decision = **rollback the SDK upgrade** and ship without the change
+    > **Mini example — one RAID log entry (Dependency + Risk)**
+    >
+    > - **What it is:** We depend on a third-party Bluetooth device SDK update to support the latest Android version.  
+    >   **Risk:** if the SDK update arrives late or is unstable, device pairing/measurements may fail and the release date is at risk.
+    >   
+    > - **Owner:** Delivery Lead (me) — coordinates vendor + engineering and drives the timeline.
+    > - **Current position:** Vendor has confirmed the update is “in progress”; ETA is Friday. No test build received yet.
+    > 
+    > - **Impact if it happens:**  
+    >   - **Scope:** may need to drop “new Android OS support” from this release  
+    >   - **Timeline:** end-to-end testing (SIT) cannot complete without the SDK  
+    >   - **Quality:** higher defect risk if we rush late integration  
+    >   - **Operations/support:** increased support tickets if pairing fails after launch
+    >     
+    > - **Planned response (actions + due dates):**  
+    >   - Get a vendor test build by **Wednesday 12:00** (escalate if missed)  
+    >   - Reserve a joint test slot (**Thu 10:00–12:00**) for end-to-end validation (mobile + backend + vendor)  
+    >   - Prepare a fallback: keep the previous supported Android OS range for this release (update release notes + support guidance)  
+    >   - Add targeted regression tests for pairing → measurement → save → sync once the build arrives
+    >     
+    > - **Decision points (by when):**  
+    >   - If no stable vendor build by **Thursday 18:00**, decision = **defer Android OS support** to the next release  
+    >   - If the build arrives but fails critical tests, decision = **rollback the SDK upgrade** and ship without the change
 
 - <span style="color:#1f7a6d; font-weight:700;">Dependency mapping</span>
   A clear view of everything the delivery relies on (and what depends on us), so surprises don’t land late in testing or release:  
