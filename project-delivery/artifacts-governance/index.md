@@ -80,7 +80,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   Acceptance criteria are written so QA (and stakeholders) can verify them as pass/fail, and they often include:
   - **Functional outcome:** what must happen for the user
   - **Rules/constraints:** permissions *(e.g., “only clinicians can view patient records; users can only view their own data”)*, limits *(e.g., “lock account after 5 failed login attempts in 15 minutes”)*, data handling *(e.g., “do not store camera media; store only the final numeric result”)*, and safety/privacy boundaries where relevant
-  - **Evidence:** what we capture to prove it works (test case, screenshot/log, sign-off)
+  - **Evidence:** what we keep as proof that it was tested and approved *(e.g., a completed test case with pass/fail result, a screenshot of the expected screen/state, or a short “UAT approved for release” confirmation from the business owner)*
 
   > **Mini example — Acceptance criteria**
   >  
