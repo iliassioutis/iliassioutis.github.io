@@ -80,6 +80,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Functional outcome:** what must happen for the user
   - **Rules/constraints:** permissions, limits, data handling, and safety/privacy boundaries where relevant
   - **Evidence:** what we capture to prove it works (test case, screenshot/log, sign-off)
+    
   *Example (mini):* “As a user, I can save a Bluetooth measurement.”  
   - If the device disconnects mid-measurement → show a clear message and do not save partial data  
   - If there is no internet connection → store the measurement on the phone and upload it automatically when the connection returns  
