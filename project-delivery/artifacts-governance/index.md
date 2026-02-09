@@ -350,22 +350,10 @@ SDK v5.3 is pending: our team reviews the vendor changes and re-tests pairing + 
       Any constraints that affect scope, user experience, or support handling.  
       *Example:* “Background device scanning can be unreliable on some Android versions; only specific device models are supported; older device firmware may require an update before measurements work.”
   - **Platform constraints (mobile + app stores):**  
-    The practical “rules of the platform” that affect **what we can ship** and **how it must behave**. I capture these early so we don’t discover them late in testing or during App Store / Google Play review.
-    - **Mobile OS version support (iOS/Android):**  
-      I define the **minimum supported OS versions** and document what becomes unreliable on older versions (so we don’t promise support we can’t keep).  
-      *Example:* “We support **Android 10+** to keep Bluetooth permissions/background behavior consistent. Supporting older versions would expand the test matrix and increase pairing/scanning failures.”
-    - **App-store rules (Apple/Google policy + review):**  
-      I document what the stores will **reject or require**, especially around **privacy declarations**, **permission justification**, and **how we describe health-related functionality**.  
-      *Example:* “If the app requests a **sensitive permission** (e.g., **Location** on Android, which may be required for Bluetooth scanning on some devices), then:
-      - the **Privacy Policy** must clearly state **why** we request it, whether we **store** it, and whether we **share** it, and
-      - the store **privacy disclosures** must also declare that permission/data usage and its **purpose** (Apple ‘App Privacy’ / Google Play ‘Data safety’).  
-      If our disclosures say ‘we do not use location’ but the app still requests it, the release is likely to be rejected in review.”
-    - **Phone OS permissions (what the user must allow):**  
-      I document which **phone permissions/settings** are required for each feature and what the app does if the user denies them (so the experience is safe and clear).  
-      *Example:* “If the user denies **Bluetooth permission**, the app shows a clear message explaining what’s needed and blocks pairing (no endless loading spinner).”
-    - **Background / foreground behavior (OS limits):**  
-      I document what the OS may pause or restrict when the app is **not in active use** (screen off, app in background, power-saving modes), and what the app must do to recover safely.  
-      *Example:* “Bluetooth scanning/pairing may pause when the OS limits background activity. When the app becomes active again, it must resume safely or show a clear message and let the user retry (instead of hanging or silently failing).”
+    The platform rules that can restrict what we can build and what we can safely release. I document these early so we don’t discover them late in testing or store review.
+    - **Supported OS versions:** we publish a minimum supported iOS/Android version and keep it consistent with testing coverage.  
+    - **Store policy alignment:** what the app does (permissions + data use) must match what we declare publicly (privacy policy + store privacy section).  
+    - **Phone permissions:** which permissions are required for key features, and what the app does if the user denies them (clear message + safe fallback).
   - **Device compatibility boundaries:** supported device models/firmware ranges, Bluetooth profiles, SDK/device pairing steps, and explicit “not supported” cases.  
   - **Data & infrastructure dependencies:** environments (development/test/staging/production), certificates/keys (to secure connections), **feature toggles (toggles that turn features on/off per environment or user group without a new release)**, **messaging/queues** (a reliable “inbox” between systems for requests/events that don’t happen instantly, so work can be retried safely and not lost during spikes or temporary outages), and data pipeline readiness (where applicable).  
   - **Integration sequencing:** which integrations must be ready first, **shared test windows (agreed time slots when multiple teams are available to test together)**, and who provides test accounts/data.  
