@@ -56,8 +56,24 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
 
 - **Business Requirements Document (BRD)**  
   The business goals, scope boundaries, stakeholders, success criteria, and constraints (time/cost/risk/regulatory).
-- **Functional Requirements Document (FRD)** (or equivalent specification)  
-  What the system must do: workflows, screens, integrations, data handling rules, error handling, and business rules.
+- **Functional Requirements Document (FRD)** *(or a Product/Technical specification — whatever format the team uses)*  
+  A written spec that **defines how the system must behave**, so engineering, QA, and stakeholders can build and test the same thing.  
+  It typically **describes and specifies**:
+  - **User workflows:** step-by-step journeys (e.g., “log in → start measurement → save → view history”)
+  - **Screens and inputs:** what the user sees and can do (fields, buttons), plus **input checks** (required fields, valid formats, allowed ranges)
+  - **Integrations:** which services/APIs are called, what data is sent/received, and key rules (timeouts, retries, error codes)
+  - **Data rules:** what data is stored/synced, retention/deletion rules, and access rules (who can see what)
+  - **Business rules:** the clear “if / then” rules that decide what the system does in each case — for example:
+    - **Permissions:** “Only clinicians can view patient records; users can only view their own data.”
+    - **Eligibility:** “A user can book a doctor session only if their profile is verified and payment succeeds.”
+    - **Pricing/calculation:** “If a promo code is valid, apply 10% discount; otherwise show ‘invalid code’ and keep the original price.”
+    - **Safety/operational limits:** “Lock the account after 5 failed login attempts in 15 minutes.” / “Allow booking changes only up to 24 hours before the appointment.” / “Reject a temperature entry outside 30–45°C as invalid.”
+  - **Error handling (what happens when something fails):** the expected system response for realistic failures, such as:
+    - invalid input (show a clear message; block submission)
+    - permission denied (block the action, explain why and log the attempt)
+    - network timeout / offline mode (show a clear message and allow retry (and where appropriate, save the action locally and sync later))
+    - third-party API failure (show a clear user message, record the failure, and allow retry)
+    - device disconnect (prompt re-pairing and prevent saving incomplete measurements)
 - **User stories / use cases + acceptance criteria**  
   “What good looks like” in a testable way — covering the normal (“happy path”) flow *and* realistic “non-happy path” scenarios (invalid inputs, permission denied, offline/timeout, device disconnect, integration errors), plus key edge cases.
 - **Non-functional requirements (NFRs)**  
