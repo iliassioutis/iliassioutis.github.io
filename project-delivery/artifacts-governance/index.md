@@ -122,8 +122,16 @@ This is how I make quality measurable and defensible (not just “we tested it�
   - Cross-component validation of the full system working together (client apps, backend services, third-party services, and external integrations) — focusing on end-to-end journeys, data integrity across boundaries, security/permission behavior, and failure handling.
   - Defines scope and environments, required test data/accounts, responsibilities, test scenarios (including edge cases and controlled failure scenarios such as API timeouts/unavailable services/credentials are rejected), evidence to capture, and clear entry/exit criteria (e.g., environments stable, integrations reachable, critical journeys pass, no open Critical (P0) / High (P1) defects and only a limited, agreed set of minor issues remaining, and agreed sign-offs completed).
 - **User Acceptance Testing (UAT) plan**   
-  Structured validation that the solution meets real user and business needs in realistic workflows (end-to-end scenarios, including exceptions), using clear acceptance criteria and agreed sign-off rules.  
-  Defines who participates (business users, clinicians, operations), what is in/out of scope, the test environment and data setup, how issues are logged and triaged, pass/fail thresholds, and the final approval process (including any required evidence or documentation).
+  - Structured validation that the solution meets real user and business needs in realistic workflows (end-to-end scenarios, including exceptions), using clear acceptance criteria and agreed sign-off rules.  
+  - Defines who participates (business users, clinicians, operations), what is in/out of scope, the test environment and data setup, how issues are logged and triaged, pass/fail thresholds, and the final approval process (including any required evidence or documentation).
+  - **Example (what “logged + triaged + pass/fail + approval” means in practice):**
+    - **Issue logging (where + what fields):** Issues are recorded in a tracker (e.g., Jira / Service Desk / a shared sheet) with steps to reproduce, expected vs actual result, screenshots/video, user role, device/browser, environment, test account/data used, and timestamp.
+      - Example ticket: `UAT-23 — Checkout fails when promo code applied (iOS 17.2)`
+    - **Triage (how decisions are made):** A recurring triage touchpoint (e.g., daily / 3× weekly) assigns severity (P0/P1/P2/P3), owner, and a decision: fix now, defer with rationale, or not a bug / training.
+      - Example: P0 “Payment succeeds but booking not created” → fix immediately and re-test; P2 “Label typo” → defer.
+  - **Pass/Fail thresholds (exit rules):** Clear “go-live readiness” criteria, e.g., 0 open P0/P1, only a limited agreed set of minor issues may remain (documented with a fix date), ≥95% UAT scenarios passed, and all critical journeys pass end-to-end (e.g., booking + payment + confirmation + cancellation).
+  - **Final approval (who signs off + what evidence):** The business owner/client provides formal UAT sign-off (email or sign-off document) confirming readiness for release, including any known issues accepted and their planned fix release.
+    - Evidence examples: UAT test report (pass rate + issue list), sign-off record, and (if needed) screenshots/logs for regulated flows (e.g., consent screens, audit trail). 
 - **Test evidence (when appropriate)**   
   What is captured and where (test cases, results, defect logs, screenshots/logs, summaries).
 
