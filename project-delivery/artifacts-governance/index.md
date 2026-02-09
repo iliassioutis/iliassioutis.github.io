@@ -333,8 +333,22 @@ How this shows up in my work (example patterns):
 
 - <span style="color:#1f7a6d; font-weight:700;">Dependency mapping</span>
   A clear view of everything the delivery relies on (and what depends on us), so surprises don’t land late in testing or release:  
-  - **External services & APIs:** third-party endpoints, rate limits, authentication flows (login/token exchange), **service commitments (SLA — Service Level Agreement, e.g., uptime and support response expectations: how often the service is available and how quickly support responds when something breaks)**, and change-notification channels (how we learn about breaking changes).  
-  - **Vendor components & software development kits (SDKs):** version constraints, licensing/usage terms, upgrade cadence, and known limitations that affect scope.  
+  - **External services & APIs:** third-party endpoints, rate limits, authentication flows (login/token exchange), **service commitments (SLA — Service Level Agreement, e.g., uptime and support response expectations: how often the service is available and how quickly support responds when something breaks)**, and change-notification channels (how we learn about API changes that aren’t backward-compatible and can disrupt our integration).  
+  - **Vendor components & software development kits (SDKs):**  
+    When we rely on **third-party building blocks** (for example: a **device-vendor SDK for Bluetooth peripherals**, a payment SDK, or a crash/analytics SDK), I document:
+    - **Approved versions (what we run in production):**  
+      The exact SDK version(s) we allow, plus what they are validated against (**mobile OS versions**, **our app version**, and—when relevant—**device firmware range**).  
+      *Example:* “SDK v5.1–5.2 is approved (we tested it in our app on Android 13–14).  
+SDK v5.3 is pending: our team reviews the vendor changes and re-tests pairing + measurement + save + sync (including disconnect/offline) before approving it for production.”
+    - **Commercial and legal terms (what we’re allowed to do):**  
+      The licensing model and any constraints that affect delivery (fees, redistribution rules, geographic limits, required notices/attribution).  
+      *Example:* “Per-app license; allowed only in specific markets; include the vendor’s license notice in ‘Legal / Third-party notices’.”
+    - **Upgrade cadence (how updates are handled):**  
+      How often updates arrive and how we plan the upgrade safely (scheduled window, testing checklist, release coordination).  
+      *Example:* “Vendor releases quarterly; we treat upgrades as planned maintenance with a defined regression checklist and a rollback plan.”
+    - **Known limitations (what it cannot do reliably):**  
+      Any constraints that affect scope, user experience, or support handling.  
+      *Example:* “Background device scanning can be unreliable on some Android versions; only specific device models are supported; older device firmware may require an update before measurements work.”
   - **Platform constraints:** mobile OS versions, app-store rules, device permissions, and background/foreground behavior.  
   - **Device compatibility boundaries:** supported device models/firmware ranges, Bluetooth profiles, SDK/device pairing steps, and explicit “not supported” cases.  
   - **Data & infrastructure dependencies:** environments (development/test/staging/production), certificates/keys (to secure connections), **feature toggles (toggles that turn features on/off per environment or user group without a new release)**, **messaging/queues** (a reliable “inbox” between systems for requests/events that don’t happen instantly, so work can be retried safely and not lost during spikes or temporary outages), and data pipeline readiness (where applicable).  
