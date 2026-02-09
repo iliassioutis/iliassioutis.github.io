@@ -310,15 +310,15 @@ How this shows up in my work (example patterns):
     > **Mini example — one RAID log entry (Dependency + Risk)**
     >
     > - **What it is:** We depend on a third-party Bluetooth device SDK update to support the latest Android version.  
-    >   **Risk:** if the SDK update arrives late or is unstable, device pairing/measurements may fail and the release date is at risk.
+    >   **Risk:** if the SDK update arrives late or is unstable, the app may fail to pair with the device or capture/save readings, putting the release date at risk.
     >   
     > - **Owner:** Delivery Lead (me) — coordinates vendor + engineering and drives the timeline.
-    > - **Current position:** Vendor has confirmed the update is “in progress”; ETA is Friday. No test build received yet.
+    > - **Current position:** Vendor has confirmed the update is “in progress”; ETA is Friday. The Android SDK test build has not been delivered yet.
     > 
     > - **Impact if it happens:**  
-    >   - **Scope:** may need to drop “new Android OS support” from this release  
-    >   - **Timeline:** end-to-end testing (SIT) cannot complete without the SDK  
-    >   - **Quality:** higher defect risk if we rush late integration  
+    >   - **Scope:** Keep Android support as-is (current supported OS versions). We do not claim support for the newest Android version in this release.  
+    >   - **Timeline:** SIT (end-to-end testing) cannot complete without the SDK  
+    >   - **Quality:** higher defect risk if we integrate and test too late  
     >   - **Operations/support:** increased support tickets if pairing fails after launch
     >     
     > - **Planned response (actions + due dates):**  
@@ -329,7 +329,7 @@ How this shows up in my work (example patterns):
     >     
     > - **Decision points (by when):**  
     >   - If no stable vendor build by **Thursday 18:00**, decision = **defer Android OS support** to the next release  
-    >   - If the build arrives but fails critical tests, decision = **rollback the SDK upgrade** and ship without the change
+    >   - If the build arrives but fails critical tests, decision = **rollback the SDK upgrade** and ship without “newest Android version” support
 
 - <span style="color:#1f7a6d; font-weight:700;">Dependency mapping</span>
   A clear view of everything the delivery relies on (and what depends on us), so surprises don’t land late in testing or release:  
