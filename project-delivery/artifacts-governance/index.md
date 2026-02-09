@@ -87,12 +87,12 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   - **Rules/constraints:** permissions *(e.g., “only clinicians can view patient records; users can only view their own data”)*, limits *(e.g., “lock account after 5 failed login attempts in 15 minutes”)*, data handling *(e.g., “do not store camera media; store only the final numeric result”)*, and safety/privacy boundaries *(e.g., “show a consent prompt before collecting location; allow the user to delete their stored measurements from the app”)* where relevant
   - **Evidence:** what we keep as proof that it was tested and approved *(e.g., a completed test case with pass/fail result, a screenshot of the expected screen/state, or a short “UAT approved for release” confirmation from the business owner)*
 
-  > **Mini example — Acceptance criteria**
-  >  
-  > *Story:* “As a user, I can save a Bluetooth measurement.”  
-  > - If the device disconnects mid-measurement → show a clear message and do not save partial data  
-  > - If there is no internet connection → store the measurement on the phone and upload it when the connection returns  
-  > - Saved entries show source label (**Device**) and timestamp
+    > **Mini example — Acceptance criteria**
+    >  
+    > *Story:* “As a user, I can save a Bluetooth measurement.”  
+    > - If the device disconnects mid-measurement → show a clear message and do not save partial data  
+    > - If there is no internet connection → store the measurement on the phone and upload it when the connection returns  
+    > - Saved entries show source label (**Device**) and timestamp
 - <span style="color:#1f7a6d; font-weight:700;">Non-functional requirements (NFRs)</span>  
   The “how well it must work” requirements — beyond features:  
   - **Security & privacy:** encryption, access control, data minimization, retention/deletion, consent handling  
