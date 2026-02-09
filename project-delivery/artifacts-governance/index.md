@@ -231,24 +231,33 @@ How this shows up in my work (example patterns):
 ### 4) Release plan and operational readiness {#core-release-ops} 
 These artifacts reduce production risk and make go-live predictable.
 
-- **Release plan**  
+- <span style="color:#1f7a6d; font-weight:700;">Release plan</span>
   How I ship a **new release** safely:
   - **Define the path to production:** Dev → Test → Staging → Production (and what “done” means in each).
   - **Assign owners:** who deploys, who validates, who monitors, who can call rollback.
   - **Deploy in a controlled order:** backend/API first (if needed), then mobile/web, then feature flags/rollout.
   - **Run post-deployment checks (10–15 minutes):**
-    - login works
-    - one core journey completes end-to-end (e.g., “book + pay + confirmation” or “pair device + capture + save + sync”)
-    - key integrations respond (e.g., auth provider, payment, notifications)
-    - dashboards are green (error rate, latency, crash rate)
+    - one core journey completes end-to-end (e.g., “pair device → take a measurement → save it → sync it to the user account”)
+    - key integrations work end-to-end:
+      - auth provider: user can log in
+      - payment: a test purchase succeeds and returns a confirmation
+      - notifications: a push/SMS/email is sent and received
+    - monitoring looks healthy (for example):
+      - error rate stays low (no spike in failed logins / failed API calls)
+      - response times stay normal (the app and APIs respond quickly; pages load within the expected time — no unusually long waits while data is being fetched)
+      - crash rate stays normal (no sudden increase in app crashes after the release)
     - background jobs OK (queues draining, scheduled jobs running)
-  - **Rollback plan:** what we revert and how (previous build, config rollback, disable feature flag), plus the decision rule (e.g., “rollback if P0 appears or error rate spikes >X for Y minutes”).
-  - **Rollback decision rule (examples):**
+  - **Rollback plan (how we undo the release safely)**  
+  A rollback plan explains **exactly what we will do if the release causes serious problems** — and how we return users to a stable state. It typically includes:
+  - **Re-deploy the previous stable version** (go back to the last known-good build of the backend / app).
+  - **Undo risky configuration changes** (restore the previous settings, configuration, or traffic rules that were changed during the release).
+  - **Turn off the new feature safely** (disable a feature flag so users stop seeing the new behavior without needing a new app release).
+  - **Define the decision rule (when we roll back):** clear criteria so it’s not subjective, for example:
     - Roll back immediately if a **critical issue** appears (e.g., users can’t log in, payments fail, or saved data is missing).
-    - Roll back if key failure indicators stay high for a sustained period (e.g., **more than 5%** of login attempts fail for **10 minutes** after release). 
-- **Go-live runbook**  
+    - Roll back if key failure indicators stay above a threshold for a sustained period (e.g., **more than 5%** of login attempts fail for **10 minutes** after release). 
+- <span style="color:#1f7a6d; font-weight:700;">Go-live runbook</span>
   A step-by-step “day-of-release” playbook that defines **who does what, in what order**, including timing, communications, and clear **checkpoints** to confirm each stage is working (for example: deployment completed, key services responding, critical user flows pass, integrations healthy, monitoring shows no spikes). It also defines **decision points** (continue / pause / rollback) and who has the authority to make those calls.
-- **Monitoring and alerting plan**  
+- <span style="color:#1f7a6d; font-weight:700;">Monitoring and alerting plan</span>
   How we **detect problems early** and **respond quickly** once the system is live. It defines:  
   - **What we watch and why:** the key “health signals” that indicate the service is working as expected.  
   - **What triggers an alert:** clear thresholds and conditions (so alerts are meaningful, not noisy).  
@@ -257,11 +266,11 @@ These artifacts reduce production risk and make go-live predictable.
 
   Typical signals include:  
   - **Availability:** can users successfully log in and use the core features right now (service reachable / core journeys working).  
-  - **Error rates:** spikes in failures (for example, login failures, API errors, payment failures, device-sync failures).  
-  - **Performance:** pages/screens/loading times staying within acceptable limits; slowdowns detected early.  
+  - **Error rates:** spikes in failed actions (e.g., login failures, API errors, payment failures, sync failures — saved measurements don’t upload or don’t appear on the user’s other signed-in devices).  
+  - **Performance:** the app and APIs stay fast enough for normal use (screens don’t keep “loading”, and actions like search/save/submit complete within the expected time); any unusual slowdown is detected quickly.  
   - **Integration health:** third-party or internal integrations failing (timeouts, authentication issues, webhook delivery failures, dropped messages).  
   - **Data health (if applicable):** data pipelines/jobs running on schedule, no missing/duplicated data, and key data checks passing.
-- **Hypercare plan**  
+- <span style="color:#1f7a6d; font-weight:700;">Hypercare plan</span>
   A defined post-release **stabilization period** (for example, the first 24–72 hours or first 1–2 weeks) where the team actively watches the system and responds quickly to issues. It specifies:  
   - **What we monitor:** key dashboards/alerts, error rates, performance, and critical user journeys.  
   - **How issues are handled:** a triage process (log → classify severity/impact → assign owner → target fix/mitigation).  
