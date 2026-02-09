@@ -76,15 +76,18 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - device disconnect (prompt re-pairing and prevent saving incomplete measurements)
 - **User stories / use cases + acceptance criteria**  
   “What good looks like” in a testable way — covering the normal (“happy path”) flow *and* realistic “non-happy path” scenarios (invalid inputs, permission denied, offline/timeout, device disconnect, integration errors), plus key edge cases.  
+
   Acceptance criteria are written so QA (and stakeholders) can verify them as pass/fail, and they often include:
   - **Functional outcome:** what must happen for the user
   - **Rules/constraints:** permissions, limits, data handling, and safety/privacy boundaries where relevant
   - **Evidence:** what we capture to prove it works (test case, screenshot/log, sign-off)
-    
-  *Example (mini):* “As a user, I can save a Bluetooth measurement.”  
-  - If the device disconnects mid-measurement → show a clear message and do not save partial data  
-  - If there is no internet connection → store the measurement on the phone and upload it automatically when the connection returns  
-  - Saved entries show source label (**Device**) and timestamp
+
+  > **Mini example — Acceptance criteria**
+  >  
+  > *Story:* “As a user, I can save a Bluetooth measurement.”  
+  > - If the device disconnects mid-measurement → show a clear message and do not save partial data  
+  > - If there is no internet connection → store the measurement on the phone and upload it when the connection returns  
+  > - Saved entries show source label (**Device**) and timestamp
 - **Non-functional requirements (NFRs)**  
   The “how well it must work” requirements — beyond features:  
   - **Security & privacy:** encryption, access control, data minimization, retention/deletion, consent handling  
