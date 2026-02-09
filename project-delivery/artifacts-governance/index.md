@@ -349,7 +349,19 @@ SDK v5.3 is pending: our team reviews the vendor changes and re-tests pairing + 
     - **Known limitations (what it cannot do reliably):**  
       Any constraints that affect scope, user experience, or support handling.  
       *Example:* “Background device scanning can be unreliable on some Android versions; only specific device models are supported; older device firmware may require an update before measurements work.”
-  - **Platform constraints:** mobile OS versions, app-store rules, device permissions, and background/foreground behavior.  
+  - **Platform constraints (mobile + app stores):**  
+    The platform “rules” that can limit what we can build or how it must behave. I document them early so we don’t discover them late in testing or app-store review.
+    - **Mobile OS version support (iOS/Android):** which OS versions we officially support, and what changes or breaks on older versions.  
+      *Example:* “Android 10+ only; older versions have Bluetooth behavior we can’t reliably support.”
+    - **App-store rules (Apple/Google policy + review):** what the store will reject or require (privacy disclosures, how we justify permissions, how we describe health features, and whether background behavior is acceptable for the stated purpose).  
+      *Example:* “If the app requests **Location** permission, then:
+      - the **Privacy Policy** must clearly explain **why** (purpose), **whether location is stored**, and **whether it is shared**, and
+      - the **App Store / Google Play disclosures** must also reflect that Location is used/collected (and for what purpose).  
+      If the disclosures say ‘we don’t use location’ but the app still requests it, the app is likely to be rejected during review.”
+    - **Device permissions (OS-level):** what the user must allow for the feature to work, and what the app does if the user denies it.  
+      *Example:* “If Bluetooth permission is denied, show a clear message and block pairing (don’t keep spinning).”
+    - **Background/foreground behavior (OS-level):** what happens when the user minimizes the app, locks the phone, or the OS pauses background work.  
+      *Example:* “If the app goes to background during device pairing, the OS may pause scanning; we resume safely when the app returns.”
   - **Device compatibility boundaries:** supported device models/firmware ranges, Bluetooth profiles, SDK/device pairing steps, and explicit “not supported” cases.  
   - **Data & infrastructure dependencies:** environments (development/test/staging/production), certificates/keys (to secure connections), **feature toggles (toggles that turn features on/off per environment or user group without a new release)**, **messaging/queues** (a reliable “inbox” between systems for requests/events that don’t happen instantly, so work can be retried safely and not lost during spikes or temporary outages), and data pipeline readiness (where applicable).  
   - **Integration sequencing:** which integrations must be ready first, **shared test windows (agreed time slots when multiple teams are available to test together)**, and who provides test accounts/data.  
