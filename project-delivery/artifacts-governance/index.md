@@ -61,7 +61,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - **Assumptions & constraints:** “we assume X / we depend on Y / we cannot do Z” (e.g., vendor API availability, environments, OS/device limits, required certificates, regulatory constraints).
     - **Definition of Done (DoD):** the minimum quality bar for any story to be considered complete (tests done, evidence captured, security/privacy checks done where relevant, documentation updated).
     - **Glossary (key terms):** shared definitions for project-critical terms (prevents misunderstandings and rework).
-- **Functional Requirements Document (FRD)** *(or a Product/Technical specification — whatever format the team uses)*  
+- <span style="color:#1f7a6d; font-weight:700;">Functional Requirements Document (FRD)</span> *(or a Product/Technical specification — whatever format the team uses)*  
   A written spec that **defines how the system must behave**, so engineering, QA, and stakeholders can build and test the same thing.  
   It typically **describes and specifies**:
   - **User workflows:** step-by-step journeys (e.g., “log in → start measurement → save → view history”)
@@ -79,7 +79,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
     - network timeout / offline mode (show a clear message and allow retry; and where appropriate, **store the result/request on the phone** and upload/sync it when the connection returns — e.g., saving a measurement locally first, then syncing it to the backend)
     - third-party API failure (show a clear user message, record the failure, and allow retry)
     - device disconnect (prompt re-pairing and prevent saving incomplete measurements)
-- **User stories / use cases + acceptance criteria**  
+- <span style="color:#1f7a6d; font-weight:700;">User stories / use cases + acceptance criteria</span>  
   “What good looks like” in a testable way — covering the normal (“happy path”) flow *and* realistic “non-happy path” scenarios (invalid inputs, permission denied, offline/timeout, device disconnect, integration errors), plus key edge cases.  
 
   Acceptance criteria are written so QA (and stakeholders) can verify them as pass/fail, and they often include:
@@ -93,7 +93,7 @@ These artifacts ensure everyone agrees on *what we are building*, *why*, and *ho
   > - If the device disconnects mid-measurement → show a clear message and do not save partial data  
   > - If there is no internet connection → store the measurement on the phone and upload it when the connection returns  
   > - Saved entries show source label (**Device**) and timestamp
-- **Non-functional requirements (NFRs)**  
+- <span style="color:#1f7a6d; font-weight:700;">Non-functional requirements (NFRs)</span>  
   The “how well it must work” requirements — beyond features:  
   - **Security & privacy:** encryption, access control, data minimization, retention/deletion, consent handling  
   - **Performance:** how fast the system must respond *in real usage* — for example:
