@@ -160,7 +160,7 @@ These artifacts make key technical decisions explicit and traceable — especial
   
 - <span style="color:#1f7a6d; font-weight:700;">Integration notes</span>  
   Define how systems connect and behave end-to-end: API contracts (endpoints + request/response), message schemas, edge cases, retries/timeouts, failure modes, and **run ownership** (who monitors the integration, who responds to incidents, and who maintains keys/configuration, manages deployments, and updates support procedures).  
-  - *Mini example:* “Bluetooth measurement sync: mobile app uploads a saved reading → backend confirms → clinician portal shows it.”  
+  - *Mini example:* “Bluetooth measurement sync: device sends a measurement → app stores it on the phone → app uploads it to the backend when online → clinician portal shows it.”  
     - Failure handling: if upload times out, retry up to 3 times; if still failing, show “Saved on device — will sync when online”  
     - Ownership: support checks sync status dashboard first; engineering investigates backend errors; vendor involved only if a third-party service is failing
   
