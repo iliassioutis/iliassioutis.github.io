@@ -136,7 +136,7 @@ This is how I make quality measurable and defensible (not just “we tested it�
     - “Not a bug / training” means: the behavior is correct, but users need clarification on how to use it (e.g., the feature works as designed, and the issue is resolved by updating instructions, onboarding notes, or a short demo rather than changing code).
     - Example triage outcomes: P0 “Payment succeeds but booking not created” → fix immediately and re-test; P3 “Label typo” → defer.
     - **Pass/Fail thresholds (exit rules):** Clear “go-live readiness” criteria, e.g., 0 open P0/P1, only a limited agreed set of minor issues may remain (documented with a fix date), ≥95% UAT scenarios passed, and all critical journeys pass end-to-end (e.g., booking + payment + confirmation + cancellation).
-    - **Final approval (who signs off + what evidence):** The business owner/client provides formal UAT sign-off (email or sign-off document) confirming readiness for release, including any known issues accepted and their planned fix release.
+    - **Final approval (who signs off + what evidence):** The designated business owner (and, if applicable, the client representative) provides formal UAT sign-off (email or sign-off document) confirming readiness for release, including any known issues accepted and their planned fix release.
       - Evidence examples: UAT test report (pass rate + issue list), sign-off record, and (if needed) screenshots/logs for regulated flows (e.g., consent screens, audit trail).
 - **Test evidence (when appropriate)**   
   What is captured and where (test cases, results, defect logs, screenshots/logs, summaries).
