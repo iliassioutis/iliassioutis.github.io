@@ -28,6 +28,7 @@ It is written to be **practical and explicit**:
 - [Contract negotiation & contract management (commercial controls)](#contract-negotiation)
 - [Delivery governance (cadences, reporting, decisions)](#delivery-governance)
 - [Release & change management](#release-change)
+- [Service delivery in production (BAU operations: incidents, problems, service reviews)](#bau-ops)
 - [Quality management (testing, evidence, acceptance)](#quality)
 - [Risk, dependency, and escalation control](#risk-deps)
 - [Delivery metrics and performance signals](#metrics)
@@ -182,7 +183,7 @@ Weights are adjusted based on **criticality** (how business-critical the service
 | Engineering quality | 15 |  | Test strategy, code review practice, sample artifacts |
 | Security posture | 20 |  | Security questionnaire, policies, certifications (if available) |
 | Cost / TCO | 15 |  | Pricing model, support costs, change order mechanism |
-| Scalability / reliability | 10 |  | Reference architecture, SLOs (Service Level Objectives) proposal |
+| Scalability / reliability | 10 |  | Reference architecture, Service Level Objectives (SLOs) proposal |
 
 #### Reference checks (validation outside the sales process)
 
@@ -218,7 +219,7 @@ Typical artifacts I request/collect (as applicable):
   - high-level solution/architecture description (how it fits into our environment)
   - environment assumptions (development/test/production), deployment approach, rollback approach
   - runbook outline (operational procedures) and support model proposal
-  - DR/BCP plan (Disaster Recovery / Business Continuity Plan) if production-critical
+  - Disaster Recovery / Business Continuity Plan (DR/BCP) if production-critical
 
 - **Security & compliance artifacts**
   - security questionnaire responses and supporting policies (access control, encryption approach, logging)
@@ -295,11 +296,10 @@ When performance deviates, I do:
 - **Corrective action plan:** specific actions, owners, dates, measurable outcomes.
 - **Escalation rules:** if X happens by Y date, we trigger Z (e.g., add internal engineering support, reduce scope, replace vendor team members, or activate exit plan).
 
-### Vendor performance management (operating rhythm, scorecards, QBRs, escalation ladder) {#vendor-performance}
+### 6) Vendor performance management (operating rhythm, scorecards, QBRs, escalation ladder) {#vendor-performance}
 
 Vendor performance management is how I make “good intentions” measurable and continuously improved.  
 It combines (a) **service performance** (SLA adherence), (b) **delivery performance** (predictability/quality), and (c) **relationship management** (fast resolution and alignment).
-- See: [Vendor performance management](#vendor-performance) for the operating rhythm, scorecards, QBRs, and escalation ladder.
 
 #### Operating rhythm (cadence that keeps performance visible)
 
@@ -380,7 +380,7 @@ Escalation is a controlled mechanism (not emotion). I define escalation levels u
 *Example escalation rule (explicit):*  
 “If we have 2 consecutive months of SLA breach on Sev1 response time, we move to Level 2 escalation and require a remediation plan within 10 business days, with weekly progress reporting until metrics stabilize.”
 
-### 6) Renewal or exit (planned, not panic)
+### 7) Renewal or exit (planned, not panic)
 - **Renewal:** if performance is strong and the relationship is healthy.
 - **Exit plan:** if risk remains high (knowledge transfer, documentation pack, handover, replacement strategy).
 
@@ -456,7 +456,7 @@ In practice, contract work is where delivery succeeds or fails. I negotiate and 
   - regular delivery reporting (milestones, risks, KPIs),
   - service reporting (availability, incidents, SLA performance),
   - the ability to audit (or receive audit outputs) when risk is high.  
-  *Example:* “Monthly SLA report + incident postmortems for Sev1/Sev2 + quarterly security posture update.”
+  *Example:* “Monthly SLA report + incident postmortems for Severity 1 (Sev1) / Severity 2 (Sev2) + quarterly security posture update.”
 
 - **Termination and exit assistance (planned exit, not panic):**  
   I make sure we can exit safely if performance drops or strategy changes:
@@ -543,6 +543,86 @@ In high-scale environments, releases must be **repeatable** and **controlled**.
 
 *Example (good change control):*  
 “Partner requested new requirement X. Impact: +2 weeks, +1 QA cycle, additional security review. Options: (A) defer to next release, (B) reduce scope elsewhere, (C) add vendor capacity. Decision recorded and plan re-baselined.”
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Service delivery in production (Business-as-Usual (BAU) operations) {#bau-ops}
+
+After go-live, “service delivery” continues in **production operations** (keeping the service stable, reliable, and supportable).  
+My focus is: predictable **incident response**, disciplined **root cause** resolution, and regular **service health reviews** (so we prevent repeats instead of firefighting).
+
+### Incident management (restore service quickly and safely)
+
+**Incident management** is the controlled process to **restore service** when something breaks or degrades in production (not to assign blame).  
+I use severity levels to align urgency, escalation, and communication expectations.
+
+#### Severity model (example)
+
+- **Severity 1 (Sev1):** critical outage or major customer impact (service unavailable, high financial/brand risk).
+- **Severity 2 (Sev2):** major degradation (partial outage, key function unstable, significant impact).
+- **Severity 3 (Sev3):** limited impact (workaround exists, smaller subset of users).
+- **Severity 4 (Sev4):** minor issue (cosmetic/low urgency).
+
+*(The exact definitions vary by organization; the key is that they are agreed, documented, and used consistently.)*
+
+#### Roles during an incident (clear ownership under pressure)
+
+- **Incident Manager / Incident Commander (IM/IC):** runs the process (triage, priorities, comms cadence, decision-making), not the technical fix.
+- **Technical Lead:** coordinates engineers doing diagnosis and mitigation.
+- **Communications Lead:** manages stakeholder updates (internal + external where applicable).
+- **Scribe / Timeline Owner:** captures timestamps, actions, decisions (so post-incident analysis is evidence-based).
+
+#### Incident lifecycle (how I run it)
+
+1) **Detection & triage:** confirm symptoms and scope (what is impacted, how many users, which regions).
+2) **Classification:** assign severity (Sev1–Sev4) and open a clear incident record (ticket + shared doc).
+3) **Containment / mitigation:** restore service ASAP (feature flag off, rollback, rate-limit, failover, hotfix), with explicit risk calls.
+4) **Communication cadence:** frequent, predictable updates (even if “no change”).
+   - *Example cadence:* for Sev1, updates every 30 minutes to stakeholders until stable.
+5) **Resolution & verification:** confirm recovery using monitoring signals and user journey checks (not only “it looks OK”).
+6) **Closure:** close the incident only when monitoring confirms stability and follow-ups are logged.
+
+#### Vendor involvement during incidents (when a partner runs part of the stack)
+
+If a vendor is involved, I align:
+- **who leads** the incident (single Incident Manager/Incident Commander),
+- **what the vendor must provide** (logs, on-call engineer, mitigation plan),
+- **SLA (Service Level Agreement) expectations** for response and updates,
+- and **escalation triggers** if response time or mitigation is inadequate (aligned with our escalation ladder).
+
+### Problem management (prevent recurrence, not just “close the ticket”)
+
+**Problem management** is the process for identifying and removing the **root cause** behind incidents (or recurring issues).  
+It is usually driven by **Root Cause Analysis (RCA)** and results in **Corrective and Preventive Actions (CAPA)**.
+
+- **Root Cause Analysis (RCA):** structured analysis (e.g., “5 Whys”, fishbone/Ishikawa) to find why it happened.
+- **Corrective action:** fixes the underlying cause (e.g., change validation logic, improve retry strategy).
+- **Preventive action:** prevents recurrence (e.g., better alerting thresholds, automated rollback, additional test coverage).
+
+**Outputs I insist on (evidence-based):**
+- a short RCA summary (what happened, impact, timeline, contributing factors),
+- “what we changed” (specific actions, not vague intentions),
+- owners and dates for each CAPA item,
+- and a verification plan (how we prove the fix worked).
+
+### Service reviews (run the service like a product, not a crisis)
+
+A **service review** is a recurring session to review service health and make improvement decisions using data.
+
+#### Monthly service review (example agenda)
+
+- **Availability & reliability:** uptime, major incidents, repeated patterns.
+- **Incident trends:** Sev1/Sev2 counts, Mean Time To Restore (MTTR), recurring failure modes.
+- **Capacity & performance:** latency, throughput, saturation, bottlenecks (and forecasts).
+- **Change outcomes:** release success rate, change-related incidents, rollback frequency.
+- **Planned maintenance:** upcoming maintenance windows and communication plan.
+- **Improvement backlog:** top operational risks and prioritized fixes (with owners/dates).
+
+**Good practice:** decisions are recorded (decision log) and actions are tracked like delivery work (owners, due dates, status).
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
