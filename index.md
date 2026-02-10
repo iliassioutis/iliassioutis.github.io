@@ -138,11 +138,11 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
     <a href="/project-delivery/artifacts-governance/">Read more →</a>
   </div>
 
-<div class="home-card">
-  <h3>Service delivery & partner management</h3>
-  <p>How I coordinate teams and third parties, control releases, and keep production risk predictable.</p>
-  <a href="/project-delivery/service-delivery/">Read more →</a>
-</div>
+  <div class="home-card">
+    <h3>Service Delivery &amp; Partner Management</h3>
+    <p>How I manage external vendors, SLAs, delivery governance, release readiness, and operational handover.</p>
+    <a href="/project-delivery/service-delivery/">Read more →</a>
+  </div>
 
   <div class="home-card">
     <h3>Jira-style workflow example</h3>
