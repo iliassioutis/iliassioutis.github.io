@@ -20,9 +20,9 @@ It is written to be **practical and explicit**:
 
 I’m a technical project manager who delivers outcomes across **internal engineering, operations, and external partners** — with a focus on **predictable execution, safe releases, and production readiness**.
 
-In partner-led delivery, the most common pattern I run is:
+In partner-led delivery, the operating model I most often run is:
 - **Vendors build components** (code/API/SDK/services),
-- **Internal teams integrate and operate** (CI/CD, observability, security review, production ownership),
+- **Internal teams integrate and operate** (Continuous Integration / Continuous Delivery (CI/CD), observability, security review, production ownership),
 - and I provide the **single delivery system** across both sides: plan, governance, evidence, escalation, and go/no-go readiness.
 
 ---
@@ -35,7 +35,7 @@ In partner-led delivery, the most common pattern I run is:
 - [Budget & resource management (forecast vs actual, burn rate, capacity planning)](#budget-resourcing)
 - [Project lifecycle (hybrid: Agile + stage-gate)](#project-lifecycle)
 - [Delivery leadership & team management (objectives, coaching, leading without authority)](#delivery-leadership)
-- [Technology evaluation (fit, risk, PoC, decision record, rollout plan)](#tech-eval)
+- [Technology evaluation (fit, risk, Proof-of-Concept (PoC), decision record, rollout plan)](#tech-eval)
 - [Partner & vendor management lifecycle](#vendor-lifecycle)
 - [Vendor performance management (operating rhythm, QBR, escalation ladder)](#vendor-performance)
 - [IT procurement process (RFI/RFP, evaluation, award, onboarding)](#it-procurement)
@@ -45,7 +45,7 @@ In partner-led delivery, the most common pattern I run is:
 - [Release & change management](#release-change)
 - [Release execution (cutover, go/no-go, rollback, hypercare)](#release-execution)
 - [24/7 production & peak-period release discipline (freeze windows, staged rollout, observability-first go/no-go)](#high-scale)
-- [Service delivery in production (BAU operations: incidents, problems, service reviews)](#bau-ops)
+- [Service delivery in production (Business-as-Usual (BAU) operations: incidents, problems, service reviews)](#bau-ops)
 - [Quality management (testing, evidence, acceptance)](#quality)
 - [Risk, dependency, and escalation control](#risk-deps)
 - [Delivery metrics and performance signals](#metrics)
@@ -479,7 +479,7 @@ Typical artifacts I request/collect (as applicable):
   - gifts & hospitality rules (no cash-equivalents; modest, infrequent, transparent)
   - anti-bribery / anti-corruption commitment (zero-tolerance; vendor controls + training)
   - fair competition assurance (no bid-rigging/price-fixing; no misuse of confidential info)
-  - sanctions/AML compliance confirmation where relevant to the vendor’s services and footprint
+  - sanctions / Anti-Money Laundering (AML) compliance confirmation where relevant to the vendor’s services and footprint
   - subcontractor “flow-down” requirement (vendor is responsible for ensuring subcontractors comply)
   - confidentiality + “no public announcements” about the relationship without written consent
   - AI-use disclosure (what is used, where, and for what purpose) and an approval path for higher-risk use
@@ -627,7 +627,7 @@ Escalation is a controlled mechanism (not emotion). I define escalation levels u
 **Level 0 — Working level (vendor engineers + internal engineers)**
 - resolve blockers quickly; confirm owners and deadlines
 
-**Level 1 — Delivery level (Vendor PM → Internal TPM/Service Delivery)**
+**Level 1 — Delivery level (Vendor PM → Internal Technical PM / Service Delivery)**
 - trigger when: repeated slips, unclear ownership, missed commitments
 - action: corrective plan with milestones, extra reporting cadence, re-baseline
 
