@@ -76,6 +76,6 @@ These pages describe the delivery approach I use to take initiatives from idea t
   BRD / FRD, RAID, RACI, SIT / UAT, change control, release readiness, privacy &amp; security gates, and AI governance / evidence packs.  
   🔎 <a href="/project-delivery/artifacts-governance/">Read: Artifacts &amp; governance →</a>
 
-- 🚦 **Service Delivery & Partner Management**  
-  How I run delivery across teams and external partners — release discipline, vendor control, operational readiness.  
-  🔎 <a href="/project-delivery/service-delivery/">Read: Service Delivery & Partner Management →</a>  
+- 🤝 **Service Delivery & Partner Management**
+  How I manage vendor/partner-led delivery, SLAs, release readiness, and operational handover.
+  🔎 <a href="/project-delivery/service-delivery/">Read: Service Delivery & Partner Management →</a> 
