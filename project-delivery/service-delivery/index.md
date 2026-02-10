@@ -23,6 +23,7 @@ It is written to be **practical and explicit**:
 - [Project lifecycle (hybrid: Agile + stage-gate)](#project-lifecycle)
 - [Budget & resource management (forecast vs actual, burn rate, capacity planning)](#budget-resourcing)
 - [Delivery leadership & team management (objectives, coaching, leading without authority)](#delivery-leadership)
+- [Technology evaluation (fit, risk, PoC, decision record, rollout plan)](#tech-eval)
 - [Partner & vendor management lifecycle](#vendor-lifecycle)
 - [Vendor performance management (operating rhythm, QBR, escalation ladder)](#vendor-performance)
 - [IT procurement process (RFI/RFP, evaluation, award, onboarding)](#it-procurement)
@@ -289,6 +290,83 @@ This is where delivery stays predictable:
 - **Go/no-go decision:** release readiness confirmed with evidence.
 - **Handover to operations/support:** runbook, monitoring, escalation paths.
 - **Post-release review:** lessons learned and improvement backlog.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Technology evaluation (how I assess new technologies before committing) {#tech-eval}
+
+Service delivery roles often require making **technology choices** that balance speed, reliability, cost, and risk.  
+When a new tool/platform/pattern is proposed, I evaluate it with a lightweight but disciplined approach so decisions are **traceable** and rollout is **safe in production**.
+
+### When I run a technology evaluation
+
+Typical triggers:
+- a new vendor platform or managed service is introduced
+- a new integration approach/pattern is proposed (e.g., message bus vs direct API)
+- a change is needed for scale/reliability (observability, caching, DR approach)
+- security/compliance needs change (data handling, access model, auditability)
+- costs are rising and we need a better total cost of ownership (TCO)
+
+### Evaluation criteria (fit, risk, operational impact, cost, security)
+
+I score options against consistent criteria (and adjust weights based on criticality/risk).
+
+**Core criteria I use (plain definitions):**
+- **Functional fit:** does it meet requirements (including integrations and edge cases)?
+- **Delivery maturity:** how predictable is delivery (tooling maturity, documentation, known pitfalls)?
+- **Operational impact (BAU):** how it affects on-call, monitoring, runbooks, incident handling, and support workload.
+- **Security & compliance:** access control model, encryption support, auditability/logging, data residency (if relevant), and vendor assurance.
+- **Cost / TCO (Total Cost of Ownership):** licenses + infrastructure + support + migration/exit costs (not only the sticker price).
+- **Scalability & reliability:** performance under load, availability options, DR/BCP compatibility, failure modes.
+- **Maintainability:** team skills required, complexity, upgrade path, and ecosystem/community support.
+- **Lock-in / exit risk:** how hard it is to switch later (data portability, proprietary dependencies).
+
+**Good practice:** I document the scoring rationale (evidence-based, not preference-based) and link it to the decision record.
+
+### Lightweight Proof-of-Concept (PoC) (time-boxed risk reduction)
+
+When uncertainty is high, I run a **Proof-of-Concept (PoC)**: a time-boxed experiment to validate the riskiest assumptions.
+
+**Typical PoC structure:**
+- **Time-box:** 1–3 weeks (longer only if unavoidable)
+- **Success criteria (measurable):**
+  - critical integration works end-to-end
+  - latency/throughput meets target ranges for expected load
+  - failure handling demonstrated (retry, timeout, fallback behavior)
+  - monitoring/alerts available (basic observability)
+  - security requirements demonstrated (least-privilege access, secrets handling approach)
+- **Deliverables:**
+  - short demo/prototype
+  - PoC notes: what worked, what didn’t, risks found
+  - a go/no-go recommendation and next-step plan
+
+### Decision record (traceability: why chosen, trade-offs, rollout plan)
+
+I capture the outcome in a **decision record** (often called an ADR — Architecture Decision Record).  
+This makes the decision auditable and prevents repeating debates.
+
+**Decision record template (practical fields):**
+- **Context:** what problem we’re solving and why now
+- **Options considered:** option A/B/C (including “do nothing” when relevant)
+- **Decision:** what we chose
+- **Rationale:** the top reasons (linked to evidence/PoC results)
+- **Trade-offs:** what we gain and what we accept (cost, complexity, lock-in, ops burden)
+- **Risks & mitigations:** what can go wrong and how we reduce impact
+- **Rollout plan:** staged rollout steps + monitoring + rollback triggers
+- **Owners & dates:** who is accountable and when we review success
+
+### Rollout approach (safe introduction to production)
+
+Even after choosing a technology, the rollout must be controlled:
+- **staged rollout:** start small (limited scope/users), expand when stable
+- **feature flags / toggles (where applicable):** enable/disable quickly without redeploying
+- **observability-first:** dashboards/alerts exist before scaling up usage
+- **rollback triggers:** explicit thresholds that trigger rollback or pause
+- **operational readiness:** runbooks updated, support team briefed, escalation path confirmed
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
@@ -881,6 +959,9 @@ I use metrics as **signals**, not as vanity numbers. Typical categories:
 - **Go/No-go:** the formal decision to release (go) or hold (no-go), based on evidence and risk acceptance.
 - **Rollback:** the planned action to return to a previous stable version if release causes serious issues.
 - **MTTR (Mean Time To Restore):** average time to restore service after an incident.
+- **TCO (Total Cost of Ownership):** the total cost over time (licenses + infrastructure + support + change + exit), not only the purchase price.
+- **ADR (Architecture Decision Record):** a short document that records a technical decision, why it was made, trade-offs, and rollout plan.
+- **PoC (Proof-of-Concept):** a time-boxed experiment to validate key assumptions before full implementation.
 
 </details>
 
