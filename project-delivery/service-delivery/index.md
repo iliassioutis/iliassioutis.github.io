@@ -458,6 +458,16 @@ Typical artifacts I request/collect (as applicable):
   - contract clauses for security, breach notification, and audit rights (as applicable)
   - DPA (Data Processing Agreement) where personal data processing exists
 
+- **Ethics & compliance controls (vendor conduct alignment)**
+  - conflict-of-interest declaration (and a rule to disclose changes immediately)
+  - gifts & hospitality rules (no cash-equivalents; modest, infrequent, transparent)
+  - anti-bribery / anti-corruption commitment (zero-tolerance; vendor controls + training)
+  - fair competition assurance (no bid-rigging/price-fixing; no misuse of confidential info)
+  - sanctions/AML compliance confirmation where relevant to the vendor’s services and footprint
+  - subcontractor “flow-down” requirement (vendor is responsible for ensuring subcontractors comply)
+  - confidentiality + “no public announcements” about the relationship without written consent
+  - AI-use disclosure (what is used, where, and for what purpose) and an approval path for higher-risk use
+ 
 - **Commercial & contractual artifacts**
   - pricing model and assumptions (what is included vs extra)
   - change-order mechanism (how scope changes are quoted and approved)
@@ -558,6 +568,13 @@ This is where performance is “run like operations,” not debated.
   - runbook completeness, monitoring hooks delivered, handover quality
 - **Collaboration health (lightweight but real):**
   - time-to-respond on blockers, clarity of ownership, escalation effectiveness
+
+- **Compliance & trust signals (lightweight but real):**
+  - security/data incidents: time-to-notify, time-to-mitigate, post-incident actions closed
+  - subcontractor changes disclosed on time (and approved where required)
+  - conflicts-of-interest disclosures logged (none outstanding)
+  - audit / evidence requests responded to within agreed timelines
+  - accurate delivery records maintained (acceptance evidence, change approvals, and reporting traceability)
 
 *Good practice:* I track **trend lines** (last 3–6 months) so we see improvement or deterioration early.
 
@@ -686,6 +703,19 @@ In practice, contract work is where delivery succeeds or fails. I negotiate and 
   - service reporting (availability, incidents, SLA performance),
   - the ability to audit (or receive audit outputs) when risk is high.  
   *Example:* “Monthly SLA report + incident postmortems for Severity 1 (Sev1) / Severity 2 (Sev2) + quarterly security posture update.”
+
+- **Code of conduct alignment + auditability (make compliance enforceable):**
+  - vendor complies with an agreed code of conduct and all applicable local laws
+  - accurate records obligations (no improper alteration/destruction of client-related records)
+  - conflicts-of-interest disclosure (and a duty to report changes promptly)
+  - gifts & hospitality boundaries (explicitly prohibit cash/cash-equivalents; require transparency)
+  - anti-bribery / anti-corruption controls (policies, training, and reporting channels)
+  - fair competition language (no anti-competitive conduct; no misuse of confidential information)
+  - security/data incident notification timelines + cooperation duties (investigation, mitigation, notifications support)
+  - subcontractor controls (visibility/approval where required; obligations flow down)
+  - AI-use disclosure clause (no higher-risk AI use without written approval; documentation and evidence on request)
+  - “no public announcements” about the relationship without written consent
+  - right to request evidence / run compliance reviews and require a remediation plan if gaps are found
 
 - **Termination and exit assistance (planned exit, not panic):**  
   I make sure we can exit safely if performance drops or strategy changes:
@@ -1021,6 +1051,9 @@ I use metrics as **signals**, not as vanity numbers. Typical categories:
 - **MTTR (Mean Time To Restore):** average time to restore service after an incident.
 - **TCO (Total Cost of Ownership):** the total cost over time (licenses + infrastructure + support + change + exit), not only the purchase price.
 - **ADR (Architecture Decision Record):** a short document that records a technical decision, why it was made, trade-offs, and rollout plan.
+- **Conflict of interest:** a situation where a vendor’s other relationships or incentives could bias decisions against the customer’s interests.
+- **AML (Anti-Money Laundering):** controls and checks that help prevent illicit funds movement; relevant for certain vendor scopes (e.g., payments, compliance tooling, identity checks).
+- **AI Act (EU):** EU rules for AI systems; vendors should disclose AI use and provide documentation/evidence when required, especially for higher-risk use cases.
 - **PoC (Proof-of-Concept):** a time-boxed experiment to validate key assumptions before full implementation.
 - **Freeze window (change freeze):** a period where non-critical changes are paused to reduce production risk during peak traffic.
 - **Canary release:** releasing to a small percentage of traffic first to validate stability before wider rollout.
