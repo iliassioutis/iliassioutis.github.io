@@ -52,6 +52,10 @@ It is not just “project tracking”. It includes:
 - partners aligned to goals and standards (quality, security, ways of working),
 - reduced production incidents (because readiness is real, not assumed).
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Operating model (how I run multiple projects at once) {#operating-model}
@@ -91,6 +95,10 @@ I use **RACI (Responsible, Accountable, Consulted, Informed)** to prevent “eve
 - Consulted: Security, Ops/SRE, Product
 - Informed: Commercial owner, Support lead
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Project lifecycle (hybrid: Agile + stage-gate) {#project-lifecycle}
@@ -129,6 +137,10 @@ This is where delivery stays predictable:
 - **Go/no-go decision:** release readiness confirmed with evidence.
 - **Handover to operations/support:** runbook, monitoring, escalation paths.
 - **Post-release review:** lessons learned and improvement backlog.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -171,6 +183,10 @@ When performance deviates, I do:
 - **Renewal:** if performance is strong and the relationship is healthy.
 - **Exit plan:** if risk remains high (knowledge transfer, documentation pack, handover, replacement strategy).
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Contracts, statements of work, and SLAs {#contracts-slas}
@@ -205,6 +221,10 @@ An SLA should define:
 *Example (SLA-style wording):*  
 “For Sev1 incidents: acknowledge within 15 minutes, provide updates every 30 minutes, and engage engineering immediately until mitigation is in place.”
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Delivery governance (cadences, reporting, decisions) {#delivery-governance}
@@ -233,6 +253,10 @@ I keep a **decision log**:
 
 This prevents repeating debates and enables accountability.
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Release & change management {#release-change}
@@ -254,6 +278,10 @@ In high-scale environments, releases must be **repeatable** and **controlled**.
 
 *Example (good change control):*  
 “Partner requested new requirement X. Impact: +2 weeks, +1 QA cycle, additional security review. Options: (A) defer to next release, (B) reduce scope elsewhere, (C) add vendor capacity. Decision recorded and plan re-baselined.”
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -279,6 +307,10 @@ Quality is not “QA’s job”. It is a delivery system.
 - acceptance criteria are written early (testable),
 - demos are used to validate direction continuously,
 - vendor deliverables are accepted only when criteria are met (not when “delivered”).
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
@@ -307,6 +339,10 @@ I escalate when:
 *Example (escalation rule):*  
 “If no stable vendor build by Thursday 18:00, we defer feature X to next release and ship the remaining committed scope.”
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Delivery metrics and performance signals {#metrics}
@@ -332,6 +368,10 @@ I use metrics as **signals**, not as vanity numbers. Typical categories:
 - rework rate (deliveries needing significant fixes),
 - documentation completeness (handover quality).
 
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
 ---
 
 ## Glossary (plain-language definitions) {#glossary}
@@ -350,6 +390,10 @@ I use metrics as **signals**, not as vanity numbers. Typical categories:
 - **MTTR (Mean Time To Restore):** average time to restore service after an incident.
 
 </details>
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 <hr>
 
