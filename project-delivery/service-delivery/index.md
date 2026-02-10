@@ -21,6 +21,7 @@ It is written to be **practical and explicit**:
 - [What “service delivery” means in practice](#what-is-service-delivery)
 - [Operating model (how I run multiple projects at once)](#operating-model)
 - [Project lifecycle (hybrid: Agile + stage-gate)](#project-lifecycle)
+- [Budget & resource management (forecast vs actual, burn rate, capacity planning)](#budget-resourcing)
 - [Partner & vendor management lifecycle](#vendor-lifecycle)
 - [Vendor performance management (operating rhythm, QBR, escalation ladder)](#vendor-performance)
 - [IT procurement process (RFI/RFP, evaluation, award, onboarding)](#it-procurement)
@@ -98,6 +99,81 @@ I use **RACI (Responsible, Accountable, Consulted, Informed)** to prevent “eve
 - Responsible: Vendor engineering + internal integration engineer
 - Consulted: Security, Ops/SRE, Product
 - Informed: Commercial owner, Support lead
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Budget & resource management (how I keep delivery “within budget” and resourced) {#budget-resourcing}
+
+“Within budget” means I actively manage the **cost baseline** (the agreed cost plan) and keep stakeholders informed about **forecast vs actual** (what we expected to spend vs what we actually spent).  
+I treat budget and resourcing as control systems (not afterthoughts): if scope or risk changes, I quantify the impact, propose options, and re-baseline decisions explicitly.
+
+### Budget tracking basics (forecast vs actual, burn rate, variance)
+
+**Core concepts (plain definitions):**
+- **Budget baseline (agreed budget):** the approved cost envelope for a project/workstream (internal effort + vendor spend + tools/services where applicable).
+- **Actuals (actual spend):** what has been invoiced/recorded to date (or time booked internally).
+- **Forecast (expected spend):** what we expect total spend to be by the end, based on current plan and known risks.
+- **Variance:** the gap between budget baseline and forecast (or forecast vs actual at a point in time).
+  - *Example:* “We are forecasting +€20k over baseline due to additional test cycles and vendor change requests.”
+- **Burn rate:** how quickly budget is being consumed per unit of time (e.g., €/week), used to predict when we hit budget limits.
+- **Estimate at Completion (EAC):** the latest estimate of total cost when the project completes.
+- **Estimate to Complete (ETC):** what is left to spend from now until completion.
+
+**What I track (minimum set):**
+- baseline budget (by workstream if needed: build/test/release/support readiness)
+- actuals to date
+- forecast to complete (EAC)
+- variance (EAC – baseline) with a short explanation
+- key cost drivers (e.g., vendor days, test cycles, environments/tools)
+- upcoming commitments (e.g., milestone payments, renewal dates)
+
+**How I run it (cadence):**
+- **Weekly (delivery view):** update forecast assumptions when scope, timeline, or risk changes (especially if dependencies slip or extra testing is required).
+- **Monthly (finance/commercial view):** reconcile actuals, confirm invoice status, and validate forecast with stakeholders (so surprises don’t accumulate).
+
+**How I explain variance (so it’s actionable, not defensive):**
+- **Driver:** what changed (scope, schedule, risk, or vendor rates).
+- **Impact:** quantified € and timeline impact.
+- **Options:** at least two paths (reduce scope, move date, add capacity, renegotiate vendor terms).
+- **Decision:** recorded (approval + re-baseline if needed).
+
+*Example (simple but real-world):*  
+“Baseline €100k. Actuals €40k. Current burn rate €10k/week. With one additional integration test cycle and 2 vendor change requests, EAC becomes €115k (+€15k variance). Options: (A) defer non-critical items, stay within €100k, (B) keep scope, approve +€15k, (C) renegotiate change request scope and cap at +€8k.”
+
+### Resource planning (capacity, allocation, constraints across parallel projects)
+
+**Resource planning** is ensuring we have enough capacity (available people/time) and the right skills at the right time — across internal teams and vendors.
+
+**Core concepts (plain definitions):**
+- **Capacity:** how much work a team/person can realistically take on in a period (not theoretical max).
+- **Allocation:** how that capacity is split across parallel initiatives (e.g., 40% Project A, 60% Project B).
+- **Constraint:** something that limits delivery (e.g., 1 QA engineer, fixed release windows, external dependency).
+- **Full-Time Equivalent (FTE):** a planning unit meaning “one full-time person’s capacity” (useful when combining partial allocations).
+- **Critical path:** the sequence of tasks that determines the earliest possible finish date (if a critical-path task slips, the project slips).
+
+**How I plan resources in practice:**
+- build a simple capacity map per team/role (engineering, QA, DevOps/SRE, security review)
+- identify hard constraints early (specialists, approval gates, vendor lead time)
+- protect critical activities (integration testing windows, release readiness, operational handover)
+- explicitly trade off **scope vs capacity vs date** (so we don’t silently overload teams)
+
+**When multiple projects compete:**
+- I keep a portfolio-level view (milestones + owners + dependencies + capacity)
+- I escalate early when overall demand exceeds capacity, with clear options:
+  - reduce scope on lower-priority work
+  - re-sequence work (move non-critical items out of peak windows)
+  - add temporary capacity (vendor/internal), with cost impact quantified
+  - adjust timeline (re-baseline schedule with stakeholder approval)
+
+**Vendor resourcing clarity (important in partner-led delivery):**
+- confirm vendor roles and named resources (who is actually delivering)
+- confirm availability assumptions (holidays, on-call coverage, time zones)
+- ensure rate cards / day rates / escalation rates are known (so forecast is reliable)
+- align “who approves extra effort” to prevent unplanned cost growth
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
