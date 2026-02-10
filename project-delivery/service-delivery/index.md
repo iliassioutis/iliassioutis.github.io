@@ -22,6 +22,7 @@ It is written to be **practical and explicit**:
 - [Operating model (how I run multiple projects at once)](#operating-model)
 - [Project lifecycle (hybrid: Agile + stage-gate)](#project-lifecycle)
 - [Budget & resource management (forecast vs actual, burn rate, capacity planning)](#budget-resourcing)
+- [Delivery leadership & team management (objectives, coaching, leading without authority)](#delivery-leadership)
 - [Partner & vendor management lifecycle](#vendor-lifecycle)
 - [Vendor performance management (operating rhythm, QBR, escalation ladder)](#vendor-performance)
 - [IT procurement process (RFI/RFP, evaluation, award, onboarding)](#it-procurement)
@@ -174,6 +175,77 @@ I treat budget and resourcing as control systems (not afterthoughts): if scope o
 - confirm availability assumptions (holidays, on-call coverage, time zones)
 - ensure rate cards / day rates / escalation rates are known (so forecast is reliable)
 - align “who approves extra effort” to prevent unplanned cost growth
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Delivery leadership & team management (how I lead teams and vendors to outcomes) {#delivery-leadership}
+
+In service delivery, “leadership” often means **delivering outcomes through people you don’t directly manage** (internal teams, external vendors, stakeholders).  
+I treat leadership as a practical system: clear objectives, clear ownership, predictable cadences, fast feedback, and explicit decision-making.
+
+### Delivery leadership (leading without direct authority)
+
+**Leading without authority** means I influence outcomes through:
+- **clear accountability** (RACI — Responsible/Accountable/Consulted/Informed),
+- **shared goals** (what success looks like, measurable),
+- **cadence and visibility** (weekly checkpoints, risk/issue logs),
+- and **fast conflict resolution** (surfacing trade-offs early and recording decisions).
+
+**What I do in practice:**
+- set a “single source of truth” (plan, RAID log (Risks/Assumptions/Issues/Dependencies), decision log)
+- translate goals into executable work (epics/stories/work packages) with owners and acceptance criteria
+- remove blockers (dependency chasing, escalations, decision facilitation)
+- protect quality and release discipline (evidence-based go/no-go, rollback readiness)
+- keep alignment when priorities change (scope/date/cost trade-offs made explicit, re-baselined)
+
+*Example (delivery leadership statement):*  
+“I don’t rely on hierarchy. I rely on clarity: one plan, named owners, weekly commitments, evidence-based readiness, and quick escalation when risk crosses thresholds.”
+
+### Coaching cadence and feedback approach (how I improve performance)
+
+Even without line management, I use lightweight coaching rhythms:
+- **Weekly 1:1-style check-ins (delivery-focused):** what’s blocked, what’s at risk, what support is needed.
+- **After key events (release/incident):** short retrospectives (what happened, what we learned, what changes).
+- **Feedback style:** specific, timely, and behavior-based (not personal).
+
+A simple structure I use for feedback is **SBI (Situation–Behavior–Impact)**:
+- **Situation:** when/where it happened
+- **Behavior:** what was observed (facts)
+- **Impact:** why it matters (delivery risk, quality, stakeholder trust)
+- **Next step:** what “good” looks like and how we’ll support it
+
+*Example (SBI-style):*  
+“In yesterday’s release prep (situation), the test evidence wasn’t shared before go/no-go (behavior). That increases rollback risk and slows decisions (impact). Next release, we’ll publish the evidence pack 24 hours earlier and confirm readiness in the checklist (next step).”
+
+### People management (when I have formal line-management responsibility)
+
+If I manage direct reports (line management), I apply the same delivery discipline to people leadership:
+
+**Setting objectives (clear and measurable):**
+- I use **SMART goals** (Specific, Measurable, Achievable, Relevant, Time-bound) or team-aligned objectives.
+- I connect goals to delivery outcomes (predictability, quality, incident reduction, stakeholder satisfaction).
+
+**Performance expectations and reviews (fair and evidence-based):**
+- define expectations upfront (role responsibilities, quality bar, behaviors)
+- track progress using observable outcomes (deliverables, quality signals, collaboration)
+- run regular check-ins so review time has no surprises
+
+**Development and mentorship (growth plan):**
+- identify strengths + gaps (skills and behaviors)
+- agree a short development plan (training, shadowing, stretch assignments)
+- review progress monthly/quarterly
+
+### Managing vendor teams and internal contributors together (one operating rhythm)
+
+To keep multi-party delivery effective, I standardize:
+- **working agreements:** tools, response times, definition of done, escalation path
+- **cadences:** weekly delivery checkpoint, monthly scorecard, QBR (Quarterly Business Review)
+- **decision rights:** who can approve changes, who can accept deliverables
+- **conflict handling:** raise trade-offs early; avoid “silent scope” and “late surprises”
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
