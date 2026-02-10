@@ -22,6 +22,7 @@ It is written to be **practical and explicit**:
 - [Operating model (how I run multiple projects at once)](#operating-model)
 - [Project lifecycle (hybrid: Agile + stage-gate)](#project-lifecycle)
 - [Partner & vendor management lifecycle](#vendor-lifecycle)
+- [IT procurement process (RFI/RFP, evaluation, award, onboarding)](#it-procurement)
 - [Contracts, statements of work, and SLAs](#contracts-slas)
 - [Delivery governance (cadences, reporting, decisions)](#delivery-governance)
 - [Release & change management](#release-change)
@@ -159,7 +160,42 @@ Vendor management is not only “relationship management”. It is a controlled 
 - “How do you ensure code quality (reviews, testing, CI/CD)?”
 - “How do you manage breaking changes and versioning?”
 
-### 2) Onboarding (how we set vendors up to succeed)
+### 2) IT procurement process (how I select and onboard vendors) {#it-procurement}
+
+When a partner is needed, I follow a structured **IT procurement process** (the end-to-end approach used to select a vendor and contract them safely). The goal is to choose a vendor that fits **technical needs**, **delivery capability**, **security/compliance requirements**, and **commercial constraints** — while keeping the decision traceable and audit-friendly.
+
+- **RFI (Request for Information):** a lightweight information-gathering step used when the market is unclear. I use it to understand vendor capabilities, typical delivery models, references, security posture, and constraints — without committing to a detailed bid.
+  - *Example:* “Which integration patterns do you support? What is your release cadence? Do you provide 24/7 support? What security certifications or controls do you have?”
+
+- **RFP (Request for Proposal):** a formal request for a vendor to propose a solution and commercial offer. I include the scope, expected outcomes, timelines, acceptance criteria (how we will confirm success), assumptions/dependencies, and required service levels.
+  - *Example RFP inputs:* target architecture/integration needs, environments, test evidence expectations, support model, and reporting cadence.
+
+- **Vendor shortlisting criteria (how I narrow options):** I use a defined set of criteria so selection is not subjective:
+  - **Technical fit:** capability match, scalability, integration approach, tooling, documentation quality.
+  - **Delivery maturity:** planning discipline, testing approach, release management, incident handling, and how they manage change.
+  - **Security & compliance fit:** ability to meet privacy/security controls (e.g., access control, encryption practices, audit logs), and willingness to provide evidence.
+  - **Commercial fit:** pricing model, clarity of terms, ability to commit to SLAs (Service Level Agreements).
+  - **References / track record:** proven delivery on similar scope and complexity.
+
+- **Commercial + technical evaluation (how I choose the best option):**
+  - **Technical evaluation:** solution approach, delivery plan realism, risks/assumptions, test strategy, operational readiness.
+  - **Commercial evaluation:** total cost of ownership (not just day rate), payment milestones tied to acceptance, change-order mechanism, support costs, and exit terms.
+  - *(Good practice:)* I keep a simple scoring matrix (weighted criteria) and document why the selected vendor is the best fit.
+
+- **Security and compliance assessment (before contracting):** I validate that the vendor can operate safely within our environment:
+  - data access boundaries and least-privilege access,
+  - secure handling of credentials/keys,
+  - logging and audit expectations (what is logged, who can access it),
+  - sub-processor visibility (if they use other providers),
+  - and any required contractual protections (security clauses, incident notification expectations).
+
+- **Final award + onboarding (making it delivery-ready):** once selected, I convert the decision into an executable delivery setup:
+  - confirm contract structure (MSA/SOW/SLA) and acceptance criteria,
+  - align ways of working (cadences, tooling, reporting, escalation path),
+  - define owners via RACI (Responsible/Accountable/Consulted/Informed),
+  - and run a structured kickoff so delivery can start with clear expectations rather than assumptions.
+
+### 3) Onboarding (how we set vendors up to succeed)
 I align vendors on **non-negotiables** early:
 - Definition of done (what “complete” means),
 - documentation standards,
@@ -168,18 +204,18 @@ I align vendors on **non-negotiables** early:
 - release process (how we ship safely),
 - and escalation paths (who to contact when blocked).
 
-### 3) Delivery governance (how vendor work is controlled)
+### 4) Delivery governance (how vendor work is controlled)
 - **Single delivery plan:** milestones, owners, dependencies, and acceptance criteria.
 - **Regular cadences:** weekly delivery check, daily sync during critical periods.
 - **Transparent performance signals:** progress, defect rate, rework, missed commitments.
 
-### 4) Performance management (how we improve or correct)
+### 5) Performance management (how we improve or correct)
 When performance deviates, I do:
 - **Fact-based gap analysis:** what is failing (schedule, quality, responsiveness).
 - **Corrective action plan:** specific actions, owners, dates, measurable outcomes.
 - **Escalation rules:** if X happens by Y date, we trigger Z (e.g., add internal engineering support, reduce scope, replace vendor team members, or activate exit plan).
 
-### 5) Renewal or exit (planned, not panic)
+### 6) Renewal or exit (planned, not panic)
 - **Renewal:** if performance is strong and the relationship is healthy.
 - **Exit plan:** if risk remains high (knowledge transfer, documentation pack, handover, replacement strategy).
 
