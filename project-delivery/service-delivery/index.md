@@ -20,8 +20,8 @@ It is written to be **practical and explicit**:
 
 - [What “service delivery” means in practice](#what-is-service-delivery)
 - [Operating model (how I run multiple projects at once)](#operating-model)
-- [Project lifecycle (hybrid: Agile + stage-gate)](#project-lifecycle)
 - [Budget & resource management (forecast vs actual, burn rate, capacity planning)](#budget-resourcing)
+- [Project lifecycle (hybrid: Agile + stage-gate)](#project-lifecycle)
 - [Delivery leadership & team management (objectives, coaching, leading without authority)](#delivery-leadership)
 - [Technology evaluation (fit, risk, PoC, decision record, rollout plan)](#tech-eval)
 - [Partner & vendor management lifecycle](#vendor-lifecycle)
@@ -225,7 +225,7 @@ A simple structure I use for feedback is **SBI (Situation–Behavior–Impact)**
 
 ### People management (when I have formal line-management responsibility)
 
-If I manage direct reports (line management), I apply the same delivery discipline to people leadership:
+In many roles I’ve led delivery through cross-functional teams and vendors without formal line authority; where I do have direct reports, I apply the structure below:
 
 **Setting objectives (clear and measurable):**
 - I use **SMART goals** (Specific, Measurable, Achievable, Relevant, Time-bound) or team-aligned objectives.
@@ -376,6 +376,8 @@ Even after choosing a technology, the rollout must be controlled:
 ---
 
 ## Partner & vendor management lifecycle {#vendor-lifecycle}
+
+I act as the single accountable point of contact for the partner: alignment, delivery status, risk escalation, and commercial follow-ups.
 
 Vendor management is not only “relationship management”. It is a controlled lifecycle:
 
@@ -1024,6 +1026,9 @@ I use metrics as **signals**, not as vanity numbers. Typical categories:
 - **Canary release:** releasing to a small percentage of traffic first to validate stability before wider rollout.
 - **Feature flag:** a switch that enables/disables functionality without redeploying code.
 - **Observability:** the ability to understand system health using logs/metrics/traces and dashboards/alerts.
+- **SLO (Service Level Objective):** internal reliability/latency targets used to run the service (often stricter than contractual SLAs).
+- **p95/p99 latency:** “95th/99th percentile response time” (how slow the worst 5%/1% of requests are).
+- **Hypercare:** short period after a release with heightened monitoring and fast response.
 
 </details>
 
