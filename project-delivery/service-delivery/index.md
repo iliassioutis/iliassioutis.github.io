@@ -31,6 +31,7 @@ It is written to be **practical and explicit**:
 - [Contract negotiation & contract management (commercial controls)](#contract-negotiation)
 - [Delivery governance (cadences, reporting, decisions)](#delivery-governance)
 - [Release & change management](#release-change)
+- [24/7 production & peak-period release discipline (freeze windows, staged rollout, observability-first go/no-go)](#high-scale)
 - [Service delivery in production (BAU operations: incidents, problems, service reviews)](#bau-ops)
 - [Quality management (testing, evidence, acceptance)](#quality)
 - [Risk, dependency, and escalation control](#risk-deps)
@@ -776,6 +777,63 @@ In high-scale environments, releases must be **repeatable** and **controlled**.
 
 ---
 
+## 24/7 production & peak-period release discipline (high-scale consumer platforms) {#high-scale}
+
+In **high-scale consumer platforms**, production is effectively **24/7**: traffic does not pause, and releases must be safe under load.  
+My approach is to reduce release risk with **clear change controls**, **staged rollout**, and **observability-first go/no-go** decisions.
+
+### Production expectations (what “good” looks like in 24/7 services)
+
+- **Always-on mindset:** incidents and releases are handled with defined roles, comms cadence, and on-call readiness.
+- **Operational readiness before change:** dashboards, alerts, and rollback steps exist before enabling traffic to new code.
+- **No “big bang” changes by default:** progressive delivery is preferred (start small, expand when stable).
+
+### Freeze windows and change calendar (risk control during peak periods)
+
+During peak risk periods (e.g., major campaigns, high-traffic weekends/events), I use **freeze windows**:
+- **Change freeze:** only critical fixes allowed (pre-approved criteria)
+- **Release windows:** define when changes are allowed (and when they are not)
+- **Exception path:** clear approval route for emergency changes (who approves, what evidence is needed)
+
+*Example rule:*  
+“During peak window, only Sev1/Sev2 fixes ship; everything else waits for the next safe window.”
+
+### Staged rollout (reduce blast radius)
+
+I prefer a staged rollout strategy so failures are contained:
+- **Canary / small-percent rollout:** release to a small slice first, validate, then expand
+- **Feature flags / toggles:** enable/disable functionality without redeploying
+- **Kill switch:** a fast way to stop a risky flow or integration
+- **Rollback readiness:** explicit rollback steps validated in non-prod and rehearsed for critical releases
+
+### Observability-first go/no-go (evidence-based decision)
+
+Go/no-go is driven by **evidence**, not optimism. Before and after rollout, I confirm:
+- **Reliability signals:** error rates, crash rates, timeouts, failed transactions
+- **Performance signals:** latency (p95/p99 where used), throughput, saturation (CPU/memory/queues)
+- **Customer-impact signals:** critical user journey success rate (login, payment, key workflow)
+- **SLO/SLA alignment:** whether we are staying within expected service objectives
+
+**Explicit rollback triggers (examples):**
+- error rate exceeds X for Y minutes
+- latency exceeds target threshold for Y minutes
+- critical journey success rate drops below X%
+- incident severity threshold reached (Sev1/Sev2)
+
+### Release staffing and comms during high-risk changes
+
+For high-risk releases I align upfront:
+- who is on point (release lead + incident commander backup)
+- vendor presence if a partner owns part of the stack (on-call engineer available)
+- comms channel and update cadence (stakeholders know when to expect updates)
+- a short “hypercare” period after release (e.g., 24–48 hours heightened monitoring)
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
 ## Service delivery in production (Business-as-Usual (BAU) operations) {#bau-ops}
 
 After go-live, “service delivery” continues in **production operations** (keeping the service stable, reliable, and supportable).  
@@ -962,6 +1020,10 @@ I use metrics as **signals**, not as vanity numbers. Typical categories:
 - **TCO (Total Cost of Ownership):** the total cost over time (licenses + infrastructure + support + change + exit), not only the purchase price.
 - **ADR (Architecture Decision Record):** a short document that records a technical decision, why it was made, trade-offs, and rollout plan.
 - **PoC (Proof-of-Concept):** a time-boxed experiment to validate key assumptions before full implementation.
+- **Freeze window (change freeze):** a period where non-critical changes are paused to reduce production risk during peak traffic.
+- **Canary release:** releasing to a small percentage of traffic first to validate stability before wider rollout.
+- **Feature flag:** a switch that enables/disables functionality without redeploying code.
+- **Observability:** the ability to understand system health using logs/metrics/traces and dashboards/alerts.
 
 </details>
 
