@@ -22,6 +22,7 @@ It is written to be **practical and explicit**:
 - [Operating model (how I run multiple projects at once)](#operating-model)
 - [Project lifecycle (hybrid: Agile + stage-gate)](#project-lifecycle)
 - [Partner & vendor management lifecycle](#vendor-lifecycle)
+- [Vendor performance management (operating rhythm, QBR, escalation ladder)](#vendor-performance)
 - [IT procurement process (RFI/RFP, evaluation, award, onboarding)](#it-procurement)
 - [Contracts, statements of work, and SLAs](#contracts-slas)
 - [Contract negotiation & contract management (commercial controls)](#contract-negotiation)
@@ -293,6 +294,91 @@ When performance deviates, I do:
 - **Fact-based gap analysis:** what is failing (schedule, quality, responsiveness).
 - **Corrective action plan:** specific actions, owners, dates, measurable outcomes.
 - **Escalation rules:** if X happens by Y date, we trigger Z (e.g., add internal engineering support, reduce scope, replace vendor team members, or activate exit plan).
+
+### Vendor performance management (operating rhythm, scorecards, QBRs, escalation ladder) {#vendor-performance}
+
+Vendor performance management is how I make “good intentions” measurable and continuously improved.  
+It combines (a) **service performance** (SLA adherence), (b) **delivery performance** (predictability/quality), and (c) **relationship management** (fast resolution and alignment).
+- See: [Vendor performance management](#vendor-performance) for the operating rhythm, scorecards, QBRs, and escalation ladder.
+
+#### Operating rhythm (cadence that keeps performance visible)
+
+**Weekly (delivery focus; more frequent during critical releases)**
+- delivery checkpoint: commitments vs actuals, blockers, risks, upcoming milestones
+- quality snapshot: open defects by severity, rework items, test evidence status
+- dependency tracking: what the vendor needs from us / what we need from them
+
+**Monthly scorecard review (performance management)**
+A structured session where we review a **vendor scorecard** (fact-based, trend-driven).  
+This is where performance is “run like operations,” not debated.
+
+**Typical monthly scorecard sections (examples):**
+- **SLA performance (Service Level Agreement):**
+  - SLA breaches (count + severity)
+  - response time / restore time performance (e.g., Sev1, Sev2 targets)
+  - incident communications compliance (update frequency, completeness)
+- **Delivery predictability:**
+  - milestone hit rate / commitment reliability
+  - carryover rate (planned work that rolled into next sprint/release)
+  - dependency-driven slips (and root causes)
+- **Quality & stability:**
+  - defect trends (new vs closed), severity distribution
+  - defect leakage (found after release vs before release)
+  - rework rate (items returned due to incomplete/incorrect delivery)
+- **Operational readiness & documentation:**
+  - runbook completeness, monitoring hooks delivered, handover quality
+- **Collaboration health (lightweight but real):**
+  - time-to-respond on blockers, clarity of ownership, escalation effectiveness
+
+*Good practice:* I track **trend lines** (last 3–6 months) so we see improvement or deterioration early.
+
+**Monthly outputs (what comes out of the meeting):**
+- scorecard snapshot stored (for traceability)
+- top 3 improvements agreed (owners + deadlines)
+- any contractual actions triggered (e.g., service credits, formal notice), if needed
+
+#### Quarterly Business Review (QBR) (strategic alignment + improvement plan)
+
+A **Quarterly Business Review (QBR)** is a senior-level session (vendor leadership + our leadership) that focuses on:
+- roadmap alignment (what’s coming, what needs capacity)
+- strategic risks (technology, security, scaling, market changes)
+- performance themes (patterns from monthly scorecards)
+- improvement plan (what we will change in how we work together)
+
+**QBR agenda template (example):**
+- performance summary (SLA + delivery + quality)
+- major incidents and lessons learned (and what changed)
+- upcoming roadmap + capacity outlook (next quarter)
+- risk review (top risks + mitigations)
+- decisions needed (scope/date trade-offs, investment needs)
+- improvement plan sign-off (specific actions + KPIs)
+
+**QBR outputs:**
+- updated joint roadmap assumptions
+- agreed improvements (with measurable targets)
+- updated escalation expectations (if performance is drifting)
+
+#### Escalation ladder (clear path when performance deviates)
+
+Escalation is a controlled mechanism (not emotion). I define escalation levels upfront so everyone knows what happens next.
+
+**Level 0 — Working level (vendor engineers + internal engineers)**
+- resolve blockers quickly; confirm owners and deadlines
+
+**Level 1 — Delivery level (Vendor PM → Internal TPM/Service Delivery)**
+- trigger when: repeated slips, unclear ownership, missed commitments
+- action: corrective plan with milestones, extra reporting cadence, re-baseline
+
+**Level 2 — Leadership level (Vendor leadership → Internal leadership)**
+- trigger when: material risk to release date, critical quality issues, repeated SLA breaches
+- action: resource changes, scope reduction, “stop the line” decision, formal remediation plan
+
+**Level 3 — Commercial/Legal path (contractual enforcement)**
+- trigger when: sustained non-performance, major compliance breach, failure to remediate
+- action examples: service credits, formal notice, contract remedies, termination/exit plan activation
+
+*Example escalation rule (explicit):*  
+“If we have 2 consecutive months of SLA breach on Sev1 response time, we move to Level 2 escalation and require a remediation plan within 10 business days, with weekly progress reporting until metrics stabilize.”
 
 ### 6) Renewal or exit (planned, not panic)
 - **Renewal:** if performance is strong and the relationship is healthy.
