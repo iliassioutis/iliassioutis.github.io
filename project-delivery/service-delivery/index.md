@@ -16,8 +16,20 @@ It is written to be **practical and explicit**:
 
 ---
 
+## How I work (quick profile) {#how-i-work}
+
+I’m a technical project manager who delivers outcomes across **internal engineering, operations, and external partners** — with a focus on **predictable execution, safe releases, and production readiness**.
+
+In partner-led delivery, the most common pattern I run is:
+- **Vendors build components** (code/API/SDK/services),
+- **Internal teams integrate and operate** (CI/CD, observability, security review, production ownership),
+- and I provide the **single delivery system** across both sides: plan, governance, evidence, escalation, and go/no-go readiness.
+
+---
+
 ## On this page {#on-this-page}
 
+- [How I work (quick profile)](#how-i-work)
 - [What “service delivery” means in practice](#what-is-service-delivery)
 - [Operating model (how I run multiple projects at once)](#operating-model)
 - [Budget & resource management (forecast vs actual, burn rate, capacity planning)](#budget-resourcing)
@@ -31,6 +43,7 @@ It is written to be **practical and explicit**:
 - [Contract negotiation & contract management (commercial controls)](#contract-negotiation)
 - [Delivery governance (cadences, reporting, decisions)](#delivery-governance)
 - [Release & change management](#release-change)
+- [Release execution (cutover, go/no-go, rollback, hypercare)](#release-execution)
 - [24/7 production & peak-period release discipline (freeze windows, staged rollout, observability-first go/no-go)](#high-scale)
 - [Service delivery in production (BAU operations: incidents, problems, service reviews)](#bau-ops)
 - [Quality management (testing, evidence, acceptance)](#quality)
@@ -435,6 +448,9 @@ When risk is high (new vendor, new tech stack, critical integration, strict time
 
 #### Due diligence outputs (what I collect before signing)
 
+I treat partner assurance as part of delivery governance, not a separate “compliance exercise”.
+It shows up in three places: (1) what I verify before signing (due diligence), (2) what I make enforceable in contract language (auditability, reporting, incident duties), and (3) what I monitor in the operating rhythm (scorecards/QBRs).
+
 “Due diligence” is the evidence pack I gather to confirm the vendor can deliver safely and reliably (not just promise it).  
 Typical artifacts I request/collect (as applicable):
 
@@ -792,6 +808,41 @@ In high-scale environments, releases must be **repeatable** and **controlled**.
 - **Release readiness checklist:** evidence-based go/no-go.
 - **Rollback plan:** what we do if production fails (steps, owners, thresholds).
 - **Post-release verification:** short, structured checks that confirm the system is healthy.
+
+### Release execution (how I run a safe cutover) {#release-execution}
+
+A good release is not “deploy and hope”. It is a controlled sequence with clear owners, evidence, and rollback readiness.
+
+#### 1) Release scope and dependency lock
+- confirm what is in / out (scope baseline for the release)
+- confirm upstream/downstream dependencies (partner deliverables, internal integration points, environment readiness)
+- freeze late changes unless they meet explicit exception criteria
+
+#### 2) Release readiness evidence pack (what must exist before go/no-go)
+- release notes (what changes, what risks, what to watch)
+- test evidence summary (key flows passed, known issues, risk acceptance)
+- operational readiness (monitoring/dashboard links, alert rules, runbook updated)
+- rollback plan (steps + owners + triggers) and “kill switch” / feature-flag plan where applicable
+- stakeholder comms plan (who gets updates, cadence during the window)
+
+#### 3) Cutover plan (minute-by-minute for higher-risk changes)
+For higher-risk releases, I use a short cutover plan:
+- pre-checks (service health baseline, capacity signals, key journey checks)
+- deployment steps (order, gating checks, pause points)
+- verification steps (post-deploy checks that prove the service works)
+- rollback decision points (explicit thresholds, not gut feel)
+
+#### 4) Go/no-go criteria (evidence-based)
+I make go/no-go explicit using a checklist:
+- critical tests passed and evidence published
+- key risks have owners and mitigations
+- operational team is ready (on-call coverage confirmed, runbook and comms ready)
+- rollback steps are understood and executable within an acceptable time window
+
+#### 5) Post-release verification and hypercare
+- validate stability using monitoring signals and key user journey checks
+- run a short hypercare window (heightened monitoring + fast response)
+- capture lessons learned and convert them into tracked improvement actions
 
 ### Change management (definition)
 **Change management** is the controlled handling of changes to scope, schedule, or production systems:
