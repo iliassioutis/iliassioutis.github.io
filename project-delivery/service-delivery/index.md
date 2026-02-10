@@ -153,11 +153,89 @@ Vendor management is not only “relationship management”. It is a controlled 
 - **Requirements definition:** what capability we need (technical, operational, security).
 - **Evaluation criteria:** delivery track record, engineering quality, scalability, support model.
 - **Due diligence:** references, security posture, and operating model (how they actually deliver).
+- **Scorecard-based decision:** I compare vendors using a weighted scorecard and record the rationale in the decision log.
 
-*Example (evaluation questions):*
+#### Vendor scorecard (weighted evaluation)
+
+To avoid “gut-feel” decisions, I use a **vendor scorecard** (a structured evaluation matrix with **weighted criteria**).  
+Each criterion is scored consistently (e.g., **1–5**, where 1 = weak / high risk, 5 = strong / low risk) and multiplied by a **weight** (importance).  
+Weights are adjusted based on **criticality** (how business-critical the service is) and **risk profile** (data sensitivity, production impact, regulatory exposure).
+
+**Typical weighted criteria (example):**
+- **Capability / functional fit:** can they deliver what we need (scope + domain knowledge)?
+- **Engineering quality:** code quality practices, testing depth, documentation quality.
+- **Delivery maturity:** planning discipline, predictability, ability to manage changes, transparency.
+- **Security posture:** access controls, secure SDLC (Software Development Life Cycle), incident response readiness.
+- **Cost / commercial model:** total cost of ownership (TCO), pricing clarity, change-order approach.
+- **Scalability & reliability:** performance, availability approach, operational model, support coverage.
+
+**Good practice:** I keep the scorecard, scoring rationale, and final decision in a **decision log** (what we chose, why, trade-offs, and approvals) so the award is traceable and audit-friendly.
+
+**Example scorecard layout (illustrative):**
+
+| Criterion | Weight (%) | Score (1–5) | Evidence used (examples) |
+|---|---:|---:|---|
+| Capability / fit | 20 |  | Request for Proposal (RFP) response, demo, scope mapping |
+| Delivery maturity | 20 |  | Plan quality, cadence, risk management approach |
+| Engineering quality | 15 |  | Test strategy, code review practice, sample artifacts |
+| Security posture | 20 |  | Security questionnaire, policies, certifications (if available) |
+| Cost / TCO | 15 |  | Pricing model, support costs, change order mechanism |
+| Scalability / reliability | 10 |  | Reference architecture, SLOs (Service Level Objectives) proposal |
+
+#### Reference checks (validation outside the sales process)
+
+Before signing, I run **reference checks** (structured calls with existing or past customers) to validate delivery reality:
+- “Did they hit milestones consistently? If not, what caused slips?”
+- “What was the defect/rework rate like near release?”
+- “How did they behave under pressure (incident, escalation, major change)?”
+- “Was communication transparent (bad news early, clear ownership)?”
+- “Would you choose them again — and under what conditions?”
+
+#### Pilot / Proof-of-Concept (PoC) when risk is high
+
+When risk is high (new vendor, new tech stack, critical integration, strict timelines), I propose a **pilot** or **Proof-of-Concept (PoC)** (a time-boxed experiment to reduce uncertainty before full commitment).
+
+**How I run a PoC (example structure):**
+- **Time-box:** e.g., 2–4 weeks
+- **Success criteria (measurable):** integration works end-to-end, latency under X, error rate under Y, security requirements met, deploy/rollback demonstrated
+- **Deliverables:** working prototype, short technical notes, known risks, and a go/no-go recommendation
+- **Exit criteria:** if success criteria are not met, we stop early or re-scope before signing a larger SOW (Statement of Work)
+
+#### Due diligence outputs (what I collect before signing)
+
+“Due diligence” is the evidence pack I gather to confirm the vendor can deliver safely and reliably (not just promise it).  
+Typical artifacts I request/collect (as applicable):
+
+- **Scope & delivery artifacts**
+  - delivery plan (milestones, dependencies, resourcing)
+  - delivery approach (Agile/Waterfall/hybrid), reporting cadence, escalation path
+  - draft RACI (Responsible / Accountable / Consulted / Informed)
+  - acceptance approach and test evidence expectations
+
+- **Technical & operational artifacts**
+  - high-level solution/architecture description (how it fits into our environment)
+  - environment assumptions (development/test/production), deployment approach, rollback approach
+  - runbook outline (operational procedures) and support model proposal
+  - DR/BCP plan (Disaster Recovery / Business Continuity Plan) if production-critical
+
+- **Security & compliance artifacts**
+  - security questionnaire responses and supporting policies (access control, encryption approach, logging)
+  - incident response process (severity levels, notification timelines, on-call model)
+  - certifications/attestations if available (e.g., ISO 27001; SOC 2 (Service Organization Control 2))
+  - sub-processor list (third parties they rely on) and data handling boundaries
+  - contract clauses for security, breach notification, and audit rights (as applicable)
+  - DPA (Data Processing Agreement) where personal data processing exists
+
+- **Commercial & contractual artifacts**
+  - pricing model and assumptions (what is included vs extra)
+  - change-order mechanism (how scope changes are quoted and approved)
+  - payment milestones tied to acceptance (not just time)
+  - exit/transition obligations (handover, documentation, knowledge transfer)
+
+*Example evaluation questions I ask during due diligence discussions:*
 - “How do you handle releases and rollbacks?”
 - “What is your incident response process and response time?”
-- “How do you ensure code quality (reviews, testing, CI/CD)?”
+- “How do you ensure code quality (reviews, testing, Continuous Integration / Continuous Delivery (CI/CD))?”
 - “How do you manage breaking changes and versioning?”
 
 ### 2) IT procurement process (how I select and onboard vendors) {#it-procurement}
