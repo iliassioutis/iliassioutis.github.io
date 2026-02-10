@@ -24,6 +24,7 @@ It is written to be **practical and explicit**:
 - [Partner & vendor management lifecycle](#vendor-lifecycle)
 - [IT procurement process (RFI/RFP, evaluation, award, onboarding)](#it-procurement)
 - [Contracts, statements of work, and SLAs](#contracts-slas)
+- [Contract negotiation & contract management (commercial controls)](#contract-negotiation)
 - [Delivery governance (cadences, reporting, decisions)](#delivery-governance)
 - [Release & change management](#release-change)
 - [Quality management (testing, evidence, acceptance)](#quality)
@@ -323,6 +324,70 @@ This is how I make commercial agreements “delivery-safe”.
 - **Quality expectations:** test evidence, documentation, security requirements.
 - **Support model:** hours, response times, escalation path.
 - **Dependencies:** what the vendor depends on from us (and vice versa).
+
+### Contract negotiation & contract management (how I make it “real-world” and enforceable) {#contract-negotiation}
+
+In practice, contract work is where delivery succeeds or fails. I negotiate and manage contracts so that:
+- incentives reward **accepted outcomes** (not just time spent),
+- roles and obligations are enforceable (not vague),
+- changes are controlled (so scope doesn’t silently expand),
+- and exit is planned (so the business is not hostage to the vendor).
+
+#### What I typically negotiate (and why)
+
+- **Payment milestones tied to acceptance (outcome-based payments):**  
+  I avoid paying purely for “effort” when possible. Instead, I tie payments to **deliverables that meet acceptance criteria** (formal conditions for sign-off).  
+  *Example:* “Milestone 2 is payable only after integration tests pass and the agreed evidence pack is delivered (test report + release notes + runbook draft).”
+
+- **Intellectual Property (IP) (ownership / licensing):**  
+  IP (Intellectual Property) terms define who owns the code, designs, documentation, and any reusable components.  
+  I make sure we are covered for:
+  - **ownership** of bespoke deliverables built for us (or a strong perpetual license),
+  - **licensing** clarity for any vendor pre-existing components,
+  - reuse restrictions (if any), and
+  - rights to modify/maintain the deliverable after handover.  
+  *Example:* “Customer owns project-specific deliverables; vendor retains background IP but grants a perpetual, royalty-free license for operation and maintenance.”
+
+- **Confidentiality and data protection clauses (where applicable):**  
+  If the vendor will access sensitive or personal data, I ensure obligations are explicit:
+  - permitted uses of data,
+  - access control and least privilege,
+  - breach notification timelines,
+  - sub-processor restrictions and disclosure,
+  - secure deletion/return of data at contract end.  
+  *(If personal data is processed, this typically requires a Data Processing Agreement (DPA) alongside the main contract.)*
+
+- **Change order mechanics (scope-change pricing + approval workflow):**  
+  I insist that scope change has a controlled path:
+  - request logged (what is changing and why),
+  - impact analysis (time/cost/risk),
+  - written approval (who can approve),
+  - updated baseline plan and revised milestones.  
+  *Example approval rule:* “No work starts on a change until the change order is approved in writing by the Accountable owner.”
+
+- **Audit rights and reporting obligations:**  
+  I negotiate the right to request evidence that obligations are met (especially for security, service levels, and compliance):
+  - regular delivery reporting (milestones, risks, KPIs),
+  - service reporting (availability, incidents, SLA performance),
+  - the ability to audit (or receive audit outputs) when risk is high.  
+  *Example:* “Monthly SLA report + incident postmortems for Sev1/Sev2 + quarterly security posture update.”
+
+- **Termination and exit assistance (planned exit, not panic):**  
+  I make sure we can exit safely if performance drops or strategy changes:
+  - notice periods and termination triggers,
+  - **exit assistance** obligations (knowledge transfer, documentation handover, transition support),
+  - handover package definition (source code, build/deploy scripts, runbooks, architecture notes, credentials transition plan),
+  - support coverage during transition.  
+  *Example:* “On termination, vendor provides 4 weeks transition support, delivers complete documentation pack, and runs handover sessions with internal teams.”
+
+#### How I manage contracts after signature (contract governance)
+
+Signing is not the end. I run a light contract governance loop:
+- **obligation tracking:** key obligations and dates (deliverables, reporting, SLA reviews),
+- **acceptance log:** what was accepted, when, and based on which evidence,
+- **change log:** all change orders and baseline impacts,
+- **performance reviews:** regular vendor performance checks against contract + scorecard signals,
+- **issue-to-contract linkage:** major delivery issues mapped to contractual obligations (so remediation is enforceable).
 
 ### SLAs in practice (what “good” looks like)
 An SLA should define:
