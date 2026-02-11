@@ -1046,7 +1046,7 @@ I make go/no-go explicit using a checklist:
 
 #### 5) Post-release verification and hypercare
 - validate stability using monitoring signals and key user journey checks
-- run a short hypercare window (heightened monitoring + fast response)
+- run a short hypercare period after release (e.g., the next 24–48 hours) with extra monitoring of dashboards/alerts and a clearly assigned rapid-response contact, so issues are detected and fixed quickly
 - capture lessons learned and convert them into tracked improvement actions
 
 ### Change management (definition)
