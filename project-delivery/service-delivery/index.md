@@ -381,23 +381,27 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
   - decisions needed for next quarter (investment, scope, timelines)
 
 #### 3) Decision rights (who can approve what)
-Ambiguity here causes delays and “silent scope”. I make it explicit:
 
-- **Scope and priorities**
-  - Product Owner / Product Manager sets priority and accepts requirement trade-offs
-  - Technical Project Manager / Service Delivery Manager coordinates impact and records decisions
+Unclear approval rights cause delays and “silent scope”. So I define **who decides**, **who advises**, and **who signs off**.
 
-- **Technical acceptance**
-  - Internal integration/engineering validates integration quality and readiness
-  - Security reviews/approves risk items affecting data, access, and compliance
+- **Scope and priorities (what we build, and what we defer)**
+  - **Product Owner / Product Manager:** owns prioritization and scope trade-offs (what is in/out).
+  - **Delivery owner (Technical PM / Service Delivery):** consolidates impact (time/cost/risk/dependencies), proposes options, and records the decision in the plan/decision log.
 
-- **Release go/no-go**
-  - Release Manager (or designated release authority) confirms readiness criteria are met
-  - The accountable delivery owner confirms scope, evidence, and stakeholder alignment
+- **Technical acceptance (is it built correctly and safe to operate)**
+  - **Engineering / Integration lead:** signs off technical quality for integration (meets acceptance criteria, works end-to-end).
+  - **QA/Test lead (if applicable):** signs off test coverage/results against the agreed quality bar.
+  - **Security / InfoSec:** approves security controls and any risk acceptance related to data, access, and compliance.
+  - **Operations/SRE/Support:** confirms operational readiness (monitoring, runbook, on-call/escalation readiness).
 
-- **Commercial changes**
-  - Commercial/Procurement owner approves commercial changes (change orders, spend changes)
-  - Delivery owner ensures change impact is quantified and re-baselined
+- **Release go/no-go (do we ship now)**
+  - **Release authority** *(Release Manager / Change Manager / designated approver — depends on org)*: makes the final go/no-go call based on the readiness checklist and risk posture.
+  - **Delivery owner:** confirms scope is locked, evidence is published, and stakeholders are aligned to proceed.
+  - **Technical lead + Ops/SRE:** confirm rollback feasibility and post-release verification steps.
+
+- **Commercial / contractual changes (money, contract, scope changes with cost impact)**
+  - **Commercial/Procurement/Finance owner (or budget holder):** approves spend changes, change orders, and payment milestones.
+  - **Delivery owner:** quantifies impact (cost/date/risk), ensures approvals are written, and updates baselines (plan + budget + acceptance).
 
 #### 4) Conflict handling (fast, structured, and written down)
 When priorities or facts clash, I use a consistent playbook:
