@@ -648,20 +648,28 @@ Typical artifacts I request/collect (as applicable):
 - **Security & compliance artifacts**
   - security questionnaire responses and supporting policies (access control, encryption approach, logging)
   - incident response process (severity levels, notification timelines, on-call model)
-  - certifications/attestations if available (e.g., ISO 27001; SOC 2 (Service Organization Control 2))
+  - certifications/attestations (if available) — used as **independent evidence** of security controls:
+    - **ISO 27001:** shows the vendor runs a formal **information security management system** (policies, risk management, control ownership, internal audits, continuous improvement)
+    - **SOC 2 ((Service Organization Control 2):** an auditor’s report showing the vendor’s controls for **security/availability/confidentiality** (and other “trust principles” if in scope) are not only designed, but **operated over a period of time**
+    - *What I ask for:* the certificate/report (or an executive summary), the scope (which products/locations are covered), the report date, and any exceptions/findings plus remediation status
   - sub-processor list (third parties they rely on) and data handling boundaries
-  - contract clauses for security, breach notification, and audit rights (as applicable)
+  - contract clauses covering **security duties**, **how/when the vendor must notify us of a breach**, and **our right to request evidence or audits to verify controls** (when the risk level requires it)
   - DPA (Data Processing Agreement) where personal data processing exists
 
-- **Ethics & compliance controls (vendor conduct alignment)**
-  - conflict-of-interest declaration (and a rule to disclose changes immediately)
-  - gifts & hospitality rules (no cash-equivalents; modest, infrequent, transparent)
-  - anti-bribery / anti-corruption commitment (zero-tolerance; vendor controls + training)
-  - fair competition assurance (no bid-rigging/price-fixing; no misuse of confidential info)
-  - sanctions / Anti-Money Laundering (AML) compliance confirmation where relevant to the vendor’s services and footprint
-  - subcontractor “flow-down” requirement (vendor is responsible for ensuring subcontractors comply)
-  - confidentiality + “no public announcements” about the relationship without written consent
-  - AI-use disclosure (what is used, where, and for what purpose) and an approval path for higher-risk use
+- **Ethics & compliance controls (how I keep vendor behaviour safe and professional)**  
+  These are simple “rules of engagement” I set/confirm during onboarding and (where needed) include in the contract. They reduce legal/reputation risk and avoid conflicts during delivery.
+
+  - **Conflict of interest:** the vendor confirms they have no hidden relationship that could bias decisions (e.g., they also work for a direct competitor). They must **tell us immediately** if that changes.
+  - **Gifts & hospitality:** no cash (or gift cards). Any hospitality must be **modest and transparent** (declared/approved per company policy).
+  - **Anti-bribery / anti-corruption:** the vendor commits to **zero tolerance** (no bribes/kickbacks). If they use subcontractors, the same rules apply to them.
+  - **Fair competition:** the vendor confirms they will compete fairly and not manipulate procurement, for example:
+    - **no bid-rigging:** vendors don’t secretly coordinate bids so one “wins”
+    - **no price-fixing:** competitors don’t agree to keep prices artificially high
+    - **no misuse of confidential information:** they don’t use another bidder’s or our confidential data to gain unfair advantage
+  - **Sanctions / AML (when relevant):** for vendors involved in payments/identity/compliance, we confirm they follow sanctions/AML rules and can provide evidence if required.
+  - **Subcontractor control (“flow-down”):** if the vendor uses subcontractors, the vendor remains responsible and ensures subcontractors follow the same security/ethics rules.
+  - **Confidentiality & publicity:** they keep our information confidential and **cannot announce the partnership publicly** (logo/press release/case study) without written permission.
+  - **AI use disclosure (when relevant):** if they use AI in the solution or delivery, they disclose **what is used and for what purpose**, and they must get approval for higher-risk uses (e.g., handling sensitive data, automated decision-making).
  
 - **Commercial & contractual artifacts**
   - pricing model and assumptions (what is included vs extra)
