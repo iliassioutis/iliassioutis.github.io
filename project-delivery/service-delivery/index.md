@@ -348,24 +348,24 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
     - Runbook completeness (procedures for support/ops: common failures, checks, rollback steps)
     - Monitoring and alert readiness (dashboards/alerts exist and are tested for key failure modes)
   - **Support posture (only if the vendor supports production or is on-call for their component)**  
-  This answers a simple question: *“If something breaks in production, can this partner actually help us fast enough?”*  
-  It matters most when the vendor owns a critical component (API/SDK/service) and we rely on them during incidents or risky releases.
-  **What we confirm (practical checks):**
-  - **Coverage and on-call:** which hours they cover (business hours vs 24/7), who is on-call, and how quickly we can reach them.
-  - **Response and update expectations:** how fast they acknowledge an incident, and how often they provide status updates until recovery.
-  - **Escalation contacts:** named contacts and an escalation ladder (engineer → delivery lead → leadership) so we don’t lose time during a Sev1/Sev2.
-  - **Incident workflow alignment:** how they join our incident bridge, what they provide (logs, diagnostics, mitigation plan), and how handoffs work.
-  - **SLA adherence (if contractually defined):** whether they consistently meet the agreed targets for:
-    - **Response time** (time to acknowledge/start work)
-    - **Restore time** (time to recover service or provide mitigation)
-    - **Update cadence** (how frequently they communicate during the incident)
-  **What “good” looks like:** clear coverage, named on-call contacts, fast acknowledgement, predictable updates, and an escalation path that works in practice.
+    This answers a simple question: *“If something breaks in production, can this partner actually help us fast enough?”*  
+    It matters most when the vendor owns a critical component (API/SDK/service) and we rely on them during incidents or risky releases.
+    **What we confirm (practical checks):**
+    - **Coverage and on-call:** which hours they cover (business hours vs 24/7), who is on-call, and how quickly we can reach them.
+    - **Response and update expectations:** how fast they acknowledge an incident, and how often they provide status updates until recovery.
+    - **Escalation contacts:** named contacts and an escalation ladder (engineer → delivery lead → leadership) so we don’t lose time during a Sev1/Sev2.
+    - **Incident workflow alignment:** how they join our incident bridge, what they provide (logs, diagnostics, mitigation plan), and how handoffs work.
+    - **SLA adherence (if contractually defined):** whether they consistently meet the agreed targets for:
+      - **Response time** (time to acknowledge/start work)
+      - **Restore time** (time to recover service or provide mitigation)
+      - **Update cadence** (how frequently they communicate during the incident)
+    **What “good” looks like:** clear coverage, named on-call contacts, fast acknowledgement, predictable updates, and an escalation path that works in practice.
+  
   **Outputs (what we produce every month):**
   - Scorecard snapshot saved (for traceability)
   - Top 3 improvement actions agreed (each with an owner + due date)
   - Escalations or commercial actions triggered if thresholds are breached (only when needed)    
 - **Quarterly Business Review (QBR) (strategic alignment)**
-
   Senior-level session focused on:
   - roadmap and upcoming capacity needs
   - recurring risks/themes from scorecards
