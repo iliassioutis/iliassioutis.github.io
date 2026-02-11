@@ -792,7 +792,7 @@ This is where performance is “run like operations,” not debated.
 **Monthly outputs (what comes out of the meeting):**
 - scorecard snapshot stored (for traceability)
 - top 3 improvements agreed (owners + deadlines)
-- any contractual actions triggered (e.g., service credits, formal notice), if needed
+- any contract remedies triggered if performance repeatedly misses agreed targets (e.g., **service credits** = agreed discount/credit for SLA misses, or a **formal notice** = written escalation requiring a remediation plan)
 
 #### Quarterly Business Review (QBR) (strategic alignment + improvement plan)
 
