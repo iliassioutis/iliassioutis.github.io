@@ -875,11 +875,13 @@ This is how I make commercial agreements “delivery-safe”.
 
 ### Contract negotiation & contract management (how I make it “real-world” and enforceable) {#contract-negotiation}
 
-In practice, contract work is where delivery succeeds or fails. I negotiate and manage contracts so that:
-- incentives reward **accepted outcomes** (not just time spent),
-- roles and obligations are enforceable (not vague),
-- changes are controlled (so scope doesn’t silently expand),
-- and exit is planned (so the business is not hostage to the vendor).
+In partner-led delivery, the contract is the “rules of the game” — it sets what will be delivered, how quality is proven, how changes are approved, and what happens if things go wrong. If those rules are vague, delivery usually becomes slower, more expensive, and harder to control.
+
+I negotiate and manage contracts so that:
+- payments and incentives are tied to **deliverables we formally accept** (i.e., the agreed scope is delivered and meets acceptance criteria), not just to the number of days/hours spent,
+- roles and obligations are explicit and enforceable (who does what, by when, and what evidence is required),
+- scope changes follow a written approval process (so cost/timeline don’t drift),
+- and exit/handover is planned (so we can transition safely if needed).
 
 #### What I typically negotiate (and why)
 
