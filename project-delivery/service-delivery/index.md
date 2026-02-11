@@ -202,7 +202,7 @@ I treat budget and resourcing as control systems (not afterthoughts): if scope o
   so the budget forecast does not change unexpectedly
 - agree a strict approval rule for extra cost:
   - the vendor must request a written approval before doing work that increases cost (extra days, change requests, urgent support)
-  - only the named budget owner can approve that spend
+  - only the named budget owner can approve that spend;
   this prevents “surprise invoices” and uncontrolled cost growth
 
 <blockquote>
