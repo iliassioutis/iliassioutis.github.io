@@ -360,11 +360,10 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
       - **Restore time** (time to recover service or provide mitigation)
       - **Update cadence** (how frequently they communicate during the incident)
     **What “good” looks like:** clear coverage, named on-call contacts, fast acknowledgement, predictable updates, and an escalation path that works in practice.
-  
-  **Outputs (what we produce every month):**
-  - Scorecard snapshot saved (for traceability)
-  - Top 3 improvement actions agreed (each with an owner + due date)
-  - Escalations or commercial actions triggered if thresholds are breached (only when needed)    
+    **Outputs (what we produce every month):**
+    - Scorecard snapshot saved (for traceability)
+    - Top 3 improvement actions agreed (each with an owner + due date)
+    - Escalations or commercial actions triggered if thresholds are breached (only when needed)    
 - **Quarterly Business Review (QBR) (strategic alignment)**
   Senior-level session focused on:
   - roadmap and upcoming capacity needs
