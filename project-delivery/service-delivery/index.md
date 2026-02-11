@@ -322,12 +322,10 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
     - Action list (who/what/when)
 
 - **Daily / Twice-Weekly Sync (only during critical windows)**
-
   Used when we are:
   - in integration testing,
   - approaching a release,
   - or handling a major risk/issue.
-  
   Outputs are short and practical:
   - what changed since last check
   - what is blocked
