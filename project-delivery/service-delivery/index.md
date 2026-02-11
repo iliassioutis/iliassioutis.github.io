@@ -543,7 +543,7 @@ This makes the decision auditable and prevents repeating debates.
 
 **Decision record template (practical fields):**
 - **Context:** what problem we’re solving and why now
-- **Options considered:** option A/B/C (including “do nothing” when relevant)
+- **Options considered:** option A / B / C 
 - **Decision:** what we chose
 - **Rationale:** the top reasons (linked to evidence/PoC results)
 - **Trade-offs:** what we gain and what we accept (cost, complexity, lock-in, ops burden)
