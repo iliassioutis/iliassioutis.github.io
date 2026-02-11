@@ -485,16 +485,21 @@ When a new tool/platform/pattern is proposed, I evaluate it with a lightweight b
 
 ### When I run a technology evaluation
 
-Typical triggers (when I pause and do a quick tech evaluation) include:
+Typical triggers (when I run a quick tech evaluation) include:
 
-- A **new vendor platform / managed service** is proposed (we need to confirm fit, risk, and operational impact).
-- A **new integration pattern** is proposed (e.g., **event/message bus** vs **direct API calls**) and we need to choose the safest/most maintainable option.
-- We hit **scale or reliability** limits and need a change such as:
-  - **Observability** (how we *see* system health in production: dashboards, alerts, logs/metrics/traces)
-  - **Caching** (keeping frequently-used data closer to the app/service to reduce latency and load)
-  - **Disaster Recovery (DR) approach** (how we restore service after a major outage: backups, failover, recovery time/point targets)
-- **Security/compliance requirements** change (e.g., stricter data handling rules, access control, audit logging expectations).
-- **Costs increase** and we need a better **TCO (Total Cost of Ownership)** (not just license cost—also infra, support effort, and exit/migration cost).
+- A **new vendor platform / managed service** is proposed → confirm functional fit, delivery risk, and what it adds to day-to-day operations (support/on-call, monitoring, runbooks).
+- A **new integration pattern** is proposed (e.g., **event/message bus** vs **direct API calls**) → choose the option that is safest, easiest to operate, and easiest to maintain long-term.
+- We hit **scale or reliability** limits → introduce changes such as:
+  - **Observability:** the dashboards/alerts/logs needed to see health and detect issues fast.
+  - **Caching:** reducing latency and load by reusing frequently-needed data instead of recalculating/re-fetching it every time.
+  - **Disaster Recovery (DR):** how we recover after a major outage (backups/failover), including:
+    - **restore-time target** (how quickly we must be back online),
+    - **data-loss target** (how much data loss is acceptable).
+- **Security/compliance requirements** change → update access controls, data handling rules, and **audit logs** (who did what/when for traceability).
+- **Costs increase** → reassess **TCO (Total Cost of Ownership)** beyond licenses, including:
+  - **infrastructure (infra) costs** (cloud resources and running costs),
+  - ongoing support/operations effort,
+  - **exit/migration cost** (the effort/cost to move away later).
 
 ### Evaluation criteria (fit, risk, operational impact, cost, security)
 
