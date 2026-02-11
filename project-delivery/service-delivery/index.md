@@ -322,28 +322,44 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
     - Action list (who/what/when)
 
 - **Daily / Twice-Weekly Sync (only during critical windows)**
+
   Used when we are:
   - in integration testing,
   - approaching a release,
   - or handling a major risk/issue.
+  
   Outputs are short and practical:
   - what changed since last check
   - what is blocked
   - what decision is needed today
   - what evidence is missing for readiness
 
-- **Monthly Scorecard Review (performance management)**
-  A fact-based review of delivery + service signals:
-  - Delivery predictability (milestone hit rate, carryover, dependency slips)
-  - Quality (defect trends, rework, defect leakage)
-  - Operational readiness (runbook completeness, monitoring/alerts readiness)
-  - Support posture (incident responsiveness if applicable)
-  Output:
-  - scorecard snapshot saved
-  - top 3 improvements agreed (owners + deadlines)
-  - any contractual/commercial actions triggered (if required)
+- **Monthly Scorecard Review (performance management)**  
+  A fact-based review (usually with the vendor/partner, and relevant internal owners) to confirm delivery is predictable, quality is under control, and the service is operationally ready.
+
+  **What we review (with plain definitions):**
+  - **Delivery predictability**
+    - **Milestone hit rate** (the % of agreed milestones delivered on or before the committed date)
+    - **Carryover** (planned work that did not complete in the period and was moved to the next sprint/release)
+    - Dependency slips (items delayed because an external/internal dependency was late)
+  - **Quality**
+    - Defect trends (new defects opened vs defects closed, by severity)
+    - Rework (items returned for fixes because acceptance criteria were not met)
+    - **Defect leakage** (defects discovered after release vs defects caught before release)
+  - **Operational readiness**
+    - Runbook completeness (procedures for support/ops: common failures, checks, rollback steps)
+    - Monitoring and alert readiness (dashboards/alerts exist and are tested for key failure modes)
+  - **Support posture (only if the vendor provides support or is on-call for their component)**
+    - **Support posture** (the practical ability to respond in production: coverage hours/on-call, response-time targets, escalation contacts, and incident update cadence)
+    - Service Level Agreement (SLA) adherence (if contractually defined: response/restore/update targets)
+
+  **Outputs (what we produce every month):**
+  - Scorecard snapshot saved (for traceability)
+  - Top 3 improvement actions agreed (each with an owner + due date)
+  - Escalations or commercial actions triggered if thresholds are breached (only when needed)
 
 - **Quarterly Business Review (QBR) (strategic alignment)**
+
   Senior-level session focused on:
   - roadmap and upcoming capacity needs
   - recurring risks/themes from scorecards
