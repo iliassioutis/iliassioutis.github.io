@@ -111,14 +111,17 @@ I use **RACI (Responsible, Accountable, Consulted, Informed)** to prevent “eve
 - **Informed:** stakeholders who need updates after decisions.
 
 *Example (vendor-delivered API integration — RACI):*
-- **Accountable (single owner):** Technical Project Manager / Service Delivery Manager (owns the outcome and sign-off)
-- **Responsible (do the work):** Vendor engineers (build) + Internal integration engineer (integrate/configure)
+- **Accountable (single owner):** Technical Project Manager / Service Delivery Manager (end-to-end delivery ownership and sign-off coordination)
+- **Responsible (do the work):**
+  - Vendor engineers (build the component)
+  - Internal integration engineers (integrate, configure, and validate the component within internal systems)
+  - **Development and Operations (DevOps) team** (set up and maintain build/deploy automation, manage environments and configuration, and support the release execution process)
+  - **Site Reliability Engineering (SRE) team** (set up monitoring and alerting, define reliability/performance checks, and ensure incident-response readiness for production)
 - **Consulted (must review/advise):**
   - Product Manager / Product Owner (requirements and priorities)
-  - Security (data protection, access control, risk review)
-  - **DevOps (Development + Operations team)** — engineers who run the delivery pipeline and environments (build/deploy automation, configuration, and release tooling)
-  - **Site Reliability Engineering (SRE)** — engineers focused on keeping production reliable (monitoring/alerts, incident response readiness, performance and availability)
-- **Informed (kept updated):** Commercial/Procurement owner (contract/budget) + Support lead (handover and incident playbooks)
+  - Security / Information Security (data protection, access control, risk review)
+  - Operations and Support (handover requirements, runbooks, supportability)
+- **Informed (kept updated):** Commercial/Procurement owner (contract and budget) + key stakeholders
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
