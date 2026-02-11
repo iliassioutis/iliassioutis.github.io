@@ -270,11 +270,125 @@ In many roles I’ve led delivery through cross-functional teams and vendors wit
 
 ### Managing vendor teams and internal contributors together (one operating rhythm)
 
-To keep multi-party delivery effective, I standardize:
-- **working agreements:** tools, response times, definition of done, escalation path
-- **cadences:** weekly delivery checkpoint, monthly scorecard, QBR (Quarterly Business Review)
-- **decision rights:** who can approve changes, who can accept deliverables
-- **conflict handling:** raise trade-offs early; avoid “silent scope” and “late surprises”
+Multi-party delivery fails when each group runs a different process.  
+So I establish **one operating rhythm** (one set of meetings, artifacts, and decision rules) that both **vendor** and **internal teams** follow.
+
+The goal is simple: **no surprises**, **clear ownership**, and **fast, evidence-based decisions**.
+
+#### 1) Working agreement (set once, then enforce)
+A short “how we work” agreement (1–2 pages) that covers:
+
+- **Tools and single source of truth**
+  - Where the plan lives (e.g., Jira/board + milestone plan)
+  - Where decisions are recorded (decision log)
+  - Where risks/issues/dependencies live (RAID log)
+  - Where release readiness evidence lives (release checklist + evidence links)
+
+- **Communication and response expectations**
+  - Primary channels (e.g., Teams/Slack + email for formal sign-offs)
+  - Response-time expectations (normal vs urgent vs release window)
+  - What qualifies as “urgent” and how to page/escalate
+
+- **Definition of Done (what “complete” means)**
+  - Code delivered + reviewed (as applicable)
+  - Tests executed and evidence shared
+  - Documentation updated (runbook / config / API docs)
+  - Operational hooks included (logging/metrics/alerts where relevant)
+  - Acceptance criteria met and signed off by the accountable owner
+
+- **Escalation path (who to contact, in which order)**
+  - Named contacts for vendor delivery, engineering, and support
+  - Named contacts internally for integration, operations, security, product
+  - Clear escalation ladder (working level → delivery leads → leadership)
+
+#### 2) Cadences (repeatable meetings with predictable outputs)
+I keep the cadence lightweight, but **non-negotiable** in outputs.
+
+- **Weekly Delivery Checkpoint (execution + risk control)**
+  - Inputs:
+    - Updated milestone plan (next 2–6 weeks)
+    - RAID log (top risks/issues/dependencies)
+    - Current build/integration status (what’s blocked, what’s ready)
+    - Quality snapshot (open defects, test status, rework items)
+  - Agenda (standard every week):
+    - Commitments: what was promised vs what was delivered
+    - Next-week plan: who owns what, by when
+    - Dependencies: what we need from each party and due dates
+    - Risks/issues: top items, mitigations, escalation if needed
+  - Outputs (always written down):
+    - Updated plan + owners
+    - Updated RAID log (with dates and escalation triggers)
+    - Decisions captured (scope/date/cost trade-offs)
+    - Action list (who/what/when)
+
+- **Daily / Twice-Weekly Sync (only during critical windows)**
+  Used when we are:
+  - in integration testing,
+  - approaching a release,
+  - or handling a major risk/issue.
+  Outputs are short and practical:
+  - what changed since last check
+  - what is blocked
+  - what decision is needed today
+  - what evidence is missing for readiness
+
+- **Monthly Scorecard Review (performance management)**
+  A fact-based review of delivery + service signals:
+  - Delivery predictability (milestone hit rate, carryover, dependency slips)
+  - Quality (defect trends, rework, defect leakage)
+  - Operational readiness (runbook completeness, monitoring/alerts readiness)
+  - Support posture (incident responsiveness if applicable)
+  Output:
+  - scorecard snapshot saved
+  - top 3 improvements agreed (owners + deadlines)
+  - any contractual/commercial actions triggered (if required)
+
+- **Quarterly Business Review (QBR) (strategic alignment)**
+  Senior-level session focused on:
+  - roadmap and upcoming capacity needs
+  - recurring risks/themes from scorecards
+  - improvements to the operating model
+  - decisions needed for next quarter (investment, scope, timelines)
+
+#### 3) Decision rights (who can approve what)
+Ambiguity here causes delays and “silent scope”. I make it explicit:
+
+- **Scope and priorities**
+  - Product Owner / Product Manager sets priority and accepts requirement trade-offs
+  - Technical Project Manager / Service Delivery Manager coordinates impact and records decisions
+
+- **Technical acceptance**
+  - Internal integration/engineering validates integration quality and readiness
+  - Security reviews/approves risk items affecting data, access, and compliance
+
+- **Release go/no-go**
+  - Release Manager (or designated release authority) confirms readiness criteria are met
+  - The accountable delivery owner confirms scope, evidence, and stakeholder alignment
+
+- **Commercial changes**
+  - Commercial/Procurement owner approves commercial changes (change orders, spend changes)
+  - Delivery owner ensures change impact is quantified and re-baselined
+
+#### 4) Conflict handling (fast, structured, and written down)
+When priorities or facts clash, I use a consistent playbook:
+
+- **Surface the trade-off early**
+  - “We can meet date OR keep scope OR keep cost; pick two.”
+- **Bring evidence**
+  - what is tested vs untested, what is blocked, what risk is increasing
+- **Offer options (at least two)**
+  - reduce scope, move date, add capacity (with cost), or split release
+- **Record the decision**
+  - decision log entry with approver + rationale + follow-up actions
+- **Enforce the new baseline**
+  - update plan, communicate changes, and stop unapproved scope creep
+
+#### 5) What “good” looks like (the practical outcome)
+- Everyone works from the same plan and the same risk log
+- Owners are named, and deadlines are explicit
+- Releases are gated by evidence, not optimism
+- Vendors and internal teams escalate early (before a deadline is missed)
+- Decisions are written down, so we don’t re-litigate them every week
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
