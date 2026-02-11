@@ -336,20 +336,25 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
   A fact-based review (usually with the vendor/partner, and relevant internal owners) to confirm delivery is predictable, quality is under control, and the service is operationally ready.
 
   **What we review (with plain definitions):**
+
   - **Delivery predictability**
     - **Milestone hit rate** (the % of agreed milestones delivered on or before the committed date)
     - **Carryover** (planned work that did not complete in the period and was moved to the next sprint/release)
     - Dependency slips (items delayed because an external/internal dependency was late)
+
   - **Quality**
     - Defect trends (new defects opened vs defects closed, by severity)
     - Rework (items returned for fixes because acceptance criteria were not met)
     - **Defect leakage** (defects discovered after release vs defects caught before release)
+
   - **Operational readiness**
     - Runbook completeness (procedures for support/ops: common failures, checks, rollback steps)
     - Monitoring and alert readiness (dashboards/alerts exist and are tested for key failure modes)
+
   - **Support posture (only if the vendor supports production or is on-call for their component)**  
     This answers a simple question: *“If something breaks in production, can this partner actually help us fast enough?”*  
     It matters most when the vendor owns a critical component (API/SDK/service) and we rely on them during incidents or risky releases.
+
     **What we confirm (practical checks):**
     - **Coverage and on-call:** which hours they cover (business hours vs 24/7), who is on-call, and how quickly we can reach them.
     - **Response and update expectations:** how fast they acknowledge an incident, and how often they provide status updates until recovery.
@@ -359,11 +364,14 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
       - **Response time** (time to acknowledge/start work)
       - **Restore time** (time to recover service or provide mitigation)
       - **Update cadence** (how frequently they communicate during the incident)
+
     **What “good” looks like:** clear coverage, named on-call contacts, fast acknowledgement, predictable updates, and an escalation path that works in practice.
+
     **Outputs (what we produce every month):**
     - Scorecard snapshot saved (for traceability)
     - Top 3 improvement actions agreed (each with an owner + due date)
-    - Escalations or commercial actions triggered if thresholds are breached (only when needed)    
+    - Escalations or commercial actions triggered if thresholds are breached (only when needed)
+
 - **Quarterly Business Review (QBR) (strategic alignment)**
   Senior-level session focused on:
   - roadmap and upcoming capacity needs
