@@ -110,11 +110,15 @@ I use **RACI (Responsible, Accountable, Consulted, Informed)** to prevent “eve
 - **Consulted:** subject matter experts who provide input before decisions.
 - **Informed:** stakeholders who need updates after decisions.
 
-*Example:* For a vendor-delivered API integration:
-- Accountable: Service Delivery / Technical PM
-- Responsible: Vendor engineering + internal integration engineer
-- Consulted: Security, Ops/SRE, Product
-- Informed: Commercial owner, Support lead
+*Example (vendor-delivered API integration — RACI):*
+- **Accountable (single owner):** Technical Project Manager / Service Delivery Manager (owns the outcome and sign-off)
+- **Responsible (do the work):** Vendor engineers (build) + Internal integration engineer (integrate/configure)
+- **Consulted (must review/advise):**
+  - Product Manager / Product Owner (requirements and priorities)
+  - Security (data protection, access control, risk review)
+  - **DevOps (Development + Operations team)** — engineers who run the delivery pipeline and environments (build/deploy automation, configuration, and release tooling)
+  - **Site Reliability Engineering (SRE)** — engineers focused on keeping production reliable (monitoring/alerts, incident response readiness, performance and availability)
+- **Informed (kept updated):** Commercial/Procurement owner (contract/budget) + Support lead (handover and incident playbooks)
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
