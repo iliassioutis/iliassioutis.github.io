@@ -666,7 +666,10 @@ Typical artifacts I request/collect (as applicable):
     - **no bid-rigging:** vendors don’t secretly coordinate bids so one “wins”
     - **no price-fixing:** competitors don’t agree to keep prices artificially high
     - **no misuse of confidential information:** they don’t use another bidder’s or our confidential data to gain unfair advantage
-  - **Sanctions / AML (when relevant):** for vendors involved in payments/identity/compliance, we confirm they follow sanctions/AML rules and can provide evidence if required.
+  - **Sanctions / Anti-Money Laundering (AML) (when relevant):** if the partner’s SDK/platform handles **payments** or **identity checks (KYC — Know Your Customer)**, we confirm they run the required compliance controls, such as:
+    - **anti-fraud checks** (detect and block suspicious transactions/behaviour), and
+    - **restricted-party screening** (check customers/transactions against official sanctions/restricted lists to avoid doing business with blocked parties),
+    and they can provide evidence of these controls if requested.
   - **Subcontractor control (“flow-down”):** if the vendor uses subcontractors, the vendor remains responsible and ensures subcontractors follow the same security/ethics rules.
   - **Confidentiality & publicity:** they keep our information confidential and **cannot announce the partnership publicly** (logo/press release/case study) without written permission.
   - **AI use disclosure (when relevant):** if they use AI in the solution or delivery, they disclose **what is used and for what purpose**, and they must get approval for higher-risk uses (e.g., handling sensitive data, automated decision-making).
