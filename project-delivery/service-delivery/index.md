@@ -710,7 +710,7 @@ When a partner is needed, I follow a structured **IT procurement process** (the 
 
 - **Commercial + technical evaluation (how I choose the best option):**
   - **Technical evaluation:** solution approach, delivery plan realism, risks/assumptions, test strategy, operational readiness.
-  - **Commercial evaluation:** total cost of ownership (not just day rate), payment milestones tied to acceptance, change-order mechanism, support costs, and exit terms.
+  - **Commercial evaluation:** total cost of ownership (not just day rate), payment milestones tied to acceptance, change-order mechanism, support costs, and exit terms (what happens if we end the contract: notice period, handover/knowledge transfer, documentation/source-code delivery, and any termination fees).
   - *(Good practice:)* I keep a simple scoring matrix (weighted criteria) and document why the selected vendor is the best fit.
 
 - **Security and compliance assessment (before contracting):** I validate that the vendor can operate safely within our environment:
