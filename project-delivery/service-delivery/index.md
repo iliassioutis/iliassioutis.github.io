@@ -485,12 +485,16 @@ When a new tool/platform/pattern is proposed, I evaluate it with a lightweight b
 
 ### When I run a technology evaluation
 
-Typical triggers:
-- a new vendor platform or managed service is introduced
-- a new integration approach/pattern is proposed (e.g., message bus vs direct API)
-- a change is needed for scale/reliability (observability, caching, DR approach)
-- security/compliance needs change (data handling, access model, auditability)
-- costs are rising and we need a better total cost of ownership (TCO)
+Typical triggers (when I pause and do a quick tech evaluation) include:
+
+- A **new vendor platform / managed service** is proposed (we need to confirm fit, risk, and operational impact).
+- A **new integration pattern** is proposed (e.g., **event/message bus** vs **direct API calls**) and we need to choose the safest/most maintainable option.
+- We hit **scale or reliability** limits and need a change such as:
+  - **Observability** (how we *see* system health in production: dashboards, alerts, logs/metrics/traces)
+  - **Caching** (keeping frequently-used data closer to the app/service to reduce latency and load)
+  - **Disaster Recovery (DR) approach** (how we restore service after a major outage: backups, failover, recovery time/point targets)
+- **Security/compliance requirements** change (e.g., stricter data handling rules, access control, audit logging expectations).
+- **Costs increase** and we need a better **TCO (Total Cost of Ownership)** (not just license cost—also infra, support effort, and exit/migration cost).
 
 ### Evaluation criteria (fit, risk, operational impact, cost, security)
 
