@@ -817,25 +817,30 @@ A **Quarterly Business Review (QBR)** is a senior-level session (vendor leadersh
 
 #### Escalation ladder (clear path when performance deviates)
 
-Escalation is a controlled mechanism (not emotion). I define escalation levels upfront so everyone knows what happens next.
+Escalation is a controlled mechanism (not emotion). I define levels upfront so everyone knows **who acts next** and **what must happen**.
 
-**Level 0 — Working level (vendor engineers + internal engineers)**
-- resolve blockers quickly; confirm owners and deadlines
+**Level 0 — Working level (engineers)**
+- **Fix** the blocker within the technical teams (vendor engineers + internal engineers/ops)
+- **Assign** an owner and a deadline
+- **Confirm** the resolution (or next step) in writing
 
-**Level 1 — Delivery level (Vendor PM → Internal Technical PM / Service Delivery)**
-- trigger when: repeated slips, unclear ownership, missed commitments
-- action: corrective plan with milestones, extra reporting cadence, re-baseline
+**Level 1 — Delivery level (delivery owners)**
+- **Escalate** to the delivery owners on both sides (vendor Project Manager + internal Technical PM/Service Delivery)
+- **Trigger when:** repeated slips, unclear ownership, missed commitments
+- **Do:** create a corrective plan (actions + owners + dates), **increase** reporting cadence, and **re-baseline** scope/date if needed
 
-**Level 2 — Leadership level (Vendor leadership → Internal leadership)**
-- trigger when: material risk to release date, critical quality issues, repeated SLA breaches
-- action: resource changes, scope reduction, “stop the line” decision, formal remediation plan
+**Level 2 — Leadership level (management)**
+- **Escalate** to leadership on both sides (vendor leadership + internal leadership)
+- **Trigger when:** material risk to release date, critical quality issues, repeated SLA breaches, or no progress at Level 1
+- **Do:** **change** resourcing, **reduce** scope, **pause** a release (“stop the line”), and **approve** a formal remediation plan
 
-**Level 3 — Commercial/Legal path (contractual enforcement)**
-- trigger when: sustained non-performance, major compliance breach, failure to remediate
-- action examples: service credits, formal notice, contract remedies, termination/exit plan activation
+**Level 3 — Commercial / Legal (contract remedies)**
+- **Engage** procurement/commercial/legal to enforce contract terms
+- **Trigger when:** sustained non-performance, major compliance breach, failure to remediate after Level 2
+- **Do:** **apply** remedies (e.g., service credits, formal notice), or **activate** termination/exit support if required
 
 *Example escalation rule (explicit):*  
-“If we have 2 consecutive months of SLA breach on Sev1 response time, we move to Level 2 escalation and require a remediation plan within 10 business days, with weekly progress reporting until metrics stabilize.”
+“If Sev1 response-time targets are missed for 2 consecutive months, we move to **Level 2**, require a remediation plan within 10 business days, and review progress weekly until the metric stabilizes.”
 
 ### 7) Renewal or exit (planned, not panic)
 - **Renewal:** if performance is strong and the relationship is healthy.
