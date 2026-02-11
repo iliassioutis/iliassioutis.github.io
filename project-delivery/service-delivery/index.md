@@ -442,7 +442,9 @@ This fits well with mainstream PM guidance: plan, execute, monitor/control, clos
 - **High-level plan:** milestones, dependency map, risks, and initial resourcing.
 
 *Example (charter clarity):*  
-“Goal: deliver partner integration X with end-to-end flow Y. Out of scope: legacy migration Z. Success: 99%+ transaction success in production for key flow, verified via monitoring dashboard.”
+“**Goal:** deliver partner integration **X** enabling end-to-end customer flow **Y** (from request → processing → confirmation).  
+**Out of scope:** legacy migration **Z** and any unrelated platform refactoring.  
+**Success criteria:** 99%+ **successful transactions** for flow **Y** in production over a 7-day window, verified via the agreed monitoring dashboard (plus an agreed rollback plan if thresholds are missed).”
 
 ### Phase 2 — Planning
 - **Scope baseline:** what we will deliver (and what we explicitly will not deliver).
