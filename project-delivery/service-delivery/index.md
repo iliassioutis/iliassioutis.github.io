@@ -508,16 +508,16 @@ I compare options using the same criteria each time, and I adjust the weighting 
 **Core criteria (plain definitions):**
 - **Functional fit:** does it meet requirements, including key integrations and edge cases?
 - **Product/tool maturity:** how reliable and proven it is in production (stability, documentation quality, admin/monitoring tools, upgrade path, known limitations).
-- **Operational impact (BAU):** what it adds to day-to-day operations (on-call load, monitoring needs, runbooks, incident handling, support effort).
+- **Operational impact (BAU):** what it adds to day-to-day operations (how much extra work the on-call team will have to do to keep the system running, monitoring needs, runbooks, incident handling, support effort).
 - **Security & compliance:** access controls, encryption, audit logs (traceability), data residency (if relevant), and vendor assurance evidence.
 - **Total cost (TCO):** not just the **list (“sticker”) price**, but also infrastructure/runtime costs, support effort, training, and the cost to change/leave later.
-- **Scalability & reliability:** performance under load, availability options, failure modes, and compatibility with **DR/BCP** plans:
-  - **DR (Disaster Recovery):** how we recover service after major outages (backup/failover).
-  - **BCP (Business Continuity Plan):** how the business continues operating during disruptions.
+- **Scalability & reliability:** performance under load, availability options, failure modes, and alignment with our resilience plans:
+  - **DR (Disaster Recovery):** the *technical* recovery plan — how we restore IT systems after a major outage (backups/failover).
+  - **BCP (Business Continuity Plan):** the *business operating* plan — how critical business activities continue while systems are degraded or down (workarounds, manual procedures, customer comms, operational priorities) until DR restores full service.
 - **Maintainability:** how easy it is for the team to operate and evolve (skills required, complexity, upgrade effort, ecosystem support).
 - **Vendor lock-in / exit risk:** how hard it would be to move away later because the solution relies on vendor-specific features or **data formats/APIs that are difficult to export and reuse elsewhere** (e.g., you can’t easily extract your data in a standard format, or you would need major rework to integrate with a different provider).
 
-**Good practice:** I document the scores and the evidence behind them, and link them to the decision record (ADR).
+**Good practice:** I document the scores and the evidence behind them, and link them to the decision record.
 
 ### Lightweight Proof-of-Concept (PoC) (time-boxed risk reduction)
 
