@@ -455,7 +455,10 @@ This fits well with mainstream PM guidance: plan, execute, monitor/control, clos
 
 ### Phase 3 — Execution (delivery)
 - **Work breakdown:** epics/features/stories (or work packages) with owners.
-- **Delivery cadence:** demos, checkpoints, and integration test windows.
+- **Delivery cadence:** a predictable rhythm of demos + checkpoints so progress and risks stay visible:
+  - **Demo/review:** show a working increment (a small, usable slice of functionality) and confirm it meets the acceptance criteria — sometimes this is a single component, and sometimes it’s an end-to-end slice when dependencies are ready
+  - **Delivery checkpoint:** weekly commitments, blockers, dependencies, and RAID updates
+  - **Integration test windows:** pre-booked periods where vendor/internal builds are merged, tested end-to-end, defects triaged, and “go/no-go for release readiness” evidence is produced
 - **Dependency control:** tracked and escalated early.
 
 ### Phase 4 — Monitoring & control
