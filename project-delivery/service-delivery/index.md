@@ -81,7 +81,7 @@ It is not just “project tracking”. It includes:
 
 ## Operating model (how I run multiple projects at once) {#operating-model}
 
-When multiple initiatives run in parallel, I use a simple operating model with **one “source of truth”** and **repeatable cadences**.
+When multiple initiatives run in parallel, I keep one shared plan as the source of truth and run predictable check-ins (e.g., weekly delivery review, monthly vendor scorecard) to keep everyone aligned.
 
 ### 1) Intake and prioritization
 This is how work becomes an approved initiative (not “random requests”):
