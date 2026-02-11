@@ -193,10 +193,17 @@ I treat budget and resourcing as control systems (not afterthoughts): if scope o
   - adjust timeline (re-baseline schedule with stakeholder approval)
 
 **Vendor resourcing clarity (important in partner-led delivery):**
-- confirm vendor roles and named resources (who is actually delivering)
-- confirm availability assumptions (holidays, on-call coverage, time zones)
-- ensure rate cards / day rates / escalation rates are known (so forecast is reliable)
-- align “who approves extra effort” to prevent unplanned cost growth
+- confirm vendor roles and named people (who is doing the work, and who is the escalation contact)
+- confirm availability assumptions (time zones, holidays, and whether they provide on-call / out-of-hours support)
+- confirm the vendor pricing model upfront:
+  - cost per role (e.g., engineer/QA/PM per day or per hour)
+  - higher pricing for urgent or out-of-hours work (evenings/weekends/on-call), if applicable
+  - any extra charges for senior specialists
+  so the budget forecast does not change unexpectedly
+- agree a strict approval rule for extra cost:
+  - the vendor must request a written approval before doing work that increases cost (extra days, change requests, urgent support)
+  - only the named budget owner can approve that spend
+  this prevents “surprise invoices” and uncontrolled cost growth
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
