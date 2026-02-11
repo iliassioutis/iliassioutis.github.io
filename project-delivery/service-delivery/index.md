@@ -503,7 +503,7 @@ Typical triggers (when I run a quick tech evaluation) include:
 
 ### Evaluation criteria (fit, risk, operational impact, cost, security)
 
-I compare options using consistent criteria (and I adjust the importance/weight of each based on how critical and risky the service is).
+I compare options using the same criteria each time, and I adjust the weighting based on how critical the specific option we’re considering is for production.
 
 **Core criteria (plain definitions):**
 - **Functional fit:** does it meet requirements, including key integrations and edge cases?
@@ -515,7 +515,7 @@ I compare options using consistent criteria (and I adjust the importance/weight 
   - **DR (Disaster Recovery):** how we recover service after major outages (backup/failover).
   - **BCP (Business Continuity Plan):** how the business continues operating during disruptions.
 - **Maintainability:** how easy it is for the team to operate and evolve (skills required, complexity, upgrade effort, ecosystem support).
-- **Vendor lock-in / exit risk:** how dependent we become on proprietary features or non-portable data/APIs, and how hard it would be to switch providers later.
+- **Vendor lock-in / exit risk:** how hard it would be to move away later because the solution relies on vendor-specific features or **data formats/APIs that are difficult to export and reuse elsewhere** (e.g., you can’t easily extract your data in a standard format, or you would need major rework to integrate with a different provider).
 
 **Good practice:** I document the scores and the evidence behind them, and link them to the decision record (ADR).
 
