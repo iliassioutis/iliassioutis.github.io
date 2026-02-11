@@ -693,7 +693,7 @@ Typical artifacts I request/collect (as applicable):
 
 ### 2) IT procurement process (how I select and onboard vendors) {#it-procurement}
 
-When a partner is needed, I follow a structured **IT procurement process** (the end-to-end approach used to select a vendor and contract them safely). The goal is to choose a vendor that fits **technical needs**, **delivery capability**, **security/compliance requirements**, and **commercial constraints** — while keeping the decision traceable and audit-friendly.
+When a partner is needed, I follow a structured **IT procurement process** (the end-to-end approach used to select a vendor and contract them safely). The goal is to choose a vendor that fits **technical needs**, **delivery capability**, **security/compliance requirements**, and **commercial constraints** (e.g., budget cap, contract type such as **fixed price** vs **time-and-materials** (paying for effort/hours), payment milestones/terms (when and how payments are made), service-level requirements (response/uptime targets and penalties if missed), and internal procurement approval timelines) — while keeping the decision traceable and audit-friendly.
 
 - **RFI (Request for Information):** a lightweight information-gathering step used when the market is unclear. I use it to understand vendor capabilities, typical delivery models, references, security posture, and constraints — without committing to a detailed bid.
   - *Example:* “Which integration patterns do you support? What is your release cadence? Do you provide 24/7 support? What security certifications or controls do you have?”
