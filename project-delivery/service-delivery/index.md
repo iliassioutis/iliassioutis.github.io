@@ -676,7 +676,12 @@ Typical artifacts I request/collect (as applicable):
  
 - **Commercial & contractual artifacts**
   - pricing model and assumptions (what is included vs extra)
-  - change-order mechanism (how scope changes are quoted and approved)
+  - change-order mechanism (how we control scope changes so cost/timeline don’t drift):
+    - **how a change is raised:** written request with scope detail + reason (who can request it)
+    - **how it is quoted:** vendor provides a formal estimate (effort/days, cost, timeline impact, risks, and assumptions)
+    - **approval rules:** only the named budget owner can approve; **no work starts until written approval**
+    - **what gets updated:** SOW/baseline plan, milestones, and acceptance criteria are updated to reflect the change
+    - **tracking & invoicing:** each change has an ID and is tracked to completion; invoices reference the approved change order
   - payment milestones tied to acceptance (not just time)
   - exit/transition obligations (handover, documentation, knowledge transfer)
 
@@ -684,7 +689,7 @@ Typical artifacts I request/collect (as applicable):
 - “How do you handle releases and rollbacks?”
 - “What is your incident response process and response time?”
 - “How do you ensure code quality (reviews, testing, Continuous Integration / Continuous Delivery (CI/CD))?”
-- “How do you manage breaking changes and versioning?”
+- “How do you manage compatibility when you change APIs/SDKs — versioning, deprecation timelines, and how you avoid breaking existing integrations?”
 
 ### 2) IT procurement process (how I select and onboard vendors) {#it-procurement}
 
