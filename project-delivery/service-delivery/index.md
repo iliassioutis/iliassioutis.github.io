@@ -971,7 +971,7 @@ An SLA should define:
 
 ## Delivery governance (cadences, reporting, decisions) {#delivery-governance}
 
-Governance is how I keep delivery **aligned, visible, and fast** (not slow).
+Governance is how I keep delivery **aligned, visible, and fast**.
 
 ### Cadences (examples)
 - **Weekly project checkpoint:** progress, risks, dependencies, next milestones.
@@ -1018,21 +1018,24 @@ A good release is not “deploy and hope”. It is a controlled sequence with cl
 #### 1) Release scope and dependency lock
 - confirm what is in / out (scope baseline for the release)
 - confirm upstream/downstream dependencies (partner deliverables, internal integration points, environment readiness)
-- freeze late changes unless they meet explicit exception criteria
+- freeze last-minute changes (no new features/scope added close to release) unless they meet pre-defined exceptions (e.g., critical bug fix, security patch, or Sev1/Sev2 mitigation) and are explicitly approved
 
 #### 2) Release readiness evidence pack (what must exist before go/no-go)
 - release notes (what changes, what risks, what to watch)
 - test evidence summary (key flows passed, known issues, risk acceptance)
 - operational readiness (monitoring/dashboard links, alert rules, runbook updated)
 - rollback plan (steps + owners + triggers) and “kill switch” / feature-flag plan where applicable
-- stakeholder comms plan (who gets updates, cadence during the window)
+- stakeholder communications plan (who is updated, which channel is used, and how often updates are sent during the release window—e.g., every 30 minutes or on major milestones)
 
-#### 3) Cutover plan (minute-by-minute for higher-risk changes)
-For higher-risk releases, I use a short cutover plan:
-- pre-checks (service health baseline, capacity signals, key journey checks)
-- deployment steps (order, gating checks, pause points)
-- verification steps (post-deploy checks that prove the service works)
-- rollback decision points (explicit thresholds, not gut feel)
+#### 3) Cutover plan (step-by-step for higher-risk changes)
+
+For higher-risk releases, I write a short cutover plan so everyone knows **what happens next**, **what we check**, and **when we stop or roll back**.
+
+- **Pre-checks (before touching production):** confirm there is no ongoing incident and capture a “healthy baseline” from monitoring (error rate, latency, CPU/memory, queue depth). Run quick checks of critical user journeys (e.g., login → main action → confirmation) so we know the starting state is good.
+- **Deployment sequence (exact order + stop points):** define the order of deployments (which service/app/config change goes first). After each step, we pause at a “gate” to verify health (smoke test + dashboards) before continuing to the next step.
+- **Post-deploy verification (prove it works):** re-run the key journeys and confirm monitoring stays within expected ranges for a short observation period (no error spikes, no latency regressions, no unexpected alerts).
+- **Rollback decision points (clear triggers):** define the thresholds that force a rollback or stop (e.g., error rate above X for Y minutes, key journey success below X%, or Sev1 incident declared) so the decision is based on evidence, not gut feel.
+
 
 #### 4) Go/no-go criteria (evidence-based)
 I make go/no-go explicit using a checklist:
