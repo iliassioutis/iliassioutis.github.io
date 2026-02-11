@@ -587,10 +587,11 @@ Weights are adjusted based on **criticality** (how business-critical the service
 **Typical weighted criteria (example):**
 - **Capability / functional fit:** can they deliver what we need (scope + domain knowledge)?
 - **Engineering quality:** code quality practices, testing depth, documentation quality.
-- **Delivery maturity:** planning discipline, predictability, ability to manage changes, transparency.
-- **Security posture:** access controls, secure SDLC (Software Development Life Cycle), incident response readiness.
+- **Delivery maturity:** planning discipline, predictability, change management, transparency.
+- **Security & compliance posture:** access controls, encryption practices, secure development practices, auditability/evidence.
+- **Operations & support readiness:** incident response process, on-call coverage, escalation path, runbooks/monitoring approach.
 - **Cost / commercial model:** total cost of ownership (TCO), pricing clarity, change-order approach.
-- **Scalability & reliability:** performance, availability approach, operational model, support coverage.
+- **Scalability & reliability:** performance under load, availability approach, failure handling, operational resilience.
 
 **Good practice:** I keep the scorecard, scoring rationale, and final decision in a **decision log** (what we chose, why, trade-offs, and approvals) so the award is traceable and audit-friendly.
 
