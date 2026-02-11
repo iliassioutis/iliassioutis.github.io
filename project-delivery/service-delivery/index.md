@@ -373,6 +373,7 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
     - Escalations or commercial actions triggered if thresholds are breached (only when needed)
 
 - **Quarterly Business Review (QBR) (strategic alignment)**
+
   Senior-level session focused on:
   - roadmap and upcoming capacity needs
   - recurring risks/themes from scorecards
