@@ -359,7 +359,7 @@ I keep the cadence lightweight, but **non-negotiable** in outputs.
     - **Coverage and on-call:** which hours they cover (business hours vs 24/7), who is on-call, and how quickly we can reach them.
     - **Response and update expectations:** how fast they acknowledge an incident, and how often they provide status updates until recovery.
     - **Escalation contacts:** named contacts and an escalation ladder (engineer → delivery lead → leadership) so we don’t lose time during a Sev1/Sev2.
-    - **Incident workflow alignment:** how they join our incident bridge, what they provide (logs, diagnostics, mitigation plan), and how handoffs work.
+    - **Incident workflow alignment:** how they join our incident bridge, what they provide (logs, diagnostics, mitigation plan), and how ownership and updates are handed over between vendor and internal teams (who owns next action, what info is shared, and how we transition across shifts/time zones).
     - **SLA adherence (if contractually defined):** whether they consistently meet the agreed targets for:
       - **Response time** (time to acknowledge/start work)
       - **Restore time** (time to recover service or provide mitigation)
