@@ -1274,12 +1274,12 @@ I escalate when:
 I use metrics as **signals**, not as vanity numbers. Typical categories:
 
 ### Predictability
-- **Milestone hit rate:** how often we hit committed dates.
-- **Carryover rate:** how much planned work rolls into the next sprint/release (indicates overcommitment or hidden complexity).
+- **Milestone hit rate:** the % of agreed milestones delivered on or before the committed date.
+- **Carryover rate:** how much planned work is not finished in the period and moves to the next sprint/release (can signal overcommitment, late scope changes, or unexpected complexity).
 
 ### Flow efficiency
-- **Cycle time:** time from “started” to “done”.
-- **Lead time:** time from “requested” to “delivered”.
+- **Lead time:** time from request/creation to delivery (includes waiting time).
+- **Cycle time:** time from work start to delivery (execution time only).
 
 ### Quality
 - **Defect leakage:** issues found after release vs before release.
