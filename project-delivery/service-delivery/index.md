@@ -1151,11 +1151,16 @@ I use severity levels to align urgency, escalation, and communication expectatio
 #### Incident lifecycle (how I run it)
 
 1) **Detection & triage:** confirm symptoms and scope (what is impacted, how many users, which regions).
+
 2) **Classification:** assign severity (Sev1–Sev4) and open a clear incident record (ticket + shared doc).
+ 
 3) **Containment / mitigation:** restore service ASAP (feature flag off, rollback, rate-limit, failover, hotfix), with explicit risk calls.
+   
 4) **Communication cadence:** frequent, predictable updates (even if “no change”).
    - *Example cadence:* for Sev1, updates every 30 minutes to stakeholders until stable.
+     
 5) **Resolution & verification:** confirm recovery using monitoring signals and user journey checks (not only “it looks OK”).
+   
 6) **Closure:** close the incident only when monitoring confirms stability and follow-ups are logged.
 
 #### Vendor involvement during incidents (when a partner runs part of the stack)
