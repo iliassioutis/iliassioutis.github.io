@@ -1154,10 +1154,10 @@ I use severity levels to align urgency, escalation, and communication expectatio
 
 2) **Classification:** assign severity (Sev1–Sev4) and open a clear incident record (ticket + shared doc).
  
-3) **Containment / mitigation:** restore service ASAP (feature flag off, rollback, rate-limit, failover, hotfix), with explicit risk calls.
+3) **Containment / mitigation:** restore service as fast as possible using safe actions such as turning off a feature flag, rolling back, temporarily limiting traffic to a failing component (rate-limiting), failing over, or deploying a hotfix — with clear risk/impact calls.
    
-4) **Communication cadence:** frequent, predictable updates (even if “no change”).
-   - *Example cadence:* for Sev1, updates every 30 minutes to stakeholders until stable.
+4) **Communication cadence:** send frequent, predictable status updates on a fixed schedule so stakeholders know what’s happening and when the next update will arrive.
+   - *Example:* for Sev1, send an update every 30 minutes until stable.
      
 5) **Resolution & verification:** confirm recovery using monitoring signals and user journey checks (not only “it looks OK”).
    
