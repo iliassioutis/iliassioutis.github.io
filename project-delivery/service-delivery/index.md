@@ -1176,9 +1176,11 @@ If a vendor is involved, I align:
 **Problem management** is the process for identifying and removing the **root cause** behind incidents (or recurring issues).  
 It is usually driven by **Root Cause Analysis (RCA)** and results in **Corrective and Preventive Actions (CAPA)**.
 
-- **Root Cause Analysis (RCA):** structured analysis (e.g., “5 Whys”, fishbone/Ishikawa) to find why it happened.
-- **Corrective action:** fixes the underlying cause (e.g., change validation logic, improve retry strategy).
-- **Preventive action:** prevents recurrence (e.g., better alerting thresholds, automated rollback, additional test coverage).
+- **Root Cause Analysis (RCA):** a structured way to find the real cause (not just the symptom):
+  - **Ask “why?” repeatedly** until you reach the underlying cause (e.g., “Why did requests fail? Because the service timed out. Why did it time out? Because the database was overloaded…”)  
+  - **Group causes into categories** (people/process/technology) to see contributing factors and where to act.
+- **Corrective action:** fixes the underlying cause (e.g., tighten validation so bad data can’t enter the system; fix a bug; increase capacity where needed).
+- **Preventive action:** reduces the chance it happens again (e.g., add earlier alerts, add automated rollback, add tests for the failure scenario).
 
 **Outputs I insist on (evidence-based):**
 - a short RCA summary (what happened, impact, timeline, contributing factors),
