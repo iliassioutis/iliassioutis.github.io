@@ -650,7 +650,7 @@ Typical artifacts I request/collect (as applicable):
   - incident response process (severity levels, notification timelines, on-call model)
   - certifications/attestations (if available) — used as **independent evidence** of security controls:
     - **ISO 27001:** shows the vendor runs a formal **information security management system** (policies, risk management, control ownership, internal audits, continuous improvement)
-    - **SOC 2 ((Service Organization Control 2):** an auditor’s report showing the vendor’s controls for **security/availability/confidentiality** (and other “trust principles” if in scope) are not only designed, but **operated over a period of time**
+    - **SOC 2 (Service Organization Control 2):** an auditor’s report showing the vendor’s controls for **security/availability/confidentiality** (and other “trust principles” if in scope) are not only designed, but **operated over a period of time**
     - *What I ask for:* the certificate/report (or an executive summary), the scope (which products/locations are covered), the report date, and any exceptions/findings plus remediation status
   - sub-processor list (third parties they rely on) and data handling boundaries
   - contract clauses covering **security duties**, **how/when the vendor must notify us of a breach**, and **our right to request evidence or audits to verify controls** (when the risk level requires it)
