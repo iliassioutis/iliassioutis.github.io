@@ -139,6 +139,12 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
   </div>
 
   <div class="home-card">
+    <h3>Data &amp; Analytics delivery playbook</h3>
+    <p>How I deliver data analytics and AI work in practice: intake, prioritization, forecasting, Definition of Done, and release readiness.</p>
+    <a href="/project-delivery/data-analytics-playbook/">Read more →</a>
+  </div>
+
+  <div class="home-card">
     <h3>Service Delivery &amp; Partner Management</h3>
     <p>How I manage external vendors, SLAs, delivery governance, release readiness, and operational handover.</p>
     <a href="/project-delivery/service-delivery/">Read more →</a>
@@ -208,6 +214,7 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
   - 🔎 [Agile & Scrum](/project-delivery/agile-scrum/)
   - 🔎 [Waterfall / stage-gate](/project-delivery/waterfall-stage-gate/)
   - 🔎 [Artifacts & governance](/project-delivery/artifacts-governance/)
+  - 🔎 [Data & Analytics delivery playbook](/project-delivery/data-analytics-playbook/)
   - 🔎 [Jira-style workflow example](/project-delivery/jira-workflow/)
 - 🧪 Clinical validation
   - 🔎 [Jump to section on this page](#clinical-validation)
