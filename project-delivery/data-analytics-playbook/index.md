@@ -24,7 +24,7 @@ A tool helps execution, but the tool does not create clarity by itself. I create
 - one intake path for requests,
 - one prioritized list that the team actually follows,
 - one cadence for weekly planning and weekly reporting,
-- one Definition of Done (DoD: Definition of Done),
+- one Definition of Done (DoD),
 - and one release readiness checklist that is reviewed before each release.
 
 ---
@@ -174,7 +174,7 @@ I update the forecast, explain the cause, and propose options:
 
 ---
 
-## Definition of Done (DoD: Definition of Done) for data and analytics
+## DoD for data and analytics
 
 I define DoD so “done” means “ready for business use,” not “a developer finished a task.”
 
@@ -272,8 +272,3 @@ When the team deploys a model, I ensure the team monitors:
 - **RACI (Responsible, Accountable, Consulted, Informed):** the responsibility model that prevents ownership confusion.
 - **MES (Manufacturing Execution System):** the factory system that tracks and controls production processes and production data.
 
----
-
-<p style="margin:18px 0 0; font-size:0.9rem; color:#777; text-align:center;">
-  Last updated: Feb 2026
-</p>
