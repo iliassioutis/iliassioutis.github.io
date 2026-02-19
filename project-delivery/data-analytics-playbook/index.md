@@ -499,52 +499,52 @@ I do this:
 ## Templates (copy-friendly)
 
 <details>
-<summary><strong>Weekly status update template (one page)</strong></summary>
+  <summary><strong>Weekly status update template (one page)</strong></summary>
 
-- Reporting period: [start date] to [end date]  
-- Overall status: [green / yellow / red]  
-- Completed:  
-  - [item 1]  
-  - [item 2]  
-- Planned next:  
-  - [item 1]  
-  - [item 2]  
-- Blockers (with named unblockers):  
-  - [blocker] — [unblocker name] — [expected unblock date]  
-- Top risks (with mitigation):  
-  - [risk] — [owner] — [mitigation action] — [review date]  
-- Dependencies:  
-  - [dependency] — [owner] — [required-by date]  
-- Decisions needed:  
-  - [decision question] — [decision owner] — [due date] — [impact if late]  
-
-</details>
-
-<details>
-<summary><strong>Intake template (short)</strong></summary>
-
-- Request title:  
-- Business goal / decision supported:  
-- Requester and approver (name + role):  
-- Deadline and deadline driver (what event depends on the date):  
-- Scope (what is in / what is out):  
-- Data sources and systems involved:  
-- Dependencies (teams, vendors, access approvals):  
-- Risk / security / compliance constraints:  
-- Acceptance criteria (what must be true to call it successful):  
+  <pre><code>- Reporting period: [start date] to [end date]
+- Overall status: [green / yellow / red]
+- Completed:
+  - [item 1]
+  - [item 2]
+- Planned next:
+  - [item 1]
+  - [item 2]
+- Blockers (with named unblockers):
+  - [blocker] — [unblocker name] — [expected unblock date]
+- Top risks (with mitigation):
+  - [risk] — [owner] — [mitigation action] — [review date]
+- Dependencies:
+  - [dependency] — [owner] — [required-by date]
+- Decisions needed:
+  - [decision question] — [decision owner] — [due date] — [impact if late]</code></pre>
 
 </details>
 
 <details>
-<summary><strong>Release readiness checklist (practical)</strong></summary>
+  <summary><strong>Intake template (short)</strong></summary>
 
-- Automated tests passed (where applicable) and evidence is recorded.  
-- A successful end-to-end run completed in the pre-release environment.  
-- Data validation checks passed (freshness, duplicates, missing values, outliers) and alerts are configured.  
-- UAT is complete, or written business acceptance exists with stated risk.  
-- Production access is granted to the intended users, and the production link is ready to share.  
-- Rollback or mitigation steps exist, and an owner is named for post-release monitoring.  
-- Release notes are prepared, and the support contact path is communicated.  
+  <pre><code>- Request title:
+- Business goal / decision supported:
+- Requester and approver (name + role):
+- Deadline and deadline driver (what event depends on the date):
+- Scope (what is in / what is out):
+- Data sources and systems involved:
+- Dependencies (teams, vendors, access approvals):
+- Risk / security / compliance constraints:
+- Acceptance criteria (what must be true to call it successful):</code></pre>
+
+</details>
+
+<details>
+  <summary><strong>Release readiness checklist (practical)</strong></summary>
+
+  <pre><code>- Automated tests passed (where applicable) and evidence is recorded.
+- A successful end-to-end run completed in the pre-release environment.
+- Data validation checks passed (freshness, duplicates, missing values, outliers) and alerts are configured.
+- UAT is complete, or written business acceptance exists with stated risk.
+- Production access is granted to the intended users, and the production link is ready to share.
+- Rollback or mitigation steps exist, and an owner is named for post-release monitoring.
+- Release notes are prepared, and the support contact path is communicated.</code></pre>
 
 </details>
 
