@@ -75,7 +75,7 @@ I define explicit urgency classes and I explain what each class means in deliver
 
 Example urgency model:
 - **Class 1 (Release blocker):** A defect or risk prevents a safe release, and the team must fix it before go-live.
-- **Class 2 (Time-critical business deadline):** A deadline exists outside the team (for example, a regulatory date or a plant shutdown), and delay causes direct harm.
+- **Class 2 (Time-critical business deadline):** A deadline exists outside the team (for example, a regulatory date), and delay causes direct harm.
 - **Class 3 (Important but not time-critical):** The request is valuable, but the team can schedule it into the next delivery window.
 - **Class 4 (Nice to have):** The request is useful, but the team should only schedule it when capacity is free.
 
