@@ -57,7 +57,7 @@ I make delivery predictable by putting a lightweight operating system in place:
 
 The tool does not matter as much as the discipline. The structure works in a ticket tool, a work management platform, or even a spreadsheet, as long as the team follows the same rules.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -71,7 +71,7 @@ This operating model works best when:
 - production stability matters (pipelines, reports, dashboards, integrations),
 - and multiple projects run in parallel with shared teams and shared dependencies.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -87,7 +87,7 @@ This is the repeating loop I run every week. Each step is designed to reduce int
 5) **Quality & release** (validate, accept, and deploy with readiness evidence)  
 6) **Learn & improve** (track plan vs actual and fix the root causes of variance)
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -105,7 +105,7 @@ This operating model stays lightweight because it relies on a small set of artif
 
 If the organization has no tooling, these artifacts can live in a shared document and a spreadsheet. The discipline matters more than the platform.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -137,7 +137,7 @@ A request must include enough information to support estimation and a first deli
 
 If key information is missing, I do not force the team to guess. I move the request into a short discovery step.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -153,6 +153,7 @@ A request can enter the current execution window only if it matches one of these
 - **Fixed executive decision event:** a decision meeting or business event depends on a specific output date.
 
 Within a production incident, I still classify severity (user impact and time sensitivity) so the team expedites only true service blockers.
+
 If a request does not match those criteria, it goes into the backlog and is prioritized in the next prioritization decision.
 
 ### A “one in, one out” rule for mid-window changes
@@ -165,7 +166,7 @@ If someone insists on a mid-window change, I require an explicit tradeoff:
 
 This prevents the pattern where new work is added without removing work.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -199,7 +200,7 @@ When trust is low:
 
 This operating system is designed to raise trust by making tradeoffs visible and keeping promises realistic.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -226,7 +227,7 @@ A simple rule works:
 I set the WIP limit to match real team capacity, so we reduce context switching and improve cycle time.
 This is one of the fastest ways to reduce cycle time and improve throughput.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -256,7 +257,7 @@ The team needs:
 - dependencies with dates,
 - and links to acceptance criteria and DoD checks.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -295,7 +296,7 @@ I separate:
 
 I reserve a defined percentage of capacity for run work so project plans remain realistic.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -353,7 +354,7 @@ Then I act on the pattern:
 - I tighten intake and acceptance criteria if scope churn repeats,
 - and I reserve capacity if incidents are consistently interrupting delivery.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -385,7 +386,7 @@ A dataset/pipeline is done when:
 - the output is reconciled and accepted by the business owner,
 - and operational ownership is clear (runbook and escalation path).
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -411,7 +412,7 @@ Before production release, a short readiness review confirms:
 Evidence can be links to test runs, validation outputs, or sign-off notes attached to the work item.
 The goal is not bureaucracy. The goal is to avoid preventable production risk and avoid rework after release.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -449,7 +450,7 @@ I ensure monitoring exists for:
 
 I also ensure ownership exists for responding to issues and deciding retraining cadence.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -469,7 +470,7 @@ I do three things:
 
 When numbers do not match, I treat it as a controlled investigation with an owner, not as an endless debate.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -490,7 +491,7 @@ I do this:
 - add validation checks and alerting so the same issue is detected automatically next time,
 - and re-plan transparently when data quality work affects the forecast.
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
@@ -547,7 +548,7 @@ I do this:
 
 </details>
 
-<p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
+[↑ Back to contents](#contents)
 
 ---
 
