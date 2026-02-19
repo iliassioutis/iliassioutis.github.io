@@ -152,11 +152,12 @@ A request can enter the current execution window only if it matches one of these
 - **Compliance or audit deadline:** a fixed deadline exists and missing it creates exposure.
 - **Fixed executive decision event:** a decision meeting or business event depends on a specific output date.
 
+Within a production incident, I still classify severity (user impact and time sensitivity) so the team expedites only true service blockers.
 If a request does not match those criteria, it goes into the backlog and is prioritized in the next prioritization decision.
 
 ### A “one in, one out” rule for mid-window changes
 
-Only two roles can approve an expedite: the delivery sponsor (the person accountable for outcomes) and the business owner for the request. When they approve an expedite, they also approve the tradeoff by naming what will be paused.
+An expedite requires approval from the delivery sponsor (accountable for outcomes) and the business owner for the request, and the approvers must also name the item that will be paused.
 If someone insists on a mid-window change, I require an explicit tradeoff:
 
 - a decision maker approves the expedite, and
@@ -222,6 +223,7 @@ A simple rule works:
 - the team works on a small set of active items,
 - and the team does not start the next item until one active item finishes.
 
+I set the WIP limit to match real team capacity, so we reduce context switching and improve cycle time.
 This is one of the fastest ways to reduce cycle time and improve throughput.
 
 <p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
@@ -356,7 +358,7 @@ Then I act on the pattern:
 ---
 
 <a id="definition-of-done"></a>
-## 8) Definition of Done: what “done” means for data and analytics
+## 8) Definition of Done: what "done" means for data and analytics
 
 In data and analytics, “done” must mean “ready for business use,” not “someone finished building something.”
 
@@ -406,6 +408,7 @@ Before production release, a short readiness review confirms:
 - monitoring and an escalation path exist,
 - and rollback or mitigation steps are ready.
 
+Evidence can be links to test runs, validation outputs, or sign-off notes attached to the work item.
 The goal is not bureaucracy. The goal is to avoid preventable production risk and avoid rework after release.
 
 <p style="margin-top: 1rem;"><a href="#contents">↑ Back to contents</a></p>
