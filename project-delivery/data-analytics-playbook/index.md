@@ -7,12 +7,11 @@ title: Data & Analytics Delivery Playbook (how I run it)
 🏠 <a href="/">Back to homepage</a> · <a href="/project-delivery/">Project Delivery &amp; Methods</a>
 </blockquote>
 
-This page explains how I run **Data Analytics and Artificial Intelligence (AI)** delivery in practice, especially when the organization is still building structure (for example, when the team does not use Jira).
+This page explains how I run **Data Analytics and Artificial Intelligence (AI)** delivery in practice, especially when the organization is still building structure.
 
 I wrote this as a **practical playbook**, not as theory:
 - I describe the operating system I put in place (intake, prioritization, planning, reporting, quality, and release readiness).
 - I explain each abbreviation the first time I use it, and then I use the abbreviation consistently.
-- I write actions as complete sentences so the delivery steps are easy to follow.
 
 ---
 
@@ -51,7 +50,7 @@ I keep one shared view that includes:
 - a RAID log (Risks, Assumptions, Issues, Dependencies),
 - and a decision log (what was decided, who approved it, and why).
 
-If the team does not use Jira, I still create the same structure using:
+I create the same structure using:
 - a spreadsheet for the prioritized list and the RAID log,
 - a shared document for the decision log,
 - and a simple dashboard or one-page weekly report for visibility.
