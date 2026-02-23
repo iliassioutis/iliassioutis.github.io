@@ -20,8 +20,8 @@ If you have never worked in Scrum before, this is the simplest accurate descript
 To make it concrete, I use one running example throughout.
 
 ### Running example used in every step
-A stakeholder asks:  
-“We need customer support agents to see the latest payment status for an order, because customers keep calling and agents cannot confirm whether payment succeeded.”
+A stakeholder requests:  
+‘Customer support agents need to see the latest payment status for an order, because customers keep calling and agents cannot confirm whether payment succeeded.’
 
 Assume:
 - Payment status is provided by a vendor API.
@@ -43,7 +43,7 @@ This creates direction so the backlog does not become a pile of unrelated reques
   - Achieve 95%+ successful status lookups for orders in the last 30 days.
 - **Constraints:**  
   - Vendor API rate limit is 100 requests/minute.  
-  - Access requires a new API key approved by Security.  
+  - Access to the vendor API requires an API key, and our Security team must approve issuing and storing that key before we can proceed.  
   - Release window is Wednesday 18:00–20:00.  
   - We must not display full payment card data (privacy/security constraint).
 
@@ -75,9 +75,13 @@ We break the request into small backlog items that can be delivered and verified
 
 **Example (Step 2 backlog breakdown)**
 - **Story A:** As a support agent, I can see payment status in the order view.
+  **Draft acceptance criteria (testable):**
+  - When an agent opens an order, the dashboard shows one of: PAID / FAILED / PENDING / UNKNOWN.
+  - The dashboard shows “Last updated at” timestamp for the status.
+  - If the vendor status cannot be refreshed, the dashboard shows the last known status and displays “Status may be stale.”
 - **Story B:** As a system, we fetch status from the vendor API and store the latest result.
 - **Story C:** As a support agent, I see a clear fallback when the vendor is down (stale data + warning).
-- **Task D:** Add rate limiting and caching to respect vendor API limits.
+- **Task D:** Add rate limiting and caching so our system stays within the vendor API quota and avoids throttling or blocking during peak usage.
 - **Task E:** Add logs and metrics so we can monitor success rate and failures.
 - **Task F:** Add security controls (store API key safely; least-privilege access).
 - **Task G:** Create test cases + evidence pack for release readiness.
@@ -93,7 +97,7 @@ At any time, we aim to keep the next 1–2 sprints worth of work in a Ready stat
 Story A becomes Ready only when:
 - we confirm where the payment status appears on the dashboard,
 - we agree what statuses exist (PAID, FAILED, PENDING, UNKNOWN),
-- we define what “fresh” means (e.g., refreshed within the last 5 minutes),
+- we define fresh as ‘the status was successfully fetched from the vendor API within the last 5 minutes’ (we store a Last updated timestamp and we treat anything older than 5 minutes as stale),
 - we define error and fallback behaviour.
 
 **Example acceptance criteria added during refinement**
@@ -121,7 +125,7 @@ Because the dashboard display depends on having a reliable status source, we ord
 3) **Task E (logs/metrics)** because we need observability to validate reliability and operate safely.  
 4) **Story A (show status on dashboard)** because it is the user-visible outcome once the status source exists.  
 5) **Story C (fallback/stale warning)** because it prevents incorrect agent guidance during vendor outages.  
-6) **Task D (rate limiting/caching)** if load testing indicates risk; otherwise it can be incremental.
+6) **Task D (rate limiting/caching)** because we must stay within the vendor’s request limit during peak usage; if our test traffic shows we are comfortably below the limit, we ship without it and schedule it for the next sprint.
 
 If two items compete, the Product Owner makes the scope trade-off and records the decision.
 
