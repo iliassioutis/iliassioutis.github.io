@@ -309,9 +309,15 @@ I use Scrum roles as the default, and I make decision ownership explicit so prog
   - The Product Owner decides what is most valuable next.
 
 - **Scrum Master**
-  - The Scrum Master protects the process and improves flow.
-  - The Scrum Master removes impediments and coaches the team on Scrum discipline.
-  - The Scrum Master ensures that events produce outcomes, not only discussion.
+  - The Scrum Master protects the Scrum system so the team can deliver predictably (they keep the sprint cadence stable, they make “how we work” rules explicit and consistent across the team, and they keep Scrum events focused on planning and decisions rather than reading out task updates).
+  - The Scrum Master improves flow by making work transparent and reducing waste (they help the team limit Work In Progress (WIP), they identify where work gets stuck in the workflow (for example, items piling up in code review or in testing), and they drive small process changes that shorten cycle time and reduce rework).
+  - The Scrum Master removes impediments by taking ownership of unblockers that the team cannot solve alone (they chase access approvals, they coordinate with the teams that own development, test, or staging environments to restore availability, fix misconfiguration, and grant the required permissions and data access so the team can build and test without delays, they coordinate cross-team dependencies, and they escalate when delays threaten the sprint goal).
+  - The Scrum Master coaches the team and stakeholders on effective Scrum behaviours (they help the Product Owner keep the Product Backlog healthy and ordered, they help Developers define and follow the Definition of Done, and they teach stakeholders how to give feedback through Sprint Reviews instead of requesting mid-sprint scope changes).
+  - The Scrum Master ensures each Scrum event produces concrete outputs that are written down and acted on:
+    - Sprint Planning produces a clear sprint goal, a realistic commitment, and visible sprint risks and dependencies.
+    - The Daily Scrum produces an updated plan for the next 24 hours and named owners for blockers.
+    - The Sprint Review produces acceptance decisions and backlog updates based on evidence.
+    - The Retrospective produces 2–3 improvement actions with owners and due dates, and the Scrum Master tracks completion in the next sprint.
 
 - **Developers**
   - Developers own delivery execution and technical quality.
@@ -321,6 +327,12 @@ I use Scrum roles as the default, and I make decision ownership explicit so prog
 ### Common real-world additions (when the environment is complex)
 
 When delivery includes external vendors, multiple internal teams, or heavy governance, I may also operate as a **Technical Project Manager** who coordinates cross-team dependencies, release readiness, and stakeholder reporting. I do not replace Scrum roles. I make sure the operating model stays clear by writing down who decides what.
+
+### How these roles map to me in practice (role coverage)
+
+In many environments, I am the **Technical Project Manager** running delivery coordination across teams and vendors.  
+If the organization does not have a dedicated Scrum Master, I often cover the **Scrum Master** responsibilities (I run the Scrum events, remove impediments, and improve flow).  
+I do not act as the **Product Owner** unless the organization explicitly assigns me that accountability. When a Product Owner exists, they own backlog priority and acceptance decisions, and I support them by translating stakeholder requests into sprint-ready backlog items (I clarify the outcome and scope, write or refine the user story or task, add testable acceptance criteria, identify dependencies and constraints such as access approvals and vendor inputs, split large work into smaller deliverable slices, and link the item to required evidence such as test results and release notes). I also capture decisions and make scope, date, and effort trade-offs explicit so changes stay visible and traceable.
 
 ### Decision rules (what prevents endless debates)
 
