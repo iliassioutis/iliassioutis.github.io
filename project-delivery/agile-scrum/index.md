@@ -168,8 +168,8 @@ During the sprint:
   - **Action:** we log a blocker on the board and assign an owner. Until the vendor error semantics are clarified, we implement a conservative, safe failure behaviour:
     - we show the last successfully retrieved status (if one exists) so agents can still work,
     - we label it clearly as potentially out of date (“Status may be stale”) so we do not mislead customers,
-    - we log each failure with a correlation ID so we can trace and debug the exact request end-to-end,
-    - and we offer a manual retry with a short cooldown so agents can attempt a refresh without spamming the vendor API.
+    - we log each failure with a correlation ID so we can link the user action to the exact vendor call and share precise evidence with the vendor,
+    - and we provide a “Retry/Refresh status” button that triggers one new fetch, and we disable it for a short cooldown period (for example, 60 seconds) so repeated clicks do not overload or throttle the vendor API.
     We escalate to the vendor with evidence (timestamps, correlation IDs, sample responses) if the sandbox behaviour is still inconsistent by end of day.
 
 - **Day 4 risk:** Security approval for the vendor API key is delayed, and the integration work is now blocked.  
@@ -181,46 +181,63 @@ During the sprint:
 
 This is the point of Scrum discipline: the board shows reality, and we act early.
 
-### Step 7 — Sprint Review (we demo working increments and confirm acceptance)
-At sprint review:
-- we demo working increments against acceptance criteria,
-- the Product Owner accepts or rejects items based on evidence,
-- and we capture feedback as backlog updates (new items, changed priorities, clarified acceptance criteria).
+### Step 7 — Sprint Review (demo + acceptance decision)
 
-**Example (Step 7 review)**
-- Demo: open an order → status shows PAID + last updated timestamp.  
-- Demo: vendor timeout → dashboard shows last known status + stale warning.  
-- Evidence: test run screenshot + log entries + metric dashboard link.
+The Sprint Review is where we show working software, confirm whether it meets the agreed acceptance criteria, and adjust priorities based on what we learn.
+
+At the Sprint Review:
+- we demo completed items by walking through the acceptance criteria (not slides),
+- the Product Owner makes an explicit acceptance decision (accept or reject) based on evidence,
+- and any feedback becomes a concrete backlog update (a new item, a changed priority, or updated acceptance criteria).
+
+**Example (Sprint Review for the payment-status feature)**  
+- **Demo scenario 1 (happy path):** We open an order in the support dashboard and the status displays `PAID` with a “Last updated at” timestamp.  
+- **Demo scenario 2 (vendor failure):** We simulate a vendor timeout and the dashboard shows the last known status with a clear “Status may be stale” warning.  
+- **Evidence shown during the demo:** test results (or screenshots), logs for the failing call, and a metric/dashboard view showing success and failure counts.
 
 **Acceptance outcome**
-- Product Owner accepts Story A and Story B.
-- Product Owner requests a small improvement: show “Retry” button only if status is stale.  
-  → That becomes a new backlog item.
+- The Product Owner accepts Story A and Story B because the demo meets the acceptance criteria and evidence is available.
+- The Product Owner requests a usability improvement: show the “Retry/Refresh status” button only when the status is stale or the last refresh failed.  
+  - We capture this request as a new backlog item and we let the Product Owner decide its priority for the next sprint.
 
-### Step 8 — Sprint Retrospective (we improve how we work)
-At the retrospective:
-- we identify the biggest delivery friction (for example, late changes, testing bottlenecks, unclear requirements),
-- we agree 2–3 improvement actions with owners and due dates,
-- and we apply those improvements in the next sprint.
+### Step 8 — Sprint Retrospective (process improvement with owned actions)
 
-**Example (Step 8 improvement actions)**
-- Improvement 1: “Create a standard vendor dependency checklist for every integration story.”  
-  - Owner: Scrum Master  
-  - Due: next sprint Day 2
-- Improvement 2: “Add a default timeout + retry policy template for vendor calls.”  
-  - Owner: Developer  
-  - Due: next sprint Day 3
+The Sprint Retrospective is where the team improves the delivery system. We do not treat it as a “talking session.” We treat it as a decision point that produces a small number of concrete changes.
+
+In the Retrospective:
+- we identify the main sources of friction from the sprint (for example, where work stalled, what created rework, and what caused delays),
+- we choose the top 2–3 improvements that will remove the most friction,
+- we assign an owner and a due date for each improvement,
+- and we track completion in the next sprint (so improvements do not disappear).
+
+**Example (Retrospective actions from the payment-status sprint)**  
+- **Action 1:** Create a vendor readiness checklist that is completed during refinement for every integration story, so we confirm the external inputs and dependencies before we commit the work into a sprint.  
+  - **Access and credentials:** we identify the authentication method (API key or OAuth client credentials), we obtain the correct sandbox and production credentials from the vendor, and we store them securely (for example, in a secret vault or secured environment variables). When company policy requires it, we also complete the internal security approval for using and storing the credentials. We document who is responsible for credential lifecycle management (where the credential is stored, who can access it, how it is rotated before expiry, and how it is revoked if it is leaked or no longer needed) so access does not become an unmanaged risk.  
+  - **Sandbox usability:** we confirm the sandbox is reachable and usable for development and testing (endpoints respond, example requests work, and behaviour is stable enough to validate our logic).  
+  - **Quota and throttling:** we confirm rate limits and quota rules (for example, “100 requests per minute”), plus how throttling is signalled and how the vendor expects clients to behave.  
+  - **Error semantics:** we confirm which failures should be retried, which require backoff, and which should not be retried (based on the vendor’s documented and observed HTTP status codes and error responses).  
+  - **Escalation path:** we confirm who to contact at the vendor, expected response times, and what escalation route we use if vendor issues block delivery.  
+  - **Owner:** Scrum Master  
+  - **Due:** by Day 2 of the next sprint  
+- **Action 2:** Create a reusable “vendor call policy” template that standardises our runtime behaviour for vendor API calls, so every integration handles failures safely and behaves consistently.  
+  - **Timeouts:** we define how long we wait before we treat a call as failed.  
+  - **Retry and backoff:** we define when we retry, how many attempts we allow, and how wait time increases between attempts (including longer waits when throttling is detected).  
+  - **Fallback behaviour:** we define what the system shows and returns when the vendor call fails (for example, show the last known value when it exists, label it as potentially stale, return a safe default when it does not exist, and avoid misleading UI actions).  
+  - **Logging and metrics:** we define what we record and measure so we can diagnose issues and verify stability (for example, failure counts by error type, trace identifiers, and basic success-rate metrics).  
+  - **Owner:** Developer  
+  - **Due:** by Day 3 of the next sprint
 
 ### Step 9 — Release (when shipping is in scope)
-If the increment is going to production:
-- we run release readiness checks (tests, monitoring readiness, rollback plan),
-- we ship in a controlled way (often staged rollout),
-- and we verify health after release using monitoring and key user journeys.
 
-**Example (Step 9 release approach)**
-- Release readiness checks: test evidence attached; monitoring dashboard ready; rollback plan written.
-- Controlled ship: deploy during Wednesday window; enable feature flag for 10% of agents first; expand if metrics stay healthy.
-- Post-release verification: confirm success rate stays above 95% and error rate stays below the agreed threshold.
+If the increment is going to production:
+- we complete release readiness checks (tests and evidence, monitoring readiness, rollback plan, and stakeholder communications),
+- we deploy in a controlled way (often a staged rollout),
+- and we verify service health after release using monitoring signals and key user journeys.
+
+**Example (Step 9 release approach)**  
+- **Release readiness checks:** test evidence attached; monitoring dashboards and alerts ready; rollback plan written; support team briefed on expected behaviour and known limitations.  
+- **Controlled ship:** deploy during the Wednesday release window, but enable the new capability only for a small pilot group of support agents at first (for example, 5 agents) using an access restriction (for example, pilot-only roles/permissions or a configuration switch). We validate using a predefined set of test orders, and we expand access to all agents only after pilot results and monitoring signals are healthy.  
+- **Post-release verification:** confirm the status lookup success rate stays above 95% and the vendor-call error rate stays below the agreed threshold; if thresholds are breached, pause the rollout and apply the rollback plan.
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
