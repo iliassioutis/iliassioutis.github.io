@@ -27,14 +27,27 @@ These pages describe the delivery approach I use to take initiatives from idea t
 
 - **Agile & Scrum**  
   How I deliver iteratively while keeping scope, quality, and stakeholder expectations under control:  
-  - Maintain a prioritized backlog aligned to goals and value; keep items “ready” with clear acceptance criteria and testability.  
-  - Set a delivery cadence (sprints/iterations), define a realistic sprint goal, and plan based on team capacity, dependencies, and risk.  
-  - Run core ceremonies with clear purpose (refinement, planning, daily sync, review/demo, retrospective) and track decisions and actions.  
-  - Clarify working roles and responsibilities (e.g., Product Owner / delivery lead / team ownership) so prioritization, decisions, and escalation paths are explicit.  
-  - Track progress and risks transparently using simple, visible signals (burn-down = work remaining over time; burn-up = work completed vs total scope; cumulative flow = where work is piling up across workflow stages; blockers = items stuck and why; cycle time = time from “In Progress” to “Done”) and intervene early if trends show delays, bottlenecks, or scope creep.  
-  - Keep stakeholders aligned through frequent demos, incremental releases, and structured change handling (trade-offs, sequencing, scope adjustments).  
-  - Use a strong **Definition of Done (clear completion + quality criteria)** and lightweight quality gates so increments are potentially shippable, not just “code complete.”  
-  - Blend iterative delivery with governance where needed (regulated constraints, privacy/security reviews, release approvals, supplier coordination).
+  - I keep a single prioritized Product Backlog aligned to outcomes, and I make each backlog item “Ready” before it enters sprint planning (I confirm the goal, define the user value, write testable acceptance criteria, identify dependencies, and confirm that the team can estimate it).  
+    - I treat an item as **Ready** when the following are true:
+      - The item states a clear outcome (I explain what user or business problem it solves and how success will be measured).
+      - The acceptance criteria are testable (I write pass/fail statements that a tester can verify without guessing).
+      - Key dependencies are identified (I name required APIs, environments, vendor inputs, approvals, and data access).
+      - Non-functional expectations are stated when they matter (I document performance, security, privacy, reliability, and audit needs that can change the design).
+      - The team can estimate it (I ensure it is small enough, or I split it, so the team can forecast delivery).
+  - I set a predictable sprint cadence, and I plan using real capacity (I account for on-call work, meetings, holidays, and known interrupts), then I commit to a sprint goal that protects the most important outcome.  
+  - I run Scrum events with explicit outputs, and I write down decisions and actions (I treat Sprint Planning as a commitment setting meeting, I treat the Daily Scrum as a blocker-clearing coordination point, I treat the Sprint Review as scope validation with stakeholders, and I treat the Retrospective as process improvement with owned actions).  
+    - I treat **Backlog Refinement** as a continuous activity (I split items, remove ambiguity, and prepare the next 1–2 sprints of work so planning is fast and predictable).  
+  - I make roles and decision rights explicit (I confirm that the Product Owner owns prioritization and scope, the Scrum Master owns flow and impediment removal, and the Developers own delivery and technical execution), and I define an escalation path when priorities conflict.  
+  - I control scope inside a sprint (I avoid adding new work mid-sprint unless it meets an explicit exception rule, and I record trade-offs when something must be swapped in).  
+  - I keep delivery transparent using a small set of signals, and I intervene early when trends show risk:
+    - **Burndown:** I track remaining work to detect slippage early.
+    - **Burnup:** I track completed work against total scope to reveal scope creep.
+    - **Cumulative flow:** I detect bottlenecks by seeing where work piles up across workflow stages.
+    - **Cycle time:** I measure time from “In Progress” to “Done” to identify flow delays.
+    - **Blockers:** I log what is stuck, who must unblock it, and by when.
+  - I keep stakeholders aligned through frequent demos and incremental releases (I show working software, I validate acceptance criteria early, and I confirm priorities based on feedback rather than assumptions).  
+  - I enforce quality using a Definition of Done (I require tests and evidence, updated documentation, and operational readiness steps so work is potentially shippable, not only “code complete”).  
+  - I apply governance only where risk requires it (I add privacy and security reviews, release approvals, and supplier coordination when the delivery context demands controlled change and auditability).
 
 - **Waterfall / stage-gate**  
   How I use sequential delivery when constraints, fixed dependencies, or external approvals make staged execution the safer option:  
