@@ -349,18 +349,32 @@ I do not act as the **Product Owner** unless the organization explicitly assigns
 
 ## Backlog system {#backlog}
 
-### What goes in the backlog
+### Product Backlog vs Sprint Backlog (how they relate)
 
-I keep one backlog that includes:
-- features and improvements,
-- defects and reliability work,
-- operational readiness tasks,
-- technical debt,
-- risk reduction items (for example, proof-of-concept tasks, performance checks, security improvements).
+- The **Product Backlog** is the single ordered list of everything we might build, fix, or improve. The Product Owner owns the ordering.
+- The **Sprint Backlog** is the subset of Product Backlog items we commit to deliver in the current sprint, plus the plan (tasks) to deliver them.
+
+In other words, we plan and prioritise in the Product Backlog, and we execute a committed slice of that work in each sprint via the Sprint Backlog.
+
+### What goes into the Product Backlog
+
+I keep one Product Backlog that includes:
+
+- **Features and improvements:** new capabilities and enhancements that deliver user or business value.
+- **Defects (bugs):** issues where the system behaves incorrectly and needs correction.
+- **Reliability work (stability and resilience):** work that reduces outages and prevents repeat incidents, such as:
+  - fixing recurring failures and timeouts,
+  - improving error handling and retries,
+  - reducing crash rates,
+  - strengthening monitoring and alerting,
+  - improving performance bottlenecks that cause instability.
+- **Operational readiness work:** work needed to run the service safely in production, such as runbooks, dashboards, alerts, on-call readiness, and release/rollback procedures.
+- **Technical debt:** cleanup and refactoring work that reduces complexity and makes future changes safer and faster.
+- **Risk reduction work:** we run short, time-boxed investigations (often called a **spike**) to remove the biggest unknowns before we commit to a larger build. For example, we make a minimal end-to-end test of the riskiest integration step (we authenticate to the vendor API in a test environment, perform one real call, parse the response, and handle one failure case such as timeout or throttling) so we learn what will break early. We finish the spike with evidence and a clear decision (what we learned, what risks remain, and what we will build next).
 
 ### How work becomes “real” work (not random requests)
 
-A request becomes a backlog item only after I capture:
+A request becomes a backlog item only after we capture:
 - the outcome it enables (what user value or business value it creates),
 - the success measure (what observable signal proves it worked),
 - the constraints (for example, privacy/security needs, release window constraints, vendor lead time),
@@ -369,7 +383,7 @@ A request becomes a backlog item only after I capture:
 ### How I keep backlog items small enough to deliver
 
 I split work until each item can be completed in a sprint without hidden dependencies.
-If an item cannot be sized confidently, I create a time-boxed “discovery spike” that produces specific outputs (for example, an interface decision, a list of unknowns, and a proposal for next steps).
+If an item cannot be sized confidently, I create a short, time-boxed investigation (a **spike**) that produces concrete outputs (for example, an interface decision, a list of unknowns and risks, and a clear recommendation for next steps).
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
