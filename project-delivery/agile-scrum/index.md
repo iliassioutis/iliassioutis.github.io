@@ -18,6 +18,7 @@ The page is intentionally practical: it shows the checklists, templates, and rul
 - [Operating principles](#principles)
 - [Roles and decision rights](#roles)
 - [Backlog system](#backlog)
+- [Boards (pre-sprint intake and sprint execution)](#boards)
 - [Definition of Ready checklist](#dor)
 - [User story and acceptance criteria example](#story-example)
 - [Scrum events](#events)
@@ -124,6 +125,103 @@ A request becomes a backlog item only after I capture:
 
 I split work until each item can be completed in a sprint without hidden dependencies.
 If an item cannot be sized confidently, I create a time-boxed “discovery spike” that produces specific outputs (for example, an interface decision, a list of unknowns, and a proposal for next steps).
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+### Boards (how work flows from idea → sprint → Done) {#boards}
+
+Scrum does not require a specific board design, but a board is one of the best ways to make work **transparent** and keep flow **predictable**.  
+I use two linked boards, because they solve two different problems:
+
+- The **pre-sprint intake board** prevents unclear work from entering a sprint.
+- The **sprint execution board** shows real delivery state during the sprint.
+
+---
+
+#### 1) Pre-sprint intake board (prepare work so sprint planning is fast) {#pre-sprint-board}
+
+This board answers one question: *“Is this work clear enough to plan and deliver?”*  
+Items move left-to-right until they are eligible to be pulled into a sprint.
+
+**Typical columns**
+
+- **Draft**  
+  The request exists, but it is not ready for planning. I still need clarity on outcome, scope, or constraints.
+
+- **Refinement**  
+  The team and Product Owner clarify the item. We split work, identify dependencies, and write acceptance criteria.
+
+- **Ready (DoR passed)**  
+  The item satisfies the **Definition of Ready (DoR)** checklist. It is eligible for sprint planning.
+
+- **Selected for Sprint**  
+  The Product Owner and team have agreed to include the item in the next sprint based on priority and capacity.
+
+**Flow rule (the key discipline)**  
+An item cannot move into **Ready (DoR passed)** unless it meets the DoR checklist (outcome, testable acceptance criteria, dependencies, constraints, and estimate readiness).
+
+**Example flow**
+- “New vendor API integration request” starts in **Draft**
+- It moves to **Refinement** while we confirm:
+  - required endpoints and data fields,
+  - security/privacy constraints,
+  - environments and credentials,
+  - vendor delivery date and version,
+  - acceptance criteria and evidence expectations
+- It moves to **Ready (DoR passed)** once the DoR checklist is satisfied
+- It moves to **Selected for Sprint** when the team confirms it fits the next sprint goal and capacity
+
+---
+
+#### 2) Sprint execution board (deliver work inside the sprint) {#sprint-board}
+
+This board answers a different question: *“What is the real delivery state right now?”*  
+The sprint board is where Developers pull work and where I detect bottlenecks early.
+
+**Typical columns**
+
+- **To Do (DoR passed)**  
+  Work that is in the sprint scope and is ready for Developers to start. “To Do” is the sprint version of “Ready.”
+
+- **In Progress**  
+  Work actively being implemented. I limit **WIP (Work In Progress)** here to protect flow.
+
+- **In Review**  
+  Work waiting for code review, peer review, or merge approval.
+
+- **In Test**  
+  Work being validated (unit, integration, system checks, or QA verification depending on context).
+
+- **Done (DoD met + evidence linked)**  
+  Work that satisfies the **Definition of Done (DoD)** and includes evidence links (tests, screenshots, logs, monitoring, or checklist completion).
+
+**Typical WIP rule (example)**
+- I set a maximum number of items allowed in **In Progress** at any time (for example, 2 items per Developer, or a team-wide cap like 5).  
+When the cap is reached, the team finishes and unblocks existing items before starting new work.
+
+**Typical blocker rule (example)**
+- If an item is blocked for more than 24 hours, we:
+  - name the unblocker,
+  - set an unblock deadline,
+  - and escalate if the deadline threatens the sprint goal.
+
+---
+
+#### 3) How the two boards work together (the simple model)
+
+- The **intake board** protects sprint planning (only Ready items enter a sprint).
+- The **sprint board** protects delivery predictability (work moves through explicit states until Done).
+
+In practice:
+- Items move **Draft → Refinement → Ready (DoR passed)** before the sprint starts.
+- Sprint planning pulls items from **Ready (DoR passed)** into the sprint.
+- During the sprint, those items live on the sprint board as **To Do (DoR passed) → In Progress → In Review → In Test → Done (DoD met + evidence linked)**.
+
+This separation prevents the most common failure mode: unclear items entering a sprint and then stalling inside it.
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
