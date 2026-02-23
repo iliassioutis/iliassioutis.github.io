@@ -17,6 +17,17 @@ The page is intentionally practical: it shows the checklists, templates, and rul
 
 If you have never worked in Scrum before, this is the simplest accurate description of how the system runs from request → backlog → sprint → release.
 
+To make it concrete, I use one running example throughout.
+
+### Running example used in every step
+A stakeholder asks:  
+“We need customer support agents to see the latest payment status for an order, because customers keep calling and agents cannot confirm whether payment succeeded.”
+
+Assume:
+- Payment status is provided by a vendor API.
+- The support team uses a web dashboard.
+- We deploy to production only during approved release windows.
+
 ### Step 0 — Agree the product goal and constraints (so we do not build “random work”)
 Before we start sprints, the Product Owner aligns stakeholders on:
 - the goal (what outcome matters and why),
@@ -24,6 +35,17 @@ Before we start sprints, the Product Owner aligns stakeholders on:
 - and the success measures (what metric or signal proves we achieved the goal).
 
 This creates direction so the backlog does not become a pile of unrelated requests.
+
+**Example (Step 0 outputs)**
+- **Goal:** Reduce customer support escalations by enabling agents to confirm payment status from the dashboard.
+- **Success measures:**  
+  - Reduce “payment status unknown” tickets by 50% within 2 weeks after release.  
+  - Achieve 95%+ successful status lookups for orders in the last 30 days.
+- **Constraints:**  
+  - Vendor API rate limit is 100 requests/minute.  
+  - Access requires a new API key approved by Security.  
+  - Release window is Wednesday 18:00–20:00.  
+  - We must not display full payment card data (privacy/security constraint).
 
 ### Step 1 — Capture requests into an intake (so we do not lose context)
 When a stakeholder asks for something, we do not immediately “turn it into a sprint.”  
@@ -35,16 +57,53 @@ We first capture it as a backlog candidate with:
 - dependencies (teams, vendors, access approvals, environments),
 - and constraints (security, privacy, compliance, operational requirements).
 
+**Example (Step 1 intake write-up)**
+- **Problem:** Support agents cannot confirm payment status; customers call repeatedly; escalations increase.
+- **Who is affected:** Support team + customers waiting for confirmation.
+- **Outcome:** Agent can view current payment status for an order from the dashboard.
+- **Why now:** Ticket volume spiked after a new payment provider integration.
+- **Success measure:** 95%+ status retrieval success; 50% reduction in “unknown status” tickets.
+- **Deadline driver:** Support leadership wants this live before next billing cycle (2 weeks).
+- **Dependencies:** Vendor API documentation + API key; internal dashboard team; QA; Security approval.
+- **Constraints:** No sensitive payment data displayed; rate limiting; release window Wednesday.
+
 ### Step 2 — Convert the request into backlog items (so it becomes deliverable work)
 We break the request into small backlog items that can be delivered and verified:
 - We write user stories (or tasks) that describe a specific outcome.
 - We add testable acceptance criteria so “done” is unambiguous.
 - We split large items until each item fits a sprint and does not hide unknown dependencies.
 
+**Example (Step 2 backlog breakdown)**
+- **Story A:** As a support agent, I can see payment status in the order view.
+- **Story B:** As a system, we fetch status from the vendor API and store the latest result.
+- **Story C:** As a support agent, I see a clear fallback when the vendor is down (stale data + warning).
+- **Task D:** Add rate limiting and caching to respect vendor API limits.
+- **Task E:** Add logs and metrics so we can monitor success rate and failures.
+- **Task F:** Add security controls (store API key safely; least-privilege access).
+- **Task G:** Create test cases + evidence pack for release readiness.
+
+This split makes the work deliverable in increments, not as one “big story that hides unknowns.”
+
 ### Step 3 — Refine and make items Ready (so sprint planning is predictable)
 Backlog Refinement is the preparation step.
 The team improves clarity and reduces risk until the best candidates meet the Definition of Ready (DoR).
 At any time, we aim to keep the next 1–2 sprints worth of work in a Ready state.
+
+**Example (Step 3 refinement result for Story A)**
+Story A becomes Ready only when:
+- we confirm where the payment status appears on the dashboard,
+- we agree what statuses exist (PAID, FAILED, PENDING, UNKNOWN),
+- we define what “fresh” means (e.g., refreshed within the last 5 minutes),
+- we define error and fallback behaviour.
+
+**Example acceptance criteria added during refinement**
+- The dashboard shows one of: PAID / FAILED / PENDING / UNKNOWN.
+- The dashboard shows “Last updated at” timestamp.
+- If vendor call fails, the dashboard shows last known status and “Status may be stale.”
+- The UI must not display card numbers or sensitive payment details.
+
+**Example dependency captured**
+- “Security must approve vendor API key storage method before implementation starts.”
 
 ### Step 4 — Order the backlog (prioritization is not random)
 The Product Owner orders the backlog using consistent criteria, usually:
@@ -53,6 +112,16 @@ The Product Owner orders the backlog using consistent criteria, usually:
 - risk reduction (what prevents incidents, failures, or compliance problems),
 - dependencies (what unlocks other work),
 - and effort (what it costs in time and capacity, based on team estimates).
+
+**Example (Step 4 ordering decision)**  
+Because the dashboard display depends on having a reliable status source, we order work so dependencies are delivered first:
+
+1) **Story B (fetch/store status)** because it enables the data source that everything else depends on.  
+2) **Task F (security controls)** because we cannot ship vendor integration without secure credential handling and least-privilege access.  
+3) **Task E (logs/metrics)** because we need observability to validate reliability and operate safely.  
+4) **Story A (show status on dashboard)** because it is the user-visible outcome once the status source exists.  
+5) **Story C (fallback/stale warning)** because it prevents incorrect agent guidance during vendor outages.  
+6) **Task D (rate limiting/caching)** if load testing indicates risk; otherwise it can be incremental.
 
 If two items compete, the Product Owner makes the scope trade-off and records the decision.
 
@@ -63,12 +132,38 @@ At sprint planning:
 - the team commits to a realistic scope based on capacity and known constraints,
 - and we call out sprint risks and sprint dependencies explicitly.
 
+**Example (Step 5 sprint planning outputs)**
+- **Sprint goal:** “Support agents can view payment status for an order with safe handling and basic monitoring.”
+- **Capacity reality:**  
+  - 2 Developers available full-time, 1 Developer is 50% due to on-call, 1 QA available 50%.  
+- **Sprint scope chosen (only Ready items):**  
+  - Story B (fetch/store status)  
+  - Story A (show status + last updated timestamp)  
+  - Task F (API key storage + access control)  
+  - Task E (basic logs + success/failure metric)
+- **Sprint risks:**  
+  - Vendor sandbox might be unstable.  
+  - Security approval might take 3 days.
+- **Dependencies:**  
+  - “Security approval by Tuesday 12:00.”  
+  - “Vendor provides test credentials by Monday 17:00.”
+
 ### Step 6 — Sprint execution (work flows across the board, not by “status meetings”)
 During the sprint:
 - Developers pull work from “To Do (DoR passed)” into “In Progress.”
 - We limit Work In Progress (WIP) so we finish items rather than start many items.
-- The Daily Scrum focuses on coordination and removing blockers.
+- The Daily Scrum focuses on inspecting progress toward the sprint goal and adapting the plan for the next 24 hours (including surfacing blockers and agreeing who will remove them).
 - Work is not considered Done until it meets the Definition of Done (DoD) and evidence is attached.
+
+**Example (Step 6 execution in practice)**
+- **Board states:** To Do → In Progress → In Review → In Test → Done
+- **WIP rule:** Maximum 3 items in In Progress for the team.
+- **Day 2 blocker:** Vendor sandbox returns inconsistent error codes.  
+  - Action: create a blocker entry; assign an owner; agree fallback handling; escalate to vendor if unresolved by end of day.
+- **Day 4 risk:** Security approval delayed.  
+  - Action: Product Owner and Scrum Master escalate. If urgent work must be pulled into the sprint because of the delay, we apply the swap rule (we remove work of similar size from the sprint backlog, we record the trade-off, and we update the sprint goal if needed).
+
+This is the point of Scrum discipline: the board shows reality, and we act early.
 
 ### Step 7 — Sprint Review (we demo working increments and confirm acceptance)
 At sprint review:
@@ -76,17 +171,40 @@ At sprint review:
 - the Product Owner accepts or rejects items based on evidence,
 - and we capture feedback as backlog updates (new items, changed priorities, clarified acceptance criteria).
 
+**Example (Step 7 review)**
+- Demo: open an order → status shows PAID + last updated timestamp.  
+- Demo: vendor timeout → dashboard shows last known status + stale warning.  
+- Evidence: test run screenshot + log entries + metric dashboard link.
+
+**Acceptance outcome**
+- Product Owner accepts Story A and Story B.
+- Product Owner requests a small improvement: show “Retry” button only if status is stale.  
+  → That becomes a new backlog item.
+
 ### Step 8 — Sprint Retrospective (we improve how we work)
 At the retrospective:
 - we identify the biggest delivery friction (for example, late changes, testing bottlenecks, unclear requirements),
 - we agree 2–3 improvement actions with owners and due dates,
 - and we apply those improvements in the next sprint.
 
+**Example (Step 8 improvement actions)**
+- Improvement 1: “Create a standard vendor dependency checklist for every integration story.”  
+  - Owner: Scrum Master  
+  - Due: next sprint Day 2
+- Improvement 2: “Add a default timeout + retry policy template for vendor calls.”  
+  - Owner: Developer  
+  - Due: next sprint Day 3
+
 ### Step 9 — Release (when shipping is in scope)
 If the increment is going to production:
 - we run release readiness checks (tests, monitoring readiness, rollback plan),
 - we ship in a controlled way (often staged rollout),
 - and we verify health after release using monitoring and key user journeys.
+
+**Example (Step 9 release approach)**
+- Release readiness checks: test evidence attached; monitoring dashboard ready; rollback plan written.
+- Controlled ship: deploy during Wednesday window; enable feature flag for 10% of agents first; expand if metrics stay healthy.
+- Post-release verification: confirm success rate stays above 95% and error rate stays below the agreed threshold.
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
