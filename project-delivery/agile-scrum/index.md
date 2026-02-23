@@ -37,7 +37,7 @@ I use Scrum as a **delivery control system** that helps a team ship reliable inc
 - I deliver **small, testable increments** that can be demonstrated end-to-end (even in a test environment), and I use demos to validate direction early (I show working behaviour against acceptance criteria, I confirm that stakeholders accept what they see, and I capture feedback as specific backlog updates rather than informal comments).  
   - *Example:* I demo a feature slice that proves the critical flow works, I show the failure-mode handling (timeout, validation error, retry), and I confirm whether the Product Owner wants adjustments before we build further.
 
-- I keep **one source of truth** for scope and priorities (the Product Backlog), and I keep work visible on a board with explicit states so everyone can see progress and risk without interpretation.  
+- I keep **one source of truth** for scope and priorities (the Product Backlog), and I keep work visible on a board with explicit states so everyone can see progress and risk clearly and consistently (what is started, what is blocked, what is waiting for review or test, and what is truly Done).  
   - I treat the backlog as the place where scope decisions live (what is in, what is out, what is next).  
   - I treat the board as the place where execution truth lives (what is started, what is blocked, what is waiting for review/testing, and what is truly Done).  
   - *Example board states:* Ready → In Progress → In Review → In Test → Done (where “Done” means it meets the Definition of Done and includes evidence).
