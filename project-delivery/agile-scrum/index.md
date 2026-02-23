@@ -160,12 +160,24 @@ During the sprint:
 - Work is not considered Done until it meets the Definition of Done (DoD) and evidence is attached.
 
 **Example (Step 6 execution in practice)**
-- **Board states:** To Do → In Progress → In Review → In Test → Done
-- **WIP rule:** Maximum 3 items in In Progress for the team.
-- **Day 2 blocker:** Vendor sandbox returns inconsistent error codes.  
-  - Action: create a blocker entry; assign an owner; agree fallback handling; escalate to vendor if unresolved by end of day.
-- **Day 4 risk:** Security approval delayed.  
-  - Action: Product Owner and Scrum Master escalate. If urgent work must be pulled into the sprint because of the delay, we apply the swap rule (we remove work of similar size from the sprint backlog, we record the trade-off, and we update the sprint goal if needed).
+
+- **Board states:** To Do → In Progress → In Review → In Test → Done  
+- **WIP rule:** Maximum 3 items in In Progress for the team (if we hit the limit, we stop starting new work and we finish what is already started).
+
+- **Day 2 blocker:** The vendor sandbox returns inconsistent error responses (for example, the same failure sometimes comes back with different HTTP status codes), so reliable retry/backoff rules are unclear until the vendor behaviour is stable.  
+  - **Action:** we log a blocker on the board and assign an owner. Until the vendor error semantics are clarified, we implement a conservative, safe failure behaviour:
+    - we show the last successfully retrieved status (if one exists) so agents can still work,
+    - we label it clearly as potentially out of date (“Status may be stale”) so we do not mislead customers,
+    - we log each failure with a correlation ID so we can trace and debug the exact request end-to-end,
+    - and we offer a manual retry with a short cooldown so agents can attempt a refresh without spamming the vendor API.
+    We escalate to the vendor with evidence (timestamps, correlation IDs, sample responses) if the sandbox behaviour is still inconsistent by end of day.
+
+- **Day 4 risk:** Security approval for the vendor API key is delayed, and the integration work is now blocked.  
+  - **Action:** the Product Owner and Scrum Master escalate and ask for a yes/no decision by a specific time (for example, “approve or reject by today 16:00”). If approval is not granted by that time, we apply the swap rule so the sprint remains honest:
+    - we move the blocked integration item out of the sprint backlog,
+    - we pull in Ready work of comparable size that still supports the goal (for example, dashboard UI wiring with stub data, test cases, monitoring dashboards, and runbook notes),
+    - and we record the trade-off in the sprint notes so stakeholders can see exactly what changed and why.
+    We keep the sprint goal unchanged when this re-plan still delivers the same outcome; if the outcome is no longer achievable, we explicitly agree a revised sprint goal and record the decision.
 
 This is the point of Scrum discipline: the board shows reality, and we act early.
 
