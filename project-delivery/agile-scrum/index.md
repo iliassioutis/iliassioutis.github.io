@@ -43,7 +43,7 @@ This creates direction so the backlog does not become a pile of unrelated reques
   - Achieve 95%+ successful status lookups for orders in the last 30 days.
 - **Constraints:**  
   - Vendor API rate limit is 100 requests/minute.  
-  - Access to the vendor API requires an API key, and our Security team must approve issuing and storing that key before we can proceed.  
+  - Access to the vendor API requires an API key, and our Security team must approve using and storing that key before we can proceed.  
   - Release window is Wednesday 18:00–20:00.  
   - We must not display full payment card data (privacy/security constraint).
 
@@ -164,7 +164,7 @@ During the sprint:
 - **Board states:** To Do → In Progress → In Review → In Test → Done  
 - **WIP rule:** Maximum 3 items in In Progress for the team (if we hit the limit, we stop starting new work and we finish what is already started).
 
-- **Day 2 blocker:** The vendor sandbox returns inconsistent error responses (for example, the same failure sometimes comes back with different HTTP status codes), so reliable retry/backoff rules are unclear until the vendor behaviour is stable.  
+- **Day 2 blocker:** The vendor sandbox returns inconsistent error responses (for example, the same failure sometimes comes back with different HTTP status codes), so reliable retry/backoff rules are unclear because different HTTP codes imply different client actions (retry, back off, or stop) until the vendor behaviour is stable.  
   - **Action:** we log a blocker on the board and assign an owner. Until the vendor error semantics are clarified, we implement a conservative, safe failure behaviour:
     - we show the last successfully retrieved status (if one exists) so agents can still work,
     - we label it clearly as potentially out of date (“Status may be stale”) so we do not mislead customers,
