@@ -32,13 +32,30 @@ The page is intentionally practical: it shows the checklists, templates, and rul
 
 ## Operating principles {#principles}
 
-I treat Scrum as a delivery control system, not as a set of meetings.
+I use Scrum as a **delivery control system** that helps a team ship reliable increments, make decisions early, and keep risk visible. I do not treat Scrum as “a set of meetings,” because meetings without outputs do not protect schedule, quality, or stakeholder trust.
 
-- I deliver **small, testable increments** and I validate direction early through demos.
-- I keep **one source of truth** for scope and priorities (the Product Backlog), and I keep work visible on a board with explicit states.
-- I protect flow by limiting **WIP (Work In Progress)** and by removing blockers quickly.
-- I keep risk visible using a lightweight **RAID log (Risks, Assumptions, Issues, Dependencies)** when the work has real uncertainty or external dependencies.
-- I make change explicit. If scope, dates, or cost assumptions change, I record the decision and I update the plan.
+- I deliver **small, testable increments** that can be demonstrated end-to-end (even in a test environment), and I use demos to validate direction early (I show working behaviour against acceptance criteria, I confirm that stakeholders accept what they see, and I capture feedback as specific backlog updates rather than informal comments).  
+  - *Example:* I demo a feature slice that proves the critical flow works, I show the failure-mode handling (timeout, validation error, retry), and I confirm whether the Product Owner wants adjustments before we build further.
+
+- I keep **one source of truth** for scope and priorities (the Product Backlog), and I keep work visible on a board with explicit states so everyone can see progress and risk without interpretation.  
+  - I treat the backlog as the place where scope decisions live (what is in, what is out, what is next).  
+  - I treat the board as the place where execution truth lives (what is started, what is blocked, what is waiting for review/testing, and what is truly Done).  
+  - *Example board states:* Ready → In Progress → In Review → In Test → Done (where “Done” means it meets the Definition of Done and includes evidence).
+
+- I protect flow and predictability by limiting **WIP (Work In Progress)** and by removing blockers quickly, because starting more work does not mean we are making progress.  
+  - I limit how many items can be “In Progress” at the same time, and I prefer finishing work before starting new work.  
+  - I treat blockers as time-sensitive risks (I name the unblocker, I set a deadline, and I escalate when the deadline is at risk).  
+  - *Example:* If QA testing is the bottleneck, I stop pulling new development work and I shift effort to fix defects and clear the test queue.
+
+- I keep delivery risk visible using a lightweight **RAID log (Risks, Assumptions, Issues, Dependencies)** when uncertainty or external dependencies are non-trivial (for example, vendor deliverables, access approvals, compliance gates, or integration test windows).  
+  - I review RAID regularly (at least weekly), and I keep each entry actionable (owner, impact, mitigation, due date, and escalation trigger).  
+  - *Example:* “Dependency: vendor must deliver SDK version 2.3 by Thursday. Owner: vendor delivery lead. Risk: integration testing slips. Mitigation: confirm release candidate by Tuesday. Escalate: if no candidate by Tuesday 18:00, de-scope the integration from this release.”
+
+- I make change explicit, because silent change is the main cause of missed commitments. If scope, dates, or cost assumptions change, I record the decision, I confirm who approved it, and I update the plan so everyone sees the new baseline.  
+  - I use a simple rule: if urgent work enters a sprint, something of similar size leaves the sprint, and the trade-off is written down.  
+  - *Example:* “New urgent security fix is pulled into the sprint. We remove Story X (non-critical improvement). The Product Owner approves the swap. The sprint goal is updated, and the decision is recorded in sprint notes.”
+
+These principles keep delivery predictable because they create a repeatable system: clear priorities, visible work, controlled WIP, explicit risk tracking, and written decisions when reality changes.
 
 <blockquote>
 ⬆ <a href="#on-this-page">Back to navigation</a>
