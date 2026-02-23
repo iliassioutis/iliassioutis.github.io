@@ -7,46 +7,429 @@ title: Agile & Scrum
 🏠 <a href="/">Back to homepage</a> · <a href="/project-delivery/">Project Delivery & Methods</a>
 </blockquote>
 
-I use Agile/Scrum as an execution system for predictable iteration, fast feedback, and stakeholder alignment — while still keeping delivery traceable and governed (especially in regulated or integration-heavy work).
+I use **Agile and Scrum** as an execution system that delivers working increments fast, keeps stakeholders aligned through evidence, and maintains delivery control when risk is real (for example, regulated constraints, vendor dependencies, and integration-heavy releases).
+
+The page is intentionally practical: it shows the checklists, templates, and rules I actually use so a reader can understand **exactly** how the system runs.
 
 ---
 
-## How I run Scrum in practice
+## On this page {#on-this-page}
 
-**Backlog & priorities**
-- Maintain a single prioritised backlog (features, defects, tech debt, risks)
-- Write work as user stories (or tasks) with clear acceptance criteria
-- Keep dependencies visible and actively managed
-
-**Core ceremonies (lightweight but disciplined)**
-- Backlog refinement: clarify scope, split work, confirm acceptance criteria
-- Sprint planning: commit to a realistic goal and scope
-- Daily sync: remove blockers, protect flow
-- Review/demo: validate outcomes with stakeholders
-- Retro: capture improvements and turn them into actions
-
-**Delivery tracking**
-- Use simple, repeatable metrics:
-  - delivery predictability (planned vs done)
-  - cycle time / lead time (where feasible)
-  - defect trends and escaped defects
-- Keep a RAID log even in Agile when risk is non-trivial
+- [Operating principles](#principles)
+- [Roles and decision rights](#roles)
+- [Backlog system](#backlog)
+- [Definition of Ready checklist](#dor)
+- [User story and acceptance criteria example](#story-example)
+- [Scrum events](#events)
+- [Sprint planning template](#sprint-planning-template)
+- [Mid-sprint intake rule](#mid-sprint-intake)
+- [Delivery tracking and signals](#tracking)
+- [Definition of Done with release readiness and operational hooks](#dod)
+- [How I adapt Scrum in regulated or integration-heavy work](#adapt)
+- [Typical artifacts I maintain](#artifacts)
 
 ---
 
-## How I adapt Agile in real environments
-- **Regulated / high-risk**: add explicit quality gates (privacy/security review, release readiness checks)
-- **Vendor dependencies**: plan integration milestones and contract-level deliverables
-- **Multiple stakeholders**: align via clear decision paths (RACI), not endless meetings
+## Operating principles {#principles}
+
+I treat Scrum as a delivery control system, not as a set of meetings.
+
+- I deliver **small, testable increments** and I validate direction early through demos.
+- I keep **one source of truth** for scope and priorities (the Product Backlog), and I keep work visible on a board with explicit states.
+- I protect flow by limiting **WIP (Work In Progress)** and by removing blockers quickly.
+- I keep risk visible using a lightweight **RAID log (Risks, Assumptions, Issues, Dependencies)** when the work has real uncertainty or external dependencies.
+- I make change explicit. If scope, dates, or cost assumptions change, I record the decision and I update the plan.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
 
 ---
 
-## Typical Agile artifacts I maintain
-- Product backlog + sprint backlog
-- Definition of Done and acceptance criteria templates
-- RAID log (risks, assumptions, issues, dependencies)
-- Release plan and environment readiness checklist
-- SIT/UAT plan
+## Roles and decision rights {#roles}
+
+I use Scrum roles as the default, and I make decision ownership explicit so progress does not depend on hierarchy.
+
+### Standard Scrum accountabilities
+
+- **Product Owner**
+  - The Product Owner owns backlog ordering and scope trade-offs.
+  - The Product Owner accepts completed work against acceptance criteria.
+  - The Product Owner decides what is most valuable next.
+
+- **Scrum Master**
+  - The Scrum Master protects the process and improves flow.
+  - The Scrum Master removes impediments and coaches the team on Scrum discipline.
+  - The Scrum Master ensures that events produce outcomes, not only discussion.
+
+- **Developers**
+  - Developers own delivery execution and technical quality.
+  - Developers decide how to implement the work and how to break it down.
+  - Developers keep the work shippable by meeting the Definition of Done.
+
+### Common real-world additions (when the environment is complex)
+
+When delivery includes external vendors, multiple internal teams, or heavy governance, I may also operate as a **Technical Project Manager** who coordinates cross-team dependencies, release readiness, and stakeholder reporting. I do not replace Scrum roles. I make sure the operating model stays clear by writing down who decides what.
+
+### Decision rules (what prevents endless debates)
+
+- The Product Owner decides **priority and scope**.
+- Developers decide **implementation approach and estimates**.
+- The Scrum Master decides **process improvements and flow rules**.
+- If a decision affects security, privacy, or production risk, I require explicit review and sign-off by the relevant accountable owner using **RACI (Responsible, Accountable, Consulted, Informed)**.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Backlog system {#backlog}
+
+### What goes in the backlog
+
+I keep one backlog that includes:
+- features and improvements,
+- defects and reliability work,
+- operational readiness tasks,
+- technical debt,
+- risk reduction items (for example, proof-of-concept tasks, performance checks, security improvements).
+
+### How work becomes “real” work (not random requests)
+
+A request becomes a backlog item only after I capture:
+- the outcome it enables (what user value or business value it creates),
+- the success measure (what observable signal proves it worked),
+- the constraints (for example, privacy/security needs, release window constraints, vendor lead time),
+- the dependencies (who must provide what, and by when).
+
+### How I keep backlog items small enough to deliver
+
+I split work until each item can be completed in a sprint without hidden dependencies.
+If an item cannot be sized confidently, I create a time-boxed “discovery spike” that produces specific outputs (for example, an interface decision, a list of unknowns, and a proposal for next steps).
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Definition of Ready checklist {#dor}
+
+“Ready” means a backlog item can enter sprint planning without ambiguity, and the team can reasonably forecast delivery.
+
+I use this copy-friendly checklist.
+
+### Definition of Ready (DoR) (copy-friendly) {#dor-checklist}
+
+A backlog item is **Ready** when all required checks below are true.
+
+**1) Outcome and success**
+- [ ] The item states the user or business outcome in one sentence.
+- [ ] The item states a success measure (for example, a dashboard metric, a pass rate, or a workflow completion rate).
+- [ ] The Product Owner confirms the priority and why it matters now.
+
+**2) Scope clarity**
+- [ ] The in-scope behaviour is clear.
+- [ ] The out-of-scope behaviour is stated so expectations do not drift.
+- [ ] Edge cases that could change design are named (for example, offline behaviour, retries, idempotency, concurrency).
+
+**3) Acceptance criteria**
+- [ ] Acceptance criteria are written as pass/fail statements.
+- [ ] Acceptance criteria cover the happy path and at least the top failure modes.
+- [ ] Acceptance criteria reference where evidence will live (for example, test results, screenshots, logs, or a monitoring dashboard).
+
+**4) Dependencies and constraints**
+- [ ] Dependencies are listed with owners and expected dates (for example, vendor build, access approval, environment readiness, data availability).
+- [ ] Required approvals are known (for example, security review, privacy review, production change approval).
+- [ ] Non-functional constraints are stated when they matter (for example, performance, reliability, audit, data retention).
+
+**5) Sizing and plan-ability**
+- [ ] Developers can estimate the item.
+- [ ] The item is small enough for the sprint, or it has been split into smaller items.
+- [ ] The team confirms that the work does not require unknown external lead time inside the sprint.
+
+If any checkbox is not true, I keep the item in refinement and I do not pull it into sprint planning.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## User story and acceptance criteria example {#story-example}
+
+Below is a realistic example that shows what “testable” looks like. I use a format that QA and stakeholders can validate without guessing.
+
+### Example user story
+
+**Story**  
+As a customer support agent, I want to see the latest payment status for an order, so I can answer customer questions without escalating to engineering.
+
+**Context**
+- The order system is internal.
+- The payment status comes from a partner API.
+- The status must be visible in the support dashboard.
+
+### Example acceptance criteria (Given/When/Then)
+
+1) **Happy path**
+- **Given** an order exists and the partner API returns `PAID`, **when** I open the order in the support dashboard, **then** the dashboard shows `PAID` within 3 seconds and it shows the timestamp of the last successful status fetch.
+
+2) **Partner API timeout**
+- **Given** the partner API times out, **when** I open the order, **then** the dashboard shows the last known status and it shows a warning message that the status is stale.
+- **And** the system logs a timeout event with the order ID and correlation ID.
+
+3) **Partner API error response**
+- **Given** the partner API returns a 4xx or 5xx error, **when** I open the order, **then** the dashboard shows the last known status and it shows an error state that instructs the agent to retry in 5 minutes.
+- **And** the system records the failure count and raises an alert when failures exceed the threshold defined in the release readiness checklist.
+
+4) **Data consistency**
+- **Given** the partner returns a status update that is older than the currently stored timestamp, **when** the system processes the response, **then** the system ignores the older update and it keeps the newest status.
+
+5) **Auditability**
+- **Given** a status is updated, **when** the update is saved, **then** the system writes an audit entry that includes the old status, the new status, the timestamp, and the request correlation ID.
+
+This structure makes acceptance objective, and it makes “done” provable through evidence.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Scrum events {#events}
+
+I run Scrum events with explicit inputs and explicit outputs. If an event does not produce outputs, it becomes a status meeting, and I stop it.
+
+### Backlog refinement (continuous activity)
+
+**Purpose**: Make upcoming work Ready by reducing uncertainty before sprint planning.  
+**Inputs**: Candidate items, latest constraints, dependency updates, production learnings.  
+**Outputs**: Split items, clarified scope, updated acceptance criteria, identified dependencies, updated estimates.
+
+### Sprint planning
+
+**Purpose**: Set a sprint goal and make a realistic commitment based on real capacity.  
+**Inputs**: Priority backlog items, DoR checks, capacity and interrupts forecast, known risks.  
+**Outputs**: Sprint goal, selected sprint backlog, named owners, identified sprint risks and dependencies.
+
+### Daily Scrum
+
+**Purpose**: Coordinate work and unblock flow within 15 minutes.  
+**Inputs**: Board state, blockers, planned work for the next 24 hours.  
+**Outputs**: Clear next steps, named unblockers, escalations triggered when needed.
+
+### Sprint review
+
+**Purpose**: Validate outcomes with stakeholders using working increments.  
+**Inputs**: Completed items that meet the Definition of Done, demo plan, release notes if shipping.  
+**Outputs**: Acceptance decisions, feedback captured as backlog items, priority adjustments.
+
+### Sprint retrospective
+
+**Purpose**: Improve the delivery system and reduce recurring waste.  
+**Inputs**: Sprint signals (carryover, blockers, defects, cycle time), team feedback.  
+**Outputs**: Two to three improvement actions with owners and due dates, plus a decision on what to stop doing.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Sprint planning template (copy-friendly) {#sprint-planning-template}
+
+I use this structure because it forces clarity on capacity, scope, and risk.
+
+### Sprint planning (template)
+
+**Sprint**
+- Sprint number:
+- Sprint dates:
+- Sprint goal (one sentence outcome):
+- Release intent (ship this sprint, ship next sprint, or not yet shipping):
+
+**Capacity and constraints**
+- Team members available:
+- Planned time off:
+- Expected interrupts (support, incidents, meetings):
+- Effective delivery capacity (hours or points):
+
+**Candidate items (must be Ready)**
+- Item 1:
+  - Outcome:
+  - Acceptance criteria link:
+  - Dependencies:
+  - Estimate:
+- Item 2:
+  - Outcome:
+  - Acceptance criteria link:
+  - Dependencies:
+  - Estimate:
+
+**Commitment**
+- Included items:
+- Explicitly excluded items:
+- What we will de-scope first if risk materialises:
+
+**Risks and dependencies (sprint-level)**
+- Risk 1:
+  - Mitigation:
+  - Owner:
+  - Escalation trigger:
+- Dependency 1:
+  - Owner:
+  - Due date:
+  - What happens if it slips:
+
+**Definition of Done reminder**
+- We only count work as Done when it meets the DoD checklist and evidence is attached.
+
+**End-of-sprint review plan**
+- Demo order and stakeholders invited:
+- Acceptance criteria to verify during the demo:
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Mid-sprint intake rule (urgent work and swaps) {#mid-sprint-intake}
+
+Mid-sprint change is a major cause of invisible scope creep, burnout, and missed commitments. I handle it with one rule set.
+
+### What qualifies as urgent
+
+I treat work as urgent only when it meets at least one condition below:
+- The work mitigates an active production incident or prevents a likely incident with clear evidence.
+- The work addresses a security vulnerability that requires immediate remediation.
+- The work prevents a contractual or regulatory breach with a hard deadline.
+- The work unblocks a release-critical dependency that would otherwise slip the committed sprint goal.
+
+If work is “important” but not urgent, it goes into the backlog and it is prioritised normally.
+
+### The swap rule (how we protect the sprint)
+
+If urgent work must enter the sprint, I apply all steps below:
+
+1) The requester states why the work is urgent using one sentence and one evidence link.  
+2) The Product Owner approves the urgency classification and agrees what outcome is protected.  
+3) Developers estimate the urgent item quickly.  
+4) We remove work of similar size from the sprint backlog, and we record what we removed.  
+5) We update the sprint goal if the change materially alters the sprint outcome.  
+6) We write the decision in the sprint notes so the reason is traceable.
+
+This approach keeps transparency: stakeholders see the trade-off instead of silently increasing scope.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Delivery tracking and signals {#tracking}
+
+I track a small set of signals that show predictability, flow health, and quality. I do not use metrics as targets that people game.
+
+### The minimum signals I keep visible
+
+- **Planned vs done**: I track what we committed to and what we completed, and I name the drivers when we miss.  
+- **Burndown**: I track remaining work to detect slippage early.  
+- **Burnup**: I track completed scope against total scope so scope creep is visible.  
+- **Cumulative flow**: I detect bottlenecks by seeing where work piles up across workflow stages.  
+- **Cycle time**: I track time from “In Progress” to “Done” to reveal waiting and rework.  
+- **Defect leakage**: I track defects found after release vs defects found before release.  
+- **Change failure rate**: I track how often releases cause incidents, rollbacks, or hotfixes.  
+- **MTTR (Mean Time To Restore)**: I track how quickly the service recovers after incidents when I own or influence operations.
+
+### Workflow rules that improve predictability
+
+- I keep a board with explicit states (for example, Ready, In Progress, In Review, In Test, Done).
+- I limit WIP so “started work” does not hide “unfinished work.”
+- I require evidence links at Done so stakeholders can trust the status.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Definition of Done with release readiness and operational hooks {#dod}
+
+I treat the **Definition of Done** as the quality gate that keeps increments potentially shippable. Once I expand “Definition of Done” on a page, I refer to it as **DoD**.
+
+Below is the DoD I use for integration-heavy systems and production services. Teams can simplify it for low-risk work, but I keep the intent.
+
+### DoD (copy-friendly checklist) {#dod-checklist}
+
+**1) Functional completion**
+- [ ] The implementation meets the acceptance criteria.
+- [ ] The key failure modes are handled and tested (for example, timeout, retries, validation errors).
+
+**2) Code quality**
+- [ ] Code is merged via review, and review feedback has been addressed.
+- [ ] Automated tests pass in the pipeline.
+- [ ] Configuration is externalised and documented.
+
+**3) Test evidence**
+- [ ] Unit and integration tests exist and pass.
+- [ ] If end-to-end testing is needed, evidence is attached or linked.
+- [ ] If **SIT (System Integration Testing)** or **UAT (User Acceptance Testing)** is required, the entry criteria are met and the plan is updated.
+
+**4) Security and privacy (when relevant)**
+- [ ] Access control is least-privilege and reviewed.
+- [ ] Secrets are handled correctly and are not stored in code.
+- [ ] If personal data is involved, the required privacy review is completed and recorded, including **DPIA (Data Protection Impact Assessment)**-style risk thinking when risk is non-trivial.
+
+**5) Operational hooks (production readiness)**
+- [ ] Logs include correlation IDs and meaningful error context.
+- [ ] Metrics exist for the critical path (success rate, latency, error rate).
+- [ ] Alerts exist for the top failure modes, and alert ownership is clear.
+- [ ] A basic runbook section exists (how to check health, how to mitigate common failures).
+
+**6) Release readiness (when shipping is in scope)**
+- [ ] Release notes describe what changed and what to watch.
+- [ ] A rollback path is defined, and rollback triggers are stated.
+- [ ] If feature flags are used, the enable and disable plan is documented.
+- [ ] Post-release verification steps are written and owned.
+
+**7) Documentation**
+- [ ] User-facing or operational documentation is updated.
+- [ ] Interface changes are documented with versioning and compatibility notes.
+
+If any checkbox is not true, the item is not Done. It may be “nearly done,” but it is not Done.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## How I adapt Scrum in regulated or integration-heavy work {#adapt}
+
+Scrum works best when governance scales with risk rather than becoming permanent bureaucracy.
+
+- In regulated or high-risk delivery, I add explicit gates for security, privacy, and release readiness, and I define who approves each gate using RACI.
+- In vendor-dependent delivery, I add integration milestones, explicit dependency due dates, and escalation triggers so the sprint does not fail silently.
+- In multi-stakeholder environments, I keep decisions written down (what we decided, why, and who approved) so scope and priorities do not reset every week.
+- In production services, I treat operational readiness as part of DoD, not as a post-release afterthought.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
+## Typical artifacts I maintain {#artifacts}
+
+- Product Backlog and sprint backlog (with acceptance criteria and evidence links)
+- DoR checklist and DoD checklist
+- Board workflow definition and WIP limits
+- RAID log when risk and dependencies are non-trivial
+- Release readiness checklist and evidence pack for higher-risk releases
+- Sprint notes that capture decisions, trade-offs, and improvement actions
 
 <hr>
 
@@ -57,5 +440,3 @@ I use Agile/Scrum as an execution system for predictable iteration, fast feedbac
   · <a href="/project-delivery/sdlc/">SDLC in practice</a>
   · <a href="/project-delivery/">Back to Project Delivery &amp; Methods</a>
 </p>
-
-
