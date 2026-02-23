@@ -499,29 +499,29 @@ I use this copy-friendly checklist.
 A backlog item is **Ready** when all required checks below are true.
 
 **1) Outcome and success**
-- [ ] The item states the user or business outcome in one sentence.
-- [ ] The item states a success measure (for example, a dashboard metric, a pass rate, or a workflow completion rate).
-- [ ] The Product Owner confirms the priority and why it matters now.
+- The item states the user or business outcome in one sentence.
+- The item states a success measure (for example, a dashboard metric, a pass rate, or a workflow completion rate).
+- The Product Owner confirms the priority and why it matters now.
 
 **2) Scope clarity**
-- [ ] The in-scope behaviour is clear.
-- [ ] The out-of-scope behaviour is stated so expectations do not drift.
-- [ ] Edge cases that could change design are named (for example, offline behaviour, retries, idempotency, concurrency).
+- The in-scope behaviour is clear.
+- The out-of-scope behaviour is stated so expectations do not drift.
+- Edge cases that could change design are named (for example, offline behaviour, retries, idempotency, concurrency).
 
 **3) Acceptance criteria**
-- [ ] Acceptance criteria are written as pass/fail statements.
-- [ ] Acceptance criteria cover the happy path and at least the top failure modes.
-- [ ] Acceptance criteria reference where evidence will live (for example, test results, screenshots, logs, or a monitoring dashboard).
+- Acceptance criteria are written as pass/fail statements.
+- Acceptance criteria cover the happy path and at least the top failure modes.
+- Acceptance criteria reference where evidence will live (for example, test results, screenshots, logs, or a monitoring dashboard).
 
 **4) Dependencies and constraints**
-- [ ] Dependencies are listed with owners and expected dates (for example, vendor build, access approval, environment readiness, data availability).
-- [ ] Required approvals are known (for example, security review, privacy review, production change approval).
-- [ ] Non-functional constraints are stated when they matter (for example, performance, reliability, audit, data retention).
+- Dependencies are listed with owners and expected dates (for example, vendor build, access approval, environment readiness, data availability).
+- Required approvals are known (for example, security review, privacy review, production change approval).
+- Non-functional constraints are stated when they matter (for example, performance, reliability, audit, data retention).
 
 **5) Sizing and plan-ability**
-- [ ] Developers can estimate the item.
-- [ ] The item is small enough for the sprint, or it has been split into smaller items.
-- [ ] The team confirms that the work does not require unknown external lead time inside the sprint.
+- Developers can estimate the item.
+- The item is small enough for the sprint, or it has been split into smaller items.
+- The team confirms that the work does not require unknown external lead time inside the sprint.
 
 If any checkbox is not true, I keep the item in refinement and I do not pull it into sprint planning.
 
@@ -739,39 +739,39 @@ Below is the DoD I use for integration-heavy systems and production services. Te
 ### DoD (copy-friendly checklist) {#dod-checklist}
 
 **1) Functional completion**
-- [ ] The implementation meets the acceptance criteria.
-- [ ] The key failure modes are handled and tested (for example, timeout, retries, validation errors).
+- The implementation meets the acceptance criteria.
+- The key failure modes are handled and tested (for example, timeout, retries, validation errors).
 
 **2) Code quality**
-- [ ] Code is merged via review, and review feedback has been addressed.
-- [ ] Automated tests pass in the pipeline.
-- [ ] Configuration is externalised and documented.
+- Code is merged via review, and review feedback has been addressed.
+- Automated tests pass in the pipeline.
+- Configuration is externalised and documented.
 
 **3) Test evidence**
-- [ ] Unit and integration tests exist and pass.
-- [ ] If end-to-end testing is needed, evidence is attached or linked.
-- [ ] If **SIT (System Integration Testing)** or **UAT (User Acceptance Testing)** is required, the entry criteria are met and the plan is updated.
+- Unit and integration tests exist and pass.
+- If end-to-end testing is needed, evidence is attached or linked.
+- If **SIT (System Integration Testing)** or **UAT (User Acceptance Testing)** is required, the entry criteria are met and the plan is updated.
 
 **4) Security and privacy (when relevant)**
-- [ ] Access control is least-privilege and reviewed.
-- [ ] Secrets are handled correctly and are not stored in code.
-- [ ] If personal data is involved, the required privacy review is completed and recorded, including **DPIA (Data Protection Impact Assessment)**-style risk thinking when risk is non-trivial.
+- Access control is least-privilege and reviewed.
+- Secrets are handled correctly and are not stored in code.
+- If personal data is involved, the required privacy review is completed and recorded, including **DPIA (Data Protection Impact Assessment)**-style risk thinking when risk is non-trivial.
 
 **5) Operational hooks (production readiness)**
-- [ ] Logs include correlation IDs and meaningful error context.
-- [ ] Metrics exist for the critical path (success rate, latency, error rate).
-- [ ] Alerts exist for the top failure modes, and alert ownership is clear.
-- [ ] A basic runbook section exists (how to check health, how to mitigate common failures).
+- Logs include correlation IDs and meaningful error context.
+- Metrics exist for the critical path (success rate, latency, error rate).
+- Alerts exist for the top failure modes, and alert ownership is clear.
+- A basic runbook section exists (how to check health, how to mitigate common failures).
 
 **6) Release readiness (when shipping is in scope)**
-- [ ] Release notes describe what changed and what to watch.
-- [ ] A rollback path is defined, and rollback triggers are stated.
-- [ ] If feature flags are used, the enable and disable plan is documented.
-- [ ] Post-release verification steps are written and owned.
+- Release notes describe what changed and what to watch.
+- A rollback path is defined, and rollback triggers are stated.
+- If feature flags are used, the enable and disable plan is documented.
+- Post-release verification steps are written and owned.
 
 **7) Documentation**
-- [ ] User-facing or operational documentation is updated.
-- [ ] Interface changes are documented with versioning and compatibility notes.
+- User-facing or operational documentation is updated.
+- Interface changes are documented with versioning and compatibility notes.
 
 If any checkbox is not true, the item is not Done. It may be “nearly done,” but it is not Done.
 
