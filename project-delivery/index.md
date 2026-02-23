@@ -78,4 +78,4 @@ These pages describe the delivery approach I use to take initiatives from idea t
 
 - 🤝 **Service Delivery & Partner Management**
   How I manage vendor/partner-led delivery, SLAs, release readiness, and operational handover.
-  🔎 <a href="/project-delivery/service-delivery/">Read: Service Delivery & Partner Management →</a> 
+  🔎 <a href="/project-delivery/service-delivery/">Read: Service Delivery & Partner Management →</a>
