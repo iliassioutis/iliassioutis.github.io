@@ -13,8 +13,90 @@ The page is intentionally practical: it shows the checklists, templates, and rul
 
 ---
 
+## How Scrum runs end-to-end (the operating loop) {#how-scrum-runs}
+
+If you have never worked in Scrum before, this is the simplest accurate description of how the system runs from request → backlog → sprint → release.
+
+### Step 0 — Agree the product goal and constraints (so we do not build “random work”)
+Before we start sprints, the Product Owner aligns stakeholders on:
+- the goal (what outcome matters and why),
+- the constraints (for example, security, privacy, regulatory approvals, vendor lead times, release windows),
+- and the success measures (what metric or signal proves we achieved the goal).
+
+This creates direction so the backlog does not become a pile of unrelated requests.
+
+### Step 1 — Capture requests into an intake (so we do not lose context)
+When a stakeholder asks for something, we do not immediately “turn it into a sprint.”  
+We first capture it as a backlog candidate with:
+- the problem and who is affected,
+- the desired outcome and why it matters now,
+- the success measure (what will change when it is done),
+- the deadline driver (what external event forces a date),
+- dependencies (teams, vendors, access approvals, environments),
+- and constraints (security, privacy, compliance, operational requirements).
+
+### Step 2 — Convert the request into backlog items (so it becomes deliverable work)
+We break the request into small backlog items that can be delivered and verified:
+- We write user stories (or tasks) that describe a specific outcome.
+- We add testable acceptance criteria so “done” is unambiguous.
+- We split large items until each item fits a sprint and does not hide unknown dependencies.
+
+### Step 3 — Refine and make items Ready (so sprint planning is predictable)
+Backlog Refinement is the preparation step.
+The team improves clarity and reduces risk until the best candidates meet the Definition of Ready (DoR).
+At any time, we aim to keep the next 1–2 sprints worth of work in a Ready state.
+
+### Step 4 — Order the backlog (prioritization is not random)
+The Product Owner orders the backlog using consistent criteria, usually:
+- value (how much benefit it brings),
+- urgency (what deadline or business driver exists),
+- risk reduction (what prevents incidents, failures, or compliance problems),
+- dependencies (what unlocks other work),
+- and effort (what it costs in time and capacity, based on team estimates).
+
+If two items compete, the Product Owner makes the scope trade-off and records the decision.
+
+### Step 5 — Sprint Planning (we commit to a goal based on capacity)
+At sprint planning:
+- the Product Owner proposes a sprint goal (one sentence outcome),
+- Developers estimate and select work from the Ready items,
+- the team commits to a realistic scope based on capacity and known constraints,
+- and we call out sprint risks and sprint dependencies explicitly.
+
+### Step 6 — Sprint execution (work flows across the board, not by “status meetings”)
+During the sprint:
+- Developers pull work from “To Do (DoR passed)” into “In Progress.”
+- We limit Work In Progress (WIP) so we finish items rather than start many items.
+- The Daily Scrum focuses on coordination and removing blockers.
+- Work is not considered Done until it meets the Definition of Done (DoD) and evidence is attached.
+
+### Step 7 — Sprint Review (we demo working increments and confirm acceptance)
+At sprint review:
+- we demo working increments against acceptance criteria,
+- the Product Owner accepts or rejects items based on evidence,
+- and we capture feedback as backlog updates (new items, changed priorities, clarified acceptance criteria).
+
+### Step 8 — Sprint Retrospective (we improve how we work)
+At the retrospective:
+- we identify the biggest delivery friction (for example, late changes, testing bottlenecks, unclear requirements),
+- we agree 2–3 improvement actions with owners and due dates,
+- and we apply those improvements in the next sprint.
+
+### Step 9 — Release (when shipping is in scope)
+If the increment is going to production:
+- we run release readiness checks (tests, monitoring readiness, rollback plan),
+- we ship in a controlled way (often staged rollout),
+- and we verify health after release using monitoring and key user journeys.
+
+<blockquote>
+⬆ <a href="#on-this-page">Back to navigation</a>
+</blockquote>
+
+---
+
 ## On this page {#on-this-page}
 
+- [How Scrum runs end-to-end (the operating loop)](#how-scrum-runs)
 - [Operating principles](#principles)
 - [Roles and decision rights](#roles)
 - [Backlog system](#backlog)
@@ -50,7 +132,7 @@ I use Scrum as a **delivery control system** that helps a team ship reliable inc
 
 - I keep delivery risk visible using a lightweight **RAID log (Risks, Assumptions, Issues, Dependencies)** when uncertainty or external dependencies are non-trivial (for example, vendor deliverables, access approvals, compliance gates, or integration test windows).  
   - I review RAID regularly (at least weekly), and I keep each entry actionable (owner, impact, mitigation, due date, and escalation trigger).  
-  - *Example:* “Dependency: vendor must deliver SDK version 2.3 by Thursday. Owner: vendor delivery lead. Risk: integration testing slips. Mitigation: confirm release candidate by Tuesday. Escalate: if no candidate by Tuesday 18:00, de-scope the integration from this release.”
+  - *Example:* “Dependency: vendor must deliver SDK version 2.3 by Thursday. Owner: vendor delivery lead. Risk: if the SDK arrives late or is unstable, we will not complete integration testing, and the release will slip. Mitigation: require a usable early build by Tuesday so we can start integration and catch incompatibilities early (provide version + package + install instructions, and we run a smoke test in the test environment). Escalation trigger: if no usable build is available by Tuesday 18:00, we de-scope the integration from this release and ship the remaining scope.”
 
 - I make change explicit, because silent change is the main cause of missed commitments. If scope, dates, or cost assumptions change, I record the decision, I confirm who approved it, and I update the plan so everyone sees the new baseline.  
   - I use a simple rule: if urgent work enters a sprint, something of similar size leaves the sprint, and the trade-off is written down.  
