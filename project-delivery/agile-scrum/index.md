@@ -393,18 +393,30 @@ If an item cannot be sized confidently, I create a short, time-boxed investigati
 
 ### Boards (how work flows from idea → sprint → Done) {#boards}
 
-Scrum does not require a specific board design, but a board is one of the best ways to make work **transparent** and keep flow **predictable**.  
-I use two linked boards, because they solve two different problems:
+Scrum does not require a specific board design, but boards are one of the best ways to make work **transparent** and keep flow **predictable**.
 
-- The **pre-sprint intake board** prevents unclear work from entering a sprint.
-- The **sprint execution board** shows real delivery state during the sprint.
+We use **one Product Backlog** as the single source of truth for overall scope and priorities.  
+The two boards below do not replace the Product Backlog. They show how Product Backlog items move through the preparation stages (from unclear to Ready for sprint planning) and then through sprint execution:
+
+- The **pre-sprint intake board** shows Product Backlog items *before* they are selected into a sprint, and it makes “readiness” visible (Draft → Refinement → Ready).
+- The **sprint execution board** shows the items selected into the current sprint (the Sprint Backlog), and it makes execution state visible (To Do → In Progress → In Review → In Test → Done).
+
+**How the pieces fit together (one item, two views)**
+
+Product Backlog item (ordered by priority)  
+→ moves across the intake board: Draft → Refinement → Ready (DoR passed)  
+→ is selected at Sprint Planning into the Sprint Backlog  
+→ moves across the sprint board: To Do → In Progress → In Review → In Test → Done
+
+The Product Backlog keeps priority order; the boards show the same items by readiness and execution state, so we can see flow and blockers without creating duplicate work.
 
 ---
 
 #### 1) Pre-sprint intake board (prepare work so sprint planning is fast) {#pre-sprint-board}
 
 This board answers one question: *“Is this work clear enough to plan and deliver?”*  
-Items move left-to-right until they are eligible to be pulled into a sprint.
+Items move left-to-right as we reduce uncertainty and make them “Ready.”  
+Nothing is duplicated and nothing becomes a different item; the same Product Backlog item simply changes state as we prepare it for sprint planning.
 
 **Typical columns**
 
@@ -420,6 +432,9 @@ Items move left-to-right until they are eligible to be pulled into a sprint.
 - **Selected for Sprint**  
   The Product Owner and team have agreed to include the item in the next sprint based on priority and capacity.
 
+An item should enter **Selected for Sprint** only after it is **Ready (DoR passed)**.  
+The only exception is true urgent work (for example, a production incident or a critical security fix), which is handled using the mid-sprint swap rule.
+
 **Flow rule (the key discipline)**  
 An item cannot move into **Ready (DoR passed)** unless it meets the DoR checklist (outcome, testable acceptance criteria, dependencies, constraints, and estimate readiness).
 
@@ -434,6 +449,9 @@ An item cannot move into **Ready (DoR passed)** unless it meets the DoR checklis
 - It moves to **Ready (DoR passed)** once the DoR checklist is satisfied
 - It moves to **Selected for Sprint** when the team confirms it fits the next sprint goal and capacity
 
+A Product Backlog item is not removed when it is refined or selected.  
+It remains a Product Backlog item throughout; selecting it into a sprint simply means it is now part of the Sprint Backlog for that sprint.
+
 ---
 
 #### 2) Sprint execution board (deliver work inside the sprint) {#sprint-board}
@@ -444,7 +462,7 @@ The sprint board is where Developers pull work and where I detect bottlenecks ea
 **Typical columns**
 
 - **To Do (DoR passed)**  
-  Work that is in the sprint scope and is ready for Developers to start. “To Do” is the sprint version of “Ready.”
+  Work that is in the sprint scope and is ready for Developers to start. “To Do” contains the items we selected into the sprint that were already Ready at planning time (DoR passed), so Developers can start them without discovery work.
 
 - **In Progress**  
   Work actively being implemented. I limit **WIP (Work In Progress)** here to protect flow.
