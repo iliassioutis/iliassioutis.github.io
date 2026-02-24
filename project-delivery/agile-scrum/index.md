@@ -614,15 +614,15 @@ I run Scrum events with explicit inputs and explicit outputs. If an event does n
 
 ### Daily Scrum
 
-**Purpose**: Coordinate work and unblock flow within 15 minutes.  
-**Inputs**: Board state, blockers, planned work for the next 24 hours.  
-**Outputs**: Clear next steps, named unblockers, escalations triggered when needed.
+**Purpose**: Inspect progress toward the sprint goal and adapt the plan for the next 24 hours (within 15 minutes).  
+**Inputs**: Sprint goal, current board state, new information since the last Daily Scrum (completed work, new blockers, new risks).  
+**Outputs**: An updated 24-hour plan (who will do what next), named owners for blockers, and escalations triggered when needed.
 
-### Sprint review
+### Sprint Review
 
-**Purpose**: Validate outcomes with stakeholders using working increments.  
-**Inputs**: Completed items that meet the Definition of Done, demo plan, release notes if shipping.  
-**Outputs**: Acceptance decisions, feedback captured as backlog items, priority adjustments.
+**Purpose**: Inspect the increment with stakeholders and decide what to do next based on what was built.  
+**Inputs**: A working increment that meets the Definition of Done, the acceptance criteria for the items being reviewed, and the relevant stakeholders.
+**Outputs**: Acceptance decisions, feedback captured as new or updated backlog items, and an explicit backlog re-ordering by the Product Owner (they move high-value feedback items up so they are addressed sooner, they move lower-value planned items down if priorities changed, they split or rewrite items when the scope needs adjustment and then re-order them, and they decide whether urgent fixes or usability improvements should be scheduled next).
 
 ### Sprint retrospective
 
