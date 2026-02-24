@@ -518,13 +518,18 @@ A backlog item is **Ready** when all required checks below are true.
 
 **1) Outcome and success**
 - The item states the user or business outcome in one sentence.
-- The item states a success measure (for example, a dashboard metric, a pass rate, or a workflow completion rate).
+- The item states a success measure (for example, a dashboard metric, a pass rate, or a key user-journey success rate).
 - The Product Owner confirms the priority and why it matters now.
 
 **2) Scope clarity**
-- The in-scope behaviour is clear.
-- The out-of-scope behaviour is stated so expectations do not drift.
-- Edge cases that could change design are named (for example, offline behaviour, retries, idempotency, concurrency).
+- The in-scope behaviour is clear (I describe what the user can do and what the system must do).
+- The out-of-scope behaviour is stated so expectations do not drift (I state what we will not build in this iteration).
+- Edge cases that could change design are named (for example:
+  - **offline behaviour:** I explain what the user sees and what the system does when there is no network connection (for example, show a clear “offline” message, block actions that require the network, and optionally show the last known data with a stale warning).
+  - **retries:** I state whether the system retries a failed call, how many attempts it makes, and how long it waits between attempts.
+  - **idempotency:** I state how we prevent duplicate side effects when the same request is sent twice (for example, a retry must not create two payments or two status updates; we use an idempotency key or a de-duplication rule).
+  - **concurrency:** I state what should happen when multiple users or processes act at the same time (for example, two agents open the same order simultaneously; we keep the newest timestamped status and avoid conflicting updates).
+).
 
 **3) Acceptance criteria**
 - Acceptance criteria are written as pass/fail statements.
