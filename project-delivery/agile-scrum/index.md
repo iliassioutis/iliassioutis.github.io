@@ -586,6 +586,7 @@ As a customer support agent, I want to see the latest payment status for an orde
 
 5) **Auditability**
 - **Given** a status is updated, **when** the update is saved, **then** the system writes an audit entry that includes the old status, the new status, the timestamp, and the request correlation ID.
+**Why this matters:** this creates traceability. If a customer disputes a payment status or if support actions are questioned, we can reconstruct the exact history (what the status was, what it changed to, and when it changed). It also speeds up incident investigation, because we can link the UI action to the vendor call and the saved result using the correlation ID.
 
 This structure makes acceptance objective, and it makes “done” provable through evidence.
 
