@@ -14,7 +14,7 @@ title: AI & Workflow Assurance OS
 
 ## Overview
 
-Recently, I have been shaping a product direction around a gap I repeatedly see in practice: many teams can build AI-enabled workflows, but far fewer can release them through a process that is clearly traceable, defensible, and production-ready.
+Recently, I have been shaping a product direction around a gap I repeatedly see in practice: many teams can build AI-enabled workflows, but far fewer can release them through a process that is truly traceable, defensible, and ready for production.
 
 The broader framing is intentional. The product is not positioned as healthcare-specific compliance software. Instead, it is designed as a release-governance and assurance layer for any team shipping AI systems, automations, APIs, and data workflows into real operations.
 
@@ -361,7 +361,7 @@ That closed loop is what makes the platform operationally valuable.
 
 ### Version 1: Release Assurance Core
 
-The first paid version should stay focused.
+The initial release stays deliberately focused.
 
 Initial scope:
 
@@ -410,7 +410,7 @@ Broader platform direction:
 - policy engine
 - release page
 
-### Phase 2: commercial differentiator
+### Phase 2: governance and evidence layer
 
 - evidence-pack generation
 - approvals
@@ -425,7 +425,7 @@ Broader platform direction:
 - incident linkage
 - AI summary assistant
 
-That sequencing keeps the product commercially meaningful early while leaving room for richer capabilities later.
+That sequencing keeps the product focused on meaningful operational value early while leaving room for richer capabilities later.
 
 ---
 
