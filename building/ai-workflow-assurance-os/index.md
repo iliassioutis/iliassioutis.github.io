@@ -45,7 +45,7 @@ This is **not** intended to be:
 - generic compliance software
 - a narrow prompt-management tool
 - a pure Large Language Model (LLM) observability product
-- a conventional MLOps platform
+- a conventional machine-learning platform focused mainly on model deployment and monitoring
 - another dashboard-heavy AI utility
 
 The product is better described as:
