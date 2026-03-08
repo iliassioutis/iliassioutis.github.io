@@ -160,6 +160,12 @@ A set of dedicated pages explaining how I deliver projects end-to-end — SDLC, 
   </div>
 
   <div class="home-card">
+    <h3>What I am building now</h3>
+    <p>A Python-first platform for release governance and assurance across Artificial Intelligence (AI), agents, Application Programming Interfaces (APIs), and data workflows.</p>
+    <a href="/building/ai-workflow-assurance-os/">Read more →</a>
+  </div>
+
+  <div class="home-card">
     <h3>Service Delivery &amp; Partner Management</h3>
     <p>How I manage external vendors, SLAs, delivery governance, release readiness, and operational handover.</p>
     <a href="/project-delivery/service-delivery/">Read more →</a>
