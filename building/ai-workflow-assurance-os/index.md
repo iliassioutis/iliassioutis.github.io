@@ -16,7 +16,7 @@ title: AI & Workflow Assurance OS
 
 Recently, I have been shaping a product direction around a gap I repeatedly see in practice: many teams can build AI-enabled workflows, but far fewer can release them through a process that is truly traceable, defensible, and ready for production.
 
-The broader framing is intentional. The product is not positioned as healthcare-specific compliance software. Instead, it is designed as a release-governance and assurance layer for any team shipping AI systems, automations, APIs, and data workflows into real operations.
+The broader framing is deliberate. The product is not positioned as healthcare-specific compliance software. Instead, it is designed as a release-governance and assurance layer for any team shipping AI systems, automations, APIs, and data workflows into real operations.
 
 In plain terms, the goal is simple:
 
@@ -244,7 +244,7 @@ That would be especially useful for enterprise buyers, auditors, and consultanci
 
 The product is not trying to win as a pure tracing or debugging tool.
 
-Its differentiation is that it is:
+Its differentiation comes from the fact that it is:
 
 - broader than LLM observability alone
 - designed to include APIs and data workflows, not only prompts and models
