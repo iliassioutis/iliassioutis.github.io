@@ -14,9 +14,9 @@ title: AI & Workflow Assurance OS
 
 ## Overview
 
-Over the last period, I have been shaping a product direction around a gap I repeatedly see in practice: many teams can build AI-enabled workflows, but far fewer can release them through a process that is clearly traceable, defensible, and production-ready.
+Recently, I have been shaping a product direction around a gap I repeatedly see in practice: many teams can build AI-enabled workflows, but far fewer can release them through a process that is clearly traceable, defensible, and production-ready.
 
-The broader framing is intentional. The product is not positioned as healthcare-only compliance software. Instead, it is designed as a release-governance and assurance layer for any team shipping AI, automations, APIs, and data workflows into real operations.
+The broader framing is intentional. The product is not positioned as healthcare-specific compliance software. Instead, it is designed as a release-governance and assurance layer for any team shipping AI, automation workflows, APIs, and data workflows into real operations.
 
 In plain terms, the goal is simple:
 
@@ -67,7 +67,7 @@ A typical implementation would connect:
 - evaluation suites
 - release environments
 
-The platform would then provide one place to govern, validate, approve, monitor, and evidence the release lifecycle.
+The platform would then provide one place to govern, validate, approve, monitor, and generate evidence across the release lifecycle.
 
 ---
 
@@ -427,9 +427,9 @@ Initial scope:
 - approval gate
 - evidence-pack generator
 
-This is the first meaningful commercial slice because it solves a painful pre-production problem immediately.
+This is the first meaningful product slice because it solves a painful pre-production problem immediately.
 
-### Version 1.5: Runtime linkage
+### Version 1.1: Runtime linkage
 
 Next expansion:
 
