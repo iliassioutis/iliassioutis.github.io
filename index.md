@@ -67,6 +67,21 @@ This site serves as a **professional evidence hub** showcasing delivery artifact
 **Focus:** digital health & enterprise platforms · regulated delivery & governance · cloud & integration delivery  
 **Strengths:** requirements → build → SIT/UAT → release · RAID/RACI/change control · GDPR + AES-256/TLS · validation & reproducibility artifacts
 
+## What I am building now
+
+I am currently designing and building **AI & Workflow Assurance OS**, a Python-first platform for release governance and assurance across **Artificial Intelligence (AI)**, agents, **Application Programming Interfaces (APIs)**, and data workflows.
+
+The goal is to help engineering and delivery teams prove that business-critical AI and automation are tested, traceable, approved, monitored, and ready for production.
+
+The platform direction includes workflow and asset registry, evaluation pipelines, policy-driven approval gates, runtime assurance, incident linkage, and evidence-pack generation.
+
+<p style="margin: 0.8rem 0 0;">
+  <a href="/building/ai-workflow-assurance-os/"
+     style="font-weight:600; text-decoration:none;">
+    Read the full product direction →
+  </a>
+</p>
+
 ---
 
 ## Evidence & governance highlights
