@@ -261,31 +261,6 @@ In one sentence:
 
 ---
 
-## Target buyers and users
-
-The primary buyer is unlikely to be an individual developer.
-
-The most likely buyers are:
-
-- Head of Engineering
-- Head of Data / AI
-- Chief Technology Officer (CTO)
-- Platform Engineering lead
-- Security or Risk lead for AI-enabled products
-- Delivery or Solutions lead in a consultancy building AI systems for clients
-
-The user base is broader and includes:
-
-- software engineers
-- machine learning engineers
-- technical project managers
-- product managers
-- Quality Assurance (QA)
-- risk and compliance reviewers
-- client-facing delivery leads
-
----
-
 ## Architecture and build direction
 
 From a technical perspective, I am shaping this as a modular Python-first back end with a modern front end.
