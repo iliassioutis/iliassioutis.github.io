@@ -286,36 +286,6 @@ The user base is broader and includes:
 
 ---
 
-## Best initial market niche
-
-The strongest general first niche is:
-
-**mid-sized business-to-business (B2B) software companies and consultancies shipping customer-facing AI workflows**
-
-This is attractive because these organizations:
-
-- move fast enough to buy tooling
-- feel real release risk
-- often lack mature internal governance platforms
-- need evidence for customers, security reviews, and sales cycles
-- are broad enough to avoid a healthtech-only story
-
-A particularly strong sub-wedge is:
-
-**consultancies and solution integrators delivering AI systems for clients**
-
-They often need:
-
-- release evidence
-- approval history
-- exportable reports
-- client-facing trust artifacts
-- controlled handover
-
-That is a practical and commercially credible starting point.
-
----
-
 ## Architecture and build direction
 
 From a technical perspective, I am shaping this as a modular Python-first back end with a modern front end.
