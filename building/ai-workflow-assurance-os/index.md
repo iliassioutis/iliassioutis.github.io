@@ -16,7 +16,7 @@ title: AI & Workflow Assurance OS
 
 Recently, I have been shaping a product direction around a gap I repeatedly see in practice: many teams can build AI-enabled workflows, but far fewer can release them through a process that is clearly traceable, defensible, and production-ready.
 
-The broader framing is intentional. The product is not positioned as healthcare-specific compliance software. Instead, it is designed as a release-governance and assurance layer for any team shipping AI, automation workflows, APIs, and data workflows into real operations.
+The broader framing is intentional. The product is not positioned as healthcare-specific compliance software. Instead, it is designed as a release-governance and assurance layer for any team shipping AI systems, automations, APIs, and data workflows into real operations.
 
 In plain terms, the goal is simple:
 
@@ -175,7 +175,7 @@ The key value is not merely collecting telemetry. The real value is linking runt
 
 ### 5. Evidence packs
 
-Evidence generation is one of the most commercially attractive parts of the product.
+Evidence generation is one of the most practically valuable parts of the product.
 
 A team should be able to produce a structured evidence pack containing:
 
@@ -314,7 +314,7 @@ Because trust is central, the platform should be designed with:
 
 The data model is central to the product.
 
-A minimum schema would likely include:
+The core schema for the platform includes:
 
 - workspace
 - system
@@ -398,7 +398,7 @@ Broader platform direction:
 
 ---
 
-## What I would build first
+## Implementation sequence
 
 ### Phase 1: control backbone
 
@@ -468,21 +468,6 @@ The platform should support:
 - rollback recommendation
 
 These use cases keep the product generic while still making the value concrete.
-
----
-
-## What I would avoid building first
-
-I would not begin with:
-
-- a full no-code workflow builder
-- custom foundation model hosting
-- a heavy data-labeling platform
-- a generic chatbot interface
-- an excessive dashboard surface
-- dozens of integrations before the core workflow is proven
-
-The core value should remain focused on control, evidence, and release assurance.
 
 ---
 
