@@ -20,9 +20,9 @@ The broader framing is deliberate. The product is not positioned as healthcare-s
 
 In plain terms, the goal is simple:
 
-**Help engineering and delivery teams prove that their AI, agents, APIs, and data workflows are tested, traceable, approved, monitored, and ready for production.**
+**Help engineering and delivery teams prove that their AI systems, agents, APIs, and data workflows are tested, traceable, approved, monitored, and ready for production.**
 
-That positioning is broader than healthtech, while still remaining specific enough that a buyer can immediately understand why it matters.
+This direction is intentionally broader than healthtech while remaining grounded in a clear operational problem: helping teams release AI-enabled systems more safely, transparently, and consistently.
 
 ---
 
