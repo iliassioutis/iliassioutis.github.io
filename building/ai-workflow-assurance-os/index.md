@@ -203,14 +203,14 @@ The evaluation layer should support both AI-specific checks and checks on the wi
 
 Examples include:
 
-- field-extraction accuracy and document-level pass rates
+- field-extraction accuracy and document-level pass rates (the percentage of whole documents that pass the required checks successfully)
 - hallucination checks (checks for invented, unsupported, or incorrect output)
 - business-rule validation
 - output-format validation
 - latency
 - cost per request or transaction
 - checks that prompt changes do not reduce reliability
-- jailbreak or injection resistance (checks that the system resists malicious or misleading inputs)
+- jailbreak or injection resistance (checks that the system resists inputs designed to trick it into ignoring rules, following malicious instructions, or producing unsafe or incorrect output)
 - Personally Identifiable Information (PII) leakage checks
 - API contract validation (checks that connected APIs still return the expected responses and data structures)
 - reconciliation checks for data workflows (checks that data moving across systems remains complete, consistent, and correctly matched)
