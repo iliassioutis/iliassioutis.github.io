@@ -94,11 +94,8 @@ Together, these components form the operational surface that the platform is int
 The platform is intended to help teams:
 
 - register and link the main records needed for release governance, including:
-  - versioned assets, such as AI systems (the overall solutions being governed), execution flow definitions (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent workflow definitions (defined multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems), prompts, model configurations (the selected model plus settings and parameters), dataset versions used for testing, validation, or retrieval, APIs, tools, and external dependencies (connected services, tools, and downstream systems that the solution relies on)
-  - release records, such as:
-    - evaluation results (recorded pre-release evidence such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency and cost results, API-response checks, and policy-check results)
-    - approval decisions
-    - evidence packs and supporting documents attached to a release
+  - versioned assets, such as AI system definitions (the defined systems being governed), execution flow definitions (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent workflow definitions (defined multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems), prompts, model configurations (the selected model plus settings and parameters), dataset versions used for testing, validation, or retrieval, evaluation suite definitions, policy bundles, API definitions, tool definitions, and external dependency records (records describing connected services, tools, and downstream systems that the solution relies on)
+  - release records, such as release candidates, evaluation results (recorded pre-release evidence such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency results, cost results, and API-response checks), policy-check results, approval requests, approval decisions, evidence packs, and supporting documents attached to a release
   - operational records linked to a release, such as deployments, runtime events, and incidents
 
 - run pre-release evaluation and validation pipelines, including:
@@ -135,13 +132,17 @@ The core records can be grouped into three categories:
 #### Versioned assets
 These are design-time or configuration items that change over time and should be versioned.
 
+- AI system definition
+- execution flow definition
+- agent workflow definition
 - prompt
 - model configuration
 - dataset version
-- evaluation suite
+- evaluation suite definition
 - policy bundle
-- execution flow definition
-- agent workflow definition
+- API definition
+- tool definition
+- external dependency record
 
 Typical fields for versioned assets include:
 - name
@@ -153,9 +154,10 @@ Typical fields for versioned assets include:
 - created date
 
 #### Release records
-These describe what is being proposed, reviewed, approved, or packaged for release.
+These describe what is being proposed, evaluated, reviewed, approved, or packaged for release.
 
 - release candidate
+- evaluation result
 - approval request
 - approval decision
 - evidence pack
@@ -163,8 +165,8 @@ These describe what is being proposed, reviewed, approved, or packaged for relea
 Typical fields for release records include:
 - target environment
 - related asset versions
-- approval status
 - policy-check results
+- approval status
 - linked evidence
 - created date
 
