@@ -199,23 +199,23 @@ This is important because the platform should make it possible to trace a produc
 
 ### 2. Evaluation and certification
 
-The evaluation layer should support both AI-specific and workflow-specific checks.
+The evaluation layer should support both AI-specific checks and checks on the wider execution flow around the AI system.
 
 Examples include:
 
-- accuracy or task score
-- hallucination checks
+- field-extraction accuracy and document-level pass rates
+- hallucination checks (checks for invented, unsupported, or incorrect output)
 - business-rule validation
-- structured-output validation
+- output-format validation
 - latency
-- cost
-- prompt robustness
-- jailbreak or injection resistance
+- cost per request or transaction
+- checks that prompt changes do not reduce reliability
+- jailbreak or injection resistance (checks that the system resists malicious or misleading inputs)
 - Personally Identifiable Information (PII) leakage checks
-- API contract validation
-- reconciliation checks for data workflows
+- API contract validation (checks that connected APIs still return the expected responses and data structures)
+- reconciliation checks for data workflows (checks that data moving across systems remains complete, consistent, and correctly matched)
 
-The product should therefore be broader than an LLM-only platform. It should support AI evaluations and workflow validations within one assurance model.
+The product should therefore be broader than an LLM-only platform. It should support both AI evaluations and wider execution-flow validations within one release-governance and validation framework.
 
 ### 3. Policy and approval gates
 
