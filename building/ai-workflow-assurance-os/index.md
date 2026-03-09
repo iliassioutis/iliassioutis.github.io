@@ -265,28 +265,28 @@ A team should be able to produce a structured evidence pack containing:
 - approvals
 - known risks
 - rollback plan
-- environment details
+- environment details (the specific environment in which the version was tested, approved, or deployed, such as test, staging, or production, together with system configuration, relevant model and prompt versions, connected services, and other deployment context needed to understand what was tested or released)
 
 Exports could eventually include:
 
 - PDF
-- signed HTML bundle
-- JSON evidence package
+- signed HTML bundle (an HTML export packaged with integrity protection or digital signing so the contents can be shared and later verified as unchanged)
+- JSON evidence package (a machine-readable structured export of the evidence data so other systems can ingest, process, or archive it programmatically)
 - customer-facing trust report
 
 This reduces the manual effort needed for internal governance, client communication, and audit preparation.
 
 ### 6. Incident and rollback governance
 
-When something breaks, the platform should help teams:
+When a released version causes a production problem, the platform should help teams:
 
-- create incidents manually or automatically
-- identify affected releases
-- show recent changes
-- attach traces and supporting artifacts
-- propose rollback or containment actions
-- record who approved the decision
-- generate an incident summary
+- create an incident record either manually by a user or automatically when predefined error, failure, cost, or safety conditions are triggered
+- identify the exact release version and environment linked to the incident
+- show the exact recent changes linked to that release, including prompt changes, model-configuration changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when that version was put into production
+- attach step-by-step execution traces, internal service error logs, API error logs, requests that returned errors or invalid data, screenshots of the production error, failing output, monitoring view, or other visible evidence linked to the incident, exported evidence files, and other supporting records needed to understand the incident
+- propose concrete rollback or containment actions, such as reverting to the previous release version, disabling a failing tool or API call, or sending low-confidence or failed cases to a human reviewer
+- record who decided whether to roll back the release, keep it running with containment measures, or suspend new traffic to it, who reviewed that decision, and who gave final approval
+- generate a structured incident summary describing what failed, which release was affected, what actions were taken, and what follow-up work remains
 
 That closes the loop between release governance and production accountability.
 
