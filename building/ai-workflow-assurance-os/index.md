@@ -224,32 +224,32 @@ A central capability of the platform is the policy engine.
 Policies should behave like operational business rules, such as:
 
 - production release requires security review if risk is high
-- customer-facing AI must pass a hallucination threshold (must stay below an agreed rate of invented, unsupported, or incorrect output)
+- customer-facing AI must pass a hallucination threshold before release (must remain below an agreed maximum rate of invented, unsupported, or incorrect output)
 - a new prompt version cannot go live unless the required regression tests have been run and passed
 - cost per transaction cannot rise above an agreed threshold
 - systems handling regulated or sensitive data require a named approver before release
-- API schema (response or request-structure) changes require downstream contract validation
+- API request or response structure changes require downstream contract validation
 - severe incidents can block further release until they have been assessed and formally cleared
 
 This turns governance from static policy documentation into executable release logic.
 
 ### 4. Runtime assurance
 
-Once a workflow is live, the platform should ingest and connect runtime signals such as:
+Once an AI system, execution flow, or agent flow is running in production, the platform should ingest and connect runtime signals such as:
 
-- traces
+- execution traces (step-by-step records showing how the system processed a request, which steps ran, which tools or APIs were called, and where delays or failures occurred)
 - model usage
 - latency
 - failures
-- structured outputs
+- structured outputs (outputs returned in a defined format, such as JSON fields)
 - tool calls
-- anomaly scores
+- anomaly scores (measures indicating unusual behavior)
 - API errors
-- schema drift
+- schema drift (changes in expected data structure)
 - cost spikes
-- moderation or safety events
+- moderation or safety events (cases in which the system output or user input triggered safety controls, such as harmful-content flags, policy violations, blocked responses, or escalation to review)
 
-The key value is not merely collecting telemetry. The real value is linking runtime issues back to release version, prompt version, dataset snapshot, policy exceptions, and approval trail.
+The key value is not simply collecting operational data. The real value is linking production issues back to the exact release version, prompt version, model configuration, dataset version, policy exceptions, and approval decisions associated with that release.
 
 ### 5. Evidence packs
 
