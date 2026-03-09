@@ -92,7 +92,7 @@ Together, these components form the operational surface that the platform is int
 
 The platform is intended to help teams:
 
-- register workflows, prompts, models, datasets, APIs, and dependencies as versioned assets
+- register AI systems (the overall solution being governed), execution flows (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent flows, prompts, model configurations (the selected model plus settings and parameters), datasets, APIs, external dependencies (connected services, tools, and downstream systems the solution relies on), and release artifacts (evaluation results, approval records, policy results, and evidence linked to a release) as versioned assets
 - run evaluation and validation pipelines before release
 - apply policy-driven approval gates
 - monitor runtime behavior after deployment
