@@ -219,17 +219,17 @@ The product should therefore be broader than an LLM-only platform. It should sup
 
 ### 3. Policy and approval gates
 
-One of the strongest differentiators is the policy engine.
+A central capability of the platform is the policy engine.
 
 Policies should behave like operational business rules, such as:
 
 - production release requires security review if risk is high
-- customer-facing AI must pass a hallucination threshold
-- a new prompt version cannot go live without regression coverage
+- customer-facing AI must pass a hallucination threshold (must stay below an agreed rate of invented, unsupported, or incorrect output)
+- a new prompt version cannot go live unless the required regression tests have been run and passed
 - cost per transaction cannot rise above an agreed threshold
-- workflows touching regulated data require a named approver
-- API schema changes require downstream contract validation
-- severe incidents can freeze further release until acknowledged
+- systems handling regulated or sensitive data require a named approver before release
+- API schema (response or request-structure) changes require downstream contract validation
+- severe incidents can block further release until they have been assessed and formally cleared
 
 This turns governance from static policy documentation into executable release logic.
 
