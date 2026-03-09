@@ -95,8 +95,8 @@ The platform is intended to help teams:
 
 - register and link the main records needed for release governance, including:
   - versioned assets, such as AI system definitions (the defined systems being governed), execution flow definitions (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent workflow definitions (defined multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems), prompts, model configurations (the selected model plus settings and parameters), dataset versions used for testing, validation, or retrieval, evaluation suite definitions, policy bundles, API definitions, tool definitions, and external dependency records (records describing connected services, tools, and downstream systems that the solution relies on)
-  - release records, such as release candidates, evaluation results (recorded pre-release evidence such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency results, cost results, and API-response checks), policy-check results, approval requests, approval decisions, evidence packs, and supporting documents attached to a release
-  - operational records linked to a release, such as deployments, runtime events, and incidents
+  - release records, such as release candidate records, evaluation-result records (which may contain measured outcomes such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency results, cost results, and API-response checks), policy-check-result records, approval requests, approval decisions, evidence packs, and supporting documents attached to a release
+  - operational records linked to a release, such as deployment records, runtime events, and incident records
 
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
@@ -109,9 +109,9 @@ The platform is intended to help teams:
 
 - apply policy-driven approval gates before production release
 
-- monitor how the released system behaves in production, including execution traces, failures, latency, structured outputs, tool calls, API errors, cost spikes, and safety-related events
+- monitor how the released system behaves in production, including execution traces, model usage, failures, latency, structured outputs, tool calls, anomaly scores, API errors, schema drift, cost spikes, and safety-related events
 
-- connect incidents back to the exact release and change set
+- connect incidents back to the exact release and to the specific changes introduced by that release, including prompt changes, model-configuration changes, execution-flow-definition changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when the version was put into production
 
 - generate evidence packs that show what changed, what was tested, what failed, who approved, and what residual risk remains
 
@@ -154,26 +154,29 @@ Typical fields for versioned assets include:
 - created date
 
 #### Release records
-These describe what is being proposed, evaluated, reviewed, approved, or packaged for release.
+These describe what is being proposed, evaluated, checked against policy, reviewed, approved, or packaged for release.
 
 - release candidate
 - evaluation result
+- policy-check result
 - approval request
 - approval decision
 - evidence pack
+- supporting document attached to a release
+
+An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes.
 
 Typical fields for release records include:
 - target environment
 - related asset versions
-- policy-check results
-- approval status
+- record-specific outcome fields, such as measured evaluation results, policy-check pass/fail results, approval-request state, or approval-decision outcome
 - linked evidence
 - created date
 
 #### Operational records
 These describe what happened after release.
 
-- deployment
+- deployment record
 - runtime event
 - incident
 
@@ -184,16 +187,20 @@ Typical fields for operational records include:
 - timestamp
 - severity
 - record-specific state fields
-  - deployment status, such as pending, in progress, succeeded, failed, rolled back, or cancelled
+  - deployment-record status, such as pending, in progress, succeeded, failed, rolled back, or cancelled
   - runtime event type or outcome, such as observed, warning, error, timeout, or recovered
   - incident status, such as open, investigating, mitigating, resolved, or closed
 - linked traces, logs, or evidence
 
 A lineage view should show how these records connect across design, release, and production.
 
-For example, in an invoice-processing system, a release candidate should link to the exact prompt version, model configuration, execution flow definition, dataset version, evaluation results, policy-check results, and approval records used to justify that release.
+For example, in an invoice-processing system, a release candidate should link to the exact prompt version, model configuration, execution flow definition, dataset version, evaluation-result records, and policy-check-result records used to justify that release.
 
-Once that release candidate is deployed to production, the deployment record should link back to that exact release candidate. Runtime events observed in production should then link back to the deployment and the release candidate associated with it. If a production problem occurs, the incident record should link back to the affected deployment and release candidate so the team can trace the issue to the exact prompt version, model configuration, execution flow definition, dataset version, test results, policy checks, approvals, and release decision that led to it.
+An approval request should then link to that release candidate, and one or more approval decisions should link to the approval request.
+
+A release candidate may produce one or more deployment records across test, staging, and production environments, and may also produce multiple deployment records in the same environment if rollout attempts are retried, rolled back, or repeated. Each deployment record should therefore link back to the exact release candidate from which it was created.
+
+Runtime events observed in production should then link back to the specific deployment record in which they occurred and, through that deployment record, back to the release candidate associated with it. If a production problem occurs, the incident record should link back to the affected deployment record and release candidate so the team can trace the issue to the exact prompt version, model configuration, execution flow definition, dataset version, test results, policy checks, approvals, and release decision that led to it.
 
 ### 2. Evaluation and certification
 
@@ -247,7 +254,7 @@ Once an AI system, execution flow, or agent workflow is running in production, t
 - cost spikes
 - moderation or safety events (cases in which the system output or user input triggered safety controls, such as harmful-content flags, policy violations, blocked responses, or escalation to review)
 
-The key value is not simply collecting operational data. The real value is linking production issues back to the exact release version, prompt version, model configuration, dataset version, policy exceptions, and approval decisions associated with that release.
+The key value is not simply collecting operational data. The real value is linking production issues back to the exact release version, prompt version, model configuration, dataset version, policy-check-result records, and approval decisions associated with that release, including any decisions to approve a release with an exception.
 
 ### 5. Evidence packs
 
