@@ -65,9 +65,9 @@ This is why the product is framed more broadly than simple model management. The
 In this context:
 
 - **prompts** are the instructions given to the model
-- **models** are the Artificial Intelligence (AI) engines that generate, classify, or extract something
-- **datasets** are usually test, reference, or retrieval data used to evaluate, validate, or support the system, rather than only the original training data
-- **agent workflows** are multi-step processes in which an AI component can choose actions, use tools, and move a task forward across systems
+- **models** are the AI engines that generate, classify, or extract something
+- **datasets** are usually test, reference, or retrieval data used to evaluate, validate, or support the system
+- **agent workflows** are multi-step processes in which an AI agent can choose actions, use tools, and move a task forward across systems
 - **APIs** are the interfaces used to connect the system to tools and other platforms
 - **ETL (Extract, Transform, Load) jobs** are data pipelines that move and reshape data between systems
 - **evaluation suites** are the tests used to check whether the system performs correctly before release
