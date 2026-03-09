@@ -178,11 +178,15 @@ These describe what happened after release.
 - incident
 
 Typical fields for operational records include:
+
 - related release
 - environment
 - timestamp
 - severity
-- operational status
+- record-specific state fields
+  - deployment status, such as pending, in progress, succeeded, failed, rolled back, or cancelled
+  - runtime event type or outcome, such as observed, warning, error, timeout, or recovered
+  - incident status, such as open, investigating, mitigating, resolved, or closed
 - linked traces, logs, or evidence
 
 A lineage view should show how these records connect across design, release, and production.
