@@ -30,7 +30,7 @@ This direction is intentionally broader than healthtech while remaining grounded
 
 Many organizations already have some of the ingredients needed to ship AI-enabled systems responsibly, but those ingredients often remain fragmented.
 
-Prompts may live in code repositories or documents. Evaluation logic may live in notebooks or ad hoc scripts. Approvals may happen in chat or email. Incidents may be tracked in separate delivery tools. Evidence is often assembled manually. Ownership can be unclear. Runtime telemetry may exist, but it is disconnected from release governance.
+Prompts (the instructions given to the AI system) may live in code repositories or documents. Evaluation logic (the tests and rules used to check whether the system is performing correctly) may live in notebooks or ad hoc scripts. Approvals may happen in chat or email. Incidents may be tracked in separate delivery tools. Evidence is often assembled manually. Ownership can be unclear. Runtime telemetry (the operational data collected while the system is running live, such as errors, latency, and tool usage) may exist, but it is disconnected from release governance.
 
 That fragmentation creates operational risk because tests, traces, risks, approvals, incidents, and evidence are rarely connected into a release process that a company can clearly defend, audit, and improve.
 
