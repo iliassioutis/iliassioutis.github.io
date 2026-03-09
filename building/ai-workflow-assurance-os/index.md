@@ -101,7 +101,7 @@ The platform is intended to help teams:
   - datasets used for testing, validation, or retrieval
   - APIs
   - external dependencies (connected services, tools, and downstream systems the solution relies on)
-  - release artifacts (recorded pre-release evidence such as extraction accuracy scores, hallucination rates, schema-validation results, latency results, cost results, API-validation results, policy-check results, approval decisions, and linked evidence)
+  - release artifacts (recorded pre-release evidence such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency and cost results, API-response checks, policy-check results, approval decisions, and supporting documents attached to a release)
 
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
@@ -110,7 +110,7 @@ The platform is intended to help teams:
   - verifying business-rule compliance
   - verifying latency and cost against defined thresholds
   - checking that connected APIs still behave correctly
-  - recording all pass/fail outcomes, scores, and approvals as release evidence
+  - recording all pass/fail outcomes, measured results (such as field-extraction accuracy, confidence levels, latency, and cost), and approval decisions as release evidence
 
 - apply policy-driven approval gates before production release
 
