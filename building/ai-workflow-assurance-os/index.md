@@ -78,8 +78,9 @@ A typical implementation would connect:
 - prompts
 - models
 - datasets
+- tools
 - agent workflows
-- APIs
+- APIs and external integrations
 - ETL (Extract, Transform, Load) jobs
 - evaluation suites
 - release environments
@@ -92,21 +93,18 @@ Together, these components form the operational surface that the platform is int
 
 The platform is intended to help teams:
 
-- register key release-governance assets as versioned records, including:
-  - AI systems (the overall solution being governed)
-  - execution flows (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows)
-  - agent flows (multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems)
-  - prompts
-  - model configurations (the selected model plus settings and parameters)
-  - datasets used for testing, validation, or retrieval
-  - APIs
-  - external dependencies (connected services, tools, and downstream systems the solution relies on)
-  - release artifacts (recorded pre-release evidence such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency and cost results, API-response checks, policy-check results, approval decisions, and supporting documents attached to a release)
+- register and link the main records needed for release governance, including:
+  - versioned assets, such as AI systems (the overall solutions being governed), execution flow definitions (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent workflow definitions (defined multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems), prompts, model configurations (the selected model plus settings and parameters), dataset versions used for testing, validation, or retrieval, APIs, tools, and external dependencies (connected services, tools, and downstream systems that the solution relies on)
+  - release records, such as:
+    - evaluation results (recorded pre-release evidence such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency and cost results, API-response checks, and policy-check results)
+    - approval decisions
+    - evidence packs and supporting documents attached to a release
+  - operational records linked to a release, such as deployments, runtime events, and incidents
 
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
   - measuring extraction accuracy against expected values
-  - checking hallucination rate and output-format validity
+  - checking whether the system stays below the allowed hallucination threshold (the maximum allowed rate of invented, unsupported, or incorrect output) and whether the output matches the required format and expected fields
   - verifying business-rule compliance
   - verifying latency and cost against defined thresholds
   - checking that connected APIs still return the expected responses and data structures
@@ -114,7 +112,7 @@ The platform is intended to help teams:
 
 - apply policy-driven approval gates before production release
 
-- monitor runtime behavior after deployment
+- monitor how the released system behaves in production, including execution traces, failures, latency, structured outputs, tool calls, API errors, cost spikes, and safety-related events
 
 - connect incidents back to the exact release and change set
 
@@ -139,11 +137,11 @@ These are design-time or configuration items that change over time and should be
 
 - prompt
 - model configuration
-- dataset snapshot
+- dataset version
 - evaluation suite
 - policy bundle
 - execution flow definition
-- agent flow definition
+- agent workflow definition
 
 Typical fields for versioned assets include:
 - name
@@ -191,11 +189,9 @@ Typical fields for operational records include:
 
 A lineage view should show how these records connect across design, release, and production.
 
-For example, in an invoice-processing system, the lineage could be shown like this:
+For example, in an invoice-processing system, a release candidate should link to the exact prompt version, model configuration, execution flow definition, dataset version, evaluation results, policy-check results, and approval records used to justify that release.
 
-`prompt version + model configuration + execution flow definition + evaluation results -> release candidate -> deployment to production -> runtime events -> incident`
-
-This is important because the platform should make it possible to trace a production issue back to the exact prompt version, model configuration, execution flow, test results, approvals, and release decision that led to it.
+Once that release candidate is deployed to production, the deployment record should link back to that exact release candidate. Runtime events observed in production should then link back to the deployment and the release candidate associated with it. If a production problem occurs, the incident record should link back to the affected deployment and release candidate so the team can trace the issue to the exact prompt version, model configuration, execution flow definition, dataset version, test results, policy checks, approvals, and release decision that led to it.
 
 ### 2. Evaluation and certification
 
@@ -203,7 +199,7 @@ The evaluation layer should support both AI-specific checks and checks on the wi
 
 Examples include:
 
-- field-extraction accuracy and document-level pass rates (the percentage of whole documents that pass the required checks successfully)
+- task-specific quality measures, such as field-extraction accuracy, classification accuracy, or document-level pass rates (the percentage of whole documents that pass the required checks successfully)
 - hallucination checks (checks for invented, unsupported, or incorrect output)
 - business-rule validation
 - output-format validation
@@ -224,7 +220,7 @@ A central capability of the platform is the policy engine.
 Policies should behave like operational business rules, such as:
 
 - production release requires security review if risk is high
-- customer-facing AI must pass a hallucination threshold before release (must remain below an agreed maximum rate of invented, unsupported, or incorrect output)
+- customer-facing AI must remain below an agreed hallucination threshold before release (the maximum allowed rate at which the system produces invented, unsupported, or incorrect output)
 - a new prompt version cannot go live unless the required regression tests have been run and passed
 - cost per transaction cannot rise above an agreed threshold
 - systems handling regulated or sensitive data require a named approver before release
@@ -235,7 +231,7 @@ This turns governance from static policy documentation into executable release l
 
 ### 4. Runtime assurance
 
-Once an AI system, execution flow, or agent flow is running in production, the platform should ingest and connect runtime signals such as:
+Once an AI system, execution flow, or agent workflow is running in production, the platform should ingest and connect runtime signals such as:
 
 - execution traces (step-by-step records showing how the system processed a request, which steps ran, which tools or APIs were called, and where delays or failures occurred)
 - model usage
@@ -298,14 +294,14 @@ A later capability of the platform can use AI to answer practical operational qu
 - Which failed checks are blocking production?
 - Which systems use prompt version 12?
 - Why was this release approved even though one or more normal release requirements were not fully met?
-- Summarize incidents linked to this execution flow, agent flow, or release in the last 30 days.
+- Summarize incidents linked to this execution flow, agent workflow, or release in the last 30 days.
 - Generate an evidence summary for a client.
 
 This only becomes valuable because it is grounded in structured platform records, relationships, and release history rather than in generic unstructured chat.
 
 ### 8. External trust portal
 
-A later premium capability could expose a controlled, customer-facing trust portal that includes:
+A later capability could expose a controlled, customer-facing trust portal that includes:
 
 - a summary of the AI system, execution flow, or service being covered
 - the current validation status, including whether the latest release passed the required checks
