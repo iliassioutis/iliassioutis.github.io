@@ -54,7 +54,29 @@ The product is better described as:
 
 or, in plainer language:
 
-**the release-governance layer for AI, agents, APIs, and data workflows**
+**the release-governance layer for AI systems, agents, APIs, and data workflows**
+
+An AI system is usually more than just a model plus a prompt. In practice, it often works as a broader operational flow:
+
+**input → instructions → model → external actions or data → business logic → output → downstream system**
+
+The **model** is the core Artificial Intelligence (AI) engine that generates, classifies, or extracts something. For example, a language model might read an invoice and extract the invoice number, supplier name, total amount, and due date.
+
+The **prompt** is the instruction given to the model. For example, the system might tell the model: “Extract the invoice number, supplier name, total amount, and due date as JSON.”
+
+The system may also use **tools**, which are functions the AI can call while doing its work. These tools are usually not the model itself. They are extra capabilities that help the system act on information or retrieve more context. For example, a tool might search a knowledge base, validate a tax number, look up a customer in a database, create a support ticket, or trigger a payment check. In many cases, these tools are accessed through an **Application Programming Interface (API)**.
+
+There are also **integrations**, meaning the links between the AI system and the wider company environment. These integrations may connect the workflow to systems such as a Customer Relationship Management (CRM) platform, an Enterprise Resource Planning (ERP) system, a document repository, a payment provider, a ticketing tool, or an internal database. This matters because the AI system rarely works in isolation. It usually needs to read from, write to, or trigger actions in other systems.
+
+Around the model, there is usually **business logic**, meaning the surrounding rules that control how the workflow behaves. For example, if confidence is below a defined threshold, the case may be routed to human review. If a required field is missing, the workflow may stop. If policy checks fail, the release may be blocked until the required conditions are met. In this context, policy checks mean predefined release rules such as required tests passing, accuracy thresholds being met, critical issues being absent, or named approvals being completed.
+
+There is also an end-to-end **workflow**, meaning the full sequence of steps across the system. For example, an invoice-processing workflow might receive a PDF, extract text, send the text to a model with a prompt, validate the returned fields, compare them against business rules, call an ERP API, save the result, and then flag exceptions for review.
+
+This is also why the platform is broader than simple model management. It is intended to govern the full operating context around the AI-enabled workflow.
+
+In this context, **datasets** do not necessarily mean the original data used to train the model. More often, they mean test datasets, reference datasets, or retrieval data used to evaluate, validate, or support the workflow. For example, a dataset might contain 500 sample invoices together with the correct expected values, so the system can be tested before release.
+
+Similarly, **agent workflows** are not just single prompts with single responses. They are multi-step flows in which an AI component can choose actions, use tools, request more information, and move a task forward across systems. For example, a support agent might read a customer message, search a knowledge base, check order status through an API, decide whether it has enough information, and then either draft a reply or escalate the case to a human.
 
 A typical implementation would connect:
 
@@ -66,6 +88,8 @@ A typical implementation would connect:
 - ETL (Extract, Transform, Load) jobs
 - evaluation suites
 - release environments
+
+Together, these components form the operational surface that the platform is intended to govern, validate, and make release-ready.
 
 The platform would then provide one place to govern, validate, approve, monitor, and generate evidence across the release lifecycle.
 
