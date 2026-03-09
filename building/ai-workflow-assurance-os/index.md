@@ -92,11 +92,32 @@ Together, these components form the operational surface that the platform is int
 
 The platform is intended to help teams:
 
-- register AI systems (the overall solution being governed), execution flows (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent flows, prompts, model configurations (the selected model plus settings and parameters), datasets, APIs, external dependencies (connected services, tools, and downstream systems the solution relies on), and release artifacts (evaluation results, approval records, policy results, and evidence linked to a release) as versioned assets
-- run evaluation and validation pipelines before release
-- apply policy-driven approval gates
+- register key release-governance assets as versioned records, including:
+  - AI systems (the overall solution being governed)
+  - execution flows (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows)
+  - agent flows (multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems)
+  - prompts
+  - model configurations (the selected model plus settings and parameters)
+  - datasets used for testing, validation, or retrieval
+  - APIs
+  - external dependencies (connected services, tools, and downstream systems the solution relies on)
+  - release artifacts (recorded pre-release evidence such as extraction accuracy scores, hallucination rates, schema-validation results, latency results, cost results, API-validation results, policy-check results, approval decisions, and linked evidence)
+
+- run pre-release evaluation and validation pipelines, including:
+  - testing prompts and model configurations on reference datasets
+  - measuring extraction accuracy against expected values
+  - checking hallucination rate and output-format validity
+  - verifying business-rule compliance
+  - verifying latency and cost against defined thresholds
+  - checking that connected APIs still behave correctly
+  - recording all pass/fail outcomes, scores, and approvals as release evidence
+
+- apply policy-driven approval gates before production release
+
 - monitor runtime behavior after deployment
+
 - connect incidents back to the exact release and change set
+
 - generate evidence packs that show what changed, what was tested, what failed, who approved, and what residual risk remains
 
 At the center of the product direction is a simple idea:
