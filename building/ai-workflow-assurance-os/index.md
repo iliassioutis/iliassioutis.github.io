@@ -109,7 +109,7 @@ The platform is intended to help teams:
   - checking hallucination rate and output-format validity
   - verifying business-rule compliance
   - verifying latency and cost against defined thresholds
-  - checking that connected APIs still behave correctly
+  - checking that connected APIs still return the expected responses and data structures
   - recording all pass/fail outcomes, measured results (such as field-extraction accuracy, confidence levels, latency, and cost), and approval decisions as release evidence
 
 - apply policy-driven approval gates before production release
@@ -130,32 +130,68 @@ At the center of the product direction is a simple idea:
 
 ### 1. Registry and lineage
 
-The registry acts as the source of truth for the platform.
+The registry acts as the source of truth for the platform. It should record the main assets, release records, and operational records that make up an AI-enabled system and its release history.
 
-Core objects include:
+The core records can be grouped into three categories:
 
-- system
-- component
-- workflow
-- agent
+#### Versioned assets
+These are design-time or configuration items that change over time and should be versioned.
+
 - prompt
 - model configuration
 - dataset snapshot
 - evaluation suite
 - policy bundle
-- release candidate
-- deployment
-- incident
+- execution flow definition
+- agent flow definition
+
+Typical fields for versioned assets include:
+- name
+- version
 - owner
-- approval
+- status
+- linked dependencies
+- description
+- created date
 
-Each object should carry version, owner, environment, tags, risk level, linked dependencies, evidence references, and status.
+#### Release records
+These describe what is being proposed, reviewed, approved, or packaged for release.
 
-A lineage view should then show how these elements relate to one another across build, release, and runtime. For example:
+- release candidate
+- approval request
+- approval decision
+- evidence pack
 
-`prompt version -> model -> retrieval source -> tool / API -> downstream workflow -> release -> production incident`
+Typical fields for release records include:
+- target environment
+- related asset versions
+- approval status
+- policy-check results
+- linked evidence
+- created date
 
-This is important because prompts, APIs, and workflow definitions should be treated as first-class versioned assets, not side notes.
+#### Operational records
+These describe what happened after release.
+
+- deployment
+- runtime event
+- incident
+
+Typical fields for operational records include:
+- related release
+- environment
+- timestamp
+- severity
+- operational status
+- linked traces, logs, or evidence
+
+A lineage view should show how these records connect across design, release, and production.
+
+For example, in an invoice-processing system, the lineage could be shown like this:
+
+`prompt version + model configuration + execution flow definition + evaluation results -> release candidate -> deployment to production -> runtime events -> incident`
+
+This is important because the platform should make it possible to trace a production issue back to the exact prompt version, model configuration, execution flow, test results, approvals, and release decision that led to it.
 
 ### 2. Evaluation and certification
 
