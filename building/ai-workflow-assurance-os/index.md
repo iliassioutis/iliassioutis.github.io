@@ -60,6 +60,16 @@ An AI system is usually more than just a model plus a prompt. In practice, it of
 
 **input → instructions → model → external actions or data → business logic → output → downstream system**
 
+For example, in an invoice-processing workflow:
+
+- **input** = an invoice PDF uploaded by a user or received from another system
+- **instructions** = a prompt telling the AI model what to extract, such as invoice number, supplier name, total amount, and due date
+- **model** = the AI model that reads the invoice text and returns the requested fields
+- **external actions or data** = a call to an Application Programming Interface (API) or another system to validate the supplier, check tax data, or retrieve related records
+- **business logic** = rules around what happens next, such as sending low-confidence results to human review or blocking the flow if a required field is missing
+- **output** = the structured extraction result, for example a JSON object containing the invoice fields
+- **downstream system** = the Enterprise Resource Planning (ERP) system, finance workflow, or document platform that receives the result for the next business step
+
 The **model** is the core Artificial Intelligence (AI) engine that generates, classifies, or extracts something. For example, a language model might read an invoice and extract the invoice number, supplier name, total amount, and due date.
 
 The **prompt** is the instruction given to the model. For example, the system might tell the model: “Extract the invoice number, supplier name, total amount, and due date as JSON.”
