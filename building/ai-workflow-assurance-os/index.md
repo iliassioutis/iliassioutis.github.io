@@ -292,29 +292,29 @@ That closes the loop between release governance and production accountability.
 
 ### 7. Assurance copilot
 
-A later layer of the product can use AI to answer practical operational questions across structured release data, such as:
+A later capability of the platform can use AI to answer practical operational questions across structured release, approval, incident, and evidence data, such as:
 
 - What changed between the last healthy release and this one?
 - Which failed checks are blocking production?
 - Which systems use prompt version 12?
-- Why did this release require an exception approval?
-- Summarize incidents linked to this workflow in the last 30 days.
+- Why was this release approved even though one or more normal release requirements were not fully met?
+- Summarize incidents linked to this execution flow, agent flow, or release in the last 30 days.
 - Generate an evidence summary for a client.
 
-This only becomes valuable because it sits on top of a structured operational model rather than unstructured chat.
+This only becomes valuable because it is grounded in structured platform records, relationships, and release history rather than in generic unstructured chat.
 
 ### 8. External trust portal
 
-A later premium capability could expose a controlled, customer-facing trust view that includes:
+A later premium capability could expose a controlled, customer-facing trust portal that includes:
 
-- product or workflow summary
-- validation status
-- latest controls
-- service commitments
-- incidents and resolutions
+- a summary of the AI system, execution flow, or service being covered
+- the current validation status, including whether the latest release passed the required checks
+- the latest control results, such as policy checks, approval status, and key release conditions
+- relevant service commitments, operating constraints, or agreed trust conditions
+- incident summaries and their resolutions
 - downloadable trust reports
 
-That would be especially useful for enterprise buyers, auditors, and consultancies handing over client systems.
+That would be especially useful for auditors, client organizations reviewing trust and release evidence, and consultancies handing over client systems.
 
 ---
 
