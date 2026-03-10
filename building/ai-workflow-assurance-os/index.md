@@ -176,11 +176,11 @@ An approval decision marked as approved with exception should also record the un
 
 A release candidate may therefore have zero or more evaluation-result records, each linked to the evaluation suite definition and dataset version that produced it; zero or more policy-check-result records, each linked to the policy bundle that produced it; zero or more approval requests; zero or more approval decisions linked to those approval requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate. Before a release candidate can move into an approved or ready-for-deployment state, it should have the evaluation-result records, policy-check-result records, and approval decisions required for that release.
 
-Each evidence pack and each supporting document attached to a release candidate should link directly to the release candidate they belong to.
+Each evidence pack and each supporting document attached to a release candidate should link directly to the release candidate they belong to. Each evidence pack should also link to the evaluation-result records, policy-check-result records, approval decisions, and supporting documents that it packages or summarizes for that release candidate.
 
 Typical fields for release records include:
 - related asset versions, including the evaluation suite definition linked to an evaluation-result record and the policy bundle linked to a policy-check-result record
-- record-specific state or outcome fields, such as release-candidate state, measured evaluation results, policy-check pass/fail results, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
+- record-specific state or outcome fields, such as release-candidate state, measured evaluation results, policy-check-result outcome, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
 - linked evidence
 - created date
 
@@ -208,6 +208,7 @@ These describe what happened after release.
 Typical fields for operational records include:
 
 - related release candidate
+- related deployment record, where applicable
 - environment
 - deployment-specific configuration references or an environment-specific configuration snapshot identifying the settings applied when that deployment record was created
 - timestamp
@@ -235,6 +236,8 @@ A deployment record targeting production should be created only when the release
 Runtime events observed in production should then link back to the specific deployment record in which they occurred and, through that deployment record, back to the release candidate associated with it. If a production problem occurs, the incident record should link back to the affected deployment record and release candidate so the team can trace the issue to the exact prompt version, model configuration, execution flow definition, dataset version, test results, policy checks, approvals, and release decision that led to it.
 
 A deployment record may therefore have many runtime events linked to it, and an incident record may link to one or more runtime events that provide the operational evidence for that incident.
+
+For operational comparison and reporting, a healthy production deployment record should mean a production deployment record that has no open critical incident linked to it and whose observed runtime behavior remains within the agreed operational thresholds over the defined observation window.
 
 ### 2. Evaluation and certification
 
