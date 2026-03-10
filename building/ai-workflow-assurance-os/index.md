@@ -144,6 +144,8 @@ These are design-time or configuration items that change over time and should be
 - tool definition
 - external dependency record
 
+An AI system definition should link to the execution flow definitions, agent workflow definitions, prompts, model configurations, dataset versions, evaluation suite definitions, policy bundles, API definitions, tool definitions, and external dependency records that belong to that system.
+
 Typical fields for versioned assets include:
 - name
 - version
@@ -165,6 +167,8 @@ These describe what is being proposed, evaluated, checked against policy, review
 - supporting document attached to a release
 
 An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes.
+
+A release candidate may therefore have one or more evaluation-result records, one or more policy-check-result records, zero or more approval requests, one or more approval decisions through those requests, one or more evidence packs, and one or more supporting documents attached to it.
 
 Typical fields for release records include:
 - target environment
@@ -200,7 +204,11 @@ An approval request should then link to that release candidate, and one or more 
 
 A release candidate may produce one or more deployment records across test, staging, and production environments, and may also produce multiple deployment records in the same environment if rollout attempts are retried, rolled back, or repeated. Each deployment record should therefore link back to the exact release candidate from which it was created.
 
+Each deployment record should also identify exactly one target environment, such as test, staging, or production.
+
 Runtime events observed in production should then link back to the specific deployment record in which they occurred and, through that deployment record, back to the release candidate associated with it. If a production problem occurs, the incident record should link back to the affected deployment record and release candidate so the team can trace the issue to the exact prompt version, model configuration, execution flow definition, dataset version, test results, policy checks, approvals, and release decision that led to it.
+
+A deployment record may therefore have many runtime events linked to it, and an incident record may link to one or more runtime events that provide the operational evidence for that incident.
 
 ### 2. Evaluation and certification
 
