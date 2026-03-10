@@ -168,12 +168,13 @@ These describe what is being proposed, evaluated, checked against policy, review
 
 An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes.
 
-A release candidate may therefore have one or more evaluation-result records, one or more policy-check-result records, zero or more approval requests, one or more approval decisions through those requests, zero or more evidence packs, and zero or more supporting documents attached to it.
+A release candidate may therefore have one or more evaluation-result records, each linked to the evaluation suite definition that produced it; one or more policy-check-result records, each linked to the policy bundle that produced it; zero or more approval requests; one or more approval decisions through those requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate.
+
+Each evidence pack and each supporting document attached to a release should link directly to the release candidate they belong to.
 
 Typical fields for release records include:
-- target environment
-- related asset versions
-- record-specific outcome fields, such as measured evaluation results, policy-check pass/fail results, approval-request state, or approval-decision outcome
+- related asset versions, including the evaluation suite definition linked to an evaluation-result record and the policy bundle linked to a policy-check-result record
+- record-specific outcome fields, such as measured evaluation results, policy-check pass/fail results, approval-request state, approval-decision outcome, or intended next environment when a review or approval step is tied to a specific promotion target
 - linked evidence
 - created date
 
