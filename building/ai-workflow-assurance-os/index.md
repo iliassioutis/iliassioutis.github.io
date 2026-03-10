@@ -95,8 +95,8 @@ The platform is intended to help teams:
 
 - register and link the main records needed for release governance, including:
   - versioned assets, such as AI system definitions (the defined systems being governed), execution flow definitions (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent workflow definitions (defined multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems), prompts, model configurations (the selected model plus settings and parameters), dataset versions used for testing, validation, or retrieval, evaluation suite definitions, policy bundles, API definitions, tool definitions, and external dependency records (records describing connected services, tools, and downstream systems that the solution relies on)
-  - release records, such as release candidate records, evaluation-result records (which may contain measured outcomes such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency results, cost results, and API-response checks), policy-check-result records, approval requests, approval decisions, evidence packs, and supporting documents attached to a release
-  - operational records linked to a release, such as deployment records, runtime events, and incident records
+  - release records, such as release candidate records, evaluation-result records (which may contain measured outcomes such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency results, cost results, and API-response checks), policy-check-result records, approval requests, approval decisions, evidence packs, and supporting documents attached to a release candidate
+  - operational records linked to a release candidate, such as deployment records, runtime events, and incident records
 
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
@@ -170,7 +170,7 @@ These describe what is being proposed, evaluated, checked against policy, review
 - evidence pack
 - supporting document attached to a release candidate
 
-An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes.
+An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes. An approval decision marked as approved with exception should also record the unmet requirement, the reason the exception was allowed, the approver responsible for that exception, and any required mitigation or follow-up action.
 
 A release candidate may therefore have zero or more evaluation-result records, each linked to the evaluation suite definition and dataset version that produced it; zero or more policy-check-result records, each linked to the policy bundle that produced it; zero or more approval requests; zero or more approval decisions linked to those approval requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate. Before a release candidate can move into an approved or ready-for-deployment state, it should have the evaluation-result records, policy-check-result records, and approval decisions required for that release.
 
@@ -187,6 +187,8 @@ Release-candidate states may include draft, in review, approved, rejected, ready
 Here, approved means that the release candidate has passed the required review and approval steps, ready for deployment means that it is approved and cleared for a specific deployment step, and deployed means that at least one deployment record has been created from that release candidate. Whether that deployment was to test, staging, or production should be determined from the linked deployment records rather than from the release-candidate state alone.
 
 Approval-request states may include open, pending responses, completed, cancelled, or expired (approval window elapsed without completion).
+
+Policy-check-result outcomes may include passed, failed, not applicable, or waived through an approved exception.
 
 Evidence-pack states may include draft, generated, or superseded (replaced by a newer pack). Archival should be tracked separately, for example through an archived-at timestamp or an archived flag, because a superseded evidence pack may later also be archived for retention purposes.
 
@@ -337,7 +339,7 @@ A later capability could expose a controlled, customer-facing trust portal that 
 
 - a summary of the AI system, execution flow, or service being covered
 - the current validation status, including whether the latest release candidate deployed to production passed the required checks
-- the latest control results, such as policy checks, approval status, and key release conditions
+- the latest control results, such as policy-check results, approval decisions or approval-request state, and key release conditions
 - relevant service commitments, operating constraints, or agreed trust conditions
 - incident summaries and their resolutions
 - downloadable trust reports
