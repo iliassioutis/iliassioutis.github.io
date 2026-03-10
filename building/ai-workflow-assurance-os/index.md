@@ -146,6 +146,10 @@ These are design-time or configuration items that change over time and should be
 
 An AI system definition should link to the execution flow definitions, agent workflow definitions, prompts, model configurations, dataset versions, evaluation suite definitions, policy bundles, API definitions, tool definitions, and external dependency records that belong to that system.
 
+Each versioned asset should be treated as immutable once created. If any meaningful change is made to a versioned asset, the platform should create a new version rather than modifying the existing one in place. A release candidate should then reference the exact immutable versions of the assets used to justify that release so that the release can be reproduced, reviewed, and audited later.
+
+Version history should therefore preserve earlier asset versions even after newer versions are created, because later release candidates, their deployment records, related incidents, and evidence packs may still need to refer back to those earlier asset versions.
+
 Typical fields for versioned assets include:
 - name
 - version
