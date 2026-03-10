@@ -188,9 +188,13 @@ Release-candidate states may include draft, in review, approved, rejected, ready
 
 Here, approved means that the release candidate has passed the required review and approval steps, ready for deployment means that it is approved and cleared for a specific deployment step, and deployed means that at least one deployment record has been created from that release candidate. Whether that deployment was to test, staging, or production should be determined from the linked deployment records rather than from the release-candidate state alone.
 
+A release candidate may later become superseded even if it was previously deployed. In that case, superseded means that it is no longer the current candidate for further progression, while its deployment history must still be determined from the linked deployment records.
+
 Approval-request states may include open, pending responses, completed, cancelled, or expired (approval window elapsed without completion).
 
 Policy-check-result outcomes may include passed, failed, not applicable, or waived through an approved exception.
+
+A policy-check-result should be marked as waived through an approved exception only when it is linked to an approval decision whose outcome is approved with exception.
 
 Evidence-pack states may include draft, generated, or superseded (replaced by a newer pack). Archival should be tracked separately, for example through an archived-at timestamp or an archived flag, because a superseded evidence pack may later also be archived for retention purposes.
 
@@ -205,6 +209,7 @@ Typical fields for operational records include:
 
 - related release candidate
 - environment
+- deployment-specific configuration references or an environment-specific configuration snapshot identifying the settings applied when that deployment record was created
 - timestamp
 - severity
 - record-specific state fields
@@ -222,6 +227,8 @@ An approval request should then link to that release candidate, and one or more 
 A release candidate may produce one or more deployment records across test, staging, and production environments, and may also produce multiple deployment records in the same environment if rollout attempts are retried, rolled back, or repeated. Each deployment record should therefore link back to the exact release candidate from which it was created.
 
 Each deployment record should also identify exactly one target environment, such as test, staging, or production.
+
+Each deployment record should also capture or link to the exact environment-specific configuration applied during that deployment so later incidents can be traced back to the concrete settings used in that environment.
 
 A deployment record targeting production should be created only when the release candidate has the policy-check-result records and approval decisions required for production release, unless an approved exception decision explicitly allows release despite an unmet requirement.
 
@@ -326,7 +333,7 @@ That closes the loop between release governance and production accountability.
 
 A later capability of the platform can use AI to answer practical operational questions across structured release, approval, incident, and evidence data, such as:
 
-- What changed between the last healthy release candidate deployed to production and this release candidate deployed to production?
+- What changed between the last healthy production deployment record and this production deployment record?
 - Which failed checks are blocking production?
 - Which systems use prompt version 12?
 - Why was this release candidate approved even though one or more normal release requirements were not fully met?
@@ -340,7 +347,7 @@ This only becomes valuable because it is grounded in structured platform records
 A later capability could expose a controlled, customer-facing trust portal that includes:
 
 - a summary of the AI system, execution flow, or service being covered
-- the current validation status, including whether the latest release candidate deployed to production passed the required checks
+- the current validation status, including whether the release candidate linked to the latest production deployment record passed the required checks or was allowed into production through an approved exception
 - the latest control results, such as policy-check results, approval decisions or approval-request state, and key release conditions
 - relevant service commitments, operating constraints, or agreed trust conditions
 - incident summaries and their resolutions
