@@ -111,7 +111,7 @@ The platform is intended to help teams:
 
 - monitor how the released system behaves in production, including execution traces, model usage, failures, latency, structured outputs, tool calls, anomaly scores, API errors, schema drift, cost spikes, and safety-related events
 
-- connect incidents back to the exact deployment record, release candidate, and specific changes introduced by that release, including prompt changes, model-configuration changes, execution-flow-definition changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when the version was put into production
+- connect incidents back to the exact deployment record, release candidate, and specific changes introduced by that release candidate, including prompt changes, model-configuration changes, execution-flow-definition changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when that release candidate was put into production
 
 - generate evidence packs that show what changed, what was tested, what failed, who approved, and what residual risk remains
 
@@ -168,13 +168,13 @@ These describe what is being proposed, evaluated, checked against policy, review
 - approval request
 - approval decision
 - evidence pack
-- supporting document attached to a release
+- supporting document attached to a release candidate
 
 An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes.
 
-A release candidate may therefore have zero or more evaluation-result records, each linked to the evaluation suite definition that produced it; zero or more policy-check-result records, each linked to the policy bundle that produced it; zero or more approval requests; zero or more approval decisions linked to those approval requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate. Before a release candidate can move into an approved or ready-for-deployment state, it should have the evaluation-result records, policy-check-result records, and approval decisions required for that release.
+A release candidate may therefore have zero or more evaluation-result records, each linked to the evaluation suite definition and dataset version that produced it; zero or more policy-check-result records, each linked to the policy bundle that produced it; zero or more approval requests; zero or more approval decisions linked to those approval requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate. Before a release candidate can move into an approved or ready-for-deployment state, it should have the evaluation-result records, policy-check-result records, and approval decisions required for that release.
 
-Each evidence pack and each supporting document attached to a release should link directly to the release candidate they belong to.
+Each evidence pack and each supporting document attached to a release candidate should link directly to the release candidate they belong to.
 
 Typical fields for release records include:
 - related asset versions, including the evaluation suite definition linked to an evaluation-result record and the policy bundle linked to a policy-check-result record
@@ -184,7 +184,7 @@ Typical fields for release records include:
 
 Release-candidate states may include draft, in review, approved, rejected, ready for deployment, deployed, superseded (replaced by a newer release candidate), or withdrawn.
 
-Here, approved means that the release candidate has passed the required review and approval steps, ready for deployment means that it is approved and cleared for a specific deployment step, and deployed means that at least one deployment record has been created from that release candidate.
+Here, approved means that the release candidate has passed the required review and approval steps, ready for deployment means that it is approved and cleared for a specific deployment step, and deployed means that at least one deployment record has been created from that release candidate. Whether that deployment was to test, staging, or production should be determined from the linked deployment records rather than from the release-candidate state alone.
 
 Approval-request states may include open, pending responses, completed, cancelled, or expired (approval window elapsed without completion).
 
@@ -322,7 +322,7 @@ That closes the loop between release governance and production accountability.
 
 A later capability of the platform can use AI to answer practical operational questions across structured release, approval, incident, and evidence data, such as:
 
-- What changed between the last healthy deployed release candidate and this deployed release candidate?
+- What changed between the last healthy release candidate deployed to production and this release candidate deployed to production?
 - Which failed checks are blocking production?
 - Which systems use prompt version 12?
 - Why was this release candidate approved even though one or more normal release requirements were not fully met?
@@ -336,7 +336,7 @@ This only becomes valuable because it is grounded in structured platform records
 A later capability could expose a controlled, customer-facing trust portal that includes:
 
 - a summary of the AI system, execution flow, or service being covered
-- the current validation status, including whether the latest deployed release candidate passed the required checks
+- the current validation status, including whether the latest release candidate deployed to production passed the required checks
 - the latest control results, such as policy checks, approval status, and key release conditions
 - relevant service commitments, operating constraints, or agreed trust conditions
 - incident summaries and their resolutions
