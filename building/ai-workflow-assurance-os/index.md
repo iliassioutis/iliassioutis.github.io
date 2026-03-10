@@ -174,9 +174,15 @@ Each evidence pack and each supporting document attached to a release should lin
 
 Typical fields for release records include:
 - related asset versions, including the evaluation suite definition linked to an evaluation-result record and the policy bundle linked to a policy-check-result record
-- record-specific outcome fields, such as measured evaluation results, policy-check pass/fail results, approval-request state, approval-decision outcome, or intended next environment when a review or approval step is tied to a specific promotion target
+- record-specific state or outcome fields, such as release-candidate state, measured evaluation results, policy-check pass/fail results, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
 - linked evidence
 - created date
+
+Release-candidate states may include draft, in review, approved, rejected, ready for deployment, deployed, superseded (replaced by a newer release candidate), or withdrawn.
+
+Approval-request states may include open, pending responses, completed, cancelled, or expired (approval window elapsed without completion).
+
+Evidence-pack states may include draft, generated, or superseded (replaced by a newer pack). Archival should be tracked separately, for example through an archived-at timestamp or an archived flag, because a superseded evidence pack may later also be archived for retention purposes.
 
 #### Operational records
 These describe what happened after release.
