@@ -100,18 +100,18 @@ The platform is intended to help teams:
 
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
-  - measuring extraction accuracy against expected values
+  - measuring task-specific accuracy or quality against expected values, such as field-extraction accuracy, classification accuracy, or document-level pass rates
   - checking whether the system stays below the allowed hallucination threshold (the maximum allowed rate of invented, unsupported, or incorrect output) and whether the output matches the required format and expected fields
   - verifying business-rule compliance
   - verifying latency and cost against defined thresholds
   - checking that connected APIs still return the expected responses and data structures
-  - recording all pass/fail outcomes, measured results (such as field-extraction accuracy, confidence levels, latency, and cost), and approval decisions as release evidence
+  - recording all pass/fail outcomes, measured results (such as field-extraction accuracy, confidence levels, latency, and cost), policy-check results, and approval decisions as release evidence
 
 - apply policy-driven approval gates before production release
 
 - monitor how the released system behaves in production, including execution traces, model usage, failures, latency, structured outputs, tool calls, anomaly scores, API errors, schema drift, cost spikes, and safety-related events
 
-- connect incidents back to the exact release and to the specific changes introduced by that release, including prompt changes, model-configuration changes, execution-flow-definition changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when the version was put into production
+- connect incidents back to the exact deployment record, release candidate, and specific changes introduced by that release, including prompt changes, model-configuration changes, execution-flow-definition changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when the version was put into production
 
 - generate evidence packs that show what changed, what was tested, what failed, who approved, and what residual risk remains
 
@@ -168,7 +168,7 @@ These describe what is being proposed, evaluated, checked against policy, review
 
 An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes.
 
-A release candidate may therefore have one or more evaluation-result records, one or more policy-check-result records, zero or more approval requests, one or more approval decisions through those requests, one or more evidence packs, and one or more supporting documents attached to it.
+A release candidate may therefore have one or more evaluation-result records, one or more policy-check-result records, zero or more approval requests, one or more approval decisions through those requests, zero or more evidence packs, and zero or more supporting documents attached to it.
 
 Typical fields for release records include:
 - target environment
@@ -186,7 +186,7 @@ These describe what happened after release.
 
 Typical fields for operational records include:
 
-- related release
+- related release candidate
 - environment
 - timestamp
 - severity
@@ -198,7 +198,7 @@ Typical fields for operational records include:
 
 A lineage view should show how these records connect across design, release, and production.
 
-For example, in an invoice-processing system, a release candidate should link to the exact prompt version, model configuration, execution flow definition, dataset version, evaluation-result records, and policy-check-result records used to justify that release.
+For example, in an invoice-processing system, a release candidate should link to the exact AI system definition, execution flow definition, any relevant agent workflow definition, prompt version, model configuration, dataset version, evaluation suite definition, policy bundle, API definitions, tool definitions, external dependency records, evaluation-result records, and policy-check-result records used to justify that release.
 
 An approval request should then link to that release candidate, and one or more approval decisions should link to the approval request.
 
@@ -262,7 +262,7 @@ Once an AI system, execution flow, or agent workflow is running in production, t
 - cost spikes
 - moderation or safety events (cases in which the system output or user input triggered safety controls, such as harmful-content flags, policy violations, blocked responses, or escalation to review)
 
-The key value is not simply collecting operational data. The real value is linking production issues back to the exact release version, prompt version, model configuration, dataset version, policy-check-result records, and approval decisions associated with that release, including any decisions to approve a release with an exception.
+The key value is not simply collecting operational data. The real value is linking production issues back to the exact deployment record, release candidate, prompt version, model configuration, dataset version, policy-check-result records, and approval decisions associated with that release candidate, including any decisions to approve that release candidate with an exception.
 
 ### 5. Evidence packs
 
@@ -278,7 +278,7 @@ A team should be able to produce a structured evidence pack containing:
 - approvals
 - known risks
 - rollback plan
-- environment details (the specific environment in which the version was tested, approved, or deployed, such as test, staging, or production, together with system configuration, relevant model and prompt versions, connected services, and other deployment context needed to understand what was tested or released)
+- environment details (the specific environment in which the release candidate was tested, approved, or deployed, such as test, staging, or production, together with system configuration, relevant model and prompt versions, connected services, and other deployment context needed to understand what was tested or deployed)
 
 Exports could eventually include:
 
@@ -291,15 +291,15 @@ This reduces the manual effort needed for internal governance, client communicat
 
 ### 6. Incident and rollback governance
 
-When a released version causes a production problem, the platform should help teams:
+When a deployed release candidate causes a production problem, the platform should help teams:
 
 - create an incident record either manually by a user or automatically when predefined error, failure, cost, or safety conditions are triggered
-- identify the exact release version and environment linked to the incident
-- show the exact recent changes linked to that release, including prompt changes, model-configuration changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when that version was put into production
+- identify the exact deployment record, release candidate, and environment linked to the incident
+- show the exact recent changes linked to that release candidate, including prompt changes, model-configuration changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when that release candidate was put into production
 - attach step-by-step execution traces, internal service error logs, API error logs, requests that returned errors or invalid data, screenshots of the production error, failing output, monitoring view, or other visible evidence linked to the incident, exported evidence files, and other supporting records needed to understand the incident
-- propose concrete rollback or containment actions, such as reverting to the previous release version, disabling a failing tool or API call, or sending low-confidence or failed cases to a human reviewer
-- record who decided whether to roll back the release, keep it running with containment measures, or suspend new traffic to it, who reviewed that decision, and who gave final approval
-- generate a structured incident summary describing what failed, which release was affected, what actions were taken, and what follow-up work remains
+- propose concrete rollback or containment actions, such as reverting to the previous deployed release candidate, disabling a failing tool or API call, or sending low-confidence or failed cases to a human reviewer
+- record who decided whether to roll back the deployed release candidate, keep it running with containment measures, or suspend new traffic to it, who reviewed that decision, and who gave final approval
+- generate a structured incident summary describing what failed, which deployment record and release candidate were affected, what actions were taken, and what follow-up work remains
 
 That closes the loop between release governance and production accountability.
 
@@ -307,11 +307,11 @@ That closes the loop between release governance and production accountability.
 
 A later capability of the platform can use AI to answer practical operational questions across structured release, approval, incident, and evidence data, such as:
 
-- What changed between the last healthy release and this one?
+- What changed between the last healthy deployed release candidate and this deployed release candidate?
 - Which failed checks are blocking production?
 - Which systems use prompt version 12?
-- Why was this release approved even though one or more normal release requirements were not fully met?
-- Summarize incidents linked to this execution flow, agent workflow, or release in the last 30 days.
+- Why was this release candidate approved even though one or more normal release requirements were not fully met?
+- Summarize incidents linked to this execution flow, agent workflow, or release candidate in the last 30 days.
 - Generate an evidence summary for a client.
 
 This only becomes valuable because it is grounded in structured platform records, relationships, and release history rather than in generic unstructured chat.
