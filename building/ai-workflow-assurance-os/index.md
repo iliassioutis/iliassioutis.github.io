@@ -106,7 +106,7 @@ The platform is intended to help teams:
   - verifying business-rule compliance
   - verifying latency and cost against defined thresholds
   - checking that connected APIs still return the expected responses and data structures
-  - recording evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, and approval decisions as release evidence
+  - recording evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, and approval decisions as release evidence, together with the measured outcomes and release judgments derived from those records
 
 - apply policy-driven approval gates before creating a production deployment record
 
@@ -177,7 +177,7 @@ An evaluation run should identify the release candidate being evaluated, the eva
 
 Each evaluation-result record should link directly to the evaluation run that produced it.
 
-Each evaluation-result record should store the measured evaluation results and the derived evaluation-result outcome, such as passed, failed, or inconclusive.
+Each evaluation-result record should store the measured evaluation results and the derived evaluation-result outcome, such as passed, failed, or inconclusive (used when the measured results cannot yet be judged reliably against the release criteria because required comparison data, evaluation inputs, or decision conditions are missing, invalid, or incomplete).
 
 The evaluation-result outcome should be calculated by checking whether the measured results recorded in that evaluation-result record meet, fail to meet, or cannot be conclusively judged against the release criteria defined in the evaluation suite definition linked to the evaluation run that produced it.
 
@@ -193,11 +193,15 @@ A policy-check-result record should be marked as waived through an approved exce
 
 An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes. 
 
+The linked policy bundle should state which approval decisions are required for a release candidate based on the release candidate’s recorded attributes, such as its target environment, risk level, data sensitivity, customer impact, use of customer-facing AI, API contract changes, or approved exceptions.
+
+For example, the policy bundle may require a security approval for a high-risk production release, a legal or compliance approval for a release handling regulated data, or a product or business approval for a customer-facing AI capability.
+
 An approval decision marked as approved with exception should also record the unmet requirement, the reason the exception was allowed, the approver responsible for that exception, any required mitigation or follow-up action, and, if relevant, an expiry date for that exception.
 
 A release candidate may therefore have zero or more evaluation-run records, each linked to the evaluation suite definition and dataset version used for that run; zero or more evaluation-result records produced through those evaluation runs; zero or more policy-check-run records, each linked to the policy bundle used for that run; zero or more policy-check-result records produced through those policy-check runs; zero or more approval requests; zero or more approval decisions linked to those approval requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate. Before a release candidate can move into an approved or ready-for-deployment state, it should have the completed evaluation-run records, the evaluation-result records whose measured outcomes satisfy the required release criteria, the completed policy-check-run records, the policy-check-result records whose outcomes satisfy the required release criteria, and the approval decisions required for that release, unless an approved exception explicitly allows progression despite an unmet requirement.
 
-When multiple evaluation-result records or policy-check-result records exist for a release candidate, progression should depend on the full set of result records required by the relevant evaluation suite definition and policy bundle, rather than on any single result record in isolation.
+When multiple evaluation-result records or policy-check-result records exist for a release candidate, progression should depend on the full set of result records required by the relevant evaluation suite definitions and policy bundles, rather than on any single result record in isolation. Where repeated runs exist for the same required check, progression should be judged against the latest completed result set for each required evaluation suite definition, dataset version, and policy bundle in scope, unless an approved exception or explicit release rule states otherwise. Earlier runs and result records should remain retained for traceability and audit.
 
 In this model, evaluation-run records and policy-check-run records are the authoritative release-time execution records, while evaluation-result records and policy-check-result records are the authoritative outcome records used for approval, traceability, and audit.
 
@@ -220,6 +224,8 @@ Here, approved means that the release candidate has passed the required review a
 A release candidate may later become superseded even if it was previously deployed. In that case, superseded means that it is no longer the current candidate for further progression, while its deployment history must still be determined from the linked deployment records.
 
 Evaluation-run states may include pending, running, completed, failed, or cancelled.
+
+Evaluation-result outcomes may include passed, failed, or inconclusive.
 
 Policy-check-run states may include pending, running, completed, failed, or cancelled.
 
@@ -266,7 +272,7 @@ Each deployment record should also capture or link to the exact environment-spec
 
 A deployment record targeting production should be created only when the release candidate has the completed evaluation-run records, the evaluation-result records whose measured outcomes satisfy the required production-release criteria, the completed policy-check-run records, the policy-check-result records whose outcomes satisfy the required production-release criteria, and the approval decisions required for production release, unless an approved exception decision explicitly allows release despite an unmet requirement.
 
-Runtime events observed in production should then link back to the specific deployment record in which they occurred and, through that deployment record, back to the release candidate associated with it. If a production problem occurs, the incident record should link back to the affected deployment record and release candidate so the team can trace the issue to the exact prompt version, model configuration, execution flow definition, dataset version, test results, policy checks, approvals, and release decision that led to it.
+Runtime events observed in production should then link back to the specific deployment record in which they occurred and, through that deployment record, back to the release candidate associated with it. If a production problem occurs, the incident record should link back to the affected deployment record and release candidate so the team can trace the issue to the exact execution flow definition, any relevant agent workflow definition, prompt version, model configuration, dataset version, evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, approval decisions, and the exact environment-specific configuration applied in the affected deployment record.
 
 A deployment record may therefore have many runtime events linked to it, and an incident record may link to one or more runtime events that provide the operational evidence for that incident.
 
@@ -386,7 +392,7 @@ A later capability could expose a controlled, customer-facing trust portal that 
 
 - a summary of the AI system, execution flow, or service being covered
 - the current validation status, including whether the release candidate linked to the latest production deployment record passed the required checks or was allowed into production through an approved exception
-- the latest control results, such as policy-check results, approval decisions or approval-request state, and key release conditions
+- the latest control results, such as policy-check results, approval status (including relevant approval decisions and any still-open approval requests), and key release conditions
 - relevant service commitments, operating constraints, or agreed trust conditions
 - incident summaries and their resolutions
 - downloadable trust reports
