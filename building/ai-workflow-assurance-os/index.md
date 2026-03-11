@@ -209,7 +209,7 @@ Typical fields for release records include:
 - a policy-check-run identifier on policy-check-result records, so each policy-check-result record links to the policy-check run that produced it
 - an approval-request identifier on approval-decision records, so each approval decision links to the approval request it answers
 - related asset versions, including the AI system definition, execution flow definition, any relevant agent workflow definition, prompt version, model configuration, dataset version, evaluation suite definition, policy bundle, API definitions, tool definitions, and external dependency records linked to the release candidate; where applicable, an evaluation-run record should also identify the evaluation suite definition and dataset version used for that run, and a policy-check-run record should also identify the policy bundle used for that run
-- record-specific state, outcome, or execution fields, such as release-candidate state, evaluation-run state, evaluation-run trigger source, evaluation-run execution timestamps, measured evaluation results, policy-check-run state, policy-check-run trigger source, policy-check-run execution timestamps, policy-check-result outcome, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
+- record-specific state, outcome, or execution fields, such as release-candidate state, evaluation-run state, evaluation-run trigger source, evaluation-run execution timestamps, measured evaluation results, evaluation-result outcome, policy-check-run state, policy-check-run trigger source, policy-check-run execution timestamps, policy-check-result outcome, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
 - linked evidence
 - created date
 
@@ -326,7 +326,7 @@ Once an AI system, execution flow, or agent workflow is running in production, t
 - cost spikes
 - moderation or safety events (cases in which the system output or user input triggered safety controls, such as harmful-content flags, policy violations, blocked responses, or escalation to review)
 
-The key value is not simply collecting operational data. The real value is linking production issues back to the exact deployment record, release candidate, prompt version, model configuration, dataset version, evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, and approval decisions associated with that release candidate, including any decisions to approve that release candidate with an exception.
+The key value is not simply collecting operational data. The real value is linking production issues back to the exact deployment record, release candidate, execution flow definition, any relevant agent workflow definition, prompt version, model configuration, dataset version, evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, and approval decisions associated with that release candidate, including any decisions to approve that release candidate with an exception.
 
 ### 5. Evidence packs
 
@@ -362,7 +362,7 @@ When a production deployment record of a release candidate causes a production p
 - show the exact recent changes linked to that release candidate and the affected deployment record, including prompt changes, model-configuration changes, execution-flow-definition changes, any relevant agent-workflow-definition changes, API request or response structure changes, policy changes, and the exact environment-specific configuration that was applied when that release candidate was put into production, as captured or linked by that deployment record
 - attach step-by-step execution traces, internal service error logs, API error logs, requests that returned errors or invalid data, screenshots of the production error, failing output, monitoring view, or other visible evidence linked to the incident, exported evidence files, and other supporting records needed to understand the incident
 - propose concrete rollback or containment actions, such as reverting to the previous healthy production deployment record, which may correspond to an earlier release candidate or to an earlier production deployment record of the same release candidate, disabling a failing tool or API call, or sending low-confidence or failed cases to a human reviewer
-- record who decided whether to roll back the deployed release candidate, keep it running with containment measures, or suspend new traffic to it, who reviewed that decision, and who gave final approval
+- record who decided whether to roll back the affected production deployment record to the previous healthy production deployment record, keep the affected deployment record running with containment measures, or suspend new traffic to it, who reviewed that decision, and who gave final approval
 - generate a structured incident summary describing what failed, which deployment record and release candidate were affected, what actions were taken, and what follow-up work remains
 
 That closes the loop between release governance and production accountability.
