@@ -175,7 +175,11 @@ These describe what is being proposed, evaluated, checked against policy, review
 
 An evaluation run should identify the release candidate being evaluated, the evaluation suite definition used for that run, the dataset version used for that run, the trigger source, and the execution timestamps. One evaluation run may then produce one or more evaluation-result records.
 
+Each evaluation-result record should link directly to the evaluation run that produced it.
+
 A policy-check run should identify the release candidate being checked, the policy bundle used for that run, the trigger source, and the execution timestamps. One policy-check run may then produce one or more policy-check-result records.
+
+Each policy-check-result record should link directly to the policy-check run that produced it.
 
 An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes. 
 
@@ -186,13 +190,13 @@ A release candidate may therefore have zero or more evaluation-run records, each
 In this model, evaluation-run records and policy-check-run records are the authoritative release-time execution records, while evaluation-result records and policy-check-result records are the authoritative outcome records used for approval, traceability, and audit.
 
 Each evidence pack and each supporting document attached to a release candidate should link directly to the release candidate they belong to. Each evidence pack should also link to the evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, approval decisions, and supporting documents that it packages or summarizes for that release candidate.
-
+ 
 Typical fields for release records include:
-- related release candidate
-- related evaluation run, where applicable
-- related policy-check run, where applicable
-- related approval request, where applicable
-- related asset versions, including the evaluation suite definition and dataset version linked to an evaluation run, and the policy bundle linked to a policy-check run
+- a release-candidate identifier on evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, approval-request records, approval-decision records, evidence-pack records, and supporting documents, so each of those records links back to the release candidate it belongs to
+- an evaluation-run identifier on evaluation-result records, so each evaluation-result record links to the evaluation run that produced it
+- a policy-check-run identifier on policy-check-result records, so each policy-check-result record links to the policy-check run that produced it
+- an approval-request identifier on approval-decision records, so each approval decision links to the approval request it answers
+- related asset versions, including the evaluation suite definition and dataset version linked to an evaluation-run record, and the policy bundle linked to a policy-check-run record
 - record-specific state, outcome, or execution fields, such as release-candidate state, evaluation-run state, evaluation-run trigger source, evaluation-run execution timestamps, measured evaluation results, policy-check-run state, policy-check-run trigger source, policy-check-run execution timestamps, policy-check-result outcome, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
 - linked evidence
 - created date
@@ -258,7 +262,9 @@ Runtime events observed in production should then link back to the specific depl
 
 A deployment record may therefore have many runtime events linked to it, and an incident record may link to one or more runtime events that provide the operational evidence for that incident.
 
-For operational comparison and reporting, a healthy production deployment record should mean a production deployment record that has no open critical incident linked to it and whose observed runtime behavior remains within the agreed operational thresholds over the defined observation window.
+For operational comparison and reporting, a healthy production deployment record should mean a production deployment record that has no open critical incident linked to it and whose observed runtime measures remain within the accepted operating limits during the defined review period after deployment. Those runtime measures may include, for example, response latency staying below an agreed maximum, error rate staying below an agreed percentage, timeout rate staying below an agreed percentage, failed tool or API calls staying below an agreed percentage, policy-violation events staying below an agreed threshold, and cost per request staying below an agreed ceiling.
+
+The severity rule used to classify an incident as critical, the specific runtime measures and limits used to judge whether a production deployment is healthy, and the review period used for that judgment should be defined in the governing release policy, service-level operating rules, or the specific production deployment settings recorded for that deployment. For example, one production service might define health as “no open critical incident, p95 latency below 2 seconds (meaning that 95% of requests complete in 2 seconds or less), error rate below 1%, and timeout rate below 0.5% during the first 24 hours after deployment,” while another might define health using a different latency limit, cost limit, or review period.
 
 ### 2. Evaluation and certification
 
