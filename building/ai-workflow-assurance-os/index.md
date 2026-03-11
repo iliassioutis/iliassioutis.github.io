@@ -177,15 +177,27 @@ An evaluation run should identify the release candidate being evaluated, the eva
 
 Each evaluation-result record should link directly to the evaluation run that produced it.
 
+Each evaluation-result record should store the measured evaluation results and the derived evaluation-result outcome, such as passed, failed, or inconclusive.
+
+The evaluation-result outcome should be calculated by checking whether the measured results recorded in that evaluation-result record meet, fail to meet, or cannot be conclusively judged against the release criteria defined in the evaluation suite definition linked to the evaluation run that produced it.
+
 A policy-check run should identify the release candidate being checked, the policy bundle used for that run, the trigger source, and the execution timestamps. One policy-check run may then produce one or more policy-check-result records.
 
 Each policy-check-result record should link directly to the policy-check run that produced it.
+
+Each policy-check-result record should store the recorded policy-check results and the derived policy-check-result outcome, such as passed, failed, not applicable (used when the policy rule does not apply to that release candidate because the specific capability, interface, data flow, or operating scenario covered by that rule is not present in that release), or waived through an approved exception.
+
+The policy-check-result outcome should be calculated by checking whether the recorded policy-check results satisfy, fail to satisfy, or are not applicable under the rules defined in the policy bundle linked to the policy-check run that produced it.
+
+A policy-check-result record should be marked as waived through an approved exception only when it is linked to an approval decision whose outcome is approved with exception.
 
 An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes. 
 
 An approval decision marked as approved with exception should also record the unmet requirement, the reason the exception was allowed, the approver responsible for that exception, any required mitigation or follow-up action, and, if relevant, an expiry date for that exception.
 
 A release candidate may therefore have zero or more evaluation-run records, each linked to the evaluation suite definition and dataset version used for that run; zero or more evaluation-result records produced through those evaluation runs; zero or more policy-check-run records, each linked to the policy bundle used for that run; zero or more policy-check-result records produced through those policy-check runs; zero or more approval requests; zero or more approval decisions linked to those approval requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate. Before a release candidate can move into an approved or ready-for-deployment state, it should have the completed evaluation-run records, the evaluation-result records whose measured outcomes satisfy the required release criteria, the completed policy-check-run records, the policy-check-result records whose outcomes satisfy the required release criteria, and the approval decisions required for that release, unless an approved exception explicitly allows progression despite an unmet requirement.
+
+When multiple evaluation-result records or policy-check-result records exist for a release candidate, progression should depend on the full set of result records required by the relevant evaluation suite definition and policy bundle, rather than on any single result record in isolation.
 
 In this model, evaluation-run records and policy-check-run records are the authoritative release-time execution records, while evaluation-result records and policy-check-result records are the authoritative outcome records used for approval, traceability, and audit.
 
@@ -212,10 +224,6 @@ Evaluation-run states may include pending, running, completed, failed, or cancel
 Policy-check-run states may include pending, running, completed, failed, or cancelled.
 
 Approval-request states may include open, pending responses, completed, cancelled, or expired (approval window elapsed without completion).
-
-Policy-check-result outcomes may include passed, failed, not applicable, or waived through an approved exception.
-
-A policy-check-result should be marked as waived through an approved exception only when it is linked to an approval decision whose outcome is approved with exception.
 
 Evidence-pack states may include draft, generated, or superseded (replaced by a newer pack). Archival should be tracked separately, for example through an archived-at timestamp or an archived flag, because a superseded evidence pack may later also be archived for retention purposes.
 
