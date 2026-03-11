@@ -112,7 +112,7 @@ The platform is intended to help teams:
 
 - monitor how the released system behaves in production, including execution traces, model usage, failures, latency, structured outputs, tool calls, anomaly scores, API errors, schema drift, cost spikes, and safety-related events
 
-- connect incidents back to the exact deployment record, release candidate, and specific changes introduced by that release candidate, including prompt changes, model-configuration changes, execution-flow-definition changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when that release candidate was put into production
+- connect incidents back to the exact deployment record, release candidate, and specific changes introduced by that release candidate, including prompt changes, model-configuration changes, execution-flow-definition changes, API request or response structure changes, policy changes, and the exact environment-specific configuration that was applied when that release candidate was put into production, as captured or linked by the affected deployment record
 
 - generate evidence packs that show what changed, what was tested, what failed, who approved, and what residual risk remains
 
@@ -189,9 +189,11 @@ Each evidence pack and each supporting document attached to a release candidate 
 
 Typical fields for release records include:
 - related release candidate
+- related evaluation run, where applicable
+- related policy-check run, where applicable
 - related approval request, where applicable
-- related asset versions, including the evaluation suite definition and dataset version linked to an evaluation run or evaluation-result record, and the policy bundle linked to a policy-check run or policy-check-result record
-- record-specific state or outcome fields, such as release-candidate state, evaluation-run state, measured evaluation results, policy-check-run state, policy-check-result outcome, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
+- related asset versions, including the evaluation suite definition and dataset version linked to an evaluation run, and the policy bundle linked to a policy-check run
+- record-specific state, outcome, or execution fields, such as release-candidate state, evaluation-run state, evaluation-run trigger source, evaluation-run execution timestamps, measured evaluation results, policy-check-run state, policy-check-run trigger source, policy-check-run execution timestamps, policy-check-result outcome, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
 - linked evidence
 - created date
 
@@ -343,7 +345,7 @@ When a production deployment record of a release candidate causes a production p
 
 - create an incident record either manually by a user or automatically when predefined error, failure, cost, or safety conditions are triggered
 - identify the exact deployment record, release candidate, and environment linked to the incident
-- show the exact recent changes linked to that release candidate, including prompt changes, model-configuration changes, API request or response structure changes, policy changes, and environment-specific configuration changes applied when that release candidate was put into production
+- show the exact recent changes linked to that release candidate and the affected deployment record, including prompt changes, model-configuration changes, API request or response structure changes, policy changes, and the exact environment-specific configuration that was applied when that release candidate was put into production, as captured or linked by that deployment record
 - attach step-by-step execution traces, internal service error logs, API error logs, requests that returned errors or invalid data, screenshots of the production error, failing output, monitoring view, or other visible evidence linked to the incident, exported evidence files, and other supporting records needed to understand the incident
 - propose concrete rollback or containment actions, such as reverting to the previous deployed release candidate, disabling a failing tool or API call, or sending low-confidence or failed cases to a human reviewer
 - record who decided whether to roll back the deployed release candidate, keep it running with containment measures, or suspend new traffic to it, who reviewed that decision, and who gave final approval
