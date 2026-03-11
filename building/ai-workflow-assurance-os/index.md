@@ -95,19 +95,20 @@ The platform is intended to help teams:
 
 - register and link the main records needed for release governance, including:
   - versioned assets, such as AI system definitions (the defined systems being governed), execution flow definitions (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent workflow definitions (defined multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems), prompts, model configurations (the selected model plus settings and parameters), dataset versions used for testing, validation, or retrieval, evaluation suite definitions, policy bundles, API definitions, tool definitions, and external dependency records (records describing connected services, tools, and downstream systems that the solution relies on)
-  - release records, such as release candidate records, evaluation-result records (which may contain measured outcomes such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency results, cost results, and API-response checks), policy-check-result records, approval requests, approval decisions, evidence packs, and supporting documents attached to a release candidate
+  - release records, such as release candidate records, evaluation-run records, evaluation-result records (which may contain measured outcomes such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency results, cost results, and API-response checks), policy-check-run records, policy-check-result records, approval requests, approval decisions, evidence packs, and supporting documents attached to a release candidate
   - operational records linked to a release candidate, such as deployment records, runtime events, and incident records
 
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
+  - executing evaluation runs against reference datasets
   - measuring task-specific accuracy or quality against expected values, such as field-extraction accuracy, classification accuracy, or document-level pass rates
   - checking whether the system stays below the allowed hallucination threshold (the maximum allowed rate of invented, unsupported, or incorrect output) and whether the output matches the required format and expected fields
   - verifying business-rule compliance
   - verifying latency and cost against defined thresholds
   - checking that connected APIs still return the expected responses and data structures
-  - recording all pass/fail outcomes, measured results (such as field-extraction accuracy, confidence levels, latency, and cost), policy-check results, and approval decisions as release evidence
+  - recording evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, and approval decisions as release evidence
 
-- apply policy-driven approval gates before production release
+- apply policy-driven approval gates before creating a production deployment record
 
 - monitor how the released system behaves in production, including execution traces, model usage, failures, latency, structured outputs, tool calls, anomaly scores, API errors, schema drift, cost spikes, and safety-related events
 
@@ -163,28 +164,34 @@ Typical fields for versioned assets include:
 These describe what is being proposed, evaluated, checked against policy, reviewed, approved, or packaged for release.
 
 - release candidate
+- evaluation run
 - evaluation result
+- policy-check run
 - policy-check result
 - approval request
 - approval decision
 - evidence pack
 - supporting document attached to a release candidate
 
+An evaluation run should identify the release candidate being evaluated, the evaluation suite definition used for that run, the dataset version used for that run, the trigger source, and the execution timestamps. One evaluation run may then produce one or more evaluation-result records.
+
+A policy-check run should identify the release candidate being checked, the policy bundle used for that run, the trigger source, and the execution timestamps. One policy-check run may then produce one or more policy-check-result records.
+
 An approval request should identify the release candidate being reviewed, the approvers required, the reason approval is needed, and any linked policy or risk context. One approval request may then receive one or more approval decisions, depending on how many approvers are required for that release. Approval-decision outcomes may include approved, rejected, approved with exception, or sent back for changes. 
 
 An approval decision marked as approved with exception should also record the unmet requirement, the reason the exception was allowed, the approver responsible for that exception, any required mitigation or follow-up action, and, if relevant, an expiry date for that exception.
 
-A release candidate may therefore have zero or more evaluation-result records, each linked to the evaluation suite definition and dataset version that produced it; zero or more policy-check-result records, each linked to the policy bundle that produced it; zero or more approval requests; zero or more approval decisions linked to those approval requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate. Before a release candidate can move into an approved or ready-for-deployment state, it should have the evaluation-result records, policy-check-result records, and approval decisions required for that release.
+A release candidate may therefore have zero or more evaluation-run records, each linked to the evaluation suite definition and dataset version used for that run; zero or more evaluation-result records produced through those evaluation runs; zero or more policy-check-run records, each linked to the policy bundle used for that run; zero or more policy-check-result records produced through those policy-check runs; zero or more approval requests; zero or more approval decisions linked to those approval requests; zero or more evidence packs, each linked directly to that release candidate; and zero or more supporting documents attached to that release candidate. Before a release candidate can move into an approved or ready-for-deployment state, it should have the completed evaluation-run records, evaluation-result records, completed policy-check-run records, policy-check-result records, and approval decisions required for that release.
 
-In this model, evaluation-result records and policy-check-result records are the authoritative release-time records used for approval, traceability, and audit. Internal execution jobs or pipeline runs may exist operationally, but they are not treated here as first-class release records unless the implementation later chooses to model them separately.
+In this model, evaluation-run records and policy-check-run records are the authoritative release-time execution records, while evaluation-result records and policy-check-result records are the authoritative outcome records used for approval, traceability, and audit.
 
-Each evidence pack and each supporting document attached to a release candidate should link directly to the release candidate they belong to. Each evidence pack should also link to the evaluation-result records, policy-check-result records, approval decisions, and supporting documents that it packages or summarizes for that release candidate.
+Each evidence pack and each supporting document attached to a release candidate should link directly to the release candidate they belong to. Each evidence pack should also link to the evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, approval decisions, and supporting documents that it packages or summarizes for that release candidate.
 
 Typical fields for release records include:
 - related release candidate
 - related approval request, where applicable
-- related asset versions, including the evaluation suite definition linked to an evaluation-result record and the policy bundle linked to a policy-check-result record
-- record-specific state or outcome fields, such as release-candidate state, measured evaluation results, policy-check-result outcome, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
+- related asset versions, including the evaluation suite definition and dataset version linked to an evaluation run or evaluation-result record, and the policy bundle linked to a policy-check run or policy-check-result record
+- record-specific state or outcome fields, such as release-candidate state, evaluation-run state, measured evaluation results, policy-check-run state, policy-check-result outcome, approval-request state, approval-decision outcome, evidence-pack state, or intended next environment when a review or approval step is tied to a specific promotion target
 - linked evidence
 - created date
 
@@ -193,6 +200,10 @@ Release-candidate states may include draft, in review, approved, rejected, ready
 Here, approved means that the release candidate has passed the required review and approval steps, ready for deployment means that it is approved and cleared for a specific deployment step, and deployed means that at least one deployment record has been created from that release candidate. Whether that deployment was to test, staging, or production should be determined from the linked deployment records rather than from the release-candidate state alone.
 
 A release candidate may later become superseded even if it was previously deployed. In that case, superseded means that it is no longer the current candidate for further progression, while its deployment history must still be determined from the linked deployment records.
+
+Evaluation-run states may include pending, running, completed, failed, or cancelled.
+
+Policy-check-run states may include pending, running, completed, failed, or cancelled.
 
 Approval-request states may include open, pending responses, completed, cancelled, or expired (approval window elapsed without completion).
 
@@ -225,7 +236,11 @@ Typical fields for operational records include:
 
 A lineage view should show how these records connect across design, release, and production.
 
-For example, in an invoice-processing system, a release candidate should link to the exact AI system definition, execution flow definition, any relevant agent workflow definition, prompt version, model configuration, dataset version, evaluation suite definition, policy bundle, API definitions, tool definitions, external dependency records, evaluation-result records, and policy-check-result records used to justify that release.
+For example, in an invoice-processing system, a release candidate should link to the exact AI system definition, execution flow definition, any relevant agent workflow definition, prompt version, model configuration, dataset version, evaluation suite definition, policy bundle, API definitions, tool definitions, and external dependency records used to justify that release.
+
+One or more evaluation runs should then link to that release candidate, the evaluation suite definition used for each run, and the dataset version used for each run, and those evaluation runs may produce one or more evaluation-result records.
+
+One or more policy-check runs should then link to that release candidate and the policy bundle used for each run, and those policy-check runs may produce one or more policy-check-result records.
 
 An approval request should then link to that release candidate, and one or more approval decisions should link to the approval request.
 
@@ -235,7 +250,7 @@ Each deployment record should also identify exactly one target environment, such
 
 Each deployment record should also capture or link to the exact environment-specific configuration applied during that deployment so later incidents can be traced back to the concrete settings used in that environment.
 
-A deployment record targeting production should be created only when the release candidate has the policy-check-result records and approval decisions required for production release, unless an approved exception decision explicitly allows release despite an unmet requirement.
+A deployment record targeting production should be created only when the release candidate has the completed evaluation-run records, evaluation-result records, completed policy-check-run records, policy-check-result records, and approval decisions required for production release, unless an approved exception decision explicitly allows release despite an unmet requirement.
 
 Runtime events observed in production should then link back to the specific deployment record in which they occurred and, through that deployment record, back to the release candidate associated with it. If a production problem occurs, the incident record should link back to the affected deployment record and release candidate so the team can trace the issue to the exact prompt version, model configuration, execution flow definition, dataset version, test results, policy checks, approvals, and release decision that led to it.
 
