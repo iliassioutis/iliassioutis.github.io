@@ -88,7 +88,7 @@ A typical implementation would connect:
 Together, these components form the operational surface that the platform is intended to govern, validate, approve, monitor, and make release-ready.
 
 ---
-
+<div class="platform-does" markdown="1">
 ## What the platform does
 
 The platform is intended to help teams:
@@ -154,7 +154,7 @@ The platform is intended to help teams:
 
 
 - generate evidence packs that show what changed, what was tested, what failed, who approved, and what residual risk remains
-
+</div>
 At the center of the product direction is a simple idea:
 
 **Make release decisions more defensible.**
