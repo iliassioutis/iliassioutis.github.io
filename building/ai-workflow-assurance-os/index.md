@@ -88,7 +88,7 @@ A typical implementation would connect:
 Together, these components form the operational surface that the platform is intended to govern, validate, approve, monitor, and make release-ready.
 
 ---
-<div class="platform-does" markdown="1">
+
 ## What the platform does
 
 The platform is intended to help teams:
@@ -128,7 +128,8 @@ The platform is intended to help teams:
     - deployment records
     - runtime events
     - incident records
-
+    
+<div style="height: 0.8rem;"></div>
 
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
@@ -143,15 +144,19 @@ The platform is intended to help teams:
   - checking that connected APIs still return the expected responses and data structures
   - recording evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, and approval decisions as release evidence, together with the measured outcomes and release judgments derived from those records
 
+<div style="height: 0.8rem;"></div>
 
 - apply policy-driven approval gates before creating a production deployment record
 
+<div style="height: 0.8rem;"></div>
 
 - monitor how the released system behaves in production, including execution traces, model usage, failures, latency, structured outputs, tool calls, anomaly scores, API errors, schema drift, cost spikes, and safety-related events
 
+<div style="height: 0.8rem;"></div>
 
 - connect incidents back to the exact deployment record, release candidate, and specific changes introduced by that release candidate, including prompt changes, model-configuration changes, execution-flow-definition changes, any relevant agent-workflow-definition changes, API request or response structure changes, policy changes, and the exact environment-specific configuration that was applied when that release candidate was put into production, as captured or linked by the affected deployment record
 
+<div style="height: 0.8rem;"></div>
 
 - generate evidence packs that show what changed, what was tested, what failed, who approved, and what residual risk remains
 </div>
