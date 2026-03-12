@@ -129,6 +129,7 @@ The platform is intended to help teams:
     - runtime events
     - incident records
 
+
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
   - executing evaluation runs against reference datasets
@@ -142,11 +143,15 @@ The platform is intended to help teams:
   - checking that connected APIs still return the expected responses and data structures
   - recording evaluation-run records, evaluation-result records, policy-check-run records, policy-check-result records, and approval decisions as release evidence, together with the measured outcomes and release judgments derived from those records
 
+
 - apply policy-driven approval gates before creating a production deployment record
+
 
 - monitor how the released system behaves in production, including execution traces, model usage, failures, latency, structured outputs, tool calls, anomaly scores, API errors, schema drift, cost spikes, and safety-related events
 
+
 - connect incidents back to the exact deployment record, release candidate, and specific changes introduced by that release candidate, including prompt changes, model-configuration changes, execution-flow-definition changes, any relevant agent-workflow-definition changes, API request or response structure changes, policy changes, and the exact environment-specific configuration that was applied when that release candidate was put into production, as captured or linked by the affected deployment record
+
 
 - generate evidence packs that show what changed, what was tested, what failed, who approved, and what residual risk remains
 
