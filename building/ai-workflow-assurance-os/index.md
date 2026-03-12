@@ -94,14 +94,48 @@ Together, these components form the operational surface that the platform is int
 The platform is intended to help teams:
 
 - register and link the main records needed for release governance, including:
-  - versioned assets, such as AI system definitions (the defined systems being governed), execution flow definitions (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows), agent workflow definitions (defined multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems), prompts, model configurations (the selected model plus settings and parameters), dataset versions used for testing, validation, or retrieval, evaluation suite definitions, policy bundles, API definitions, tool definitions, and external dependency records (records describing connected services, tools, and downstream systems that the solution relies on)
-  - release records, such as release candidate records, evaluation-run records, evaluation-result records (which may contain measured outcomes such as field-extraction accuracy scores, hallucination rates (how often the AI system produces invented, unsupported, or incorrect information), schema-validation results (whether the output matches the required structure and expected fields), latency results, cost results, and API-response checks), policy-check-run records, policy-check-result records, approval requests, approval decisions, evidence packs, and supporting documents attached to a release candidate
-  - operational records linked to a release candidate, such as deployment records, runtime events, and incident records
+  - versioned assets, such as:
+    - AI system definitions (the defined systems being governed)
+    - execution flow definitions (defined step-by-step processing flows, such as document extraction, validation, routing, or decision flows)
+    - agent workflow definitions (defined multi-step flows in which an AI agent can choose actions, use tools, and move a task forward across systems)
+    - prompts
+    - model configurations (the selected model plus settings and parameters)
+    - dataset versions used for testing, validation, or retrieval
+    - evaluation suite definitions
+    - policy bundles
+    - API definitions
+    - tool definitions
+    - external dependency records (records describing connected services, tools, and downstream systems that the solution relies on)
+
+  - release records, such as:
+    - release candidate records
+    - evaluation-run records
+    - evaluation-result records which may contain measured outcomes such as:
+      - field-extraction accuracy scores
+      - hallucination rates (how often the AI system produces invented, unsupported, or incorrect information)
+      - schema-validation results (whether the output matches the required structure and expected fields)
+      - latency results
+      - cost results
+      - API-response checks
+    - policy-check-run records
+    - policy-check-result records
+    - approval requests
+    - approval decisions
+    - evidence packs
+    - supporting documents attached to a release candidate
+
+  - operational records linked to a release candidate, such as:
+    - deployment records
+    - runtime events
+    - incident records
 
 - run pre-release evaluation and validation pipelines, including:
   - testing prompts and model configurations on reference datasets
   - executing evaluation runs against reference datasets
-  - measuring task-specific accuracy or quality against expected values, such as field-extraction accuracy, classification accuracy, or document-level pass rates
+  - measuring task-specific accuracy or quality against expected values, such as:
+    - field-extraction accuracy
+    - classification accuracy
+    - document-level pass rates
   - checking whether the system stays below the allowed hallucination threshold (the maximum allowed rate of invented, unsupported, or incorrect output) and whether the output matches the required format and expected fields
   - verifying business-rule compliance
   - verifying latency and cost against defined thresholds
