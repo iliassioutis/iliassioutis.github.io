@@ -221,27 +221,74 @@ Possible status values may include:
 
 This distinction matters because the platform should preserve each versioned asset as immutable once created while still allowing platform rules, release workflows, and policy checks to determine whether that versioned asset may be selected for a new release candidate.
 
-The linked dependencies field should capture the exact typed references from a versioned asset to the specific versioned-asset records that it depends on. Those dependencies should be stored as explicit links, not as vague free-text notes, so the platform can validate and traverse the relationships and use them in lineage, impact analysis, release evaluation, incident tracing, and evidence generation.
+The linked dependencies field should record the explicit dependency links from a versioned asset to the specific versioned-asset records that it depends on. A versioned asset may therefore have zero or more linked dependency entries.
 
-For example, an execution flow definition for invoice processing might link to:
-- prompt version `invoice-extraction-prompt:v3`
-- model configuration `gpt-extraction-config:v2`
-- API definition `supplier-validation-api:v1`
-- tool definition `pdf-parser-tool:v4`
-- external dependency record `sap-accounts-payable-prod:v5`
+Each linked dependency entry should identify:
 
-In the same way, an AI system definition might link to:
-- execution flow definition `invoice-processing-flow:v6`
-- dataset version `invoice-reference-dataset-2026-03:v2`
-- evaluation suite definition `invoice-field-validation-suite:v3`
-- policy bundle `finance-production-release-policy:v1`
+- the source versioned asset
+- the target versioned-asset record that the source versioned asset depends on
+- the dependency type, which describes how the source versioned asset depends on the target versioned-asset record, such as `uses`, `calls`, `evaluates against`, `is governed by`, or `depends on`
+- whether the dependency is required or optional
+
+These linked dependencies should be stored as explicit structured links, not as vague free-text notes. The platform should be able to traverse them from the source versioned asset to the target versioned-asset records and, in reverse, from a target versioned-asset record back to the versioned assets that depend on it. This is needed for lineage, impact analysis, release evaluation, incident tracing, and evidence generation.
+
+For example, an execution flow definition for invoice processing might include linked dependency entries such as:
+
+- source versioned asset: execution flow definition `invoice-processing-flow:v6`
+  - dependency type: `uses`
+  - target versioned-asset record: prompt `invoice-extraction-prompt:v3`
+  - required or optional: `required`
+
+- source versioned asset: execution flow definition `invoice-processing-flow:v6`
+  - dependency type: `uses`
+  - target versioned-asset record: model configuration `gpt-extraction-config:v2`
+  - required or optional: `required`
+
+- source versioned asset: execution flow definition `invoice-processing-flow:v6`
+  - dependency type: `calls`
+  - target versioned-asset record: API definition `supplier-validation-api:v1`
+  - required or optional: `required`
+
+- source versioned asset: execution flow definition `invoice-processing-flow:v6`
+  - dependency type: `uses`
+  - target versioned-asset record: tool definition `pdf-parser-tool:v4`
+  - required or optional: `required`
+
+- source versioned asset: execution flow definition `invoice-processing-flow:v6`
+  - dependency type: `depends on`
+  - target versioned-asset record: external dependency record `sap-accounts-payable-prod:v5`
+  - required or optional: `required`
+
+In the same way, an AI system definition might include linked dependency entries such as:
+
+- source versioned asset: AI system definition `invoice-processing-system:v2`
+  - dependency type: `uses`
+  - target versioned-asset record: execution flow definition `invoice-processing-flow:v6`
+  - required or optional: `required`
+
+- source versioned asset: AI system definition `invoice-processing-system:v2`
+  - dependency type: `evaluates against`
+  - target versioned-asset record: dataset version `invoice-reference-dataset-2026-03:v2`
+  - required or optional: `required`
+
+- source versioned asset: AI system definition `invoice-processing-system:v2`
+  - dependency type: `evaluates against`
+  - target versioned-asset record: evaluation suite definition `invoice-field-validation-suite:v3`
+  - required or optional: `required`
+
+- source versioned asset: AI system definition `invoice-processing-system:v2`
+  - dependency type: `is governed by`
+  - target versioned-asset record: policy bundle `finance-production-release-policy:v1`
+  - required or optional: `required`
+
+A linked dependency may also be marked as optional when the source versioned asset can still function without that target versioned-asset record in the relevant path or operating scenario. For example, a secondary tool definition used only in a fallback path may be recorded as an optional linked dependency rather than a required one.
 
 Typical fields for versioned assets include:
 - name
 - version
 - owner
 - status (the lifecycle state of that versioned asset in the registry, such as draft, approved, deprecated, retired, or withdrawn)
-- linked dependencies (typed references to the specific versioned-asset records that this versioned asset depends on)
+- linked dependencies (explicit dependency links from that versioned asset to the specific versioned-asset records that it depends on, including the dependency type and whether the dependency is required or optional)
 - superseded by versioned asset, where applicable (typed reference to the newer versioned asset that replaced this versioned asset)
 - description
 - created date
