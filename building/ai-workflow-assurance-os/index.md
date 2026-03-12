@@ -195,14 +195,17 @@ Each versioned asset should be treated as immutable once created. If any meaning
 
 Version history should therefore preserve earlier versioned assets even after newer versions are created, because later release candidates, their deployment records, related incidents, and evidence packs may still need to refer back to those earlier versioned assets.
 
-A status field on a versioned asset should describe the lifecycle state of that versioned asset in the registry. The status should indicate whether that versioned asset is still available for use in a release candidate, has been superseded by a newer version, is being retained only for traceability and audit, or has been withdrawn from use. In this way, the status governs how that versioned asset is handled in release workflows, while the versioned asset itself remains immutable once created.
+A status field on a versioned asset should describe the lifecycle state of that versioned asset in the registry. The status should indicate whether that versioned asset is available for use in a release candidate, should no longer normally be selected for new release candidates, is being kept only for history, traceability, and audit, or has been withdrawn from use. In this way, the status governs how that versioned asset is handled in release workflows, while the versioned asset itself remains immutable once created.
+
+A versioned asset may also include a `superseded by versioned asset` reference that points to the newer versioned asset that replaced it. This supersession relationship should be recorded separately from the status so that a versioned asset can remain linked to the newer versioned asset that replaced it while its own status moves through lifecycle states such as `approved`, `deprecated`, or `retired`.
+
+These status values describe alternative lifecycle states of a versioned asset in the registry. They should not be interpreted as a single mandatory sequence.
 
 Possible status values may include:
 
 - `draft`: the versioned asset has been created but is still being prepared, reviewed, or completed, so it should not yet be used in a release candidate
 - `approved`: the versioned asset has passed the required internal review and may be used in a release candidate
-- `superseded`: the versioned asset has been replaced by a newer version, but it must remain available because older release candidates, deployment records, incidents, or evidence packs may still refer to it
-- `deprecated`: the versioned asset should not normally be selected for new release candidates, although it may remain temporarily available while teams move to a preferred version
+- `deprecated`: the versioned asset remains available, but it should not normally be selected for new release candidates, for example because teams are being directed to move away from it
 - `retired`: the versioned asset is no longer intended for use in new release candidates and is being kept only for history, traceability, and audit
 - `withdrawn`: the versioned asset should not be used because it was found to be invalid, unsafe, incorrect, or published by mistake
 
@@ -229,6 +232,7 @@ Typical fields for versioned assets include:
 - owner
 - status (the lifecycle standing of that specific asset version in the registry, such as draft, approved, superseded, deprecated, retired, or withdrawn)
 - linked dependencies (typed references to the exact asset versions, tools, APIs, datasets, and external services that this version depends on)
+- superseded by versioned asset, where applicable (typed reference to the newer versioned asset that replaced this versioned asset)
 - description
 - created date
 
