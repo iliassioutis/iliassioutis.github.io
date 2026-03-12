@@ -195,7 +195,18 @@ Each versioned asset should be treated as immutable once created. If any meaning
 
 Version history should therefore preserve earlier asset versions even after newer versions are created, because later release candidates, their deployment records, related incidents, and evidence packs may still need to refer back to those earlier asset versions.
 
-A status field on a versioned asset should describe the lifecycle standing of that specific asset version in the registry, rather than changing the asset content itself. For example, a version may be draft when it is still being prepared, approved when it is ready to be used in a release candidate, superseded when a newer version has replaced it, deprecated when it should no longer be chosen for new release candidates except by exception, retired when it is kept only for history and audit, or withdrawn when it was found to be invalid, unsafe, incorrect, or published by mistake. This distinction matters because the platform should preserve immutable asset versions while still allowing later tooling, workflows, and policies to determine whether a given version may be selected for new release activity.
+A status field on a versioned asset should describe the lifecycle state of that specific asset version in the registry. The status should describe how that version may be used by the platform and by release workflows, without implying that the stored content of that version has been edited after creation.
+
+Possible status values may include:
+
+- `draft`: the asset version has been created but is still being prepared, reviewed, or completed, so it should not yet be used in a release candidate
+- `approved`: the asset version has passed the required internal review and may be used in a release candidate
+- `superseded`: the asset version has been replaced by a newer version, but it must remain available because older release candidates, deployment records, incidents, or evidence packs may still refer to it
+- `deprecated`: the asset version should not normally be selected for new release candidates, although it may remain temporarily available while teams move to a preferred version
+- `retired`: the asset version is no longer intended for use in new release candidates and is being kept only for history, traceability, and audit
+- `withdrawn`: the asset version should not be used because it was found to be invalid, unsafe, incorrect, or published by mistake
+
+This distinction matters because the platform should preserve immutable asset versions while still allowing platform rules, release workflows, and policy checks to determine whether a specific version may be selected for a new release candidate.
 
 The linked dependencies field should capture the exact typed references from a versioned asset to the other versioned assets, tools, APIs, datasets, or external services that it relies on. These dependencies should be recorded as explicit links to concrete records and versions, rather than as vague free-text notes, so the platform can support lineage, impact analysis, release evaluation, incident tracing, and evidence generation.
 
