@@ -208,7 +208,7 @@ Possible status values may include:
 
 This distinction matters because the platform should preserve immutable asset versions while still allowing platform rules, release workflows, and policy checks to determine whether a specific version may be selected for a new release candidate.
 
-The linked dependencies field should capture the exact typed references from a versioned asset to the other versioned assets, tools, APIs, datasets, or external services that it relies on. These dependencies should be recorded as explicit links to concrete records and versions, rather than as vague free-text notes, so the platform can support lineage, impact analysis, release evaluation, incident tracing, and evidence generation.
+The linked dependencies field should capture the exact typed references from a versioned asset to the specific versioned-asset records that it depends on. Those dependencies should be stored as explicit links, not as vague free-text notes, so the platform can validate and traverse the relationships and use them in lineage, impact analysis, release evaluation, incident tracing, and evidence generation.
 
 For example, an execution flow definition for invoice processing might link to:
 - prompt version `invoice-extraction-prompt:v3`
