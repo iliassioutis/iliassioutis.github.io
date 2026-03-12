@@ -195,9 +195,19 @@ Each versioned asset should be treated as immutable once created. If any meaning
 
 Version history should therefore preserve earlier versioned assets even after newer versions are created, because later release candidates, their deployment records, related incidents, and evidence packs may still need to refer back to those earlier versioned assets.
 
-A status field on a versioned asset should describe the lifecycle state of that versioned asset in the registry. The status should indicate whether that versioned asset is available for use in a release candidate, should no longer normally be selected for new release candidates, is being kept only for history, traceability, and audit, or has been withdrawn from use. In this way, the status governs how that versioned asset is handled in release workflows, while the versioned asset itself remains immutable once created.
+A status field on a versioned asset should describe the lifecycle state of that versioned asset in the registry. The status should indicate whether that versioned asset is available for use in a release candidate, should no longer normally be selected for new release candidates, is being kept only for history, traceability, and audit, or has been withdrawn from use. The status should not by itself determine whether one versioned asset has replaced another. In this way, the status governs how that versioned asset is handled in release workflows, while the versioned asset itself remains immutable once created.
 
 A versioned asset may also include a `superseded by versioned asset` reference that points to the newer versioned asset that replaced it. This supersession relationship should be recorded separately from the status so that a versioned asset can remain linked to the newer versioned asset that replaced it while its own status moves through lifecycle states such as `approved`, `deprecated`, or `retired`.
+
+A versioned asset should have at most one `superseded by versioned asset` reference. That reference should be set only when the team explicitly decides that a newer versioned asset is now the replacement for the older versioned asset.
+
+Until that decision is made, the older versioned asset may remain `approved`, even if newer work already exists in `draft` form or even if one or more newer versioned assets have also reached `approved` status. In other words, the existence of newer work does not by itself mean that the older versioned asset has already been replaced.
+
+For example, an original versioned asset may remain `approved` while improved versions are being prepared and reviewed over time. When the team finally decides that a newer versioned asset should replace the older one for future use, the older versioned asset may then be moved to `deprecated` and linked through the `superseded by versioned asset` reference to the newer versioned asset that replaced it. Later, the older versioned asset may move from `deprecated` to `retired` while still preserving that supersession relationship for traceability.
+
+If a replacement decision is later reversed, the older versioned asset may be moved back to `approved` and its `superseded by versioned asset` reference may be cleared so that the current state of the registry again shows that versioned asset as the approved choice for new release candidates. The platform should still preserve the history of that earlier supersession and reversal for traceability and audit.
+
+This distinction is useful because it separates three different ideas: readiness for use in a release candidate, the explicit decision that one versioned asset replaces another, and the later lifecycle handling of the older versioned asset in the registry.
 
 These status values describe alternative lifecycle states of a versioned asset in the registry. They should not be interpreted as a single mandatory sequence.
 
@@ -230,8 +240,8 @@ Typical fields for versioned assets include:
 - name
 - version
 - owner
-- status (the lifecycle standing of that specific asset version in the registry, such as draft, approved, superseded, deprecated, retired, or withdrawn)
-- linked dependencies (typed references to the exact asset versions, tools, APIs, datasets, and external services that this version depends on)
+- status (the lifecycle state of that versioned asset in the registry, such as draft, approved, deprecated, retired, or withdrawn)
+- linked dependencies (typed references to the specific versioned-asset records that this versioned asset depends on)
 - superseded by versioned asset, where applicable (typed reference to the newer versioned asset that replaced this versioned asset)
 - description
 - created date
