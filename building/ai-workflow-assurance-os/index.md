@@ -195,7 +195,7 @@ Each versioned asset should be treated as immutable once created. If any meaning
 
 Version history should therefore preserve earlier asset versions even after newer versions are created, because later release candidates, their deployment records, related incidents, and evidence packs may still need to refer back to those earlier asset versions.
 
-A status field on a versioned asset should describe the lifecycle state of that specific asset version in the registry. The status should describe how that version may be used by the platform and by release workflows, without implying that the stored content of that version has been edited after creation.
+A status field on a versioned asset should describe the lifecycle state of that specific asset version in the registry. The status should indicate whether that asset version is still available for use in a release candidate, has been superseded by a newer version, is being retained only for traceability and audit, or has been withdrawn from use. In this way, the status governs how that asset version is handled in release workflows, while the versioned asset itself remains immutable once created.
 
 Possible status values may include:
 
