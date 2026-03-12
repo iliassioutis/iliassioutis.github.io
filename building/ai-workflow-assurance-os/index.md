@@ -193,20 +193,20 @@ An AI system definition should link to the execution flow definitions, agent wor
 
 Each versioned asset should be treated as immutable once created. If any meaningful change is made to a versioned asset, the platform should create a new version rather than modifying the existing one in place. A release candidate should then reference the exact immutable versions of the assets used to justify that release so that the release can be reproduced, reviewed, and audited later.
 
-Version history should therefore preserve earlier asset versions even after newer versions are created, because later release candidates, their deployment records, related incidents, and evidence packs may still need to refer back to those earlier asset versions.
+Version history should therefore preserve earlier versioned assets even after newer versions are created, because later release candidates, their deployment records, related incidents, and evidence packs may still need to refer back to those earlier versioned assets.
 
-A status field on a versioned asset should describe the lifecycle state of that specific asset version in the registry. The status should indicate whether that asset version is still available for use in a release candidate, has been superseded by a newer version, is being retained only for traceability and audit, or has been withdrawn from use. In this way, the status governs how that asset version is handled in release workflows, while the versioned asset itself remains immutable once created.
+A status field on a versioned asset should describe the lifecycle state of that versioned asset in the registry. The status should indicate whether that versioned asset is still available for use in a release candidate, has been superseded by a newer version, is being retained only for traceability and audit, or has been withdrawn from use. In this way, the status governs how that versioned asset is handled in release workflows, while the versioned asset itself remains immutable once created.
 
 Possible status values may include:
 
-- `draft`: the asset version has been created but is still being prepared, reviewed, or completed, so it should not yet be used in a release candidate
-- `approved`: the asset version has passed the required internal review and may be used in a release candidate
-- `superseded`: the asset version has been replaced by a newer version, but it must remain available because older release candidates, deployment records, incidents, or evidence packs may still refer to it
-- `deprecated`: the asset version should not normally be selected for new release candidates, although it may remain temporarily available while teams move to a preferred version
-- `retired`: the asset version is no longer intended for use in new release candidates and is being kept only for history, traceability, and audit
-- `withdrawn`: the asset version should not be used because it was found to be invalid, unsafe, incorrect, or published by mistake
+- `draft`: the versioned asset has been created but is still being prepared, reviewed, or completed, so it should not yet be used in a release candidate
+- `approved`: the versioned asset has passed the required internal review and may be used in a release candidate
+- `superseded`: the versioned asset has been replaced by a newer version, but it must remain available because older release candidates, deployment records, incidents, or evidence packs may still refer to it
+- `deprecated`: the versioned asset should not normally be selected for new release candidates, although it may remain temporarily available while teams move to a preferred version
+- `retired`: the versioned asset is no longer intended for use in new release candidates and is being kept only for history, traceability, and audit
+- `withdrawn`: the versioned asset should not be used because it was found to be invalid, unsafe, incorrect, or published by mistake
 
-This distinction matters because the platform should preserve immutable asset versions while still allowing platform rules, release workflows, and policy checks to determine whether a specific version may be selected for a new release candidate.
+This distinction matters because the platform should preserve each versioned asset as immutable once created while still allowing platform rules, release workflows, and policy checks to determine whether that versioned asset may be selected for a new release candidate.
 
 The linked dependencies field should capture the exact typed references from a versioned asset to the specific versioned-asset records that it depends on. Those dependencies should be stored as explicit links, not as vague free-text notes, so the platform can validate and traverse the relationships and use them in lineage, impact analysis, release evaluation, incident tracing, and evidence generation.
 
